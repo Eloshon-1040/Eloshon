@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "id": "shopify.customers.csv.v1",
+  "displayName": "Shopify customers export (CSV)",
+  "provenance": "native-platform",
+  "medium": "csv",
+  "platformHint": "shopify",
+  "entity": "customers",
+  "signatures": [
+    {
+      "kind": "csv-header-set",
+      "required": [
+        "Email",
+        "Accepts Email Marketing"
+      ],
+      "hints": [
+        "Accepts SMS Marketing",
+        "Default Address Company"
+      ]
+    }
+  ],
+  "structure": {
+    "rows": {},
+    "parser": "generic"
+  },
+  "fields": [
+    {
+      "path": "First Name",
+      "canon": "firstName",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Last Name",
+      "canon": "lastName",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Email",
+      "canon": "email",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Phone",
+      "canon": "phone",
+      "transform": "clean_text",
+      "args": {
+        "stripExcelGuard": true
+      },
+      "confidence": "verified-fixture",
+      "notes": "Excel guard apostrophe stripped."
+    },
+    {
+      "path": "Default Address Company",
+      "canon": "address.company",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Default Address Address1",
+      "canon": "address.address1",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Default Address Address2",
+      "canon": "address.address2",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Default Address City",
+      "canon": "address.city",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Default Address Province Code",
+      "canon": "address.province",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Default Address Province Code",
+      "canon": "address.provinceCode",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Default Address Country Code",
+      "canon": "address.country",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Default Address Zip",
+      "canon": "address.zip",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Default Address Phone",
+      "canon": "address.phone",
+      "transform": "clean_text",
+      "args": {
+        "stripExcelGuard": true
+      },
+      "confidence": "verified-fixture",
+      "notes": "Excel guard apostrophe stripped."
+    },
+    {
+      "path": "Accepts Email Marketing",
+      "canon": "acceptsEmail",
+      "transform": "consent_bool",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Accepts Email Marketing",
+      "canon": "marketingConsent.email",
+      "transform": "marketing_consent",
+      "args": {
+        "pending": [
+          "yes",
+          "true",
+          "1",
+          "subscribed"
+        ],
+        "optedOut": [
+          "no",
+          "false",
+          "0",
+          "unsubscribed",
+          "not subscribed"
+        ],
+        "channel": "email",
+        "ignoreCase": true,
+        "trimRaw": true
+      },
+      "confidence": "verified-fixture",
+      "notes": "Evidence only (7.3): a yes is pending (no timestamp), a no is opted_out; every target is written not subscribed."
+    },
+    {
+      "path": "Accepts SMS Marketing",
+      "canon": "acceptsSms",
+      "transform": "consent_bool",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Accepts SMS Marketing",
+      "canon": "marketingConsent.sms",
+      "transform": "marketing_consent",
+      "args": {
+        "pending": [
+          "yes",
+          "true",
+          "1",
+          "subscribed"
+        ],
+        "optedOut": [
+          "no",
+          "false",
+          "0",
+          "unsubscribed",
+          "not subscribed"
+        ],
+        "channel": "sms",
+        "ignoreCase": true,
+        "trimRaw": true
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Note",
+      "canon": "note",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Tags",
+      "canon": "tags",
+      "transform": "list",
+      "args": {
+        "sep": ","
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Tax Exempt",
+      "canon": "taxExempt",
+      "transform": "consent_bool",
+      "args": {
+        "strict": true
+      },
+      "confidence": "verified-fixture"
+    }
+  ],
+  "invariantsExpected": [
+    "One row per customer; one default address; consent columns are yes/no statements without timestamp"
+  ],
+  "legacy": {
+    "formatId": "shopify_customers",
+    "platform": "shopify",
+    "entity": "customers"
+  },
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "seed:core/src/detect.ts:SIGS",
+      "origin": "reference",
+      "diff": [
+        "signature moved from code to data (Phase 5.3)",
+        "Marketing-consent columns are unique to Shopify."
+      ]
+    },
+    {
+      "at": "2026-10-04T00:00:00.000Z",
+      "op": "enrich",
+      "from": "core/src/customers.ts parseShopifyCustomers (retired: the generic parser reads this format) + mapping.ts SOURCE_FIELDS.shopify_customers",
+      "origin": "reference",
+      "diff": [
+        "Phase 2 Lot 3: full column map + row structure as data; undeclared columns preserved, declared ones traced"
+      ]
+    }
+  ]
+}

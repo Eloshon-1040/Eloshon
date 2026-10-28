@@ -1,0 +1,51 @@
+{
+  "ok": true,
+  "sourceFormat": "eloshon.catalog.v1",
+  "targetFormat": "shopify_products",
+  "counts": {
+    "inputUnits": 3,
+    "outputUnits": 3,
+    "failedUnits": 0,
+    "outputRows": 6
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_shopify_translations",
+      "params": {
+        "locales": "en"
+      }
+    },
+    {
+      "code": "loss_shopify_category_taxonomy",
+      "params": {
+        "count": 3,
+        "extra": 0
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "code": "eloshon_edits_applied",
+      "params": {
+        "count": 3
+      }
+    },
+    {
+      "code": "eloshon_products_removed",
+      "params": {
+        "count": 1
+      }
+    },
+    {
+      "code": "eloshon_other_entities",
+      "params": {
+        "products": 0,
+        "customers": 1,
+        "orders": 0
+      }
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

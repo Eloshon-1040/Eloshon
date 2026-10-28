@@ -1,0 +1,242 @@
+{
+  "simple-jsonld": {
+    "product": {
+      "name": "Chaise de bureau ergonomique",
+      "description": "Chaise réglable avec soutien lombaire.",
+      "price": 89.9,
+      "listPrice": null,
+      "currency": "EUR",
+      "availability": "InStock",
+      "rating": null,
+      "reviewCount": null,
+      "gtin": "5410000000011",
+      "sku": "CHR-01",
+      "mpn": null,
+      "brand": "Acme",
+      "images": [
+        "https://shop.example/img/chaise-1.jpg",
+        "https://shop.example/img/chaise-2.jpg"
+      ],
+      "imageSources": {
+        "jsonld": 2,
+        "microdata": 0,
+        "og": 0,
+        "dom": 0,
+        "state": 0
+      },
+      "category": null,
+      "breadcrumb": [],
+      "weightText": null,
+      "sourceUrl": "https://shop.example/fr/chaise-de-bureau",
+      "canonicalUrl": "https://shop.example/fr/chaise-de-bureau",
+      "canonicalSource": "canonical",
+      "strategy": "generic-jsonld",
+      "confidence": 1
+    },
+    "needsBrowser": false,
+    "strategies": [
+      "generic-jsonld"
+    ]
+  },
+  "promo-jsonld": {
+    "product": {
+      "name": "Casque audio sans fil",
+      "description": null,
+      "price": 39.9,
+      "listPrice": 59.9,
+      "currency": "EUR",
+      "availability": "InStock",
+      "rating": null,
+      "reviewCount": null,
+      "gtin": null,
+      "sku": "AUD-9",
+      "mpn": null,
+      "brand": null,
+      "images": [
+        "https://shop.example/img/casque.jpg"
+      ],
+      "imageSources": {
+        "jsonld": 1,
+        "microdata": 0,
+        "og": 0,
+        "dom": 0,
+        "state": 0
+      },
+      "category": null,
+      "breadcrumb": [],
+      "weightText": null,
+      "sourceUrl": "https://shop.example/fr/casque-audio",
+      "canonicalUrl": "https://shop.example/fr/casque-audio",
+      "canonicalSource": "canonical",
+      "strategy": "generic-jsonld",
+      "confidence": 0.77
+    },
+    "needsBrowser": false,
+    "strategies": [
+      "generic-jsonld"
+    ]
+  },
+  "food-luna": {
+    "product": {
+      "name": "Café moulu Arabica 250 g",
+      "description": "Café 100% arabica.",
+      "price": 3.49,
+      "listPrice": null,
+      "currency": "EUR",
+      "availability": "InStock",
+      "rating": null,
+      "reviewCount": null,
+      "gtin": "5410000000029",
+      "sku": "CAF-250",
+      "mpn": null,
+      "brand": "Luna",
+      "images": [
+        "https://epicerie.example/img/cafe.jpg"
+      ],
+      "imageSources": {
+        "jsonld": 1,
+        "microdata": 0,
+        "og": 0,
+        "dom": 0,
+        "state": 0
+      },
+      "category": null,
+      "breadcrumb": [
+        "Épicerie",
+        "Café & Thé"
+      ],
+      "weightText": "250 g",
+      "sourceUrl": "https://epicerie.example/fr/cafe-moulu-250g",
+      "canonicalUrl": "https://epicerie.example/fr/cafe-moulu-250g",
+      "canonicalSource": "canonical",
+      "strategy": "generic-jsonld",
+      "confidence": 1
+    },
+    "needsBrowser": false,
+    "strategies": [
+      "generic-jsonld"
+    ]
+  },
+  "microdata": {
+    "product": {
+      "name": "Marteau de charpentier 500g",
+      "description": null,
+      "price": 12.5,
+      "listPrice": null,
+      "currency": null,
+      "availability": null,
+      "rating": null,
+      "reviewCount": null,
+      "gtin": null,
+      "sku": "MRT-500",
+      "mpn": null,
+      "brand": "ToolPro",
+      "images": [],
+      "imageSources": {
+        "jsonld": 0,
+        "microdata": 0,
+        "og": 0,
+        "dom": 0,
+        "state": 0
+      },
+      "category": null,
+      "breadcrumb": [],
+      "weightText": "500 g",
+      "sourceUrl": "https://bricolage.example/fr/marteau",
+      "canonicalUrl": "https://bricolage.example/fr/marteau-charpentier",
+      "canonicalSource": "canonical",
+      "strategy": "generic-microdata",
+      "confidence": 0.73
+    },
+    "needsBrowser": false,
+    "strategies": [
+      "generic-microdata"
+    ]
+  },
+  "meta-only": {
+    "product": {
+      "name": "Tournevis cruciforme PH2",
+      "description": "Tournevis magnétique PH2.",
+      "price": 6.99,
+      "listPrice": null,
+      "currency": "EUR",
+      "availability": null,
+      "rating": null,
+      "reviewCount": null,
+      "gtin": null,
+      "sku": null,
+      "mpn": null,
+      "brand": "ToolPro",
+      "images": [
+        "https://bricolage.example/img/tournevis.jpg"
+      ],
+      "imageSources": {
+        "jsonld": 0,
+        "microdata": 0,
+        "og": 1,
+        "dom": 0,
+        "state": 0
+      },
+      "category": null,
+      "breadcrumb": [],
+      "weightText": null,
+      "sourceUrl": "https://bricolage.example/fr/tournevis",
+      "canonicalUrl": "https://bricolage.example/fr/tournevis-ph2",
+      "canonicalSource": "canonical",
+      "strategy": "generic-meta",
+      "confidence": 0.74
+    },
+    "needsBrowser": false,
+    "strategies": [
+      "generic-meta"
+    ]
+  },
+  "incomplete": {
+    "product": {
+      "name": "Produit mystère (prix non affiché)",
+      "description": null,
+      "price": null,
+      "listPrice": null,
+      "currency": null,
+      "availability": null,
+      "rating": null,
+      "reviewCount": null,
+      "gtin": null,
+      "sku": null,
+      "mpn": null,
+      "brand": null,
+      "images": [
+        "https://shop.example/img/mystere.jpg"
+      ],
+      "imageSources": {
+        "jsonld": 0,
+        "microdata": 0,
+        "og": 1,
+        "dom": 0,
+        "state": 0
+      },
+      "category": null,
+      "breadcrumb": [],
+      "weightText": null,
+      "sourceUrl": "https://shop.example/fr/produit-mystere",
+      "canonicalUrl": "https://shop.example/fr/produit-mystere",
+      "canonicalSource": "canonical",
+      "strategy": "generic-meta",
+      "confidence": 0.39
+    },
+    "needsBrowser": false,
+    "strategies": [
+      "generic-meta"
+    ]
+  },
+  "not-a-product": {
+    "product": null,
+    "needsBrowser": false,
+    "strategies": []
+  },
+  "csr-shell": {
+    "product": null,
+    "needsBrowser": true,
+    "strategies": []
+  }
+}

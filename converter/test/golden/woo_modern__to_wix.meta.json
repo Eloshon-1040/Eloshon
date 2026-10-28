@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "sourceFormat": "woo_products_modern",
+  "targetFormat": "wix_products",
+  "counts": {
+    "inputUnits": 3,
+    "outputUnits": 3,
+    "failedUnits": 0,
+    "outputRows": 8
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_wix_option_type"
+    },
+    {
+      "code": "loss_wix_category_hierarchy",
+      "params": {
+        "count": 3
+      }
+    },
+    {
+      "code": "loss_short_description",
+      "params": {
+        "target": "Wix",
+        "count": 1
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false
+}

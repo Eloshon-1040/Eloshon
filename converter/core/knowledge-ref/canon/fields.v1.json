@@ -1,0 +1,3174 @@
+{
+  "schemaVersion": 1,
+  "id": "canon.fields.v1",
+  "canonRef": "@eloshon/catalog",
+  "producedAt": "2026-09-21T00:00:00.000Z",
+  "notes": [
+    "Semantic column recognition catalogue (Phase 5.4). DATA: names (EN/FR) a column may carry, value profiles a field accepts (best first), structural families (regex), concept-map relation it belongs to.",
+    "Seeded from core/src/mapping.ts SOURCE_FIELDS (union across Shopify/WooCommerce/Wix/BigCommerce/BigBuy) + FR/EN aliases. Paths are the legacy canon keys used by the current parsers; the generic parser (5.5) maps them onto @eloshon/catalog paths.",
+    "Adding a field or an alias here never changes the default output — semantic recognition is opt-in (mapping.recognize = \"semantic\").",
+    "Phase 6.3: `derivations` = canonical fields filled from OTHER canonical fields when the source left them empty (applied by the generic parser and by the engine finishing step; provenance method structural + the rule transform). Identifier fields (identifiers.*) and the translations family are recognised as columns; `barcode` keeps the platform column names (Variant Barcode, UPC/EAN, GTIN…) so exact platform rules still win."
+  ],
+  "fields": [
+    {
+      "path": "handle",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "slug",
+        "id",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Handle",
+          "Product URL",
+          "Slug",
+          "post_name",
+          "handleId",
+          "Product Handle",
+          "Permalink"
+        ],
+        "fr": [
+          "URL produit",
+          "Identifiant"
+        ],
+        "nl": [
+          "Slug",
+          "URL-sleutel"
+        ],
+        "de": [
+          "Slug",
+          "URL-Schlüssel"
+        ],
+        "es": [
+          "Slug",
+          "URL amigable"
+        ],
+        "it": [
+          "Slug",
+          "URL"
+        ],
+        "ca": [
+          "Slug"
+        ]
+      },
+      "transform": "copy",
+      "unique": true,
+      "role": "grouping-key"
+    },
+    {
+      "path": "title",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Title",
+          "Name",
+          "Product Title",
+          "Product Name",
+          "post_title",
+          "Item Name",
+          "Product Label",
+          "Item Title"
+        ],
+        "fr": [
+          "Nom",
+          "Titre",
+          "Libellé",
+          "Désignation",
+          "Intitulé",
+          "Nom du produit",
+          "Article",
+          "Nom produit",
+          "Nom de l’article",
+          "Titre du produit"
+        ],
+        "nl": [
+          "Naam",
+          "Productnaam",
+          "Titel",
+          "Artikelnaam",
+          "Benaming",
+          "Product naam"
+        ],
+        "de": [
+          "Name",
+          "Produktname",
+          "Produktbezeichnung",
+          "Artikelname",
+          "Artikelbezeichnung",
+          "Bezeichnung",
+          "Titel",
+          "Produkttitel",
+          "Artikeltitel"
+        ],
+        "es": [
+          "Nombre",
+          "Nombre del producto",
+          "Titulo",
+          "Título",
+          "Denominación",
+          "Artículo",
+          "Nombre producto"
+        ],
+        "it": [
+          "Nome",
+          "Nome prodotto",
+          "Titolo",
+          "Denominazione",
+          "Articolo"
+        ],
+        "ca": [
+          "Nom",
+          "Nom del producte",
+          "Títol",
+          "Denominació"
+        ]
+      },
+      "transform": "text",
+      "required": true
+    },
+    {
+      "path": "bodyHtml",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "html",
+        "longText",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Body (HTML)",
+          "Description",
+          "Body",
+          "Long description",
+          "post_content",
+          "Product Description",
+          "Details",
+          "Content",
+          "Long Description",
+          "Full Description",
+          "Product Details"
+        ],
+        "fr": [
+          "Description longue",
+          "Descriptif",
+          "Détails",
+          "Contenu",
+          "Texte",
+          "Description produit",
+          "Description du produit",
+          "Description détaillée"
+        ],
+        "nl": [
+          "Beschrijving",
+          "Omschrijving",
+          "Productbeschrijving",
+          "Productomschrijving"
+        ],
+        "de": [
+          "Beschreibung",
+          "Langbeschreibung",
+          "Produktbeschreibung",
+          "Artikelbeschreibung"
+        ],
+        "es": [
+          "Descripción",
+          "Descripcion larga",
+          "Descripción larga",
+          "Descripción del producto"
+        ],
+        "it": [
+          "Descrizione",
+          "Descrizione lunga",
+          "Descrizione prodotto"
+        ],
+        "ca": [
+          "Descripció",
+          "Descripció del producte"
+        ]
+      },
+      "transform": "html"
+    },
+    {
+      "path": "vendor",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "text",
+        "enum"
+      ],
+      "names": {
+        "en": [
+          "Vendor",
+          "Brand",
+          "Brands",
+          "Manufacturer",
+          "Supplier",
+          "tax:product_brand",
+          "Brand Name",
+          "Product Brand",
+          "Make"
+        ],
+        "fr": [
+          "Marque",
+          "Marques",
+          "Fabricant",
+          "Fournisseur",
+          "Vendeur"
+        ],
+        "nl": [
+          "Merk",
+          "Fabrikant"
+        ],
+        "de": [
+          "Marke",
+          "Hersteller"
+        ],
+        "es": [
+          "Marca",
+          "Fabricante"
+        ],
+        "it": [
+          "Marca",
+          "Produttore"
+        ],
+        "ca": [
+          "Marca",
+          "Fabricant"
+        ]
+      },
+      "transform": "text"
+    },
+    {
+      "path": "productType",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "text",
+        "enum"
+      ],
+      "names": {
+        "en": [
+          "Type",
+          "Product Type",
+          "Kind"
+        ],
+        "fr": [
+          "Type de produit",
+          "Genre",
+          "Nature"
+        ]
+      },
+      "transform": "text"
+    },
+    {
+      "path": "tags",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "list",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Tags",
+          "Keywords",
+          "Labels",
+          "tax:product_tag"
+        ],
+        "fr": [
+          "Étiquettes",
+          "Mots-clés",
+          "Mots clés",
+          "Libellés"
+        ],
+        "nl": [
+          "Trefwoorden",
+          "Labels"
+        ],
+        "de": [
+          "Schlagwörter",
+          "Stichworte"
+        ],
+        "es": [
+          "Etiquetas",
+          "Palabras clave"
+        ],
+        "it": [
+          "Tag",
+          "Parole chiave"
+        ],
+        "ca": [
+          "Etiquetes",
+          "Paraules clau"
+        ]
+      },
+      "transform": "list"
+    },
+    {
+      "path": "published",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "bool",
+        "enum"
+      ],
+      "names": {
+        "en": [
+          "Published",
+          "Visible",
+          "Is Visible",
+          "Active",
+          "Online",
+          "post_status",
+          "Enabled",
+          "Is Active",
+          "Is Published",
+          "Is Enabled",
+          "Is Online"
+        ],
+        "fr": [
+          "Publié",
+          "Actif",
+          "En ligne",
+          "Visible",
+          "Activé",
+          "Disponible en ligne",
+          "Publication",
+          "Publié en ligne"
+        ],
+        "nl": [
+          "Zichtbaar",
+          "Zichtbaarheid"
+        ],
+        "de": [
+          "Sichtbar",
+          "Sichtbarkeit"
+        ],
+        "es": [
+          "Visible",
+          "Visibilidad"
+        ],
+        "it": [
+          "Visibile",
+          "Visibilità"
+        ],
+        "ca": [
+          "Visible",
+          "Visibilitat"
+        ]
+      },
+      "transform": "bool"
+    },
+    {
+      "path": "status",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "enum"
+      ],
+      "names": {
+        "en": [
+          "Status",
+          "Product Status",
+          "State"
+        ],
+        "fr": [
+          "Statut",
+          "État"
+        ],
+        "nl": [
+          "Status",
+          "Actief",
+          "Gepubliceerd"
+        ],
+        "de": [
+          "Status",
+          "Aktiv",
+          "Veröffentlicht"
+        ],
+        "es": [
+          "Estado",
+          "Activo",
+          "Publicado"
+        ],
+        "it": [
+          "Stato",
+          "Attivo",
+          "Pubblicato"
+        ],
+        "ca": [
+          "Estat",
+          "Actiu"
+        ]
+      },
+      "transform": "enum"
+    },
+    {
+      "path": "categories",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "path",
+        "list",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Categories",
+          "Category",
+          "Product Category",
+          "Collection",
+          "Collections",
+          "tax:product_cat",
+          "Breadcrumb",
+          "Department",
+          "Taxonomy"
+        ],
+        "fr": [
+          "Catégorie",
+          "Catégories",
+          "Rayon",
+          "Famille",
+          "Sous-catégorie",
+          "Univers",
+          "Fil d’Ariane",
+          "Arborescence"
+        ],
+        "nl": [
+          "Categorie",
+          "Categorieën",
+          "Afdeling",
+          "Rubriek"
+        ],
+        "de": [
+          "Kategorie",
+          "Kategorien",
+          "Warengruppe",
+          "Abteilung",
+          "Rubrik"
+        ],
+        "es": [
+          "Categoría",
+          "Categorías",
+          "Sección",
+          "Familia"
+        ],
+        "it": [
+          "Categoria",
+          "Categorie",
+          "Reparto",
+          "Famiglia"
+        ],
+        "ca": [
+          "Categoria",
+          "Categories",
+          "Secció"
+        ]
+      },
+      "transform": "category_path",
+      "relation": "categories-hierarchy"
+    },
+    {
+      "path": "seoTitle",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "text"
+      ],
+      "names": {
+        "en": [
+          "SEO Title",
+          "Page Title",
+          "Meta Title",
+          "Meta: title",
+          "SEO Meta Title"
+        ],
+        "fr": [
+          "Titre SEO",
+          "Titre de la page",
+          "Méta titre"
+        ],
+        "nl": [
+          "SEO-titel",
+          "Metatitel"
+        ],
+        "de": [
+          "SEO-Titel",
+          "Meta-Titel"
+        ],
+        "es": [
+          "Título SEO",
+          "Meta título"
+        ],
+        "it": [
+          "Titolo SEO",
+          "Meta titolo"
+        ],
+        "ca": [
+          "Títol SEO"
+        ]
+      },
+      "transform": "text"
+    },
+    {
+      "path": "seoDescription",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "text",
+        "html",
+        "longText"
+      ],
+      "names": {
+        "en": [
+          "SEO Description",
+          "Meta Description",
+          "Summary",
+          "Excerpt",
+          "SEO Meta Description"
+        ],
+        "fr": [
+          "Méta description",
+          "Résumé",
+          "Accroche",
+          "Extrait"
+        ],
+        "nl": [
+          "SEO-omschrijving",
+          "Metabeschrijving"
+        ],
+        "de": [
+          "SEO-Beschreibung",
+          "Meta-Beschreibung"
+        ],
+        "es": [
+          "Descripción SEO",
+          "Meta descripción"
+        ],
+        "it": [
+          "Descrizione SEO",
+          "Meta descrizione"
+        ],
+        "ca": [
+          "Descripció SEO"
+        ]
+      },
+      "transform": "text"
+    },
+    {
+      "path": "translations",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "text",
+        "html",
+        "longText"
+      ],
+      "names": {
+        "en": [
+          "Translation",
+          "Translated Title",
+          "Title (en)",
+          "Title (fr)",
+          "Name (en)",
+          "Description (en)",
+          "name_en",
+          "title_en",
+          "description_en"
+        ],
+        "fr": [
+          "Traduction",
+          "Titre (en)",
+          "Nom (en)",
+          "Description (en)"
+        ]
+      },
+      "transform": "translations",
+      "relation": "multilingual",
+      "family": "^(?:.+?)[ _.-]?\\((?:[a-z]{2}(?:[-_][A-Za-z]{2})?)\\)$|^(?:name|title|titre|nom|description|body|slug|handle|seo[ _-]?title|seo[ _-]?description|meta[ _-]?title|meta[ _-]?description)[ _-](?:[a-z]{2}(?:[-_][A-Za-z]{2})?)$",
+      "notes": "Columns suffixed by a locale (name_en, Title (fr), description_nl-BE) are ONE structural family: the default locale stays in the flat fields, the others land in translations[locale]."
+    },
+    {
+      "path": "sku",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "id",
+        "text",
+        "int"
+      ],
+      "names": {
+        "en": [
+          "SKU",
+          "Variant SKU",
+          "Reference",
+          "Ref",
+          "Item Code",
+          "Article Number",
+          "Product Code",
+          "Part Number",
+          "MPN",
+          "Model",
+          "Product SKU",
+          "Item Number",
+          "Item No",
+          "Article No"
+        ],
+        "fr": [
+          "Référence",
+          "Réf",
+          "Réf.",
+          "Code article",
+          "Code produit",
+          "Numéro d’article",
+          "Modèle",
+          "Référence produit",
+          "UGS"
+        ],
+        "nl": [
+          "Artikelnummer",
+          "Artikelnr",
+          "Artikelcode",
+          "Referentie",
+          "Productcode"
+        ],
+        "de": [
+          "Artikelnummer",
+          "Art.-Nr.",
+          "Artikelnr",
+          "Bestellnummer",
+          "Herstellernummer",
+          "SKU"
+        ],
+        "es": [
+          "Referencia",
+          "Ref",
+          "Código",
+          "Código de artículo",
+          "SKU"
+        ],
+        "it": [
+          "Codice articolo",
+          "Codice",
+          "Riferimento",
+          "SKU",
+          "Cod. art."
+        ],
+        "ca": [
+          "Referència",
+          "Codi",
+          "Codi d'article"
+        ]
+      },
+      "transform": "copy",
+      "unique": true,
+      "relation": "identifiers-relation"
+    },
+    {
+      "path": "price",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "price",
+        "float",
+        "int"
+      ],
+      "names": {
+        "en": [
+          "Price",
+          "Variant Price",
+          "Regular price",
+          "regular_price",
+          "Unit Price",
+          "Selling Price",
+          "PVP",
+          "Sale Price",
+          "Current Price"
+        ],
+        "fr": [
+          "Prix",
+          "Prix de vente",
+          "Prix TTC",
+          "Prix unitaire",
+          "Tarif",
+          "PV",
+          "Prix actuel",
+          "Prix public",
+          "PU TTC"
+        ],
+        "nl": [
+          "Prijs",
+          "Verkoopprijs",
+          "Consumentenprijs",
+          "Prijs incl. btw"
+        ],
+        "de": [
+          "Preis",
+          "Verkaufspreis",
+          "VK-Preis",
+          "Bruttopreis"
+        ],
+        "es": [
+          "Precio",
+          "Precio de venta",
+          "PVP",
+          "Precio venta"
+        ],
+        "it": [
+          "Prezzo",
+          "Prezzo di vendita",
+          "Prezzo al pubblico"
+        ],
+        "ca": [
+          "Preu",
+          "Preu de venda"
+        ]
+      },
+      "transform": "money",
+      "reviewAlways": true,
+      "relation": "pricing"
+    },
+    {
+      "path": "compareAtPrice",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "price",
+        "float"
+      ],
+      "names": {
+        "en": [
+          "Compare At Price",
+          "Variant Compare At Price",
+          "Was Price",
+          "RRP",
+          "Retail Price",
+          "List Price",
+          "Original Price",
+          "Strikethrough Price",
+          "MSRP"
+        ],
+        "fr": [
+          "Prix barré",
+          "Ancien prix",
+          "Prix avant remise",
+          "Prix conseillé",
+          "Prix de référence",
+          "Prix initial",
+          "Prix catalogue"
+        ],
+        "nl": [
+          "Oude prijs",
+          "Van-prijs",
+          "Adviesprijs",
+          "Doorgestreepte prijs"
+        ],
+        "de": [
+          "Streichpreis",
+          "UVP",
+          "Alter Preis",
+          "Listenpreis"
+        ],
+        "es": [
+          "Precio tachado",
+          "Precio original",
+          "Precio anterior",
+          "PVP recomendado"
+        ],
+        "it": [
+          "Prezzo barrato",
+          "Prezzo di listino",
+          "Prezzo precedente"
+        ],
+        "ca": [
+          "Preu original",
+          "Preu anterior"
+        ]
+      },
+      "transform": "money",
+      "reviewAlways": true,
+      "relation": "pricing"
+    },
+    {
+      "path": "cost",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "price",
+        "float"
+      ],
+      "names": {
+        "en": [
+          "Cost",
+          "Cost per item",
+          "Cost Price",
+          "Wholesale Price",
+          "Purchase Price",
+          "PVD",
+          "Buy Price",
+          "Net Price"
+        ],
+        "fr": [
+          "Prix d’achat",
+          "Coût",
+          "Prix de gros",
+          "Prix HT fournisseur",
+          "Prix revendeur",
+          "Coût unitaire"
+        ],
+        "nl": [
+          "Inkoopprijs",
+          "Kostprijs"
+        ],
+        "de": [
+          "Einkaufspreis",
+          "EK-Preis",
+          "Kosten"
+        ],
+        "es": [
+          "Coste",
+          "Precio de compra",
+          "Precio de coste"
+        ],
+        "it": [
+          "Costo",
+          "Prezzo d'acquisto"
+        ],
+        "ca": [
+          "Cost",
+          "Preu de compra"
+        ]
+      },
+      "transform": "money",
+      "relation": "pricing"
+    },
+    {
+      "path": "barcode",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "ean",
+        "int",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Barcode",
+          "EAN",
+          "EAN13",
+          "UPC",
+          "UPC/EAN",
+          "GTIN",
+          "ISBN",
+          "Variant Barcode",
+          "Variant Barcodes",
+          "Bar Code"
+        ],
+        "fr": [
+          "Code-barres",
+          "Code barre",
+          "Code EAN",
+          "Gencod",
+          "Code GTIN"
+        ],
+        "nl": [
+          "Streepjescode",
+          "Barcode",
+          "EAN",
+          "GTIN"
+        ],
+        "de": [
+          "Barcode",
+          "EAN",
+          "GTIN",
+          "Strichcode"
+        ],
+        "es": [
+          "Código de barras",
+          "EAN",
+          "GTIN"
+        ],
+        "it": [
+          "Codice a barre",
+          "EAN",
+          "GTIN"
+        ],
+        "ca": [
+          "Codi de barres",
+          "EAN"
+        ]
+      },
+      "transform": "copy",
+      "unique": true,
+      "relation": "identifiers-relation"
+    },
+    {
+      "path": "identifiers.gtin",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "ean",
+        "int",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "GTIN",
+          "GTIN-13",
+          "GTIN-14",
+          "Global Trade Number",
+          "Global Trade Item Number",
+          "gtin13",
+          "gtin14"
+        ],
+        "fr": [
+          "Code GTIN"
+        ]
+      },
+      "transform": "text",
+      "relation": "identifiers-relation",
+      "unique": true
+    },
+    {
+      "path": "identifiers.ean",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "ean",
+        "int",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "EAN",
+          "EAN13",
+          "EAN-13",
+          "EAN Code",
+          "ean13"
+        ],
+        "fr": [
+          "Code EAN",
+          "Code EAN13",
+          "Gencod"
+        ]
+      },
+      "transform": "text",
+      "relation": "identifiers-relation",
+      "unique": true
+    },
+    {
+      "path": "identifiers.upc",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "ean",
+        "int",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "UPC",
+          "UPC Code",
+          "UPC-A"
+        ],
+        "fr": [
+          "Code UPC"
+        ]
+      },
+      "transform": "text",
+      "relation": "identifiers-relation",
+      "unique": true
+    },
+    {
+      "path": "identifiers.isbn",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "ean",
+        "int",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "ISBN",
+          "ISBN-13",
+          "ISBN-10"
+        ],
+        "fr": [
+          "Code ISBN"
+        ]
+      },
+      "transform": "text",
+      "relation": "identifiers-relation",
+      "unique": true
+    },
+    {
+      "path": "identifiers.mpn",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "id",
+        "text",
+        "int"
+      ],
+      "names": {
+        "en": [
+          "MPN",
+          "Manufacturer Part Number",
+          "Manufacturer Number",
+          "Part Number",
+          "manufacturerNumber"
+        ],
+        "fr": [
+          "Référence fabricant",
+          "Réf. fabricant",
+          "Numéro fabricant",
+          "Code fabricant"
+        ]
+      },
+      "transform": "text",
+      "relation": "identifiers-relation"
+    },
+    {
+      "path": "identifiers.hsCode",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "text"
+      ],
+      "names": {
+        "en": [
+          "HS Code",
+          "Harmonized System Code",
+          "Harmonized Code",
+          "harmonizedSystemCode",
+          "Tariff Code",
+          "Customs Code",
+          "Commodity Code"
+        ],
+        "fr": [
+          "Code SH",
+          "Code douanier",
+          "Code HS",
+          "Nomenclature douanière"
+        ],
+        "nl": [
+          "Douanecode",
+          "HS-code"
+        ],
+        "de": [
+          "Zolltarifnummer",
+          "HS-Code"
+        ],
+        "es": [
+          "Código arancelario",
+          "Partida arancelaria"
+        ],
+        "it": [
+          "Codice doganale",
+          "Codice SH"
+        ],
+        "ca": [
+          "Codi aranzelari"
+        ]
+      },
+      "transform": "text",
+      "relation": "identifiers-relation"
+    },
+    {
+      "path": "identifiers.originCountry",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "countryCode",
+        "text",
+        "enum"
+      ],
+      "names": {
+        "en": [
+          "Country of Origin",
+          "Country Code of Origin",
+          "countryCodeOfOrigin",
+          "Origin Country",
+          "Made in"
+        ],
+        "fr": [
+          "Pays d’origine",
+          "Pays d'origine",
+          "Origine"
+        ],
+        "nl": [
+          "Land van herkomst",
+          "Herkomst"
+        ],
+        "de": [
+          "Herkunftsland",
+          "Ursprungsland"
+        ],
+        "es": [
+          "País de origen",
+          "Origen"
+        ],
+        "it": [
+          "Paese d'origine"
+        ],
+        "ca": [
+          "País d'origen"
+        ]
+      },
+      "transform": "text",
+      "relation": "identifiers-relation"
+    },
+    {
+      "path": "grams",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "float",
+        "int"
+      ],
+      "names": {
+        "en": [
+          "Weight",
+          "Variant Grams",
+          "Weight (kg)",
+          "Weight (g)",
+          "Grams",
+          "Net Weight",
+          "Shipping Weight",
+          "Product Weight",
+          "Item Weight",
+          "Gross Weight",
+          "Weight in grams",
+          "Weight_g"
+        ],
+        "fr": [
+          "Poids",
+          "Poids (kg)",
+          "Poids (g)",
+          "Masse",
+          "Poids net",
+          "Poids du produit",
+          "Poids brut",
+          "Masse en grammes",
+          "Poids en grammes"
+        ],
+        "nl": [
+          "Gewicht",
+          "Nettogewicht",
+          "Brutogewicht"
+        ],
+        "de": [
+          "Gewicht",
+          "Nettogewicht",
+          "Bruttogewicht"
+        ],
+        "es": [
+          "Peso",
+          "Peso neto",
+          "Peso bruto"
+        ],
+        "it": [
+          "Peso",
+          "Peso netto",
+          "Peso lordo"
+        ],
+        "ca": [
+          "Pes",
+          "Pes net"
+        ]
+      },
+      "transform": "copy",
+      "unitHint": "weight"
+    },
+    {
+      "path": "inventoryQty",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "int"
+      ],
+      "names": {
+        "en": [
+          "Stock",
+          "Inventory",
+          "Quantity",
+          "Qty",
+          "Variant Inventory Qty",
+          "Current Stock",
+          "Available",
+          "Stock Quantity",
+          "In Stock Qty",
+          "On Hand"
+        ],
+        "fr": [
+          "Quantité",
+          "Stock disponible",
+          "Disponible",
+          "Qté",
+          "Quantité en stock",
+          "Inventaire"
+        ],
+        "nl": [
+          "Voorraad",
+          "Aantal",
+          "Hoeveelheid",
+          "Aantal op voorraad",
+          "Beschikbaar aantal"
+        ],
+        "de": [
+          "Bestand",
+          "Lagerbestand",
+          "Menge",
+          "Verfügbare Menge"
+        ],
+        "es": [
+          "Existencias",
+          "Stock",
+          "Cantidad",
+          "Inventario"
+        ],
+        "it": [
+          "Giacenza",
+          "Quantità",
+          "Disponibilità",
+          "Scorte"
+        ],
+        "ca": [
+          "Estoc",
+          "Quantitat",
+          "Existències"
+        ]
+      },
+      "transform": "int",
+      "relation": "stock-relation"
+    },
+    {
+      "path": "requiresShipping",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "bool"
+      ],
+      "names": {
+        "en": [
+          "Requires Shipping",
+          "Variant Requires Shipping",
+          "Virtual",
+          "Is Virtual",
+          "Shippable",
+          "Physical"
+        ],
+        "fr": [
+          "Virtuel",
+          "Livraison requise",
+          "Expédiable",
+          "Produit physique"
+        ]
+      },
+      "transform": "bool"
+    },
+    {
+      "path": "taxable",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "bool",
+        "enum"
+      ],
+      "names": {
+        "en": [
+          "Taxable",
+          "Variant Taxable",
+          "Tax status",
+          "Tax Class",
+          "Charge Tax"
+        ],
+        "fr": [
+          "Taxable",
+          "Taxe",
+          "TVA applicable",
+          "Statut TVA",
+          "Soumis à TVA"
+        ]
+      },
+      "transform": "bool",
+      "relation": "tax"
+    },
+    {
+      "path": "variantImage",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "imageUrl",
+        "url"
+      ],
+      "names": {
+        "en": [
+          "Variant Image",
+          "Variant Image URL"
+        ],
+        "fr": [
+          "Image variante",
+          "Photo variante"
+        ]
+      },
+      "transform": "url",
+      "relation": "images-relation"
+    },
+    {
+      "path": "images",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "imageUrl",
+        "url",
+        "list"
+      ],
+      "names": {
+        "en": [
+          "Images",
+          "Image",
+          "Image Src",
+          "Image URL",
+          "Photo",
+          "Photos",
+          "Picture",
+          "Pictures",
+          "productImageUrl",
+          "Image Link",
+          "Main Image",
+          "Thumbnail",
+          "Gallery",
+          "Featured Image",
+          "Image URLs",
+          "Additional Images"
+        ],
+        "fr": [
+          "Image",
+          "Images",
+          "Photo",
+          "Photos",
+          "Visuel",
+          "Visuels",
+          "Illustration",
+          "Lien image",
+          "Image principale",
+          "Galerie",
+          "Image du produit",
+          "Images du produit"
+        ],
+        "nl": [
+          "Afbeelding",
+          "Foto",
+          "Afbeelding-URL",
+          "Hoofdafbeelding"
+        ],
+        "de": [
+          "Bild",
+          "Bild-URL",
+          "Foto",
+          "Hauptbild",
+          "Zusätzliche Bilder"
+        ],
+        "es": [
+          "Imagen",
+          "Foto",
+          "URL de la imagen",
+          "Imagen principal"
+        ],
+        "it": [
+          "Immagine",
+          "Foto",
+          "URL immagine",
+          "Immagine principale"
+        ],
+        "ca": [
+          "Imatge",
+          "Foto",
+          "URL de la imatge"
+        ]
+      },
+      "transform": "images",
+      "relation": "images-relation",
+      "family": "^(image|img|photo|picture|visuel)[ _-]?(src|url|link)?[ _-]?\\d*$"
+    },
+    {
+      "path": "options",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "text",
+        "enum"
+      ],
+      "names": {
+        "en": [
+          "Options",
+          "Option Name",
+          "Option Value",
+          "Attributes",
+          "Attribute Name",
+          "Attribute Value",
+          "Variation",
+          "Variant",
+          "Option"
+        ],
+        "fr": [
+          "Options",
+          "Attributs",
+          "Déclinaison",
+          "Variante",
+          "Caractéristique",
+          "Taille",
+          "Couleur",
+          "Pointure",
+          "Size",
+          "Color",
+          "Colour",
+          "Material",
+          "Nom de variante",
+          "Option"
+        ]
+      },
+      "transform": "options",
+      "relation": "options-vs-attributes-vs-features",
+      "family": "^(option|attribute|attribut|caract[ée]ristique|declinaison|déclinaison)[ _-]?\\d*[ _-]?(name|value|nom|valeur|values)?$|^attribute:|^(taille|couleur|pointure|size|color|colour|material|mati[èe]re)$"
+    },
+    {
+      "path": "metafields",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "text",
+        "longText",
+        "html",
+        "int",
+        "float",
+        "bool",
+        "list",
+        "ean",
+        "price",
+        "date",
+        "url",
+        "imageUrl",
+        "email",
+        "phone",
+        "enum",
+        "id",
+        "slug",
+        "path",
+        "countryCode",
+        "currencyCode"
+      ],
+      "names": {
+        "en": [
+          "Metafield",
+          "Meta",
+          "Custom Field",
+          "Extra",
+          "Specification",
+          "Feature"
+        ],
+        "fr": [
+          "Champ personnalisé",
+          "Métachamp",
+          "Spécification",
+          "Caractéristique technique",
+          "Info"
+        ]
+      },
+      "transform": "metafields",
+      "family": "^(meta|metafield|custom|spec|feature|caract[ée]ristique)[ :._-]|\\(product\\.metafields\\.[^)]+\\)\\s*$",
+      "notes": "6.5: a Shopify export column `<label> (product.metafields.<ns>.<key>)` is the metafields family whatever its label; the namespace decides ownership (recognition.v1.json#metafieldOwnership). A metafield holds any value type: no value profile contradicts the carry."
+    },
+    {
+      "path": "lengthCm",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "float",
+        "int"
+      ],
+      "names": {
+        "en": [
+          "Length",
+          "Depth",
+          "Length (cm)",
+          "Depth (cm)"
+        ],
+        "fr": [
+          "Longueur",
+          "Profondeur",
+          "Longueur (cm)"
+        ],
+        "nl": [
+          "Lengte"
+        ],
+        "de": [
+          "Länge"
+        ],
+        "es": [
+          "Longitud"
+        ],
+        "it": [
+          "Lunghezza"
+        ],
+        "ca": [
+          "Longitud"
+        ]
+      },
+      "transform": "copy",
+      "unitHint": "length"
+    },
+    {
+      "path": "widthCm",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "float",
+        "int"
+      ],
+      "names": {
+        "en": [
+          "Width",
+          "Width (cm)"
+        ],
+        "fr": [
+          "Largeur",
+          "Largeur (cm)"
+        ],
+        "nl": [
+          "Breedte"
+        ],
+        "de": [
+          "Breite"
+        ],
+        "es": [
+          "Ancho"
+        ],
+        "it": [
+          "Larghezza"
+        ],
+        "ca": [
+          "Amplada"
+        ]
+      },
+      "transform": "copy",
+      "unitHint": "length"
+    },
+    {
+      "path": "heightCm",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "float",
+        "int"
+      ],
+      "names": {
+        "en": [
+          "Height",
+          "Height (cm)"
+        ],
+        "fr": [
+          "Hauteur",
+          "Hauteur (cm)"
+        ],
+        "nl": [
+          "Hoogte"
+        ],
+        "de": [
+          "Höhe"
+        ],
+        "es": [
+          "Alto",
+          "Altura"
+        ],
+        "it": [
+          "Altezza"
+        ],
+        "ca": [
+          "Alçada"
+        ]
+      },
+      "transform": "copy",
+      "unitHint": "length"
+    },
+    {
+      "path": "parentRef",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "ref",
+        "id",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Parent",
+          "Parent SKU",
+          "Parent ID",
+          "Parent Handle",
+          "Group",
+          "Product Group",
+          "Master SKU"
+        ],
+        "fr": [
+          "Parent",
+          "Produit parent",
+          "Référence parent",
+          "Groupe",
+          "Article maître"
+        ],
+        "nl": [
+          "Hoofdproduct",
+          "Groep-ID"
+        ],
+        "de": [
+          "Elternartikel",
+          "Gruppen-ID"
+        ],
+        "es": [
+          "Producto padre",
+          "ID de grupo"
+        ],
+        "it": [
+          "Prodotto padre",
+          "ID gruppo"
+        ],
+        "ca": [
+          "Producte pare"
+        ]
+      },
+      "transform": "copy",
+      "relation": "product-variant",
+      "role": "parent-ref"
+    },
+    {
+      "path": "identity.sourceId",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "id",
+        "int",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "ID",
+          "Product ID",
+          "product_id",
+          "Source ID",
+          "Source Product ID",
+          "Item ID",
+          "External ID"
+        ],
+        "fr": [
+          "ID produit",
+          "Identifiant produit",
+          "ID source"
+        ]
+      },
+      "transform": "string_id",
+      "unique": true,
+      "notes": "The technical id the SOURCE gave the product (a scraped site, a post id). Kept for traceability; never the target id."
+    },
+    {
+      "path": "sourceUrl",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "url",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Source URL",
+          "URL",
+          "Link",
+          "Product Link",
+          "Page URL",
+          "Product Page",
+          "Product Page URL"
+        ],
+        "fr": [
+          "Lien",
+          "URL du produit",
+          "Lien produit",
+          "Lien du produit",
+          "Page produit",
+          "URL source"
+        ],
+        "nl": [
+          "Link",
+          "Product-URL"
+        ],
+        "de": [
+          "Link",
+          "Produkt-URL",
+          "Artikel-URL"
+        ],
+        "es": [
+          "Enlace",
+          "URL del producto"
+        ],
+        "it": [
+          "Link",
+          "URL prodotto"
+        ],
+        "ca": [
+          "Enllaç",
+          "URL del producte"
+        ]
+      },
+      "transform": "source_url",
+      "notes": "The address of the product page the data was read from. No store imports it as such: kept with the product (sourceExtension) and listed, never written as a handle."
+    },
+    {
+      "path": "specifications",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "longText",
+        "html",
+        "text",
+        "list"
+      ],
+      "names": {
+        "en": [
+          "Technical Specifications",
+          "Technical Specs",
+          "technical_specs",
+          "Specifications",
+          "Specs",
+          "Tech Specs",
+          "Features",
+          "Key Features",
+          "Characteristics",
+          "Technical Details",
+          "Technical Data",
+          "Product Specifications"
+        ],
+        "fr": [
+          "Fiche technique",
+          "Caractéristiques",
+          "Caractéristiques techniques",
+          "Spécifications",
+          "Spécifications techniques",
+          "Données techniques",
+          "Informations techniques",
+          "Points forts",
+          "Características",
+          "Propiedades",
+          "Propietats",
+          "Especificaciones"
+        ]
+      },
+      "transform": "description_section",
+      "notes": "Technical sheet / features. By default APPENDED to the description as a titled section (every platform carries it, nothing is cut into attributes); the user can re-point it to a custom field or attributes."
+    },
+    {
+      "path": "stockStatus",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "enum",
+        "bool",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Stock Status",
+          "stock_status",
+          "Availability",
+          "In stock?",
+          "In Stock",
+          "Inventory Status"
+        ],
+        "fr": [
+          "Disponibilité",
+          "Statut du stock",
+          "État du stock",
+          "En stock"
+        ],
+        "nl": [
+          "Beschikbaarheid",
+          "Leverstatus"
+        ],
+        "de": [
+          "Verfügbarkeit",
+          "Lieferstatus"
+        ],
+        "es": [
+          "Disponibilidad",
+          "Estado del stock"
+        ],
+        "it": [
+          "Disponibilità",
+          "Stato"
+        ],
+        "ca": [
+          "Disponibilitat"
+        ]
+      },
+      "transform": "metafields",
+      "notes": "In stock / out of stock as the source states it (schema.org InStock…), distinct from a quantity. Carried as a custom field."
+    },
+    {
+      "path": "firstName",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "name",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "First Name",
+          "first_name",
+          "Firstname",
+          "Given Name",
+          "billing_first_name"
+        ],
+        "fr": [
+          "Prénom"
+        ]
+      },
+      "transform": "copy",
+      "pii": true
+    },
+    {
+      "path": "lastName",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "name",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Last Name",
+          "last_name",
+          "Lastname",
+          "Surname",
+          "Family Name",
+          "billing_last_name"
+        ],
+        "fr": [
+          "Nom",
+          "Nom de famille"
+        ]
+      },
+      "transform": "copy",
+      "pii": true
+    },
+    {
+      "path": "email",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "email"
+      ],
+      "names": {
+        "en": [
+          "Email",
+          "E-mail",
+          "user_email",
+          "billing_email",
+          "Email Address",
+          "Mail"
+        ],
+        "fr": [
+          "Courriel",
+          "Adresse e-mail",
+          "Adresse mail",
+          "E-mail"
+        ]
+      },
+      "transform": "copy",
+      "unique": true,
+      "pii": true
+    },
+    {
+      "path": "phone",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "phone",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Phone",
+          "Telephone",
+          "Phone Number",
+          "billing_phone",
+          "Mobile"
+        ],
+        "fr": [
+          "Téléphone",
+          "Tél",
+          "Tel",
+          "Portable",
+          "Mobile"
+        ]
+      },
+      "transform": "copy",
+      "pii": true
+    },
+    {
+      "path": "company",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Company",
+          "Default Address Company",
+          "billing_company",
+          "Address Company",
+          "Organisation",
+          "Organization"
+        ],
+        "fr": [
+          "Société",
+          "Entreprise",
+          "Raison sociale"
+        ]
+      },
+      "transform": "copy"
+    },
+    {
+      "path": "address1",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Address",
+          "Address 1",
+          "Address1",
+          "Address Line 1",
+          "Default Address Address1",
+          "billing_address_1",
+          "Street"
+        ],
+        "fr": [
+          "Adresse",
+          "Adresse 1",
+          "Rue",
+          "Ligne d’adresse 1"
+        ]
+      },
+      "transform": "copy",
+      "pii": true
+    },
+    {
+      "path": "address2",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Address 2",
+          "Address2",
+          "Address Line 2",
+          "Default Address Address2",
+          "billing_address_2"
+        ],
+        "fr": [
+          "Adresse 2",
+          "Complément d’adresse",
+          "Ligne d’adresse 2"
+        ]
+      },
+      "transform": "copy",
+      "pii": true
+    },
+    {
+      "path": "city",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "text"
+      ],
+      "names": {
+        "en": [
+          "City",
+          "Town",
+          "City/Suburb",
+          "Default Address City",
+          "billing_city"
+        ],
+        "fr": [
+          "Ville",
+          "Commune",
+          "Localité"
+        ]
+      },
+      "transform": "copy",
+      "pii": true
+    },
+    {
+      "path": "province",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "state",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Province",
+          "State",
+          "State/Province",
+          "Region",
+          "Default Address Province Code",
+          "billing_state",
+          "County"
+        ],
+        "fr": [
+          "Région",
+          "État",
+          "Département",
+          "Province"
+        ]
+      },
+      "transform": "state"
+    },
+    {
+      "path": "country",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "countryCode",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Country",
+          "Country Code",
+          "Default Address Country Code",
+          "billing_country"
+        ],
+        "fr": [
+          "Pays",
+          "Code pays"
+        ]
+      },
+      "transform": "copy"
+    },
+    {
+      "path": "zip",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "postcode",
+        "int",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Zip",
+          "Zip Code",
+          "Postcode",
+          "Postal Code",
+          "Zip/Postcode",
+          "Default Address Zip",
+          "billing_postcode"
+        ],
+        "fr": [
+          "Code postal",
+          "CP"
+        ]
+      },
+      "transform": "copy",
+      "pii": true
+    },
+    {
+      "path": "addrPhone",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "phone",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Address Phone",
+          "Default Address Phone"
+        ],
+        "fr": [
+          "Téléphone adresse"
+        ]
+      },
+      "transform": "copy",
+      "pii": true
+    },
+    {
+      "path": "acceptsEmail",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "bool",
+        "enum"
+      ],
+      "names": {
+        "en": [
+          "Accepts Email Marketing",
+          "Receive Marketing Emails",
+          "Newsletter",
+          "Email Opt-in",
+          "Marketing Consent",
+          "Subscribed"
+        ],
+        "fr": [
+          "Newsletter",
+          "Accepte les e-mails",
+          "Opt-in",
+          "Consentement marketing",
+          "Abonné"
+        ]
+      },
+      "transform": "consent"
+    },
+    {
+      "path": "acceptsSms",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "bool",
+        "enum"
+      ],
+      "names": {
+        "en": [
+          "Accepts SMS Marketing",
+          "SMS Opt-in",
+          "SMS Consent"
+        ],
+        "fr": [
+          "Accepte les SMS",
+          "Opt-in SMS"
+        ]
+      },
+      "transform": "consent"
+    },
+    {
+      "path": "note",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "text",
+        "longText"
+      ],
+      "names": {
+        "en": [
+          "Note",
+          "Notes",
+          "Comment",
+          "Comments",
+          "Remarks"
+        ],
+        "fr": [
+          "Note",
+          "Remarque",
+          "Commentaire",
+          "Observations"
+        ]
+      },
+      "transform": "text"
+    },
+    {
+      "path": "tags",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "list",
+        "text",
+        "enum"
+      ],
+      "names": {
+        "en": [
+          "Tags",
+          "Customer Group",
+          "Group",
+          "Segment",
+          "Labels"
+        ],
+        "fr": [
+          "Étiquettes",
+          "Groupe client",
+          "Groupe",
+          "Segment"
+        ],
+        "nl": [
+          "Trefwoorden",
+          "Labels"
+        ],
+        "de": [
+          "Schlagwörter",
+          "Stichworte"
+        ],
+        "es": [
+          "Etiquetas",
+          "Palabras clave"
+        ],
+        "it": [
+          "Tag",
+          "Parole chiave"
+        ],
+        "ca": [
+          "Etiquetes",
+          "Paraules clau"
+        ]
+      },
+      "transform": "list"
+    },
+    {
+      "path": "taxExempt",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "bool"
+      ],
+      "names": {
+        "en": [
+          "Tax Exempt",
+          "Tax Exempt Category",
+          "VAT Exempt"
+        ],
+        "fr": [
+          "Exonéré de taxe",
+          "Exonéré TVA",
+          "Franchise de TVA"
+        ]
+      },
+      "transform": "bool"
+    },
+    {
+      "path": "roles",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "enum",
+        "list",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "roles",
+          "Role",
+          "User Role",
+          "Account Type"
+        ],
+        "fr": [
+          "Rôle",
+          "Type de compte"
+        ]
+      },
+      "transform": "derived"
+    },
+    {
+      "path": "shipping",
+      "entity": "customers",
+      "scope": "product",
+      "accepts": [
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Shipping Address",
+          "shipping_address_1",
+          "Shipping Address 1",
+          "Delivery Address"
+        ],
+        "fr": [
+          "Adresse de livraison"
+        ]
+      },
+      "transform": "address",
+      "family": "^(shipping|delivery|livraison)[ _-]"
+    },
+    {
+      "path": "number",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "id",
+        "int",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Name",
+          "Order ID",
+          "Order Number",
+          "Order",
+          "ORDERID",
+          "order_id",
+          "Order No",
+          "Reference",
+          "Invoice Number"
+        ],
+        "fr": [
+          "Numéro",
+          "N° commande",
+          "Numéro de commande",
+          "Commande",
+          "Réf. commande",
+          "ID commande"
+        ]
+      },
+      "transform": "copy",
+      "unique": true
+    },
+    {
+      "path": "email",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "email"
+      ],
+      "names": {
+        "en": [
+          "Email",
+          "Customer Email",
+          "billing_email",
+          "customer_user",
+          "Buyer Email",
+          "E-mail"
+        ],
+        "fr": [
+          "E-mail client",
+          "Courriel",
+          "Email client"
+        ]
+      },
+      "transform": "copy",
+      "pii": true
+    },
+    {
+      "path": "createdAt",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "date",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Created at",
+          "Order Date",
+          "order_date",
+          "Date",
+          "Created",
+          "Placed At",
+          "Purchase Date"
+        ],
+        "fr": [
+          "Date",
+          "Date de commande",
+          "Créé le",
+          "Date d’achat"
+        ]
+      },
+      "transform": "copy",
+      "relation": "dates-timestamps"
+    },
+    {
+      "path": "financialStatus",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "enum",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Financial Status",
+          "Payment Status",
+          "Paid",
+          "Payment State"
+        ],
+        "fr": [
+          "Statut de paiement",
+          "Statut paiement",
+          "Payé",
+          "État du paiement"
+        ]
+      },
+      "transform": "enum"
+    },
+    {
+      "path": "fulfillmentStatus",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "enum",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Fulfillment Status",
+          "Shipping Status",
+          "Delivery Status",
+          "Fulfilled"
+        ],
+        "fr": [
+          "Statut de livraison",
+          "Statut expédition",
+          "État de la livraison",
+          "Expédié"
+        ]
+      },
+      "transform": "enum"
+    },
+    {
+      "path": "currency",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "currencyCode",
+        "enum",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Currency",
+          "Order Currency Code",
+          "order_currency",
+          "Currency Code"
+        ],
+        "fr": [
+          "Devise",
+          "Monnaie",
+          "Code devise"
+        ]
+      },
+      "transform": "copy"
+    },
+    {
+      "path": "subtotal",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "price",
+        "float"
+      ],
+      "names": {
+        "en": [
+          "Subtotal",
+          "Subtotal (inc tax)",
+          "Sub Total",
+          "Items Total",
+          "Merchandise Total"
+        ],
+        "fr": [
+          "Sous-total",
+          "Total articles",
+          "Montant HT articles"
+        ]
+      },
+      "transform": "money",
+      "relation": "order-financial-breakdown"
+    },
+    {
+      "path": "shippingAmount",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "price",
+        "float"
+      ],
+      "names": {
+        "en": [
+          "Shipping",
+          "Shipping Cost",
+          "Shipping Cost (inc tax)",
+          "order_shipping",
+          "Shipping Total",
+          "Delivery Cost",
+          "Freight"
+        ],
+        "fr": [
+          "Frais de port",
+          "Livraison",
+          "Frais de livraison",
+          "Port",
+          "Transport"
+        ]
+      },
+      "transform": "money",
+      "relation": "order-financial-breakdown"
+    },
+    {
+      "path": "taxes",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "price",
+        "float"
+      ],
+      "names": {
+        "en": [
+          "Taxes",
+          "Tax",
+          "Tax Total",
+          "order_tax",
+          "VAT",
+          "Sales Tax",
+          "Tax Amount"
+        ],
+        "fr": [
+          "TVA",
+          "Taxes",
+          "Taxe",
+          "Montant TVA",
+          "Total taxes"
+        ]
+      },
+      "transform": "money",
+      "relation": "tax"
+    },
+    {
+      "path": "total",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "price",
+        "float"
+      ],
+      "names": {
+        "en": [
+          "Total",
+          "Order Total",
+          "Order Total (inc tax)",
+          "order_total",
+          "Grand Total",
+          "Amount",
+          "Total Paid"
+        ],
+        "fr": [
+          "Total",
+          "Montant",
+          "Total commande",
+          "Montant total",
+          "Total TTC",
+          "Total payé"
+        ]
+      },
+      "transform": "money",
+      "relation": "order-financial-breakdown"
+    },
+    {
+      "path": "discountCode",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "text",
+        "enum"
+      ],
+      "names": {
+        "en": [
+          "Discount Code",
+          "Coupon Code",
+          "Coupon",
+          "Promo Code",
+          "Voucher",
+          "Voucher Code"
+        ],
+        "fr": [
+          "Code promo",
+          "Code de réduction",
+          "Coupon",
+          "Bon de réduction",
+          "Code remise"
+        ]
+      },
+      "transform": "copy"
+    },
+    {
+      "path": "discountAmount",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "price",
+        "float"
+      ],
+      "names": {
+        "en": [
+          "Discount Amount",
+          "Discount",
+          "cart_discount",
+          "Coupon Value",
+          "Discount Total",
+          "Promotion Amount"
+        ],
+        "fr": [
+          "Remise",
+          "Montant remise",
+          "Réduction",
+          "Montant de la réduction",
+          "Rabais"
+        ]
+      },
+      "transform": "money",
+      "relation": "order-financial-breakdown"
+    },
+    {
+      "path": "paymentMethod",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "enum",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Payment Method",
+          "payment_method_title",
+          "payment_method",
+          "Payment Type",
+          "Gateway",
+          "Payment Gateway"
+        ],
+        "fr": [
+          "Mode de paiement",
+          "Moyen de paiement",
+          "Méthode de paiement",
+          "Paiement"
+        ]
+      },
+      "transform": "copy"
+    },
+    {
+      "path": "note",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "text",
+        "longText"
+      ],
+      "names": {
+        "en": [
+          "Notes",
+          "Note",
+          "customer_note",
+          "Customer Message",
+          "Order Notes",
+          "Comment",
+          "Comments"
+        ],
+        "fr": [
+          "Note",
+          "Commentaire",
+          "Message client",
+          "Remarque",
+          "Instructions"
+        ]
+      },
+      "transform": "text"
+    },
+    {
+      "path": "billing",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "text",
+        "name"
+      ],
+      "names": {
+        "en": [
+          "Billing Name",
+          "Billing First Name",
+          "billing_first_name",
+          "Billing Address",
+          "Bill To"
+        ],
+        "fr": [
+          "Nom de facturation",
+          "Adresse de facturation",
+          "Facturation"
+        ]
+      },
+      "transform": "address",
+      "family": "^(billing|facturation|bill[ _-]?to)[ _-]"
+    },
+    {
+      "path": "shipping",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "text",
+        "name"
+      ],
+      "names": {
+        "en": [
+          "Shipping Name",
+          "Shipping First Name",
+          "shipping_first_name",
+          "Shipping Address",
+          "Ship To",
+          "Delivery Address"
+        ],
+        "fr": [
+          "Nom de livraison",
+          "Adresse de livraison",
+          "Livraison"
+        ]
+      },
+      "transform": "address",
+      "family": "^(shipping|delivery|livraison|ship[ _-]?to)[ _-]"
+    },
+    {
+      "path": "lineItems",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Lineitem name",
+          "item_name",
+          "Product Name",
+          "Item",
+          "Items",
+          "Line Item",
+          "Product",
+          "Article"
+        ],
+        "fr": [
+          "Article",
+          "Produit",
+          "Désignation article",
+          "Ligne",
+          "Lignes de commande"
+        ]
+      },
+      "transform": "lineitems",
+      "family": "^(lineitem|line[ _-]?item|item|product)[ _-]"
+    },
+    {
+      "path": "status",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "enum",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Order Status",
+          "order_status",
+          "Status",
+          "State"
+        ],
+        "fr": [
+          "Statut",
+          "Statut commande",
+          "État de la commande",
+          "État"
+        ],
+        "nl": [
+          "Status",
+          "Actief",
+          "Gepubliceerd"
+        ],
+        "de": [
+          "Status",
+          "Aktiv",
+          "Veröffentlicht"
+        ],
+        "es": [
+          "Estado",
+          "Activo",
+          "Publicado"
+        ],
+        "it": [
+          "Stato",
+          "Attivo",
+          "Pubblicato"
+        ],
+        "ca": [
+          "Estat",
+          "Actiu"
+        ]
+      },
+      "transform": "order_status"
+    },
+    {
+      "path": "transactionId",
+      "entity": "orders",
+      "scope": "product",
+      "accepts": [
+        "id",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Transaction ID",
+          "transaction_id",
+          "Payment ID",
+          "Payment Reference",
+          "Transaction Reference"
+        ],
+        "fr": [
+          "ID transaction",
+          "Référence transaction",
+          "Référence paiement",
+          "N° transaction"
+        ]
+      },
+      "transform": "copy",
+      "unique": true
+    },
+    {
+      "path": "shortDescription",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "text",
+        "html",
+        "longText"
+      ],
+      "names": {
+        "en": [
+          "Short description",
+          "Excerpt",
+          "post_excerpt",
+          "Summary",
+          "Teaser",
+          "Short Description"
+        ],
+        "fr": [
+          "Description courte",
+          "Résumé",
+          "Accroche",
+          "Extrait"
+        ],
+        "nl": [
+          "Korte beschrijving",
+          "Samenvatting"
+        ],
+        "de": [
+          "Kurzbeschreibung",
+          "Kurztext"
+        ],
+        "es": [
+          "Descripción corta",
+          "Resumen"
+        ],
+        "it": [
+          "Descrizione breve",
+          "Riassunto"
+        ],
+        "ca": [
+          "Descripció curta"
+        ]
+      },
+      "transform": "html",
+      "notes": "The teaser beside the price (WooCommerce \"Short description\"); bodyHtml stays the long text."
+    },
+    {
+      "path": "vatRate",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "int",
+        "float"
+      ],
+      "names": {
+        "en": [
+          "VAT",
+          "VAT rate",
+          "VAT %",
+          "Tax rate",
+          "Sales tax rate"
+        ],
+        "fr": [
+          "TVA",
+          "Taux de TVA",
+          "Taux TVA",
+          "TVA %"
+        ],
+        "nl": [
+          "BTW",
+          "BTW-tarief",
+          "BTW percentage",
+          "BTW %"
+        ],
+        "de": [
+          "MwSt",
+          "MwSt.",
+          "MwSt-Satz",
+          "Mehrwertsteuer",
+          "USt",
+          "Steuersatz"
+        ],
+        "es": [
+          "IVA",
+          "Tipo de IVA",
+          "IVA %"
+        ],
+        "it": [
+          "IVA",
+          "Aliquota IVA"
+        ],
+        "ca": [
+          "IVA"
+        ]
+      },
+      "transform": "vat_rate",
+      "notes": "A percent (21), not the amount of tax and not a tax class name."
+    },
+    {
+      "path": "currency",
+      "entity": "products",
+      "scope": "product",
+      "accepts": [
+        "currencyCode",
+        "enum",
+        "text"
+      ],
+      "names": {
+        "en": [
+          "Currency",
+          "Currency code",
+          "Price currency"
+        ],
+        "fr": [
+          "Devise",
+          "Monnaie",
+          "Code devise"
+        ],
+        "nl": [
+          "Valuta",
+          "Munteenheid"
+        ],
+        "de": [
+          "Währung",
+          "Waehrung"
+        ],
+        "es": [
+          "Moneda",
+          "Divisa"
+        ],
+        "it": [
+          "Valuta"
+        ],
+        "ca": [
+          "Moneda",
+          "Divisa"
+        ]
+      },
+      "transform": "currency"
+    },
+    {
+      "path": "unitPrice",
+      "entity": "products",
+      "scope": "variant",
+      "accepts": [
+        "price",
+        "float"
+      ],
+      "names": {
+        "en": [
+          "Price per kg",
+          "Price per kilo",
+          "Price per liter",
+          "Price per litre",
+          "Price per unit of measure",
+          "Unit price per kg",
+          "Unit price per liter"
+        ],
+        "fr": [
+          "Prix au kilo",
+          "Prix au litre",
+          "Prix par kilo",
+          "Prix par litre",
+          "Prix au kg",
+          "Prix au l"
+        ],
+        "nl": [
+          "Prijs per kilo",
+          "Prijs per liter",
+          "Prijs per kg"
+        ],
+        "de": [
+          "Grundpreis",
+          "Preis pro kg",
+          "Preis pro Liter"
+        ],
+        "es": [
+          "Precio por kilo",
+          "Precio por litro"
+        ],
+        "it": [
+          "Prezzo al chilo",
+          "Prezzo al litro"
+        ],
+        "ca": [
+          "Preu per quilo",
+          "Preu per litre"
+        ]
+      },
+      "transform": "unit_price",
+      "unitHint": "unitPrice",
+      "notes": "Price per unit of measure (what a shelf label shows), not the selling price; the unit comes from the column name."
+    }
+  ],
+  "derivations": [
+    {
+      "scope": "variant",
+      "path": "barcode",
+      "from": [
+        "identifiers.gtin",
+        "identifiers.ean",
+        "identifiers.upc",
+        "identifiers.isbn"
+      ],
+      "transform": "first_non_empty",
+      "notes": "P3 (6.1 A5): when the source splits its identifiers and has no single barcode, barcode = the first available in this order. Never overwrites a native barcode."
+    },
+    {
+      "scope": "order",
+      "path": "number",
+      "from": [
+        "numbering.sourceNumber"
+      ],
+      "transform": "first_non_empty",
+      "notes": "7.4: the flat legacy `number` = the immutable source number (a REFERENCE for the target, never its sequence)."
+    },
+    {
+      "scope": "order",
+      "path": "email",
+      "from": [
+        "customerRef.email"
+      ],
+      "transform": "first_non_empty",
+      "notes": "7.2: the legacy flat e-mail = the order customer reference e-mail."
+    },
+    {
+      "scope": "order",
+      "path": "createdAt",
+      "from": [
+        "timestamps.created"
+      ],
+      "transform": "first_non_empty",
+      "notes": "7.2"
+    },
+    {
+      "scope": "order",
+      "path": "financialStatus",
+      "from": [
+        "status.financial"
+      ],
+      "transform": "first_non_empty",
+      "notes": "7.2: typed status feeds the legacy string."
+    },
+    {
+      "scope": "order",
+      "path": "fulfillmentStatus",
+      "from": [
+        "status.fulfillment"
+      ],
+      "transform": "first_non_empty",
+      "notes": "7.2"
+    },
+    {
+      "scope": "order",
+      "path": "subtotal",
+      "from": [
+        "amounts.subtotal"
+      ],
+      "transform": "first_number",
+      "notes": "7.2"
+    },
+    {
+      "scope": "order",
+      "path": "shipping",
+      "from": [
+        "amounts.shipping"
+      ],
+      "transform": "first_number",
+      "notes": "7.2"
+    },
+    {
+      "scope": "order",
+      "path": "taxes",
+      "from": [
+        "amounts.taxes"
+      ],
+      "transform": "first_number",
+      "notes": "7.2"
+    },
+    {
+      "scope": "order",
+      "path": "total",
+      "from": [
+        "amounts.total"
+      ],
+      "transform": "first_number",
+      "notes": "7.2"
+    },
+    {
+      "scope": "order",
+      "path": "discountAmount",
+      "from": [
+        "amounts.discounts"
+      ],
+      "transform": "first_number",
+      "notes": "7.2"
+    },
+    {
+      "scope": "order",
+      "path": "discountCode",
+      "from": [
+        "discounts.0.code"
+      ],
+      "transform": "first_non_empty",
+      "notes": "7.2: first discount code."
+    },
+    {
+      "scope": "order",
+      "path": "paymentMethod",
+      "from": [
+        "payments.0.method",
+        "payments.0.gateway"
+      ],
+      "transform": "first_non_empty",
+      "notes": "7.2: first payment label (never a token)."
+    },
+    {
+      "scope": "order",
+      "path": "transactionId",
+      "from": [
+        "payments.0.providerRef"
+      ],
+      "transform": "first_non_empty",
+      "notes": "7.2: provider REFERENCE of the first payment."
+    },
+    {
+      "scope": "customer",
+      "path": "phone",
+      "from": [
+        "address.phone"
+      ],
+      "transform": "first_non_empty",
+      "notes": "7.2: customer phone falls back to the default address phone."
+    }
+  ]
+}

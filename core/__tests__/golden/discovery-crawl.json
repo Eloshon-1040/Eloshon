@@ -1,0 +1,9 @@
+{
+  "method": "crawl",
+  "count": 3,
+  "paths": [
+    "/product/a",
+    "/product/b",
+    "/product/c"
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "id": "bigbuy.standard.v1",
+  "displayName": "BigBuy catalogue (standard format)",
+  "provenance": "supplier",
+  "medium": "csv",
+  "platformHint": "bigbuy",
+  "entity": "products",
+  "signatures": [
+    {
+      "kind": "csv-header-set",
+      "required": [
+        "CATEGORY",
+        "PVP_BIGBUY",
+        "IMAGE1"
+      ],
+      "hints": [
+        "PVD",
+        "EAN13",
+        "ATTRIBUTE1"
+      ],
+      "separator": ";"
+    }
+  ],
+  "structure": {
+    "rows": {
+      "children": {
+        "self": true
+      }
+    }
+  },
+  "fields": [
+    {
+      "path": "NAME",
+      "canon": "title",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "NAME",
+      "inputs": [
+        "NAME",
+        "ID"
+      ],
+      "canon": "handle",
+      "transform": "first_non_empty",
+      "confidence": "verified-fixture",
+      "notes": "Slug of the name, else of the id."
+    },
+    {
+      "path": "DESCRIPTION",
+      "canon": "bodyHtml",
+      "transform": "html",
+      "confidence": "verified-fixture",
+      "samplePolicy": "hash-only"
+    },
+    {
+      "path": "CATEGORY",
+      "canon": "categories+productType",
+      "transform": "category_paths_from_terms",
+      "confidence": "verified-fixture",
+      "notes": "Comma list of category ids → 'Root > … > Leaf' paths via the categories file, deepest first; the deepest leaf is the product type."
+    },
+    {
+      "path": "IMAGE<n>",
+      "pathPattern": "^IMAGE[1-8]$",
+      "canon": "images",
+      "transform": "images_from_urls",
+      "confidence": "verified-fixture",
+      "notes": "IMAGE1 … IMAGE8, in order; the first is also the variant image."
+    },
+    {
+      "path": "ATTRIBUTE1",
+      "inputs": [
+        "ATTRIBUTE1",
+        "VALUE1",
+        "ATTRIBUTE2",
+        "VALUE2"
+      ],
+      "canon": "options",
+      "transform": "options_from_attributes",
+      "confidence": "verified-fixture",
+      "notes": "Up to two inline name/value pairs."
+    },
+    {
+      "path": "VALUE1",
+      "inputs": [
+        "VALUE1",
+        "VALUE2"
+      ],
+      "canon": "variants[].optionValues",
+      "transform": "option_values_from_attributes",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "ID",
+      "canon": "variants[].sku",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "PVP_BIGBUY",
+      "canon": "variants[].price",
+      "transform": "money",
+      "confidence": "verified-fixture",
+      "notes": "Recommended retail price — what the merchant sells at."
+    },
+    {
+      "path": "PVD",
+      "canon": "variants[].cost",
+      "transform": "money",
+      "confidence": "verified-fixture",
+      "notes": "Distributor price — what the merchant pays."
+    },
+    {
+      "path": "EAN13",
+      "canon": "variants[].barcode",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "WEIGHT",
+      "canon": "variants[].grams",
+      "transform": "weight_to_grams",
+      "args": {
+        "unit": "kg"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "DEPTH",
+      "canon": "variants[].lengthCm",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "WIDTH",
+      "canon": "variants[].widthCm",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "HEIGHT",
+      "canon": "variants[].heightCm",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "STOCK",
+      "canon": "variants[].inventoryQty",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "BRAND",
+      "canon": "metafields[]",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "bigbuy_brand_id"
+      },
+      "confidence": "verified-fixture",
+      "notes": "A numeric brand id with no name in the file (declared loss loss_bigbuy_brand)."
+    },
+    {
+      "path": "INTRASTAT",
+      "canon": "metafields[]",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "hs_code"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "IVA",
+      "canon": "metafields[]",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "vat_rate"
+      },
+      "confidence": "verified-fixture"
+    }
+  ],
+  "invariantsExpected": [
+    "One row per product; categories are numeric ids resolved through the companion categories file"
+  ],
+  "legacy": {
+    "formatId": "bigbuy_standard",
+    "platform": "bigbuy",
+    "entity": "products"
+  },
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "seed:core/src/detect.ts:SIGS",
+      "origin": "reference",
+      "diff": [
+        "signature moved from code to data (Phase 5.3)",
+        "Numbered images, inline attributes, PVD/PVP."
+      ]
+    },
+    {
+      "at": "2026-10-04T00:00:00.000Z",
+      "op": "enrich",
+      "from": "core/src/bigbuy.ts parseBigBuyStandard + mapping.ts SOURCE_FIELDS.bigbuy_standard",
+      "origin": "reference",
+      "diff": [
+        "Phase 2 Lot 3: full column map + row structure as data; undeclared columns preserved, declared ones traced"
+      ]
+    }
+  ]
+}

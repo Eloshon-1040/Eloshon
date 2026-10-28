@@ -1,0 +1,61 @@
+// Dutch texts of the column editor (edit-catalog.ts), merged by op / arg key / choice value / preset id.
+export const EDIT_CATALOG_NL = {
+  groups: { text: 'Tekst', cut: 'Knippen, toevoegen, invoegen', number: 'Getallen en prijzen', url: 'URL, slug, HTML', column: 'Kolommen' },
+  ops: {
+    // text
+    replace: { label: 'Tekst vervangen', help: 'Vervangt elke keer dat een tekst voorkomt door een andere tekst (leeg = verwijderen).', args: { find: 'Te zoeken tekst', with: 'Vervangen door', matchCase: 'Hoofdlettergevoelig', whole: 'Alleen als de cel precies deze tekst is' } },
+    remove: { label: 'Tekst verwijderen', help: 'Verwijdert deze tekst overal in de cel.', args: { text: 'Te verwijderen tekst' } },
+    remove_chars: { label: 'Bepaalde tekens verwijderen', help: 'Verwijdert elk van de opgegeven tekens (bv. “,;|”).', args: { chars: 'Tekens' } },
+    join_segments: { label: 'Scheidingsteken wijzigen', help: 'Vervangt een scheidingsteken (bv. “|”) door een ander en haalt de spaties eromheen weg.', args: { sep: 'Huidig scheidingsteken', with: 'Nieuw scheidingsteken' } },
+    dedupe_segments: { label: 'Herhaalde delen verwijderen', help: 'Splitst de cel op een scheidingsteken en houdt elk deel maar één keer.', args: { sep: 'Scheidingsteken' } },
+    dedupe_words: { label: 'Herhaalde woorden verwijderen', help: 'Houdt elk woord maar één keer (hoofdletters tellen niet mee).', args: {} },
+    trim: { label: 'Spaties opschonen', help: 'Verwijdert de spaties aan het begin en het einde en maakt van dubbele spaties één spatie.', args: {} },
+    upper: { label: 'IN HOOFDLETTERS', help: 'Zet de hele tekst in hoofdletters.', args: {} },
+    lower: { label: 'in kleine letters', help: 'Zet de hele tekst in kleine letters.', args: {} },
+    proper: { label: 'Hoofdletter Bij Elk Woord', help: 'Eerste letter van elk woord als hoofdletter, de rest in kleine letters.', args: {} },
+    regex_replace: { label: 'Vervangen (geavanceerd patroon)', help: 'Vervangt wat overeenkomt met een reguliere expressie (zoals REGEXREPLACE). $1 neemt een groep over.', args: { pattern: 'Patroon', with: 'Vervangen door' } },
+    regex_extract: { label: 'Uitknippen met een patroon', help: 'Houdt alleen het deel dat bij het patroon past (leeg als niets past).', args: { pattern: 'Patroon', group: 'Groep (0 = alles)' } },
+    set: { label: 'Invullen met een waarde', help: 'Zet dezelfde waarde in alle cellen (of in de cellen die aan de voorwaarde voldoen).', args: { text: 'Waarde' } },
+    fill_empty: { label: 'Lege cellen invullen', help: 'Zet alleen in lege cellen een waarde.', args: { text: 'Waarde' } },
+    // cut / add / insert
+    prefix_add: { label: 'Aan het begin toevoegen', help: 'Zet een tekst vóór de inhoud.', args: { text: 'Toe te voegen tekst' } },
+    suffix_add: { label: 'Aan het einde toevoegen', help: 'Zet een tekst na de inhoud.', args: { text: 'Toe te voegen tekst' } },
+    prefix_remove: { label: 'Begin verwijderen', help: 'Verwijdert deze tekst als de cel ermee begint (anders verandert er niets).', args: { text: 'Te verwijderen begin' } },
+    suffix_remove: { label: 'Einde verwijderen', help: 'Verwijdert deze tekst als de cel ermee eindigt (anders verandert er niets).', args: { text: 'Te verwijderen einde' } },
+    keep_before: { label: 'Houden wat vóór een tekst staat', help: 'Knipt de cel bij de eerste (of laatste) opgegeven tekst en houdt wat ervoor staat.', args: { text: 'Markeringstekst', last: 'Bij de laatste in plaats van de eerste' } },
+    keep_after: { label: 'Houden wat na een tekst staat', help: 'Knipt de cel bij de eerste (of laatste) opgegeven tekst en houdt wat erna staat.', args: { text: 'Markeringstekst', last: 'Bij de laatste in plaats van de eerste' } },
+    split_take: { label: 'Het N-de deel houden', help: 'Splitst op een scheidingsteken en houdt deel nummer N (1 = eerste, -1 = laatste).', args: { sep: 'Scheidingsteken', index: 'Nummer van het deel' } },
+    keep_left: { label: 'De eerste N tekens houden', help: 'Knipt de tekst af na N tekens.', args: { n: 'Aantal tekens' } },
+    keep_right: { label: 'De laatste N tekens houden', help: 'Houdt alleen het einde van de tekst.', args: { n: 'Aantal tekens' } },
+    drop_left: { label: 'De eerste N tekens verwijderen', help: 'Verwijdert het begin van de tekst, wat het ook is.', args: { n: 'Aantal tekens' } },
+    drop_right: { label: 'De laatste N tekens verwijderen', help: 'Verwijdert het einde van de tekst, wat het ook is.', args: { n: 'Aantal tekens' } },
+    insert_at: { label: 'Een teken op vaste plaatsen invoegen', help: 'Voegt een tekst (een komma, een punt…) in op een of meer posities, geteld vanaf het begin of het einde. Bv. posities “3, 6”.', args: { text: 'In te voegen tekst', positions: 'Posities (1 = aan het begin)', fromEnd: 'Tellen vanaf het einde' } },
+    delete_at: { label: 'Tekens op een positie verwijderen', help: 'Verwijdert N tekens vanaf een positie.', args: { position: 'Startpositie (1 = begin)', count: 'Aantal tekens' } },
+    // numbers
+    number: { label: 'Berekening op een getal', help: 'Deelt, vermenigvuldigt, telt op, trekt af of rondt af: voor een prijs of een hoeveelheid. Bv. cent → euro: delen door 100.', args: { action: 'Bewerking', value: 'Waarde' }, choices: { action: { divide: 'Delen door', multiply: 'Vermenigvuldigen met', add: 'Optellen', subtract: 'Aftrekken', round: 'Afronden op N decimalen' } } },
+    decimal_point: { label: 'Komma → decimale punt', help: 'Herschrijft een getal als “12,99 €” of “1.234,50” in de vorm 12.99 / 1234.5.', args: {} },
+    // url / slug / html
+    slugify: { label: 'Omzetten naar slug', help: 'Kleine letters, zonder accenten, woorden verbonden met streepjes: “Vodka Blanc 37,5%” → vodka-blanc-37-5.', args: { maxLength: 'Maximale lengte (0 = onbeperkt)' } },
+    strip_html: { label: 'HTML verwijderen', help: 'Verwijdert de tags <p>, <br>… en houdt de tekst.', args: {} },
+    clean_code: { label: 'Code opschonen', help: 'Maakt een tekst met HTML-code leesbaar (tags als <p> en <li>, entiteiten als &amp; en &#8243;), bijvoorbeeld de kolom “Body (HTML)”. Kies daarna de modus.', args: { mode: 'Modus' }, choices: { mode: { text: 'Alleen tekst', html: 'Nette HTML' } },
+      choiceHelp: { mode: {
+        text: 'Verwijdert alle tags en zet de entiteiten (&#8243;, &#038;, &amp;, &nbsp;…) om in tekens. Elke <li> wordt een regel “• …”; <br> en elke alinea, titel, lijst of tabelrij beginnen op een nieuwe regel. Scripts, stijlen en commentaar verdwijnen met hun inhoud, net als dubbele spaties en lege regels. Een HTML-kolom (zoals “Body (HTML)”) toont geen regeleinden: kies daar liever “Nette HTML”.',
+        html: 'Houdt alleen de structuurtags p, br, ul, ol, li, strong, em, h2 tot h4, table, tr, th, td (b wordt strong, i wordt em, h1 wordt h2, h5 en h6 worden h4). Verwijdert de attributen (style, class…), scripts, stijlen en commentaar, de andere tags (links, afbeeldingen, div…) met behoud van hun tekst, en daarna de tags die leeg zijn gebleven, behalve tabelcellen. Zet de entiteiten om in tekens, behalve <, > en &, die als &lt;, &gt; en &amp; blijven staan.' } } },
+    // columns
+    rename_column: { label: 'Kolom hernoemen', help: 'Wijzigt de naam van de kolom (de waarden blijven staan).', args: { to: 'Nieuwe naam' } },
+    copy_column: { label: 'Kolom dupliceren', help: 'Maakt een kopie van de kolom. Die kunt u daarna bewerken zonder het origineel aan te raken (bv. een slug uit de titel).', args: { to: 'Naam van de kopie' } },
+    add_column: { label: 'Kolom toevoegen', help: 'Voegt een kolom met een vaste waarde toe.', args: { to: 'Kolomnaam', text: 'Waarde' } },
+    join_columns: { label: 'Meerdere kolommen samenvoegen', help: 'Maakt een kolom door de inhoud van meerdere kolommen aan elkaar te plakken (bv. merk + naam).', args: { columns: 'Samen te voegen kolommen', sep: 'Scheidingsteken', to: 'Naam van de nieuwe kolom' } },
+    words_from: { label: 'De eerste woorden van een andere kolom kopiëren', help: 'Vult deze kolom met het begin van een andere kolom (bv. het merk = eerste woord van de titel). Merken van meerdere woorden zet u in de lijst (of kies het aantal woorden op een voorbeeldrij): de lijst wordt daarna op alle rijen toegepast.', args: { from: 'Kopiëren uit de kolom', count: 'Standaardaantal woorden', known: 'Namen van meerdere woorden (één per regel)', onlyEmpty: 'Alleen als de cel leeg is' } },
+    template: { label: 'Samenstellen met andere kolommen', help: 'Schrijft een tekst waarin u zet wat u wilt: {Kolomnaam} voegt de inhoud van een kolom in, {this} de huidige inhoud van de cel. Bv. “{Vendor} - {this}”.', args: { text: 'Tekst (met {kolom} en {this})' } },
+    delete_column: { label: 'Kolom verwijderen', help: 'Haalt de kolom uit het bestand vóór de conversie.', args: {} },
+  },
+  presets: {
+    cents_to_euros: { label: 'Prijzen in cent → euro', hint: '1599 wordt 15.99' },
+    pipes_to_spaces: { label: 'De “|” uit een titel verwijderen', hint: 'Eristoff | Vodka | Blanc → Eristoff Vodka Blanc' },
+    dedupe_title: { label: 'Herhaalde delen en woorden verwijderen', hint: 'Vodka | Blanc | Vodka → Vodka | Blanc' },
+    slug_from_title: { label: 'Een nette slug maken uit deze kolom', hint: 'Kopieert de kolom en zet die om naar een slug (naam-zonder-accenten)' },
+    values_after_colon_joined: { label: 'Waarden na “:” verbonden met “-”', hint: 'Productkleur: Aurora Coffee / Magic Mauve / Gum → Aurora Coffee-Magic Mauve-Gum' },
+    trim_all: { label: 'Spaties in deze kolom opschonen', hint: 'Verwijdert overbodige spaties' },
+  },
+};

@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "id": "woocommerce.customers.csv.v1",
+  "displayName": "WooCommerce customers export (WordPress users)",
+  "provenance": "native-platform",
+  "medium": "csv",
+  "platformHint": "woocommerce",
+  "entity": "customers",
+  "signatures": [
+    {
+      "kind": "csv-header-set",
+      "required": [
+        "user_login",
+        "roles"
+      ],
+      "hints": [
+        "user_email",
+        "billing_first_name",
+        "shipping_first_name"
+      ]
+    }
+  ],
+  "structure": {
+    "rows": {
+      "include": {
+        "anyOf": [
+          {
+            "column": "roles",
+            "empty": true
+          },
+          {
+            "column": "roles",
+            "containsToken": {
+              "split": "[|,]",
+              "token": "customer"
+            },
+            "ignoreCase": true
+          }
+        ]
+      }
+    },
+    "parser": "generic"
+  },
+  "fields": [
+    {
+      "path": "roles",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-fixture",
+      "notes": "Structural: admins, subscribers and shop managers are not customers (skipped and counted)."
+    },
+    {
+      "path": "first_name",
+      "inputs": [
+        "first_name",
+        "billing_first_name"
+      ],
+      "canon": "firstName",
+      "transform": "first_present",
+      "args": {
+        "as": "clean_text"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "last_name",
+      "inputs": [
+        "last_name",
+        "billing_last_name"
+      ],
+      "canon": "lastName",
+      "transform": "first_present",
+      "args": {
+        "as": "clean_text"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "user_email",
+      "inputs": [
+        "user_email",
+        "billing_email"
+      ],
+      "canon": "email",
+      "transform": "first_present",
+      "args": {
+        "as": "clean_text"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_phone",
+      "canon": "phone",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_phone",
+      "canon": "address.phone",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_company",
+      "canon": "address.company",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_address_1",
+      "canon": "address.address1",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_address_2",
+      "canon": "address.address2",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_city",
+      "canon": "address.city",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_state",
+      "canon": "address.province",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_state",
+      "inputs": [
+        "billing_state",
+        "billing_country"
+      ],
+      "canon": "address.provinceCode",
+      "transform": "state_code",
+      "confidence": "verified-fixture",
+      "notes": "A US state name becomes its code."
+    },
+    {
+      "path": "billing_postcode",
+      "canon": "address.zip",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_country",
+      "canon": "address.country",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "shipping_address_1",
+      "canon": "shipping",
+      "transform": "address_block",
+      "args": {
+        "fields": {
+          "company": "shipping_company",
+          "address1": "shipping_address_1",
+          "address2": "shipping_address_2",
+          "city": "shipping_city",
+          "province": "shipping_state",
+          "zip": "shipping_postcode",
+          "country": "shipping_country"
+        },
+        "provinceCode": {
+          "state": "shipping_state",
+          "country": "shipping_country"
+        },
+        "nullWhenEmpty": [
+          "address1",
+          "city",
+          "zip",
+          "company",
+          "province"
+        ]
+      },
+      "consumes": [
+        "shipping_company",
+        "shipping_address_2",
+        "shipping_city",
+        "shipping_state",
+        "shipping_postcode",
+        "shipping_country"
+      ],
+      "confidence": "verified-fixture",
+      "notes": "The shipping address, or none when the user left it empty."
+    }
+  ],
+  "invariantsExpected": [
+    "A WordPress user export: one row per user; only users with the customer role (or no role) are customers"
+  ],
+  "legacy": {
+    "formatId": "woo_customers",
+    "platform": "woocommerce",
+    "entity": "customers"
+  },
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "seed:core/src/detect.ts:SIGS",
+      "origin": "reference",
+      "diff": [
+        "signature moved from code to data (Phase 5.3)",
+        "A WordPress user export: user_login + roles."
+      ]
+    },
+    {
+      "at": "2026-10-04T00:00:00.000Z",
+      "op": "enrich",
+      "from": "core/src/customers.ts parseWooCustomers (retired: the generic parser reads this format) + mapping.ts SOURCE_FIELDS.woo_customers",
+      "origin": "reference",
+      "diff": [
+        "Phase 2 Lot 3: full column map + row structure as data; undeclared columns preserved, declared ones traced"
+      ]
+    }
+  ]
+}

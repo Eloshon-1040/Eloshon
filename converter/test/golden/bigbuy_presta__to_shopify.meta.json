@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "sourceFormat": "bigbuy_presta",
+  "targetFormat": "shopify_products",
+  "counts": {
+    "inputUnits": 2,
+    "outputUnits": 2,
+    "failedUnits": 0,
+    "outputRows": 3
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_bigbuy_brand"
+    },
+    {
+      "code": "loss_category_hierarchy"
+    },
+    {
+      "code": "loss_shopify_dimensions"
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false
+}

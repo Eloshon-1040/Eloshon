@@ -1,0 +1,51 @@
+{
+  "domain": "colruyt.be",
+  "type": "internal_api",
+  "endpoint_tpl": "https://apip.colruyt.be/gateway/emec.colruyt.protected.bffsvc/cg/fr/api/product-search-prs?placeId={placeId}&size={size}&skip={skip}&sort=relevancy+asc&isAvailable=true&categoryIds={categoryId}",
+  "method": "GET",
+  "static_headers": {
+    "Origin": "https://www.colruyt.be",
+    "Referer": "https://www.colruyt.be/",
+    "Accept": "application/json",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  "headers": {
+    "X-CG-APIKey": {
+      "from": "https://www.colruyt.be/fr",
+      "pattern": "X-CG-APIKey:\\s*([^\"&,<>\\]\\s]+)"
+    }
+  },
+  "vars": {
+    "placeId": {
+      "source": "config",
+      "key": "placeId",
+      "default": "604"
+    },
+    "categoryId": {
+      "sources": [
+        { "source": "url", "pattern": "[?&]categories=(\\d+)", "optional": true },
+        { "source": "page", "pattern": "alle-categorieen/(?:\\d+/)*(\\d+)/jcr:content" }
+      ]
+    }
+  },
+  "pagination": {
+    "type": "offset",
+    "param": "skip",
+    "size_param": "size",
+    "size": 22,
+    "start": 0,
+    "total_json_path": "totalProductsFound"
+  },
+  "json_path": "products",
+  "field_map": {
+    "name": "LongName",
+    "price": "price.basicPrice",
+    "sku": "commercialArticleNumber",
+    "image": "fullImage",
+    "url": { "template": "https://www.colruyt.be/fr/produits/{commercialArticleNumber}" },
+    "brand": "brand",
+    "category": "topCategoryName",
+    "weightText": "content"
+  },
+  "notes": "Re-validated live 2026-09-28 (v0.5.9). placeId (which STORE's prices) is USER-CONFIGURABLE via config.json siteContext['colruyt.be'].placeId — never hardcoded; default 604 = Colruyt Halle. The API honours any placeId anonymously (604/902/886 return different assortments and prices); the website itself ignores tms_storeperma / ?placeId for anonymous sessions, so the API is the only store lever. X-CG-APIKey is a static public app key embedded in every page as an entity-encoded config ('\"headers\":[\"X-CG-APIKey: <key>\"'); plain HTTP with a browser User-Agent works (without a UA the gateway answers 456). categoryId is read from the category page itself (data-model-url …/alle-categorieen/<parent>/<id>/jcr:content — the LAST id), replacing a static category_map whose ids had drifted to other categories. The response exposes no store identity (no store guard possible). field_map follows today's API: LongName (brand + name + size), price.basicPrice, commercialArticleNumber; the product URL is built from commercialArticleNumber (the API carries none). GTIN is intentionally unmapped: its array may lead with a case/pack GTIN. When the free key resolution fails, the host can opt into the Scraping Browser header bootstrap (config brightData.scrapingBrowserBootstrap['colruyt.be'])."
+}

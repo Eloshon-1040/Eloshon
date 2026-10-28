@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "sourceFormat": "bigbuy_standard",
+  "targetFormat": "woo_products_modern",
+  "counts": {
+    "inputUnits": 3,
+    "outputUnits": 2,
+    "failedUnits": 1,
+    "outputRows": 2
+  },
+  "errors": [
+    {
+      "row": 4,
+      "field": "name",
+      "code": "product_no_name_supplier"
+    }
+  ],
+  "losses": [
+    {
+      "code": "loss_bigbuy_brand"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "id_removed_woo"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

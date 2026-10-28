@@ -1,0 +1,17 @@
+/* Eloshon Scraper: accent and chrome only. Everything else is in tokens.base.css.
+ * Set data-app="scraper" on <html>. Source of truth: .interface-design/system.md §2.2 and §2.4.
+ * Poppins (headings of 22 px and more only) stays bundled in app/renderer/fonts/. */
+[data-app="scraper"] {
+  --accent: light-dark(#2456A6, #2F64BE);
+  --accent-hover: light-dark(#1D4A90, #2858AB);
+  --accent-press: light-dark(#173C78, #2456A6);
+  --accent-ink: light-dark(#2456A6, #8DB4F0);
+  --accent-tint: light-dark(#EAF1FB, #1B2638);
+  --accent-tint-ink: light-dark(#123C86, #B5CDF5);
+  --on-accent: #FFFFFF;
+  --focus: var(--accent-ink);
+  --signal: light-dark(#2456A6, #5B84C9);
+  --chrome: #0A1650; --chrome-2: #0D2E6B; --chrome-line: #1B2B6B;
+  --chrome-ink: #EAF0FA; --chrome-muted: #8FA6D6;
+  --font-brand: 'Poppins', var(--font-ui);
+}

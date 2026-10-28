@@ -1,0 +1,36 @@
+{
+  "ok": true,
+  "sourceFormat": "wix_products",
+  "targetFormat": "shopify_products",
+  "counts": {
+    "inputUnits": 3,
+    "outputUnits": 3,
+    "failedUnits": 0,
+    "outputRows": 4
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_wix_customtext"
+    },
+    {
+      "code": "loss_wix_ribbon"
+    },
+    {
+      "code": "loss_wix_infosections"
+    },
+    {
+      "code": "loss_wix_swatches"
+    },
+    {
+      "code": "loss_shopify_category_taxonomy",
+      "params": {
+        "count": 2,
+        "extra": 1
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false
+}

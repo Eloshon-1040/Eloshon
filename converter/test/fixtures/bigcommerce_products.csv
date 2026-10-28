@@ -1,0 +1,7 @@
+Item,ID,Name,Type,SKU,Options,Inventory Tracking,Current Stock,Price,Cost Price,Retail Price,Sale Price,Brand ID,Categories,Description,Page Title,Product URL,Meta Description,Bin Picking Number,UPC/EAN,Free Shipping,Weight,Width,Height,Depth,Is Visible,Warranty,Variant Image URL,Internal Image URL (Export),Image URL (Import),Image Description,Image Sort Order
+Product,55,Casque audio,physical,CASQUE,,variant,,199.00,90.00,229.00,,12,23;18,<p>Casque sans fil.</p>,Casque audio sans fil,/casque-audio/,Son haute fidélité.,A-12,,,0.35,,,,TRUE,2 ans,,,,,
+Variant,,,,CASQUE-NOIR,Type=Swatch|Name=Couleur|Value=Noir[#000000],,20,199.00,,,,,,,,,,,,,0.35,,,,,,,,,,
+Variant,,,,CASQUE-BLANC,Type=Swatch|Name=Couleur|Value=Blanc[#ffffff],,7,199.00,,,179.00,,,,,,,,,,0.35,,,,,,,,,,
+Image,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.example.com/casque-1.jpg,,Casque noir,0
+Image,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.example.com/casque-2.jpg,,Casque profil,1
+Product,56,Guide PDF,digital,GUIDE-PDF,,none,,15.00,,,9.00,,30,<p>Guide numérique.</p>,,/guide-pdf/,,,,,,,,,TRUE,,,,,,

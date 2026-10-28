@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "id": "scraper.eloshon-export.v1",
+  "displayName": "Eloshon Scraper export (CSV)",
+  "provenance": "scraper-generated",
+  "medium": "csv",
+  "platformHint": "eloshon",
+  "entity": "products",
+  "version": "scraper-0.4.x",
+  "signatures": [
+    {
+      "kind": "csv-header-set",
+      "required": [
+        "slug_fr",
+        "name_fr",
+        "source_url",
+        "source_product_id",
+        "store_slug",
+        "hs_code",
+        "weight_kg",
+        "image_url"
+      ],
+      "hints": [
+        "color",
+        "variants",
+        "is_alcoholic",
+        "storage_info",
+        "category_slug"
+      ],
+      "separator": ","
+    }
+  ],
+  "structure": {
+    "unit": "product",
+    "variants": {
+      "inlinePath": "variants",
+      "parseJson": true,
+      "selfWhenNone": true,
+      "siblingsWhen": {
+        "childPath": "code",
+        "matches": "source_product_id"
+      },
+      "keyedBy": "source_product_id"
+    },
+    "options": {
+      "fromVariants": {
+        "name": "type",
+        "value": "name"
+      }
+    }
+  },
+  "routing": {
+    "platform": "eloshon",
+    "entity": "products"
+  },
+  "fields": [
+    {
+      "path": "name_fr",
+      "canon": "title",
+      "transform": "text",
+      "confidence": "verified-fixture",
+      "source": "fixture:test/fixtures/scraper",
+      "notes": "FR is the Scraper's primary language; EN kept when it differs (multilingual = canon-evolution-open)."
+    },
+    {
+      "path": "name_en",
+      "canon": "sourceExtension.eloshon.name_en",
+      "transform": "differs_from",
+      "args": {
+        "other": "name_fr"
+      },
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-fixture",
+      "notes": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+    },
+    {
+      "path": "slug_fr",
+      "canon": "handle",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "slug_fr",
+      "canon": "identity.slug",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "slug_en",
+      "canon": "sourceExtension.eloshon.slug_en",
+      "transform": "differs_from",
+      "args": {
+        "other": "slug_fr"
+      },
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "description_fr",
+      "canon": "bodyHtml",
+      "transform": "html",
+      "confidence": "verified-fixture",
+      "samplePolicy": "hash-only",
+      "notes": "Plain text or HTML depending on the site; kept verbatim."
+    },
+    {
+      "path": "description_en",
+      "canon": "sourceExtension.eloshon.description_en",
+      "transform": "differs_from",
+      "args": {
+        "other": "description_fr"
+      },
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-fixture",
+      "samplePolicy": "hash-only"
+    },
+    {
+      "path": "source_product_id",
+      "canon": "identity.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "source_url",
+      "canon": "sourceExtension.eloshon.source_url",
+      "transform": "text",
+      "confidence": "verified-fixture",
+      "notes": "Origin page URL; kept for traceability / redirects."
+    },
+    {
+      "path": "source_category",
+      "canon": "categories",
+      "transform": "category_path_split",
+      "args": {
+        "sep": ">",
+        "listSep": "\n"
+      },
+      "confidence": "verified-fixture",
+      "notes": "\"A > B > C\" as scraped from breadcrumbs; one path per product."
+    },
+    {
+      "path": "category_slug",
+      "canon": "sourceExtension.eloshon.category_slug",
+      "transform": "text",
+      "confidence": "verified-fixture",
+      "notes": "Operator-assigned Luna category slug (Scraper-side concept)."
+    },
+    {
+      "path": "image_url",
+      "canon": "images",
+      "transform": "images_from_urls",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "image_url",
+      "canon": "variants[].imageSrc",
+      "transform": "text",
+      "when": "self",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "price",
+      "canon": "variants[].price",
+      "transform": "money",
+      "when": "self",
+      "confidence": "verified-fixture",
+      "notes": "Charged price as scraped (no promo axis in the export)."
+    },
+    {
+      "path": "barcode",
+      "canon": "variants[].barcode",
+      "transform": "text",
+      "when": "self",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "weight_kg",
+      "canon": "variants[].grams",
+      "transform": "weight_to_grams",
+      "args": {
+        "unit": "kg"
+      },
+      "when": "self",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "hs_code",
+      "canon": "sourceExtension.eloshon.hs_code",
+      "transform": "text",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-fixture",
+      "notes": "Customs HS code: no canon field (promotable)."
+    },
+    {
+      "path": "store_slug",
+      "canon": "sourceExtension.eloshon.store_slug",
+      "transform": "text",
+      "confidence": "verified-fixture",
+      "notes": "Scraped store identifier (e.g. COL, April) — not the product brand."
+    },
+    {
+      "path": "product_type",
+      "canon": "productType",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "storage_info",
+      "canon": "metafields[]",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "storage_info"
+      },
+      "confidence": "verified-fixture",
+      "notes": "Food storage instructions → metafield."
+    },
+    {
+      "path": "is_alcoholic",
+      "canon": "tags[]",
+      "transform": "tag_when_true",
+      "args": {
+        "tag": "alcool"
+      },
+      "confidence": "verified-fixture",
+      "notes": "Regulatory flag → tag (targets have no dedicated field)."
+    },
+    {
+      "path": "is_alcoholic",
+      "canon": "sourceExtension.eloshon.is_alcoholic",
+      "transform": "bool",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "color",
+      "canon": "attributesRich[]",
+      "transform": "attribute_single",
+      "args": {
+        "name": "Couleur",
+        "visible": true
+      },
+      "confidence": "verified-fixture",
+      "notes": "Descriptive colour (not an axis of variation)."
+    },
+    {
+      "path": "variants",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-fixture",
+      "notes": "JSON array; objects come from structure.variants (inline, parsed)."
+    },
+    {
+      "path": "code",
+      "canon": "variants[].sku",
+      "transform": "text",
+      "when": "child",
+      "confidence": "verified-fixture",
+      "notes": "Variant code (Levi's: product code)."
+    },
+    {
+      "path": "image",
+      "canon": "variants[].imageSrc",
+      "transform": "text",
+      "when": "child",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "image",
+      "canon": "variants[].images",
+      "transform": "images_from_urls",
+      "when": "child",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "type",
+      "canon": "variants[].optionValues",
+      "transform": "option_values_from_typed",
+      "args": {
+        "name": "type",
+        "value": "name"
+      },
+      "when": "child",
+      "confidence": "verified-fixture",
+      "notes": "[{type, name}] → aligned with product.options (derived from variants)."
+    },
+    {
+      "path": "name",
+      "canon": null,
+      "transform": "ignore",
+      "when": "child",
+      "confidence": "verified-fixture",
+      "notes": "Read by option_values_from_typed."
+    },
+    {
+      "path": "price",
+      "canon": "variants[].price",
+      "transform": "inherit_from_parent",
+      "args": {
+        "parentPath": "price",
+        "as": "money"
+      },
+      "when": "child",
+      "confidence": "verified-fixture",
+      "notes": "A variant without its own price inherits the product price (Levi's swatches)."
+    },
+    {
+      "path": "barcode",
+      "canon": "variants[].barcode",
+      "transform": "inherit_from_parent",
+      "args": {
+        "parentPath": "barcode",
+        "as": "text"
+      },
+      "when": "child",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "weight_kg",
+      "canon": "variants[].grams",
+      "transform": "inherit_from_parent",
+      "args": {
+        "parentPath": "weight_kg",
+        "as": "weight_to_grams",
+        "asArgs": {
+          "unit": "kg"
+        }
+      },
+      "when": "child",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "url",
+      "canon": "sourceExtension.eloshon.url",
+      "transform": "text",
+      "when": "child",
+      "confidence": "verified-fixture",
+      "notes": "Variant/sibling page URL when the site exposes it."
+    },
+    {
+      "path": "weight_estimated",
+      "canon": "sourceExtension.eloshon.weight_estimated",
+      "transform": "text",
+      "confidence": "verified-fixture",
+      "source": "scraper:core/csv.mjs",
+      "notes": "\"true\" when weight_kg is an estimate (volume × density + container)"
+    },
+    {
+      "path": "brand",
+      "canon": "vendor",
+      "transform": "text_present",
+      "confidence": "verified-fixture",
+      "source": "scraper:core/csv.mjs"
+    },
+    {
+      "path": "availability",
+      "canon": "metafields[]",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "availability"
+      },
+      "confidence": "verified-fixture",
+      "source": "scraper:core/csv.mjs",
+      "notes": "schema.org availability term (InStock, OutOfStock…)"
+    },
+    {
+      "path": "rating",
+      "canon": "metafields[]",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "rating"
+      },
+      "confidence": "verified-fixture",
+      "source": "scraper:core/csv.mjs"
+    },
+    {
+      "path": "review_count",
+      "canon": "metafields[]",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "review_count"
+      },
+      "confidence": "verified-fixture",
+      "source": "scraper:core/csv.mjs"
+    },
+    {
+      "path": "net_content",
+      "canon": "metafields[]",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "net_content"
+      },
+      "confidence": "verified-fixture",
+      "source": "scraper:core/csv.mjs",
+      "notes": "net content as the page states it (\"113 g\")"
+    },
+    {
+      "path": "technical_specs",
+      "canon": "descriptionSections[]",
+      "transform": "description_section",
+      "args": {
+        "label": "Caractéristiques techniques"
+      },
+      "confidence": "verified-fixture",
+      "source": "scraper:core/csv.mjs",
+      "notes": "one JSON object of specs → appended to the description as a list, never split into attributes"
+    }
+  ],
+  "invariantsExpected": [
+    "19 columns (Scraper ≤ 0.4.3) or 21 columns (adds color, variants) — one signature covers both",
+    "name_en / description_en / slug_en usually duplicate the FR value (single-language sites)",
+    "variants cell is a JSON array of { code, type, name, image } or empty",
+    "price may be empty when the site does not expose it on listing pages (Colruyt)",
+    "source_category is a breadcrumb path 'A > B' or empty",
+    "variants[].code may be the source_product_id of THIS or ANOTHER row (Levi's colourways): siblings, not variants → merchandising.related"
+  ],
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "fixture:eloshon-scraper:data/csv (Levi's, April, Lidl.de, Colruyt exports)",
+      "origin": "reference",
+      "diff": [
+        "Phase 5.7: first knowledge-driven format with no per-format parser"
+      ]
+    }
+  ]
+}

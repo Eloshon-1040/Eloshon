@@ -1,0 +1,422 @@
+{
+  "shopify": {
+    "barcode": [
+      "Variant Barcodes"
+    ],
+    "bodyHtml": [
+      "Body (HTML)"
+    ],
+    "categories": [
+      "Product Category",
+      "Tags"
+    ],
+    "compareAtPrice": [
+      "Variant Compare At Price"
+    ],
+    "cost": [
+      "Cost per item"
+    ],
+    "currency": [],
+    "grams": [
+      "Variant Grams"
+    ],
+    "handle": [
+      "Handle"
+    ],
+    "heightCm": [],
+    "identifiers.ean": [
+      "Variant Barcodes"
+    ],
+    "identifiers.gtin": [
+      "Variant Barcodes"
+    ],
+    "identifiers.hsCode": [],
+    "identifiers.isbn": [
+      "Variant Barcodes"
+    ],
+    "identifiers.mpn": [],
+    "identifiers.originCountry": [],
+    "identifiers.upc": [
+      "Variant Barcodes"
+    ],
+    "identity.sourceId": [],
+    "images": [
+      "Image Src",
+      "Image Position"
+    ],
+    "inventoryQty": [
+      "Variant Inventory Tracker",
+      "Variant Inventory Qty"
+    ],
+    "lengthCm": [],
+    "metafields": [
+      "* (product.metafields.custom.*)"
+    ],
+    "options": [
+      "Option1 Name",
+      "Option1 Value"
+    ],
+    "parentRef": [],
+    "price": [
+      "Variant Price"
+    ],
+    "productType": [
+      "Type"
+    ],
+    "published": [
+      "Published"
+    ],
+    "requiresShipping": [
+      "Variant Requires Shipping"
+    ],
+    "seoDescription": [
+      "SEO Description"
+    ],
+    "seoTitle": [
+      "SEO Title"
+    ],
+    "shortDescription": [],
+    "sku": [
+      "Variant SKU"
+    ],
+    "sourceUrl": [
+      "source_url (product.metafields.eloshon.source_url)"
+    ],
+    "specifications": [
+      "Body (HTML)"
+    ],
+    "status": [
+      "Status"
+    ],
+    "stockStatus": [
+      "* (product.metafields.custom.*)"
+    ],
+    "tags": [
+      "Tags"
+    ],
+    "taxable": [
+      "Variant Taxable"
+    ],
+    "title": [
+      "Title"
+    ],
+    "unitPrice": [],
+    "variantImage": [
+      "Variant Image"
+    ],
+    "vatRate": [
+      "vat_rate (product.metafields.custom.vat_rate)"
+    ],
+    "vendor": [
+      "Vendor"
+    ],
+    "widthCm": []
+  },
+  "woocommerce": {
+    "barcode": [
+      "GTIN, UPC, EAN, or ISBN"
+    ],
+    "bodyHtml": [
+      "Description"
+    ],
+    "categories": [
+      "Categories"
+    ],
+    "compareAtPrice": [
+      "Regular price",
+      "Sale price"
+    ],
+    "cost": [],
+    "currency": [],
+    "grams": [
+      "Weight (kg)"
+    ],
+    "handle": [],
+    "heightCm": [
+      "Height (cm)"
+    ],
+    "identifiers.ean": [
+      "GTIN, UPC, EAN, or ISBN"
+    ],
+    "identifiers.gtin": [
+      "GTIN, UPC, EAN, or ISBN"
+    ],
+    "identifiers.hsCode": [],
+    "identifiers.isbn": [
+      "GTIN, UPC, EAN, or ISBN"
+    ],
+    "identifiers.mpn": [],
+    "identifiers.originCountry": [],
+    "identifiers.upc": [
+      "GTIN, UPC, EAN, or ISBN"
+    ],
+    "identity.sourceId": [],
+    "images": [
+      "Images"
+    ],
+    "inventoryQty": [
+      "Stock",
+      "In stock?"
+    ],
+    "lengthCm": [
+      "Length (cm)"
+    ],
+    "metafields": [
+      "Meta: *"
+    ],
+    "options": [
+      "Name",
+      "Attribute 1 name",
+      "Attribute 1 value(s)"
+    ],
+    "parentRef": [],
+    "price": [
+      "Regular price",
+      "Sale price"
+    ],
+    "productType": [],
+    "published": [
+      "Published"
+    ],
+    "requiresShipping": [
+      "Virtual"
+    ],
+    "seoDescription": [
+      "Short description"
+    ],
+    "seoTitle": [],
+    "shortDescription": [
+      "Short description"
+    ],
+    "sku": [
+      "SKU"
+    ],
+    "sourceUrl": [],
+    "specifications": [
+      "Description"
+    ],
+    "status": [],
+    "stockStatus": [
+      "Meta: *"
+    ],
+    "tags": [
+      "Tags"
+    ],
+    "taxable": [
+      "Tax status"
+    ],
+    "title": [
+      "Name"
+    ],
+    "unitPrice": [],
+    "variantImage": [
+      "Images"
+    ],
+    "vatRate": [
+      "Meta: vat_rate"
+    ],
+    "vendor": [
+      "Brands"
+    ],
+    "widthCm": [
+      "Width (cm)"
+    ]
+  },
+  "wix": {
+    "barcode": [
+      "barcode"
+    ],
+    "bodyHtml": [
+      "plainDescription"
+    ],
+    "categories": [
+      "categorySlugs",
+      "primaryCategorySlug"
+    ],
+    "compareAtPrice": [
+      "strikethroughPrice"
+    ],
+    "cost": [
+      "cost"
+    ],
+    "currency": [],
+    "grams": [
+      "weight"
+    ],
+    "handle": [
+      "handle"
+    ],
+    "heightCm": [
+      "packageHeight",
+      "packageUnit"
+    ],
+    "identifiers.ean": [
+      "barcode"
+    ],
+    "identifiers.gtin": [
+      "barcode"
+    ],
+    "identifiers.hsCode": [],
+    "identifiers.isbn": [
+      "barcode"
+    ],
+    "identifiers.mpn": [],
+    "identifiers.originCountry": [],
+    "identifiers.upc": [
+      "barcode"
+    ],
+    "identity.sourceId": [],
+    "images": [
+      "media"
+    ],
+    "inventoryQty": [
+      "inventory"
+    ],
+    "lengthCm": [
+      "packageLength",
+      "packageUnit"
+    ],
+    "metafields": [],
+    "options": [
+      "productOptionName1",
+      "productOptionChoices1"
+    ],
+    "parentRef": [],
+    "price": [
+      "price"
+    ],
+    "productType": [],
+    "published": [
+      "visible"
+    ],
+    "requiresShipping": [],
+    "seoDescription": [],
+    "seoTitle": [],
+    "shortDescription": [],
+    "sku": [
+      "sku"
+    ],
+    "sourceUrl": [],
+    "specifications": [
+      "plainDescription"
+    ],
+    "status": [],
+    "stockStatus": [],
+    "tags": [],
+    "taxable": [],
+    "title": [
+      "name"
+    ],
+    "unitPrice": [],
+    "variantImage": [],
+    "vatRate": [],
+    "vendor": [
+      "brand"
+    ],
+    "widthCm": [
+      "packageWidth",
+      "packageUnit"
+    ]
+  },
+  "bigcommerce": {
+    "barcode": [
+      "UPC/EAN"
+    ],
+    "bodyHtml": [
+      "Description"
+    ],
+    "categories": [],
+    "compareAtPrice": [
+      "Price",
+      "Sale Price"
+    ],
+    "cost": [
+      "Cost Price"
+    ],
+    "currency": [],
+    "grams": [
+      "Weight"
+    ],
+    "handle": [
+      "Product URL"
+    ],
+    "heightCm": [
+      "Height"
+    ],
+    "identifiers.ean": [
+      "UPC/EAN"
+    ],
+    "identifiers.gtin": [
+      "UPC/EAN",
+      "Global Trade Number"
+    ],
+    "identifiers.hsCode": [],
+    "identifiers.isbn": [
+      "UPC/EAN"
+    ],
+    "identifiers.mpn": [
+      "Manufacturer Part Number"
+    ],
+    "identifiers.originCountry": [],
+    "identifiers.upc": [
+      "UPC/EAN"
+    ],
+    "identity.sourceId": [],
+    "images": [
+      "Image URL (Import)"
+    ],
+    "inventoryQty": [
+      "Inventory Tracking",
+      "Current Stock"
+    ],
+    "lengthCm": [
+      "Depth"
+    ],
+    "metafields": [],
+    "options": [
+      "Options"
+    ],
+    "parentRef": [],
+    "price": [
+      "Price",
+      "Sale Price"
+    ],
+    "productType": [],
+    "published": [
+      "Is Visible"
+    ],
+    "requiresShipping": [
+      "Type"
+    ],
+    "seoDescription": [
+      "Meta Description"
+    ],
+    "seoTitle": [
+      "Page Title"
+    ],
+    "shortDescription": [],
+    "sku": [
+      "SKU"
+    ],
+    "sourceUrl": [],
+    "specifications": [
+      "Description"
+    ],
+    "status": [],
+    "stockStatus": [],
+    "tags": [],
+    "taxable": [],
+    "title": [
+      "Name"
+    ],
+    "unitPrice": [],
+    "variantImage": [
+      "Variant Image URL"
+    ],
+    "vatRate": [],
+    "vendor": [],
+    "widthCm": [
+      "Width"
+    ]
+  }
+}

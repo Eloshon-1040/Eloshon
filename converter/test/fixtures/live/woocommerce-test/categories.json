@@ -1,0 +1,44 @@
+[
+  {
+    "id": 21,
+    "name": "Extracteurs",
+    "slug": "extracteurs",
+    "parent": 16,
+    "description": "les extracetrud'air ac infinity",
+    "display": "subcategories",
+    "image": {
+      "id": 28,
+      "date_created": "2026-09-20T20:29:16",
+      "date_created_gmt": "2026-09-20T20:29:16",
+      "date_modified": "2026-09-20T20:29:47",
+      "date_modified_gmt": "2026-09-20T20:29:47",
+      "src": "http://localhost:8881/wp-content/uploads/2026/09/logo-levis.jpg",
+      "name": "logo-levis",
+      "alt": "le logo de levis"
+    },
+    "menu_order": 0,
+    "count": 2
+  },
+  {
+    "id": 15,
+    "name": "Uncategorized",
+    "slug": "uncategorized",
+    "parent": 0,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 0
+  },
+  {
+    "id": 16,
+    "name": "Ventilation",
+    "slug": "ventilation",
+    "parent": 0,
+    "description": "",
+    "display": "default",
+    "image": null,
+    "menu_order": 0,
+    "count": 2
+  }
+]

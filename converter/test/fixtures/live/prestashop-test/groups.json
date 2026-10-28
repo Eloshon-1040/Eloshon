@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "reduction": "0.00",
+    "price_display_method": 0,
+    "show_prices": 1,
+    "date_add": "2026-09-21 03:38:50",
+    "date_upd": "2026-09-21 03:38:50",
+    "name": [
+      {
+        "id": 1,
+        "value": "Visitor"
+      },
+      {
+        "id": 2,
+        "value": "Visitor"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "reduction": "0.00",
+    "price_display_method": 0,
+    "show_prices": "1",
+    "date_add": "2026-09-21 03:38:50",
+    "date_upd": "2026-09-21 03:38:50",
+    "name": [
+      {
+        "id": 1,
+        "value": "Guest"
+      },
+      {
+        "id": 2,
+        "value": "Guest"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "reduction": "0.00",
+    "price_display_method": 0,
+    "show_prices": "1",
+    "date_add": "2026-09-21 03:38:50",
+    "date_upd": "2026-09-21 03:38:50",
+    "name": [
+      {
+        "id": 1,
+        "value": "Customer"
+      },
+      {
+        "id": 2,
+        "value": "Customer"
+      }
+    ]
+  }
+]

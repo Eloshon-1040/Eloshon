@@ -1,0 +1,1436 @@
+[
+  {
+    "number": "100",
+    "email": "customer1@example.test",
+    "createdAt": "2026-09-21T18:57:31.000Z",
+    "financialStatus": "unknown",
+    "fulfillmentStatus": "unfulfilled",
+    "currency": "EUR",
+    "subtotal": 249.95,
+    "shipping": 0,
+    "taxes": 0,
+    "total": 249.95,
+    "discountCode": "",
+    "discountAmount": 0,
+    "paymentMethod": "credit_card",
+    "transactionId": "2a411a5f-9cec-4ec7-a46e-c0a31c2dc527",
+    "note": "",
+    "billing": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "",
+      "provinceCode": "",
+      "country": "BE",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "name": "Test Customer 1"
+    },
+    "shipping_": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "",
+      "provinceCode": "",
+      "country": "BE",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "name": "Test Customer 1"
+    },
+    "lineItems": [
+      {
+        "name": "[Sample] Able Brewing System",
+        "sku": "ABS",
+        "quantity": 1,
+        "price": 220
+      },
+      {
+        "name": "[Sample] Dustpan & Brush",
+        "sku": "DPB",
+        "quantity": 1,
+        "price": 29.95
+      }
+    ],
+    "numbering": {
+      "sourceNumber": "100",
+      "sourceId": "100"
+    },
+    "identity": {
+      "sourceId": "100"
+    },
+    "status": {
+      "sourceState": "Incomplete",
+      "lifecycle": "draft",
+      "fulfillment": "unfulfilled",
+      "financial": "unknown"
+    },
+    "amounts": {
+      "exchangeRate": 1,
+      "taxIncluded": false,
+      "subtotal": 249.95,
+      "shipping": 0,
+      "shippingTax": 0,
+      "total": 249.95,
+      "taxes": 0,
+      "discounts": 0,
+      "refunded": 0
+    },
+    "payments": [
+      {
+        "kind": "sale",
+        "status": "failed",
+        "amount": 249.95,
+        "currency": "EUR",
+        "method": "credit_card",
+        "gateway": "bigpaypay",
+        "providerRef": "2a411a5f-9cec-4ec7-a46e-c0a31c2dc527",
+        "at": "2026-09-21T18:57:31.000Z",
+        "test": true,
+        "instrument": {
+          "type": "card",
+          "brand": "master"
+        }
+      }
+    ],
+    "test": true,
+    "customerRef": {
+      "email": "customer1@example.test",
+      "sourceId": "1",
+      "isGuest": false
+    },
+    "shippingLines": [
+      {
+        "method": "Aucun",
+        "amount": 0,
+        "tax": 0
+      }
+    ],
+    "locale": "en",
+    "source": "manual",
+    "channel": "1",
+    "timestamps": {
+      "created": "2026-09-21T18:57:31.000Z",
+      "updated": "2026-09-21T18:57:32.000Z"
+    },
+    "items": [
+      {
+        "name": "[Sample] Able Brewing System",
+        "sku": "ABS",
+        "quantity": 1,
+        "unitPrice": 220,
+        "total": 220,
+        "unitPriceBeforeDiscount": 220,
+        "totalTax": 0,
+        "productRef": "86",
+        "variantRef": "66",
+        "kind": "product",
+        "requiresShipping": true,
+        "sourceExtension": {
+          "bigcommerce": {
+            "line_id": "1",
+            "name_customer": "[Sample] Able Brewing System",
+            "name_merchant": "[Sample] Able Brewing System",
+            "price_ex_tax": "220.0000",
+            "price_tax": "0.0000",
+            "base_total": "220.0000",
+            "total_ex_tax": "220.0000",
+            "weight": "1.0000",
+            "width": "10.0000",
+            "height": "10.0000",
+            "depth": "10.0000",
+            "base_cost_price": "0.0000",
+            "cost_price_inc_tax": "0.0000",
+            "cost_price_ex_tax": "0.0000",
+            "cost_price_tax": "0.0000",
+            "is_refunded": false,
+            "return_id": 0,
+            "wrapping_id": 0,
+            "wrapping_name": "",
+            "base_wrapping_cost": "0.0000",
+            "wrapping_cost_ex_tax": "0.0000",
+            "wrapping_cost_inc_tax": "0.0000",
+            "wrapping_cost_tax": "0.0000",
+            "wrapping_message": "",
+            "quantity_shipped": 0,
+            "quantity_backordered": 0,
+            "fixed_shipping_cost": "0.0000",
+            "is_bundled_product": false,
+            "bin_picking_number": "",
+            "fulfillment_source": "",
+            "brand": "",
+            "discounted_total_inc_tax": "220.0000",
+            "order_pickup_method_id": 0,
+            "order_address_id": 1
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "bigcommerce",
+            "sourceField": "name",
+            "sourceValue": "[Sample] Able Brewing System",
+            "transform": "text",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "bigcommerce",
+            "sourceField": "sku",
+            "sourceValue": "ABS",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "bigcommerce",
+            "sourceField": "quantity",
+            "sourceValue": 1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "bigcommerce",
+            "sourceField": "price_inc_tax",
+            "sourceValue": "220.0000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "unitPriceBeforeDiscount": {
+            "platform": "bigcommerce",
+            "sourceField": "base_price",
+            "sourceValue": "220.0000",
+            "transform": "money_present",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "bigcommerce",
+            "sourceField": "total_inc_tax",
+            "sourceValue": "220.0000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "bigcommerce",
+            "sourceField": "total_tax",
+            "sourceValue": "0.0000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "bigcommerce",
+            "sourceField": "product_id",
+            "sourceValue": 86,
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "variantRef": {
+            "platform": "bigcommerce",
+            "sourceField": "variant_id",
+            "sourceValue": 66,
+            "transform": "id_or_none",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "bigcommerce",
+            "sourceField": "type",
+            "sourceValue": "physical",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "bigcommerce",
+            "sourceField": "type",
+            "sourceValue": "physical",
+            "transform": "equals_map",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "name": "[Sample] Dustpan & Brush",
+        "sku": "DPB",
+        "quantity": 1,
+        "unitPrice": 29.95,
+        "total": 29.95,
+        "unitPriceBeforeDiscount": 29.95,
+        "totalTax": 0,
+        "productRef": "107",
+        "variantRef": "73",
+        "kind": "product",
+        "requiresShipping": true,
+        "sourceExtension": {
+          "bigcommerce": {
+            "line_id": "2",
+            "name_customer": "[Sample] Dustpan & Brush",
+            "name_merchant": "[Sample] Dustpan & Brush",
+            "price_ex_tax": "29.9500",
+            "price_tax": "0.0000",
+            "base_total": "29.9500",
+            "total_ex_tax": "29.9500",
+            "weight": "1.0000",
+            "width": "0.0000",
+            "height": "0.0000",
+            "depth": "0.0000",
+            "base_cost_price": "0.0000",
+            "cost_price_inc_tax": "0.0000",
+            "cost_price_ex_tax": "0.0000",
+            "cost_price_tax": "0.0000",
+            "is_refunded": false,
+            "return_id": 0,
+            "wrapping_id": 0,
+            "wrapping_name": "",
+            "base_wrapping_cost": "0.0000",
+            "wrapping_cost_ex_tax": "0.0000",
+            "wrapping_cost_inc_tax": "0.0000",
+            "wrapping_cost_tax": "0.0000",
+            "wrapping_message": "",
+            "quantity_shipped": 0,
+            "quantity_backordered": 0,
+            "fixed_shipping_cost": "0.0000",
+            "is_bundled_product": false,
+            "bin_picking_number": "",
+            "fulfillment_source": "",
+            "brand": "OFS",
+            "discounted_total_inc_tax": "29.9500",
+            "order_pickup_method_id": 0,
+            "order_address_id": 1
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "bigcommerce",
+            "sourceField": "name",
+            "sourceValue": "[Sample] Dustpan & Brush",
+            "transform": "text",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "bigcommerce",
+            "sourceField": "sku",
+            "sourceValue": "DPB",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "bigcommerce",
+            "sourceField": "quantity",
+            "sourceValue": 1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "bigcommerce",
+            "sourceField": "price_inc_tax",
+            "sourceValue": "29.9500",
+            "transform": "money",
+            "method": "exact"
+          },
+          "unitPriceBeforeDiscount": {
+            "platform": "bigcommerce",
+            "sourceField": "base_price",
+            "sourceValue": "29.9500",
+            "transform": "money_present",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "bigcommerce",
+            "sourceField": "total_inc_tax",
+            "sourceValue": "29.9500",
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "bigcommerce",
+            "sourceField": "total_tax",
+            "sourceValue": "0.0000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "bigcommerce",
+            "sourceField": "product_id",
+            "sourceValue": 107,
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "variantRef": {
+            "platform": "bigcommerce",
+            "sourceField": "variant_id",
+            "sourceValue": 73,
+            "transform": "id_or_none",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "bigcommerce",
+            "sourceField": "type",
+            "sourceValue": "physical",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "bigcommerce",
+            "sourceField": "type",
+            "sourceValue": "physical",
+            "transform": "equals_map",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "sourceExtension": {
+      "bigcommerce": {
+        "external_order_id": "",
+        "ebay_order_id": "0",
+        "status_id": 0,
+        "custom_status": "Incomplete",
+        "currency_id": 1,
+        "default_currency_id": 1,
+        "default_currency_code": "EUR",
+        "store_default_currency_code": "EUR",
+        "store_default_to_transactional_exchange_rate": "1.0000000000",
+        "subtotal_ex_tax": "249.9500",
+        "subtotal_tax": "0.0000",
+        "base_shipping_cost": "0.0000",
+        "shipping_cost_ex_tax": "0.0000",
+        "shipping_cost_tax_class_id": 2,
+        "total_ex_tax": "249.9500",
+        "coupon_discount": "0.0000",
+        "store_credit_amount": "0.0000",
+        "gift_certificate_amount": "0.0000",
+        "base_handling_cost": "0.0000",
+        "handling_cost_ex_tax": "0.0000",
+        "handling_cost_tax_class_id": 2,
+        "base_wrapping_cost": "0.0000",
+        "wrapping_cost_ex_tax": "0.0000",
+        "wrapping_cost_tax_class_id": 3,
+        "credit_card_type": "master",
+        "staff_notes": "",
+        "is_email_opt_in": false,
+        "date_shipped": "",
+        "items_total": 2,
+        "items_shipped": 0,
+        "order_is_digital": false,
+        "tax_provider_id": "BasicTaxProvider",
+        "cart_id": "7b067c7b-cf3f-4801-860f-803a10c40f52",
+        "is_deleted": false,
+        "shipping_address_count": 1
+      }
+    },
+    "provenance": {
+      "numbering.sourceNumber": {
+        "platform": "bigcommerce",
+        "sourceField": "id",
+        "sourceValue": 100,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "numbering.sourceId": {
+        "platform": "bigcommerce",
+        "sourceField": "id",
+        "sourceValue": 100,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "bigcommerce",
+        "sourceField": "id",
+        "sourceValue": 100,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "status.sourceState": {
+        "platform": "bigcommerce",
+        "sourceField": "status",
+        "sourceValue": "Incomplete",
+        "transform": "text",
+        "method": "exact"
+      },
+      "status.lifecycle": {
+        "platform": "bigcommerce",
+        "sourceField": "status_id",
+        "sourceValue": 0,
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status.fulfillment": {
+        "platform": "bigcommerce",
+        "sourceField": "status_id",
+        "sourceValue": 0,
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status.financial": {
+        "platform": "bigcommerce",
+        "sourceField": "payment_status",
+        "sourceValue": "",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "currency": {
+        "platform": "bigcommerce",
+        "sourceField": "currency_code",
+        "sourceValue": "EUR",
+        "transform": "text",
+        "method": "exact"
+      },
+      "amounts.exchangeRate": {
+        "platform": "bigcommerce",
+        "sourceField": "currency_exchange_rate",
+        "sourceValue": "1.0000000000",
+        "transform": "float",
+        "method": "exact"
+      },
+      "amounts.taxIncluded": {
+        "platform": "bigcommerce",
+        "sourceField": "is_tax_inclusive_pricing",
+        "sourceValue": false,
+        "transform": "bool",
+        "method": "exact"
+      },
+      "amounts.subtotal": {
+        "platform": "bigcommerce",
+        "sourceField": "subtotal_inc_tax",
+        "sourceValue": "249.9500",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shipping": {
+        "platform": "bigcommerce",
+        "sourceField": "shipping_cost_inc_tax",
+        "sourceValue": "0.0000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shippingTax": {
+        "platform": "bigcommerce",
+        "sourceField": "shipping_cost_tax",
+        "sourceValue": "0.0000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.total": {
+        "platform": "bigcommerce",
+        "sourceField": "total_inc_tax",
+        "sourceValue": "249.9500",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.taxes": {
+        "platform": "bigcommerce",
+        "sourceField": "total_tax",
+        "sourceValue": "0.0000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.discounts": {
+        "platform": "bigcommerce",
+        "sourceField": "discount_amount",
+        "sourceValue": "0.0000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.refunded": {
+        "platform": "bigcommerce",
+        "sourceField": "refunded_amount",
+        "sourceValue": "0.0000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "payments": {
+        "platform": "bigcommerce",
+        "sourceField": "_transactions",
+        "transform": "objects_map",
+        "method": "exact"
+      },
+      "test": {
+        "platform": "bigcommerce",
+        "sourceField": "_transactions",
+        "transform": "pick_where",
+        "method": "exact"
+      },
+      "paymentMethod": {
+        "platform": "canon",
+        "sourceField": "payments.0.method",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "billing": {
+        "platform": "bigcommerce",
+        "sourceField": "billing_address",
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "customerRef.email": {
+        "platform": "bigcommerce",
+        "sourceField": "billing_address.email",
+        "sourceValue": "customer1@example.test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "shipping_": {
+        "platform": "bigcommerce",
+        "sourceField": "_shipping_addresses",
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shippingLines": {
+        "platform": "bigcommerce",
+        "sourceField": "_shipping_addresses",
+        "transform": "objects_map",
+        "method": "exact"
+      },
+      "customerRef.sourceId": {
+        "platform": "bigcommerce",
+        "sourceField": "customer_id",
+        "sourceValue": 1,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "customerRef.isGuest": {
+        "platform": "bigcommerce",
+        "sourceField": "customer_id",
+        "sourceValue": 1,
+        "transform": "equals_map",
+        "method": "exact"
+      },
+      "locale": {
+        "platform": "bigcommerce",
+        "sourceField": "customer_locale",
+        "sourceValue": "en",
+        "transform": "text_present",
+        "method": "exact"
+      },
+      "source": {
+        "platform": "bigcommerce",
+        "sourceField": "order_source",
+        "sourceValue": "manual",
+        "transform": "text_present",
+        "method": "exact"
+      },
+      "channel": {
+        "platform": "bigcommerce",
+        "sourceField": "channel_id",
+        "sourceValue": 1,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "note": {
+        "platform": "bigcommerce",
+        "sourceField": "customer_message",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      },
+      "timestamps.created": {
+        "platform": "bigcommerce",
+        "sourceField": "date_created",
+        "sourceValue": "Mon, 21 Sep 2026 18:57:31 +0000",
+        "transform": "date_iso",
+        "method": "exact"
+      },
+      "timestamps.updated": {
+        "platform": "bigcommerce",
+        "sourceField": "date_modified",
+        "sourceValue": "Mon, 21 Sep 2026 18:57:32 +0000",
+        "transform": "date_present",
+        "method": "exact"
+      },
+      "items": {
+        "platform": "bigcommerce",
+        "sourceField": "_products",
+        "transform": "items",
+        "method": "structural"
+      },
+      "lineItems": {
+        "platform": "bigcommerce",
+        "sourceField": "items",
+        "transform": "line_items_from_items",
+        "method": "structural"
+      },
+      "number": {
+        "platform": "bigcommerce",
+        "sourceField": "id",
+        "sourceValue": 100,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "email": {
+        "platform": "bigcommerce",
+        "sourceField": "billing_address.email",
+        "sourceValue": "customer1@example.test",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "createdAt": {
+        "platform": "bigcommerce",
+        "sourceField": "date_created",
+        "sourceValue": "Mon, 21 Sep 2026 18:57:31 +0000",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "financialStatus": {
+        "platform": "bigcommerce",
+        "sourceField": "payment_status",
+        "sourceValue": "",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "fulfillmentStatus": {
+        "platform": "bigcommerce",
+        "sourceField": "status_id",
+        "sourceValue": 0,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "subtotal": {
+        "platform": "bigcommerce",
+        "sourceField": "subtotal_inc_tax",
+        "sourceValue": "249.9500",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "shipping": {
+        "platform": "bigcommerce",
+        "sourceField": "shipping_cost_inc_tax",
+        "sourceValue": "0.0000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "taxes": {
+        "platform": "bigcommerce",
+        "sourceField": "total_tax",
+        "sourceValue": "0.0000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "total": {
+        "platform": "bigcommerce",
+        "sourceField": "total_inc_tax",
+        "sourceValue": "249.9500",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "discountAmount": {
+        "platform": "bigcommerce",
+        "sourceField": "discount_amount",
+        "sourceValue": "0.0000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "transactionId": {
+        "platform": "canon",
+        "sourceField": "payments.0.providerRef",
+        "transform": "first_non_empty",
+        "method": "structural"
+      }
+    }
+  },
+  {
+    "number": "101",
+    "email": "customer1@example.test",
+    "createdAt": "2026-09-21T18:57:43.000Z",
+    "financialStatus": "paid",
+    "fulfillmentStatus": "fulfilled",
+    "currency": "EUR",
+    "subtotal": 249.95,
+    "shipping": 0,
+    "taxes": 0,
+    "total": 249.95,
+    "discountCode": "",
+    "discountAmount": 0,
+    "paymentMethod": "custom",
+    "transactionId": "",
+    "note": "",
+    "billing": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "",
+      "provinceCode": "",
+      "country": "BE",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "name": "Test Customer 1"
+    },
+    "shipping_": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "",
+      "provinceCode": "",
+      "country": "BE",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "name": "Test Customer 1"
+    },
+    "lineItems": [
+      {
+        "name": "[Sample] Able Brewing System",
+        "sku": "ABS",
+        "quantity": 1,
+        "price": 220
+      },
+      {
+        "name": "[Sample] Dustpan & Brush",
+        "sku": "DPB",
+        "quantity": 1,
+        "price": 29.95
+      }
+    ],
+    "numbering": {
+      "sourceNumber": "101",
+      "sourceId": "101"
+    },
+    "identity": {
+      "sourceId": "101"
+    },
+    "status": {
+      "sourceState": "Completed",
+      "lifecycle": "closed",
+      "fulfillment": "fulfilled",
+      "financial": "paid"
+    },
+    "amounts": {
+      "exchangeRate": 1,
+      "taxIncluded": false,
+      "subtotal": 249.95,
+      "shipping": 0,
+      "shippingTax": 0,
+      "total": 249.95,
+      "taxes": 0,
+      "discounts": 0,
+      "refunded": 0
+    },
+    "payments": [
+      {
+        "kind": "sale",
+        "status": "success",
+        "amount": 249.95,
+        "currency": "EUR",
+        "method": "custom",
+        "gateway": "custom",
+        "at": "2026-09-21T18:57:44.000Z",
+        "test": false,
+        "instrument": {
+          "type": "other"
+        }
+      }
+    ],
+    "customerRef": {
+      "email": "customer1@example.test",
+      "sourceId": "1",
+      "isGuest": false
+    },
+    "shippingLines": [
+      {
+        "method": "Aucun",
+        "amount": 0,
+        "tax": 0
+      }
+    ],
+    "locale": "en",
+    "source": "manual",
+    "channel": "1",
+    "timestamps": {
+      "created": "2026-09-21T18:57:43.000Z",
+      "updated": "2026-09-21T19:23:21.000Z"
+    },
+    "items": [
+      {
+        "name": "[Sample] Able Brewing System",
+        "sku": "ABS",
+        "quantity": 1,
+        "unitPrice": 220,
+        "total": 220,
+        "unitPriceBeforeDiscount": 220,
+        "totalTax": 0,
+        "productRef": "86",
+        "variantRef": "66",
+        "kind": "product",
+        "requiresShipping": true,
+        "sourceExtension": {
+          "bigcommerce": {
+            "line_id": "3",
+            "name_customer": "[Sample] Able Brewing System",
+            "name_merchant": "[Sample] Able Brewing System",
+            "price_ex_tax": "220.0000",
+            "price_tax": "0.0000",
+            "base_total": "220.0000",
+            "total_ex_tax": "220.0000",
+            "weight": "1.0000",
+            "width": "10.0000",
+            "height": "10.0000",
+            "depth": "10.0000",
+            "base_cost_price": "0.0000",
+            "cost_price_inc_tax": "0.0000",
+            "cost_price_ex_tax": "0.0000",
+            "cost_price_tax": "0.0000",
+            "is_refunded": false,
+            "return_id": 0,
+            "wrapping_id": 0,
+            "wrapping_name": "",
+            "base_wrapping_cost": "0.0000",
+            "wrapping_cost_ex_tax": "0.0000",
+            "wrapping_cost_inc_tax": "0.0000",
+            "wrapping_cost_tax": "0.0000",
+            "wrapping_message": "",
+            "quantity_shipped": 0,
+            "quantity_backordered": 0,
+            "fixed_shipping_cost": "0.0000",
+            "is_bundled_product": false,
+            "bin_picking_number": "",
+            "fulfillment_source": "",
+            "brand": "",
+            "discounted_total_inc_tax": "220.0000",
+            "order_pickup_method_id": 0,
+            "order_address_id": 2
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "bigcommerce",
+            "sourceField": "name",
+            "sourceValue": "[Sample] Able Brewing System",
+            "transform": "text",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "bigcommerce",
+            "sourceField": "sku",
+            "sourceValue": "ABS",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "bigcommerce",
+            "sourceField": "quantity",
+            "sourceValue": 1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "bigcommerce",
+            "sourceField": "price_inc_tax",
+            "sourceValue": "220.0000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "unitPriceBeforeDiscount": {
+            "platform": "bigcommerce",
+            "sourceField": "base_price",
+            "sourceValue": "220.0000",
+            "transform": "money_present",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "bigcommerce",
+            "sourceField": "total_inc_tax",
+            "sourceValue": "220.0000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "bigcommerce",
+            "sourceField": "total_tax",
+            "sourceValue": "0.0000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "bigcommerce",
+            "sourceField": "product_id",
+            "sourceValue": 86,
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "variantRef": {
+            "platform": "bigcommerce",
+            "sourceField": "variant_id",
+            "sourceValue": 66,
+            "transform": "id_or_none",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "bigcommerce",
+            "sourceField": "type",
+            "sourceValue": "physical",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "bigcommerce",
+            "sourceField": "type",
+            "sourceValue": "physical",
+            "transform": "equals_map",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "name": "[Sample] Dustpan & Brush",
+        "sku": "DPB",
+        "quantity": 1,
+        "unitPrice": 29.95,
+        "total": 29.95,
+        "unitPriceBeforeDiscount": 29.95,
+        "totalTax": 0,
+        "productRef": "107",
+        "variantRef": "73",
+        "kind": "product",
+        "requiresShipping": true,
+        "sourceExtension": {
+          "bigcommerce": {
+            "line_id": "4",
+            "name_customer": "[Sample] Dustpan & Brush",
+            "name_merchant": "[Sample] Dustpan & Brush",
+            "price_ex_tax": "29.9500",
+            "price_tax": "0.0000",
+            "base_total": "29.9500",
+            "total_ex_tax": "29.9500",
+            "weight": "1.0000",
+            "width": "0.0000",
+            "height": "0.0000",
+            "depth": "0.0000",
+            "base_cost_price": "0.0000",
+            "cost_price_inc_tax": "0.0000",
+            "cost_price_ex_tax": "0.0000",
+            "cost_price_tax": "0.0000",
+            "is_refunded": false,
+            "return_id": 0,
+            "wrapping_id": 0,
+            "wrapping_name": "",
+            "base_wrapping_cost": "0.0000",
+            "wrapping_cost_ex_tax": "0.0000",
+            "wrapping_cost_inc_tax": "0.0000",
+            "wrapping_cost_tax": "0.0000",
+            "wrapping_message": "",
+            "quantity_shipped": 0,
+            "quantity_backordered": 0,
+            "fixed_shipping_cost": "0.0000",
+            "is_bundled_product": false,
+            "bin_picking_number": "",
+            "fulfillment_source": "",
+            "brand": "OFS",
+            "discounted_total_inc_tax": "29.9500",
+            "order_pickup_method_id": 0,
+            "order_address_id": 2
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "bigcommerce",
+            "sourceField": "name",
+            "sourceValue": "[Sample] Dustpan & Brush",
+            "transform": "text",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "bigcommerce",
+            "sourceField": "sku",
+            "sourceValue": "DPB",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "bigcommerce",
+            "sourceField": "quantity",
+            "sourceValue": 1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "bigcommerce",
+            "sourceField": "price_inc_tax",
+            "sourceValue": "29.9500",
+            "transform": "money",
+            "method": "exact"
+          },
+          "unitPriceBeforeDiscount": {
+            "platform": "bigcommerce",
+            "sourceField": "base_price",
+            "sourceValue": "29.9500",
+            "transform": "money_present",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "bigcommerce",
+            "sourceField": "total_inc_tax",
+            "sourceValue": "29.9500",
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "bigcommerce",
+            "sourceField": "total_tax",
+            "sourceValue": "0.0000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "bigcommerce",
+            "sourceField": "product_id",
+            "sourceValue": 107,
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "variantRef": {
+            "platform": "bigcommerce",
+            "sourceField": "variant_id",
+            "sourceValue": 73,
+            "transform": "id_or_none",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "bigcommerce",
+            "sourceField": "type",
+            "sourceValue": "physical",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "bigcommerce",
+            "sourceField": "type",
+            "sourceValue": "physical",
+            "transform": "equals_map",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "sourceExtension": {
+      "bigcommerce": {
+        "external_order_id": "",
+        "ebay_order_id": "0",
+        "status_id": 10,
+        "custom_status": "Completed",
+        "currency_id": 1,
+        "default_currency_id": 1,
+        "default_currency_code": "EUR",
+        "store_default_currency_code": "EUR",
+        "store_default_to_transactional_exchange_rate": "1.0000000000",
+        "subtotal_ex_tax": "249.9500",
+        "subtotal_tax": "0.0000",
+        "base_shipping_cost": "0.0000",
+        "shipping_cost_ex_tax": "0.0000",
+        "shipping_cost_tax_class_id": 2,
+        "total_ex_tax": "249.9500",
+        "coupon_discount": "0.0000",
+        "store_credit_amount": "0.0000",
+        "gift_certificate_amount": "0.0000",
+        "base_handling_cost": "0.0000",
+        "handling_cost_ex_tax": "0.0000",
+        "handling_cost_tax_class_id": 2,
+        "base_wrapping_cost": "0.0000",
+        "wrapping_cost_ex_tax": "0.0000",
+        "wrapping_cost_tax_class_id": 3,
+        "staff_notes": "",
+        "is_email_opt_in": false,
+        "date_shipped": "Mon, 21 Sep 2026 19:22:53 +0000",
+        "items_total": 2,
+        "items_shipped": 0,
+        "order_is_digital": false,
+        "tax_provider_id": "BasicTaxProvider",
+        "cart_id": "7b067c7b-cf3f-4801-860f-803a10c40f52",
+        "is_deleted": false,
+        "shipping_address_count": 1
+      }
+    },
+    "provenance": {
+      "numbering.sourceNumber": {
+        "platform": "bigcommerce",
+        "sourceField": "id",
+        "sourceValue": 101,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "numbering.sourceId": {
+        "platform": "bigcommerce",
+        "sourceField": "id",
+        "sourceValue": 101,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "bigcommerce",
+        "sourceField": "id",
+        "sourceValue": 101,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "status.sourceState": {
+        "platform": "bigcommerce",
+        "sourceField": "status",
+        "sourceValue": "Completed",
+        "transform": "text",
+        "method": "exact"
+      },
+      "status.lifecycle": {
+        "platform": "bigcommerce",
+        "sourceField": "status_id",
+        "sourceValue": 10,
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status.fulfillment": {
+        "platform": "bigcommerce",
+        "sourceField": "status_id",
+        "sourceValue": 10,
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status.financial": {
+        "platform": "bigcommerce",
+        "sourceField": "payment_status",
+        "sourceValue": "paid",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "currency": {
+        "platform": "bigcommerce",
+        "sourceField": "currency_code",
+        "sourceValue": "EUR",
+        "transform": "text",
+        "method": "exact"
+      },
+      "amounts.exchangeRate": {
+        "platform": "bigcommerce",
+        "sourceField": "currency_exchange_rate",
+        "sourceValue": "1.0000000000",
+        "transform": "float",
+        "method": "exact"
+      },
+      "amounts.taxIncluded": {
+        "platform": "bigcommerce",
+        "sourceField": "is_tax_inclusive_pricing",
+        "sourceValue": false,
+        "transform": "bool",
+        "method": "exact"
+      },
+      "amounts.subtotal": {
+        "platform": "bigcommerce",
+        "sourceField": "subtotal_inc_tax",
+        "sourceValue": "249.9500",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shipping": {
+        "platform": "bigcommerce",
+        "sourceField": "shipping_cost_inc_tax",
+        "sourceValue": "0.0000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shippingTax": {
+        "platform": "bigcommerce",
+        "sourceField": "shipping_cost_tax",
+        "sourceValue": "0.0000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.total": {
+        "platform": "bigcommerce",
+        "sourceField": "total_inc_tax",
+        "sourceValue": "249.9500",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.taxes": {
+        "platform": "bigcommerce",
+        "sourceField": "total_tax",
+        "sourceValue": "0.0000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.discounts": {
+        "platform": "bigcommerce",
+        "sourceField": "discount_amount",
+        "sourceValue": "0.0000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.refunded": {
+        "platform": "bigcommerce",
+        "sourceField": "refunded_amount",
+        "sourceValue": "0.0000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "payments": {
+        "platform": "bigcommerce",
+        "sourceField": "_transactions",
+        "transform": "objects_map",
+        "method": "exact"
+      },
+      "paymentMethod": {
+        "platform": "canon",
+        "sourceField": "payments.0.method",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "billing": {
+        "platform": "bigcommerce",
+        "sourceField": "billing_address",
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "customerRef.email": {
+        "platform": "bigcommerce",
+        "sourceField": "billing_address.email",
+        "sourceValue": "customer1@example.test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "shipping_": {
+        "platform": "bigcommerce",
+        "sourceField": "_shipping_addresses",
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shippingLines": {
+        "platform": "bigcommerce",
+        "sourceField": "_shipping_addresses",
+        "transform": "objects_map",
+        "method": "exact"
+      },
+      "customerRef.sourceId": {
+        "platform": "bigcommerce",
+        "sourceField": "customer_id",
+        "sourceValue": 1,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "customerRef.isGuest": {
+        "platform": "bigcommerce",
+        "sourceField": "customer_id",
+        "sourceValue": 1,
+        "transform": "equals_map",
+        "method": "exact"
+      },
+      "locale": {
+        "platform": "bigcommerce",
+        "sourceField": "customer_locale",
+        "sourceValue": "en",
+        "transform": "text_present",
+        "method": "exact"
+      },
+      "source": {
+        "platform": "bigcommerce",
+        "sourceField": "order_source",
+        "sourceValue": "manual",
+        "transform": "text_present",
+        "method": "exact"
+      },
+      "channel": {
+        "platform": "bigcommerce",
+        "sourceField": "channel_id",
+        "sourceValue": 1,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "note": {
+        "platform": "bigcommerce",
+        "sourceField": "customer_message",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      },
+      "timestamps.created": {
+        "platform": "bigcommerce",
+        "sourceField": "date_created",
+        "sourceValue": "Mon, 21 Sep 2026 18:57:43 +0000",
+        "transform": "date_iso",
+        "method": "exact"
+      },
+      "timestamps.updated": {
+        "platform": "bigcommerce",
+        "sourceField": "date_modified",
+        "sourceValue": "Mon, 21 Sep 2026 19:23:21 +0000",
+        "transform": "date_present",
+        "method": "exact"
+      },
+      "items": {
+        "platform": "bigcommerce",
+        "sourceField": "_products",
+        "transform": "items",
+        "method": "structural"
+      },
+      "lineItems": {
+        "platform": "bigcommerce",
+        "sourceField": "items",
+        "transform": "line_items_from_items",
+        "method": "structural"
+      },
+      "number": {
+        "platform": "bigcommerce",
+        "sourceField": "id",
+        "sourceValue": 101,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "email": {
+        "platform": "bigcommerce",
+        "sourceField": "billing_address.email",
+        "sourceValue": "customer1@example.test",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "createdAt": {
+        "platform": "bigcommerce",
+        "sourceField": "date_created",
+        "sourceValue": "Mon, 21 Sep 2026 18:57:43 +0000",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "financialStatus": {
+        "platform": "bigcommerce",
+        "sourceField": "payment_status",
+        "sourceValue": "paid",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "fulfillmentStatus": {
+        "platform": "bigcommerce",
+        "sourceField": "status_id",
+        "sourceValue": 10,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "subtotal": {
+        "platform": "bigcommerce",
+        "sourceField": "subtotal_inc_tax",
+        "sourceValue": "249.9500",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "shipping": {
+        "platform": "bigcommerce",
+        "sourceField": "shipping_cost_inc_tax",
+        "sourceValue": "0.0000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "taxes": {
+        "platform": "bigcommerce",
+        "sourceField": "total_tax",
+        "sourceValue": "0.0000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "total": {
+        "platform": "bigcommerce",
+        "sourceField": "total_inc_tax",
+        "sourceValue": "249.9500",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "discountAmount": {
+        "platform": "bigcommerce",
+        "sourceField": "discount_amount",
+        "sourceValue": "0.0000",
+        "transform": "first_number",
+        "method": "structural"
+      }
+    }
+  }
+]

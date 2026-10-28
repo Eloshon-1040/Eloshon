@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "id_employee": 0,
+    "id_order_state": 1,
+    "id_order": 1,
+    "date_add": "2026-09-21 03:39:36"
+  },
+  {
+    "id": 6,
+    "id_employee": 1,
+    "id_order_state": 6,
+    "id_order": 1,
+    "date_add": "2026-09-21 03:39:36"
+  },
+  {
+    "id": 2,
+    "id_employee": 0,
+    "id_order_state": 1,
+    "id_order": 2,
+    "date_add": "2026-09-21 03:39:36"
+  },
+  {
+    "id": 8,
+    "id_employee": 0,
+    "id_order_state": 2,
+    "id_order": 2,
+    "date_add": "2026-09-21 21:32:46"
+  },
+  {
+    "id": 3,
+    "id_employee": 0,
+    "id_order_state": 1,
+    "id_order": 3,
+    "date_add": "2026-09-21 03:39:36"
+  },
+  {
+    "id": 7,
+    "id_employee": 1,
+    "id_order_state": 8,
+    "id_order": 3,
+    "date_add": "2026-09-21 03:39:36"
+  },
+  {
+    "id": 4,
+    "id_employee": 0,
+    "id_order_state": 1,
+    "id_order": 4,
+    "date_add": "2026-09-21 03:39:36"
+  },
+  {
+    "id": 9,
+    "id_employee": 0,
+    "id_order_state": 2,
+    "id_order": 4,
+    "date_add": "2026-09-21 21:32:46"
+  },
+  {
+    "id": 5,
+    "id_employee": 0,
+    "id_order_state": 10,
+    "id_order": 5,
+    "date_add": "2026-09-21 03:39:36"
+  }
+]

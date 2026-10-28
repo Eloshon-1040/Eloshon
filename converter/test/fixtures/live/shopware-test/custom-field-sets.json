@@ -1,0 +1,155 @@
+[
+  {
+    "extensions": {
+      "foreignKeys": {
+        "extensions": [],
+        "apiAlias": "custom_field_set_foreign_keys_extension"
+      }
+    },
+    "_uniqueIdentifier": "01a0c4ad5080730fa7688131f2a96a26",
+    "versionId": null,
+    "translated": [],
+    "createdAt": "2026-09-21T15:54:47.964+00:00",
+    "updatedAt": null,
+    "name": "eloshon_specs",
+    "config": {
+      "label": {
+        "de-DE": "Eloshon Spezifikationen",
+        "en-GB": "Eloshon specs"
+      }
+    },
+    "active": true,
+    "global": false,
+    "position": 1,
+    "customFields": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "custom_field_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01a0c4ad508d71b0a6743495c5ae9faf",
+        "versionId": null,
+        "translated": [],
+        "createdAt": "2026-09-21T15:54:47.954+00:00",
+        "updatedAt": null,
+        "name": "eloshon_specs_material",
+        "type": "text",
+        "config": {
+          "type": "text",
+          "label": {
+            "de-DE": "Material",
+            "en-GB": "Material"
+          },
+          "componentName": "sw-field",
+          "customFieldType": "text",
+          "customFieldPosition": 1
+        },
+        "active": true,
+        "customFieldSetId": "01a0c4ad5080730fa7688131f2a96a26",
+        "customFieldSet": null,
+        "productSearchConfigFields": null,
+        "allowCustomerWrite": false,
+        "allowCartExpose": false,
+        "storeApiAware": true,
+        "id": "01a0c4ad508d71b0a6743495c5ae9faf",
+        "apiAlias": "custom_field"
+      },
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "custom_field_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01a0c4ad508d71b0a6743495c659ef18",
+        "versionId": null,
+        "translated": [],
+        "createdAt": "2026-09-21T15:54:47.962+00:00",
+        "updatedAt": null,
+        "name": "eloshon_specs_warranty_months",
+        "type": "int",
+        "config": {
+          "type": "number",
+          "label": {
+            "de-DE": "Garantie (Monate)",
+            "en-GB": "Warranty (months)"
+          },
+          "numberType": "int",
+          "componentName": "sw-field",
+          "customFieldType": "number",
+          "customFieldPosition": 2
+        },
+        "active": true,
+        "customFieldSetId": "01a0c4ad5080730fa7688131f2a96a26",
+        "customFieldSet": null,
+        "productSearchConfigFields": null,
+        "allowCustomerWrite": false,
+        "allowCartExpose": false,
+        "storeApiAware": true,
+        "id": "01a0c4ad508d71b0a6743495c659ef18",
+        "apiAlias": "custom_field"
+      },
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "custom_field_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01a0c4ad508d71b0a6743495c7300b64",
+        "versionId": null,
+        "translated": [],
+        "createdAt": "2026-09-21T15:54:47.963+00:00",
+        "updatedAt": null,
+        "name": "eloshon_specs_fragile",
+        "type": "bool",
+        "config": {
+          "type": "checkbox",
+          "label": {
+            "de-DE": "Zerbrechlich",
+            "en-GB": "Fragile"
+          },
+          "componentName": "sw-field",
+          "customFieldType": "checkbox",
+          "customFieldPosition": 3
+        },
+        "active": true,
+        "customFieldSetId": "01a0c4ad5080730fa7688131f2a96a26",
+        "customFieldSet": null,
+        "productSearchConfigFields": null,
+        "allowCustomerWrite": false,
+        "allowCartExpose": false,
+        "storeApiAware": true,
+        "id": "01a0c4ad508d71b0a6743495c7300b64",
+        "apiAlias": "custom_field"
+      }
+    ],
+    "relations": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "custom_field_set_relation_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01a0c4ad508c714aad6d4d5652dbd408",
+        "versionId": null,
+        "translated": [],
+        "createdAt": "2026-09-21T15:54:47.964+00:00",
+        "updatedAt": null,
+        "entityName": "product",
+        "customFieldSetId": "01a0c4ad5080730fa7688131f2a96a26",
+        "customFieldSet": null,
+        "id": "01a0c4ad508c714aad6d4d5652dbd408",
+        "apiAlias": "custom_field_set_relation"
+      }
+    ],
+    "products": null,
+    "appId": null,
+    "app": null,
+    "id": "01a0c4ad5080730fa7688131f2a96a26",
+    "apiAlias": "custom_field_set"
+  }
+]

@@ -1,0 +1,314 @@
+[
+  {
+    "extensions": {
+      "foreignKeys": {
+        "extensions": [],
+        "apiAlias": "document_foreign_keys_extension"
+      },
+      "search": {
+        "extensions": [],
+        "translated": [],
+        "documentNumber": "1000"
+      }
+    },
+    "_uniqueIdentifier": "01a0c5765a1f7304a694ea005b44c001",
+    "versionId": null,
+    "translated": [],
+    "createdAt": "2026-09-21T19:34:23.767+00:00",
+    "updatedAt": null,
+    "orderId": "01a0c576071271d5b12afb1e2d231305",
+    "orderVersionId": "01a0c57636a073da90b6a2ccfe568286",
+    "documentTypeId": "01994d2399df73be972c5d2e1b3c3d62",
+    "documentMediaFileId": "01a0c5765a3572de9147dbc64aef2a01",
+    "order": null,
+    "config": {
+      "id": "01994d23b00570569c2d71057ece76ee",
+      "logo": null,
+      "name": "invoice",
+      "title": null,
+      "vatId": "",
+      "custom": {
+        "invoiceNumber": "1000"
+      },
+      "global": true,
+      "bankBic": "",
+      "bankIban": "",
+      "bankName": "",
+      "pageSize": "a4",
+      "fileTypes": [
+        "html",
+        "pdf"
+      ],
+      "taxNumber": "",
+      "taxOffice": "",
+      "companyUrl": null,
+      "extensions": {
+        "foreignKeys": {
+          "apiAlias": "document_base_config_foreign_keys_extension",
+          "extensions": []
+        }
+      },
+      "translated": [],
+      "companyCity": "",
+      "companyName": "Test Co",
+      "companyEmail": null,
+      "companyPhone": null,
+      "documentDate": "2026-09-21 19:34:13.908",
+      "itemsPerPage": 10,
+      "companyStreet": "",
+      "displayFooter": true,
+      "displayHeader": true,
+      "displayPrices": true,
+      "salesChannels": [],
+      "companyAddress": "",
+      "companyCountry": null,
+      "companyZipcode": "",
+      "documentNumber": "1000",
+      "documentTypeId": "01994d2399df73be972c5d2e1b3c3d62",
+      "filenamePrefix": "invoice_",
+      "filenameSuffix": "",
+      "paymentDueDate": "",
+      "documentComment": null,
+      "pageOrientation": "portrait",
+      "companyCountryId": "",
+      "displayLineItems": true,
+      "displayPageCount": true,
+      "deliveryCountries": [
+        "01994d239a5271d384aaf1fb9596c42c",
+        "01994d239ba6719e9a86b5612f9f6c1d",
+        "01994d239bb77295b97cb3b42bc2d283",
+        "01994d23a6b270319f49e620b94348df",
+        "01994d23a6f8706fbb0e6f63d7463b19",
+        "01994d23a72d71a1bad63e4a91d9df20",
+        "01994d23a74f7092a6e982795b897e54",
+        "01994d23a775702e8f37536267ab6c5b",
+        "01994d23a786733abfea2e2f20d554dd",
+        "01994d23a79772ceb5b5cccef18b6ffe",
+        "01994d23a7ba7187a821b0894483aeae",
+        "01994d23aa6371b0baf17d97a8065d16",
+        "01994d23aa74703fbd80bac54c124845",
+        "01994d23aa9870ecb0f08d7edbadca38",
+        "01994d23aaba73f28151573887260b30",
+        "01994d23aae072b7926fae4c994aa94d",
+        "01994d23ab2473a88c1f1fc9939b320d",
+        "01994d23ab367021a9834de601a83129",
+        "01994d23ab497350adf90b6bc3a200f7",
+        "01994d23ab5e7122b2f082ad71aa4674",
+        "01994d24081e72abb35fdf6fad301a84",
+        "01994d24083073a191e6e3a19f767ee9",
+        "01994d240842715ebd591e0f0e3fde25",
+        "01994d24085673a88d931e0730e81aae",
+        "01994d24087372b3bd2df50520d32c23",
+        "01994d2408a170e0b216af3f459b6c79",
+        "01994d2408c37170a6f86b69e11ced1c",
+        "01994d2408e472d8a8fddf0622301368"
+      ],
+      "executiveDirector": "",
+      "placeOfFulfillment": "",
+      "placeOfJurisdiction": "",
+      "displayReturnAddress": true,
+      "displayCompanyAddress": true,
+      "diplayLineItemPosition": true,
+      "intraCommunityDelivery": false,
+      "displayLineItemPosition": null
+    },
+    "sent": false,
+    "static": false,
+    "deepLinkCode": "FRSwGX8eMv1fyqGSOVEU6aKPCBWPYbTr",
+    "documentType": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "document_type_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "01994d2399df73be972c5d2e1b3c3d62",
+      "versionId": null,
+      "translated": {
+        "name": "Invoice",
+        "customFields": []
+      },
+      "createdAt": "2025-09-15T11:30:02.847+00:00",
+      "updatedAt": null,
+      "name": "Invoice",
+      "technicalName": "invoice",
+      "translations": null,
+      "documents": null,
+      "documentBaseConfigs": null,
+      "documentBaseConfigSalesChannels": null,
+      "customFields": null,
+      "id": "01994d2399df73be972c5d2e1b3c3d62",
+      "apiAlias": "document_type"
+    },
+    "referencedDocumentId": null,
+    "referencedDocument": null,
+    "dependentDocuments": null,
+    "documentMediaFile": null,
+    "documentNumber": "1000",
+    "documentA11yMediaFileId": "01a0c5765c517271991a4df03085846b",
+    "documentA11yMediaFile": null,
+    "customFields": null,
+    "id": "01a0c5765a1f7304a694ea005b44c001",
+    "apiAlias": "document"
+  },
+  {
+    "extensions": {
+      "foreignKeys": {
+        "extensions": [],
+        "apiAlias": "document_foreign_keys_extension"
+      },
+      "search": {
+        "extensions": [],
+        "translated": [],
+        "documentNumber": "1001"
+      }
+    },
+    "_uniqueIdentifier": "01a0c576759e702fa4a0ada296187302",
+    "versionId": null,
+    "translated": [],
+    "createdAt": "2026-09-21T19:34:30.440+00:00",
+    "updatedAt": null,
+    "orderId": "01a0c576664f7129b30ae8059cfbf4e6",
+    "orderVersionId": "01a0c576725f72ffa99f53a23de7b574",
+    "documentTypeId": "01994d2399df73be972c5d2e1b3c3d62",
+    "documentMediaFileId": "01a0c57675a47252916c0acd9605e6ee",
+    "order": null,
+    "config": {
+      "id": "01994d23b00570569c2d71057ece76ee",
+      "logo": null,
+      "name": "invoice",
+      "title": null,
+      "vatId": "",
+      "custom": {
+        "invoiceNumber": "1001"
+      },
+      "global": true,
+      "bankBic": "",
+      "bankIban": "",
+      "bankName": "",
+      "pageSize": "a4",
+      "fileTypes": [
+        "html",
+        "pdf"
+      ],
+      "taxNumber": "",
+      "taxOffice": "",
+      "companyUrl": null,
+      "extensions": {
+        "foreignKeys": {
+          "apiAlias": "document_base_config_foreign_keys_extension",
+          "extensions": []
+        }
+      },
+      "translated": [],
+      "companyCity": "",
+      "companyName": "Test Co",
+      "companyEmail": null,
+      "companyPhone": null,
+      "documentDate": "2026-09-21 19:34:29.214",
+      "itemsPerPage": 10,
+      "companyStreet": "",
+      "displayFooter": true,
+      "displayHeader": true,
+      "displayPrices": true,
+      "salesChannels": [],
+      "companyAddress": "",
+      "companyCountry": null,
+      "companyZipcode": "",
+      "documentNumber": "1001",
+      "documentTypeId": "01994d2399df73be972c5d2e1b3c3d62",
+      "filenamePrefix": "invoice_",
+      "filenameSuffix": "",
+      "paymentDueDate": "",
+      "documentComment": null,
+      "pageOrientation": "portrait",
+      "companyCountryId": "",
+      "displayLineItems": true,
+      "displayPageCount": true,
+      "deliveryCountries": [
+        "01994d239a5271d384aaf1fb9596c42c",
+        "01994d239ba6719e9a86b5612f9f6c1d",
+        "01994d239bb77295b97cb3b42bc2d283",
+        "01994d23a6b270319f49e620b94348df",
+        "01994d23a6f8706fbb0e6f63d7463b19",
+        "01994d23a72d71a1bad63e4a91d9df20",
+        "01994d23a74f7092a6e982795b897e54",
+        "01994d23a775702e8f37536267ab6c5b",
+        "01994d23a786733abfea2e2f20d554dd",
+        "01994d23a79772ceb5b5cccef18b6ffe",
+        "01994d23a7ba7187a821b0894483aeae",
+        "01994d23aa6371b0baf17d97a8065d16",
+        "01994d23aa74703fbd80bac54c124845",
+        "01994d23aa9870ecb0f08d7edbadca38",
+        "01994d23aaba73f28151573887260b30",
+        "01994d23aae072b7926fae4c994aa94d",
+        "01994d23ab2473a88c1f1fc9939b320d",
+        "01994d23ab367021a9834de601a83129",
+        "01994d23ab497350adf90b6bc3a200f7",
+        "01994d23ab5e7122b2f082ad71aa4674",
+        "01994d24081e72abb35fdf6fad301a84",
+        "01994d24083073a191e6e3a19f767ee9",
+        "01994d240842715ebd591e0f0e3fde25",
+        "01994d24085673a88d931e0730e81aae",
+        "01994d24087372b3bd2df50520d32c23",
+        "01994d2408a170e0b216af3f459b6c79",
+        "01994d2408c37170a6f86b69e11ced1c",
+        "01994d2408e472d8a8fddf0622301368"
+      ],
+      "executiveDirector": "",
+      "placeOfFulfillment": "",
+      "placeOfJurisdiction": "",
+      "displayReturnAddress": true,
+      "displayCompanyAddress": true,
+      "diplayLineItemPosition": true,
+      "intraCommunityDelivery": false,
+      "displayLineItemPosition": null
+    },
+    "sent": false,
+    "static": false,
+    "deepLinkCode": "TqX8ZvVk0NSj1sc4LG8eCTsf2auK2L1L",
+    "documentType": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "document_type_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "01994d2399df73be972c5d2e1b3c3d62",
+      "versionId": null,
+      "translated": {
+        "name": "Invoice",
+        "customFields": []
+      },
+      "createdAt": "2025-09-15T11:30:02.847+00:00",
+      "updatedAt": null,
+      "name": "Invoice",
+      "technicalName": "invoice",
+      "translations": null,
+      "documents": null,
+      "documentBaseConfigs": null,
+      "documentBaseConfigSalesChannels": null,
+      "customFields": null,
+      "id": "01994d2399df73be972c5d2e1b3c3d62",
+      "apiAlias": "document_type"
+    },
+    "referencedDocumentId": null,
+    "referencedDocument": null,
+    "dependentDocuments": null,
+    "documentMediaFile": null,
+    "documentNumber": "1001",
+    "documentA11yMediaFileId": "01a0c576767472efbc8bf600a6ab99c8",
+    "documentA11yMediaFile": null,
+    "customFields": null,
+    "id": "01a0c576759e702fa4a0ada296187302",
+    "apiAlias": "document"
+  }
+]

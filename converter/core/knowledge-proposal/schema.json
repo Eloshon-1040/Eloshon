@@ -1,0 +1,700 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "eloshon-converter/knowledge/schema.v1",
+  "title": "Eloshon Converter — KnowledgeBase schema v1",
+  "definitions": {
+    "formatId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,127}$"
+    },
+    "isoDate": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]+)?Z?)?$"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "seed",
+        "inferred",
+        "verified-fixture",
+        "verified-live",
+        "user-confirmed",
+        "user-corrected"
+      ]
+    },
+    "preservationReason": {
+      "type": "string",
+      "enum": [
+        "no-canon-field",
+        "platform-specific",
+        "unknown",
+        "ambiguous"
+      ]
+    },
+    "samplePolicy": {
+      "type": "string",
+      "enum": [
+        "keep",
+        "hash-only",
+        "redact",
+        "none"
+      ]
+    },
+    "mappingAction": {
+      "type": "string",
+      "enum": [
+        "proposed",
+        "confirmed",
+        "corrected",
+        "rejected",
+        "ambiguous",
+        "ignored"
+      ]
+    },
+    "strataOrigin": {
+      "type": "string",
+      "enum": [
+        "reference",
+        "learned",
+        "shareable"
+      ]
+    },
+    "formatProvenance": {
+      "type": "string",
+      "enum": [
+        "native-platform",
+        "supplier",
+        "scraper-generated",
+        "unknown"
+      ]
+    },
+    "formatMedium": {
+      "type": "string",
+      "enum": [
+        "csv",
+        "json-api",
+        "json",
+        "xml",
+        "tsv",
+        "other"
+      ]
+    },
+    "signature": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "required"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "csv-header-set"
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "hints": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "separator": {
+              "type": "string",
+              "enum": [
+                ",",
+                ";",
+                "\t",
+                "|"
+              ]
+            },
+            "minCoverage": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "closed": {
+              "type": "boolean"
+            },
+            "anyOf": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "description": "At least one of these columns must be present (gating, like required). Distinct from hints, which only raise coverage."
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "requiredPaths"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "json-shape"
+            },
+            "requiredPaths": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "hintPaths": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "root"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "xml-root"
+            },
+            "root": {
+              "type": "string"
+            },
+            "requiredElements": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "hash"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "structural-hash"
+            },
+            "hash": {
+              "type": "string",
+              "minLength": 4
+            },
+            "columnsPreview": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "The full normalised column set the format was taught on: a file whose columns are nearly these (see recognizer SIMILAR_MIN) is read by the same format."
+            }
+          }
+        }
+      ]
+    },
+    "fieldMapEntry": {
+      "type": "object",
+      "required": [
+        "path",
+        "canon",
+        "transform",
+        "confidence"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canon": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "transform": {
+          "type": "string",
+          "minLength": 1
+        },
+        "confidence": {
+          "$ref": "#/definitions/confidence"
+        },
+        "preservationReason": {
+          "$ref": "#/definitions/preservationReason"
+        },
+        "source": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "samplePolicy": {
+          "$ref": "#/definitions/samplePolicy"
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "description": "Multi-input transforms: source paths read in order (path stays the display/consumption key)."
+        },
+        "args": {
+          "type": "object",
+          "description": "Transform parameters (enum maps, key names, units…). Knowledge, not code."
+        },
+        "scope": {
+          "type": "string",
+          "enum": [
+            "product",
+            "variant",
+            "item"
+          ],
+          "description": "Object the path is relative to. Defaults: variant when canon starts with variants[]., product otherwise."
+        },
+        "consumes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Extra top-level source keys this entry accounts for (so they are not reported unknown)."
+        },
+        "pathPattern": {
+          "type": "string",
+          "minLength": 1,
+          "description": "A FAMILY of source columns (RegExp source, e.g. one per metafield or numbered attribute) this entry accounts for; `path` is then a human label for the family."
+        },
+        "when": {
+          "type": "string",
+          "enum": [
+            "child",
+            "self",
+            "always"
+          ],
+          "description": "Variant-scope entries: child = real variation object only, self = product standing as its own variant only, always (default)."
+        }
+      }
+    },
+    "historyEntry": {
+      "type": "object",
+      "required": [
+        "at",
+        "op",
+        "from",
+        "origin"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "at": {
+          "$ref": "#/definitions/isoDate"
+        },
+        "op": {
+          "type": "string",
+          "enum": [
+            "seed",
+            "enrich",
+            "correct",
+            "rename",
+            "deprecate"
+          ]
+        },
+        "from": {
+          "type": "string"
+        },
+        "origin": {
+          "$ref": "#/definitions/strataOrigin"
+        },
+        "diff": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "formatKnowledge": {
+      "type": "object",
+      "required": [
+        "schemaVersion",
+        "id",
+        "displayName",
+        "provenance",
+        "medium",
+        "signatures",
+        "fields",
+        "history"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "id": {
+          "$ref": "#/definitions/formatId"
+        },
+        "displayName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provenance": {
+          "$ref": "#/definitions/formatProvenance"
+        },
+        "medium": {
+          "$ref": "#/definitions/formatMedium"
+        },
+        "platformHint": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "sibling": {
+          "$ref": "#/definitions/formatId"
+        },
+        "succeeds": {
+          "$ref": "#/definitions/formatId"
+        },
+        "signatures": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/signature"
+          },
+          "minItems": 1
+        },
+        "fields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/fieldMapEntry"
+          }
+        },
+        "unknownFields": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "path"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "observedAt": {
+                "$ref": "#/definitions/isoDate"
+              },
+              "samplesRef": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "invariantsExpected": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "history": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/historyEntry"
+          },
+          "minItems": 1
+        },
+        "entity": {
+          "type": "string",
+          "enum": [
+            "products",
+            "customers",
+            "orders",
+            "categories",
+            "mixed"
+          ],
+          "description": "What the format describes. Knowledge, not routing."
+        },
+        "legacy": {
+          "type": "object",
+          "required": [
+            "formatId",
+            "platform",
+            "entity"
+          ],
+          "additionalProperties": false,
+          "description": "TRANSITIONAL (Phase 5.3→5.9): bridge to the pre-Phase-5 engine — legacy FormatId + the platform/entity the current parsers route on. Removed once the generic parser replaces per-format parsers.",
+          "properties": {
+            "formatId": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]*$"
+            },
+            "platform": {
+              "type": "string",
+              "enum": [
+                "shopify",
+                "woocommerce",
+                "bigbuy",
+                "wix",
+                "bigcommerce"
+              ]
+            },
+            "entity": {
+              "type": "string",
+              "enum": [
+                "products",
+                "customers",
+                "orders"
+              ]
+            }
+          }
+        },
+        "structure": {
+          "type": "object",
+          "description": "How units and their children are found in the payload (medium-specific, interpreted by the generic parser). E.g. { variants: { companion: \"variations\", keyedBy: \"id\", selfWhenNone: true } }."
+        },
+        "routing": {
+          "type": "object",
+          "required": [
+            "platform",
+            "entity"
+          ],
+          "additionalProperties": false,
+          "description": "How the engine routes a knowledge-driven format (generic parser): the source platform the direction expects and the entity. Formats with a legacy block route to per-format parsers instead.",
+          "properties": {
+            "platform": {
+              "type": "string"
+            },
+            "entity": {
+              "type": "string",
+              "enum": [
+                "products",
+                "customers",
+                "orders"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "decisionScope": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "id"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "format"
+            },
+            "id": {
+              "$ref": "#/definitions/formatId"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "pattern"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "family"
+            },
+            "pattern": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "const": "global"
+            }
+          }
+        }
+      ]
+    },
+    "learnedDecision": {
+      "type": "object",
+      "required": [
+        "at",
+        "by",
+        "formatId",
+        "fieldPath",
+        "action",
+        "confidence"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "at": {
+          "$ref": "#/definitions/isoDate"
+        },
+        "by": {
+          "type": "string"
+        },
+        "formatId": {
+          "$ref": "#/definitions/formatId"
+        },
+        "fieldPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "action": {
+          "$ref": "#/definitions/mappingAction"
+        },
+        "canonCandidate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "transform": {
+          "type": "string"
+        },
+        "args": {
+          "type": "object"
+        },
+        "confidence": {
+          "$ref": "#/definitions/confidence"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "scope": {
+          "$ref": "#/definitions/decisionScope"
+        }
+      }
+    },
+    "sample": {
+      "type": "object",
+      "required": [
+        "at",
+        "formatId",
+        "fieldPath",
+        "payload"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "at": {
+          "$ref": "#/definitions/isoDate"
+        },
+        "formatId": {
+          "$ref": "#/definitions/formatId"
+        },
+        "fieldPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payload": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "kind",
+                "value"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "kind": {
+                  "const": "keep"
+                },
+                "value": {
+                  "type": "string"
+                },
+                "truncated": {
+                  "type": "boolean"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "kind",
+                "hash",
+                "length",
+                "valueType"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "kind": {
+                  "const": "hash-only"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "length": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "valueType": {
+                  "type": "string"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "kind",
+                "length",
+                "valueType"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "kind": {
+                  "const": "redact"
+                },
+                "length": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "valueType": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "FormatKnowledge": {
+      "$ref": "#/definitions/formatKnowledge"
+    },
+    "LearnedDecision": {
+      "$ref": "#/definitions/learnedDecision"
+    },
+    "Sample": {
+      "$ref": "#/definitions/sample"
+    }
+  }
+}

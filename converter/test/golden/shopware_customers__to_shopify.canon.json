@@ -1,0 +1,228 @@
+[
+  {
+    "firstName": "Test",
+    "lastName": "Customer 1",
+    "email": "customer1@example.test",
+    "phone": "",
+    "address": {
+      "company": "",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "",
+      "provinceCode": "",
+      "country": "DE",
+      "zip": "1000",
+      "phone": "",
+      "firstName": "Test",
+      "lastName": "Customer 5",
+      "sourceId": "d8f0dff7ef3947979a83c42f6509f22c"
+    },
+    "shipping": {
+      "company": "",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "",
+      "provinceCode": "",
+      "country": "DE",
+      "zip": "1000",
+      "phone": "",
+      "firstName": "Test",
+      "lastName": "Customer 6",
+      "sourceId": "d8f0dff7ef3947979a83c42f6509f22c"
+    },
+    "acceptsEmail": null,
+    "acceptsSms": null,
+    "note": "",
+    "tags": [],
+    "taxExempt": false,
+    "addresses": [
+      {
+        "company": "",
+        "address1": "1 Test Street",
+        "address2": "",
+        "city": "Testville",
+        "province": "",
+        "provinceCode": "",
+        "country": "DE",
+        "zip": "1000",
+        "phone": "",
+        "firstName": "Test",
+        "lastName": "Customer 7",
+        "sourceId": "d8f0dff7ef3947979a83c42f6509f22c",
+        "isDefaultBilling": true,
+        "isDefaultShipping": true
+      }
+    ],
+    "identity": {
+      "sourceId": "6c97534c2c0747f39e8751e43cb2b013",
+      "customerNumber": "SWDEMO10000",
+      "timestamps": {
+        "created": "2025-09-15T11:32:13.123Z",
+        "modified": "2026-09-21T19:34:26.166Z",
+        "lastLogin": "2026-09-21T19:34:24.957Z"
+      }
+    },
+    "active": true,
+    "isGuest": false,
+    "birthday": "1990-01-01",
+    "gender": "male",
+    "group": {
+      "name": "Standard customer group",
+      "ref": "cfbd5018d38d41d8adca10d94fc8bdd6"
+    },
+    "stats": {
+      "orderCount": 0,
+      "totalSpent": 0
+    },
+    "sourceExtension": {
+      "shopware": {
+        "accountType": "private",
+        "reviewCount": 0,
+        "doubleOptInRegistration": false,
+        "languageId": "2fbb5fe2e29a4d70aa5854ce7ce3e20b",
+        "salesChannelId": "01994d25627d7303ba92b97e96becd52",
+        "lastPaymentMethodId": "01994d23abf47265bd0870b524d21af7"
+      }
+    },
+    "provenance": {
+      "email": {
+        "platform": "shopware",
+        "sourceField": "email",
+        "sourceValue": "customer1@example.test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "firstName": {
+        "platform": "shopware",
+        "sourceField": "firstName",
+        "sourceValue": "Test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "lastName": {
+        "platform": "shopware",
+        "sourceField": "lastName",
+        "sourceValue": "Customer 1",
+        "transform": "text",
+        "method": "exact"
+      },
+      "phone": {
+        "platform": "shopware",
+        "sourceField": "defaultBillingAddress.phoneNumber",
+        "sourceValue": null,
+        "transform": "text",
+        "method": "exact"
+      },
+      "address": {
+        "platform": "shopware",
+        "sourceField": "defaultBillingAddress",
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shipping": {
+        "platform": "shopware",
+        "sourceField": "defaultShippingAddress",
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "addresses": {
+        "platform": "shopware",
+        "sourceField": "addresses",
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "shopware",
+        "sourceField": "id",
+        "sourceValue": "6c97534c2c0747f39e8751e43cb2b013",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.customerNumber": {
+        "platform": "shopware",
+        "sourceField": "customerNumber",
+        "sourceValue": "SWDEMO10000",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.timestamps": {
+        "platform": "shopware",
+        "sourceField": "createdAt + updatedAt",
+        "sourceValue": "2025-09-15T11:32:13.123+00:00",
+        "transform": "timestamps",
+        "method": "exact"
+      },
+      "identity.timestamps.lastLogin": {
+        "platform": "shopware",
+        "sourceField": "lastLogin",
+        "sourceValue": "2026-09-21T19:34:24.957+00:00",
+        "transform": "date_present",
+        "method": "exact"
+      },
+      "active": {
+        "platform": "shopware",
+        "sourceField": "active",
+        "sourceValue": true,
+        "transform": "bool",
+        "method": "exact"
+      },
+      "isGuest": {
+        "platform": "shopware",
+        "sourceField": "guest",
+        "sourceValue": false,
+        "transform": "bool",
+        "method": "exact"
+      },
+      "birthday": {
+        "platform": "shopware",
+        "sourceField": "birthday",
+        "sourceValue": "1990-01-01",
+        "transform": "text_present",
+        "method": "exact"
+      },
+      "gender": {
+        "platform": "shopware",
+        "sourceField": "salutation.salutationKey",
+        "sourceValue": "mr",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "group.name": {
+        "platform": "shopware",
+        "sourceField": "group.name",
+        "sourceValue": "Standard customer group",
+        "transform": "text",
+        "method": "exact"
+      },
+      "group.ref": {
+        "platform": "shopware",
+        "sourceField": "groupId",
+        "sourceValue": "cfbd5018d38d41d8adca10d94fc8bdd6",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "stats.orderCount": {
+        "platform": "shopware",
+        "sourceField": "orderCount",
+        "sourceValue": 0,
+        "transform": "int",
+        "method": "exact"
+      },
+      "stats.totalSpent": {
+        "platform": "shopware",
+        "sourceField": "orderTotalAmount",
+        "sourceValue": 0,
+        "transform": "money",
+        "method": "exact"
+      },
+      "tags": {
+        "platform": "shopware",
+        "sourceField": "tags",
+        "transform": "names_of",
+        "method": "exact"
+      }
+    }
+  }
+]

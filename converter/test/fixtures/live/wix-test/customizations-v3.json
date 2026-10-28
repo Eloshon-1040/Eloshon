@@ -1,0 +1,167 @@
+[
+  {
+    "id": "9fba6c40-9303-4844-945f-98376a134748",
+    "revision": "1",
+    "createdDate": "2025-07-15T08:15:08.382Z",
+    "updatedDate": "2025-07-15T08:15:08.382Z",
+    "key": "Carte cadeau",
+    "name": "Carte cadeau",
+    "customizationType": "MODIFIER",
+    "customizationRenderType": "FREE_TEXT",
+    "modifierSettings": {
+      "defaultMandatory": true
+    },
+    "freeTextInput": {
+      "minCharCount": 0,
+      "maxCharCount": 500,
+      "title": "Souhaitez-vous ajouter une carte cadeau ? Rédigez votre message ici.",
+      "key": "Souhaitez-vous ajouter une carte cadeau ? Rédigez votre message ici."
+    }
+  },
+  {
+    "id": "684991fc-3078-415f-a35e-2673f6c12794",
+    "revision": "1",
+    "createdDate": "2025-07-14T12:29:31.001Z",
+    "updatedDate": "2025-07-14T12:29:31.001Z",
+    "key": "Couleur",
+    "name": "Couleur",
+    "customizationType": "PRODUCT_OPTION",
+    "customizationRenderType": "SWATCH_CHOICES",
+    "choicesSettings": {
+      "choices": [
+        {
+          "id": "472574a6-3815-46ac-be7d-06533a8cc013",
+          "choiceType": "ONE_COLOR",
+          "key": "Blanc",
+          "name": "Blanc",
+          "colorCode": "#FFFFFF",
+          "primaryChoiceIds": []
+        },
+        {
+          "id": "599bce33-0532-45ad-b6df-1f73aba5a92d",
+          "choiceType": "ONE_COLOR",
+          "key": "Vert foncé",
+          "name": "Vert foncé",
+          "colorCode": "#4D7268",
+          "primaryChoiceIds": []
+        },
+        {
+          "id": "5dc0f24a-f00d-4106-a10e-382d1e1c58da",
+          "choiceType": "ONE_COLOR",
+          "key": "Bleu foncé",
+          "name": "Bleu foncé",
+          "colorCode": "#48488C",
+          "primaryChoiceIds": []
+        },
+        {
+          "id": "815db586-2ad9-4a2d-b3a4-cb6510d1c151",
+          "choiceType": "ONE_COLOR",
+          "key": "Violet",
+          "name": "Violet",
+          "colorCode": "#CAB4E7",
+          "primaryChoiceIds": []
+        }
+      ],
+      "sortOrder": "UNKNOWN_CHOICE_SORT_STRATEGY"
+    }
+  },
+  {
+    "id": "db94458f-8af4-4b6f-92b7-f5e6709b026b",
+    "revision": "1",
+    "createdDate": "2025-07-14T12:29:31.001Z",
+    "updatedDate": "2025-07-14T14:53:19.056Z",
+    "key": "Taille",
+    "name": "Taille",
+    "customizationType": "PRODUCT_OPTION",
+    "customizationRenderType": "TEXT_CHOICES",
+    "choicesSettings": {
+      "choices": [
+        {
+          "id": "4e5011a6-4abd-4ff0-8d1f-111eb0a289d9",
+          "choiceType": "CHOICE_TEXT",
+          "key": "100 ml",
+          "name": "100 ml",
+          "primaryChoiceIds": []
+        },
+        {
+          "id": "d6c650cb-32c1-4a11-9669-b60e59c385bb",
+          "choiceType": "CHOICE_TEXT",
+          "key": "150 ml",
+          "name": "150 ml",
+          "primaryChoiceIds": []
+        },
+        {
+          "id": "049882a4-1f38-4dc3-a088-243fdca0dd87",
+          "choiceType": "CHOICE_TEXT",
+          "key": "250 ml",
+          "name": "250 ml",
+          "primaryChoiceIds": []
+        },
+        {
+          "id": "a7cc155f-770a-4f30-a8cb-6916c3de6f59",
+          "choiceType": "CHOICE_TEXT",
+          "key": "500 ml",
+          "name": "500 ml",
+          "primaryChoiceIds": []
+        },
+        {
+          "id": "2ef9f73b-44e9-4fad-b836-6b23d7223190",
+          "choiceType": "CHOICE_TEXT",
+          "key": "S",
+          "name": "S",
+          "primaryChoiceIds": []
+        },
+        {
+          "id": "03a3de87-8cf8-403d-8d62-3e992fa936f1",
+          "choiceType": "CHOICE_TEXT",
+          "key": "M",
+          "name": "M",
+          "primaryChoiceIds": []
+        },
+        {
+          "id": "9afe982a-7cb2-4cb0-892b-abd6b2ee7074",
+          "choiceType": "CHOICE_TEXT",
+          "key": "L",
+          "name": "L",
+          "primaryChoiceIds": []
+        },
+        {
+          "id": "2dadab72-a288-4515-9b4c-1908d64ed58d",
+          "choiceType": "CHOICE_TEXT",
+          "key": "XL",
+          "name": "XL",
+          "primaryChoiceIds": []
+        },
+        {
+          "id": "ad0b75de-d307-464d-9a63-204cd31a9132",
+          "choiceType": "CHOICE_TEXT",
+          "key": "Small",
+          "name": "Small",
+          "primaryChoiceIds": []
+        },
+        {
+          "id": "c9a4ab83-a351-49af-a8b2-908963cbd6f5",
+          "choiceType": "CHOICE_TEXT",
+          "key": "Medium",
+          "name": "Medium",
+          "primaryChoiceIds": []
+        },
+        {
+          "id": "a8bd00ee-f0a9-4d02-bc92-c1c21873dc4c",
+          "choiceType": "CHOICE_TEXT",
+          "key": "Large",
+          "name": "Large",
+          "primaryChoiceIds": []
+        },
+        {
+          "id": "af880508-b128-461a-8bc8-c6b9ae6b0591",
+          "choiceType": "CHOICE_TEXT",
+          "key": "X-Large",
+          "name": "X-Large",
+          "primaryChoiceIds": []
+        }
+      ],
+      "sortOrder": "UNKNOWN_CHOICE_SORT_STRATEGY"
+    }
+  }
+]

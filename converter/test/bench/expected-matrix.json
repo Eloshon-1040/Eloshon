@@ -1,0 +1,1112 @@
+{
+  "scraper-csv-levis-be": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 2,
+      "units": 40,
+      "reason": "dedupe_handles, loss_shopify_category_taxonomy"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 2,
+      "units": 40,
+      "reason": "dedupe_handles, id_removed_woo"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 3,
+      "units": 40,
+      "reason": "dedupe_handles, loss_wix_category_hierarchy, loss_wix_option_type"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 4,
+      "units": 40,
+      "reason": "dedupe_handles, id_removed_bc, loss_bc_categories_target, loss_bc_images_target"
+    }
+  },
+  "scraper-csv-lidl-de": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 1,
+      "units": 10,
+      "reason": "loss_shopify_category_taxonomy"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 1,
+      "units": 10,
+      "reason": "id_removed_woo"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 2,
+      "units": 10,
+      "reason": "loss_wix_category_hierarchy, loss_wix_option_type"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 3,
+      "units": 10,
+      "reason": "id_removed_bc, loss_bc_categories_target, loss_bc_images_target"
+    }
+  },
+  "scraper-csv-lidl-be": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 2,
+      "units": 2,
+      "reason": "loss_shopify_category_taxonomy, rows_unwrapped"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 2,
+      "units": 2,
+      "reason": "id_removed_woo, rows_unwrapped"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 3,
+      "units": 2,
+      "reason": "loss_wix_category_hierarchy, loss_wix_option_type, rows_unwrapped"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 4,
+      "units": 2,
+      "reason": "id_removed_bc, loss_bc_categories_target, loss_bc_images_target, rows_unwrapped"
+    }
+  },
+  "scraper-csv-april-be": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 2,
+      "units": 15,
+      "reason": "dedupe_handles, loss_shopify_category_taxonomy"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 2,
+      "units": 15,
+      "reason": "dedupe_handles, id_removed_woo"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 3,
+      "units": 15,
+      "reason": "dedupe_handles, loss_wix_category_hierarchy, loss_wix_option_type"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 4,
+      "units": 15,
+      "reason": "dedupe_handles, id_removed_bc, loss_bc_categories_target, loss_bc_images_target"
+    }
+  },
+  "scraper-csv-colruyt-be": {
+    "shopify": {
+      "status": "preserved",
+      "preserved": 3,
+      "flagged": 0,
+      "units": 5,
+      "reason": "name_en, slug_en, description_en"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 1,
+      "units": 5,
+      "reason": "id_removed_woo"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 1,
+      "units": 5,
+      "reason": "loss_wix_option_type"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 3,
+      "units": 5,
+      "reason": "id_removed_bc, loss_bc_categories_target, loss_bc_images_target"
+    }
+  },
+  "scraper-pj-contract": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 1,
+      "units": 2,
+      "reason": "loss_shopify_category_taxonomy"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 2,
+      "units": 2,
+      "reason": "id_removed_woo, loss_woo_attribute_collision"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 2,
+      "units": 2,
+      "reason": "loss_wix_category_hierarchy, loss_wix_option_type"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 3,
+      "units": 2,
+      "reason": "id_removed_bc, loss_bc_categories_target, loss_bc_images_target"
+    }
+  },
+  "scraper-pj-21gen": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 8,
+      "flagged": 4,
+      "units": 3,
+      "reason": "colour_family_grouped, loss_shopify_category_taxonomy, loss_shopify_translations, stock_untracked"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 8,
+      "flagged": 5,
+      "units": 3,
+      "reason": "colour_family_grouped, id_removed_woo, loss_woo_translations, stock_untracked, woo_parent_skus_generated"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 8,
+      "flagged": 5,
+      "units": 3,
+      "reason": "colour_family_grouped, loss_wix_category_hierarchy, loss_wix_option_type, loss_wix_translations, stock_untracked"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 8,
+      "flagged": 6,
+      "units": 3,
+      "reason": "colour_family_grouped, id_removed_bc, loss_bc_categories_target, loss_bc_images_target, loss_bc_translations, stock_untracked"
+    }
+  },
+  "scraper-pj-19gen": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 1,
+      "units": 2,
+      "reason": "loss_shopify_category_taxonomy"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 1,
+      "units": 2,
+      "reason": "id_removed_woo"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 2,
+      "units": 2,
+      "reason": "loss_wix_category_hierarchy, loss_wix_option_type"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 3,
+      "units": 2,
+      "reason": "id_removed_bc, loss_bc_categories_target, loss_bc_images_target"
+    }
+  },
+  "scraper-pj-extension": {
+    "shopify": {
+      "status": "ok",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 3,
+      "reason": ""
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 1,
+      "units": 3,
+      "reason": "id_removed_woo"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 1,
+      "units": 3,
+      "reason": "loss_wix_option_type"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 3,
+      "units": 3,
+      "reason": "id_removed_bc, loss_bc_categories_target, loss_bc_images_target"
+    }
+  },
+  "eloshon-catalog-edited": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 5,
+      "flagged": 5,
+      "units": 3,
+      "reason": "eloshon_edits_applied, eloshon_other_entities, eloshon_products_removed, loss_shopify_category_taxonomy, loss_shopify_translations"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 5,
+      "flagged": 6,
+      "units": 3,
+      "reason": "eloshon_edits_applied, eloshon_other_entities, eloshon_products_removed, id_removed_woo, loss_woo_translations, woo_parent_skus_generated"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 5,
+      "flagged": 6,
+      "units": 3,
+      "reason": "eloshon_edits_applied, eloshon_other_entities, eloshon_products_removed, loss_wix_category_hierarchy, loss_wix_option_type, loss_wix_translations"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 5,
+      "flagged": 7,
+      "units": 3,
+      "reason": "eloshon_edits_applied, eloshon_other_entities, eloshon_products_removed, id_removed_bc, loss_bc_categories_target, loss_bc_images_target, loss_bc_translations"
+    }
+  },
+  "thunderbit-growshops": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 2,
+      "units": 72,
+      "reason": "loss_shopify_category_taxonomy, loss_shopify_dimensions"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 1,
+      "units": 72,
+      "reason": "id_removed_woo"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 1,
+      "units": 72,
+      "reason": "loss_wix_option_type"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 3,
+      "units": 72,
+      "reason": "id_removed_bc, loss_bc_categories_target, loss_bc_images_target"
+    }
+  },
+  "supplier-fr": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 1,
+      "flagged": 1,
+      "units": 3,
+      "reason": "loss_shopify_category_taxonomy"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 1,
+      "flagged": 1,
+      "units": 3,
+      "reason": "id_removed_woo"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 1,
+      "flagged": 2,
+      "units": 3,
+      "reason": "loss_wix_category_hierarchy, loss_wix_option_type"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 1,
+      "flagged": 3,
+      "units": 3,
+      "reason": "id_removed_bc, loss_bc_categories_target, loss_bc_images_target"
+    }
+  },
+  "bigbuy-standard": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 4,
+      "units": 2,
+      "reason": "loss_bigbuy_brand, loss_category_hierarchy, loss_hs_code, loss_shopify_dimensions"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 2,
+      "units": 2,
+      "reason": "id_removed_woo, loss_bigbuy_brand"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "no such direction"
+    },
+    "bigcommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "no such direction"
+    }
+  },
+  "bigbuy-presta": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 3,
+      "units": 2,
+      "reason": "loss_bigbuy_brand, loss_category_hierarchy, loss_shopify_dimensions"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 2,
+      "units": 2,
+      "reason": "id_removed_woo, loss_bigbuy_brand"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "no such direction"
+    },
+    "bigcommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "no such direction"
+    }
+  },
+  "shopify-products": {
+    "shopify": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 4,
+      "units": 4,
+      "reason": "id_removed_woo, loss_woo_cost, loss_woo_seo_title, woo_parent_skus_generated"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 2,
+      "units": 4,
+      "reason": "loss_wix_category_hierarchy, loss_wix_option_type"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 3,
+      "units": 4,
+      "reason": "id_removed_bc, loss_bc_categories_target, loss_bc_images_target"
+    }
+  },
+  "shopify-customers": {
+    "shopify": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 3,
+      "units": 3,
+      "reason": "duplicate_emails, loss_pw_generic, loss_woo_marketing_consent"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_wix_customers"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 3,
+      "units": 3,
+      "reason": "duplicate_emails, loss_bc_marketing_consent, loss_bc_passwords"
+    }
+  },
+  "shopify-customers-synthetic": {
+    "shopify": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 6,
+      "flagged": 2,
+      "units": 60,
+      "reason": "loss_pw_generic, loss_woo_marketing_consent"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_wix_customers"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 6,
+      "flagged": 2,
+      "units": 60,
+      "reason": "loss_bc_marketing_consent, loss_bc_passwords"
+    }
+  },
+  "shopify-orders": {
+    "shopify": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 2,
+      "units": 2,
+      "reason": "loss_refund_risk, loss_woo_order_numbering"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_wix_orders"
+    },
+    "bigcommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_bc_orders"
+    }
+  },
+  "woo-products-modern": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 3,
+      "units": 3,
+      "reason": "loss_shopify_category_taxonomy, loss_shopify_dimensions, loss_short_description"
+    },
+    "woocommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 3,
+      "units": 3,
+      "reason": "loss_short_description, loss_wix_category_hierarchy, loss_wix_option_type"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 4,
+      "units": 3,
+      "reason": "id_removed_bc, loss_bc_categories_target, loss_bc_images_target, loss_short_description"
+    }
+  },
+  "woo-products-legacy": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 2,
+      "units": 3,
+      "reason": "loss_shopify_category_taxonomy, woo_legacy_variants"
+    },
+    "woocommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 3,
+      "units": 3,
+      "reason": "loss_wix_category_hierarchy, loss_wix_option_type, woo_legacy_variants"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 4,
+      "units": 3,
+      "reason": "id_removed_bc, loss_bc_categories_target, loss_bc_images_target, woo_legacy_variants"
+    }
+  },
+  "woo-customers": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 5,
+      "units": 2,
+      "reason": "loss_purchase_history, loss_pw_shopify, loss_shipping_address, loss_shopify_marketing_consent, skipped_non_customers"
+    },
+    "woocommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_wix_customers"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 3,
+      "flagged": 3,
+      "units": 2,
+      "reason": "loss_bc_marketing_consent, loss_bc_passwords, skipped_non_customers"
+    }
+  },
+  "woo-orders": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 5,
+      "units": 2,
+      "reason": "coupons_become_discount, loss_coupons_as_lines, loss_per_tax, loss_shopify_order_numbering, loss_shopify_order_rows"
+    },
+    "woocommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_wix_orders"
+    },
+    "bigcommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_bc_orders"
+    }
+  },
+  "wix-products": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 5,
+      "units": 3,
+      "reason": "loss_shopify_category_taxonomy, loss_wix_customtext, loss_wix_infosections, loss_wix_ribbon, loss_wix_swatches"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 7,
+      "units": 3,
+      "reason": "id_removed_woo, loss_wix_customtext, loss_wix_infosections, loss_wix_ribbon, loss_wix_swatches, loss_woo_cost, woo_parent_skus_generated"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 7,
+      "units": 3,
+      "reason": "id_removed_bc, loss_bc_categories_target, loss_bc_images_target, loss_wix_customtext, loss_wix_infosections, loss_wix_ribbon, loss_wix_swatches"
+    }
+  },
+  "bigcommerce-products": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 3,
+      "units": 2,
+      "reason": "loss_bc_brand_name, loss_bc_category_names, loss_bc_warranty_bin"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 7,
+      "units": 2,
+      "reason": "id_removed_woo, loss_bc_brand_name, loss_bc_category_names, loss_bc_warranty_bin, loss_woo_cost, loss_woo_seo_title, woo_parent_skus_generated"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 4,
+      "units": 2,
+      "reason": "loss_bc_brand_name, loss_bc_category_names, loss_bc_warranty_bin, loss_wix_option_type"
+    },
+    "bigcommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    }
+  },
+  "bigcommerce-customers": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 3,
+      "units": 2,
+      "reason": "loss_purchase_history, loss_pw_shopify, loss_shopify_marketing_consent"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 2,
+      "units": 2,
+      "reason": "loss_pw_generic, loss_woo_marketing_consent"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_wix_customers"
+    },
+    "bigcommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    }
+  },
+  "bigcommerce-orders": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 4,
+      "units": 2,
+      "reason": "loss_bc_order_fees, loss_coupons_as_lines, loss_per_tax, loss_shopify_order_numbering"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 3,
+      "units": 2,
+      "reason": "loss_bc_order_fees, loss_refund_risk, loss_woo_order_numbering"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_wix_orders"
+    },
+    "bigcommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    }
+  },
+  "woo-rest-products": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 4,
+      "flagged": 5,
+      "units": 2,
+      "reason": "json_companions_missing, knowledge_variants_missing_companion, loss_shopify_category_taxonomy, loss_shopify_dimensions, loss_short_description"
+    },
+    "woocommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 4,
+      "flagged": 4,
+      "units": 2,
+      "reason": "json_companions_missing, knowledge_variants_missing_companion, loss_short_description, loss_wix_option_type"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 4,
+      "flagged": 6,
+      "units": 2,
+      "reason": "id_removed_bc, json_companions_missing, knowledge_variants_missing_companion, loss_bc_categories_target, loss_bc_images_target, loss_short_description"
+    }
+  },
+  "woo-rest-orders": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 5,
+      "units": 2,
+      "reason": "loss_coupons_as_lines, loss_per_tax, loss_shopify_order_numbering, loss_shopify_order_rows, loss_shopify_payments_detail"
+    },
+    "woocommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_wix_orders"
+    },
+    "bigcommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_bc_orders"
+    }
+  },
+  "woo-rest-customers": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 3,
+      "units": 2,
+      "reason": "loss_purchase_history, loss_pw_shopify, loss_shopify_marketing_consent"
+    },
+    "woocommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_wix_customers"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 2,
+      "units": 2,
+      "reason": "loss_bc_marketing_consent, loss_bc_passwords"
+    }
+  },
+  "shopify-graphql-products": {
+    "shopify": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 3,
+      "units": 3,
+      "reason": "id_removed_woo, loss_woo_seo_title, woo_parent_skus_generated"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 1,
+      "units": 3,
+      "reason": "loss_wix_option_type"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 2,
+      "flagged": 3,
+      "units": 3,
+      "reason": "id_removed_bc, loss_bc_categories_target, loss_bc_images_target"
+    }
+  },
+  "shopware-products": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 7,
+      "flagged": 4,
+      "units": 3,
+      "reason": "json_companions_missing, loss_shopify_category_taxonomy, loss_shopify_dimensions, loss_shopify_price_tiers"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 7,
+      "flagged": 4,
+      "units": 3,
+      "reason": "id_removed_woo, json_companions_missing, loss_woo_attribute_collision, loss_woo_price_tiers"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 7,
+      "flagged": 4,
+      "units": 3,
+      "reason": "json_companions_missing, loss_wix_category_hierarchy, loss_wix_option_type, loss_wix_price_tiers"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 7,
+      "flagged": 5,
+      "units": 3,
+      "reason": "id_removed_bc, json_companions_missing, loss_bc_categories_target, loss_bc_images_target, loss_bc_price_tiers"
+    }
+  },
+  "shopware-orders": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 6,
+      "units": 2,
+      "reason": "json_companions_missing, loss_coupons_as_lines, loss_per_tax, loss_shopify_invoice_numbers, loss_shopify_order_numbering, loss_shopify_payments_detail"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 5,
+      "units": 2,
+      "reason": "json_companions_missing, loss_refund_risk, loss_woo_invoice_numbers, loss_woo_order_numbering, loss_woo_payments_detail"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_wix_orders"
+    },
+    "bigcommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_bc_orders"
+    }
+  },
+  "shopware-customers": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 5,
+      "units": 1,
+      "reason": "json_companions_missing, loss_purchase_history, loss_pw_shopify, loss_shipping_address, loss_shopify_marketing_consent"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 3,
+      "units": 1,
+      "reason": "json_companions_missing, loss_pw_generic, loss_woo_marketing_consent"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_wix_customers"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 3,
+      "units": 1,
+      "reason": "json_companions_missing, loss_bc_marketing_consent, loss_bc_passwords"
+    }
+  },
+  "prestashop-products": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 4,
+      "flagged": 3,
+      "units": 25,
+      "reason": "json_companions_missing, loss_shopify_bundles, loss_shopify_identifiers"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 4,
+      "flagged": 5,
+      "units": 25,
+      "reason": "id_removed_woo, json_companions_missing, loss_woo_bundles, loss_woo_identifiers, loss_woo_seo_title"
+    },
+    "wix": {
+      "status": "flagged",
+      "preserved": 4,
+      "flagged": 4,
+      "units": 25,
+      "reason": "json_companions_missing, loss_wix_bundles, loss_wix_identifiers, loss_wix_option_type"
+    },
+    "bigcommerce": {
+      "status": "flagged",
+      "preserved": 4,
+      "flagged": 5,
+      "units": 25,
+      "reason": "id_removed_bc, json_companions_missing, loss_bc_bundles, loss_bc_categories_target, loss_bc_images_target"
+    }
+  },
+  "prestashop-orders": {
+    "shopify": {
+      "status": "failed",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "order_no_line_items"
+    },
+    "woocommerce": {
+      "status": "failed",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "order_no_line_items"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_wix_orders"
+    },
+    "bigcommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_bc_orders"
+    }
+  },
+  "bigcommerce-api-orders": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 8,
+      "units": 1,
+      "reason": "json_companions_missing, loss_bc_order_fees, loss_coupons_as_lines, loss_per_tax, loss_shopify_order_numbering, loss_shopify_order_rows, loss_shopify_payments_detail, test_orders_excluded"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 6,
+      "units": 1,
+      "reason": "json_companions_missing, loss_bc_order_fees, loss_refund_risk, loss_woo_order_numbering, loss_woo_payments_detail, test_orders_excluded"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_wix_orders"
+    },
+    "bigcommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    }
+  },
+  "wix-orders": {
+    "shopify": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 6,
+      "units": 1,
+      "reason": "json_companions_missing, loss_coupons_as_lines, loss_per_tax, loss_shopify_order_numbering, loss_shopify_order_rows, loss_shopify_payments_detail"
+    },
+    "woocommerce": {
+      "status": "flagged",
+      "preserved": 0,
+      "flagged": 4,
+      "units": 1,
+      "reason": "json_companions_missing, loss_refund_risk, loss_woo_order_numbering, loss_woo_payments_detail"
+    },
+    "wix": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "same platform"
+    },
+    "bigcommerce": {
+      "status": "n/a",
+      "preserved": 0,
+      "flagged": 0,
+      "units": 0,
+      "reason": "impossible_bc_orders"
+    }
+  }
+}

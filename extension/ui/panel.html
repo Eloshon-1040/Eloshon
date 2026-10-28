@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eloshon Scraper</title>
+  <style>
+    [hidden] { display: none !important; }
+    :root {
+      --bg: #0f1115; --panel: #171a21; --panel2: #1e222b; --line: #2a2f3a;
+      --text: #e8eaed; --muted: #9aa3b2; --accent: #6c7cff; --accent2: #8b5cf6;
+      --ok: #35c28a; --warn: #f2b84b; --danger: #ef5d6b; --radius: 10px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#f6f7f9; --panel:#fff; --panel2:#f0f2f6; --line:#e2e6ee; --text:#1a1d24; --muted:#636b7a; }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body { background: var(--bg); color: var(--text); font: 13px/1.45 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; display: flex; flex-direction: column; }
+    header { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-bottom: 1px solid var(--line); background: var(--panel); }
+    header .logo { width: 22px; height: 22px; border-radius: 6px; background: linear-gradient(135deg, var(--accent), var(--accent2)); flex: 0 0 auto; }
+    header .title { font-weight: 650; }
+    header .status { margin-left: auto; font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); }
+    .dot.on { background: var(--ok); } .dot.off { background: var(--danger); }
+    nav { display: flex; gap: 2px; padding: 8px 8px 0; background: var(--panel); border-bottom: 1px solid var(--line); }
+    nav button { flex: 1; background: transparent; color: var(--muted); border: 0; border-bottom: 2px solid transparent; padding: 8px 4px; font: inherit; cursor: pointer; border-radius: 6px 6px 0 0; }
+    nav button.active { color: var(--text); border-bottom-color: var(--accent); background: var(--panel2); }
+    main { flex: 1; overflow: auto; padding: 12px; }
+    .pane { display: none; } .pane.active { display: block; }
+    .row { display: flex; gap: 8px; align-items: center; }
+    .btn { background: var(--panel2); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); padding: 8px 12px; font: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+    .btn:hover { border-color: var(--accent); }
+    .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent2)); border: 0; color: #fff; font-weight: 600; }
+    .btn.ghost { background: transparent; }
+    .btn.block { width: 100%; justify-content: center; }
+    .btn.sm { padding: 4px 8px; font-size: 12px; }
+    .btn:disabled { opacity: .5; cursor: default; }
+    .hint { color: var(--muted); font-size: 12px; margin: 6px 0 12px; }
+    .field { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 8px; margin-bottom: 8px; }
+    .field .top { display: flex; align-items: center; gap: 8px; }
+    .field .ico { width: 24px; height: 24px; border-radius: 6px; background: var(--panel2); display: grid; place-items: center; color: var(--muted); flex: 0 0 auto; }
+    .field input[type=text] { flex: 1; background: var(--panel2); color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; font: inherit; min-width: 0; }
+    .field .ai { margin-top: 6px; display: flex; gap: 6px; align-items: flex-start; }
+    .field .ai textarea { flex: 1; background: var(--panel2); color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; font: inherit; resize: vertical; min-height: 30px; }
+    .iconbtn { background: transparent; border: 0; color: var(--muted); cursor: pointer; padding: 4px; border-radius: 6px; }
+    .iconbtn:hover { color: var(--text); background: var(--panel2); }
+    .field .meaning { margin: 4px 0 0 32px; font-size: 11px; color: var(--muted); }
+    .field .picked { margin-top: 6px; font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .linkbtn { background: transparent; border: 0; color: var(--accent); cursor: pointer; padding: 0 2px; font: inherit; text-decoration: underline; }
+    label.block { display: block; margin: 10px 0 4px; color: var(--muted); font-size: 12px; }
+    select, input[type=number] { background: var(--panel2); color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; font: inherit; }
+    .switch { display: flex; align-items: center; gap: 8px; margin: 10px 0; }
+    .switch input { width: 34px; height: 18px; appearance: none; background: var(--line); border-radius: 999px; position: relative; cursor: pointer; }
+    .switch input:checked { background: var(--accent); }
+    .switch input::after { content: ''; position: absolute; width: 14px; height: 14px; border-radius: 50%; background: #fff; top: 2px; left: 2px; transition: .15s; }
+    .switch input:checked::after { left: 18px; }
+    .toast { font-size: 12px; color: var(--muted); min-height: 16px; margin-top: 8px; }
+    .empty { color: var(--muted); text-align: center; padding: 28px 10px; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; max-width: 160px; overflow: hidden; text-overflow: ellipsis; }
+    th { color: var(--muted); position: sticky; top: 0; background: var(--panel); }
+    th .fill { display: block; font-weight: 400; font-size: 10px; }
+    th .fill.low { color: var(--warn); }
+    .readstate { border: 1px solid var(--line); border-left: 4px solid var(--warn); border-radius: var(--radius); padding: 6px 10px; margin: 0 0 8px; font-size: 12px; }
+    .readstate.complete { border-left-color: var(--ok); }
+    .readstate b { font-weight: 600; }
+    .card.warn { border-color: var(--warn); }
+    .fixed-row { display: grid; grid-template-columns: minmax(90px, 30%) 1fr; gap: 4px 8px; align-items: center; margin: 6px 0; }
+    .fixed-row label, .fixed-row .fx-name { font-size: 12px; color: var(--muted); }
+    .fixed-row input[type=text], .fixed-row select { width: 100%; min-width: 0; background: var(--panel2); color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; font: inherit; font-size: 12px; }
+    .fixed-row .fx-more { grid-column: 2; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+    .fx-level { margin: 10px 0 2px; font-size: 12px; font-weight: 600; color: var(--text); border-top: 1px solid var(--line); padding-top: 8px; }
+    .fx-level:first-child { border-top: 0; padding-top: 0; margin-top: 0; }
+    body[data-tab=learn] footer, body[data-tab=agent] footer { display: none; }
+    .msg { border-radius: var(--radius); padding: 8px 10px; white-space: pre-wrap; word-break: break-word; }
+    .msg.me { background: var(--panel2); align-self: flex-end; max-width: 90%; }
+    .msg.bot { background: var(--panel); border: 1px solid var(--line); }
+    .msg.err { border: 1px solid var(--danger); color: var(--danger); }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px; margin: 8px 0; }
+    .card.ok { border-color: var(--ok); } .card.bad { border-color: var(--danger); }
+    .badge { font-size: 10px; padding: 1px 6px; border-radius: 999px; background: var(--panel2); color: var(--muted); border: 1px solid var(--line); }
+    .badge.manual { color: var(--ok); border-color: var(--ok); } .badge.ai { color: var(--warn); border-color: var(--warn); }
+    .sample { font-size: 12px; color: var(--muted); margin: 4px 0; white-space: pre-wrap; word-break: break-word; max-height: 160px; overflow: auto; }
+    .sample .pic { display: flex; align-items: center; gap: 6px; margin: 2px 0; }
+    .sample .pic img { width: 36px; height: 36px; object-fit: contain; border: 1px solid var(--border, #ddd); border-radius: 3px; background: #fff; flex: none; }
+    .sample .pic span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    footer { border-top: 1px solid var(--line); padding: 10px 12px; background: var(--panel); display: flex; gap: 8px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"></div>
+    <div class="title">Eloshon Scraper</div>
+    <div class="status"><span id="appdot" class="dot"></span><span id="appstate">app…</span></div>
+  </header>
+  <div id="sitebar" style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; padding:8px 12px; border-bottom:1px solid var(--line); background:var(--panel2);">
+    <span id="site-host" class="hint" style="margin:0; font-weight:600; color:var(--text);">—</span>
+    <span id="site-perm" class="dot off" title="autorisation du site"></span>
+    <span id="site-perm-txt" class="hint" style="margin:0;">non activé</span>
+    <button id="activate" class="btn sm" style="margin-left:auto;">Activer ce site</button>
+    <button id="run-top" class="btn primary sm" title="Lire la page ouverte avec les champs de l’onglet Champs">▶ Exécuter</button>
+  </div>
+  <div id="jobbar" style="display:none; padding:8px 12px; border-bottom:1px solid var(--line); background:var(--panel);">
+    <span id="job-state" class="hint" style="margin:0;"></span>
+    <span id="job-msg" class="hint" style="margin:0 8px;"></span>
+    <button id="job-resume" class="btn sm" style="display:none;">Reprendre</button>
+    <button id="job-stop" class="btn sm" style="display:none;">Abandonner</button>
+  </div>
+  <nav>
+    <button data-tab="fields" class="active">Champs</button>
+    <button data-tab="learn">Fiche produit</button>
+    <button data-tab="agent">Agent</button>
+    <button data-tab="pages">Pages</button>
+    <button data-tab="results">Résultats</button>
+    <button data-tab="settings">Réglages</button>
+  </nav>
+  <main>
+    <section id="pane-fields" class="pane active">
+      <label class="block">Type de contenu</label>
+      <select id="template">
+        <option value="produits">Produits (e-commerce)</option>
+        <option value="locations">Locations (hébergements)</option>
+        <option value="videos">Vidéos</option>
+        <option value="articles">Articles / Blog</option>
+        <option value="contacts">Contacts / Annuaire</option>
+        <option value="generique">Générique</option>
+        <option value="custom" disabled>Personnalisé</option>
+      </select>
+      <div class="row" style="margin-top:10px;">
+        <button id="ai-detect" class="btn primary">✨ Détecter par IA</button>
+        <button id="add-field" class="btn">＋ Champ</button>
+      </div>
+      <div class="hint">Choisis un type (produits, vidéos, blog…), laisse l'IA proposer les colonnes, ou ajoute/guide un champ.</div>
+      <div id="card-box" class="card">
+        <b>Carte produit</b>
+        <div class="hint" style="margin:4px 0 8px">Cliquez une carte produit de la liste : l’extension en déduit le motif, encadre toutes les cartes (vert) et les écartées (rouge, avec la raison : menu, carrousel, bannière, sans prix…). Une carte d’une autre section de la même liste s’ajoute. « Pas un produit » retire un faux positif.</div>
+        <div class="row"><button id="card-learn" class="btn sm">🎯 Montrer une carte produit</button><button id="card-not" class="btn sm" hidden>🎯 Pas un produit</button><button id="card-show" class="btn ghost sm" hidden>Voir les cartes</button><button id="card-forget" class="btn ghost sm" hidden>oublier</button></div>
+        <div id="card-info" class="hint" role="status" aria-live="polite" style="margin-top:4px"></div>
+      </div>
+      <div id="field-list"></div>
+      <div id="fixed-box" class="card">
+        <b>Valeurs fixes pour tous les produits</b>
+        <div class="hint" style="margin:4px 0 8px">Écrites une fois, données à chaque produit : utile quand la page ne donne pas la valeur, ou la place mal (fil d’Ariane). La marque vaut pour tout le site ; la collection, le type, les étiquettes, le statut et les attributs valent pour la page de liste ouverte, pour que vos scrapings hommes, femmes et enfants ne se mélangent pas. « Enregistrer » les garde dans l’application : le logiciel les donne aussi aux scrapings qu’il lance sur ces pages.</div>
+        <div id="fixed-list"></div>
+        <div class="row" style="margin-top:6px"><button id="fixed-save" class="btn primary sm" disabled>Enregistrer</button><button id="fixed-add" class="btn sm">＋ Autre valeur fixe</button></div>
+        <div id="fixed-state" class="hint" role="status" aria-live="polite" style="margin-top:4px"></div>
+      </div>
+      <div id="taught-box" class="card" style="display:none"></div>
+      <div id="fields-toast" class="toast"></div>
+    </section>
+
+    <section id="pane-learn" class="pane">
+      <div class="hint"><b>Apprendre le site sur une fiche produit.</b> Ouvre une fiche produit, puis désigne avec la souris le bloc de chaque champ (description, caractéristiques…). La règle est enregistrée pour tout le site, testée sur d’autres fiches, puis utilisée automatiquement quand tu scrapes une collection.</div>
+      <div id="learn-page" class="hint"></div>
+      <div class="row"><button id="learn-ai" class="btn primary">✨ Détecter par IA (cette fiche)</button></div>
+      <div class="row" style="margin-top:8px;"><input id="learn-newname" type="text" maxlength="40" placeholder="Nouveau champ à apprendre (ex. Garantie, Poids)" style="flex:1;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:6px 8px;font:inherit;min-width:0;" /><button id="learn-add" class="btn">＋ Champ</button></div>
+      <div id="learn-fields" style="margin-top:8px;"></div>
+      <div id="learn-pending"></div>
+      <div id="learn-toast" class="toast"></div>
+      <div id="learn-app" class="card bad" style="display:none"></div>
+      <label class="block">Ce que le site sait déjà</label>
+      <div id="learn-rules"><div class="hint">Rien d’appris pour l’instant.</div></div>
+      <div class="card"><b>Étape suivante — lancer le scraping</b><div class="hint" style="margin:4px 0 0">1. Ouvre la page de la collection (la liste des produits). 2. Clique sur <b>▶ Exécuter</b> en haut du panneau. 3. Dans « Résultats », clique sur <b>✓ Accepter</b> : l’application ouvre alors chaque fiche produit et y lit les champs appris ici. Ces champs n’apparaissent pas dans l’onglet « Champs » comme colonnes à désigner : ils y sont listés à part, sous « Lus sur chaque fiche produit ».</div></div>
+    </section>
+
+    <section id="pane-agent" class="pane">
+      <div class="hint"><b>Parlez à l’agent de la fiche produit ouverte.</b> Il dit ce qu’il lit pour chaque champ et ce qui manque. Corrigez-le en une phrase (« la marque est fausse, elle est dans le fil d’Ariane ») : il cherche, teste, vous montre le bloc dans la page et enregistre la règle pour tout le site.</div>
+      <div id="agent-log" style="display:flex;flex-direction:column;gap:8px;margin:8px 0;"></div>
+      <textarea id="agent-input" rows="3" maxlength="4000" placeholder="Ex. : Qu’est-ce que tu trouves sur cette fiche ?" style="width:100%;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px;font:inherit;resize:vertical;"></textarea>
+      <div class="row" style="margin-top:6px;"><button id="agent-send" class="btn primary">Envoyer</button><button id="agent-first" class="btn">Que trouves-tu sur cette fiche ?</button><button id="agent-new" class="btn ghost sm" style="margin-left:auto;">Nouvelle conversation</button></div>
+      <div id="agent-toast" class="toast"></div>
+    </section>
+
+    <section id="pane-pages" class="pane">
+      <label class="block" for="pagination">Pagination</label>
+      <select id="pagination">
+        <option value="auto">Automatique</option>
+        <option value="button">Bouton « page suivante »</option>
+        <option value="load_more">Bouton « charger plus »</option>
+        <option value="infinite">Défilement infini</option>
+        <option value="url">Numéro de page dans l’adresse (?page=2)</option>
+        <option value="none">Aucune (cette page)</option>
+      </select>
+      <div id="pagination-hint" class="hint" style="margin-top:4px"></div>
+      <div id="pick-next-row" class="row" style="margin-top:8px;"><button id="pick-next" class="btn sm">🎯 Montrer le bouton « page suivante »</button><button id="forget-next" class="btn ghost sm" hidden>oublier</button></div>
+      <div id="next-info" class="hint" role="status" aria-live="polite"></div>
+      <div id="pick-more-row" class="row" style="margin-top:8px;"><button id="pick-more" class="btn sm">🎯 Montrer le bouton « charger plus »</button><button id="forget-more" class="btn ghost sm" hidden>oublier</button></div>
+      <div id="more-info" class="hint" role="status" aria-live="polite"></div>
+      <div class="row" style="margin-top:8px;"><button id="pag-test" class="btn sm">Tester</button><span class="hint" style="margin:0">une étape sur cette page, produits comptés avant et après</span></div>
+      <div id="pag-test-result" class="hint" role="status" aria-live="polite"></div>
+      <div id="pag-saved" class="hint"></div>
+      <label class="block">Page hub (sous-collections)</label>
+      <div class="hint" style="margin:0 0 4px">Une page qui renvoie vers des séries ou des gammes au lieu de lister les produits : montrez le bloc de leurs liens, « Exécuter » ouvrira chaque sous-collection et y lira la liste.</div>
+      <div class="row"><button id="hub-pick" class="btn sm">🎯 Montrer le bloc des sous-collections</button><button id="hub-forget" class="btn ghost sm" hidden>oublier</button></div>
+      <div id="hub-info" class="hint" role="status" aria-live="polite"></div>
+      <div id="hub-name-row" class="switch" hidden><input id="hub-name" type="checkbox" /><span>Le nom de la sous-collection devient la « Collection » de ses produits</span></div>
+      <label class="block">Pages maximum</label>
+      <input id="max-pages" type="number" min="1" max="200" value="5" />
+      <div class="switch"><input id="subpages" type="checkbox" /><span>Sous-pages — ouvrir chaque fiche produit dans votre navigateur pour compléter les lignes (description, caractéristiques, variantes, images…)</span></div>
+      <label class="block" for="max-product-pages">Fiches produit à lire (0 = toutes)</label>
+      <input id="max-product-pages" type="number" min="0" max="5000" value="0" />
+      <div class="hint" style="margin-top:4px">Avec une limite, « Accepter » lit les premières fiches de la liste ; les autres restent vides et sont signalées comme non lues, dans le panneau et dans le fichier exporté.</div>
+    </section>
+
+    <section id="pane-results" class="pane">
+      <div id="result-empty" class="empty">Aucun résultat. Lance « Exécuter » pour prévisualiser les données de cette page.</div>
+      <div id="result-wrap" style="display:none; overflow:auto;">
+        <div id="read-state" class="readstate" role="status" aria-live="polite"></div>
+        <div class="hint" id="result-meta"></div>
+        <table id="result-table"></table>
+        <div class="hint" id="result-shown"></div>
+        <div class="row" style="margin-top:10px;">
+          <button id="accept" class="btn primary sm">✓ Accepter</button>
+          <button id="reject" class="btn sm">Rejeter</button>
+          <button id="export-csv" class="btn ghost sm">Exporter CSV</button>
+          <button id="read-missing" class="btn sm" hidden>Lire les fiches manquantes</button>
+        </div>
+        <div id="enrich-run" hidden style="margin-top:10px"><div class="hint" id="enrich-progress" role="status" aria-live="polite" style="margin:0 0 6px"></div><button id="enrich-stop" class="btn sm">Arrêter et enregistrer ce qui est lu</button></div>
+        <div id="enrich-pause" class="card warn" role="alertdialog" aria-labelledby="enrich-pause-title" hidden>
+          <b id="enrich-pause-title">Vérification humaine demandée</b>
+          <div class="hint" id="enrich-pause-text" style="margin:4px 0 8px"></div>
+          <div class="row">
+            <button id="enrich-open" class="btn sm">Ouvrir la fiche</button>
+            <button id="enrich-resume" class="btn primary sm">Reprendre</button>
+            <button id="enrich-skip" class="btn sm">Ignorer cette fiche</button>
+            <button id="enrich-end" class="btn ghost sm">Terminer maintenant</button>
+          </div>
+        </div>
+        <div id="export-warn" class="card warn" role="alertdialog" aria-labelledby="export-warn-title" hidden>
+          <b id="export-warn-title"></b>
+          <div class="hint" id="export-warn-text" style="margin:4px 0 8px"></div>
+          <div class="row">
+            <button id="export-accept" class="btn primary sm">Accepter puis exporter</button>
+            <button id="export-anyway" class="btn sm">Exporter quand même</button>
+            <button id="export-cancel" class="btn ghost sm">Annuler</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pane-settings" class="pane">
+      <label class="block">Assistance IA</label>
+      <div class="row"><span id="aidot" class="dot"></span><span id="aistate" class="hint" style="margin:0;">état de la clé…</span></div>
+      <div class="hint">La clé Claude se configure dans l'application Eloshon (réglages administrateur) — jamais ici.</div>
+      <label class="block">Langue des données</label>
+      <select id="lang"><option value="fr">Français</option><option value="en">English</option><option value="nl">Nederlands</option></select>
+      <label class="block">Produits maximum</label>
+      <input id="max-products" type="number" min="1" max="5000" value="500" />
+      <label class="block">Recettes des sites (recipes.json)</label>
+      <div class="hint" style="margin-top:0">Tout ce que l’application a appris des sites, dans un fichier : à garder en sauvegarde ou à importer ailleurs. L’import montre d’abord ce qui changerait.</div>
+      <div class="row"><button id="recipes-export" class="btn sm">Exporter</button><label class="btn sm" style="cursor:pointer;">Importer…<input id="recipes-file" type="file" accept=".json,application/json" style="display:none" /></label></div>
+      <div id="recipes-preview"></div>
+    </section>
+  </main>
+  <footer>
+    <button id="run" class="btn primary block">▶ Exécuter maintenant</button>
+  </footer>
+  <script type="module" src="./panel.mjs"></script>
+  <script type="module" src="./learn.mjs"></script>
+  <script type="module" src="./agent.mjs"></script>
+</body>
+</html>

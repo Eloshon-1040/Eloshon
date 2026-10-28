@@ -1,0 +1,321 @@
+[
+  {
+    "handle": "pepersalami-halal-rzczr",
+    "title": "Pepersalami Halal",
+    "bodyHtml": "Marhaba Pepersalami Halal",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 3.49,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://static.example/std/salami.jpg",
+        "provenance": {
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": 3.49,
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": null,
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": null,
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "eloshon",
+            "sourceField": "raw.sku",
+            "sourceValue": null,
+            "transform": "text",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "images + image_url",
+            "transform": "first_present",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://static.example/std/salami.jpg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "pepersalami-halal-rzczr",
+      "sourceId": "19164"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "source_url": "https://www.colruyt.example/nl/producten/19164",
+        "store_slug": "COL",
+        "extractor": "internal_api",
+        "confidence": 0.8
+      }
+    },
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Pepersalami Halal",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Marhaba Pepersalami Halal",
+        "transform": "html",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "name_fr + name_en + source_product_id + source_url + name_fr",
+        "sourceValue": "Pepersalami Halal",
+        "transform": "slug_hash",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "name_fr + name_en + source_product_id + source_url + name_fr",
+        "sourceValue": "Pepersalami Halal",
+        "transform": "slug_hash",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "19164",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": null,
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": null,
+        "transform": "text",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "images + image_url",
+        "transform": "first_present",
+        "method": "exact"
+      },
+      "vendor": {
+        "platform": "eloshon",
+        "sourceField": "raw.brand",
+        "sourceValue": null,
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "jonge-gouda-48-sdhp3",
+    "title": "Jonge Gouda 48+",
+    "bodyHtml": "",
+    "vendor": "Boni",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Vers > Kaas"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 5.99,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "5400101025773",
+        "grams": 500,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "",
+        "identifiers": {
+          "gtin": "5400101025773"
+        },
+        "provenance": {
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": 5.99,
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "5400101025773",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": 0.5,
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "eloshon",
+            "sourceField": "raw.sku",
+            "sourceValue": null,
+            "transform": "text",
+            "method": "exact"
+          },
+          "identifiers.gtin": {
+            "platform": "eloshon",
+            "sourceField": "raw.gtin",
+            "sourceValue": "5400101025773",
+            "transform": "text_matching",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "jonge-gouda-48-sdhp3",
+      "sourceId": "20577"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "source_url": "https://www.colruyt.example/nl/producten/20577",
+        "breadcrumb": [
+          "Vers",
+          "Kaas"
+        ],
+        "store_slug": "COL",
+        "currency": "EUR",
+        "weight_text": "500 g",
+        "gtin": "5400101025773"
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "raw.currency",
+        "sourceValue": "EUR",
+        "reason": "no-canon-field",
+        "note": "Currency of price: the canon has no currency field (promotable)."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "raw.weight_text",
+        "sourceValue": "500 g",
+        "reason": "no-canon-field",
+        "note": "Raw contenance text (mass parsed into weight_kg)."
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Jonge Gouda 48+",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": null,
+        "transform": "html",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "name_fr + name_en + source_product_id + source_url + name_fr",
+        "sourceValue": "Jonge Gouda 48+",
+        "transform": "slug_hash",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "name_fr + name_en + source_product_id + source_url + name_fr",
+        "sourceValue": "Jonge Gouda 48+",
+        "transform": "slug_hash",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "20577",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Vers > Kaas",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": null,
+        "transform": "text",
+        "method": "exact"
+      },
+      "vendor": {
+        "platform": "eloshon",
+        "sourceField": "raw.brand",
+        "sourceValue": "Boni",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  }
+]

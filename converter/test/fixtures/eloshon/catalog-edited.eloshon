@@ -1,0 +1,1178 @@
+{
+  "eloshon": {
+    "kind": "catalog",
+    "version": 1,
+    "generator": "eloshon-fixture-generator",
+    "createdAt": "2026-10-04T09:00:00.000Z"
+  },
+  "source": {
+    "type": "scrape",
+    "platform": "generic",
+    "origin": "https://shop.example"
+  },
+  "catalog": {
+    "products": [
+      {
+        "id": "p1",
+        "handle": "housse-de-coussin-en-lin-bleu-116fum",
+        "title": "Housse de coussin en lin — bleu",
+        "bodyHtml": "Housse 45 x 45 cm en lin lavé.",
+        "vendor": "Lin & Co",
+        "productType": "",
+        "tags": [],
+        "status": "active",
+        "categories": [
+          "Maison > Textile"
+        ],
+        "published": true,
+        "options": [],
+        "variants": [
+          {
+            "optionValues": [],
+            "sku": "HC-100-BL",
+            "price": 24.9,
+            "compareAtPrice": 29.9,
+            "cost": null,
+            "barcode": "3701234567906",
+            "grams": 250,
+            "lengthCm": null,
+            "widthCm": null,
+            "heightCm": null,
+            "requiresShipping": true,
+            "taxable": true,
+            "inventoryQty": null,
+            "imageSrc": "https://shop.example/img/housse-bleu-1.jpg",
+            "identifiers": {
+              "gtin": "3701234567906"
+            },
+            "provenance": {
+              "price": {
+                "platform": "eloshon",
+                "sourceField": "price",
+                "sourceValue": 24.9,
+                "transform": "money",
+                "method": "exact"
+              },
+              "compareAtPrice": {
+                "platform": "eloshon",
+                "sourceField": "raw.list_price + price",
+                "sourceValue": 29.9,
+                "transform": "money_if_above",
+                "method": "exact"
+              },
+              "barcode": {
+                "platform": "eloshon",
+                "sourceField": "barcode",
+                "sourceValue": "3701234567906",
+                "transform": "text",
+                "method": "exact"
+              },
+              "grams": {
+                "platform": "eloshon",
+                "sourceField": "weight_kg",
+                "sourceValue": 0.25,
+                "transform": "weight_to_grams",
+                "method": "exact"
+              },
+              "sku": {
+                "platform": "eloshon",
+                "sourceField": "raw.sku",
+                "sourceValue": "HC-100-BL",
+                "transform": "text",
+                "method": "exact"
+              },
+              "identifiers.gtin": {
+                "platform": "eloshon",
+                "sourceField": "raw.gtin",
+                "sourceValue": "3701234567906",
+                "transform": "text_matching",
+                "method": "exact"
+              },
+              "imageSrc": {
+                "platform": "eloshon",
+                "sourceField": "images + image_url",
+                "transform": "first_present",
+                "method": "exact"
+              }
+            }
+          }
+        ],
+        "images": [
+          {
+            "src": "https://shop.example/img/housse-bleu-1.jpg",
+            "position": 1,
+            "alt": ""
+          },
+          {
+            "src": "https://shop.example/img/housse-bleu-2.jpg",
+            "position": 2,
+            "alt": ""
+          }
+        ],
+        "metafields": [],
+        "seoTitle": "",
+        "seoDescription": "",
+        "translations": {
+          "en": {
+            "title": "Linen cushion cover — blue",
+            "bodyHtml": "45 x 45 cm washed linen cover."
+          }
+        },
+        "identity": {
+          "slug": "housse-de-coussin-en-lin-bleu-116fum",
+          "sourceId": "HC-100-BL"
+        },
+        "attributesRich": [
+          {
+            "name": "Couleur",
+            "values": [
+              "Bleu"
+            ],
+            "forVariation": false,
+            "visible": true
+          }
+        ],
+        "merchandising": {
+          "related": [
+            "HC-100-VE"
+          ]
+        },
+        "sourceExtension": {
+          "eloshon": {
+            "source_url": "https://shop.example/p/housse-lin-bleu",
+            "breadcrumb": [
+              "Maison",
+              "Textile"
+            ],
+            "store_slug": "demo",
+            "currency": "EUR",
+            "list_price": 29.9,
+            "availability": "InStock",
+            "weight_text": "250 g",
+            "gtin": "3701234567906",
+            "sku": "HC-100-BL",
+            "extractor": "embedded-state",
+            "confidence": 0.85,
+            "siblings": [
+              {
+                "code": "HC-100-BL",
+                "type": "couleur",
+                "name": "Bleu",
+                "image": "https://shop.example/img/housse-bleu-1.jpg",
+                "url": "https://shop.example/p/housse-lin-bleu"
+              },
+              {
+                "code": "HC-100-VE",
+                "type": "couleur",
+                "name": "Vert",
+                "image": "https://shop.example/img/housse-vert-1.jpg",
+                "url": "https://shop.example/p/housse-lin-vert"
+              }
+            ]
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "eloshon",
+            "sourceField": "raw.currency",
+            "sourceValue": "EUR",
+            "reason": "no-canon-field",
+            "note": "Currency of price: the canon has no currency field (promotable)."
+          },
+          {
+            "platform": "eloshon",
+            "sourceField": "raw.availability",
+            "sourceValue": "InStock",
+            "reason": "no-canon-field",
+            "note": "Verbatim stock statement; an out-of-stock statement also sets inventoryQty 0."
+          },
+          {
+            "platform": "eloshon",
+            "sourceField": "raw.weight_text",
+            "sourceValue": "250 g",
+            "reason": "no-canon-field",
+            "note": "Raw contenance text (mass parsed into weight_kg)."
+          }
+        ],
+        "provenance": {
+          "title": {
+            "platform": "eloshon",
+            "sourceField": "name_fr",
+            "sourceValue": "Housse de coussin en lin — bleu",
+            "transform": "text",
+            "method": "exact"
+          },
+          "translations.en.title": {
+            "platform": "eloshon",
+            "sourceField": "name_en",
+            "sourceValue": "Linen cushion cover — blue",
+            "transform": "differs_from",
+            "method": "exact"
+          },
+          "bodyHtml": {
+            "platform": "eloshon",
+            "sourceField": "description_fr",
+            "sourceValue": "Housse 45 x 45 cm en lin lavé.",
+            "transform": "html",
+            "method": "exact"
+          },
+          "translations.en.bodyHtml": {
+            "platform": "eloshon",
+            "sourceField": "description_en",
+            "sourceValue": "45 x 45 cm washed linen cover.",
+            "transform": "differs_from",
+            "method": "exact"
+          },
+          "handle": {
+            "platform": "eloshon",
+            "sourceField": "name_fr + name_en + source_product_id + source_url + name_fr",
+            "sourceValue": "Housse de coussin en lin — bleu",
+            "transform": "slug_hash",
+            "method": "exact"
+          },
+          "identity.slug": {
+            "platform": "eloshon",
+            "sourceField": "name_fr + name_en + source_product_id + source_url + name_fr",
+            "sourceValue": "Housse de coussin en lin — bleu",
+            "transform": "slug_hash",
+            "method": "exact"
+          },
+          "identity.sourceId": {
+            "platform": "eloshon",
+            "sourceField": "source_product_id",
+            "sourceValue": "HC-100-BL",
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "categories": {
+            "platform": "eloshon",
+            "sourceField": "source_category",
+            "sourceValue": "Maison > Textile",
+            "transform": "category_path_split",
+            "method": "exact"
+          },
+          "productType": {
+            "platform": "eloshon",
+            "sourceField": "product_type",
+            "sourceValue": null,
+            "transform": "text",
+            "method": "exact"
+          },
+          "attributesRich[0]": {
+            "platform": "eloshon",
+            "sourceField": "color",
+            "transform": "attribute_single",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "eloshon",
+            "sourceField": "images + image_url",
+            "transform": "first_present",
+            "method": "exact"
+          },
+          "vendor": {
+            "platform": "eloshon",
+            "sourceField": "raw.brand",
+            "sourceValue": "Lin & Co",
+            "transform": "text",
+            "method": "exact"
+          },
+          "status": {
+            "platform": "eloshon",
+            "sourceField": "__eligibility.status",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "published": {
+            "platform": "eloshon",
+            "sourceField": "__eligibility.status",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "merchandising.related": {
+            "platform": "eloshon",
+            "sourceField": "variants",
+            "transform": "siblings",
+            "method": "structural",
+            "note": "children whose code is a unit id are sibling products"
+          }
+        },
+        "sourceUrl": "https://shop.example/p/housse-lin-bleu",
+        "sourceProductId": "HC-100-BL",
+        "strategy": "embedded-state",
+        "confidence": 0.85
+      },
+      {
+        "id": "p2",
+        "handle": "housse-de-coussin-en-lin-vert-116fv3",
+        "title": "Housse de coussin en lin — vert",
+        "bodyHtml": "Housse 45 x 45 cm en lin lavé.",
+        "vendor": "Lin & Co",
+        "productType": "",
+        "tags": [],
+        "status": "active",
+        "categories": [
+          "Maison > Textile"
+        ],
+        "published": true,
+        "options": [],
+        "variants": [
+          {
+            "optionValues": [],
+            "sku": "",
+            "price": 24.9,
+            "compareAtPrice": null,
+            "cost": null,
+            "barcode": "",
+            "grams": 250,
+            "lengthCm": null,
+            "widthCm": null,
+            "heightCm": null,
+            "requiresShipping": true,
+            "taxable": true,
+            "inventoryQty": null,
+            "imageSrc": "https://shop.example/img/housse-vert-1.jpg",
+            "provenance": {
+              "price": {
+                "platform": "eloshon",
+                "sourceField": "price",
+                "sourceValue": 24.9,
+                "transform": "money",
+                "method": "exact"
+              },
+              "barcode": {
+                "platform": "eloshon",
+                "sourceField": "barcode",
+                "sourceValue": null,
+                "transform": "text",
+                "method": "exact"
+              },
+              "grams": {
+                "platform": "eloshon",
+                "sourceField": "weight_kg",
+                "sourceValue": 0.25,
+                "transform": "weight_to_grams",
+                "method": "exact"
+              },
+              "sku": {
+                "platform": "eloshon",
+                "sourceField": "raw.sku",
+                "sourceValue": null,
+                "transform": "text",
+                "method": "exact"
+              },
+              "imageSrc": {
+                "platform": "eloshon",
+                "sourceField": "images + image_url",
+                "transform": "first_present",
+                "method": "exact"
+              }
+            }
+          }
+        ],
+        "images": [
+          {
+            "src": "https://shop.example/img/housse-vert-1.jpg",
+            "position": 1,
+            "alt": ""
+          }
+        ],
+        "metafields": [],
+        "seoTitle": "",
+        "seoDescription": "",
+        "identity": {
+          "slug": "housse-de-coussin-en-lin-vert-116fv3",
+          "sourceId": "HC-100-VE"
+        },
+        "attributesRich": [
+          {
+            "name": "Couleur",
+            "values": [
+              "Vert"
+            ],
+            "forVariation": false,
+            "visible": true
+          }
+        ],
+        "merchandising": {
+          "related": [
+            "HC-100-BL"
+          ]
+        },
+        "sourceExtension": {
+          "eloshon": {
+            "source_url": "https://shop.example/p/housse-lin-vert",
+            "breadcrumb": [
+              "Maison",
+              "Textile"
+            ],
+            "store_slug": "demo",
+            "currency": "EUR",
+            "availability": "InStock",
+            "extractor": "embedded-state",
+            "confidence": 0.85,
+            "siblings": [
+              {
+                "code": "HC-100-BL",
+                "type": "couleur",
+                "name": "Bleu",
+                "image": "https://shop.example/img/housse-bleu-1.jpg"
+              },
+              {
+                "code": "HC-100-VE",
+                "type": "couleur",
+                "name": "Vert",
+                "image": "https://shop.example/img/housse-vert-1.jpg"
+              }
+            ]
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "eloshon",
+            "sourceField": "raw.currency",
+            "sourceValue": "EUR",
+            "reason": "no-canon-field",
+            "note": "Currency of price: the canon has no currency field (promotable)."
+          },
+          {
+            "platform": "eloshon",
+            "sourceField": "raw.availability",
+            "sourceValue": "InStock",
+            "reason": "no-canon-field",
+            "note": "Verbatim stock statement; an out-of-stock statement also sets inventoryQty 0."
+          }
+        ],
+        "provenance": {
+          "title": {
+            "platform": "eloshon",
+            "sourceField": "name_fr",
+            "sourceValue": "Housse de coussin en lin — vert",
+            "transform": "text",
+            "method": "exact"
+          },
+          "bodyHtml": {
+            "platform": "eloshon",
+            "sourceField": "description_fr",
+            "sourceValue": "Housse 45 x 45 cm en lin lavé.",
+            "transform": "html",
+            "method": "exact"
+          },
+          "handle": {
+            "platform": "eloshon",
+            "sourceField": "name_fr + name_en + source_product_id + source_url + name_fr",
+            "sourceValue": "Housse de coussin en lin — vert",
+            "transform": "slug_hash",
+            "method": "exact"
+          },
+          "identity.slug": {
+            "platform": "eloshon",
+            "sourceField": "name_fr + name_en + source_product_id + source_url + name_fr",
+            "sourceValue": "Housse de coussin en lin — vert",
+            "transform": "slug_hash",
+            "method": "exact"
+          },
+          "identity.sourceId": {
+            "platform": "eloshon",
+            "sourceField": "source_product_id",
+            "sourceValue": "HC-100-VE",
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "categories": {
+            "platform": "eloshon",
+            "sourceField": "source_category",
+            "sourceValue": "Maison > Textile",
+            "transform": "category_path_split",
+            "method": "exact"
+          },
+          "productType": {
+            "platform": "eloshon",
+            "sourceField": "product_type",
+            "sourceValue": null,
+            "transform": "text",
+            "method": "exact"
+          },
+          "attributesRich[0]": {
+            "platform": "eloshon",
+            "sourceField": "color",
+            "transform": "attribute_single",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "eloshon",
+            "sourceField": "images + image_url",
+            "transform": "first_present",
+            "method": "exact"
+          },
+          "vendor": {
+            "platform": "eloshon",
+            "sourceField": "raw.brand",
+            "sourceValue": "Lin & Co",
+            "transform": "text",
+            "method": "exact"
+          },
+          "status": {
+            "platform": "eloshon",
+            "sourceField": "__eligibility.status",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "published": {
+            "platform": "eloshon",
+            "sourceField": "__eligibility.status",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "merchandising.related": {
+            "platform": "eloshon",
+            "sourceField": "variants",
+            "transform": "siblings",
+            "method": "structural",
+            "note": "children whose code is a unit id are sibling products"
+          }
+        },
+        "sourceUrl": "https://shop.example/p/housse-lin-vert",
+        "sourceProductId": "HC-100-VE",
+        "strategy": "embedded-state",
+        "confidence": 0.85
+      },
+      {
+        "id": "p3",
+        "handle": "pot-en-gres-emaille-5eefx6",
+        "title": "Pot en grès émaillé",
+        "bodyHtml": "Pot émaillé, résistant au gel.",
+        "vendor": "Terre Cuite",
+        "productType": "",
+        "tags": [],
+        "status": "active",
+        "categories": [
+          "Jardin > Pots"
+        ],
+        "published": true,
+        "options": [
+          {
+            "name": "taille",
+            "values": [
+              "S",
+              "L"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "optionValues": [
+              "S"
+            ],
+            "sku": "POT-200-S",
+            "price": 12.5,
+            "compareAtPrice": null,
+            "cost": null,
+            "barcode": "",
+            "grams": 1200,
+            "lengthCm": null,
+            "widthCm": null,
+            "heightCm": null,
+            "requiresShipping": true,
+            "taxable": true,
+            "inventoryQty": null,
+            "imageSrc": "",
+            "images": [],
+            "sourceExtension": {
+              "eloshon": {
+                "availability": "InStock"
+              }
+            },
+            "unmapped": [
+              {
+                "platform": "eloshon",
+                "sourceField": "availability",
+                "sourceValue": "InStock",
+                "reason": "no-canon-field"
+              }
+            ],
+            "provenance": {
+              "sku": {
+                "platform": "eloshon",
+                "sourceField": "code",
+                "sourceValue": "POT-200-S",
+                "transform": "text",
+                "method": "exact"
+              },
+              "imageSrc": {
+                "platform": "eloshon",
+                "sourceField": "image",
+                "transform": "text",
+                "method": "exact"
+              },
+              "images": {
+                "platform": "eloshon",
+                "sourceField": "image",
+                "transform": "images_from_urls",
+                "method": "exact"
+              },
+              "optionValues": {
+                "platform": "eloshon",
+                "sourceField": "type",
+                "sourceValue": "taille",
+                "transform": "option_values_from_typed",
+                "method": "exact"
+              },
+              "price": {
+                "platform": "eloshon",
+                "sourceField": "price",
+                "sourceValue": 12.5,
+                "transform": "inherit_from_parent",
+                "method": "exact"
+              },
+              "grams": {
+                "platform": "eloshon",
+                "sourceField": "weight_kg",
+                "transform": "inherit_from_parent",
+                "method": "exact"
+              }
+            }
+          },
+          {
+            "optionValues": [
+              "L"
+            ],
+            "sku": "POT-200-L",
+            "price": 18,
+            "compareAtPrice": null,
+            "cost": null,
+            "barcode": "",
+            "grams": 1200,
+            "lengthCm": null,
+            "widthCm": null,
+            "heightCm": null,
+            "requiresShipping": true,
+            "taxable": true,
+            "inventoryQty": 0,
+            "imageSrc": "",
+            "images": [],
+            "sourceExtension": {
+              "eloshon": {
+                "availability": "OutOfStock"
+              }
+            },
+            "unmapped": [
+              {
+                "platform": "eloshon",
+                "sourceField": "availability",
+                "sourceValue": "OutOfStock",
+                "reason": "no-canon-field"
+              }
+            ],
+            "provenance": {
+              "sku": {
+                "platform": "eloshon",
+                "sourceField": "code",
+                "sourceValue": "POT-200-L",
+                "transform": "text",
+                "method": "exact"
+              },
+              "imageSrc": {
+                "platform": "eloshon",
+                "sourceField": "image",
+                "transform": "text",
+                "method": "exact"
+              },
+              "images": {
+                "platform": "eloshon",
+                "sourceField": "image",
+                "transform": "images_from_urls",
+                "method": "exact"
+              },
+              "optionValues": {
+                "platform": "eloshon",
+                "sourceField": "type",
+                "sourceValue": "taille",
+                "transform": "option_values_from_typed",
+                "method": "exact"
+              },
+              "price": {
+                "platform": "eloshon",
+                "sourceField": "price",
+                "sourceValue": 18,
+                "transform": "inherit_from_parent",
+                "method": "exact"
+              },
+              "grams": {
+                "platform": "eloshon",
+                "sourceField": "weight_kg",
+                "transform": "inherit_from_parent",
+                "method": "exact"
+              },
+              "inventoryQty": {
+                "platform": "eloshon",
+                "sourceField": "availability",
+                "sourceValue": "OutOfStock",
+                "transform": "regex_map",
+                "method": "exact"
+              }
+            }
+          }
+        ],
+        "images": [
+          {
+            "src": "https://shop.example/img/pot-1.jpg",
+            "position": 1,
+            "alt": ""
+          },
+          {
+            "src": "https://shop.example/img/pot-2.jpg",
+            "position": 2,
+            "alt": ""
+          },
+          {
+            "src": "https://cdn.example/pot-3.jpg",
+            "position": 3,
+            "alt": ""
+          }
+        ],
+        "metafields": [],
+        "seoTitle": "",
+        "seoDescription": "",
+        "identity": {
+          "slug": "pot-en-gres-emaille-5eefx6",
+          "sourceId": "POT-200"
+        },
+        "sourceExtension": {
+          "eloshon": {
+            "source_url": "https://shop.example/p/pot-gres",
+            "breadcrumb": [
+              "Jardin",
+              "Pots"
+            ],
+            "store_slug": "demo",
+            "currency": "EUR",
+            "availability": "InStock",
+            "weight_text": "1,2 kg",
+            "volume_l": 4.5,
+            "sku": "POT-200",
+            "mpn": "TC-POT-200",
+            "extractor": "generic-jsonld",
+            "confidence": 0.9
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "eloshon",
+            "sourceField": "raw.currency",
+            "sourceValue": "EUR",
+            "reason": "no-canon-field",
+            "note": "Currency of price: the canon has no currency field (promotable)."
+          },
+          {
+            "platform": "eloshon",
+            "sourceField": "raw.availability",
+            "sourceValue": "InStock",
+            "reason": "no-canon-field",
+            "note": "Verbatim stock statement; an out-of-stock statement also sets inventoryQty 0."
+          },
+          {
+            "platform": "eloshon",
+            "sourceField": "raw.weight_text",
+            "sourceValue": "1,2 kg",
+            "reason": "no-canon-field",
+            "note": "Raw contenance text (mass parsed into weight_kg)."
+          },
+          {
+            "platform": "eloshon",
+            "sourceField": "raw.volume_l",
+            "sourceValue": 4.5,
+            "reason": "no-canon-field",
+            "note": "Non-mass contenance: no canon field."
+          }
+        ],
+        "provenance": {
+          "title": {
+            "platform": "eloshon",
+            "sourceField": "name_fr",
+            "sourceValue": "Pot en grès émaillé",
+            "transform": "text",
+            "method": "exact"
+          },
+          "bodyHtml": {
+            "platform": "eloshon",
+            "sourceField": "description_fr",
+            "sourceValue": "Pot émaillé, résistant au gel.",
+            "transform": "html",
+            "method": "exact"
+          },
+          "handle": {
+            "platform": "eloshon",
+            "sourceField": "name_fr + name_en + source_product_id + source_url + name_fr",
+            "sourceValue": "Pot en grès émaillé",
+            "transform": "slug_hash",
+            "method": "exact"
+          },
+          "identity.slug": {
+            "platform": "eloshon",
+            "sourceField": "name_fr + name_en + source_product_id + source_url + name_fr",
+            "sourceValue": "Pot en grès émaillé",
+            "transform": "slug_hash",
+            "method": "exact"
+          },
+          "identity.sourceId": {
+            "platform": "eloshon",
+            "sourceField": "source_product_id",
+            "sourceValue": "POT-200",
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "categories": {
+            "platform": "eloshon",
+            "sourceField": "source_category",
+            "sourceValue": "Jardin > Pots",
+            "transform": "category_path_split",
+            "method": "exact"
+          },
+          "productType": {
+            "platform": "eloshon",
+            "sourceField": "product_type",
+            "sourceValue": null,
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "eloshon",
+            "sourceField": "images + image_url",
+            "transform": "first_present",
+            "method": "exact"
+          },
+          "vendor": {
+            "platform": "eloshon",
+            "sourceField": "raw.brand",
+            "sourceValue": "Terre Cuite",
+            "transform": "text",
+            "method": "exact"
+          },
+          "status": {
+            "platform": "eloshon",
+            "sourceField": "__eligibility.status",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "published": {
+            "platform": "eloshon",
+            "sourceField": "__eligibility.status",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "options": {
+            "platform": "eloshon",
+            "sourceField": "variants",
+            "transform": "options_from_variants",
+            "method": "structural"
+          }
+        },
+        "sourceUrl": "https://shop.example/p/pot-gres",
+        "sourceProductId": "POT-200",
+        "strategy": "generic-jsonld",
+        "confidence": 0.9
+      },
+      {
+        "id": "p4",
+        "handle": "bougie-parfumee-cedre-wcu9l6",
+        "title": "Bougie parfumée cèdre",
+        "bodyHtml": "Bougie 180 g, cire végétale.",
+        "vendor": "",
+        "productType": "",
+        "tags": [],
+        "status": "draft",
+        "categories": [
+          "Maison > Bougies"
+        ],
+        "published": false,
+        "options": [],
+        "variants": [
+          {
+            "optionValues": [],
+            "sku": "BG-310",
+            "price": 12.9,
+            "compareAtPrice": null,
+            "cost": null,
+            "barcode": "",
+            "grams": 180,
+            "lengthCm": null,
+            "widthCm": null,
+            "heightCm": null,
+            "requiresShipping": true,
+            "taxable": true,
+            "inventoryQty": 0,
+            "imageSrc": "https://shop.example/img/bougie.jpg",
+            "provenance": {
+              "price": {
+                "platform": "eloshon",
+                "sourceField": "price",
+                "sourceValue": 12.9,
+                "transform": "money",
+                "method": "exact"
+              },
+              "barcode": {
+                "platform": "eloshon",
+                "sourceField": "barcode",
+                "sourceValue": null,
+                "transform": "text",
+                "method": "exact"
+              },
+              "grams": {
+                "platform": "eloshon",
+                "sourceField": "weight_kg",
+                "sourceValue": 0.18,
+                "transform": "weight_to_grams",
+                "method": "exact"
+              },
+              "sku": {
+                "platform": "eloshon",
+                "sourceField": "raw.sku",
+                "sourceValue": "BG-310",
+                "transform": "text",
+                "method": "exact"
+              },
+              "imageSrc": {
+                "platform": "eloshon",
+                "sourceField": "images + image_url",
+                "transform": "first_present",
+                "method": "exact"
+              },
+              "inventoryQty": {
+                "platform": "eloshon",
+                "sourceField": "raw.availability",
+                "sourceValue": "https://schema.org/OutOfStock",
+                "transform": "regex_map",
+                "method": "exact"
+              }
+            }
+          }
+        ],
+        "images": [
+          {
+            "src": "https://shop.example/img/bougie.jpg",
+            "position": 1,
+            "alt": ""
+          }
+        ],
+        "metafields": [],
+        "seoTitle": "",
+        "seoDescription": "",
+        "identity": {
+          "slug": "bougie-parfumee-cedre-wcu9l6",
+          "sourceId": "BG-310"
+        },
+        "sourceExtension": {
+          "eloshon": {
+            "source_url": "https://shop.example/p/bougie-cedre",
+            "breadcrumb": [
+              "Maison",
+              "Bougies"
+            ],
+            "store_slug": "demo",
+            "currency": "EUR",
+            "list_price": 9.9,
+            "availability": "https://schema.org/OutOfStock",
+            "weight_text": "180 g",
+            "pack_count": 2,
+            "gtin": "12345",
+            "sku": "BG-310",
+            "extractor": "generic-jsonld",
+            "confidence": 0.7,
+            "eligibility": {
+              "status": "to_verify",
+              "code": "manual_review",
+              "reason": "Pack quantity needs review"
+            },
+            "_raw": {
+              "seller": "Marketplace Partner 42",
+              "raw.promo_label": "Lot de 2"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "eloshon",
+            "sourceField": "raw.currency",
+            "sourceValue": "EUR",
+            "reason": "no-canon-field",
+            "note": "Currency of price: the canon has no currency field (promotable)."
+          },
+          {
+            "platform": "eloshon",
+            "sourceField": "raw.availability",
+            "sourceValue": "https://schema.org/OutOfStock",
+            "reason": "no-canon-field",
+            "note": "Verbatim stock statement; an out-of-stock statement also sets inventoryQty 0."
+          },
+          {
+            "platform": "eloshon",
+            "sourceField": "raw.weight_text",
+            "sourceValue": "180 g",
+            "reason": "no-canon-field",
+            "note": "Raw contenance text (mass parsed into weight_kg)."
+          },
+          {
+            "platform": "eloshon",
+            "sourceField": "raw.pack_count",
+            "sourceValue": 2,
+            "reason": "no-canon-field",
+            "note": "Non-mass contenance: no canon field."
+          },
+          {
+            "platform": "eloshon",
+            "sourceField": "seller",
+            "sourceValue": "Marketplace Partner 42",
+            "reason": "unknown"
+          },
+          {
+            "platform": "eloshon",
+            "sourceField": "raw.promo_label",
+            "sourceValue": "Lot de 2",
+            "reason": "unknown"
+          }
+        ],
+        "provenance": {
+          "title": {
+            "platform": "eloshon",
+            "sourceField": "name_fr",
+            "sourceValue": "Bougie parfumée cèdre",
+            "transform": "text",
+            "method": "exact"
+          },
+          "bodyHtml": {
+            "platform": "eloshon",
+            "sourceField": "description_fr",
+            "sourceValue": "Bougie 180 g, cire végétale.",
+            "transform": "html",
+            "method": "exact"
+          },
+          "handle": {
+            "platform": "eloshon",
+            "sourceField": "name_fr + name_en + source_product_id + source_url + name_fr",
+            "sourceValue": "Bougie parfumée cèdre",
+            "transform": "slug_hash",
+            "method": "exact"
+          },
+          "identity.slug": {
+            "platform": "eloshon",
+            "sourceField": "name_fr + name_en + source_product_id + source_url + name_fr",
+            "sourceValue": "Bougie parfumée cèdre",
+            "transform": "slug_hash",
+            "method": "exact"
+          },
+          "identity.sourceId": {
+            "platform": "eloshon",
+            "sourceField": "source_product_id",
+            "sourceValue": "BG-310",
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "categories": {
+            "platform": "eloshon",
+            "sourceField": "source_category",
+            "sourceValue": "Maison > Bougies",
+            "transform": "category_path_split",
+            "method": "exact"
+          },
+          "productType": {
+            "platform": "eloshon",
+            "sourceField": "product_type",
+            "sourceValue": null,
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "eloshon",
+            "sourceField": "images + image_url",
+            "transform": "first_present",
+            "method": "exact"
+          },
+          "vendor": {
+            "platform": "eloshon",
+            "sourceField": "raw.brand",
+            "sourceValue": null,
+            "transform": "text",
+            "method": "exact"
+          },
+          "status": {
+            "platform": "eloshon",
+            "sourceField": "__eligibility.status",
+            "sourceValue": "to_verify",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "published": {
+            "platform": "eloshon",
+            "sourceField": "__eligibility.status",
+            "sourceValue": "to_verify",
+            "transform": "enum_map",
+            "method": "exact"
+          }
+        },
+        "sourceUrl": "https://shop.example/p/bougie-cedre",
+        "sourceProductId": "BG-310",
+        "strategy": "generic-jsonld",
+        "confidence": 0.7
+      }
+    ],
+    "customers": [
+      {
+        "firstName": "Camille",
+        "lastName": "Durand",
+        "email": "camille.durand@example.com",
+        "phone": "",
+        "note": "",
+        "tags": [],
+        "taxExempt": false,
+        "address": {
+          "company": "",
+          "address1": "12 rue des Fleurs",
+          "address2": "",
+          "city": "Lyon",
+          "province": "",
+          "provinceCode": "",
+          "country": "FR",
+          "zip": "69001",
+          "phone": ""
+        },
+        "shipping": null,
+        "acceptsEmail": null,
+        "acceptsSms": null
+      }
+    ]
+  },
+  "edits": {
+    "revision": 3,
+    "commands": [
+      {
+        "id": "cmd-1",
+        "at": "2026-10-04T09:00:00.000Z",
+        "kind": "set-field",
+        "productId": "p1",
+        "field": "title",
+        "value": "Housse de coussin en lin lavé — bleu",
+        "label": "Titre retravaillé"
+      },
+      {
+        "id": "cmd-2",
+        "at": "2026-10-04T09:00:00.000Z",
+        "kind": "bulk-set-field",
+        "productIds": [
+          "p1",
+          "p2"
+        ],
+        "field": "vendor",
+        "value": "Lin & Co (Belgique)",
+        "label": "Marque harmonisée"
+      },
+      {
+        "id": "cmd-3",
+        "at": "2026-10-04T09:00:00.000Z",
+        "kind": "remove",
+        "productId": "p4",
+        "label": "Produit retiré du catalogue"
+      }
+    ]
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "id": "bigcommerce.products.csv.v1",
+  "displayName": "BigCommerce products export (CSV)",
+  "provenance": "native-platform",
+  "medium": "csv",
+  "platformHint": "bigcommerce",
+  "entity": "products",
+  "signatures": [
+    {
+      "kind": "csv-header-set",
+      "required": [
+        "Item",
+        "Inventory Tracking"
+      ],
+      "anyOf": [
+        "Bin Picking Number",
+        "Image URL (Import)"
+      ],
+      "hints": [
+        "Current Stock",
+        "Retail Price"
+      ]
+    }
+  ],
+  "structure": {
+    "rows": {
+      "sequence": {
+        "column": "Item",
+        "start": "product"
+      },
+      "children": {
+        "where": {
+          "column": "Item",
+          "equals": "variant",
+          "ignoreCase": true
+        },
+        "selfWhenNone": true
+      }
+    }
+  },
+  "fields": [
+    {
+      "path": "Item",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-fixture",
+      "notes": "Structural: the row's role; rows before the first Product are orphans (bc_orphan_rows)."
+    },
+    {
+      "path": "Product URL",
+      "inputs": [
+        "Product URL",
+        "Name"
+      ],
+      "canon": "handle",
+      "transform": "first_non_empty",
+      "confidence": "verified-fixture",
+      "notes": "The URL path without slashes, else a slug of the name."
+    },
+    {
+      "path": "Name",
+      "canon": "title",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Description",
+      "canon": "bodyHtml",
+      "transform": "html",
+      "confidence": "verified-fixture",
+      "samplePolicy": "hash-only"
+    },
+    {
+      "path": "Page Title",
+      "canon": "seoTitle",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Meta Description",
+      "canon": "seoDescription",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Is Visible",
+      "canon": "published+status",
+      "transform": "bool",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Type",
+      "canon": "variants[].requiresShipping",
+      "transform": "equals_map",
+      "args": {
+        "value": "digital",
+        "then": false,
+        "else": true
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Brand ID",
+      "canon": "metafields",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "bigcommerce_brand_id"
+      },
+      "confidence": "verified-fixture",
+      "notes": "A numeric id with no name in the file (declared loss)."
+    },
+    {
+      "path": "Categories",
+      "canon": "metafields",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "bigcommerce_category_ids"
+      },
+      "confidence": "verified-fixture",
+      "notes": "Numeric ids with no names in the file (declared loss)."
+    },
+    {
+      "path": "Retail Price",
+      "canon": "metafields",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "retail_price"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Warranty",
+      "canon": "metafields",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "warranty"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Bin Picking Number",
+      "canon": "metafields",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "bin_picking_number"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Options",
+      "canon": "variants[].optionValues",
+      "transform": "option_values_from_attributes",
+      "confidence": "verified-fixture",
+      "notes": "Variant rows: Type=…|Name=…|Value=… blocks, realigned by option NAME; the product's options and swatch_<option> metafields (from a [#hex]) are derived from them."
+    },
+    {
+      "path": "SKU",
+      "canon": "variants[].sku",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Price",
+      "inputs": [
+        "Price",
+        "Sale Price"
+      ],
+      "canon": "variants[].price+variants[].compareAtPrice",
+      "transform": "price_promo",
+      "confidence": "verified-fixture",
+      "notes": "A variant row without its own price inherits the product's."
+    },
+    {
+      "path": "Cost Price",
+      "canon": "variants[].cost",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "UPC/EAN",
+      "canon": "variants[].barcode",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Global Trade Number",
+      "canon": "variants[].identifiers.gtin",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Manufacturer Part Number",
+      "canon": "variants[].identifiers.mpn",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Weight",
+      "canon": "variants[].grams",
+      "transform": "weight_to_grams",
+      "confidence": "verified-fixture",
+      "notes": "Unit answered by the user (kg or lbs)."
+    },
+    {
+      "path": "Depth",
+      "canon": "variants[].lengthCm",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Width",
+      "canon": "variants[].widthCm",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Height",
+      "canon": "variants[].heightCm",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Current Stock",
+      "canon": "variants[].inventoryQty",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Variant Image URL",
+      "canon": "variants[].imageSrc",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Internal Image URL (Export)",
+      "inputs": [
+        "Internal Image URL (Export)",
+        "Image URL (Import)",
+        "Image Sort Order",
+        "Image Description"
+      ],
+      "canon": "images",
+      "transform": "images_from_urls",
+      "confidence": "verified-fixture",
+      "notes": "Image rows: the export column, else the import one; sort order and description."
+    },
+    {
+      "path": "YouTube ID",
+      "canon": "metafields",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "youtube_id"
+      },
+      "confidence": "verified-fixture",
+      "notes": "Video rows."
+    }
+  ],
+  "invariantsExpected": [
+    "Rows attach POSITIONALLY: an Item column says Product / Variant / Image / Video and each row belongs to the Product above it",
+    "Weight has no unit label in the file (asked: kg or lbs)"
+  ],
+  "legacy": {
+    "formatId": "bigcommerce_products",
+    "platform": "bigcommerce",
+    "entity": "products"
+  },
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "seed:core/src/detect.ts:SIGS",
+      "origin": "reference",
+      "diff": [
+        "signature moved from code to data (Phase 5.3)",
+        "Item column (Product/Variant/Image/Video) + asymmetric image-import column."
+      ]
+    },
+    {
+      "at": "2026-10-04T00:00:00.000Z",
+      "op": "enrich",
+      "from": "core/src/bigcommerce.ts parseBigCommerceProducts / bcIdentifiers + mapping.ts SOURCE_FIELDS.bigcommerce_products",
+      "origin": "reference",
+      "diff": [
+        "Phase 2 Lot 3: full column map + row structure as data; undeclared columns preserved, declared ones traced"
+      ]
+    }
+  ]
+}

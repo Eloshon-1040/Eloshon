@@ -1,0 +1,3 @@
+First Name,Last Name,Email,Phone,Accepts Email Marketing,Accepts SMS Marketing,Default Address Company,Default Address Address1,Default Address Address2,Default Address City,Default Address Province Code,Default Address Country Code,Default Address Zip,Default Address Phone,Note,Tags,Tax Exempt
+Test,Customer 1,customer1@example.test,+32 000 00 00 00,no,no,Test Co,1 Test Street,,Testville,,FR,1000,+32 000 00 00 00,,,no
+Test,Customer 2,customer2@example.test,+32 000 00 00 00,no,no,Test Co,1 Test Street,,Testville,,FR,1000,+32 000 00 00 00,,,no

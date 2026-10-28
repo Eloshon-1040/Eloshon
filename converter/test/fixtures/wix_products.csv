@@ -1,0 +1,6 @@
+handleId,fieldType,name,description,productImageUrl,collection,sku,ribbon,price,surcharge,visible,discountMode,discountValue,inventory,weight,cost,productOptionName1,productOptionType1,productOptionDescription1,productOptionName2,productOptionType2,productOptionDescription2,additionalInfoTitle1,additionalInfoDescription1,customTextField1,brand
+sac-cuir,Product,Sac en cuir,<p>Cuir tanné végétal.</p>,https://cdn.example.com/sac-1.jpg;https://cdn.example.com/sac-2.jpg,Sacs;Nouveautés,,Nouveau,150.00,,TRUE,PERCENT,10,InStock,0.8,70.00,Couleur,COLOR,#8B5A2B:Tan;#000000:Noir,Format,DROP_DOWN,Petit;Grand,Entretien,Nettoyer avec un chiffon doux.,Gravure (offerte),Maroquinerie
+sac-cuir,Variant,,,,,SAC-TAN-P,,150.00,,TRUE,,,5,0.8,,,,Tan,,,Petit,,,,
+sac-cuir,Variant,,,,,SAC-NOIR-G,,170.00,,TRUE,,,3,0.9,,,,Noir,,,Grand,,,,
+bougie-cire,Product,Bougie cire de soja,<p>Parfum figue.</p>,https://cdn.example.com/bougie.jpg,Maison,BOUGIE-FIGUE,,24.00,,TRUE,,,OutOfStock,0.4,,,,,,,,,,,ChezSoi
+test-cache,Product,Produit test,,,,TEST-1,,5.00,,FALSE,,,0,,,,,,,,,,,,

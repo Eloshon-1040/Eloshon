@@ -1,0 +1,2068 @@
+{
+ "note": "Rules taught with the 🎯 on these four sites (copied 25/10/2026, schema v1, run counters reset). Used as data only.",
+ "sites": {
+  "sephora.fr": {
+   "version": 1,
+   "rules": [
+    {
+     "id": "product.brand.m1pxkskb",
+     "scope": "product",
+     "field": "brand",
+     "origin": "manual",
+     "status": "active",
+     "version": 1,
+     "selector": "h1.flex.flex-col a.flex.flex-row span.tracking-wide.break-words.text-body",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {
+       "itemprop": "name"
+      },
+      "classes": [
+       "tracking-wide",
+       "break-words",
+       "text-body",
+       "text-underline"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "flex",
+         "flex-row",
+         "items-center"
+        ],
+        "tag": "a"
+       },
+       {
+        "classes": [],
+        "tag": "span"
+       },
+       {
+        "classes": [
+         "flex",
+         "flex-col",
+         "gap-0.5"
+        ],
+        "tag": "h1"
+       }
+      ],
+      "sig": {},
+      "tag": "span",
+      "textHead": "DIOR",
+      "textLen": 4
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": false
+     },
+     "example": "DIOR",
+     "learnedFrom": "https://www.sephora.fr/p/j-adore-eau-de-parfum---parfum-pour-femme-aux-notes-solaires-et-florales-P1000206095.html",
+     "tests": {
+      "ok": 2,
+      "total": 2,
+      "urls": [
+       "https://www.sephora.fr/p/j-adore-eau-de-parfum---parfum-pour-femme-aux-notes-solaires-et-florales-P1000206095.html"
+      ],
+      "at": "2026-10-25T06:02:33.084Z",
+      "recent": "11"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-25T05:55:29.166Z",
+     "updated": "2026-10-25T06:02:33.084Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.variants.m9imis9",
+     "scope": "product",
+     "field": "variants",
+     "origin": "manual",
+     "status": "active",
+     "version": 1,
+     "selector": "div.flex.flex-col ul.flex.flex-col.gap-0\\.5",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {},
+      "classes": [
+       "flex",
+       "flex-col",
+       "gap-0.5"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "flex",
+         "flex-col",
+         "gap-1"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "w-full",
+         "absolute",
+         "flex"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "flex",
+         "flex-1",
+         "flex-col"
+        ],
+        "tag": "div"
+       }
+      ],
+      "sig": {
+       "img": 4,
+       "li": 4
+      },
+      "tag": "ul",
+      "textHead": "30 ml296,67 € / 100mlDisponible89,00 €50 ml184,50 € / 100mlD",
+      "textLen": 164
+     },
+     "extract": {
+      "mode": "list",
+      "multiline": false
+     },
+     "example": "50 ml / 100mlDisponible92,25 €123,00 € (184.5) · 100 ml / 100mlDisponible169,00 € (169) · 150 ml / 100mlDisponible225,00 € (150)",
+     "learnedFrom": "https://www.sephora.fr/p/j-adore-eau-de-parfum---parfum-pour-femme-aux-notes-solaires-et-florales-P1000206095.html",
+     "tests": {
+      "ok": 1,
+      "total": 2,
+      "urls": [
+       "https://www.sephora.fr/p/j-adore-eau-de-parfum---parfum-pour-femme-aux-notes-solaires-et-florales-P1000206095.html"
+      ],
+      "at": "2026-10-25T06:02:33.084Z",
+      "recent": "10"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-25T05:56:26.437Z",
+     "updated": "2026-10-25T06:02:33.084Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.name.m1xzzot5",
+     "scope": "product",
+     "field": "name",
+     "origin": "manual",
+     "status": "active",
+     "version": 1,
+     "selector": "span[data-testid=\"product-info__title__h1\"]",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {
+       "data-testid": "product-info__title__h1"
+      },
+      "classes": [
+       "tracking-wide",
+       "break-words",
+       "text-mobileTitle3",
+       "font-bold"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "flex",
+         "flex-col",
+         "gap-0.5"
+        ],
+        "tag": "h1"
+       },
+       {
+        "classes": [
+         "flex",
+         "flex-col",
+         "gap-0.5"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "flex",
+         "flex-col",
+         "gap-1.5"
+        ],
+        "tag": "section"
+       }
+      ],
+      "sig": {},
+      "tag": "span",
+      "textHead": "J'adore Eau de Parfum - Parfum pour femme aux notes solaires",
+      "textLen": 72
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": false
+     },
+     "example": "J'adore Eau de Parfum - Parfum pour femme aux notes solaires et florales",
+     "learnedFrom": "https://www.sephora.fr/p/j-adore-eau-de-parfum---parfum-pour-femme-aux-notes-solaires-et-florales-P1000206095.html",
+     "tests": {
+      "ok": 2,
+      "total": 2,
+      "urls": [
+       "https://www.sephora.fr/p/j-adore-eau-de-parfum---parfum-pour-femme-aux-notes-solaires-et-florales-P1000206095.html"
+      ],
+      "at": "2026-10-25T06:02:33.084Z",
+      "recent": "11"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-25T05:56:38.650Z",
+     "updated": "2026-10-25T06:02:33.084Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.description.m1ob718",
+     "scope": "product",
+     "field": "description",
+     "origin": "manual",
+     "status": "active",
+     "version": 1,
+     "selector": "#description",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {
+       "id": "description"
+      },
+      "classes": [
+       "tab-description"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "scrollbar-hide",
+         "overflow-x-scroll",
+         "max-w-full"
+        ],
+        "tag": "ul"
+       },
+       {
+        "classes": [],
+        "tag": "section"
+       },
+       {
+        "classes": [
+         "flex",
+         "flex-col",
+         "flex-1"
+        ],
+        "tag": "section"
+       }
+      ],
+      "sig": {
+       "br": 4,
+       "p": 1
+      },
+      "tag": "li",
+      "textHead": "DescriptionJ'adore, le parfum pour femme de légende de la ma",
+      "textLen": 534
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": true
+     },
+     "example": "•\nDescription\nJ'adore, le parfum pour femme de légende de la maison Dior, s'épanouit dans un arrangement floral de notes d'ylang-ylang, de rose damascena et de jasmins grandiflorum et sambac.\nUn grand",
+     "learnedFrom": "https://www.sephora.fr/p/j-adore-eau-de-parfum---parfum-pour-femme-aux-notes-solaires-et-florales-P1000206095.html",
+     "tests": {
+      "ok": 2,
+      "total": 2,
+      "urls": [
+       "https://www.sephora.fr/p/j-adore-eau-de-parfum---parfum-pour-femme-aux-notes-solaires-et-florales-P1000206095.html"
+      ],
+      "at": "2026-10-25T06:02:33.084Z",
+      "recent": "11"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-25T05:57:19.323Z",
+     "updated": "2026-10-25T06:02:33.084Z",
+     "confirmedAi": false
+    }
+   ]
+  },
+  "adidas.be": {
+   "version": 1,
+   "rules": [
+    {
+     "id": "product.description.m1vagpuf",
+     "scope": "product",
+     "field": "description",
+     "origin": "manual",
+     "status": "active",
+     "version": 1,
+     "selector": "div.accordion_accordion--open__jRlnP div.accordion_accordion__content__dWvE_",
+     "fingerprint": {
+      "anchor": {
+       "rel": "controls",
+       "text": "Description",
+       "up": 0
+      },
+      "attrs": {
+       "id": ":r2:"
+      },
+      "classes": [
+       "accordion_accordion__content__dWvE_"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "accordion_accordion--open__jRlnP"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "visible",
+         "content-item-wrapper_accordion-content-item__ZnOOt"
+        ],
+        "tag": "section"
+       }
+      ],
+      "sig": {
+       "img": 1,
+       "p": 1
+      },
+      "tag": "div",
+      "textHead": "Cette chaussure adidas Handball Spezial est celle qu'il te f",
+      "textLen": 620
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": true
+     },
+     "example": "Cette chaussure adidas Handball Spezial est celle qu'il te faut si tu cherches à afficher un style décontracté. Conçue à l'origine pour le handball en salle en 1979, cette sneaker basse t'accompagne d",
+     "learnedFrom": "https://www.adidas.be/fr/chaussure-handball-spezial/IF6490.html",
+     "tests": {
+      "ok": 1,
+      "total": 1,
+      "urls": [
+       "https://www.adidas.be/fr/chaussure-handball-spezial/IF6490.html"
+      ],
+      "at": "2026-10-25T05:33:47.916Z",
+      "recent": "1"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-25T05:33:45.307Z",
+     "updated": "2026-10-25T05:33:47.916Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.technical_specs.mpqa0v3",
+     "scope": "product",
+     "field": "technical_specs",
+     "origin": "manual",
+     "status": "active",
+     "version": 1,
+     "selector": "div.accordion_accordion--open__jRlnP div.accordion_accordion__content__dWvE_",
+     "fingerprint": {
+      "anchor": {
+       "rel": "controls",
+       "text": "Détails",
+       "up": 0
+      },
+      "attrs": {
+       "id": ":r3:"
+      },
+      "classes": [
+       "accordion_accordion__content__dWvE_"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "accordion_accordion--open__jRlnP"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "visible",
+         "content-item-wrapper_accordion-content-item__ZnOOt"
+        ],
+        "tag": "section"
+       }
+      ],
+      "sig": {
+       "li": 8,
+       "ul": 2
+      },
+      "tag": "div",
+      "textHead": "Chaussant standard.Fermeture à lacets.Tige: CuirDoublure: Au",
+      "textLen": 220
+     },
+     "extract": {
+      "mode": "pairs",
+      "multiline": true
+     },
+     "example": "Semelle : Autres Fibres · Couleur du produit : Earth Strata / Off White / Gum · Code du produit : IF6490",
+     "learnedFrom": "https://www.adidas.be/fr/chaussure-handball-spezial/IF6490.html",
+     "tests": {
+      "ok": 1,
+      "total": 1,
+      "urls": [
+       "https://www.adidas.be/fr/chaussure-handball-spezial/IF6490.html"
+      ],
+      "at": "2026-10-25T05:34:18.158Z",
+      "recent": "1"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-25T05:34:15.558Z",
+     "updated": "2026-10-25T05:34:18.158Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.variants.m4b8ien",
+     "scope": "product",
+     "field": "variants",
+     "origin": "manual",
+     "status": "active",
+     "version": 1,
+     "selector": ":scope > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2)",
+     "fingerprint": {
+      "anchor": {
+       "rel": "after-heading",
+       "text": "Coloris",
+       "up": 0
+      },
+      "attrs": {
+       "role": "list"
+      },
+      "classes": [],
+      "parents": [
+       {
+        "classes": [
+         "sidebar-color-chooser_sidebar-color-chooser__NZd_v"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [],
+        "tag": "div"
+       },
+       {
+        "classes": [],
+        "tag": "div"
+       }
+      ],
+      "sig": {
+       "a": 16,
+       "img": 16
+      },
+      "tag": "div",
+      "textHead": "+3",
+      "textLen": 2
+     },
+     "extract": {
+      "mode": "list",
+      "multiline": false
+     },
+     "example": "Couleur du produit : Aurora Coffee / Magic Mauve / Gum · Couleur du produit : Earth Strata / Off White / Gum · Couleur du produit : Alumina / Core Black / Cloud White · Couleur du produit : Aurora Cof",
+     "learnedFrom": "https://www.adidas.be/fr/chaussure-handball-spezial/IF6490.html",
+     "tests": {
+      "ok": 1,
+      "total": 1,
+      "urls": [
+       "https://www.adidas.be/fr/chaussure-handball-spezial/IF6490.html"
+      ],
+      "at": "2026-10-25T05:35:45.515Z",
+      "recent": "1"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-25T05:35:42.865Z",
+     "updated": "2026-10-25T05:35:45.515Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.taille.m1lwp8us",
+     "scope": "product",
+     "field": "taille",
+     "origin": "manual",
+     "status": "active",
+     "version": 1,
+     "selector": "section.buy-section_buy-section___rDRL div",
+     "fingerprint": {
+      "anchor": {
+       "rel": "after-heading",
+       "text": "Passer pour ajouter au panier",
+       "up": 0
+      },
+      "attrs": {},
+      "classes": [],
+      "parents": [
+       {
+        "classes": [
+         "buy-section_buy-section___rDRL"
+        ],
+        "tag": "section"
+       },
+       {
+        "classes": [],
+        "tag": "div"
+       },
+       {
+        "classes": [],
+        "tag": "div"
+       }
+      ],
+      "sig": {
+       "h2": 2
+      },
+      "tag": "div",
+      "textHead": "TaillesGuide des taillesGuide des taillesFermer35 1/23636 2/",
+      "textLen": 151
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": false
+     },
+     "example": "TaillesGuide des taillesGuide des taillesFermer35 1/23636 2/337 1/33838 2/339 1/34040 2/341 1/34242 2/343 1/34444 2/345 1/34646 2/347 1/34848 2/349 1/3",
+     "learnedFrom": "https://www.adidas.be/fr/chaussure-handball-spezial/IF6490.html",
+     "tests": {
+      "ok": 1,
+      "total": 1,
+      "urls": [
+       "https://www.adidas.be/fr/chaussure-handball-spezial/IF6490.html"
+      ],
+      "at": "2026-10-25T05:36:24.010Z",
+      "recent": "1"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-25T05:36:21.401Z",
+     "updated": "2026-10-25T05:36:24.010Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.category.m1v6ibae",
+     "scope": "product",
+     "field": "category",
+     "origin": "manual",
+     "status": "active",
+     "version": 1,
+     "selector": ":scope > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > ol:nth-of-type(1) > li:nth-of-type(4) > a:nth-of-type(1) > span:nth-of-type(1)",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {},
+      "classes": [],
+      "parents": [
+       {
+        "classes": [
+         "gl-link"
+        ],
+        "tag": "a"
+       },
+       {
+        "classes": [
+         "breadcrumbs_breadcrumb_item__j2e_Y"
+        ],
+        "tag": "li"
+       },
+       {
+        "classes": [
+         "breadcrumbs_breadcrumbs__Vhuhj"
+        ],
+        "tag": "ol"
+       }
+      ],
+      "sig": {},
+      "tag": "span",
+      "textHead": "Chaussures",
+      "textLen": 10
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": false
+     },
+     "example": "Chaussures",
+     "learnedFrom": "https://www.adidas.be/fr/chaussure-handball-spezial/IF6490.html",
+     "tests": {
+      "ok": 1,
+      "total": 1,
+      "urls": [
+       "https://www.adidas.be/fr/chaussure-handball-spezial/IF6490.html"
+      ],
+      "at": "2026-10-25T05:37:48.249Z",
+      "recent": "1"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-25T05:37:45.665Z",
+     "updated": "2026-10-25T05:37:48.249Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.name.m1khnyfl",
+     "scope": "product",
+     "field": "name",
+     "origin": "manual",
+     "status": "active",
+     "version": 1,
+     "selector": "h1[data-testid=\"product-title\"]",
+     "fingerprint": {
+      "anchor": {
+       "inner": "h1.product-description_name__sg_q8",
+       "rel": "after-heading",
+       "text": "Originals",
+       "up": 1
+      },
+      "attrs": {
+       "data-testid": "product-title"
+      },
+      "classes": [
+       "product-description_name__sg_q8"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "product-description_middle-section__rFRfB"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "product-description_product-description__LAQyT"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [],
+        "tag": "div"
+       }
+      ],
+      "sig": {},
+      "tag": "h1",
+      "textHead": "Chaussure Handball Spezial",
+      "textLen": 26
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": false
+     },
+     "example": "Chaussure Handball Spezial",
+     "learnedFrom": "https://www.adidas.be/fr/chaussure-handball-spezial/IF6490.html",
+     "tests": {
+      "ok": 1,
+      "total": 1,
+      "urls": [
+       "https://www.adidas.be/fr/chaussure-handball-spezial/IF6490.html"
+      ],
+      "at": "2026-10-25T05:38:00.477Z",
+      "recent": "1"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-25T05:37:57.866Z",
+     "updated": "2026-10-25T05:38:00.477Z",
+     "confirmedAi": false
+    }
+   ]
+  },
+  "mediamarkt.be": {
+   "version": 1,
+   "rules": [
+    {
+     "id": "product.description.m1r5h5l2",
+     "scope": "product",
+     "field": "description",
+     "origin": "manual",
+     "status": "active",
+     "version": 3,
+     "selector": "div.mms-ui-wzdZp.mms-ui-cYzMIk",
+     "fingerprint": {
+      "anchor": {
+       "rel": "wraps-heading",
+       "text": "L'avis de nos experts"
+      },
+      "attrs": {},
+      "classes": [
+       "mms-ui-wzdZp",
+       "mms-ui-cYzMIk",
+       "mms-ui-jJrwps",
+       "mms-ui-hUgPwj"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "mms-ui-fzgLcb",
+         "mms-ui-eAZrpM",
+         "mms-ui-ddgOEf"
+        ],
+        "tag": "article"
+       },
+       {
+        "classes": [
+         "mms-ui-cYdhWw",
+         "mms-ui-hXlNIp",
+         "mms-ui-cYzOJj"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "mms-ui-dMMuNs",
+         "mms-ui-kFYpbG",
+         "mms-ui-coifUy"
+        ],
+        "tag": "div"
+       }
+      ],
+      "sig": {
+       "br": 4,
+       "h3": 1,
+       "p": 1
+      },
+      "tag": "div",
+      "textHead": "L'avis de nos experts+ Écran immersif : l’écran Super AMOLED",
+      "textLen": 708
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": true
+     },
+     "example": "+ Écran immersif : l’écran Super AMOLED de 6,7 pouces avec un taux de rafraîchissement de 90 Hz offre des images fluides et lumineuses.\n+ Appareil photo performant : le triple capteur de 50 MP avec st",
+     "learnedFrom": "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-black-2195579.html",
+     "tests": {
+      "ok": 18,
+      "total": 20,
+      "urls": [
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-black-2195579.html",
+       "https://www.mediamarkt.be/fr/product/_isy-iac-7065-65w-chargeur-pd-gan-2215571.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a57-5g-256-gb-bleu-2223835.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a37-5g-128-gb-noir-2223374.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-light-blue-2195582.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128-gb-gris-4g-lte-162258182.html"
+      ],
+      "at": "2026-10-24T13:54:26.794Z",
+      "recent": "11111111101111111110"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-24T08:52:20.859Z",
+     "updated": "2026-10-24T13:54:26.794Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.technical_specs.mbd1wut",
+     "scope": "product",
+     "field": "technical_specs",
+     "origin": "manual",
+     "status": "active",
+     "version": 4,
+     "selector": "div.mms-ui-jTWvec.mms-ui-bEnKCa table.brREjs",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {},
+      "classes": [
+       "brREjs"
+      ],
+      "parents": [
+       {
+        "classes": [],
+        "tag": "div"
+       },
+       {
+        "classes": [],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "mms-ui-jTWvec",
+         "mms-ui-bEnKCa"
+        ],
+        "tag": "div"
+       }
+      ],
+      "sig": {
+       "tr": 16
+      },
+      "tag": "table",
+      "textHead": "Caractéristiques techniquesType de produitType de produitSma",
+      "textLen": 978
+     },
+     "extract": {
+      "mode": "pairs",
+      "multiline": true
+     },
+     "example": "Type de produitType de produit : Smartphone · Système d'exploitationSystème d'exploitation : Android · ProcesseurProcesseur : Helio G99, 6nm",
+     "learnedFrom": "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-black-2195579.html",
+     "tests": {
+      "ok": 15,
+      "total": 16,
+      "urls": [
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-black-2195579.html",
+       "https://www.mediamarkt.be/fr/product/_isy-iac-7065-65w-chargeur-pd-gan-2215571.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a57-5g-256-gb-bleu-2223835.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a37-5g-128-gb-noir-2223374.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-light-blue-2195582.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128-gb-gris-4g-lte-162258182.html"
+      ],
+      "at": "2026-10-24T13:54:26.794Z",
+      "recent": "1111111111111110"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-24T08:52:48.246Z",
+     "updated": "2026-10-24T13:54:26.794Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.brand.mg61x6b",
+     "scope": "product",
+     "field": "brand",
+     "origin": "manual",
+     "status": "active",
+     "version": 3,
+     "selector": "div.mms-ui-bYPztT.mms-ui-fPSBzf div.mms-ui-bYPztT.mms-ui-fPSBzf a.mms-ui-cJiGkM.mms-ui-eTbxZq span.mms-ui-fRqpoc.mms-ui-hSozUD",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {},
+      "classes": [
+       "mms-ui-fRqpoc",
+       "mms-ui-hSozUD"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "mms-ui-cJiGkM",
+         "mms-ui-eTbxZq",
+         "mms-ui-bYPztT"
+        ],
+        "tag": "a"
+       },
+       {
+        "classes": [
+         "mms-ui-bYPztT",
+         "mms-ui-fPSBzf",
+         "mms-ui-ZWNVL"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "mms-ui-bYPztT",
+         "mms-ui-fPSBzf",
+         "mms-ui-ZWNVL"
+        ],
+        "tag": "div"
+       }
+      ],
+      "sig": {},
+      "tag": "span",
+      "textHead": "SAMSUNG",
+      "textLen": 7
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": false
+     },
+     "example": "SAMSUNG",
+     "learnedFrom": "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-black-2195579.html",
+     "tests": {
+      "ok": 18,
+      "total": 20,
+      "urls": [
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-black-2195579.html",
+       "https://www.mediamarkt.be/fr/product/_isy-iac-7065-65w-chargeur-pd-gan-2215571.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a57-5g-256-gb-bleu-2223835.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a37-5g-128-gb-noir-2223374.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-light-blue-2195582.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128-gb-gris-4g-lte-162258182.html"
+      ],
+      "at": "2026-10-24T13:54:26.794Z",
+      "recent": "11111111101111111110"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-24T08:53:16.345Z",
+     "updated": "2026-10-24T13:54:26.794Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.name.mmhk85j",
+     "scope": "product",
+     "field": "name",
+     "origin": "manual",
+     "status": "active",
+     "version": 3,
+     "selector": "h1.mms-ui-kMHEba.mms-ui-ezkBTa.mms-ui-gRFqDK",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {},
+      "classes": [
+       "mms-ui-kMHEba",
+       "mms-ui-ezkBTa",
+       "mms-ui-gRFqDK",
+       "mms-ui-cAsDZa"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "mms-ui-fPSBzf",
+         "mms-ui-ZWNVL",
+         "mms-ui-iRgpoQ"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "mms-ui-dDWCpe",
+         "mms-ui-fPSBzf",
+         "mms-ui-ZWNVL"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "mms-ui-fPSBzf",
+         "mms-ui-ZWNVL",
+         "mms-ui-iRgpoQ"
+        ],
+        "tag": "div"
+       }
+      ],
+      "sig": {},
+      "tag": "h1",
+      "textHead": "SAMSUNG Galaxy A17 4G - 128GB - Black",
+      "textLen": 37
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": false
+     },
+     "example": "SAMSUNG Galaxy A17 4G - 128GB - Black",
+     "learnedFrom": "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-black-2195579.html",
+     "tests": {
+      "ok": 15,
+      "total": 16,
+      "urls": [
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-black-2195579.html",
+       "https://www.mediamarkt.be/fr/product/_isy-iac-7065-65w-chargeur-pd-gan-2215571.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a57-5g-256-gb-bleu-2223835.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a37-5g-128-gb-noir-2223374.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-light-blue-2195582.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128-gb-gris-4g-lte-162258182.html"
+      ],
+      "at": "2026-10-24T13:54:26.794Z",
+      "recent": "1111111111111110"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-24T08:53:31.569Z",
+     "updated": "2026-10-24T13:54:26.794Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.category.mbk5lhn",
+     "scope": "product",
+     "field": "category",
+     "origin": "manual",
+     "status": "active",
+     "version": 3,
+     "selector": ":scope > div:nth-of-type(2) > div:nth-of-type(3) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > nav:nth-of-type(1) > ol:nth-of-type(1) > li:nth-of-type(3) > a:nth-of-type(1)",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {
+       "data-test": "mms-router-link"
+      },
+      "classes": [
+       "mms-ui-cJiGkM",
+       "mms-ui-eTbxZq",
+       "mms-ui-bYPztT",
+       "mms-ui-jYoXvO"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "mms-ui-ddgODW",
+         "mms-ui-kWNLTM",
+         "mms-ui-bYPztT"
+        ],
+        "tag": "li"
+       },
+       {
+        "classes": [
+         "mms-ui-fPSBzf",
+         "mms-ui-bYPztT",
+         "mms-ui-giGRiL"
+        ],
+        "tag": "ol"
+       },
+       {
+        "classes": [
+         "mms-ui-AMuAq"
+        ],
+        "tag": "nav"
+       }
+      ],
+      "sig": {},
+      "tag": "a",
+      "textHead": "GSM",
+      "textLen": 3
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": false
+     },
+     "example": "GSM",
+     "learnedFrom": "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-black-2195579.html",
+     "tests": {
+      "ok": 15,
+      "total": 16,
+      "urls": [
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-black-2195579.html",
+       "https://www.mediamarkt.be/fr/product/_isy-iac-7065-65w-chargeur-pd-gan-2215571.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a57-5g-256-gb-bleu-2223835.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a37-5g-128-gb-noir-2223374.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-light-blue-2195582.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128-gb-gris-4g-lte-162258182.html"
+      ],
+      "at": "2026-10-24T13:54:26.794Z",
+      "recent": "1111111111111110"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-24T09:15:19.593Z",
+     "updated": "2026-10-24T13:54:26.794Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.image.m141q58f",
+     "scope": "product",
+     "field": "image",
+     "origin": "manual",
+     "status": "superseded",
+     "version": 1,
+     "selector": "section[data-test=\"mms-pdp-gallery\"]",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {
+       "aria-label": "Galerie de produits",
+       "data-test": "mms-pdp-gallery"
+      },
+      "classes": [
+       "mms-ui-qbeer",
+       "mms-ui-lnopcr"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "mms-ui-fzgLcb",
+         "mms-ui-ihUMtH",
+         "mms-ui-eAZrpM"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "mms-ui-cYdhWw",
+         "mms-ui-kkmdjD",
+         "mms-ui-iRzFt"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "mms-ui-icHxVl",
+         "mms-ui-kFYpbG",
+         "mms-ui-coifUy"
+        ],
+        "tag": "div"
+       }
+      ],
+      "sig": {
+       "img": 16,
+       "li": 18,
+       "ul": 2
+      },
+      "tag": "section",
+      "textHead": "10-25WUSB PD",
+      "textLen": 12
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": false
+     },
+     "example": "10-25WUSB PD",
+     "learnedFrom": "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-black-2195579.html",
+     "tests": {
+      "ok": 1,
+      "total": 16,
+      "urls": [
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-black-2195579.html",
+       "https://www.mediamarkt.be/fr/product/_isy-iac-7065-65w-chargeur-pd-gan-2215571.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a57-5g-256-gb-bleu-2223835.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a37-5g-128-gb-noir-2223374.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-light-blue-2195582.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128-gb-gris-4g-lte-162258182.html"
+      ],
+      "at": "2026-10-24T09:20:52.293Z"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-24T09:19:56.819Z",
+     "updated": "2026-10-24T10:04:01.267Z",
+     "confirmedAi": false,
+     "supersededBy": "product.image.m1bw9mq0",
+     "supersededReason": "replaced_by_user"
+    },
+    {
+     "id": "product.image.m1bw9mq0",
+     "scope": "product",
+     "field": "image",
+     "origin": "manual",
+     "status": "active",
+     "version": 2,
+     "selector": "section.bGSaHX.eIrfpP div.jiMjNS div.qRNax ul.ggMaQ",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {},
+      "classes": [
+       "ggMaQ"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "qRNax"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "jiMjNS"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "bGSaHX",
+         "eIrfpP"
+        ],
+        "tag": "section"
+       }
+      ],
+      "sig": {
+       "img": 9,
+       "li": 9
+      },
+      "tag": "ul",
+      "textHead": "",
+      "textLen": 0
+     },
+     "extract": {
+      "mode": "image",
+      "multiline": false
+     },
+     "example": "9 image(s) : https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_162895121?x=697&y=523&format=webp&quality=60&sp=yes&strip=yes&trim=yes&ex=697&ey=523&align=center&resizesource&unsharp=0.5x0.5 , https:/",
+     "learnedFrom": "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-black-2195579.html",
+     "tests": {
+      "ok": 18,
+      "total": 20,
+      "urls": [
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-black-2195579.html",
+       "https://www.mediamarkt.be/fr/product/_isy-iac-7065-65w-chargeur-pd-gan-2215571.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a57-5g-256-gb-bleu-2223835.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a37-5g-128-gb-noir-2223374.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-light-blue-2195582.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128-gb-gris-4g-lte-162258182.html"
+      ],
+      "at": "2026-10-24T13:54:26.794Z",
+      "recent": "11111111101111111110"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": "product.image.m141q58f",
+     "created": "2026-10-24T10:04:01.267Z",
+     "updated": "2026-10-24T13:54:26.794Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.variants.mtjtvia",
+     "scope": "product",
+     "field": "variants",
+     "origin": "manual",
+     "status": "superseded",
+     "version": 1,
+     "selector": "div.mms-ui-cYdhWw.mms-ui-liblMw.mms-ui-fIXqzZ",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {},
+      "classes": [
+       "mms-ui-cYdhWw",
+       "mms-ui-liblMw",
+       "mms-ui-fIXqzZ",
+       "mms-ui-BEBLL"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "mms-ui-fPSBzf",
+         "mms-ui-ZWNVL",
+         "mms-ui-iRgpoQ"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "mms-ui-cYdhWw",
+         "mms-ui-eZrwE",
+         "mms-ui-jVCpHx"
+        ],
+        "tag": "section"
+       },
+       {
+        "classes": [
+         "mms-ui-cBWQP",
+         "mms-ui-dvYRdI",
+         "mms-ui-hfHlpB"
+        ],
+        "tag": "div"
+       }
+      ],
+      "sig": {
+       "a": 3
+      },
+      "tag": "div",
+      "textHead": "BlackLight BlueGray",
+      "textLen": 19
+     },
+     "extract": {
+      "mode": "list",
+      "multiline": false
+     },
+     "example": "Black · Gray",
+     "learnedFrom": "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-light-blue-2195582.html",
+     "tests": {
+      "ok": 5,
+      "total": 6,
+      "urls": [
+       "https://www.mediamarkt.be/fr/product/_apple-iphone-16-5g-128-gb-black-mye73zda-2152606.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-light-blue-2195582.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128gb-black-2195579.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-4g-128-gb-gris-4g-lte-162258182.html",
+       "https://www.mediamarkt.be/fr/product/_samsung-galaxy-a17-128gb-5g-blue-2194012.html",
+       "https://www.mediamarkt.be/fr/product/_apple-iphone-18-pro-5g-256-gb-burgundy-apple-cover-iphone-18-pro-clear-magsafe-transparant-pack-smartphone-2254165.html"
+      ],
+      "at": "2026-10-24T11:54:23.509Z",
+      "recent": "111110"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-24T11:38:25.938Z",
+     "updated": "2026-10-24T11:54:41.867Z",
+     "confirmedAi": false,
+     "supersededBy": "product.variants.m1po4mdd",
+     "supersededReason": "replaced_by_user"
+    },
+    {
+     "id": "product.variants.m1po4mdd",
+     "scope": "product",
+     "field": "variants",
+     "origin": "manual",
+     "status": "failing",
+     "version": 2,
+     "selector": "div.mms-ui-cBWQP.mms-ui-dvYRdI",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {
+       "data-section": "pdp-details"
+      },
+      "classes": [
+       "mms-ui-cBWQP",
+       "mms-ui-dvYRdI",
+       "mms-ui-hfHlpB",
+       "mms-ui-dxCEjM"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "mms-ui-fPSBzf",
+         "mms-ui-ZWNVL",
+         "mms-ui-iRgpoQ"
+        ],
+        "tag": "section"
+       },
+       {
+        "classes": [],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "mms-ui-fzgLcb",
+         "mms-ui-byMUuU",
+         "mms-ui-eAZrpM"
+        ],
+        "tag": "div"
+       }
+      ],
+      "sig": {
+       "a": 7,
+       "p": 1
+      },
+      "tag": "div",
+      "textHead": "Couleur (selon le fabriquant)VertBleuRoseBlancNoirCapacité d",
+      "textLen": 84
+     },
+     "extract": {
+      "mode": "list",
+      "multiline": false
+     },
+     "example": "Vert · Bleu · Rose · Blanc",
+     "learnedFrom": "https://www.mediamarkt.be/fr/product/_apple-iphone-16-5g-128-gb-black-mye73zda-2152606.html",
+     "tests": {
+      "ok": 5,
+      "total": 16,
+      "urls": [
+       "https://www.mediamarkt.be/fr/product/_apple-iphone-16-5g-128-gb-black-mye73zda-2152606.html",
+       "https://www.mediamarkt.be/fr/product/_apple-adaptateur-secteur-20-w-usb-c-blanc-md3j4zma-2174719.html",
+       "https://www.mediamarkt.be/fr/product/_apple-iphone-16-5g-128-gb-teal-myed3zda-2152600.html",
+       "https://www.mediamarkt.be/fr/product/_apple-iphone-16-5g-128-gb-ultramarine-myec3zda-2152601.html",
+       "https://www.mediamarkt.be/fr/product/_apple-iphone-16-5g-128-gb-pink-myea3zda-2152603.html",
+       "https://www.mediamarkt.be/fr/product/_apple-iphone-16-5g-128-gb-white-mye93zda-2152605.html"
+      ],
+      "at": "2026-10-24T13:54:26.794Z",
+      "recent": "1111100000000000"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": "product.variants.mtjtvia",
+     "created": "2026-10-24T11:54:41.867Z",
+     "updated": "2026-10-24T13:54:26.794Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.capacite_memoire.mhdsagd",
+     "scope": "product",
+     "field": "capacite_memoire",
+     "origin": "manual",
+     "status": "failing",
+     "version": 1,
+     "selector": "div.mms-ui-cORKzS.mms-ui-jTWvec div.mms-ui-fPSBzf.mms-ui-ZWNVL.mms-ui-iRgpoQ",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {},
+      "classes": [
+       "mms-ui-fPSBzf",
+       "mms-ui-ZWNVL",
+       "mms-ui-iRgpoQ",
+       "mms-ui-fIXqzZ"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "mms-ui-cORKzS",
+         "mms-ui-jTWvec",
+         "mms-ui-fzGitf"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "mms-ui-cYdhWw",
+         "mms-ui-eZrwE",
+         "mms-ui-jVCpHx"
+        ],
+        "tag": "section"
+       },
+       {
+        "classes": [
+         "mms-ui-cBWQP",
+         "mms-ui-dvYRdI",
+         "mms-ui-hfHlpB"
+        ],
+        "tag": "div"
+       }
+      ],
+      "sig": {
+       "a": 2
+      },
+      "tag": "div",
+      "textHead": "Capacité de la mémoire128 GB256 GB",
+      "textLen": 34
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": false
+     },
+     "example": "Capacité de la mémoire128 GB256 GB",
+     "learnedFrom": "https://www.mediamarkt.be/fr/product/_apple-iphone-16-5g-128-gb-black-mye73zda-2152606.html",
+     "tests": {
+      "ok": 2,
+      "total": 16,
+      "urls": [
+       "https://www.mediamarkt.be/fr/product/_apple-iphone-16-5g-128-gb-black-mye73zda-2152606.html",
+       "https://www.mediamarkt.be/fr/product/_apple-adaptateur-secteur-20-w-usb-c-blanc-md3j4zma-2174719.html",
+       "https://www.mediamarkt.be/fr/product/_apple-iphone-16-5g-128-gb-teal-myed3zda-2152600.html",
+       "https://www.mediamarkt.be/fr/product/_apple-iphone-16-5g-128-gb-ultramarine-myec3zda-2152601.html",
+       "https://www.mediamarkt.be/fr/product/_apple-iphone-16-5g-128-gb-pink-myea3zda-2152603.html",
+       "https://www.mediamarkt.be/fr/product/_apple-iphone-16-5g-128-gb-white-mye93zda-2152605.html"
+      ],
+      "at": "2026-10-24T13:54:26.794Z",
+      "recent": "1100000000000000"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-24T11:55:19.960Z",
+     "updated": "2026-10-24T13:54:26.794Z",
+     "confirmedAi": false
+    }
+   ]
+  },
+  "iciparisxl.be": {
+   "version": 1,
+   "rules": [
+    {
+     "id": "product.description.mf5vmy3",
+     "scope": "product",
+     "field": "description",
+     "origin": "manual",
+     "status": "active",
+     "version": 1,
+     "selector": "e2-product-nested-description.product-nested-description",
+     "fingerprint": {
+      "anchor": {
+       "inner": "e2-product-nested-description.product-nested-description",
+       "rel": "controls",
+       "text": "A propos de ce produit",
+       "up": 1
+      },
+      "attrs": {},
+      "classes": [
+       "product-nested-description"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "e2-collapsible-paragraph__content"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "e2-collapsible-paragraph"
+        ],
+        "tag": "section"
+       },
+       {
+        "classes": [],
+        "tag": "e2-collapsible-paragraph"
+       }
+      ],
+      "sig": {
+       "br": 2,
+       "p": 2
+      },
+      "tag": "e2-product-nested-description",
+      "textHead": "Miss Dior Rose N'Roses est une eau de toilette aux notes fra",
+      "textLen": 486
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": true
+     },
+     "example": "Miss Dior Rose N'Roses est une eau de toilette aux notes fraîches et fleuries. L'essence de roses vous fait voyager par sa bergamote d’Italie, accentuée par l’intensité du musc blanc.\nMiss Dior Rose N",
+     "learnedFrom": "https://www.iciparisxl.be/fr/dior/miss-dior/rose-nroses/p/BP_1061680",
+     "tests": {
+      "ok": 18,
+      "total": 20,
+      "urls": [
+       "https://www.iciparisxl.be/fr/dior/miss-dior/rose-nroses/p/BP_1061680",
+       "https://www.iciparisxl.be/fr/lancome/idole/eau-de-parfum-parfum-rechargeable-femme/p/BP_1036732",
+       "https://www.iciparisxl.be/fr/armani/my-way/eau-de-parfum-parfum-rechargeable-femme/p/BP_1090394",
+       "https://www.iciparisxl.be/fr/rabanne/fame/eau-de-parfum/p/BP_1173052",
+       "https://www.iciparisxl.be/fr/armani/si-passione/eau-de-parfum-parfum-rechargeable-femme/p/BP_1330993",
+       "https://www.iciparisxl.be/fr/lancome/la-vie-est-belle-rose/extraordinaire-eau-de-parfum/p/BP_1290470"
+      ],
+      "at": "2026-10-24T13:47:07.705Z",
+      "recent": "11111111101111111110"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-24T12:00:37.382Z",
+     "updated": "2026-10-24T13:47:07.705Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.technical_specs.majs2kj",
+     "scope": "product",
+     "field": "technical_specs",
+     "origin": "manual",
+     "status": "active",
+     "version": 1,
+     "selector": ":scope > app-root:nth-of-type(1) > cx-storefront:nth-of-type(1) > main:nth-of-type(1) > cx-page-layout:nth-of-type(1) > e2-pdp-page:nth-of-type(1) > cx-page-layout:nth-of-type(1) > cx-page-slot:nth-of-type(6) > e2-collapsible-paragraph:nth-of-type(2) > section:nth-of-type(1)",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {},
+      "classes": [
+       "e2-collapsible-paragraph"
+      ],
+      "parents": [
+       {
+        "classes": [],
+        "tag": "e2-collapsible-paragraph"
+       },
+       {
+        "classes": [
+         "ProductDetailsSPRSlot"
+        ],
+        "tag": "cx-page-slot"
+       },
+       {
+        "classes": [
+         "pdp-page__main-content",
+         "mainContent"
+        ],
+        "tag": "cx-page-layout"
+       }
+      ],
+      "sig": {
+       "br": 4,
+       "h2": 1
+      },
+      "tag": "section",
+      "textHead": "Plus d'infos produit Notes de base: Muscs blancs Notes de co",
+      "textLen": 517
+     },
+     "extract": {
+      "mode": "pairs",
+      "multiline": true
+     },
+     "example": "Notes de base : Muscs blancs · Notes de coeur : Mandarine d'Italie, bergamote et essence de géranium · Notes de tête : Absolu et essence de roses de Grasse et Damascena",
+     "learnedFrom": "https://www.iciparisxl.be/fr/dior/miss-dior/rose-nroses/p/BP_1061680",
+     "tests": {
+      "ok": 18,
+      "total": 20,
+      "urls": [
+       "https://www.iciparisxl.be/fr/dior/miss-dior/rose-nroses/p/BP_1061680",
+       "https://www.iciparisxl.be/fr/lancome/idole/eau-de-parfum-parfum-rechargeable-femme/p/BP_1036732",
+       "https://www.iciparisxl.be/fr/armani/my-way/eau-de-parfum-parfum-rechargeable-femme/p/BP_1090394",
+       "https://www.iciparisxl.be/fr/rabanne/fame/eau-de-parfum/p/BP_1173052",
+       "https://www.iciparisxl.be/fr/armani/si-passione/eau-de-parfum-parfum-rechargeable-femme/p/BP_1330993",
+       "https://www.iciparisxl.be/fr/lancome/la-vie-est-belle-rose/extraordinaire-eau-de-parfum/p/BP_1290470"
+      ],
+      "at": "2026-10-24T13:47:07.705Z",
+      "recent": "11111111101111111110"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-24T12:00:54.840Z",
+     "updated": "2026-10-24T13:47:07.705Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.name.m3ua23g",
+     "scope": "product",
+     "field": "name",
+     "origin": "manual",
+     "status": "active",
+     "version": 2,
+     "selector": "div.brand-info__range-name",
+     "fingerprint": {
+      "anchor": {
+       "inner": "div.brand-info__range-name",
+       "rel": "after-heading",
+       "text": "Empty heading",
+       "up": 2
+      },
+      "attrs": {},
+      "classes": [
+       "brand-info__range-name"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "brand-info__main"
+        ],
+        "tag": "h1"
+       },
+       {
+        "classes": [
+         "brand-info"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [],
+        "tag": "e2-brand-info"
+       }
+      ],
+      "sig": {},
+      "tag": "div",
+      "textHead": "miss dior",
+      "textLen": 9
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": false
+     },
+     "example": "miss dior",
+     "learnedFrom": "https://www.iciparisxl.be/fr/dior/miss-dior/rose-nroses/p/BP_1061680",
+     "tests": {
+      "ok": 18,
+      "total": 20,
+      "urls": [
+       "https://www.iciparisxl.be/fr/dior/miss-dior/rose-nroses/p/BP_1061680",
+       "https://www.iciparisxl.be/fr/lancome/idole/eau-de-parfum-parfum-rechargeable-femme/p/BP_1036732",
+       "https://www.iciparisxl.be/fr/armani/my-way/eau-de-parfum-parfum-rechargeable-femme/p/BP_1090394",
+       "https://www.iciparisxl.be/fr/rabanne/fame/eau-de-parfum/p/BP_1173052",
+       "https://www.iciparisxl.be/fr/armani/si-passione/eau-de-parfum-parfum-rechargeable-femme/p/BP_1330993",
+       "https://www.iciparisxl.be/fr/lancome/la-vie-est-belle-rose/extraordinaire-eau-de-parfum/p/BP_1290470"
+      ],
+      "at": "2026-10-24T13:47:07.705Z",
+      "recent": "11111111101111111110"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-24T12:01:06.209Z",
+     "updated": "2026-10-24T13:47:07.705Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.brand.m1c0y34y",
+     "scope": "product",
+     "field": "brand",
+     "origin": "manual",
+     "status": "active",
+     "version": 1,
+     "selector": "a.brand-info__brand-name",
+     "fingerprint": {
+      "anchor": {
+       "inner": "a.brand-info__brand-name",
+       "rel": "after-heading",
+       "text": "Empty heading",
+       "up": 2
+      },
+      "attrs": {},
+      "classes": [
+       "brand-info__brand-name"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "brand-info__main"
+        ],
+        "tag": "h1"
+       },
+       {
+        "classes": [
+         "brand-info"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [],
+        "tag": "e2-brand-info"
+       }
+      ],
+      "sig": {},
+      "tag": "a",
+      "textHead": "dior",
+      "textLen": 4
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": false
+     },
+     "example": "dior",
+     "learnedFrom": "https://www.iciparisxl.be/fr/dior/miss-dior/rose-nroses/p/BP_1061680",
+     "tests": {
+      "ok": 18,
+      "total": 20,
+      "urls": [
+       "https://www.iciparisxl.be/fr/dior/miss-dior/rose-nroses/p/BP_1061680",
+       "https://www.iciparisxl.be/fr/lancome/idole/eau-de-parfum-parfum-rechargeable-femme/p/BP_1036732",
+       "https://www.iciparisxl.be/fr/armani/my-way/eau-de-parfum-parfum-rechargeable-femme/p/BP_1090394",
+       "https://www.iciparisxl.be/fr/rabanne/fame/eau-de-parfum/p/BP_1173052",
+       "https://www.iciparisxl.be/fr/armani/si-passione/eau-de-parfum-parfum-rechargeable-femme/p/BP_1330993",
+       "https://www.iciparisxl.be/fr/lancome/la-vie-est-belle-rose/extraordinaire-eau-de-parfum/p/BP_1290470"
+      ],
+      "at": "2026-10-24T13:47:07.705Z",
+      "recent": "11111111101111111110"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-24T12:01:22.960Z",
+     "updated": "2026-10-24T13:47:07.705Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.variants.m1gwo2sl",
+     "scope": "product",
+     "field": "variants",
+     "origin": "manual",
+     "status": "active",
+     "version": 1,
+     "selector": "ul.variants-list",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {
+       "role": "radiogroup"
+      },
+      "classes": [
+       "variants-list"
+      ],
+      "parents": [
+       {
+        "classes": [],
+        "tag": "e2-product-variants-list"
+       },
+       {
+        "classes": [],
+        "tag": "e2-product-multi-variant-selector"
+       },
+       {
+        "classes": [
+         "variant-selector"
+        ],
+        "tag": "e2-product-variant-selector"
+       }
+      ],
+      "sig": {
+       "a": 4,
+       "li": 4
+      },
+      "tag": "ul",
+      "textHead": "30 ML Prix promotionnel 65,44 € Prix de vente conseillé 81,8",
+      "textLen": 262
+     },
+     "extract": {
+      "mode": "list",
+      "multiline": false
+     },
+     "example": "30 ML (65.44) · 50 ML (85.54) · 100 ML (118.61) · 150 ML (142.05)",
+     "learnedFrom": "https://www.iciparisxl.be/fr/dior/miss-dior/rose-nroses/p/BP_1061680",
+     "tests": {
+      "ok": 18,
+      "total": 20,
+      "urls": [
+       "https://www.iciparisxl.be/fr/dior/miss-dior/rose-nroses/p/BP_1061680",
+       "https://www.iciparisxl.be/fr/lancome/idole/eau-de-parfum-parfum-rechargeable-femme/p/BP_1036732",
+       "https://www.iciparisxl.be/fr/armani/my-way/eau-de-parfum-parfum-rechargeable-femme/p/BP_1090394",
+       "https://www.iciparisxl.be/fr/rabanne/fame/eau-de-parfum/p/BP_1173052",
+       "https://www.iciparisxl.be/fr/armani/si-passione/eau-de-parfum-parfum-rechargeable-femme/p/BP_1330993",
+       "https://www.iciparisxl.be/fr/lancome/la-vie-est-belle-rose/extraordinaire-eau-de-parfum/p/BP_1290470"
+      ],
+      "at": "2026-10-24T13:47:07.705Z",
+      "recent": "11111111101111111110"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-24T12:02:10.421Z",
+     "updated": "2026-10-24T13:47:07.705Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.category.m1e3d26x",
+     "scope": "product",
+     "field": "category",
+     "origin": "manual",
+     "status": "active",
+     "version": 1,
+     "selector": ":scope > app-root:nth-of-type(1) > cx-storefront:nth-of-type(1) > main:nth-of-type(1) > cx-page-layout:nth-of-type(1) > e2-pdp-page:nth-of-type(1) > cx-page-layout:nth-of-type(1) > cx-page-slot:nth-of-type(1) > e2-breadcrumb:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(2)",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {
+       "role": "listitem"
+      },
+      "classes": [
+       "breadcrumb-item"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "breadcrumb-container"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [],
+        "tag": "e2-breadcrumb"
+       },
+       {
+        "classes": [
+         "BreadcrumbSPRSlot"
+        ],
+        "tag": "cx-page-slot"
+       }
+      ],
+      "sig": {
+       "a": 1
+      },
+      "tag": "span",
+      "textHead": "Parfum",
+      "textLen": 6
+     },
+     "extract": {
+      "mode": "text",
+      "multiline": false
+     },
+     "example": "Parfum",
+     "learnedFrom": "https://www.iciparisxl.be/fr/dior/miss-dior/rose-nroses/p/BP_1061680",
+     "tests": {
+      "ok": 18,
+      "total": 20,
+      "urls": [
+       "https://www.iciparisxl.be/fr/dior/miss-dior/rose-nroses/p/BP_1061680",
+       "https://www.iciparisxl.be/fr/lancome/idole/eau-de-parfum-parfum-rechargeable-femme/p/BP_1036732",
+       "https://www.iciparisxl.be/fr/armani/my-way/eau-de-parfum-parfum-rechargeable-femme/p/BP_1090394",
+       "https://www.iciparisxl.be/fr/rabanne/fame/eau-de-parfum/p/BP_1173052",
+       "https://www.iciparisxl.be/fr/armani/si-passione/eau-de-parfum-parfum-rechargeable-femme/p/BP_1330993",
+       "https://www.iciparisxl.be/fr/lancome/la-vie-est-belle-rose/extraordinaire-eau-de-parfum/p/BP_1290470"
+      ],
+      "at": "2026-10-24T13:47:07.705Z",
+      "recent": "11111111101111111110"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-24T12:02:34.064Z",
+     "updated": "2026-10-24T13:47:07.705Z",
+     "confirmedAi": false
+    },
+    {
+     "id": "product.image.m1brqhrn",
+     "scope": "product",
+     "field": "image",
+     "origin": "manual",
+     "status": "active",
+     "version": 1,
+     "selector": "div.product-images__thumbs-item",
+     "fingerprint": {
+      "anchor": null,
+      "attrs": {
+       "aria-label": "Aperçu produit 1 sur 1"
+      },
+      "classes": [
+       "product-images__thumbs-item"
+      ],
+      "parents": [
+       {
+        "classes": [
+         "swiper-slide",
+         "slide-1",
+         "slide--last-item"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "swiper-wrapper"
+        ],
+        "tag": "div"
+       },
+       {
+        "classes": [
+         "carousel-container",
+         "swiper",
+         "image-carousel"
+        ],
+        "tag": "div"
+       }
+      ],
+      "sig": {
+       "img": 1
+      },
+      "tag": "div",
+      "textHead": "",
+      "textLen": 0
+     },
+     "extract": {
+      "mode": "image",
+      "multiline": false
+     },
+     "example": "1 image(s) : https://media.iciparisxl.be/medias/prd-front-1116707-954x1192.jpg?context=bWFzdGVyfHByZC1pbWFnZXN8MTI5Nzc3fGltYWdlL2pwZWd8YURrMkwyaGxaQzh4TVRReU16QTFPRGt4T1RRMU5DOXdjbVF0Wm5KdmJuUXRNVEV4T",
+     "learnedFrom": "https://www.iciparisxl.be/fr/dior/miss-dior/rose-nroses/p/BP_1061680",
+     "tests": {
+      "ok": 18,
+      "total": 20,
+      "urls": [
+       "https://www.iciparisxl.be/fr/dior/miss-dior/rose-nroses/p/BP_1061680",
+       "https://www.iciparisxl.be/fr/lancome/idole/eau-de-parfum-parfum-rechargeable-femme/p/BP_1036732",
+       "https://www.iciparisxl.be/fr/armani/my-way/eau-de-parfum-parfum-rechargeable-femme/p/BP_1090394",
+       "https://www.iciparisxl.be/fr/rabanne/fame/eau-de-parfum/p/BP_1173052",
+       "https://www.iciparisxl.be/fr/armani/si-passione/eau-de-parfum-parfum-rechargeable-femme/p/BP_1330993",
+       "https://www.iciparisxl.be/fr/lancome/la-vie-est-belle-rose/extraordinaire-eau-de-parfum/p/BP_1290470"
+      ],
+      "at": "2026-10-24T13:47:07.705Z",
+      "recent": "11111111101111111110"
+     },
+     "stats": {
+      "success": 0,
+      "fail": 0,
+      "consecutive_fails": 0,
+      "last_ok": null,
+      "last_fail": null
+     },
+     "supersedes": null,
+     "created": "2026-10-24T12:03:37.474Z",
+     "updated": "2026-10-24T13:47:07.705Z",
+     "confirmedAi": false
+    }
+   ]
+  }
+ }
+}

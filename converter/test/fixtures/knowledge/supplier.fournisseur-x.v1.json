@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "id": "supplier.fournisseur-x.v1",
+  "displayName": "Fournisseur X (appris)",
+  "provenance": "supplier",
+  "medium": "csv",
+  "platformHint": "eloshon",
+  "entity": "products",
+  "signatures": [
+    {
+      "kind": "structural-hash",
+      "hash": "96a9fd",
+      "columnsPreview": [
+        "Référence",
+        "Désignation",
+        "Prix de vente",
+        "Code EAN",
+        "Stock disponible",
+        "Visuel",
+        "Rayon",
+        "Marque",
+        "Poids (kg)",
+        "Colonne interne"
+      ]
+    }
+  ],
+  "structure": {
+    "unit": "product",
+    "variants": {
+      "selfWhenNone": true
+    }
+  },
+  "routing": {
+    "platform": "eloshon",
+    "entity": "products"
+  },
+  "fields": [
+    {
+      "path": "Référence",
+      "canon": "variants[].sku",
+      "transform": "text",
+      "confidence": "inferred",
+      "source": "user:fixture",
+      "when": "self"
+    },
+    {
+      "path": "Désignation",
+      "canon": "title",
+      "transform": "text",
+      "confidence": "inferred",
+      "source": "user:fixture"
+    },
+    {
+      "path": "Prix de vente",
+      "canon": "variants[].price",
+      "transform": "money",
+      "confidence": "inferred",
+      "source": "user:fixture",
+      "when": "self"
+    },
+    {
+      "path": "Code EAN",
+      "canon": "variants[].barcode",
+      "transform": "text",
+      "confidence": "inferred",
+      "source": "user:fixture",
+      "when": "self"
+    },
+    {
+      "path": "Stock disponible",
+      "canon": "variants[].inventoryQty",
+      "transform": "int",
+      "confidence": "inferred",
+      "source": "user:fixture",
+      "when": "self"
+    },
+    {
+      "path": "Visuel",
+      "canon": "images",
+      "transform": "images_from_urls",
+      "confidence": "inferred",
+      "source": "user:fixture"
+    },
+    {
+      "path": "Rayon",
+      "canon": "categories",
+      "transform": "category_path_split",
+      "confidence": "inferred",
+      "source": "user:fixture",
+      "args": {
+        "sep": ">",
+        "listSep": ","
+      }
+    },
+    {
+      "path": "Marque",
+      "canon": "vendor",
+      "transform": "text",
+      "confidence": "inferred",
+      "source": "user:fixture"
+    },
+    {
+      "path": "Poids (kg)",
+      "canon": "variants[].grams",
+      "transform": "weight_to_grams",
+      "confidence": "inferred",
+      "source": "user:fixture",
+      "args": {
+        "unit": "kg"
+      },
+      "when": "self"
+    }
+  ],
+  "unknownFields": [
+    {
+      "path": "Colonne interne",
+      "observedAt": "2026-09-21T05:21:16.522Z"
+    }
+  ],
+  "invariantsExpected": [],
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "user:fixture",
+      "origin": "learned",
+      "diff": [
+        "learned from a file with 10 columns: 9 mapped, 1 unknown"
+      ]
+    }
+  ]
+}

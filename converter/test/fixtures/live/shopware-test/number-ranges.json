@@ -1,0 +1,408 @@
+[
+  {
+    "extensions": {
+      "foreignKeys": {
+        "extensions": [],
+        "apiAlias": "number_range_foreign_keys_extension"
+      }
+    },
+    "_uniqueIdentifier": "01994d23b03b737884eebbaa3c471c5a",
+    "versionId": null,
+    "translated": {
+      "name": "Invoices",
+      "description": null,
+      "customFields": {}
+    },
+    "createdAt": "2025-09-15T11:30:08.645+00:00",
+    "updatedAt": null,
+    "typeId": "01994d23b03b737884eebbaa39bc1f9c",
+    "global": true,
+    "name": "Invoices",
+    "description": null,
+    "pattern": "{n}",
+    "start": 1000,
+    "type": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "number_range_type_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "01994d23b03b737884eebbaa39bc1f9c",
+      "versionId": null,
+      "translated": {
+        "typeName": "Invoice",
+        "customFields": []
+      },
+      "createdAt": "2025-09-15T11:30:08.571+00:00",
+      "updatedAt": null,
+      "typeName": "Invoice",
+      "technicalName": "document_invoice",
+      "global": false,
+      "numberRanges": null,
+      "numberRangeSalesChannels": null,
+      "translations": null,
+      "customFields": null,
+      "id": "01994d23b03b737884eebbaa39bc1f9c",
+      "apiAlias": "number_range_type"
+    },
+    "numberRangeSalesChannels": [],
+    "state": null,
+    "translations": null,
+    "customFields": null,
+    "id": "01994d23b03b737884eebbaa3c471c5a",
+    "apiAlias": "number_range"
+  },
+  {
+    "extensions": {
+      "foreignKeys": {
+        "extensions": [],
+        "apiAlias": "number_range_foreign_keys_extension"
+      }
+    },
+    "_uniqueIdentifier": "01994d23b03b737884eebbaa3cf6274c",
+    "versionId": null,
+    "translated": {
+      "name": "Cancellations",
+      "description": null,
+      "customFields": {}
+    },
+    "createdAt": "2025-09-15T11:30:08.663+00:00",
+    "updatedAt": null,
+    "typeId": "01994d23b03b737884eebbaa3a265558",
+    "global": true,
+    "name": "Cancellations",
+    "description": null,
+    "pattern": "{n}",
+    "start": 1000,
+    "type": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "number_range_type_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "01994d23b03b737884eebbaa3a265558",
+      "versionId": null,
+      "translated": {
+        "typeName": "Cancellation",
+        "customFields": []
+      },
+      "createdAt": "2025-09-15T11:30:08.590+00:00",
+      "updatedAt": null,
+      "typeName": "Cancellation",
+      "technicalName": "document_storno",
+      "global": false,
+      "numberRanges": null,
+      "numberRangeSalesChannels": null,
+      "translations": null,
+      "customFields": null,
+      "id": "01994d23b03b737884eebbaa3a265558",
+      "apiAlias": "number_range_type"
+    },
+    "numberRangeSalesChannels": [],
+    "state": null,
+    "translations": null,
+    "customFields": null,
+    "id": "01994d23b03b737884eebbaa3cf6274c",
+    "apiAlias": "number_range"
+  },
+  {
+    "extensions": {
+      "foreignKeys": {
+        "extensions": [],
+        "apiAlias": "number_range_foreign_keys_extension"
+      }
+    },
+    "_uniqueIdentifier": "01994d23b03b737884eebbaa3d353822",
+    "versionId": null,
+    "translated": {
+      "name": "Delivery notes",
+      "description": null,
+      "customFields": {}
+    },
+    "createdAt": "2025-09-15T11:30:08.681+00:00",
+    "updatedAt": null,
+    "typeId": "01994d23b03b737884eebbaa3a8912ae",
+    "global": true,
+    "name": "Delivery notes",
+    "description": null,
+    "pattern": "{n}",
+    "start": 1000,
+    "type": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "number_range_type_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "01994d23b03b737884eebbaa3a8912ae",
+      "versionId": null,
+      "translated": {
+        "typeName": "Delivery note",
+        "customFields": []
+      },
+      "createdAt": "2025-09-15T11:30:08.610+00:00",
+      "updatedAt": null,
+      "typeName": "Delivery note",
+      "technicalName": "document_delivery_note",
+      "global": false,
+      "numberRanges": null,
+      "numberRangeSalesChannels": null,
+      "translations": null,
+      "customFields": null,
+      "id": "01994d23b03b737884eebbaa3a8912ae",
+      "apiAlias": "number_range_type"
+    },
+    "numberRangeSalesChannels": [],
+    "state": null,
+    "translations": null,
+    "customFields": null,
+    "id": "01994d23b03b737884eebbaa3d353822",
+    "apiAlias": "number_range"
+  },
+  {
+    "extensions": {
+      "foreignKeys": {
+        "extensions": [],
+        "apiAlias": "number_range_foreign_keys_extension"
+      }
+    },
+    "_uniqueIdentifier": "01994d23b03b737884eebbaa3d422aa4",
+    "versionId": null,
+    "translated": {
+      "name": "Credit notes",
+      "description": null,
+      "customFields": {}
+    },
+    "createdAt": "2025-09-15T11:30:08.700+00:00",
+    "updatedAt": null,
+    "typeId": "01994d23b03b737884eebbaa3b5f65a7",
+    "global": true,
+    "name": "Credit notes",
+    "description": null,
+    "pattern": "{n}",
+    "start": 1000,
+    "type": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "number_range_type_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "01994d23b03b737884eebbaa3b5f65a7",
+      "versionId": null,
+      "translated": {
+        "typeName": "Credit note",
+        "customFields": []
+      },
+      "createdAt": "2025-09-15T11:30:08.627+00:00",
+      "updatedAt": null,
+      "typeName": "Credit note",
+      "technicalName": "document_credit_note",
+      "global": false,
+      "numberRanges": null,
+      "numberRangeSalesChannels": null,
+      "translations": null,
+      "customFields": null,
+      "id": "01994d23b03b737884eebbaa3b5f65a7",
+      "apiAlias": "number_range_type"
+    },
+    "numberRangeSalesChannels": [],
+    "state": null,
+    "translations": null,
+    "customFields": null,
+    "id": "01994d23b03b737884eebbaa3d422aa4",
+    "apiAlias": "number_range"
+  },
+  {
+    "extensions": {
+      "foreignKeys": {
+        "extensions": [],
+        "apiAlias": "number_range_foreign_keys_extension"
+      }
+    },
+    "_uniqueIdentifier": "01994d23b15871bc97fee8465dc5e68a",
+    "versionId": null,
+    "translated": {
+      "name": "Products",
+      "description": null,
+      "customFields": {}
+    },
+    "createdAt": "2025-09-15T11:30:08.912+00:00",
+    "updatedAt": null,
+    "typeId": "01994d23b15871bc97fee8465bd1ee03",
+    "global": true,
+    "name": "Products",
+    "description": null,
+    "pattern": "SW{n}",
+    "start": 10000,
+    "type": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "number_range_type_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "01994d23b15871bc97fee8465bd1ee03",
+      "versionId": null,
+      "translated": {
+        "typeName": "Product",
+        "customFields": []
+      },
+      "createdAt": "2025-09-15T11:30:08.856+00:00",
+      "updatedAt": null,
+      "typeName": "Product",
+      "technicalName": "product",
+      "global": true,
+      "numberRanges": null,
+      "numberRangeSalesChannels": null,
+      "translations": null,
+      "customFields": null,
+      "id": "01994d23b15871bc97fee8465bd1ee03",
+      "apiAlias": "number_range_type"
+    },
+    "numberRangeSalesChannels": [],
+    "state": null,
+    "translations": null,
+    "customFields": null,
+    "id": "01994d23b15871bc97fee8465dc5e68a",
+    "apiAlias": "number_range"
+  },
+  {
+    "extensions": {
+      "foreignKeys": {
+        "extensions": [],
+        "apiAlias": "number_range_foreign_keys_extension"
+      }
+    },
+    "_uniqueIdentifier": "01994d23b15871bc97fee8465de07cf7",
+    "versionId": null,
+    "translated": {
+      "name": "Orders",
+      "description": null,
+      "customFields": {}
+    },
+    "createdAt": "2025-09-15T11:30:08.930+00:00",
+    "updatedAt": null,
+    "typeId": "01994d23b15871bc97fee8465cab166a",
+    "global": true,
+    "name": "Orders",
+    "description": null,
+    "pattern": "{n}",
+    "start": 10000,
+    "type": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "number_range_type_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "01994d23b15871bc97fee8465cab166a",
+      "versionId": null,
+      "translated": {
+        "typeName": "Order",
+        "customFields": []
+      },
+      "createdAt": "2025-09-15T11:30:08.876+00:00",
+      "updatedAt": null,
+      "typeName": "Order",
+      "technicalName": "order",
+      "global": false,
+      "numberRanges": null,
+      "numberRangeSalesChannels": null,
+      "translations": null,
+      "customFields": null,
+      "id": "01994d23b15871bc97fee8465cab166a",
+      "apiAlias": "number_range_type"
+    },
+    "numberRangeSalesChannels": [],
+    "state": null,
+    "translations": null,
+    "customFields": null,
+    "id": "01994d23b15871bc97fee8465de07cf7",
+    "apiAlias": "number_range"
+  },
+  {
+    "extensions": {
+      "foreignKeys": {
+        "extensions": [],
+        "apiAlias": "number_range_foreign_keys_extension"
+      }
+    },
+    "_uniqueIdentifier": "01994d23b15871bc97fee8465e18e748",
+    "versionId": null,
+    "translated": {
+      "name": "Customers",
+      "description": null,
+      "customFields": {}
+    },
+    "createdAt": "2025-09-15T11:30:08.947+00:00",
+    "updatedAt": null,
+    "typeId": "01994d23b15871bc97fee8465d0049db",
+    "global": true,
+    "name": "Customers",
+    "description": null,
+    "pattern": "{n}",
+    "start": 10000,
+    "type": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "number_range_type_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "01994d23b15871bc97fee8465d0049db",
+      "versionId": null,
+      "translated": {
+        "typeName": "Customer",
+        "customFields": []
+      },
+      "createdAt": "2025-09-15T11:30:08.894+00:00",
+      "updatedAt": null,
+      "typeName": "Customer",
+      "technicalName": "customer",
+      "global": false,
+      "numberRanges": null,
+      "numberRangeSalesChannels": null,
+      "translations": null,
+      "customFields": null,
+      "id": "01994d23b15871bc97fee8465d0049db",
+      "apiAlias": "number_range_type"
+    },
+    "numberRangeSalesChannels": [],
+    "state": null,
+    "translations": null,
+    "customFields": null,
+    "id": "01994d23b15871bc97fee8465e18e748",
+    "apiAlias": "number_range"
+  }
+]

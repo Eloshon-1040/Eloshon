@@ -1,0 +1,133 @@
+[
+  {
+    "store_slug": "colruyt",
+    "source_url": "https://x/1",
+    "source_product_id": "C1",
+    "source_category": null,
+    "product_type": null,
+    "name_fr": "Lait 1L",
+    "name_en": "Lait 1L",
+    "description_fr": null,
+    "description_en": null,
+    "storage_info": null,
+    "price": 1.29,
+    "weight_kg": null,
+    "barcode": null,
+    "hs_code": null,
+    "images": [
+      "https://img/1.jpg"
+    ],
+    "image_url": "https://img/1.jpg",
+    "category_slug": null,
+    "color": null,
+    "variants": null,
+    "raw": {
+      "brand": null,
+      "currency": null,
+      "list_price": null,
+      "availability": null,
+      "weight_text": null,
+      "volume_l": null,
+      "pack_count": null,
+      "breadcrumb": [],
+      "sku": "C1",
+      "mpn": null,
+      "gtin": null
+    },
+    "__eligibility": {
+      "status": "accepted",
+      "code": "accepted_default",
+      "reason": "produit valide",
+      "matched": [],
+      "is_alcoholic": false,
+      "requires_cold_chain": null
+    }
+  },
+  {
+    "store_slug": "colruyt",
+    "source_url": "https://x/2",
+    "source_product_id": "C2",
+    "source_category": null,
+    "product_type": null,
+    "name_fr": "Beurre 250g",
+    "name_en": "Beurre 250g",
+    "description_fr": null,
+    "description_en": null,
+    "storage_info": null,
+    "price": 2.49,
+    "weight_kg": null,
+    "barcode": null,
+    "hs_code": null,
+    "images": [],
+    "image_url": null,
+    "category_slug": null,
+    "color": null,
+    "variants": null,
+    "raw": {
+      "brand": null,
+      "currency": null,
+      "list_price": null,
+      "availability": null,
+      "weight_text": null,
+      "volume_l": null,
+      "pack_count": null,
+      "breadcrumb": [],
+      "sku": "C2",
+      "mpn": null,
+      "gtin": null
+    },
+    "__eligibility": {
+      "status": "accepted",
+      "code": "accepted_default",
+      "reason": "produit valide",
+      "matched": [],
+      "is_alcoholic": false,
+      "requires_cold_chain": null
+    }
+  },
+  {
+    "store_slug": "colruyt",
+    "source_url": "https://x/3",
+    "source_product_id": "C3",
+    "source_category": null,
+    "product_type": null,
+    "name_fr": "Café moulu 500g",
+    "name_en": "Café moulu 500g",
+    "description_fr": null,
+    "description_en": null,
+    "storage_info": null,
+    "price": 5.99,
+    "weight_kg": null,
+    "barcode": null,
+    "hs_code": null,
+    "images": [
+      "https://img/3a.jpg",
+      "https://img/3b.jpg"
+    ],
+    "image_url": "https://img/3a.jpg",
+    "category_slug": null,
+    "color": null,
+    "variants": null,
+    "raw": {
+      "brand": null,
+      "currency": null,
+      "list_price": null,
+      "availability": null,
+      "weight_text": null,
+      "volume_l": null,
+      "pack_count": null,
+      "breadcrumb": [],
+      "sku": "C3",
+      "mpn": null,
+      "gtin": null
+    },
+    "__eligibility": {
+      "status": "accepted",
+      "code": "accepted_default",
+      "reason": "produit valide",
+      "matched": [],
+      "is_alcoholic": false,
+      "requires_cold_chain": null
+    }
+  }
+]

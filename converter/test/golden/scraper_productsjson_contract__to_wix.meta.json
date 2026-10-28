@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "sourceFormat": "scraper.products-json.v1",
+  "targetFormat": "wix_products",
+  "counts": {
+    "inputUnits": 2,
+    "outputUnits": 2,
+    "failedUnits": 0,
+    "outputRows": 6
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_wix_option_type"
+    },
+    {
+      "code": "loss_wix_category_hierarchy",
+      "params": {
+        "count": 1
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false
+}

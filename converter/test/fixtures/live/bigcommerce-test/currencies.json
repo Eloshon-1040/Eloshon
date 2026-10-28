@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "currency_code": "EUR",
+    "name": "Euro",
+    "enabled": true,
+    "is_transactional": true,
+    "is_default": true,
+    "auto_update": false,
+    "currency_exchange_rate": "1.0000000000",
+    "token": "€",
+    "token_location": "left",
+    "decimal_places": 2,
+    "decimal_token": ".",
+    "thousands_token": ",",
+    "default_for_country_codes": [
+      "BE"
+    ],
+    "country_iso2": "BE",
+    "last_updated": "2026-09-19T20:49:25Z",
+    "use_default_name": false
+  }
+]

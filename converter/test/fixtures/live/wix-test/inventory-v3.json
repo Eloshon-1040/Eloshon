@@ -1,0 +1,846 @@
+[
+  {
+    "id": "0349665b-366d-417a-aa90-17f3e74332b1",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:48:34.407Z",
+    "updatedDate": "2026-09-21T17:40:39.901Z",
+    "variantId": "ee04a8b1-cd6b-4221-ad7c-06231d0eba1a",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "0488859d-6cc6-4edc-9f97-13bb06a74aed",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Pull de golf en tricot",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "S | Blanc",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "06520931-0b9a-4be5-afff-f9d4560591e4",
+    "revision": "1",
+    "createdDate": "2024-12-29T09:55:50.330Z",
+    "updatedDate": "2026-09-21T17:40:39.536Z",
+    "variantId": "36a2df79-c0cc-4527-bfd5-108f256dadf8",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "522b7572-a159-4d4c-af88-f2e14104de33",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Lunettes rondes",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "Lunettes rondes",
+      "variantSku": "366615376135191",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "081e332b-3b1d-460c-a740-3b70127536de",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:53:19.512Z",
+    "updatedDate": "2026-09-21T17:40:39.060Z",
+    "variantId": "f2edb81a-207e-4601-9545-e0c52fc72711",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "a18a16ca-b346-44f0-a92e-c393a88a9aee",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Nettoyant moussant pour le visage",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "100 ml",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "09fcd219-1e1a-47e5-8871-07902d964a03",
+    "revision": "1",
+    "createdDate": "2025-07-14T15:08:56.989Z",
+    "updatedDate": "2026-09-21T17:40:39.676Z",
+    "variantId": "34795b70-4947-410b-bd37-403a4eae8c88",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "3dc8ff18-0b1e-4792-8bba-4c3aadcdb587",
+    "quantity": 0,
+    "trackQuantity": true,
+    "availabilityStatus": "PREORDER",
+    "preorderInfo": {
+      "enabled": true,
+      "message": "Expected to ship by the end of June",
+      "limit": 2,
+      "counter": 0,
+      "quantity": 2
+    },
+    "product": {
+      "name": "T-shirt col rond",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "S",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "1e591aa2-99d6-48a6-b60a-917f93c0040c",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:48:34.407Z",
+    "updatedDate": "2026-09-21T17:40:39.900Z",
+    "variantId": "a4f8e7e0-35ac-439f-9145-9970f2372068",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "0488859d-6cc6-4edc-9f97-13bb06a74aed",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Pull de golf en tricot",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "S | Vert foncé",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "29705719-34ff-4f37-96a7-a5b6b8de4f7d",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:48:34.407Z",
+    "updatedDate": "2026-09-21T17:40:39.901Z",
+    "variantId": "ebd390cd-b4e1-472c-bad2-918fb69dc268",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "0488859d-6cc6-4edc-9f97-13bb06a74aed",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Pull de golf en tricot",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "S | Bleu foncé",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "365c0436-0544-45b4-8197-825a8ecfe468",
+    "revision": "1",
+    "createdDate": "2025-07-14T15:06:41.749Z",
+    "updatedDate": "2026-09-21T17:40:40.209Z",
+    "variantId": "5acb2bbb-a8d8-4dc4-baf6-7f9b63d7e9c9",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "013e5171-11fc-4f2e-b23a-4953debcedde",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Tote bag minimaliste",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "Blanc",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "37e4e316-0271-4a5f-b95e-d0cc3d23dc08",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:48:34.407Z",
+    "updatedDate": "2026-09-21T17:40:39.900Z",
+    "variantId": "6fee0dfa-9474-42ea-986a-e0ceeb7f02dd",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "0488859d-6cc6-4edc-9f97-13bb06a74aed",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Pull de golf en tricot",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "S | Violet",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "3b158b15-6c0f-4fcd-adf0-0742f9b14a6e",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:48:34.407Z",
+    "updatedDate": "2026-09-21T17:40:39.901Z",
+    "variantId": "9b8e0791-4ed0-487d-b4f8-b62cf8d63337",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "0488859d-6cc6-4edc-9f97-13bb06a74aed",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Pull de golf en tricot",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "M | Blanc",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "488b2e98-2202-409f-8c71-f0318e696bfe",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:48:34.407Z",
+    "updatedDate": "2026-09-21T17:40:39.902Z",
+    "variantId": "f9ddda33-95aa-4d0b-8e9e-44d14359161f",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "0488859d-6cc6-4edc-9f97-13bb06a74aed",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Pull de golf en tricot",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "M | Vert foncé",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "48fa6373-3bca-40ee-9f1d-26642222400d",
+    "revision": "1",
+    "createdDate": "2024-12-26T08:46:21.356Z",
+    "updatedDate": "2026-09-21T17:40:40.037Z",
+    "variantId": "542e77de-872d-4386-b02c-ae8d13629ff2",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "ff923fbc-b24f-43f9-a68a-943242bb0477",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Bouteille en acier inoxydable",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "Bouteille en acier inoxydable",
+      "variantSku": "284215376135191",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "5ef3ee23-2540-4e91-8c22-10f4468d9c2f",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:48:34.407Z",
+    "updatedDate": "2026-09-21T17:40:39.901Z",
+    "variantId": "b1ce7342-1fb6-462a-bb34-425dee8a7d96",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "0488859d-6cc6-4edc-9f97-13bb06a74aed",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Pull de golf en tricot",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "M | Bleu foncé",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "60f46902-fe94-459f-a48d-751471d79a34",
+    "revision": "1",
+    "createdDate": "2025-07-14T15:08:56.989Z",
+    "updatedDate": "2026-09-21T17:40:39.676Z",
+    "variantId": "560d4518-74e1-443a-8c7b-2c978ffe75bb",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "3dc8ff18-0b1e-4792-8bba-4c3aadcdb587",
+    "quantity": 0,
+    "trackQuantity": true,
+    "availabilityStatus": "PREORDER",
+    "preorderInfo": {
+      "enabled": true,
+      "message": "Expected to ship by the end of June",
+      "limit": 2,
+      "counter": 0,
+      "quantity": 2
+    },
+    "product": {
+      "name": "T-shirt col rond",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "M",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "67e58773-fb02-4855-9923-15927f0a1ba2",
+    "revision": "1",
+    "createdDate": "2025-07-14T15:08:56.989Z",
+    "updatedDate": "2026-09-21T17:40:39.677Z",
+    "variantId": "80f60c37-06a2-4253-a442-e29cc07b1ca6",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "3dc8ff18-0b1e-4792-8bba-4c3aadcdb587",
+    "quantity": 0,
+    "trackQuantity": true,
+    "availabilityStatus": "PREORDER",
+    "preorderInfo": {
+      "enabled": true,
+      "message": "Expected to ship by the end of June",
+      "limit": 2,
+      "counter": 0,
+      "quantity": 2
+    },
+    "product": {
+      "name": "T-shirt col rond",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "L",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "68345bc0-5c1e-44ea-9202-bca167040cdb",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:48:34.407Z",
+    "updatedDate": "2026-09-21T17:40:39.902Z",
+    "variantId": "acbf8590-3945-4681-8205-17552a51789d",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "0488859d-6cc6-4edc-9f97-13bb06a74aed",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Pull de golf en tricot",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "M | Violet",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "73028181-63e2-457f-961b-f4b0aa8baf84",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:53:19.512Z",
+    "updatedDate": "2026-09-21T17:40:39.060Z",
+    "variantId": "ac5c9ca8-c2da-4d74-9d6d-98085031da24",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "a18a16ca-b346-44f0-a92e-c393a88a9aee",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Nettoyant moussant pour le visage",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "150 ml",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "7a032530-488c-4982-ac75-ae9ff59c1796",
+    "revision": "1",
+    "createdDate": "2024-12-29T08:33:56.178Z",
+    "updatedDate": "2026-09-21T17:40:39.929Z",
+    "variantId": "a8f492d8-2cd3-4f61-84ad-91b226249d9d",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "80fff80e-9691-4ab3-99fc-0bfa906787c7",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Casquette de baseball",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "Casquette de baseball",
+      "variantSku": "632835642834572",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "7ac4f779-0050-421d-9c90-bfc4657d0ccd",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:48:34.407Z",
+    "updatedDate": "2026-09-21T17:40:39.902Z",
+    "variantId": "eba6c7ca-3299-4d9d-972c-382c7141f272",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "0488859d-6cc6-4edc-9f97-13bb06a74aed",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Pull de golf en tricot",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "L | Blanc",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "80f55bba-ee9d-4219-8ed2-3be8938174ba",
+    "revision": "1",
+    "createdDate": "2024-12-25T07:54:30.610Z",
+    "updatedDate": "2026-09-21T17:40:39.322Z",
+    "variantId": "135b8ffe-b946-445f-8b29-398d1c8edca6",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "aa237909-7d44-49d7-b6fb-e90c6611f076",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Boucles d'oreilles texturées",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "Boucles d'oreilles texturées",
+      "variantSku": "671253175371",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "836362dc-5b9c-4d89-aec3-073d22201284",
+    "revision": "1",
+    "createdDate": "2025-07-14T15:06:41.749Z",
+    "updatedDate": "2026-09-21T17:40:40.209Z",
+    "variantId": "f137b008-4fdf-4060-9e71-5f5429b885ab",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "013e5171-11fc-4f2e-b23a-4953debcedde",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Tote bag minimaliste",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "Violet",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "8b2b931f-123c-41ad-b36e-9456b010282d",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:48:34.407Z",
+    "updatedDate": "2026-09-21T17:40:39.901Z",
+    "variantId": "83dae1ff-87c8-4ccf-8199-715593bf394a",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "0488859d-6cc6-4edc-9f97-13bb06a74aed",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Pull de golf en tricot",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "L | Vert foncé",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "94f3df71-641d-4c28-acc2-8bef4975752a",
+    "revision": "1",
+    "createdDate": "2024-12-29T08:50:37.793Z",
+    "updatedDate": "2026-09-21T17:40:40.431Z",
+    "variantId": "6e7ca5c6-d352-4cce-b0af-a55e5b6a3f11",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "10e29149-2473-4cf6-863f-4bca2a110b0d",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Chaise en bois massif",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "Chaise en bois massif",
+      "variantSku": "36523641234523",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "951cd92b-92e0-463d-bd00-6bd8113f0739",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:48:34.407Z",
+    "updatedDate": "2026-09-21T17:40:39.902Z",
+    "variantId": "c5255c78-f5c4-4fc0-a0cc-ecb9d3e5a5a5",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "0488859d-6cc6-4edc-9f97-13bb06a74aed",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Pull de golf en tricot",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "L | Bleu foncé",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "9b71b7a1-6f0b-42b0-84e1-4473010b6ff6",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:48:34.407Z",
+    "updatedDate": "2026-09-21T17:40:39.900Z",
+    "variantId": "313b179f-32de-41b3-8042-92a7e860ea32",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "0488859d-6cc6-4edc-9f97-13bb06a74aed",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Pull de golf en tricot",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "L | Violet",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "a060fe14-f64b-459f-936d-679d9a7443e0",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:48:34.407Z",
+    "updatedDate": "2026-09-21T17:40:39.902Z",
+    "variantId": "ff5bd5b3-cdf2-4b9b-b589-cd5c825e1d6d",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "0488859d-6cc6-4edc-9f97-13bb06a74aed",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Pull de golf en tricot",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "XL | Blanc",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "c23f3c2e-929a-4e77-98fd-6aa59deae007",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:48:34.407Z",
+    "updatedDate": "2026-09-21T17:40:39.901Z",
+    "variantId": "511207d6-952c-4b00-8ffe-53860d4cdf62",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "0488859d-6cc6-4edc-9f97-13bb06a74aed",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Pull de golf en tricot",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "XL | Vert foncé",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "c347a6e4-cc3e-4f43-9927-f45068e55bd7",
+    "revision": "1",
+    "createdDate": "2024-12-29T11:36:14.485Z",
+    "updatedDate": "2026-09-21T17:40:39.390Z",
+    "variantId": "c60cb815-975b-49aa-9e35-0918d01c006b",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "7ef5f127-5e5d-4ebb-9957-d122ce56daec",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Vase en céramique",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "Vase en céramique",
+      "variantSku": "364215376135191",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "ce42ac6e-84ce-45cb-9556-917c43a77945",
+    "revision": "1",
+    "createdDate": "2024-12-29T10:09:21.256Z",
+    "updatedDate": "2026-09-21T17:40:39.275Z",
+    "variantId": "3e847cc0-80e2-4ef3-8166-7f2e40c98b2a",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "714acb82-f9a7-4ca9-b1f3-6f6930479f37",
+    "quantity": 0,
+    "trackQuantity": true,
+    "availabilityStatus": "PREORDER",
+    "preorderInfo": {
+      "enabled": true,
+      "message": "Expédition prévue d'ici la fin du mois",
+      "limit": 1,
+      "counter": 0,
+      "quantity": 1
+    },
+    "product": {
+      "name": "Sérum hydratant pour les yeux - Précommande",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "Sérum hydratant pour les yeux - Précommande",
+      "variantSku": "364115376135191",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "d4dec4dc-3d7d-44c2-92d0-4f8453c45f13",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:48:34.407Z",
+    "updatedDate": "2026-09-21T17:40:39.901Z",
+    "variantId": "f155c67a-9429-4711-a541-fbc9f0a8fb2a",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "0488859d-6cc6-4edc-9f97-13bb06a74aed",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Pull de golf en tricot",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "XL | Bleu foncé",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "e0909063-7433-4eb4-ad06-40a9a0d85869",
+    "revision": "2",
+    "createdDate": "2026-09-21T18:15:40.981Z",
+    "updatedDate": "2026-09-21T18:20:38.300Z",
+    "variantId": "d31a5787-59b7-4a40-ba17-9ea28606f05d",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "5e07f72a-c6df-4434-b17f-3810ed1a419e",
+    "quantity": 6,
+    "trackQuantity": true,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": true,
+      "message": "Prévu aout",
+      "limit": 8,
+      "counter": 0,
+      "quantity": 8
+    },
+    "product": {
+      "name": "Boloss 400",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5",
+        "657f3b6f-100b-4832-9613-e2efdce23619",
+        "a558efdd-12ef-4c67-96af-f1ff81036fb7"
+      ],
+      "variantName": "Boloss 400",
+      "variantSku": "tEST-cLAUDE",
+      "variantVisible": true,
+      "brand": {
+        "id": "74a7c554-1b65-4ca5-bdb1-69ecfa77b5f2",
+        "name": "ELOSHON"
+      }
+    }
+  },
+  {
+    "id": "e394384c-97e5-46f9-b4e1-0604bf8731a1",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:48:34.407Z",
+    "updatedDate": "2026-09-21T17:40:39.901Z",
+    "variantId": "89dca6a5-2153-487d-ba40-337d6d980127",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "0488859d-6cc6-4edc-9f97-13bb06a74aed",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Pull de golf en tricot",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "XL | Violet",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "f2c2d568-1105-4d7a-a411-6ccc3f2b213f",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:53:19.512Z",
+    "updatedDate": "2026-09-21T17:40:39.060Z",
+    "variantId": "98ad0e17-fd74-40ab-a781-4e3c2a6d214b",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "a18a16ca-b346-44f0-a92e-c393a88a9aee",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Nettoyant moussant pour le visage",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "250 ml",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "f5642852-c066-4f72-ac58-0befbd9f0407",
+    "revision": "1",
+    "createdDate": "2024-12-25T09:43:33.466Z",
+    "updatedDate": "2026-09-21T17:40:40.059Z",
+    "variantId": "19e6b94a-53d2-4203-8ddd-0cfce070df20",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "f60edcb1-ad8f-46a7-8061-a7fb796c26d9",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Diffuseur d'huiles essentielles",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "Diffuseur d'huiles essentielles",
+      "variantSku": "126351351935",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "f770d7a8-eba2-4791-b76f-ec50e3829134",
+    "revision": "1",
+    "createdDate": "2025-07-14T14:53:19.512Z",
+    "updatedDate": "2026-09-21T17:40:39.061Z",
+    "variantId": "704dca13-aa29-4f50-b454-b82b94afe0f1",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "a18a16ca-b346-44f0-a92e-c393a88a9aee",
+    "inStock": true,
+    "trackQuantity": false,
+    "availabilityStatus": "IN_STOCK",
+    "preorderInfo": {
+      "enabled": false
+    },
+    "product": {
+      "name": "Nettoyant moussant pour le visage",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "500 ml",
+      "variantVisible": true
+    }
+  },
+  {
+    "id": "fc01517c-e98a-4645-b15d-33b07ee98083",
+    "revision": "1",
+    "createdDate": "2025-07-14T15:08:56.989Z",
+    "updatedDate": "2026-09-21T17:40:39.677Z",
+    "variantId": "13168d20-7b3e-4ac0-a50f-24db3f70df77",
+    "locationId": "04a7a5c9-ee22-4bf4-ac8c-7c5792912747",
+    "productId": "3dc8ff18-0b1e-4792-8bba-4c3aadcdb587",
+    "quantity": 0,
+    "trackQuantity": true,
+    "availabilityStatus": "PREORDER",
+    "preorderInfo": {
+      "enabled": true,
+      "message": "Expected to ship by the end of June",
+      "limit": 2,
+      "counter": 0,
+      "quantity": 2
+    },
+    "product": {
+      "name": "T-shirt col rond",
+      "directCategoryIds": [
+        "7cf5f728-984f-4b98-aee9-aad1f61104b5"
+      ],
+      "variantName": "XL",
+      "variantVisible": true
+    }
+  }
+]

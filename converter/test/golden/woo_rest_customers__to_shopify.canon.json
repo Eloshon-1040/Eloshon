@@ -1,0 +1,207 @@
+[
+  {
+    "firstName": "Test",
+    "lastName": "Customer 1",
+    "email": "customer1@example.test",
+    "phone": "",
+    "address": {
+      "company": "",
+      "address1": "",
+      "address2": "",
+      "city": "",
+      "province": "",
+      "provinceCode": "",
+      "country": "",
+      "zip": "",
+      "phone": ""
+    },
+    "shipping": null,
+    "acceptsEmail": null,
+    "acceptsSms": null,
+    "note": "",
+    "tags": [],
+    "taxExempt": false,
+    "identity": {
+      "sourceId": "4",
+      "username": "customer1",
+      "timestamps": {
+        "created": "2026-09-21T02:13:10.000Z"
+      }
+    },
+    "sourceExtension": {
+      "woocommerce": {
+        "date_created_local": "2026-09-21T02:13:10",
+        "role": "customer",
+        "is_paying_customer": false,
+        "meta_data": [
+          {
+            "id": 76,
+            "key": "wc_last_active",
+            "value": "1789957343"
+          },
+          {
+            "id": 78,
+            "key": "wc_order_count_wp",
+            "value": "1"
+          },
+          {
+            "id": 79,
+            "key": "wc_money_spent_wp",
+            "value": "615"
+          }
+        ]
+      }
+    },
+    "provenance": {
+      "email": {
+        "platform": "woocommerce",
+        "sourceField": "email",
+        "sourceValue": "customer1@example.test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "firstName": {
+        "platform": "woocommerce",
+        "sourceField": "first_name",
+        "sourceValue": "Test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "lastName": {
+        "platform": "woocommerce",
+        "sourceField": "last_name",
+        "sourceValue": "Customer 1",
+        "transform": "text",
+        "method": "exact"
+      },
+      "phone": {
+        "platform": "woocommerce",
+        "sourceField": "billing.phone",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "woocommerce",
+        "sourceField": "id",
+        "sourceValue": 4,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.username": {
+        "platform": "woocommerce",
+        "sourceField": "username",
+        "sourceValue": "customer1",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.timestamps": {
+        "platform": "woocommerce",
+        "sourceField": "date_created_gmt + date_modified_gmt",
+        "sourceValue": "2026-09-21T02:13:10",
+        "transform": "timestamps",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "firstName": "Test",
+    "lastName": "Customer 2",
+    "email": "customer2@example.test",
+    "phone": "",
+    "address": {
+      "company": "",
+      "address1": "",
+      "address2": "",
+      "city": "",
+      "province": "",
+      "provinceCode": "",
+      "country": "",
+      "zip": "",
+      "phone": ""
+    },
+    "shipping": null,
+    "acceptsEmail": null,
+    "acceptsSms": null,
+    "note": "",
+    "tags": [],
+    "taxExempt": false,
+    "identity": {
+      "sourceId": "2",
+      "username": "customer2",
+      "timestamps": {
+        "created": "2026-09-21T02:05:50.000Z"
+      }
+    },
+    "sourceExtension": {
+      "woocommerce": {
+        "date_created_local": "2026-09-21T02:05:50",
+        "role": "customer",
+        "is_paying_customer": false,
+        "meta_data": [
+          {
+            "id": 80,
+            "key": "wc_order_count_wp",
+            "value": "0"
+          },
+          {
+            "id": 81,
+            "key": "wc_money_spent_wp",
+            "value": "0"
+          }
+        ]
+      }
+    },
+    "provenance": {
+      "email": {
+        "platform": "woocommerce",
+        "sourceField": "email",
+        "sourceValue": "customer2@example.test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "firstName": {
+        "platform": "woocommerce",
+        "sourceField": "first_name",
+        "sourceValue": "Test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "lastName": {
+        "platform": "woocommerce",
+        "sourceField": "last_name",
+        "sourceValue": "Customer 2",
+        "transform": "text",
+        "method": "exact"
+      },
+      "phone": {
+        "platform": "woocommerce",
+        "sourceField": "billing.phone",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "woocommerce",
+        "sourceField": "id",
+        "sourceValue": 2,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.username": {
+        "platform": "woocommerce",
+        "sourceField": "username",
+        "sourceValue": "customer2",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.timestamps": {
+        "platform": "woocommerce",
+        "sourceField": "date_created_gmt + date_modified_gmt",
+        "sourceValue": "2026-09-21T02:05:50",
+        "transform": "timestamps",
+        "method": "exact"
+      }
+    }
+  }
+]

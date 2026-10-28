@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "scraper.products-json.v1",
+  "displayName": "Eloshon Scraper export (products.json)",
+  "provenance": "scraper-generated",
+  "medium": "json",
+  "platformHint": "eloshon",
+  "entity": "products",
+  "version": "scraper products.json — 19-gen, 21-gen and Phase 0 (images[]) generations",
+  "sibling": "scraper.eloshon-export.v1",
+  "signatures": [
+    {
+      "kind": "json-shape",
+      "requiredPaths": ["name_fr", "source_product_id", "source_url", "image_url", "store_slug", "hs_code"],
+      "hintPaths": ["images", "color", "variants", "price", "barcode", "weight_kg", "name_en", "description_fr", "raw.brand", "raw.currency", "raw.list_price", "raw.availability", "raw.sku", "raw.gtin", "__eligibility.status"]
+    }
+  ],
+  "structure": {
+    "unit": "product",
+    "variants": {
+      "inlinePath": "variants",
+      "parseJson": true,
+      "selfWhenNone": true,
+      "siblingsWhen": { "childPath": "code", "matches": "source_product_id" },
+      "keyedBy": "source_product_id"
+    },
+    "options": { "fromVariants": { "name": "type", "value": "name" } },
+    "preserveNested": ["raw"]
+  },
+  "routing": { "platform": "eloshon", "entity": "products" },
+  "fields": [
+    { "path": "name_fr", "canon": "title", "transform": "text", "confidence": "verified-fixture", "notes": "FR is the Scraper's primary language." },
+    { "path": "name_en", "canon": "translations.en.title", "transform": "differs_from", "args": { "other": "name_fr" }, "confidence": "verified-fixture", "notes": "Only when it differs: single-language sources mirror name_fr (contract §3)." },
+    { "path": "description_fr", "canon": "bodyHtml", "transform": "html", "confidence": "verified-fixture", "samplePolicy": "hash-only", "notes": "Plain text by design (cleanText); kept verbatim." },
+    { "path": "description_en", "canon": "translations.en.bodyHtml", "transform": "differs_from", "args": { "other": "description_fr" }, "confidence": "verified-fixture", "samplePolicy": "hash-only" },
+    { "path": "name_fr", "inputs": ["name_fr", "name_en", "source_product_id", "source_url", "name_fr"], "canon": "handle", "transform": "slug_hash", "args": { "baseInputs": 2, "maxLen": 60, "fallback": "produit", "hashLen": 6 }, "confidence": "verified-fixture", "notes": "Same handle as the Scraper CSV's slug_fr (slugify(name) + '-' + shortId(source_product_id | source_url | name)), so a product keeps one handle whichever handoff file is converted." },
+    { "path": "name_fr", "inputs": ["name_fr", "name_en", "source_product_id", "source_url", "name_fr"], "canon": "identity.slug", "transform": "slug_hash", "args": { "baseInputs": 2, "maxLen": 60, "fallback": "produit", "hashLen": 6 }, "confidence": "verified-fixture" },
+    { "path": "source_product_id", "canon": "identity.sourceId", "transform": "string_id", "confidence": "verified-fixture" },
+    { "path": "source_url", "canon": "sourceExtension.eloshon.source_url", "transform": "copy_present", "confidence": "verified-fixture", "notes": "Origin page URL; kept for traceability / redirects." },
+    { "path": "source_category", "canon": "categories", "transform": "category_path_split", "args": { "sep": ">", "listSep": "\n" }, "confidence": "verified-fixture", "notes": "Breadcrumb joined ' > ' (raw.category or raw.breadcrumb)." },
+    { "path": "raw.breadcrumb", "canon": "sourceExtension.eloshon.breadcrumb", "transform": "copy_present", "confidence": "verified-fixture", "notes": "The array behind source_category (redundant, kept verbatim)." },
+    { "path": "category_slug", "canon": "sourceExtension.eloshon.category_slug", "transform": "copy_present", "confidence": "verified-fixture", "notes": "Operator-assigned Luna category slug (Scraper-side concept)." },
+    { "path": "store_slug", "canon": "sourceExtension.eloshon.store_slug", "transform": "copy_present", "confidence": "verified-fixture", "notes": "Scraped store identifier — not the product brand." },
+    { "path": "product_type", "canon": "productType", "transform": "text", "confidence": "verified-fixture" },
+    { "path": "storage_info", "canon": "metafields[]", "transform": "metafield_pair", "args": { "key": "storage_info" }, "confidence": "verified-fixture", "notes": "Reserved (null today); food storage instructions → metafield." },
+    { "path": "is_alcoholic", "canon": "tags[]", "transform": "tag_when_true", "args": { "tag": "alcool" }, "confidence": "verified-fixture", "notes": "Absent on disk until the eligibility layer sets it (contract §2)." },
+    { "path": "is_alcoholic", "canon": "sourceExtension.eloshon.is_alcoholic", "transform": "bool", "confidence": "verified-fixture" },
+    { "path": "color", "canon": "attributesRich[]", "transform": "attribute_single", "args": { "name": "Couleur", "visible": true }, "confidence": "verified-fixture", "notes": "21-gen; descriptive colour (not an axis of variation). Missing key (19-gen) = null." },
+    { "path": "variants", "canon": null, "transform": "ignore", "confidence": "verified-fixture", "notes": "Inline array; objects come from structure.variants (siblingsWhen splits sibling products)." },
+    { "path": "images", "inputs": ["images", "image_url"], "canon": "images", "transform": "first_present", "args": { "as": "images_from_urls" }, "confidence": "verified-fixture", "notes": "The full ordered list (Phase 0). Historical files without images[]: [image_url] or nothing." },
+    { "path": "raw.brand", "canon": "vendor", "transform": "text", "confidence": "verified-fixture" },
+    { "path": "raw.currency", "canon": "sourceExtension.eloshon.currency", "transform": "copy_present", "preservationReason": "no-canon-field", "confidence": "verified-fixture", "notes": "Currency of price: the canon has no currency field (promotable)." },
+    { "path": "raw.list_price", "canon": "sourceExtension.eloshon.list_price", "transform": "copy_present", "confidence": "verified-fixture", "notes": "Verbatim; becomes compareAtPrice only when above the charged price." },
+    { "path": "raw.availability", "canon": "sourceExtension.eloshon.availability", "transform": "copy_present", "preservationReason": "no-canon-field", "confidence": "verified-fixture", "notes": "Verbatim stock statement; an out-of-stock statement also sets inventoryQty 0." },
+    { "path": "raw.weight_text", "canon": "sourceExtension.eloshon.weight_text", "transform": "copy_present", "preservationReason": "no-canon-field", "confidence": "verified-fixture", "notes": "Raw contenance text (mass parsed into weight_kg)." },
+    { "path": "raw.volume_l", "canon": "sourceExtension.eloshon.volume_l", "transform": "copy_present", "preservationReason": "no-canon-field", "confidence": "verified-fixture", "notes": "Non-mass contenance: no canon field." },
+    { "path": "raw.pack_count", "canon": "sourceExtension.eloshon.pack_count", "transform": "copy_present", "preservationReason": "no-canon-field", "confidence": "verified-fixture", "notes": "Non-mass contenance: no canon field." },
+    { "path": "raw.gtin", "canon": "sourceExtension.eloshon.gtin", "transform": "copy_present", "confidence": "verified-fixture", "notes": "Verbatim (pre-GS1 validation); the canonical copy keeps valid lengths only." },
+    { "path": "raw.sku", "canon": "sourceExtension.eloshon.sku", "transform": "copy_present", "confidence": "verified-fixture", "notes": "Product-level verbatim copy: canonical on the product's own variant, kept here when real child variants carry their own codes." },
+    { "path": "raw.mpn", "canon": "sourceExtension.eloshon.mpn", "transform": "copy_present", "confidence": "verified-fixture", "notes": "Same as raw.sku: kept when child variants replace the product's own variant." },
+    { "path": "raw.extractor", "canon": "sourceExtension.eloshon.extractor", "transform": "copy_present", "confidence": "verified-fixture", "notes": "Producing strategy id; absent on some lanes (contract §2)." },
+    { "path": "raw.confidence", "canon": "sourceExtension.eloshon.confidence", "transform": "copy_present", "confidence": "verified-fixture" },
+    { "path": "__eligibility.status", "canon": "status", "transform": "enum_map", "args": { "map": { "to_verify": "draft", "excluded": "draft", "accepted": "active" } }, "confidence": "verified-fixture", "notes": "A product the Scraper routed to review or exclusion is imported as a DRAFT (kept, never published live); without a verdict the canon default (active) stands." },
+    { "path": "__eligibility.status", "canon": "published", "transform": "enum_map", "args": { "map": { "to_verify": false, "excluded": false, "accepted": true } }, "confidence": "verified-fixture" },
+    { "path": "__eligibility", "canon": "sourceExtension.eloshon.eligibility", "transform": "copy_present", "confidence": "verified-fixture", "notes": "Scraper routing verdict { status, code, reason… }, verbatim." },
+
+    { "path": "price", "canon": "variants[].price", "transform": "money", "when": "self", "confidence": "verified-fixture", "notes": "Charged price (currency in raw.currency)." },
+    { "path": "raw.list_price", "inputs": ["raw.list_price", "price"], "canon": "variants[].compareAtPrice", "transform": "money_if_above", "when": "self", "confidence": "verified-fixture", "notes": "Crossed-out 'was' price — only when above the charged price." },
+    { "path": "barcode", "canon": "variants[].barcode", "transform": "text", "when": "self", "confidence": "verified-fixture", "notes": "Length-validated GTIN (8/12/13/14 digits)." },
+    { "path": "weight_kg", "canon": "variants[].grams", "transform": "weight_to_grams", "args": { "unit": "kg" }, "when": "self", "confidence": "verified-fixture" },
+    { "path": "raw.sku", "canon": "variants[].sku", "transform": "text", "when": "self", "confidence": "verified-fixture" },
+    { "path": "raw.mpn", "canon": "variants[].identifiers.mpn", "transform": "text", "when": "self", "confidence": "verified-fixture" },
+    { "path": "raw.gtin", "canon": "variants[].identifiers.gtin", "transform": "text_matching", "args": { "pattern": "^([0-9]{8}|[0-9]{12,14})$" }, "when": "self", "confidence": "verified-fixture", "notes": "Only a GTIN of valid length becomes canonical (the barcode derivation must not promote a malformed one)." },
+    { "path": "hs_code", "canon": "variants[].identifiers.hsCode", "transform": "text", "when": "self", "confidence": "verified-fixture", "notes": "Reserved (null today)." },
+    { "path": "images", "inputs": ["images", "image_url"], "canon": "variants[].imageSrc", "transform": "first_present", "args": { "as": "first" }, "when": "self", "confidence": "verified-fixture" },
+    { "path": "raw.availability", "canon": "variants[].inventoryQty", "transform": "regex_map", "args": { "rules": [ { "pattern": "out ?of ?stock|sold ?out|discontinued|rupture|épuisé|epuise|indisponible|ausverkauft|nicht (mehr )?(lieferbar|verfügbar)|uitverkocht|niet (meer )?(op voorraad|leverbaar)", "flags": "i", "value": 0 } ] }, "when": "self", "confidence": "verified-fixture", "notes": "An out-of-stock statement is a known quantity of 0; any other statement leaves the quantity unknown." },
+
+    { "path": "code", "canon": "variants[].sku", "transform": "text", "when": "child", "confidence": "verified-fixture" },
+    { "path": "image", "canon": "variants[].imageSrc", "transform": "text", "when": "child", "confidence": "verified-fixture" },
+    { "path": "image", "canon": "variants[].images", "transform": "images_from_urls", "when": "child", "confidence": "verified-fixture" },
+    { "path": "type", "canon": "variants[].optionValues", "transform": "option_values_from_typed", "args": { "name": "type", "value": "name" }, "when": "child", "confidence": "verified-fixture" },
+    { "path": "name", "canon": null, "transform": "ignore", "when": "child", "confidence": "verified-fixture", "notes": "Read by option_values_from_typed." },
+    { "path": "price", "canon": "variants[].price", "transform": "inherit_from_parent", "args": { "parentPath": "price", "as": "money" }, "when": "child", "confidence": "verified-fixture" },
+    { "path": "price", "canon": "variants[].compareAtPrice", "transform": "parent_when_absent", "args": { "parentInputs": ["raw.list_price", "price"], "as": "money_if_above" }, "when": "child", "confidence": "verified-fixture", "notes": "A variant that inherits the product price inherits its crossed-out price too; a variant priced on its own does not." },
+    { "path": "barcode", "canon": "variants[].barcode", "transform": "inherit_from_parent", "args": { "parentPath": "barcode", "as": "text" }, "when": "child", "confidence": "verified-fixture" },
+    { "path": "weight_kg", "canon": "variants[].grams", "transform": "inherit_from_parent", "args": { "parentPath": "weight_kg", "as": "weight_to_grams", "asArgs": { "unit": "kg" } }, "when": "child", "confidence": "verified-fixture" },
+    { "path": "availability", "canon": "variants[].inventoryQty", "transform": "regex_map", "args": { "rules": [ { "pattern": "out ?of ?stock|sold ?out|discontinued|rupture|épuisé|epuise|indisponible|ausverkauft|nicht (mehr )?(lieferbar|verfügbar)|uitverkocht|niet (meer )?(op voorraad|leverbaar)", "flags": "i", "value": 0 } ] }, "when": "child", "confidence": "verified-fixture" },
+    { "path": "availability", "canon": "sourceExtension.eloshon.availability", "transform": "copy_present", "preservationReason": "no-canon-field", "when": "child", "confidence": "verified-fixture" },
+    { "path": "url", "canon": "sourceExtension.eloshon.url", "transform": "copy_present", "when": "child", "confidence": "verified-fixture", "notes": "Variant/sibling page URL when the site exposes it." }
+  ],
+  "invariantsExpected": [
+    "A JSON array of NormalizedProduct (jobs/<id>/products.json) or one such object",
+    "images[] exists since Phase 0; older files carry image_url only → [image_url]",
+    "color / variants exist since the 21-column generation; older files lack the keys → null",
+    "raw.extractor / raw.confidence / is_alcoholic may be absent on disk (contract §2)",
+    "variants[].code may be the source_product_id of THIS or ANOTHER product (colourways): siblings → merchandising.related"
+  ],
+  "history": [
+    {
+      "at": "2026-10-04T00:00:00.000Z",
+      "op": "seed",
+      "from": "docs/phase0-products-json-contract.md §2/§6 + core/__tests__/fixtures/products-json-contract.example.json (Scraper)",
+      "origin": "reference",
+      "diff": ["Phase 2 Lot 1: products.json read directly as the normal Scraper → Converter handoff"]
+    }
+  ]
+}

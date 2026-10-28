@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "sourceFormat": "prestashop.customers.webservice.v1",
+  "targetFormat": "shopify_customers",
+  "counts": {
+    "inputUnits": 2,
+    "outputUnits": 2,
+    "failedUnits": 0,
+    "outputRows": 2
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_pw_shopify"
+    },
+    {
+      "code": "loss_purchase_history"
+    },
+    {
+      "code": "loss_shopify_marketing_consent",
+      "params": {
+        "customers": 2,
+        "explicit": 1,
+        "timestamped": 1,
+        "pending": 0
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false,
+  "consentReport": {
+    "customers": 2,
+    "explicitSourceConsent": 1,
+    "withTimestamp": 1,
+    "pending": 0,
+    "optedOut": 1,
+    "unknown": 0,
+    "targetPolicy": "not-subscribed",
+    "requiresReconfirmation": true
+  }
+}

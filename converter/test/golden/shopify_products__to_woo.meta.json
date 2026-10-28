@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "sourceFormat": "shopify_products",
+  "targetFormat": "woo_products_modern",
+  "counts": {
+    "inputUnits": 5,
+    "outputUnits": 4,
+    "failedUnits": 1,
+    "outputRows": 8
+  },
+  "errors": [
+    {
+      "row": 5,
+      "field": "title",
+      "code": "product_no_title"
+    }
+  ],
+  "losses": [
+    {
+      "code": "loss_woo_cost"
+    },
+    {
+      "code": "loss_woo_seo_title"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "woo_parent_skus_generated",
+      "params": {
+        "count": 2
+      }
+    },
+    {
+      "code": "id_removed_woo"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

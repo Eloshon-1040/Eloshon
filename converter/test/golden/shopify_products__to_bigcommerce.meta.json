@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "sourceFormat": "shopify_products",
+  "targetFormat": "bigcommerce_products",
+  "counts": {
+    "inputUnits": 5,
+    "outputUnits": 4,
+    "failedUnits": 1,
+    "outputRows": 12
+  },
+  "errors": [
+    {
+      "row": 5,
+      "field": "title",
+      "code": "product_no_title"
+    }
+  ],
+  "losses": [
+    {
+      "code": "loss_bc_categories_target"
+    },
+    {
+      "code": "loss_bc_images_target"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "id_removed_bc"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

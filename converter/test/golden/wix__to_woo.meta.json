@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "sourceFormat": "wix_products",
+  "targetFormat": "woo_products_modern",
+  "counts": {
+    "inputUnits": 3,
+    "outputUnits": 3,
+    "failedUnits": 0,
+    "outputRows": 5
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_wix_customtext"
+    },
+    {
+      "code": "loss_wix_ribbon"
+    },
+    {
+      "code": "loss_wix_infosections"
+    },
+    {
+      "code": "loss_wix_swatches"
+    },
+    {
+      "code": "loss_woo_cost"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "woo_parent_skus_generated",
+      "params": {
+        "count": 1
+      }
+    },
+    {
+      "code": "id_removed_woo"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

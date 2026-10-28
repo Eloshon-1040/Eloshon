@@ -1,0 +1,35 @@
+{
+  "ok": true,
+  "sourceFormat": "shopware.products.admin-api.v1",
+  "targetFormat": "bigcommerce_products",
+  "counts": {
+    "inputUnits": 3,
+    "outputUnits": 3,
+    "failedUnits": 0,
+    "outputRows": 16
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_bc_categories_target"
+    },
+    {
+      "code": "loss_bc_images_target"
+    },
+    {
+      "code": "loss_bc_price_tiers",
+      "params": {
+        "count": 2,
+        "products": 1,
+        "handles": "SWDEMO10002"
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "code": "id_removed_bc"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

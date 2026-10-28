@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "names": [
+      {
+        "id": 1,
+        "value": "Euro"
+      },
+      {
+        "id": 2,
+        "value": "Euro"
+      }
+    ],
+    "name": "Euro",
+    "symbol": [
+      {
+        "id": 1,
+        "value": "€"
+      },
+      {
+        "id": 2,
+        "value": "€"
+      }
+    ],
+    "iso_code": "EUR",
+    "numeric_iso_code": "978",
+    "precision": 2,
+    "conversion_rate": "1.000000",
+    "deleted": 0,
+    "active": 1,
+    "unofficial": 0,
+    "modified": 0,
+    "pattern": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "names": [
+      {
+        "id": 1,
+        "value": "US Dollar"
+      },
+      {
+        "id": 2,
+        "value": "US Dollar"
+      }
+    ],
+    "name": "US Dollar",
+    "symbol": [
+      {
+        "id": 1,
+        "value": "$"
+      },
+      {
+        "id": 2,
+        "value": "$"
+      }
+    ],
+    "iso_code": "USD",
+    "numeric_iso_code": "840",
+    "precision": 2,
+    "conversion_rate": "1.148628",
+    "deleted": "0",
+    "active": "1",
+    "unofficial": "0",
+    "modified": "0",
+    "pattern": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ]
+  }
+]

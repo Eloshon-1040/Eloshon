@@ -1,0 +1,8 @@
+Handle,Title,Body (HTML),Vendor,Type,Tags,Published,Option1 Name,Option1 Value,Option2 Name,Option2 Value,Option3 Name,Option3 Value,Variant SKU,Variant Grams,Variant Inventory Qty,Variant Price,Variant Compare At Price,Variant Requires Shipping,Variant Taxable,Variant Barcode,Cost per item,Image Src,Image Position,Image Alt Text,Variant Image,SEO Title,SEO Description,Status,Product Category,Matiere (product.metafields.custom.matiere)
+chemise-lin-ecru,Chemise en lin — Écru,<p>Chemise 100% lin.</p>,Atelier Léon,Chemises,"femme, lin, été",true,Taille,38,,,,,CHM-LIN-38,250,12,89.00,,true,true,3401234567890,32.50,https://cdn.example.com/chemise-lin-1.jpg,1,Chemise lin écru,,Chemise en lin écru,Chemise légère en lin.,active,Apparel > Tops,Lin
+chemise-lin-ecru,,,,,,,,40,,,,,CHM-LIN-40,260,4,89.00,,true,true,3401234567891,32.50,,,,,,,active,,
+pull-cotele,Pull côtelé,<p>Pull chaud.</p>,La Maille,Mailles,"hiver, laine",true,Taille,M,Couleur,Noir,,,PULL-M-NOIR,600,8,45.00,59.00,true,true,,,https://cdn.example.com/pull-1.jpg,1,Pull noir,,,,active,,Laine
+pull-cotele,,,,,,,,L,,Noir,,,PULL-L-NOIR,650,2,59.00,,true,true,,,https://cdn.example.com/pull-2.jpg,2,Pull détail,,,,,,
+robe-ete,"Robe d'été, coupe droite","<p>Tissu ""premium"" & doux</p>",Studio,Robes,,true,,,,,,,ROBE-01,300,15,120.00,,true,true,,,https://cdn.example.com/robe.jpg,1,,,,,active,,
+orphan-sku,,,,,,,,,,,,,ORP-1,,,10.00,,,,,,,,,,,,active,,
+archive-modele,Ancien modèle,,Studio,,,false,,,,,,,ARC-1,,0,,,,,,,,,,,,,draft,,

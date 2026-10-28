@@ -1,0 +1,391 @@
+{
+  "schemaVersion": 1,
+  "id": "prestashop.customers.webservice.v1",
+  "displayName": "PrestaShop Customers (Webservice, 9.x)",
+  "provenance": "native-platform",
+  "medium": "json-api",
+  "platformHint": "prestashop",
+  "entity": "customers",
+  "version": "ps-9.x",
+  "signatures": [
+    {
+      "kind": "json-shape",
+      "requiredPaths": [
+        "id",
+        "email",
+        "newsletter",
+        "optin",
+        "id_default_group",
+        "is_guest"
+      ],
+      "hintPaths": [
+        "newsletter_date_add",
+        "siret",
+        "ape",
+        "outstanding_allow_amount"
+      ]
+    }
+  ],
+  "structure": {
+    "unit": "customer",
+    "companions": {
+      "addresses": {
+        "route": "GET /api/addresses?display=full",
+        "keyedByParent": false,
+        "note": "address book keyed by id_customer"
+      },
+      "groups": {
+        "route": "GET /api/groups?display=full",
+        "keyedByParent": false
+      },
+      "countries": {
+        "route": "GET /api/countries?display=full",
+        "keyedByParent": false
+      },
+      "states": {
+        "route": "GET /api/states?display=full",
+        "keyedByParent": false
+      },
+      "languages": {
+        "route": "GET /api/languages?display=full",
+        "keyedByParent": false
+      }
+    }
+  },
+  "invariantsExpected": [
+    "newsletter (1/0) + newsletter_date_add is the marketing consent statement WITH its own timestamp; optin (partner offers) is a DISTINCT consent → preserved, never merged",
+    "passwd / secure_key / reset_password_* / last_passwd_gen are stripped at capture (7.7); ip_registration_newsletter is personal data",
+    "addresses live in their own resource (id_customer); the first one is the default address",
+    "dates are shop-local without zone"
+  ],
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "live:prestashop-test:2026-09-21",
+      "origin": "reference",
+      "diff": [
+        "Phase 7.6: full field map from the local instance (PS 9.0.3); 7.3 consent evidence with timestamp"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "path": "email",
+      "canon": "email",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "firstname",
+      "canon": "firstName",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "lastname",
+      "canon": "lastName",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "address",
+      "transform": "address_from",
+      "args": {
+        "lookup": {
+          "in": "addresses",
+          "key": "id_customer"
+        },
+        "fields": {
+          "company": "company",
+          "address1": "address1",
+          "address2": "address2",
+          "city": "city",
+          "province": "id_state",
+          "provinceCode": "id_state",
+          "country": "id_country",
+          "zip": "postcode",
+          "phone": "phone",
+          "firstName": "firstname",
+          "lastName": "lastname",
+          "label": "alias",
+          "vatNumber": "vat_number",
+          "sourceId": "id"
+        },
+        "nameFrom": [
+          "firstname",
+          "lastname"
+        ],
+        "refs": {
+          "country": {
+            "in": "countries",
+            "key": "id",
+            "pick": "iso_code"
+          },
+          "province": {
+            "in": "states",
+            "key": "id",
+            "pick": "name"
+          },
+          "provinceCode": {
+            "in": "states",
+            "key": "id",
+            "pick": "iso_code"
+          }
+        },
+        "withName": false
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "addresses",
+      "transform": "address_from",
+      "args": {
+        "lookup": {
+          "in": "addresses",
+          "key": "id_customer",
+          "multiple": true
+        },
+        "fields": {
+          "company": "company",
+          "address1": "address1",
+          "address2": "address2",
+          "city": "city",
+          "province": "id_state",
+          "provinceCode": "id_state",
+          "country": "id_country",
+          "zip": "postcode",
+          "phone": "phone",
+          "firstName": "firstname",
+          "lastName": "lastname",
+          "label": "alias",
+          "vatNumber": "vat_number",
+          "sourceId": "id"
+        },
+        "nameFrom": [
+          "firstname",
+          "lastname"
+        ],
+        "refs": {
+          "country": {
+            "in": "countries",
+            "key": "id",
+            "pick": "iso_code"
+          },
+          "province": {
+            "in": "states",
+            "key": "id",
+            "pick": "name"
+          },
+          "provinceCode": {
+            "in": "states",
+            "key": "id",
+            "pick": "iso_code"
+          }
+        },
+        "withName": false,
+        "each": true
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "newsletter",
+      "canon": "marketingConsent.email",
+      "transform": "marketing_consent",
+      "args": {
+        "channel": "email",
+        "optedIn": [
+          "1"
+        ],
+        "optedOut": [
+          "0"
+        ]
+      },
+      "confidence": "verified-live",
+      "inputs": [
+        "newsletter",
+        "newsletter_date_add"
+      ],
+      "notes": "7.3: opted_in only with newsletter_date_add (the source timestamp); evidence only, requiresReconfirmation."
+    },
+    {
+      "path": "optin",
+      "canon": "unmapped",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "preservationReason": "no-canon-field",
+      "notes": "Partner-offers opt-in: a DISTINCT consent (not the newsletter). Reported to the merchant, never merged into marketingConsent."
+    },
+    {
+      "path": "ip_registration_newsletter",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "IP — personal data, not migrated"
+    },
+    {
+      "path": "id",
+      "canon": "identity.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "date_add",
+      "canon": "identity.timestamps.created",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "date_upd",
+      "canon": "identity.timestamps.modified",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "active",
+      "canon": "active",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "is_guest",
+      "canon": "isGuest",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "deleted",
+      "canon": "sourceExtension.prestashop.deleted",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_gender",
+      "canon": "gender",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "1": "male",
+          "2": "female"
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "birthday",
+      "canon": "birthday",
+      "transform": "date_present",
+      "args": {
+        "assumeUtc": false
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "siret",
+      "canon": "company",
+      "transform": "object_map",
+      "args": {
+        "fromSource": true,
+        "fields": {
+          "name": "company",
+          "registrationIds": {
+            "paths": [
+              "siret",
+              "ape"
+            ]
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "ape",
+        "company"
+      ],
+      "notes": "company name + registration ids (siret, ape) as one block"
+    },
+    {
+      "path": "id_default_group",
+      "canon": "group.ref",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_default_group",
+      "canon": "group.name",
+      "transform": "lookup",
+      "args": {
+        "in": "groups",
+        "key": "id",
+        "pick": "name"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_lang",
+      "canon": "locale",
+      "transform": "lookup",
+      "args": {
+        "in": "languages",
+        "key": "id",
+        "pick": "iso_code"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "note",
+      "canon": "note",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "website",
+      "canon": "sourceExtension.prestashop.website",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "outstanding_allow_amount",
+      "canon": "sourceExtension.prestashop.outstanding_allow_amount",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "show_public_prices",
+      "canon": "sourceExtension.prestashop.show_public_prices",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_risk",
+      "canon": "sourceExtension.prestashop.id_risk",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "max_payment_days",
+      "canon": "sourceExtension.prestashop.max_payment_days",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_shop",
+      "canon": "sourceExtension.prestashop.id_shop",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_shop_group",
+      "canon": "sourceExtension.prestashop.id_shop_group",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "associations",
+      "canon": "sourceExtension.prestashop.associations",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    }
+  ]
+}

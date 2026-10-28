@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "sourceFormat": "scraper.products-json.v1",
+  "targetFormat": "bigcommerce_products",
+  "counts": {
+    "inputUnits": 2,
+    "outputUnits": 2,
+    "failedUnits": 0,
+    "outputRows": 3
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_bc_categories_target"
+    },
+    {
+      "code": "loss_bc_images_target"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "id_removed_bc"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

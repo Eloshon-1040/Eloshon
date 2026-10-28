@@ -1,0 +1,28 @@
+[
+  {
+    "id": "7cf5f728-984f-4b98-aee9-aad1f61104b5",
+    "revision": "2",
+    "createdDate": "2026-09-21T17:40:37.521Z",
+    "updatedDate": "2026-09-21T18:15:41.793Z",
+    "name": "All Products",
+    "image": {
+      "id": "da66a9_be37485a4e6647718d2c8c26e1abc119~mv2.jpg",
+      "url": "https://static.wixstatic.com/media/da66a9_be37485a4e6647718d2c8c26e1abc119~mv2.jpg",
+      "height": 2307,
+      "width": 9227,
+      "filename": "22e53e_7ce192b539bc4ccfa676553133f07a78~mv2.jpg",
+      "sizeInBytes": "1543917"
+    },
+    "itemCounter": 13,
+    "visible": true,
+    "parentCategory": {
+      "index": 1
+    },
+    "slug": "all-products",
+    "handle": "online_stores_all_products",
+    "treeReference": {
+      "appNamespace": "@wix/stores"
+    },
+    "managingAppId": "215238eb-22a5-4c36-9e7b-e7c08025e04e"
+  }
+]

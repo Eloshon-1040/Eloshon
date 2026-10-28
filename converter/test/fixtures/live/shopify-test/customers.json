@@ -1,0 +1,141 @@
+[
+  {
+    "id": "gid://shopify/Customer/10658866266445",
+    "email": "customer1@example.test",
+    "firstName": "Test",
+    "lastName": "Customer 1",
+    "phone": "+32 000 00 00 00",
+    "state": "DISABLED",
+    "note": "",
+    "tags": [
+      "belique",
+      "client"
+    ],
+    "createdAt": "2026-09-21T19:09:42Z",
+    "updatedAt": "2026-09-21T19:25:37Z",
+    "locale": "fr",
+    "numberOfOrders": "1",
+    "amountSpent": {
+      "amount": "226.4",
+      "currencyCode": "EUR"
+    },
+    "taxExempt": false,
+    "verifiedEmail": true,
+    "emailMarketingConsent": {
+      "marketingState": "NOT_SUBSCRIBED",
+      "marketingOptInLevel": "SINGLE_OPT_IN",
+      "consentUpdatedAt": null
+    },
+    "smsMarketingConsent": {
+      "marketingState": "NOT_SUBSCRIBED",
+      "marketingOptInLevel": "SINGLE_OPT_IN",
+      "consentUpdatedAt": null,
+      "consentCollectedFrom": "SHOPIFY"
+    },
+    "defaultAddress": {
+      "id": "gid://shopify/MailingAddress/12879658910029?model_name=CustomerAddress",
+      "firstName": "Test",
+      "lastName": "Customer 3",
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": null,
+      "provinceCode": null,
+      "country": "Belgium",
+      "countryCodeV2": "BE",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "name": "Test Customer"
+    },
+    "addresses": [
+      {
+        "id": "gid://shopify/MailingAddress/12879658910029?model_name=CustomerAddress",
+        "firstName": "Test",
+        "lastName": "Customer 4",
+        "company": "Test Co",
+        "address1": "1 Test Street",
+        "address2": "",
+        "city": "Testville",
+        "province": null,
+        "provinceCode": null,
+        "country": "Belgium",
+        "countryCodeV2": "BE",
+        "zip": "1000",
+        "phone": "+32 000 00 00 00"
+      }
+    ],
+    "metafields": {
+      "nodes": []
+    },
+    "lastOrder": {
+      "id": "gid://shopify/Order/8085776466253",
+      "name": "#1001"
+    }
+  },
+  {
+    "id": "gid://shopify/Customer/10659452977485",
+    "email": "customer2@example.test",
+    "firstName": "Test",
+    "lastName": "Customer 2",
+    "phone": null,
+    "state": "DISABLED",
+    "note": "",
+    "tags": [
+      "eloshon-p3-dataset"
+    ],
+    "createdAt": "2026-09-21T21:14:25Z",
+    "updatedAt": "2026-09-21T21:14:25Z",
+    "locale": "fr",
+    "numberOfOrders": "0",
+    "amountSpent": {
+      "amount": "0.0",
+      "currencyCode": "EUR"
+    },
+    "taxExempt": false,
+    "verifiedEmail": true,
+    "emailMarketingConsent": {
+      "marketingState": "SUBSCRIBED",
+      "marketingOptInLevel": "SINGLE_OPT_IN",
+      "consentUpdatedAt": "2026-09-21T20:00:00Z"
+    },
+    "smsMarketingConsent": null,
+    "defaultAddress": {
+      "id": "gid://shopify/MailingAddress/12879988785485?model_name=CustomerAddress",
+      "firstName": "Test",
+      "lastName": "Customer 5",
+      "company": null,
+      "address1": "1 Test Street",
+      "address2": null,
+      "city": "Testville",
+      "province": null,
+      "provinceCode": null,
+      "country": "Belgium",
+      "countryCodeV2": "BE",
+      "zip": "1000",
+      "phone": null,
+      "name": "Test Customer"
+    },
+    "addresses": [
+      {
+        "id": "gid://shopify/MailingAddress/12879988785485?model_name=CustomerAddress",
+        "firstName": "Test",
+        "lastName": "Customer 6",
+        "company": null,
+        "address1": "1 Test Street",
+        "address2": null,
+        "city": "Testville",
+        "province": null,
+        "provinceCode": null,
+        "country": "Belgium",
+        "countryCodeV2": "BE",
+        "zip": "1000",
+        "phone": null
+      }
+    ],
+    "metafields": {
+      "nodes": []
+    },
+    "lastOrder": null
+  }
+]

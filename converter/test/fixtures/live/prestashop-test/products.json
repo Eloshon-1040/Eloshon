@@ -1,0 +1,5170 @@
+[
+  {
+    "id": 22,
+    "id_manufacturer": 0,
+    "id_supplier": 0,
+    "id_category_default": 2,
+    "new": null,
+    "cache_default_attribute": 0,
+    "id_default_image": "",
+    "id_default_combination": 0,
+    "id_tax_rules_group": 0,
+    "position_in_category": 22,
+    "manufacturer_name": false,
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "ELO-EDGE-ACCENT",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.000000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 0,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "standard",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": null,
+    "low_stock_alert": "0",
+    "price": "12.900000",
+    "wholesale_price": "0.000000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "404",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:50:33",
+    "date_upd": "2026-09-21 03:50:33",
+    "pack_stock_type": 0,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": "Éclair Chocolât Café"
+      },
+      {
+        "id": 2,
+        "value": "Éclair Chocolât Café"
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": "Éclair Chocolât Café"
+      },
+      {
+        "id": 2,
+        "value": "Éclair Chocolât Café"
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "edge-accent"
+      },
+      {
+        "id": 2,
+        "value": "edge-accent"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Éclair Chocolât Café"
+      },
+      {
+        "id": 2,
+        "value": "Éclair Chocolât Café"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>Café crème &amp; chocolât — délicieux!</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Café crème &amp; chocolât — délicieux!</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "Éclair Chocolât Café"
+      },
+      {
+        "id": 2,
+        "value": "Éclair Chocolât Café"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 61,
+          "id_product_attribute": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": 23,
+    "id_manufacturer": 0,
+    "id_supplier": 0,
+    "id_category_default": 2,
+    "new": null,
+    "cache_default_attribute": 0,
+    "id_default_image": "",
+    "id_default_combination": 0,
+    "id_tax_rules_group": 0,
+    "position_in_category": 23,
+    "manufacturer_name": false,
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "ELO-EDGE-DISABLED",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.000000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 0,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "standard",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": null,
+    "low_stock_alert": "0",
+    "price": "9.990000",
+    "wholesale_price": "0.000000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "0",
+    "redirect_type": "404",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "0",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:50:34",
+    "date_upd": "2026-09-21 03:50:34",
+    "pack_stock_type": 0,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": "Disabled test product"
+      },
+      {
+        "id": 2,
+        "value": "Produit désactivé"
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": "Disabled test product"
+      },
+      {
+        "id": 2,
+        "value": "Produit désactivé"
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "edge-disabled"
+      },
+      {
+        "id": 2,
+        "value": "edge-disabled"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Disabled test product"
+      },
+      {
+        "id": 2,
+        "value": "Produit désactivé"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>Should not appear on front.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Ne doit pas apparaître.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "Disabled test product"
+      },
+      {
+        "id": 2,
+        "value": "Produit désactivé"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 62,
+          "id_product_attribute": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": 24,
+    "id_manufacturer": 0,
+    "id_supplier": 0,
+    "id_category_default": 2,
+    "new": null,
+    "cache_default_attribute": 0,
+    "id_default_image": "",
+    "id_default_combination": 0,
+    "id_tax_rules_group": 0,
+    "position_in_category": 24,
+    "manufacturer_name": false,
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "ELO-EDGE-NOIMG",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.000000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 0,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "standard",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": null,
+    "low_stock_alert": "0",
+    "price": "3.500000",
+    "wholesale_price": "0.000000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "404",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:50:34",
+    "date_upd": "2026-09-21 03:50:34",
+    "pack_stock_type": 0,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": "No image product"
+      },
+      {
+        "id": 2,
+        "value": "Produit sans image"
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": "No image product"
+      },
+      {
+        "id": 2,
+        "value": "Produit sans image"
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "edge-noimg"
+      },
+      {
+        "id": 2,
+        "value": "edge-noimg"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "No image product"
+      },
+      {
+        "id": 2,
+        "value": "Produit sans image"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>No image attached.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Aucune image.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "No image product"
+      },
+      {
+        "id": 2,
+        "value": "Produit sans image"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 63,
+          "id_product_attribute": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "id_manufacturer": 0,
+    "id_supplier": 0,
+    "id_category_default": 2,
+    "new": null,
+    "cache_default_attribute": 0,
+    "id_default_image": "",
+    "id_default_combination": 0,
+    "id_tax_rules_group": 0,
+    "position_in_category": 25,
+    "manufacturer_name": false,
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.000000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 0,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "standard",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": null,
+    "low_stock_alert": "0",
+    "price": "1.000000",
+    "wholesale_price": "0.000000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "404",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:50:35",
+    "date_upd": "2026-09-21 03:50:35",
+    "pack_stock_type": 0,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": "Product without SKU"
+      },
+      {
+        "id": 2,
+        "value": "Produit sans SKU"
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": "Product without SKU"
+      },
+      {
+        "id": 2,
+        "value": "Produit sans SKU"
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "edge-noref"
+      },
+      {
+        "id": 2,
+        "value": "edge-noref"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Product without SKU"
+      },
+      {
+        "id": 2,
+        "value": "Produit sans SKU"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>Reference/SKU intentionally blank.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Référence volontairement vide.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "Product without SKU"
+      },
+      {
+        "id": 2,
+        "value": "Produit sans SKU"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 64,
+          "id_product_attribute": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": 26,
+    "id_manufacturer": 0,
+    "id_supplier": 0,
+    "id_category_default": 2,
+    "new": null,
+    "cache_default_attribute": 0,
+    "id_default_image": "",
+    "id_default_combination": 0,
+    "id_tax_rules_group": 0,
+    "position_in_category": 26,
+    "manufacturer_name": false,
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "ELO-EDGE-PRICE",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.000000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 0,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "standard",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": null,
+    "low_stock_alert": "0",
+    "price": "19.995000",
+    "wholesale_price": "0.000000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "404",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:50:35",
+    "date_upd": "2026-09-21 03:50:35",
+    "pack_stock_type": 0,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": "Sub-cent priced product"
+      },
+      {
+        "id": 2,
+        "value": "Produit prix sub-centime"
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": "Sub-cent priced product"
+      },
+      {
+        "id": 2,
+        "value": "Produit prix sub-centime"
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "edge-decimals"
+      },
+      {
+        "id": 2,
+        "value": "edge-decimals"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Sub-cent priced product"
+      },
+      {
+        "id": 2,
+        "value": "Produit prix sub-centime"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>Price stored with 3 decimals.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Prix avec 3 décimales.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "Sub-cent priced product"
+      },
+      {
+        "id": 2,
+        "value": "Produit prix sub-centime"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 65,
+          "id_product_attribute": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "id_manufacturer": 0,
+    "id_supplier": 0,
+    "id_category_default": 2,
+    "new": null,
+    "cache_default_attribute": 0,
+    "id_default_image": "",
+    "id_default_combination": 0,
+    "id_tax_rules_group": 0,
+    "position_in_category": 27,
+    "manufacturer_name": false,
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "ELO-EDGE-HTML",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.000000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 0,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "standard",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": null,
+    "low_stock_alert": "0",
+    "price": "24.000000",
+    "wholesale_price": "0.000000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "404",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:50:36",
+    "date_upd": "2026-09-21 03:50:36",
+    "pack_stock_type": 0,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": "Rich HTML description"
+      },
+      {
+        "id": 2,
+        "value": "Description HTML riche"
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": "Rich HTML description"
+      },
+      {
+        "id": 2,
+        "value": "Description HTML riche"
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "edge-html"
+      },
+      {
+        "id": 2,
+        "value": "edge-html"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Rich HTML description"
+      },
+      {
+        "id": 2,
+        "value": "Description HTML riche"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<h2>Features</h2><ul><li>Item &amp; one</li><li>Item &lt;two&gt;</li></ul>"
+      },
+      {
+        "id": 2,
+        "value": "<h2>Caractéristiques</h2><ul><li>Élément &amp; un</li><li>Élément &lt;deux&gt;</li></ul>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "Rich HTML description"
+      },
+      {
+        "id": 2,
+        "value": "Description HTML riche"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 66,
+          "id_product_attribute": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": 1,
+    "id_manufacturer": 1,
+    "id_supplier": 1,
+    "id_category_default": 4,
+    "new": null,
+    "cache_default_attribute": 1,
+    "id_default_image": 1,
+    "id_default_combination": 1,
+    "id_tax_rules_group": 1,
+    "position_in_category": 1,
+    "manufacturer_name": "Studio Design",
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "demo_1",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "2000000000039",
+    "isbn": "9782000000009",
+    "upc": "200000000004",
+    "mpn": "MPN-DEMO-1",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "combinations",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "23.900000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "301-category",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "hummingbird-printed-t-shirt"
+      },
+      {
+        "id": 2,
+        "value": "hummingbird-printed-t-shirt"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Hummingbird printed t-shirt"
+      },
+      {
+        "id": 2,
+        "value": "Hummingbird printed t-shirt"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>Symbol of lightness and delicacy, the hummingbird evokes curiosity and joy. Studio Design' PolyFaune collection features classic products with colorful patterns, inspired by the traditional japanese origamis. To wear with a chino or jeans. The sublimation textile printing process provides an exceptional color rendering and a color, guaranteed overtime.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Symbol of lightness and delicacy, the hummingbird evokes curiosity and joy. Studio Design' PolyFaune collection features classic products with colorful patterns, inspired by the traditional japanese origamis. To wear with a chino or jeans. The sublimation textile printing process provides an exceptional color rendering and a color, guaranteed overtime.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>Regular fit, round neckline, short sleeves. Made of extra long staple pima cotton. </p>\r\n<p></p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Regular fit, round neckline, short sleeves. Made of extra long staple pima cotton. </p>\r\n<p></p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        }
+      ],
+      "images": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        }
+      ],
+      "combinations": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        },
+        {
+          "id": 5
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 7
+        },
+        {
+          "id": 8
+        }
+      ],
+      "product_option_values": [
+        {
+          "id": 1
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 11
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        }
+      ],
+      "product_features": [
+        {
+          "id": 1,
+          "id_feature_value": 4
+        },
+        {
+          "id": 2,
+          "id_feature_value": 8
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 1,
+          "id_product_attribute": 0
+        },
+        {
+          "id": 20,
+          "id_product_attribute": 1
+        },
+        {
+          "id": 21,
+          "id_product_attribute": 2
+        },
+        {
+          "id": 22,
+          "id_product_attribute": 3
+        },
+        {
+          "id": 23,
+          "id_product_attribute": 4
+        },
+        {
+          "id": 24,
+          "id_product_attribute": 5
+        },
+        {
+          "id": 25,
+          "id_product_attribute": 6
+        },
+        {
+          "id": 26,
+          "id_product_attribute": 7
+        },
+        {
+          "id": 27,
+          "id_product_attribute": 8
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "id_manufacturer": 1,
+    "id_supplier": 1,
+    "id_category_default": 5,
+    "new": null,
+    "cache_default_attribute": 9,
+    "id_default_image": 21,
+    "id_default_combination": 9,
+    "id_tax_rules_group": 1,
+    "position_in_category": 1,
+    "manufacturer_name": "Studio Design",
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "demo_3",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "combinations",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "35.900000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "404",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "brown-bear-printed-sweater"
+      },
+      {
+        "id": 2,
+        "value": "brown-bear-printed-sweater"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Hummingbird printed sweater"
+      },
+      {
+        "id": 2,
+        "value": "Hummingbird printed sweater"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>Studio Design' PolyFaune collection features classic products with colorful patterns, inspired by the traditional japanese origamis. To wear with a chino or jeans. The sublimation textile printing process provides an exceptional color rendering and a color, guaranteed overtime.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Studio Design' PolyFaune collection features classic products with colorful patterns, inspired by the traditional japanese origamis. To wear with a chino or jeans. The sublimation textile printing process provides an exceptional color rendering and a color, guaranteed overtime.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>Regular fit, round neckline, long sleeves. 100% cotton, brushed inner side for extra comfort. </p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Regular fit, round neckline, long sleeves. 100% cotton, brushed inner side for extra comfort. </p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 5
+        }
+      ],
+      "images": [
+        {
+          "id": 21
+        }
+      ],
+      "combinations": [
+        {
+          "id": 10
+        },
+        {
+          "id": 11
+        },
+        {
+          "id": 12
+        },
+        {
+          "id": 9
+        }
+      ],
+      "product_option_values": [
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        },
+        {
+          "id": 1
+        }
+      ],
+      "product_features": [
+        {
+          "id": 1,
+          "id_feature_value": 4
+        },
+        {
+          "id": 2,
+          "id_feature_value": 7
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 2,
+          "id_product_attribute": 0
+        },
+        {
+          "id": 28,
+          "id_product_attribute": 9
+        },
+        {
+          "id": 29,
+          "id_product_attribute": 10
+        },
+        {
+          "id": 30,
+          "id_product_attribute": 11
+        },
+        {
+          "id": 31,
+          "id_product_attribute": 12
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "id_manufacturer": 2,
+    "id_supplier": 1,
+    "id_category_default": 9,
+    "new": null,
+    "cache_default_attribute": 13,
+    "id_default_image": 3,
+    "id_default_combination": 13,
+    "id_tax_rules_group": 1,
+    "position_in_category": 1,
+    "manufacturer_name": "Graphic Corner",
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "demo_6",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "combinations",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "29.000000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "301-category",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "the-best-is-yet-to-come-framed-poster"
+      },
+      {
+        "id": 2,
+        "value": "the-best-is-yet-to-come-framed-poster"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "The best is yet to come' Framed poster"
+      },
+      {
+        "id": 2,
+        "value": "The best is yet to come' Framed poster"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>The best is yet to come! Give your walls a voice with a framed poster. This aesthethic, optimistic poster will look great in your desk or in an open-space office. Painted wooden frame with passe-partout for more depth.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>The best is yet to come! Give your walls a voice with a framed poster. This aesthethic, optimistic poster will look great in your desk or in an open-space office. Painted wooden frame with passe-partout for more depth.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>Printed on rigid matt paper and smooth surface.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Printed on rigid matt paper and smooth surface.</p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 9
+        }
+      ],
+      "images": [
+        {
+          "id": 3
+        }
+      ],
+      "combinations": [
+        {
+          "id": 14
+        },
+        {
+          "id": 15
+        },
+        {
+          "id": 13
+        }
+      ],
+      "product_option_values": [
+        {
+          "id": 20
+        },
+        {
+          "id": 21
+        },
+        {
+          "id": 19
+        }
+      ],
+      "product_features": [
+        {
+          "id": 1,
+          "id_feature_value": 6
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 3,
+          "id_product_attribute": 0
+        },
+        {
+          "id": 32,
+          "id_product_attribute": 13
+        },
+        {
+          "id": 33,
+          "id_product_attribute": 14
+        },
+        {
+          "id": 34,
+          "id_product_attribute": 15
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "id_manufacturer": 2,
+    "id_supplier": 1,
+    "id_category_default": 9,
+    "new": null,
+    "cache_default_attribute": 16,
+    "id_default_image": 4,
+    "id_default_combination": 16,
+    "id_tax_rules_group": 1,
+    "position_in_category": 2,
+    "manufacturer_name": "Graphic Corner",
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "demo_5",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "combinations",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "29.000000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "404",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "the-adventure-begins-framed-poster"
+      },
+      {
+        "id": 2,
+        "value": "the-adventure-begins-framed-poster"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "The adventure begins Framed poster"
+      },
+      {
+        "id": 2,
+        "value": "The adventure begins Framed poster"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>The best is yet to come! Give your walls a voice with a framed poster. This aesthethic, optimistic poster will look great in your desk or in an open-space office. Painted wooden frame with passe-partout for more depth.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>The best is yet to come! Give your walls a voice with a framed poster. This aesthethic, optimistic poster will look great in your desk or in an open-space office. Painted wooden frame with passe-partout for more depth.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>Printed on rigid matt finish and smooth surface.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Printed on rigid matt finish and smooth surface.</p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 9
+        }
+      ],
+      "images": [
+        {
+          "id": 4
+        }
+      ],
+      "combinations": [
+        {
+          "id": 17
+        },
+        {
+          "id": 18
+        },
+        {
+          "id": 16
+        }
+      ],
+      "product_option_values": [
+        {
+          "id": 20
+        },
+        {
+          "id": 21
+        },
+        {
+          "id": 19
+        }
+      ],
+      "product_features": [
+        {
+          "id": 1,
+          "id_feature_value": 6
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 4,
+          "id_product_attribute": 0
+        },
+        {
+          "id": 35,
+          "id_product_attribute": 16
+        },
+        {
+          "id": 36,
+          "id_product_attribute": 17
+        },
+        {
+          "id": 37,
+          "id_product_attribute": 18
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "id_manufacturer": 2,
+    "id_supplier": 1,
+    "id_category_default": 9,
+    "new": null,
+    "cache_default_attribute": 19,
+    "id_default_image": 5,
+    "id_default_combination": 19,
+    "id_tax_rules_group": 1,
+    "position_in_category": 3,
+    "manufacturer_name": "Graphic Corner",
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "demo_7",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "combinations",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "29.000000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "301-category",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "today-is-a-good-day-framed-poster"
+      },
+      {
+        "id": 2,
+        "value": "today-is-a-good-day-framed-poster"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Today is a good day Framed poster"
+      },
+      {
+        "id": 2,
+        "value": "Today is a good day Framed poster"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>The best is yet to come! Give your walls a voice with a framed poster. This aesthethic, optimistic poster will look great in your desk or in an open-space office. Painted wooden frame with passe-partout for more depth.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>The best is yet to come! Give your walls a voice with a framed poster. This aesthethic, optimistic poster will look great in your desk or in an open-space office. Painted wooden frame with passe-partout for more depth.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>Printed on rigid paper with matt finish and smooth surface.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Printed on rigid paper with matt finish and smooth surface.</p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 9
+        }
+      ],
+      "images": [
+        {
+          "id": 5
+        }
+      ],
+      "combinations": [
+        {
+          "id": 20
+        },
+        {
+          "id": 21
+        },
+        {
+          "id": 19
+        }
+      ],
+      "product_option_values": [
+        {
+          "id": 20
+        },
+        {
+          "id": 21
+        },
+        {
+          "id": 19
+        }
+      ],
+      "product_features": [
+        {
+          "id": 1,
+          "id_feature_value": 6
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 5,
+          "id_product_attribute": 0
+        },
+        {
+          "id": 38,
+          "id_product_attribute": 19
+        },
+        {
+          "id": 39,
+          "id_product_attribute": 20
+        },
+        {
+          "id": 40,
+          "id_product_attribute": 21
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "id_manufacturer": 1,
+    "id_supplier": 2,
+    "id_category_default": 8,
+    "new": null,
+    "cache_default_attribute": 0,
+    "id_default_image": 6,
+    "id_default_combination": 0,
+    "id_tax_rules_group": 1,
+    "position_in_category": 1,
+    "manufacturer_name": "Studio Design",
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "demo_11",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "standard",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "11.900000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "301-category",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "mug-the-best-is-yet-to-come"
+      },
+      {
+        "id": 2,
+        "value": "mug-the-best-is-yet-to-come"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Mug The best is yet to come"
+      },
+      {
+        "id": 2,
+        "value": "Mug The best is yet to come"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>The best is yet to come! Start the day off right with a positive thought. 8,2cm diameter / 9,5cm height / 0.43kg. Dishwasher-proof.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>The best is yet to come! Start the day off right with a positive thought. 8,2cm diameter / 9,5cm height / 0.43kg. Dishwasher-proof.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>White Ceramic Mug, 325ml.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>White Ceramic Mug, 325ml.</p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 8
+        }
+      ],
+      "images": [
+        {
+          "id": 6
+        }
+      ],
+      "product_features": [
+        {
+          "id": 1,
+          "id_feature_value": 3
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 6,
+          "id_product_attribute": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "id_manufacturer": 1,
+    "id_supplier": 2,
+    "id_category_default": 8,
+    "new": null,
+    "cache_default_attribute": 0,
+    "id_default_image": 7,
+    "id_default_combination": 0,
+    "id_tax_rules_group": 1,
+    "position_in_category": 2,
+    "manufacturer_name": "Studio Design",
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "demo_12",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "standard",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "11.900000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "301-category",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "mug-the-adventure-begins"
+      },
+      {
+        "id": 2,
+        "value": "mug-the-adventure-begins"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Mug The adventure begins"
+      },
+      {
+        "id": 2,
+        "value": "Mug The adventure begins"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>The adventure begins with a cup of coffee. Set out to conquer the day! 8,2cm diameter / 9,5cm height / 0.43kg. Dishwasher-proof.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>The adventure begins with a cup of coffee. Set out to conquer the day! 8,2cm diameter / 9,5cm height / 0.43kg. Dishwasher-proof.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>White Ceramic Mug. 325ml</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>White Ceramic Mug. 325ml</p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 8
+        }
+      ],
+      "images": [
+        {
+          "id": 7
+        }
+      ],
+      "product_features": [
+        {
+          "id": 1,
+          "id_feature_value": 3
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 7,
+          "id_product_attribute": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "id_manufacturer": 1,
+    "id_supplier": 2,
+    "id_category_default": 8,
+    "new": null,
+    "cache_default_attribute": 0,
+    "id_default_image": 8,
+    "id_default_combination": 0,
+    "id_tax_rules_group": 1,
+    "position_in_category": 3,
+    "manufacturer_name": "Studio Design",
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "demo_13",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "standard",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "11.900000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "404",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "mug-today-is-a-good-day"
+      },
+      {
+        "id": 2,
+        "value": "mug-today-is-a-good-day"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Mug Today is a good day"
+      },
+      {
+        "id": 2,
+        "value": "Mug Today is a good day"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>Add an optimistic touch to your morning coffee and start the day in a good mood! 8,2cm diameter / 9,5cm height / 0.43kg. Dishwasher-proof.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Add an optimistic touch to your morning coffee and start the day in a good mood! 8,2cm diameter / 9,5cm height / 0.43kg. Dishwasher-proof.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>White Ceramic Mug. 325ml</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>White Ceramic Mug. 325ml</p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 8
+        }
+      ],
+      "images": [
+        {
+          "id": 8
+        }
+      ],
+      "product_features": [
+        {
+          "id": 1,
+          "id_feature_value": 3
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 8,
+          "id_product_attribute": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "id_manufacturer": 1,
+    "id_supplier": 2,
+    "id_category_default": 8,
+    "new": null,
+    "cache_default_attribute": 22,
+    "id_default_image": 9,
+    "id_default_combination": 22,
+    "id_tax_rules_group": 1,
+    "position_in_category": 4,
+    "manufacturer_name": "Studio Design",
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "demo_15",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "combinations",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "18.900000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "301-category",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "mountain-fox-cushion"
+      },
+      {
+        "id": 2,
+        "value": "mountain-fox-cushion"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Mountain fox cushion"
+      },
+      {
+        "id": 2,
+        "value": "Mountain fox cushion"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>The mountain fox cushion will add a graphic and colorful touch to your sofa, armchair or bed. Create a modern and zen atmosphere that inspires relaxation. Cover 100% cotton, machine washable at 60° / Filling 100% hypoallergenic polyester.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>The mountain fox cushion will add a graphic and colorful touch to your sofa, armchair or bed. Create a modern and zen atmosphere that inspires relaxation. Cover 100% cotton, machine washable at 60° / Filling 100% hypoallergenic polyester.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>Cushion with removable cover and invisible zip on the back. 32x32cm</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Cushion with removable cover and invisible zip on the back. 32x32cm</p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 8
+        }
+      ],
+      "images": [
+        {
+          "id": 9
+        },
+        {
+          "id": 10
+        }
+      ],
+      "combinations": [
+        {
+          "id": 23
+        },
+        {
+          "id": 22
+        }
+      ],
+      "product_option_values": [
+        {
+          "id": 11
+        },
+        {
+          "id": 8
+        }
+      ],
+      "product_features": [
+        {
+          "id": 1,
+          "id_feature_value": 1
+        },
+        {
+          "id": 2,
+          "id_feature_value": 9
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 9,
+          "id_product_attribute": 0
+        },
+        {
+          "id": 41,
+          "id_product_attribute": 22
+        },
+        {
+          "id": 42,
+          "id_product_attribute": 23
+        }
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "id_manufacturer": 1,
+    "id_supplier": 2,
+    "id_category_default": 8,
+    "new": null,
+    "cache_default_attribute": 24,
+    "id_default_image": 11,
+    "id_default_combination": 24,
+    "id_tax_rules_group": 1,
+    "position_in_category": 5,
+    "manufacturer_name": "Studio Design",
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "demo_16",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "combinations",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "18.900000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "301-category",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "brown-bear-cushion"
+      },
+      {
+        "id": 2,
+        "value": "brown-bear-cushion"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Brown bear cushion"
+      },
+      {
+        "id": 2,
+        "value": "Brown bear cushion"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>The brown bear cushion will add a graphic and colorful touch to your sofa, armchair or bed. Create a modern and zen atmosphere that inspires relaxation. Cover 100% cotton, machine washable at 60° / Filling 100% hypoallergenic polyester.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>The brown bear cushion will add a graphic and colorful touch to your sofa, armchair or bed. Create a modern and zen atmosphere that inspires relaxation. Cover 100% cotton, machine washable at 60° / Filling 100% hypoallergenic polyester.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>Cushion with removable cover and invisible zip on the back. 32x32cm</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Cushion with removable cover and invisible zip on the back. 32x32cm</p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 8
+        }
+      ],
+      "images": [
+        {
+          "id": 11
+        },
+        {
+          "id": 12
+        }
+      ],
+      "combinations": [
+        {
+          "id": 25
+        },
+        {
+          "id": 24
+        }
+      ],
+      "product_option_values": [
+        {
+          "id": 11
+        },
+        {
+          "id": 8
+        }
+      ],
+      "product_features": [
+        {
+          "id": 1,
+          "id_feature_value": 1
+        },
+        {
+          "id": 2,
+          "id_feature_value": 9
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 10,
+          "id_product_attribute": 0
+        },
+        {
+          "id": 43,
+          "id_product_attribute": 24
+        },
+        {
+          "id": 44,
+          "id_product_attribute": 25
+        }
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "id_manufacturer": 1,
+    "id_supplier": 2,
+    "id_category_default": 8,
+    "new": null,
+    "cache_default_attribute": 26,
+    "id_default_image": 13,
+    "id_default_combination": 26,
+    "id_tax_rules_group": 1,
+    "position_in_category": 6,
+    "manufacturer_name": "Studio Design",
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "demo_17",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "combinations",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "18.900000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "301-category",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "hummingbird-cushion"
+      },
+      {
+        "id": 2,
+        "value": "hummingbird-cushion"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Hummingbird cushion"
+      },
+      {
+        "id": 2,
+        "value": "Hummingbird cushion"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>The hummingbird cushion will add a graphic and colorful touch to your sofa, armchair or bed. Create a modern and zen atmosphere that inspires relaxation. Cover 100% cotton, machine washable at 60° / Filling 100% hypoallergenic polyester.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>The hummingbird cushion will add a graphic and colorful touch to your sofa, armchair or bed. Create a modern and zen atmosphere that inspires relaxation. Cover 100% cotton, machine washable at 60° / Filling 100% hypoallergenic polyester.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>Cushion with removable cover and invisible zip on the back. 32x32cm</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Cushion with removable cover and invisible zip on the back. 32x32cm</p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 8
+        }
+      ],
+      "images": [
+        {
+          "id": 13
+        },
+        {
+          "id": 14
+        }
+      ],
+      "combinations": [
+        {
+          "id": 27
+        },
+        {
+          "id": 26
+        }
+      ],
+      "product_option_values": [
+        {
+          "id": 11
+        },
+        {
+          "id": 8
+        }
+      ],
+      "product_features": [
+        {
+          "id": 1,
+          "id_feature_value": 1
+        },
+        {
+          "id": 2,
+          "id_feature_value": 9
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 11,
+          "id_product_attribute": 0
+        },
+        {
+          "id": 45,
+          "id_product_attribute": 26
+        },
+        {
+          "id": 46,
+          "id_product_attribute": 27
+        }
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "id_manufacturer": 2,
+    "id_supplier": 2,
+    "id_category_default": 9,
+    "new": null,
+    "cache_default_attribute": 0,
+    "id_default_image": 15,
+    "id_default_combination": 0,
+    "id_tax_rules_group": 1,
+    "position_in_category": 4,
+    "manufacturer_name": "Graphic Corner",
+    "quantity": 0,
+    "type": "virtual",
+    "id_shop_default": 1,
+    "reference": "demo_18",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "1",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "virtual",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "9.000000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "301-category",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "mountain-fox-vector-graphics"
+      },
+      {
+        "id": 2,
+        "value": "mountain-fox-vector-graphics"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Mountain fox - Vector graphics"
+      },
+      {
+        "id": 2,
+        "value": "Mountain fox - Vector graphics"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>You have a custom printing creative project? The vector graphic Mountain fox illustration can be used for printing purpose on any support, without size limitation. </p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>You have a custom printing creative project? The vector graphic Mountain fox illustration can be used for printing purpose on any support, without size limitation. </p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>Vector graphic, format: svg. Download for personal, private and non-commercial use.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Vector graphic, format: svg. Download for personal, private and non-commercial use.</p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 9
+        }
+      ],
+      "images": [
+        {
+          "id": 15
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 12,
+          "id_product_attribute": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "id_manufacturer": 2,
+    "id_supplier": 2,
+    "id_category_default": 9,
+    "new": null,
+    "cache_default_attribute": 0,
+    "id_default_image": 16,
+    "id_default_combination": 0,
+    "id_tax_rules_group": 1,
+    "position_in_category": 5,
+    "manufacturer_name": "Graphic Corner",
+    "quantity": 0,
+    "type": "virtual",
+    "id_shop_default": 1,
+    "reference": "demo_19",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "1",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "virtual",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "9.000000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "301-category",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "brown-bear-vector-graphics"
+      },
+      {
+        "id": 2,
+        "value": "brown-bear-vector-graphics"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Brown bear - Vector graphics"
+      },
+      {
+        "id": 2,
+        "value": "Brown bear - Vector graphics"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>You have a custom printing creative project? The vector graphic Mountain fox illustration can be used for printing purpose on any support, without size limitation. </p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>You have a custom printing creative project? The vector graphic Mountain fox illustration can be used for printing purpose on any support, without size limitation. </p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>Vector graphic, format: svg. Download for personal, private and non-commercial use.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Vector graphic, format: svg. Download for personal, private and non-commercial use.</p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 9
+        }
+      ],
+      "images": [
+        {
+          "id": 16
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 13,
+          "id_product_attribute": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "id_manufacturer": 2,
+    "id_supplier": 2,
+    "id_category_default": 9,
+    "new": null,
+    "cache_default_attribute": 0,
+    "id_default_image": 17,
+    "id_default_combination": 0,
+    "id_tax_rules_group": 1,
+    "position_in_category": 6,
+    "manufacturer_name": "Graphic Corner",
+    "quantity": 0,
+    "type": "virtual",
+    "id_shop_default": 1,
+    "reference": "demo_20",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "1",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "virtual",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "9.000000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "301-category",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "hummingbird-vector-graphics"
+      },
+      {
+        "id": 2,
+        "value": "hummingbird-vector-graphics"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Hummingbird - Vector graphics"
+      },
+      {
+        "id": 2,
+        "value": "Hummingbird - Vector graphics"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>You have a custom printing creative project? The vector graphic Mountain fox illustration can be used for printing purpose on any support, without size limitation. </p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>You have a custom printing creative project? The vector graphic Mountain fox illustration can be used for printing purpose on any support, without size limitation. </p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>Vector graphic, format: svg. Download for personal, private and non-commercial use.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Vector graphic, format: svg. Download for personal, private and non-commercial use.</p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 9
+        }
+      ],
+      "images": [
+        {
+          "id": 17
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 14,
+          "id_product_attribute": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "id_manufacturer": 0,
+    "id_supplier": 2,
+    "id_category_default": 8,
+    "new": null,
+    "cache_default_attribute": 0,
+    "id_default_image": 23,
+    "id_default_combination": 0,
+    "id_tax_rules_group": 1,
+    "position_in_category": 7,
+    "manufacturer_name": false,
+    "quantity": 0,
+    "type": "pack",
+    "id_shop_default": 1,
+    "reference": "demo_21",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "2000000000053",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "1",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "pack",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "35.000000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "301-category",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "pack-mug-framed-poster"
+      },
+      {
+        "id": 2,
+        "value": "pack-mug-framed-poster"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Pack Mug + Framed poster"
+      },
+      {
+        "id": 2,
+        "value": "Pack Mug + Framed poster"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>Mug The Adventure Begins + Framed poster Today is a good day 40x60cm </p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Mug The Adventure Begins + Framed poster Today is a good day 40x60cm </p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 9
+        }
+      ],
+      "images": [
+        {
+          "id": 23
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 15,
+          "id_product_attribute": 0
+        }
+      ],
+      "product_bundle": [
+        {
+          "id": 5,
+          "id_product_attribute": 19,
+          "quantity": 5
+        },
+        {
+          "id": 7,
+          "id_product_attribute": 0,
+          "quantity": 5
+        }
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "id_manufacturer": 2,
+    "id_supplier": 2,
+    "id_category_default": 7,
+    "new": null,
+    "cache_default_attribute": 28,
+    "id_default_image": 18,
+    "id_default_combination": 28,
+    "id_tax_rules_group": 1,
+    "position_in_category": 1,
+    "manufacturer_name": "Graphic Corner",
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "demo_8",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "combinations",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "12.900000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "301-category",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "mountain-fox-notebook"
+      },
+      {
+        "id": 2,
+        "value": "mountain-fox-notebook"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Mountain fox notebook"
+      },
+      {
+        "id": 2,
+        "value": "Mountain fox notebook"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>The Mountain fox notebook is the best option to write down your most ingenious ideas. At work, at home or when traveling, its endearing design and manufacturing quality will make you feel like writing! 90 gsm paper / double spiral binding.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>The Mountain fox notebook is the best option to write down your most ingenious ideas. At work, at home or when traveling, its endearing design and manufacturing quality will make you feel like writing! 90 gsm paper / double spiral binding.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>120 sheets notebook with hard cover made of recycled cardboard. 16x22cm</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>120 sheets notebook with hard cover made of recycled cardboard. 16x22cm</p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 7
+        }
+      ],
+      "images": [
+        {
+          "id": 18
+        }
+      ],
+      "combinations": [
+        {
+          "id": 29
+        },
+        {
+          "id": 30
+        },
+        {
+          "id": 31
+        },
+        {
+          "id": 28
+        }
+      ],
+      "product_option_values": [
+        {
+          "id": 23
+        },
+        {
+          "id": 24
+        },
+        {
+          "id": 25
+        },
+        {
+          "id": 22
+        }
+      ],
+      "product_features": [
+        {
+          "id": 1,
+          "id_feature_value": 5
+        },
+        {
+          "id": 2,
+          "id_feature_value": 10
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 16,
+          "id_product_attribute": 0
+        },
+        {
+          "id": 47,
+          "id_product_attribute": 28
+        },
+        {
+          "id": 48,
+          "id_product_attribute": 29
+        },
+        {
+          "id": 49,
+          "id_product_attribute": 30
+        },
+        {
+          "id": 50,
+          "id_product_attribute": 31
+        }
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "id_manufacturer": 2,
+    "id_supplier": 2,
+    "id_category_default": 7,
+    "new": null,
+    "cache_default_attribute": 32,
+    "id_default_image": 19,
+    "id_default_combination": 32,
+    "id_tax_rules_group": 1,
+    "position_in_category": 2,
+    "manufacturer_name": "Graphic Corner",
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "demo_9",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "combinations",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "12.900000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "301-category",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "brown-bear-notebook"
+      },
+      {
+        "id": 2,
+        "value": "brown-bear-notebook"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Brown bear notebook"
+      },
+      {
+        "id": 2,
+        "value": "Brown bear notebook"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>The Mountain fox notebook is the best option to write down your most ingenious ideas. At work, at home or when traveling, its endearing design and manufacturing quality will make you feel like writing! 90 gsm paper / double spiral binding.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>The Mountain fox notebook is the best option to write down your most ingenious ideas. At work, at home or when traveling, its endearing design and manufacturing quality will make you feel like writing! 90 gsm paper / double spiral binding.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>120 sheets notebook with hard cover made of recycled cardboard. 16x22cm</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>120 sheets notebook with hard cover made of recycled cardboard. 16x22cm</p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 7
+        }
+      ],
+      "images": [
+        {
+          "id": 19
+        }
+      ],
+      "combinations": [
+        {
+          "id": 33
+        },
+        {
+          "id": 34
+        },
+        {
+          "id": 35
+        },
+        {
+          "id": 32
+        }
+      ],
+      "product_option_values": [
+        {
+          "id": 23
+        },
+        {
+          "id": 24
+        },
+        {
+          "id": 25
+        },
+        {
+          "id": 22
+        }
+      ],
+      "product_features": [
+        {
+          "id": 1,
+          "id_feature_value": 5
+        },
+        {
+          "id": 2,
+          "id_feature_value": 10
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 17,
+          "id_product_attribute": 0
+        },
+        {
+          "id": 51,
+          "id_product_attribute": 32
+        },
+        {
+          "id": 52,
+          "id_product_attribute": 33
+        },
+        {
+          "id": 53,
+          "id_product_attribute": 34
+        },
+        {
+          "id": 54,
+          "id_product_attribute": 35
+        }
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "id_manufacturer": 2,
+    "id_supplier": 2,
+    "id_category_default": 7,
+    "new": null,
+    "cache_default_attribute": 36,
+    "id_default_image": 20,
+    "id_default_combination": 36,
+    "id_tax_rules_group": 1,
+    "position_in_category": 3,
+    "manufacturer_name": "Graphic Corner",
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "demo_10",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "combinations",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "12.900000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 0,
+    "text_fields": 0,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "301-category",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "hummingbird-notebook"
+      },
+      {
+        "id": 2,
+        "value": "hummingbird-notebook"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Hummingbird notebook"
+      },
+      {
+        "id": 2,
+        "value": "Hummingbird notebook"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>The Mountain fox notebook is the best option to write down your most ingenious ideas. At work, at home or when traveling, its endearing design and manufacturing quality will make you feel like writing! 90 gsm paper / double spiral binding.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>The Mountain fox notebook is the best option to write down your most ingenious ideas. At work, at home or when traveling, its endearing design and manufacturing quality will make you feel like writing! 90 gsm paper / double spiral binding.</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>120 sheets notebook with hard cover made of recycled cardboard. 16x22cm</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>120 sheets notebook with hard cover made of recycled cardboard. 16x22cm</p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 7
+        }
+      ],
+      "images": [
+        {
+          "id": 20
+        }
+      ],
+      "combinations": [
+        {
+          "id": 37
+        },
+        {
+          "id": 38
+        },
+        {
+          "id": 39
+        },
+        {
+          "id": 36
+        }
+      ],
+      "product_option_values": [
+        {
+          "id": 23
+        },
+        {
+          "id": 24
+        },
+        {
+          "id": 25
+        },
+        {
+          "id": 22
+        }
+      ],
+      "product_features": [
+        {
+          "id": 1,
+          "id_feature_value": 5
+        },
+        {
+          "id": 2,
+          "id_feature_value": 10
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 18,
+          "id_product_attribute": 0
+        },
+        {
+          "id": 55,
+          "id_product_attribute": 36
+        },
+        {
+          "id": 56,
+          "id_product_attribute": 37
+        },
+        {
+          "id": 57,
+          "id_product_attribute": 38
+        },
+        {
+          "id": 58,
+          "id_product_attribute": 39
+        }
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "id_manufacturer": 1,
+    "id_supplier": 2,
+    "id_category_default": 8,
+    "new": null,
+    "cache_default_attribute": 0,
+    "id_default_image": 22,
+    "id_default_combination": 0,
+    "id_tax_rules_group": 1,
+    "position_in_category": 8,
+    "manufacturer_name": "Studio Design",
+    "quantity": 0,
+    "type": "simple",
+    "id_shop_default": 1,
+    "reference": "demo_14",
+    "supplier_reference": "",
+    "location": "",
+    "width": "0.000000",
+    "height": "0.000000",
+    "depth": "0.000000",
+    "weight": "0.300000",
+    "quantity_discount": "0",
+    "ean13": "",
+    "isbn": "",
+    "upc": "",
+    "mpn": "",
+    "cache_is_pack": "0",
+    "cache_has_attachments": "0",
+    "is_virtual": "0",
+    "state": 1,
+    "additional_delivery_times": 1,
+    "delivery_in_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "delivery_out_stock": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "product_type": "standard",
+    "on_sale": "0",
+    "online_only": "0",
+    "ecotax": "0.000000",
+    "minimal_quantity": 1,
+    "low_stock_threshold": 0,
+    "low_stock_alert": "0",
+    "price": "13.900000",
+    "wholesale_price": "5.490000",
+    "unity": "",
+    "unit_price": "0.000000",
+    "unit_price_ratio": "0.000000",
+    "additional_shipping_cost": "0.000000",
+    "customizable": 1,
+    "text_fields": 1,
+    "uploadable_files": 0,
+    "active": "1",
+    "redirect_type": "301-category",
+    "id_type_redirected": 0,
+    "available_for_order": "1",
+    "available_date": "0000-00-00",
+    "show_condition": "0",
+    "condition": "new",
+    "show_price": "1",
+    "indexed": "1",
+    "visibility": "both",
+    "advanced_stock_management": "0",
+    "date_add": "2026-09-21 03:39:34",
+    "date_upd": "2026-09-21 03:39:34",
+    "pack_stock_type": 3,
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "customizable-mug"
+      },
+      {
+        "id": 2,
+        "value": "customizable-mug"
+      }
+    ],
+    "name": [
+      {
+        "id": 1,
+        "value": "Customizable mug"
+      },
+      {
+        "id": 2,
+        "value": "Customizable mug"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>Customize your mug with the text of your choice. A mood, a message, a quote... It's up to you! Maximum number of characters: ---</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Customize your mug with the text of your choice. A mood, a message, a quote... It's up to you! Maximum number of characters: ---</p>"
+      }
+    ],
+    "description_short": [
+      {
+        "id": 1,
+        "value": "<p>White Ceramic Mug. 325ml</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>White Ceramic Mug. 325ml</p>"
+      }
+    ],
+    "available_now": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "available_later": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 8
+        }
+      ],
+      "images": [
+        {
+          "id": 22
+        }
+      ],
+      "product_features": [
+        {
+          "id": 1,
+          "id_feature_value": 3
+        }
+      ],
+      "stock_availables": [
+        {
+          "id": 19,
+          "id_product_attribute": 0
+        }
+      ]
+    }
+  }
+]

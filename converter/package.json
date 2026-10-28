@@ -1,0 +1,81 @@
+{
+  "name": "eloshon-converter",
+  "productName": "Eloshon Converter",
+  "version": "0.1.13",
+  "private": true,
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "type": "module",
+  "description": "Application autonome de conversion de catalogues e-commerce (CSV). Générique : Shopify, WooCommerce, Wix, BigCommerce, BigBuy.",
+  "author": "Eloshon",
+  "main": "app/main.mjs",
+  "scripts": {
+    "build:engine": "node scripts/build-engine.mjs",
+    "sync:design": "node scripts/sync-design.mjs",
+    "typecheck": "tsc --noEmit",
+    "verify-core": "node scripts/verify-core.mjs",
+    "verify-controller": "node scripts/verify-controller.mjs",
+    "gen:fixtures": "node scripts/gen-fixtures.mjs",
+    "gen:golden": "node scripts/build-engine.mjs && node scripts/gen-golden.mjs",
+    "test": "node scripts/build-engine.mjs && node --test test/*.test.mjs core/knowledge-proposal/tests/*.test.mjs",
+    "bench": "node scripts/build-engine.mjs && node scripts/bench.mjs",
+    "check": "npm run typecheck && npm run test",
+    "start": "npm run build:engine && electron .",
+    "selftest": "npm run build:engine && electron . --selftest",
+    "e2e": "npm run build:engine && electron . --e2e",
+    "dist": "npm run sync:design && npm run build:engine && electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^44.4.1",
+    "electron-builder": "^26.15.3",
+    "typescript": "^5.5.3"
+  },
+  "build": {
+    "appId": "com.eloshon.converter",
+    "productName": "Eloshon Converter",
+    "directories": {
+      "output": "out",
+      "buildResources": "build"
+    },
+    "files": [
+      "app/**/*",
+      "core/dist/**/*",
+      "core/knowledge-ref/**/*",
+      "core/knowledge-proposal/*.mjs",
+      "core/vendor/**/*",
+      "core/directions.mjs",
+      "lib/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": false,
+      "artifactName": "Eloshon-Converter-Setup-${version}.exe"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "build/icon.png",
+      "category": "public.app-category.productivity"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "icon": "build/icon.png",
+      "category": "Utility"
+    }
+  }
+}

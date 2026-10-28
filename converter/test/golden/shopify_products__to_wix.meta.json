@@ -1,0 +1,32 @@
+{
+  "ok": true,
+  "sourceFormat": "shopify_products",
+  "targetFormat": "wix_products",
+  "counts": {
+    "inputUnits": 5,
+    "outputUnits": 4,
+    "failedUnits": 1,
+    "outputRows": 12
+  },
+  "errors": [
+    {
+      "row": 5,
+      "field": "title",
+      "code": "product_no_title"
+    }
+  ],
+  "losses": [
+    {
+      "code": "loss_wix_option_type"
+    },
+    {
+      "code": "loss_wix_category_hierarchy",
+      "params": {
+        "count": 1
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false
+}

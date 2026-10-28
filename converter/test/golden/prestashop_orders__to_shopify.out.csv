@@ -1,0 +1,15 @@
+Name,Email,Financial Status,Fulfillment Status,Currency,Subtotal,Shipping,Taxes,Total,Discount Code,Discount Amount,Created at,Lineitem quantity,Lineitem name,Lineitem price,Lineitem sku,Billing Name,Billing Company,Billing Address1,Billing Address2,Billing City,Billing Zip,Billing Province,Billing Country,Billing Phone,Shipping Name,Shipping Company,Shipping Address1,Shipping Address2,Shipping City,Shipping Zip,Shipping Province,Shipping Country,Payment Method,Notes,Note Attributes
+,customer2@example.test,pending,unfulfilled,EUR,59.80,8.40,1.40,68.20,,0.00,2026-09-21 03:39:36,1,Hummingbird printed t-shirt,23.90,demo_1,Test Customer 6,Test Co,1 Test Street,,Testville,1000,FL,US,+32 000 00 00 00,Test Customer 6,Test Co,1 Test Street,,Testville,1000,FL,US,Payment by check,,"source_order_number: XKBKNABJK
+source_order_id: 1"
+,,,,,,,,,,,,1,Hummingbird printed sweater,35.90,demo_3,,,,,,,,,,,,,,,,,,,,
+,customer2@example.test,paid,unfulfilled,EUR,169.90,0.00,0.00,169.90,,0.00,2026-09-21 03:39:36,2,The adventure begins Framed poster,79.00,demo_5,Test Customer 6,Test Co,1 Test Street,,Testville,1000,FL,US,+32 000 00 00 00,Test Customer 6,Test Co,1 Test Street,,Testville,1000,FL,US,Payment by check,,"source_order_number: OHSATSERP
+source_order_id: 2
+source_invoice_number: #IN000001"
+,,,,,,,,,,,,1,Mug Today is a good day,11.90,demo_13,,,,,,,,,,,,,,,,,,,,
+,customer2@example.test,pending,unfulfilled,EUR,12.90,8.40,1.40,21.30,,0.00,2026-09-21 03:39:36,1,Mountain fox notebook Style : Ruled,12.90,demo_8,Test Customer 6,Test Co,1 Test Street,,Testville,1000,FL,US,+32 000 00 00 00,Test Customer 6,Test Co,1 Test Street,,Testville,1000,FL,US,Payment by check,,"source_order_number: UOYEVOLI
+source_order_id: 3"
+,customer2@example.test,paid,unfulfilled,EUR,12.90,8.40,1.40,21.30,,0.00,2026-09-21 03:39:36,1,Mountain fox notebook Style : Plain,12.90,demo_8,Test Customer 6,Test Co,1 Test Street,,Testville,1000,FL,US,+32 000 00 00 00,Test Customer 6,Test Co,1 Test Street,,Testville,1000,FL,US,Payment by check,,"source_order_number: FFATNOMMJ
+source_order_id: 4
+source_invoice_number: #IN000002"
+,customer2@example.test,pending,unfulfilled,EUR,18.90,8.40,1.40,27.30,,0.00,2026-09-21 03:39:36,1,Brown bear cushion Color : Black,18.90,demo_16,Test Customer 6,Test Co,1 Test Street,,Testville,1000,FL,US,+32 000 00 00 00,Test Customer 6,Test Co,1 Test Street,,Testville,1000,FL,US,Bank wire,,"source_order_number: KHWLILZLL
+source_order_id: 5"

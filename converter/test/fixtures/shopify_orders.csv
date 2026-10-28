@@ -1,0 +1,4 @@
+Name,Email,Financial Status,Fulfillment Status,Currency,Subtotal,Shipping,Taxes,Total,Discount Code,Discount Amount,Created at,Lineitem quantity,Lineitem name,Lineitem price,Lineitem sku,Billing Name,Billing Company,Billing Address1,Billing Address2,Billing City,Billing Zip,Billing Province,Billing Country,Billing Phone,Shipping Name,Shipping Company,Shipping Address1,Shipping Address2,Shipping City,Shipping Zip,Shipping Province,Shipping Country,Payment Method,Notes
+#1001,camille.durand@example.com,paid,fulfilled,EUR,134.00,5.90,23.32,163.22,,,2026-09-10T14:02:00Z,1,Chemise en lin,89.00,CHM-LIN-38,Camille Durand,,12 rue des Fleurs,,Lyon,69001,,FR,,Camille Durand,,12 rue des Fleurs,,Lyon,69001,,FR,Carte,Livrer avant vendredi
+#1001,,,,,,,,,,,,1,Ceinture cuir,45.00,CEINTURE-TAN,,,,,,,,,,,,,,,,,,,
+#1002,john.smith@example.com,pending,unfulfilled,EUR,24.00,0.00,0.00,24.00,,,2026-09-11T09:15:00Z,1,Bougie,24.00,BOUGIE-FIGUE,John Smith,,,,Austin,,TX,US,,,,,,,,,,PayPal,

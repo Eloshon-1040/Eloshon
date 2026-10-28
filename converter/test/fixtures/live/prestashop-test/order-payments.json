@@ -1,0 +1,26 @@
+[
+  {
+    "id": 2,
+    "order_reference": "FFATNOMMJ",
+    "id_currency": 1,
+    "amount": "21.300000",
+    "payment_method": "Payments by check",
+    "conversion_rate": "1.000000",
+    "transaction_id": "",
+    "card_brand": "",
+    "date_add": "2026-09-21 21:32:46",
+    "id_employee": ""
+  },
+  {
+    "id": 1,
+    "order_reference": "OHSATSERP",
+    "id_currency": 1,
+    "amount": "169.900000",
+    "payment_method": "Payments by check",
+    "conversion_rate": "1.000000",
+    "transaction_id": "",
+    "card_brand": "",
+    "date_add": "2026-09-21 21:32:46",
+    "id_employee": ""
+  }
+]

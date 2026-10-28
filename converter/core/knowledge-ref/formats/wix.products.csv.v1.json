@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "id": "wix.products.csv.v1",
+  "displayName": "Wix products export (CSV)",
+  "provenance": "native-platform",
+  "medium": "csv",
+  "platformHint": "wix",
+  "entity": "products",
+  "signatures": [
+    {
+      "kind": "csv-header-set",
+      "required": [
+        "handle",
+        "fieldType"
+      ],
+      "anyOf": [
+        "plainDescription",
+        "categorySlugs",
+        "strikethroughPrice",
+        "productOptionChoices1"
+      ],
+      "hints": [
+        "media",
+        "primaryCategorySlug",
+        "packageUnit"
+      ]
+    },
+    {
+      "kind": "csv-header-set",
+      "required": [
+        "handleId",
+        "fieldType"
+      ],
+      "anyOf": [
+        "productOptionName1",
+        "ribbon",
+        "discountMode"
+      ],
+      "hints": [
+        "productImageUrl",
+        "collection"
+      ]
+    }
+  ],
+  "structure": {
+    "rows": {
+      "groupBy": {
+        "column": "handleId",
+        "trim": true,
+        "skipEmpty": true
+      },
+      "head": {
+        "firstWhere": {
+          "column": "fieldType",
+          "equals": "product",
+          "ignoreCase": true
+        }
+      },
+      "children": {
+        "where": {
+          "not": {
+            "column": "fieldType",
+            "equals": "product",
+            "ignoreCase": true
+          }
+        },
+        "selfWhenNone": true
+      }
+    }
+  },
+  "fields": [
+    {
+      "path": "handleId",
+      "canon": "handle",
+      "transform": "text",
+      "confidence": "verified-fixture",
+      "notes": "Also the grouping key of the product's rows."
+    },
+    {
+      "path": "fieldType",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-fixture",
+      "notes": "Structural: Product row vs Variant rows."
+    },
+    {
+      "path": "name",
+      "canon": "title",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "description",
+      "canon": "bodyHtml",
+      "transform": "html",
+      "confidence": "verified-fixture",
+      "samplePolicy": "hash-only"
+    },
+    {
+      "path": "brand",
+      "canon": "vendor",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "collection",
+      "canon": "categories",
+      "transform": "list",
+      "args": {
+        "sep": ";"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "visible",
+      "canon": "published+status",
+      "transform": "bool",
+      "args": {
+        "default": true
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "productImageUrl",
+      "canon": "images",
+      "transform": "images_from_urls",
+      "args": {
+        "sep": ";"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "productOptionName<n>",
+      "pathPattern": "^productOptionName[1-6]$",
+      "canon": "options",
+      "transform": "options_from_attributes",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "productOptionDescription<n>",
+      "pathPattern": "^productOptionDescription[1-6]$",
+      "canon": "options+metafields",
+      "transform": "options_from_attributes",
+      "confidence": "verified-fixture",
+      "notes": "On the Product row: the value list; a COLOR swatch hex is kept as a swatch_<option> metafield."
+    },
+    {
+      "path": "productOptionDescription<n>",
+      "pathPattern": "^productOptionDescription[1-6]$",
+      "canon": "variants[].optionValues",
+      "transform": "option_values_from_attributes",
+      "confidence": "verified-fixture",
+      "notes": "On a Variant row: its value for each option."
+    },
+    {
+      "path": "ribbon",
+      "canon": "metafields",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "wix_ribbon"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "additionalInfoTitle<n> / Description<n>",
+      "pathPattern": "^additionalInfo(Title|Description)[1-6]$",
+      "canon": "metafields",
+      "transform": "metafield_pair",
+      "confidence": "verified-fixture",
+      "notes": "info_<title> metafields."
+    },
+    {
+      "path": "customTextField1",
+      "canon": "metafields",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "wix_custom_text"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "price",
+      "inputs": [
+        "price",
+        "discountMode",
+        "discountValue"
+      ],
+      "canon": "variants[].price+variants[].compareAtPrice",
+      "transform": "price_promo",
+      "confidence": "verified-fixture",
+      "notes": "Wix stores the LIST price and a product-level discount (PERCENT / AMOUNT); a variant without its own price uses the product's."
+    },
+    {
+      "path": "cost",
+      "canon": "variants[].cost",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "weight",
+      "canon": "variants[].grams",
+      "transform": "weight_to_grams",
+      "args": {
+        "unit": "kg"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "sku",
+      "canon": "variants[].sku",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "inventory",
+      "canon": "variants[].inventoryQty",
+      "transform": "float",
+      "confidence": "verified-fixture",
+      "notes": "A number, or InStock / OutOfStock (untracked)."
+    }
+  ],
+  "invariantsExpected": [
+    "A Product row then its Variant rows share a handleId; multi-value cells (images, collections, option values) are ';'-separated; a COLOR value is '#hex:Label'"
+  ],
+  "legacy": {
+    "formatId": "wix_products",
+    "platform": "wix",
+    "entity": "products"
+  },
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "seed:core/src/detect.ts:SIGS",
+      "origin": "reference",
+      "diff": [
+        "signature moved from code to data (Phase 5.3)",
+        "handleId + fieldType (Product/Variant rows)."
+      ]
+    },
+    {
+      "at": "2026-10-04T00:00:00.000Z",
+      "op": "enrich",
+      "from": "core/src/wix.ts parseWixProducts + mapping.ts SOURCE_FIELDS.wix_products",
+      "origin": "reference",
+      "diff": [
+        "Phase 2 Lot 3: full column map + row structure as data; undeclared columns preserved, declared ones traced"
+      ]
+    }
+  ]
+}

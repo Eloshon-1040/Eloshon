@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "sourceFormat": "shopify.products.admin-graphql.v1",
+  "targetFormat": "bigcommerce_products",
+  "counts": {
+    "inputUnits": 3,
+    "outputUnits": 3,
+    "failedUnits": 0,
+    "outputRows": 36
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_bc_categories_target"
+    },
+    {
+      "code": "loss_bc_images_target"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "id_removed_bc"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

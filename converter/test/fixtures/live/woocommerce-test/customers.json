@@ -1,0 +1,109 @@
+[
+  {
+    "id": 4,
+    "date_created": "2026-09-21T02:13:10",
+    "date_created_gmt": "2026-09-21T02:13:10",
+    "date_modified": null,
+    "date_modified_gmt": null,
+    "email": "customer1@example.test",
+    "first_name": "Test",
+    "last_name": "Customer 1",
+    "role": "customer",
+    "username": "customer1",
+    "billing": {
+      "first_name": "",
+      "last_name": "",
+      "company": "",
+      "address_1": "",
+      "address_2": "",
+      "city": "",
+      "postcode": "",
+      "country": "",
+      "state": "",
+      "email": "",
+      "phone": ""
+    },
+    "shipping": {
+      "first_name": "",
+      "last_name": "",
+      "company": "",
+      "address_1": "",
+      "address_2": "",
+      "city": "",
+      "postcode": "",
+      "country": "",
+      "state": "",
+      "phone": ""
+    },
+    "is_paying_customer": false,
+    "avatar_url": "https://secure.gravatar.com/avatar/0000?s=96&d=mm&r=g",
+    "meta_data": [
+      {
+        "id": 76,
+        "key": "wc_last_active",
+        "value": "1789957343"
+      },
+      {
+        "id": 78,
+        "key": "wc_order_count_wp",
+        "value": "1"
+      },
+      {
+        "id": 79,
+        "key": "wc_money_spent_wp",
+        "value": "615"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "date_created": "2026-09-21T02:05:50",
+    "date_created_gmt": "2026-09-21T02:05:50",
+    "date_modified": null,
+    "date_modified_gmt": null,
+    "email": "customer2@example.test",
+    "first_name": "Test",
+    "last_name": "Customer 2",
+    "role": "customer",
+    "username": "customer2",
+    "billing": {
+      "first_name": "",
+      "last_name": "",
+      "company": "",
+      "address_1": "",
+      "address_2": "",
+      "city": "",
+      "postcode": "",
+      "country": "",
+      "state": "",
+      "email": "",
+      "phone": ""
+    },
+    "shipping": {
+      "first_name": "",
+      "last_name": "",
+      "company": "",
+      "address_1": "",
+      "address_2": "",
+      "city": "",
+      "postcode": "",
+      "country": "",
+      "state": "",
+      "phone": ""
+    },
+    "is_paying_customer": false,
+    "avatar_url": "https://secure.gravatar.com/avatar/0000?s=96&d=mm&r=g",
+    "meta_data": [
+      {
+        "id": 80,
+        "key": "wc_order_count_wp",
+        "value": "0"
+      },
+      {
+        "id": 81,
+        "key": "wc_money_spent_wp",
+        "value": "0"
+      }
+    ]
+  }
+]

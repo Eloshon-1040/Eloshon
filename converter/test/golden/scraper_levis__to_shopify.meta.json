@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "sourceFormat": "scraper.eloshon-export.v1",
+  "targetFormat": "shopify_products",
+  "counts": {
+    "inputUnits": 40,
+    "outputUnits": 40,
+    "failedUnits": 0,
+    "outputRows": 40
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_shopify_category_taxonomy",
+      "params": {
+        "count": 40,
+        "extra": 0
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "code": "dedupe_handles",
+      "params": {
+        "handle": "jean-501-loose-17nlld"
+      }
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "id": "bigcommerce.customers.csv.v1",
+  "displayName": "BigCommerce customers export (CSV)",
+  "provenance": "native-platform",
+  "medium": "csv",
+  "platformHint": "bigcommerce",
+  "entity": "customers",
+  "signatures": [
+    {
+      "kind": "csv-header-set",
+      "required": [
+        "Email",
+        "City/Suburb"
+      ],
+      "anyOf": [
+        "State/Province",
+        "Customer Group",
+        "Store Credit",
+        "Receive Marketing Emails"
+      ]
+    }
+  ],
+  "structure": {
+    "rows": {},
+    "parser": "generic"
+  },
+  "fields": [
+    {
+      "path": "Email",
+      "canon": "email",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "First Name",
+      "canon": "firstName",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Last Name",
+      "canon": "lastName",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Phone",
+      "canon": "phone",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Address Company",
+      "inputs": [
+        "Address Company",
+        "Company"
+      ],
+      "canon": "address.company",
+      "transform": "first_present",
+      "args": {
+        "as": "clean_text"
+      },
+      "confidence": "verified-fixture",
+      "notes": "The address company, else the customer company."
+    },
+    {
+      "path": "Address Line 1",
+      "canon": "address.address1",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Address Line 2",
+      "canon": "address.address2",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "City/Suburb",
+      "canon": "address.city",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "State/Province",
+      "canon": "address.province",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "State/Province",
+      "canon": "address.provinceCode",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Zip/Postcode",
+      "canon": "address.zip",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Country",
+      "canon": "address.country",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Address Phone",
+      "canon": "address.phone",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Notes",
+      "inputs": [
+        "Notes",
+        "Store Credit"
+      ],
+      "canon": "note",
+      "transform": "join_parts",
+      "args": {
+        "sep": " — ",
+        "parts": [
+          {},
+          {
+            "prefix": "Store credit: ",
+            "skip": [
+              "0"
+            ]
+          }
+        ]
+      },
+      "confidence": "verified-fixture",
+      "notes": "The notes, then the store credit when it is not 0."
+    },
+    {
+      "path": "Customer Group",
+      "canon": "tags",
+      "transform": "clean_list",
+      "confidence": "verified-fixture",
+      "notes": "The group name is ONE tag."
+    },
+    {
+      "path": "Tax Exempt Code",
+      "canon": "taxExempt",
+      "transform": "is_set",
+      "args": {
+        "clean": true
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Receive Marketing Emails",
+      "canon": "acceptsEmail",
+      "transform": "consent_bool",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Receive Marketing Emails",
+      "canon": "marketingConsent.email",
+      "transform": "marketing_consent",
+      "args": {
+        "pending": [
+          "yes",
+          "true",
+          "1",
+          "subscribed"
+        ],
+        "optedOut": [
+          "no",
+          "false",
+          "0",
+          "unsubscribed",
+          "not subscribed"
+        ],
+        "channel": "email",
+        "ignoreCase": true,
+        "trimRaw": true
+      },
+      "confidence": "verified-fixture",
+      "notes": "Evidence only (7.3)."
+    }
+  ],
+  "invariantsExpected": [
+    "One row per customer; one address (no billing/shipping split)"
+  ],
+  "legacy": {
+    "formatId": "bigcommerce_customers",
+    "platform": "bigcommerce",
+    "entity": "customers"
+  },
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "seed:core/src/detect.ts:SIGS",
+      "origin": "reference",
+      "diff": [
+        "signature moved from code to data (Phase 5.3)",
+        "City/Suburb, State/Province naming is BigCommerce-only."
+      ]
+    },
+    {
+      "at": "2026-10-04T00:00:00.000Z",
+      "op": "enrich",
+      "from": "core/src/bigcommerce.ts parseBigCommerceCustomers (retired: the generic parser reads this format) + mapping.ts SOURCE_FIELDS.bigcommerce_customers",
+      "origin": "reference",
+      "diff": [
+        "Phase 2 Lot 3: full column map + row structure as data; undeclared columns preserved, declared ones traced"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "sourceFormat": "bigcommerce_products",
+  "targetFormat": "woo_products_modern",
+  "counts": {
+    "inputUnits": 2,
+    "outputUnits": 2,
+    "failedUnits": 0,
+    "outputRows": 4
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_bc_category_names"
+    },
+    {
+      "code": "loss_bc_brand_name"
+    },
+    {
+      "code": "loss_bc_warranty_bin"
+    },
+    {
+      "code": "loss_woo_cost"
+    },
+    {
+      "code": "loss_woo_seo_title"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "woo_parent_skus_generated",
+      "params": {
+        "count": 1
+      }
+    },
+    {
+      "code": "id_removed_woo"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

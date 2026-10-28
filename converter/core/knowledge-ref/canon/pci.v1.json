@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "canon.pci.v1",
+  "notes": [
+    "Phase 7.7 — card-data (and credential) scanner configuration. DATA: which field NAMES belong to the card / credential families, which VALUE SHAPES are card data whatever the field is called, and what to keep (a card BRAND is a payment fact, not card data).",
+    "Policy is 'strip': a hit is removed from the ingested object before anything else reads it (never lands in sourceExtension._raw, never in a fixture), and reported by PATH + KIND (never by value). Masked card numbers (•••• 4242, XXXX-1234) are stripped too — a truncated PAN is still card data under the hard rule.",
+    "Value-shape detection is deliberately conservative on bare digit strings: a 13–19 digit Luhn-valid string is stripped only when it sits under a name in the card family OR when the object also carries a card-family sibling (a GTIN-13 in a product line is not a card).",
+    "A bare `token` key is NOT a family (currency symbols are stored as `token` by BigCommerce); only payment / card / gateway tokens are."
+  ],
+  "nameFamilies": {
+    "pan": "^(card[_ -]?(number|no|num)|cc[_ -]?(number|num)|pan|primary[_ -]?account[_ -]?number|credit[_ -]?card[_ -]?(number|num)|number)$",
+    "cvv": "^(cvv2?|cvc2?|cvn|csc|cid|security[_ -]?code|card[_ -]?(security|verification)[_ -]?(code|value)|cvv[_ -]?result)$",
+    "iin": "^(card[_ -]?)?(iin|bin)$",
+    "last4": "^(card[_ -]?)?(last[_ -]?(4|four)(digits)?|last4)$",
+    "expiry": "^(card[_ -]?)?(exp(iry|iration)?[_ -]?(month|year|date)?|exp[_ -]?(mm|yy|yyyy)|expiration[_ -]?(month|year|date)?|expirationmonth|expirationyear)$",
+    "holder": "^(card[_ -]?holder(name)?|cardholder|name[_ -]?on[_ -]?card|holder[_ -]?name)$",
+    "token": "^(payment[_ -]?instrument[_ -]?token|card[_ -]?token|payment[_ -]?token|stripe[_ -]?(source|token|pm|customer)[_ -]?id|gateway[_ -]?token)$",
+    "bank": "^(iban|account[_ -]?number|bank[_ -]?account|routing[_ -]?number|sort[_ -]?code|bic|swift)$",
+    "credential": "^(passwd|password|password[_ -]?hash|hash|secure[_ -]?key|reset[_ -]?password[_ -]?(token|validity)|last[_ -]?passwd[_ -]?gen|api[_ -]?key|access[_ -]?token|secret)$"
+  },
+  "cardContextFamilies": [
+    "pan",
+    "cvv",
+    "iin",
+    "last4",
+    "expiry",
+    "holder",
+    "token"
+  ],
+  "cardContainerNames": "^(credit[_ -]?card|creditcard|card|cc|payment[_ -]?details|card[_ -]?payment[_ -]?details|payment[_ -]?method[_ -]?details|creditcarddetails|regular[_ -]?payment[_ -]?details)$",
+  "brandFields": "^(card[_ -]?(type|brand)|credit[_ -]?card[_ -]?type|brand|company|wallet|card[_ -]?network|scheme)$",
+  "valueShapes": {
+    "pan": {
+      "regex": "^(?:\\d[ -]?){12,18}\\d$",
+      "luhn": true,
+      "note": "13–19 digits with optional spaces / dashes, Luhn-valid"
+    },
+    "maskedPan": {
+      "regex": "^(?:[•*Xx#]{2,4}[ -]?){2,4}\\d{4}$|^\\d{4,6}[ -]?(?:[•*Xx#]{2,6}[ -]?){1,3}\\d{4}$",
+      "note": "•••• •••• •••• 4242, XXXX-XXXX-XXXX-1234, 424242******4242"
+    },
+    "iban": {
+      "regex": "^[A-Z]{2}\\d{2}[A-Z0-9]{11,30}$",
+      "note": "IBAN — stripped wherever it appears"
+    },
+    "expiry": {
+      "regex": "^(0[1-9]|1[0-2])[/ -]?(\\d{2}|\\d{4})$",
+      "note": "MM/YY or MM/YYYY — stripped only under a card-family name or in a card container"
+    },
+    "cvv": {
+      "regex": "^\\d{3,4}$",
+      "note": "stripped only under a cvv-family name"
+    }
+  },
+  "warningCode": "pci_card_data_stripped"
+}

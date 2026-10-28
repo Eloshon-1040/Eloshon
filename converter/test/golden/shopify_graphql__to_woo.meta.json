@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "sourceFormat": "shopify.products.admin-graphql.v1",
+  "targetFormat": "woo_products_modern",
+  "counts": {
+    "inputUnits": 3,
+    "outputUnits": 3,
+    "failedUnits": 0,
+    "outputRows": 26
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_woo_seo_title"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "woo_parent_skus_generated",
+      "params": {
+        "count": 2
+      }
+    },
+    {
+      "code": "id_removed_woo"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

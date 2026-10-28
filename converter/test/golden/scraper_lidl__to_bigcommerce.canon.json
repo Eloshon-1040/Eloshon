@@ -1,0 +1,1672 @@
+[
+  {
+    "handle": "kentucky-straight-bourbon-whiskey-40-vol-8yogst",
+    "title": "Kentucky Straight Bourbon Whiskey 40% Vol",
+    "bodyHtml": "Buffalo Trace Kentucky Straight Bourbon 40% Vol — intensiver Kentucky Straight Bourbon für puren Genuss und klassische Cocktails Buffalo Trace Kentucky Straight Bourbon 40% Vol Reifung mindestens 8 bis 12 Jahre in neuen Weißeichenfässern Hergestellt aus Mais, Roggen und gemälzter Gerste für volle Aromen Small‑Batch‑Produktion, handverlesen und traditionsbewusst Vielseitig: pur, on the rocks oder als Basis für Old Fashioned",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Whisky &#x26; Whiskey"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 19.99,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://www.lidl.de/assets/f46e5e496f0c0c70b578aab92dc66de7.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://www.lidl.de/assets/f46e5e496f0c0c70b578aab92dc66de7.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "19.99",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://www.lidl.de/assets/f46e5e496f0c0c70b578aab92dc66de7.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "kentucky-straight-bourbon-whiskey-40-vol-8yogst",
+      "sourceId": "100312341"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Kentucky Straight Bourbon Whiskey 40% Vol",
+        "slug_en": "kentucky-straight-bourbon-whiskey-40-vol-8yogst",
+        "description_en": "Buffalo Trace Kentucky Straight Bourbon 40% Vol — intensiver Kentucky Straight Bourbon für puren Genuss und klassische Cocktails Buffalo Trace Kentucky Straight Bourbon 40% Vol Reifung mindestens 8 bis 12 Jahre in neuen Weißeichenfässern Hergestellt aus Mais, Roggen und gemälzter Gerste für volle Aromen Small‑Batch‑Produktion, handverlesen und traditionsbewusst Vielseitig: pur, on the rocks oder als Basis für Old Fashioned",
+        "source_url": "https://www.lidl.de/p/buffalo-trace-kentucky-straight-bourbon-whiskey-40-vol/p100312341",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Kentucky Straight Bourbon Whiskey 40% Vol",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "kentucky-straight-bourbon-whiskey-40-vol-8yogst",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Buffalo Trace Kentucky Straight Bourbon 40% Vol — intensiver Kentucky Straight Bourbon für puren Genuss und klassische Cocktails Buffalo Trace Kentucky Straight Bourbon 40% Vol Reifung mindestens 8 bis 12 Jahre in neuen Weißeichenfässern Hergestellt aus Mais, Roggen und gemälzter Gerste für volle Aromen Small‑Batch‑Produktion, handverlesen und traditionsbewusst Vielseitig: pur, on the rocks oder als Basis für Old Fashioned",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Kentucky Straight Bourbon Whiskey 40% Vol",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "kentucky-straight-bourbon-whiskey-40-vol-8yogst",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "kentucky-straight-bourbon-whiskey-40-vol-8yogst",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Buffalo Trace Kentucky Straight Bourbon 40% Vol — intensiver Kentucky Straight Bourbon für puren Genuss und klassische Cocktails Buffalo Trace Kentucky Straight Bourbon 40% Vol Reifung mindestens 8 bi…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "100312341",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Whisky &#x26; Whiskey",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://www.lidl.de/assets/f46e5e496f0c0c70b578aab92dc66de7.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "vodka-40-vol-ef7htu",
+    "title": "Vodka 40% Vol",
+    "bodyHtml": "Der Mr Finton's Vodka 40% Vol ist ein fünffach destillierter deutscher Vodka in einer 0,5‑l‑Flasche, der mit klarem, weichem Geschmack pur und in klassischen Cocktails überzeugt Fünffach destilliert für reinen, weichen Geschmack 40 % vol Alkoholgehalt, ideal für Longdrinks und Purgenuss 0,5‑l‑Flasche im auffälligen Apothekenflaschen‑Design IWSC Gold 2024 und Falstaff 90 Punkte 2025 als Qualitätsbeleg",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Vodka"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 8.99,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "4056489186779",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://www.lidl.de/assets/gcpdcea77a9324e42d1bf7d7f25f9fa4075.png",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://www.lidl.de/assets/gcpdcea77a9324e42d1bf7d7f25f9fa4075.png",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "8.99",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "4056489186779",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://www.lidl.de/assets/gcpdcea77a9324e42d1bf7d7f25f9fa4075.png",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "vodka-40-vol-ef7htu",
+      "sourceId": "4056489186779"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Vodka 40% Vol",
+        "slug_en": "vodka-40-vol-ef7htu",
+        "description_en": "Der Mr Finton's Vodka 40% Vol ist ein fünffach destillierter deutscher Vodka in einer 0,5‑l‑Flasche, der mit klarem, weichem Geschmack pur und in klassischen Cocktails überzeugt Fünffach destilliert für reinen, weichen Geschmack 40 % vol Alkoholgehalt, ideal für Longdrinks und Purgenuss 0,5‑l‑Flasche im auffälligen Apothekenflaschen‑Design IWSC Gold 2024 und Falstaff 90 Punkte 2025 als Qualitätsbeleg",
+        "source_url": "https://www.lidl.de/p/mr-finton-s-vodka-40-vol/p100285613",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Vodka 40% Vol",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "vodka-40-vol-ef7htu",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Der Mr Finton's Vodka 40% Vol ist ein fünffach destillierter deutscher Vodka in einer 0,5‑l‑Flasche, der mit klarem, weichem Geschmack pur und in klassischen Cocktails überzeugt Fünffach destilliert für reinen, weichen Geschmack 40 % vol Alkoholgehalt, ideal für Longdrinks und Purgenuss 0,5‑l‑Flasche im auffälligen Apothekenflaschen‑Design IWSC Gold 2024 und Falstaff 90 Punkte 2025 als Qualitätsbeleg",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Vodka 40% Vol",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "vodka-40-vol-ef7htu",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "vodka-40-vol-ef7htu",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Der Mr Finton's Vodka 40% Vol ist ein fünffach destillierter deutscher Vodka in einer 0,5‑l‑Flasche, der mit klarem, weichem Geschmack pur und in klassischen Cocktails überzeugt Fünffach destilliert f…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "4056489186779",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Vodka",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://www.lidl.de/assets/gcpdcea77a9324e42d1bf7d7f25f9fa4075.png",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "20v-weltrekord-akku-bohrschrauber-ppabss-20-li-a1-arnold-sch-kbrjeu",
+    "title": "20V Weltrekord Akku-Bohrschrauber »PPABSS 20 Li A1 - Arnold Schwarzenegger«, mit Akku und Ladegerät",
+    "bodyHtml": "20V Weltrekord Akku-Bohrschrauber »PPABSS 20 Li A1 - Arnold Schwarzenegger«, mit Akku und Ladegerät - 69.99€ (19.09.2026)",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Home > Baumarkt & Garten > Akkuwerkzeuge > Akku Bohrschrauber"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 69.99,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "4054599286914",
+        "grams": 1580,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://www.lidl.de/assets/gcp1ac9c447fbbf4d0ba91818a761ce45db.jpg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://www.lidl.de/assets/gcp1ac9c447fbbf4d0ba91818a761ce45db.jpg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "69.99",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "4054599286914",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "1.58",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://www.lidl.de/assets/gcp1ac9c447fbbf4d0ba91818a761ce45db.jpg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "20v-weltrekord-akku-bohrschrauber-ppabss-20-li-a1-arnold-sch-kbrjeu",
+      "sourceId": "4054599286914"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "20V Weltrekord Akku-Bohrschrauber »PPABSS 20 Li A1 - Arnold Schwarzenegger«, mit Akku und Ladegerät",
+        "slug_en": "20v-weltrekord-akku-bohrschrauber-ppabss-20-li-a1-arnold-sch-kbrjeu",
+        "description_en": "20V Weltrekord Akku-Bohrschrauber »PPABSS 20 Li A1 - Arnold Schwarzenegger«, mit Akku und Ladegerät - 69.99€ (19.09.2026)",
+        "source_url": "https://www.lidl.de/p/parkside-performance-20v-weltrekord-akku-bohrschrauber-ppabss-20-li-a1-arnold-schwarzenegger-mit-akku-und-ladegeraet/p100412197",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "20V Weltrekord Akku-Bohrschrauber »PPABSS 20 Li A1 - Arnold Schwarzenegger«, mit Akku und Ladegerät",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "20v-weltrekord-akku-bohrschrauber-ppabss-20-li-a1-arnold-sch-kbrjeu",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "20V Weltrekord Akku-Bohrschrauber »PPABSS 20 Li A1 - Arnold Schwarzenegger«, mit Akku und Ladegerät - 69.99€ (19.09.2026)",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "20V Weltrekord Akku-Bohrschrauber »PPABSS 20 Li A1 - Arnold Schwarzenegger«, mit Akku und Ladegerät",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "20v-weltrekord-akku-bohrschrauber-ppabss-20-li-a1-arnold-sch-kbrjeu",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "20v-weltrekord-akku-bohrschrauber-ppabss-20-li-a1-arnold-sch-kbrjeu",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "20V Weltrekord Akku-Bohrschrauber »PPABSS 20 Li A1 - Arnold Schwarzenegger«, mit Akku und Ladegerät - 69.99€ (19.09.2026)",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "4054599286914",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Home > Baumarkt & Garten > Akkuwerkzeuge > Akku Bohrschrauber",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://www.lidl.de/assets/gcp1ac9c447fbbf4d0ba91818a761ce45db.jpg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "holzsandkasten-mit-dach-und-eisdiele-1q4lw3",
+    "title": "Holzsandkasten, mit Dach und Eisdiele",
+    "bodyHtml": "Holzsandkasten mit Dach und Eisdiele von LUPILU® bietet eine geschützte Spielfläche im Garten und eine integrierte Spielecke für kreatives Rollenspiel ab 1 Jahr. LUPILU® Holzsandkasten mit neigbarem Dach und Eisdiele Wasserdurchlässige, wurzelbeständige Bodenplane Inkl. Montageanleitung und Montagematerial Sitzhöhe ca. 18 cm, Randbelastung bis 50 kg",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Home > Baby, Kind & Spielzeug > Spielzeug > Outdoorspielzeug & Gartenspielzeug > Gartenspielgeräte"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 55.99,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "4052916978887",
+        "grams": 10400,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://www.lidl.de/assets/gcp2670d0490af94bf3bc8774a04f932ee5.jpg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://www.lidl.de/assets/gcp2670d0490af94bf3bc8774a04f932ee5.jpg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "55.99",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "4052916978887",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "10.4",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://www.lidl.de/assets/gcp2670d0490af94bf3bc8774a04f932ee5.jpg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "holzsandkasten-mit-dach-und-eisdiele-1q4lw3",
+      "sourceId": "4052916978887"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Holzsandkasten, mit Dach und Eisdiele",
+        "slug_en": "holzsandkasten-mit-dach-und-eisdiele-1q4lw3",
+        "description_en": "Holzsandkasten mit Dach und Eisdiele von LUPILU® bietet eine geschützte Spielfläche im Garten und eine integrierte Spielecke für kreatives Rollenspiel ab 1 Jahr. LUPILU® Holzsandkasten mit neigbarem Dach und Eisdiele Wasserdurchlässige, wurzelbeständige Bodenplane Inkl. Montageanleitung und Montagematerial Sitzhöhe ca. 18 cm, Randbelastung bis 50 kg",
+        "source_url": "https://www.lidl.de/p/lupilu-holzsandkasten-mit-dach-und-eisdiele/p100400239",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Holzsandkasten, mit Dach und Eisdiele",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "holzsandkasten-mit-dach-und-eisdiele-1q4lw3",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Holzsandkasten mit Dach und Eisdiele von LUPILU® bietet eine geschützte Spielfläche im Garten und eine integrierte Spielecke für kreatives Rollenspiel ab 1 Jahr. LUPILU® Holzsandkasten mit neigbarem Dach und Eisdiele Wasserdurchlässige, wurzelbeständige Bodenplane Inkl. Montageanleitung und Montagematerial Sitzhöhe ca. 18 cm, Randbelastung bis 50 kg",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Holzsandkasten, mit Dach und Eisdiele",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "holzsandkasten-mit-dach-und-eisdiele-1q4lw3",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "holzsandkasten-mit-dach-und-eisdiele-1q4lw3",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Holzsandkasten mit Dach und Eisdiele von LUPILU® bietet eine geschützte Spielfläche im Garten und eine integrierte Spielecke für kreatives Rollenspiel ab 1 Jahr. LUPILU® Holzsandkasten mit neigbarem D…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "4052916978887",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Home > Baby, Kind & Spielzeug > Spielzeug > Outdoorspielzeug & Gartenspielzeug > Gartenspielgeräte",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://www.lidl.de/assets/gcp2670d0490af94bf3bc8774a04f932ee5.jpg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "damen-hipster-5-stuck-hoher-baumwollanteil-1wi8xg",
+    "title": "Damen Hipster, 5 Stück, hoher Baumwollanteil",
+    "bodyHtml": "Das ESMARA® Damen Hipster, 5 Stück, hoher Baumwollanteil bietet bequemen Sitz und angenehmes Tragegefühl für den Alltag unter verschiedenster Kleidung. 5er-Pack für den täglichen Wechsel Hoher Baumwollanteil sorgt für weichen Griff Elastischer Bund mit LYCRA® für gute Passform Erhältlich in drei Farbkombinationen Größen von XS (32/34) bis L (44/46)",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Home > Mode & Accessoires > Damenmode > Damen Unterwäsche"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 7.99,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://www.lidl.de/assets/gcp106d8a23672f4310bd0a87123ee68e19.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://www.lidl.de/assets/gcp106d8a23672f4310bd0a87123ee68e19.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "7.99",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://www.lidl.de/assets/gcp106d8a23672f4310bd0a87123ee68e19.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "damen-hipster-5-stuck-hoher-baumwollanteil-1wi8xg",
+      "sourceId": "40553330696954055333069701405533306973240553330697494055333069756405533306977040553330697874055333069794"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Damen Hipster, 5 Stück, hoher Baumwollanteil",
+        "slug_en": "damen-hipster-5-stuck-hoher-baumwollanteil-1wi8xg",
+        "description_en": "Das ESMARA® Damen Hipster, 5 Stück, hoher Baumwollanteil bietet bequemen Sitz und angenehmes Tragegefühl für den Alltag unter verschiedenster Kleidung. 5er-Pack für den täglichen Wechsel Hoher Baumwollanteil sorgt für weichen Griff Elastischer Bund mit LYCRA® für gute Passform Erhältlich in drei Farbkombinationen Größen von XS (32/34) bis L (44/46)",
+        "source_url": "https://www.lidl.de/p/esmara-damen-hipster-5-stueck-hoher-baumwollanteil/p100358812",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Damen Hipster, 5 Stück, hoher Baumwollanteil",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "damen-hipster-5-stuck-hoher-baumwollanteil-1wi8xg",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Das ESMARA® Damen Hipster, 5 Stück, hoher Baumwollanteil bietet bequemen Sitz und angenehmes Tragegefühl für den Alltag unter verschiedenster Kleidung. 5er-Pack für den täglichen Wechsel Hoher Baumwollanteil sorgt für weichen Griff Elastischer Bund mit LYCRA® für gute Passform Erhältlich in drei Farbkombinationen Größen von XS (32/34) bis L (44/46)",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Damen Hipster, 5 Stück, hoher Baumwollanteil",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "damen-hipster-5-stuck-hoher-baumwollanteil-1wi8xg",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "damen-hipster-5-stuck-hoher-baumwollanteil-1wi8xg",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Das ESMARA® Damen Hipster, 5 Stück, hoher Baumwollanteil bietet bequemen Sitz und angenehmes Tragegefühl für den Alltag unter verschiedenster Kleidung. 5er-Pack für den täglichen Wechsel Hoher Baumwol…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "40553330696954055333069701405533306973240553330697494055333069756405533306977040553330697874055333069794",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Home > Mode & Accessoires > Damenmode > Damen Unterwäsche",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://www.lidl.de/assets/gcp106d8a23672f4310bd0a87123ee68e19.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "damen-spaghettitragerhemd-2-stuck-tailliert-geschnitten-lez2fc",
+    "title": "Damen Spaghettiträgerhemd, 2 Stück, tailliert geschnitten",
+    "bodyHtml": "✓ 2 St&uuml;ck ✓ Extra Bandage auf der Innenseite ✓ Mit Rundhalsausschnitt",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Home > Mode & Accessoires > Damenmode > Damen Unterwäsche"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 16.99,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://www.lidl.de/assets/gcp5719c79cf5454bdc9da3e349ecc1b720.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://www.lidl.de/assets/gcp5719c79cf5454bdc9da3e349ecc1b720.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "16.99",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://www.lidl.de/assets/gcp5719c79cf5454bdc9da3e349ecc1b720.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "damen-spaghettitragerhemd-2-stuck-tailliert-geschnitten-lez2fc",
+      "sourceId": "87198299306598719829930697871982993070387198299307108719829930727"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Damen Spaghettiträgerhemd, 2 Stück, tailliert geschnitten",
+        "slug_en": "damen-spaghettitragerhemd-2-stuck-tailliert-geschnitten-lez2fc",
+        "description_en": "✓ 2 St&uuml;ck ✓ Extra Bandage auf der Innenseite ✓ Mit Rundhalsausschnitt",
+        "source_url": "https://www.lidl.de/p/mexx-damen-spaghettitraegerhemd-2-stueck-tailliert-geschnitten/p100348390",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Damen Spaghettiträgerhemd, 2 Stück, tailliert geschnitten",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "damen-spaghettitragerhemd-2-stuck-tailliert-geschnitten-lez2fc",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "✓ 2 St&uuml;ck ✓ Extra Bandage auf der Innenseite ✓ Mit Rundhalsausschnitt",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Damen Spaghettiträgerhemd, 2 Stück, tailliert geschnitten",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "damen-spaghettitragerhemd-2-stuck-tailliert-geschnitten-lez2fc",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "damen-spaghettitragerhemd-2-stuck-tailliert-geschnitten-lez2fc",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "✓ 2 St&uuml;ck ✓ Extra Bandage auf der Innenseite ✓ Mit Rundhalsausschnitt",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "87198299306598719829930697871982993070387198299307108719829930727",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Home > Mode & Accessoires > Damenmode > Damen Unterwäsche",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://www.lidl.de/assets/gcp5719c79cf5454bdc9da3e349ecc1b720.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "trampolin-houston-mit-leiter-1obgnt",
+    "title": "Trampolin »Houston«, mit Leiter",
+    "bodyHtml": "Trampolin »Houston«, mit Leiter – Kompaktes Gartentrampolin für sicheren Sprungspaß im Freien, ideal für kleinere Gärten und aktive Kinder. Kompakte Größe für kleine Gärten und Terrassen Sicherheitsnetz mit Reißverschluss und 6 gepolsterten Pfosten Inklusive Leiter, Einstiegshöhe 49 cm, leichter Auf- und Abstieg 36 Federn sorgen für gleichmäßiges Sprungverhalten EN 71 geprüft und für den Hausgebrauch ausgelegt",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Home > Baby, Kind & Spielzeug > Spielzeug > Outdoorspielzeug & Gartenspielzeug > Gartenspielgeräte"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 80,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://www.lidl.de/assets/gcp2adc0ce71a324739986b1d722a4faed3.jpg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://www.lidl.de/assets/gcp2adc0ce71a324739986b1d722a4faed3.jpg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "80",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://www.lidl.de/assets/gcp2adc0ce71a324739986b1d722a4faed3.jpg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "trampolin-houston-mit-leiter-1obgnt",
+      "sourceId": "8721399281598872139928160487213992816358721399281673"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Trampolin »Houston«, mit Leiter",
+        "slug_en": "trampolin-houston-mit-leiter-1obgnt",
+        "description_en": "Trampolin »Houston«, mit Leiter – Kompaktes Gartentrampolin für sicheren Sprungspaß im Freien, ideal für kleinere Gärten und aktive Kinder. Kompakte Größe für kleine Gärten und Terrassen Sicherheitsnetz mit Reißverschluss und 6 gepolsterten Pfosten Inklusive Leiter, Einstiegshöhe 49 cm, leichter Auf- und Abstieg 36 Federn sorgen für gleichmäßiges Sprungverhalten EN 71 geprüft und für den Hausgebrauch ausgelegt",
+        "source_url": "https://www.lidl.de/p/axi-trampolin-houston-mit-leiter/p100408282",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Trampolin »Houston«, mit Leiter",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "trampolin-houston-mit-leiter-1obgnt",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Trampolin »Houston«, mit Leiter – Kompaktes Gartentrampolin für sicheren Sprungspaß im Freien, ideal für kleinere Gärten und aktive Kinder. Kompakte Größe für kleine Gärten und Terrassen Sicherheitsnetz mit Reißverschluss und 6 gepolsterten Pfosten Inklusive Leiter, Einstiegshöhe 49 cm, leichter Auf- und Abstieg 36 Federn sorgen für gleichmäßiges Sprungverhalten EN 71 geprüft und für den Hausgebrauch ausgelegt",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Trampolin »Houston«, mit Leiter",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "trampolin-houston-mit-leiter-1obgnt",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "trampolin-houston-mit-leiter-1obgnt",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Trampolin »Houston«, mit Leiter – Kompaktes Gartentrampolin für sicheren Sprungspaß im Freien, ideal für kleinere Gärten und aktive Kinder. Kompakte Größe für kleine Gärten und Terrassen Sicherheitsne…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "8721399281598872139928160487213992816358721399281673",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Home > Baby, Kind & Spielzeug > Spielzeug > Outdoorspielzeug & Gartenspielzeug > Gartenspielgeräte",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://www.lidl.de/assets/gcp2adc0ce71a324739986b1d722a4faed3.jpg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "tipi-mit-rutsche-aus-echtholz-45xw3s",
+    "title": "Tipi mit Rutsche, aus Echtholz",
+    "bodyHtml": "PLAYTIVE Tipi mit Rutsche, aus Echtholz – Spielhaus und Klettergerüst für Garten und Terrasse, ideal zum Rutschen, Klettern und Verstecken Geräumige Plattform zum Besteigen und Verstecken Stabile Konstruktion aus Echtholz für langlebigen Spielbetrieb Inklusive Kletter-Netz, Leiter und rutschfester Rutsche Fördert Feinmotorik, Gleichgewicht und soziale Interaktion Für den Außenbereich konzipiert, ab 2 Jahren geeignet",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Home > Baby, Kind & Spielzeug > Spielzeug > Outdoorspielzeug & Gartenspielzeug > Gartenspielgeräte"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 129,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "4335633080539",
+        "grams": 17000,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://www.lidl.de/assets/gcp05f7a77c19284a60925233cc66d2e542.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://www.lidl.de/assets/gcp05f7a77c19284a60925233cc66d2e542.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "129",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "4335633080539",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "17",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://www.lidl.de/assets/gcp05f7a77c19284a60925233cc66d2e542.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "tipi-mit-rutsche-aus-echtholz-45xw3s",
+      "sourceId": "4335633080539"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Tipi mit Rutsche, aus Echtholz",
+        "slug_en": "tipi-mit-rutsche-aus-echtholz-45xw3s",
+        "description_en": "PLAYTIVE Tipi mit Rutsche, aus Echtholz – Spielhaus und Klettergerüst für Garten und Terrasse, ideal zum Rutschen, Klettern und Verstecken Geräumige Plattform zum Besteigen und Verstecken Stabile Konstruktion aus Echtholz für langlebigen Spielbetrieb Inklusive Kletter-Netz, Leiter und rutschfester Rutsche Fördert Feinmotorik, Gleichgewicht und soziale Interaktion Für den Außenbereich konzipiert, ab 2 Jahren geeignet",
+        "source_url": "https://www.lidl.de/p/playtive-tipi-mit-rutsche-aus-echtholz/p100372872",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Tipi mit Rutsche, aus Echtholz",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "tipi-mit-rutsche-aus-echtholz-45xw3s",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "PLAYTIVE Tipi mit Rutsche, aus Echtholz – Spielhaus und Klettergerüst für Garten und Terrasse, ideal zum Rutschen, Klettern und Verstecken Geräumige Plattform zum Besteigen und Verstecken Stabile Konstruktion aus Echtholz für langlebigen Spielbetrieb Inklusive Kletter-Netz, Leiter und rutschfester Rutsche Fördert Feinmotorik, Gleichgewicht und soziale Interaktion Für den Außenbereich konzipiert, ab 2 Jahren geeignet",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Tipi mit Rutsche, aus Echtholz",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "tipi-mit-rutsche-aus-echtholz-45xw3s",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "tipi-mit-rutsche-aus-echtholz-45xw3s",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "PLAYTIVE Tipi mit Rutsche, aus Echtholz – Spielhaus und Klettergerüst für Garten und Terrasse, ideal zum Rutschen, Klettern und Verstecken Geräumige Plattform zum Besteigen und Verstecken Stabile Kons…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "4335633080539",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Home > Baby, Kind & Spielzeug > Spielzeug > Outdoorspielzeug & Gartenspielzeug > Gartenspielgeräte",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://www.lidl.de/assets/gcp05f7a77c19284a60925233cc66d2e542.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "herren-feinripp-unterziehshirts-3-stuck-1quezd",
+    "title": "Herren Feinripp-Unterziehshirts, 3 Stück",
+    "bodyHtml": "Herren Feinripp-Unterziehshirts, 3 Stück von LIVERGY® – Das 3er-Set als dünne Basisschicht für Alltag und Arbeit, ideal unter Hemd, Pullover oder Arbeitsjacke. 3er-Pack für dauerhafte Grundausstattung Feinripp-Qualität für anschmiegsames Tragegefühl 100 % Baumwolle für angenehme Hautverträglichkeit Leicht verlängerter Rücken für besseren Sitz Wahlweise Rundhals oder V-Ausschnitt",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Home > Mode & Accessoires > Herrenmode > Unterwäsche"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 9.99,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://www.lidl.de/assets/gcpbeaffb2f724a4c48a905285679188526.jpg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://www.lidl.de/assets/gcpbeaffb2f724a4c48a905285679188526.jpg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "9.99",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://www.lidl.de/assets/gcpbeaffb2f724a4c48a905285679188526.jpg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "herren-feinripp-unterziehshirts-3-stuck-1quezd",
+      "sourceId": "4052916179741405291617976540529161797724052916179789405291617979640529161798024052916179819405291617982640529161798334052916179864"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Herren Feinripp-Unterziehshirts, 3 Stück",
+        "slug_en": "herren-feinripp-unterziehshirts-3-stuck-1quezd",
+        "description_en": "Herren Feinripp-Unterziehshirts, 3 Stück von LIVERGY® – Das 3er-Set als dünne Basisschicht für Alltag und Arbeit, ideal unter Hemd, Pullover oder Arbeitsjacke. 3er-Pack für dauerhafte Grundausstattung Feinripp-Qualität für anschmiegsames Tragegefühl 100 % Baumwolle für angenehme Hautverträglichkeit Leicht verlängerter Rücken für besseren Sitz Wahlweise Rundhals oder V-Ausschnitt",
+        "source_url": "https://www.lidl.de/p/livergy-herren-feinripp-unterziehshirts-3-stueck/p100383132",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Herren Feinripp-Unterziehshirts, 3 Stück",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "herren-feinripp-unterziehshirts-3-stuck-1quezd",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Herren Feinripp-Unterziehshirts, 3 Stück von LIVERGY® – Das 3er-Set als dünne Basisschicht für Alltag und Arbeit, ideal unter Hemd, Pullover oder Arbeitsjacke. 3er-Pack für dauerhafte Grundausstattung Feinripp-Qualität für anschmiegsames Tragegefühl 100 % Baumwolle für angenehme Hautverträglichkeit Leicht verlängerter Rücken für besseren Sitz Wahlweise Rundhals oder V-Ausschnitt",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Herren Feinripp-Unterziehshirts, 3 Stück",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "herren-feinripp-unterziehshirts-3-stuck-1quezd",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "herren-feinripp-unterziehshirts-3-stuck-1quezd",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Herren Feinripp-Unterziehshirts, 3 Stück von LIVERGY® – Das 3er-Set als dünne Basisschicht für Alltag und Arbeit, ideal unter Hemd, Pullover oder Arbeitsjacke. 3er-Pack für dauerhafte Grundausstattung…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "4052916179741405291617976540529161797724052916179789405291617979640529161798024052916179819405291617982640529161798334052916179864",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Home > Mode & Accessoires > Herrenmode > Unterwäsche",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://www.lidl.de/assets/gcpbeaffb2f724a4c48a905285679188526.jpg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "baby-t-shirt-3-stuck-mit-bio-baumwolle-2nblmk",
+    "title": "Baby T-Shirt, 3 Stück, mit Bio-Baumwolle",
+    "bodyHtml": "Das LUPILU® Baby T-Shirt, 3 Stück, mit Bio-Baumwolle bietet weiche Alltagsbegleitung für Babys und überzeugt durch praktischen Sitz und pflegeleichte Verarbeitung 3er-Set für häufigen Wechsel Mit Bio-Baumwollanteil für weichen Griff Schulterknöpfung erleichtert das An- und Ausziehen Rundhalsausschnitt für bequemen Sitz Farbsets: Grün, navy/blau/gelb, rose/blau/grau",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Home > Baby, Kind & Spielzeug > Babybekleidung > Shirts & Oberteile"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 9.99,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://www.lidl.de/assets/gcp4e30792e603f4f899d31d1566385ef2a.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://www.lidl.de/assets/gcp4e30792e603f4f899d31d1566385ef2a.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "9.99",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://www.lidl.de/assets/gcp4e30792e603f4f899d31d1566385ef2a.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "baby-t-shirt-3-stuck-mit-bio-baumwolle-2nblmk",
+      "sourceId": "4055334545419405533454542640553345454334055334545457405533454546440553345454714055334545495405533454550140553345455184055334545525"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Baby T-Shirt, 3 Stück, mit Bio-Baumwolle",
+        "slug_en": "baby-t-shirt-3-stuck-mit-bio-baumwolle-2nblmk",
+        "description_en": "Das LUPILU® Baby T-Shirt, 3 Stück, mit Bio-Baumwolle bietet weiche Alltagsbegleitung für Babys und überzeugt durch praktischen Sitz und pflegeleichte Verarbeitung 3er-Set für häufigen Wechsel Mit Bio-Baumwollanteil für weichen Griff Schulterknöpfung erleichtert das An- und Ausziehen Rundhalsausschnitt für bequemen Sitz Farbsets: Grün, navy/blau/gelb, rose/blau/grau",
+        "source_url": "https://www.lidl.de/p/lupilu-baby-t-shirt-3-stueck-mit-bio-baumwolle/p100342236",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Baby T-Shirt, 3 Stück, mit Bio-Baumwolle",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "baby-t-shirt-3-stuck-mit-bio-baumwolle-2nblmk",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Das LUPILU® Baby T-Shirt, 3 Stück, mit Bio-Baumwolle bietet weiche Alltagsbegleitung für Babys und überzeugt durch praktischen Sitz und pflegeleichte Verarbeitung 3er-Set für häufigen Wechsel Mit Bio-Baumwollanteil für weichen Griff Schulterknöpfung erleichtert das An- und Ausziehen Rundhalsausschnitt für bequemen Sitz Farbsets: Grün, navy/blau/gelb, rose/blau/grau",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Baby T-Shirt, 3 Stück, mit Bio-Baumwolle",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "baby-t-shirt-3-stuck-mit-bio-baumwolle-2nblmk",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "baby-t-shirt-3-stuck-mit-bio-baumwolle-2nblmk",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Das LUPILU® Baby T-Shirt, 3 Stück, mit Bio-Baumwolle bietet weiche Alltagsbegleitung für Babys und überzeugt durch praktischen Sitz und pflegeleichte Verarbeitung 3er-Set für häufigen Wechsel Mit Bio-…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "4055334545419405533454542640553345454334055334545457405533454546440553345454714055334545495405533454550140553345455184055334545525",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Home > Baby, Kind & Spielzeug > Babybekleidung > Shirts & Oberteile",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://www.lidl.de/assets/gcp4e30792e603f4f899d31d1566385ef2a.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  }
+]

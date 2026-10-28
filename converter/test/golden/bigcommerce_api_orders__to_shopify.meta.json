@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "sourceFormat": "bigcommerce.orders.rest-v2.v1",
+  "targetFormat": "shopify_orders",
+  "counts": {
+    "inputUnits": 2,
+    "outputUnits": 1,
+    "failedUnits": 1,
+    "outputRows": 2
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_bc_order_fees"
+    },
+    {
+      "code": "loss_per_tax"
+    },
+    {
+      "code": "loss_coupons_as_lines"
+    },
+    {
+      "code": "loss_shopify_order_rows",
+      "params": {
+        "orders": 1
+      }
+    },
+    {
+      "code": "loss_shopify_order_numbering",
+      "params": {
+        "orders": 1,
+        "min": "101",
+        "max": "101"
+      }
+    },
+    {
+      "code": "loss_shopify_payments_detail",
+      "params": {
+        "count": 1
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "code": "test_orders_excluded",
+      "params": {
+        "count": 1
+      }
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false,
+  "numberingReport": {
+    "orders": 1,
+    "sourceSequence": {
+      "min": "101",
+      "max": "101",
+      "numeric": true,
+      "gaps": [],
+      "duplicates": []
+    },
+    "invoices": {
+      "withNumber": 0,
+      "withoutNumber": 1,
+      "gaps": []
+    },
+    "targetPolicy": "native-sequence",
+    "warnings": []
+  }
+}

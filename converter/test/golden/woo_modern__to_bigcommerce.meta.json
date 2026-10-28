@@ -1,0 +1,34 @@
+{
+  "ok": true,
+  "sourceFormat": "woo_products_modern",
+  "targetFormat": "bigcommerce_products",
+  "counts": {
+    "inputUnits": 3,
+    "outputUnits": 3,
+    "failedUnits": 0,
+    "outputRows": 8
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_bc_categories_target"
+    },
+    {
+      "code": "loss_bc_images_target"
+    },
+    {
+      "code": "loss_short_description",
+      "params": {
+        "target": "BigCommerce",
+        "count": 1
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "code": "id_removed_bc"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

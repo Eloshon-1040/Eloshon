@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "id_attribute_group": 1,
+    "color": "",
+    "position": 0,
+    "name": [
+      {
+        "id": 1,
+        "value": "S"
+      },
+      {
+        "id": 2,
+        "value": "S"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "id_attribute_group": 1,
+    "color": "",
+    "position": 1,
+    "name": [
+      {
+        "id": 1,
+        "value": "M"
+      },
+      {
+        "id": 2,
+        "value": "M"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "id_attribute_group": 1,
+    "color": "",
+    "position": 2,
+    "name": [
+      {
+        "id": 1,
+        "value": "L"
+      },
+      {
+        "id": 2,
+        "value": "L"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "id_attribute_group": 1,
+    "color": "",
+    "position": 3,
+    "name": [
+      {
+        "id": 1,
+        "value": "XL"
+      },
+      {
+        "id": 2,
+        "value": "XL"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "id_attribute_group": 2,
+    "color": "#AAB2BD",
+    "position": 0,
+    "name": [
+      {
+        "id": 1,
+        "value": "Gray"
+      },
+      {
+        "id": 2,
+        "value": "Gray"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "id_attribute_group": 2,
+    "color": "#CFC4A6",
+    "position": 1,
+    "name": [
+      {
+        "id": 1,
+        "value": "Taupe"
+      },
+      {
+        "id": 2,
+        "value": "Taupe"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "id_attribute_group": 2,
+    "color": "#f5f5dc",
+    "position": 2,
+    "name": [
+      {
+        "id": 1,
+        "value": "Beige"
+      },
+      {
+        "id": 2,
+        "value": "Beige"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "id_attribute_group": 2,
+    "color": "#ffffff",
+    "position": 3,
+    "name": [
+      {
+        "id": 1,
+        "value": "White"
+      },
+      {
+        "id": 2,
+        "value": "White"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "id_attribute_group": 2,
+    "color": "#faebd7",
+    "position": 4,
+    "name": [
+      {
+        "id": 1,
+        "value": "Off White"
+      },
+      {
+        "id": 2,
+        "value": "Off White"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "id_attribute_group": 2,
+    "color": "#E84C3D",
+    "position": 5,
+    "name": [
+      {
+        "id": 1,
+        "value": "Red"
+      },
+      {
+        "id": 2,
+        "value": "Red"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "id_attribute_group": 2,
+    "color": "#434A54",
+    "position": 6,
+    "name": [
+      {
+        "id": 1,
+        "value": "Black"
+      },
+      {
+        "id": 2,
+        "value": "Black"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "id_attribute_group": 2,
+    "color": "#C19A6B",
+    "position": 7,
+    "name": [
+      {
+        "id": 1,
+        "value": "Camel"
+      },
+      {
+        "id": 2,
+        "value": "Camel"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "id_attribute_group": 2,
+    "color": "#F39C11",
+    "position": 8,
+    "name": [
+      {
+        "id": 1,
+        "value": "Orange"
+      },
+      {
+        "id": 2,
+        "value": "Orange"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "id_attribute_group": 2,
+    "color": "#5D9CEC",
+    "position": 9,
+    "name": [
+      {
+        "id": 1,
+        "value": "Blue"
+      },
+      {
+        "id": 2,
+        "value": "Blue"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "id_attribute_group": 2,
+    "color": "#A0D468",
+    "position": 10,
+    "name": [
+      {
+        "id": 1,
+        "value": "Green"
+      },
+      {
+        "id": 2,
+        "value": "Green"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "id_attribute_group": 2,
+    "color": "#F1C40F",
+    "position": 11,
+    "name": [
+      {
+        "id": 1,
+        "value": "Yellow"
+      },
+      {
+        "id": 2,
+        "value": "Yellow"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "id_attribute_group": 2,
+    "color": "#964B00",
+    "position": 12,
+    "name": [
+      {
+        "id": 1,
+        "value": "Brown"
+      },
+      {
+        "id": 2,
+        "value": "Brown"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "id_attribute_group": 2,
+    "color": "#FCCACD",
+    "position": 13,
+    "name": [
+      {
+        "id": 1,
+        "value": "Pink"
+      },
+      {
+        "id": 2,
+        "value": "Pink"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "id_attribute_group": 3,
+    "color": "",
+    "position": 0,
+    "name": [
+      {
+        "id": 1,
+        "value": "40x60cm"
+      },
+      {
+        "id": 2,
+        "value": "40x60cm"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "id_attribute_group": 3,
+    "color": "",
+    "position": 1,
+    "name": [
+      {
+        "id": 1,
+        "value": "60x90cm"
+      },
+      {
+        "id": 2,
+        "value": "60x90cm"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "id_attribute_group": 3,
+    "color": "",
+    "position": 2,
+    "name": [
+      {
+        "id": 1,
+        "value": "80x120cm"
+      },
+      {
+        "id": 2,
+        "value": "80x120cm"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "id_attribute_group": 4,
+    "color": "",
+    "position": 0,
+    "name": [
+      {
+        "id": 1,
+        "value": "Ruled"
+      },
+      {
+        "id": 2,
+        "value": "Ruled"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "id_attribute_group": 4,
+    "color": "",
+    "position": 1,
+    "name": [
+      {
+        "id": 1,
+        "value": "Plain"
+      },
+      {
+        "id": 2,
+        "value": "Plain"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "id_attribute_group": 4,
+    "color": "",
+    "position": 2,
+    "name": [
+      {
+        "id": 1,
+        "value": "Squared"
+      },
+      {
+        "id": 2,
+        "value": "Squared"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "id_attribute_group": 4,
+    "color": "",
+    "position": 3,
+    "name": [
+      {
+        "id": 1,
+        "value": "Doted"
+      },
+      {
+        "id": 2,
+        "value": "Doted"
+      }
+    ]
+  }
+]

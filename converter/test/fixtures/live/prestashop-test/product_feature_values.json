@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "id_feature": 1,
+    "custom": "0",
+    "position": 0,
+    "value": [
+      {
+        "id": 1,
+        "value": "Polyester"
+      },
+      {
+        "id": 2,
+        "value": "Polyester"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "id_feature": 1,
+    "custom": "0",
+    "position": 1,
+    "value": [
+      {
+        "id": 1,
+        "value": "Wool"
+      },
+      {
+        "id": 2,
+        "value": "Wool"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "id_feature": 1,
+    "custom": "0",
+    "position": 2,
+    "value": [
+      {
+        "id": 1,
+        "value": "Ceramic"
+      },
+      {
+        "id": 2,
+        "value": "Ceramic"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "id_feature": 1,
+    "custom": "0",
+    "position": 3,
+    "value": [
+      {
+        "id": 1,
+        "value": "Cotton"
+      },
+      {
+        "id": 2,
+        "value": "Cotton"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "id_feature": 1,
+    "custom": "0",
+    "position": 4,
+    "value": [
+      {
+        "id": 1,
+        "value": "Recycled cardboard"
+      },
+      {
+        "id": 2,
+        "value": "Recycled cardboard"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "id_feature": 1,
+    "custom": "0",
+    "position": 5,
+    "value": [
+      {
+        "id": 1,
+        "value": "Matt paper"
+      },
+      {
+        "id": 2,
+        "value": "Matt paper"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "id_feature": 2,
+    "custom": "0",
+    "position": 0,
+    "value": [
+      {
+        "id": 1,
+        "value": "Long sleeves"
+      },
+      {
+        "id": 2,
+        "value": "Long sleeves"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "id_feature": 2,
+    "custom": "0",
+    "position": 1,
+    "value": [
+      {
+        "id": 1,
+        "value": "Short sleeves"
+      },
+      {
+        "id": 2,
+        "value": "Short sleeves"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "id_feature": 2,
+    "custom": "0",
+    "position": 2,
+    "value": [
+      {
+        "id": 1,
+        "value": "Removable cover"
+      },
+      {
+        "id": 2,
+        "value": "Removable cover"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "id_feature": 2,
+    "custom": "0",
+    "position": 3,
+    "value": [
+      {
+        "id": 1,
+        "value": "120 pages"
+      },
+      {
+        "id": 2,
+        "value": "120 pages"
+      }
+    ]
+  }
+]

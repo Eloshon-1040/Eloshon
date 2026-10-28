@@ -1,0 +1,2408 @@
+[
+  {
+    "extensions": {
+      "foreignKeys": {
+        "extensions": [],
+        "apiAlias": "product_foreign_keys_extension"
+      },
+      "search": {
+        "extensions": [],
+        "translated": [],
+        "productNumber": "SWDEMO10005",
+        "autoIncrement": 5
+      }
+    },
+    "_uniqueIdentifier": "43a23e0c03bf4ceabc6055a2185faa87",
+    "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+    "translated": {
+      "metaDescription": null,
+      "name": "Variant product",
+      "keywords": null,
+      "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "metaTitle": null,
+      "packUnit": null,
+      "packUnitPlural": null,
+      "customFields": {
+        "eloshon_specs_fragile": false,
+        "eloshon_specs_material": "Cotton",
+        "eloshon_specs_warranty_months": 24
+      },
+      "slotConfig": null,
+      "customSearchKeywords": null
+    },
+    "createdAt": "2025-09-15T11:32:13.593+00:00",
+    "updatedAt": "2026-09-21T15:54:50.339+00:00",
+    "parentId": null,
+    "childCount": 6,
+    "autoIncrement": 5,
+    "taxId": "01994d23acaa735295fdd1be0ed54aff",
+    "manufacturerId": "7f24e96676e944b0a0addc20d56728cb",
+    "unitId": null,
+    "active": true,
+    "displayGroup": null,
+    "price": [
+      {
+        "extensions": [],
+        "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+        "net": 16.799999999999997,
+        "gross": 19.99,
+        "linked": true,
+        "listPrice": null,
+        "percentage": null,
+        "regulationPrice": null,
+        "apiAlias": "price"
+      }
+    ],
+    "manufacturerNumber": "MPN-SWDEMO10005",
+    "ean": "2000000000015",
+    "sales": 0,
+    "productNumber": "SWDEMO10005",
+    "stock": 50,
+    "availableStock": 50,
+    "available": true,
+    "deliveryTimeId": null,
+    "deliveryTime": null,
+    "restockTime": null,
+    "isCloseout": false,
+    "purchaseSteps": 1,
+    "maxPurchase": null,
+    "minPurchase": 1,
+    "purchaseUnit": 1,
+    "referenceUnit": 1,
+    "shippingFree": true,
+    "purchasePrices": null,
+    "markAsTopseller": false,
+    "weight": 0.5,
+    "width": null,
+    "height": null,
+    "length": null,
+    "releaseDate": "2025-09-15T11:32:13.540+00:00",
+    "categoryTree": [
+      "01994d23acb670fa926de3796d173b74",
+      "a515ae260223466f8e37471d279e6406",
+      "8de9b484c54f441c894774e5f57e485c"
+    ],
+    "streamIds": null,
+    "optionIds": null,
+    "propertyIds": [
+      "5997d91dc0784997bdef68dfc5a08912",
+      "7cab88165ae5420f921232511b6e8f7d",
+      "96638a1c7ab847bbb3ca64167ab30a3e",
+      "acfd7586d02848f1ac801f4776efa414"
+    ],
+    "name": "Variant product",
+    "keywords": null,
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    "metaDescription": null,
+    "metaTitle": null,
+    "packUnit": null,
+    "packUnitPlural": null,
+    "variantRestrictions": null,
+    "variantListingConfig": null,
+    "variation": [],
+    "tax": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "tax_foreign_keys_extension"
+        }
+      },
+      "_uniqueIdentifier": "01994d23acaa735295fdd1be0ed54aff",
+      "versionId": null,
+      "translated": [],
+      "createdAt": "2025-09-15T11:30:07.658+00:00",
+      "updatedAt": null,
+      "taxRate": 19,
+      "name": "Standard rate",
+      "position": 1,
+      "products": null,
+      "rules": [
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d2419f2719b8f03d09352570e83",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.634+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23ab2473a88c1f1fc9939b320d",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 21,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d2419f2719b8f03d09352570e83",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241a0a7169895b931c02760439",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.658+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d24081e72abb35fdf6fad301a84",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 20,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241a0a7169895b931c02760439",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241a167141bd4eb94e633ea92d",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.670+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23aa9870ecb0f08d7edbadca38",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 21,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241a167141bd4eb94e633ea92d",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241a27736d9bf626f403b62d04",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.687+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23ab367021a9834de601a83129",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 25,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241a27736d9bf626f403b62d04",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241a2d711eb32d7c40bdcb40d7",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.693+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d239a5271d384aaf1fb9596c42c",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 19,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241a2d711eb32d7c40bdcb40d7",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241a3b7291902a97d7594ff495",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.707+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d24083073a191e6e3a19f767ee9",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 20,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241a3b7291902a97d7594ff495",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241a4a7373b54193533d1c6648",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.722+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23a6b270319f49e620b94348df",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 23,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241a4a7373b54193533d1c6648",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241a5b737ca5660fb9e241ff42",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.739+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d239ba6719e9a86b5612f9f6c1d",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 24,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241a5b737ca5660fb9e241ff42",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241a6c70c1ab45db95430e7591",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.756+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23a7ba7187a821b0894483aeae",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 21,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241a6c70c1ab45db95430e7591",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241a7e72f595fc6afa44aeec00",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.774+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23ab5e7122b2f082ad71aa4674",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 20,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241a7e72f595fc6afa44aeec00",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241a8f725b8ccec9d71edc2f6d",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.791+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d240842715ebd591e0f0e3fde25",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 25,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241a8f725b8ccec9d71edc2f6d",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241aa47049b2e7ca73ee499728",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.812+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23a6f8706fbb0e6f63d7463b19",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 22,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241aa47049b2e7ca73ee499728",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241ab572239bdf139d11ca1223",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.829+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d2408e472d8a8fddf0622301368",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 19,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241ab572239bdf139d11ca1223",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241ac671fc871a6d7b54cf73c7",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.846+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d24085673a88d931e0730e81aae",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 21,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241ac671fc871a6d7b54cf73c7",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241ad873fba9174d9e41294372",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.864+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d24087372b3bd2df50520d32c23",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 21,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241ad873fba9174d9e41294372",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241ae9702a8abe0bb407c831a1",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.881+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23a72d71a1bad63e4a91d9df20",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 17,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241ae9702a8abe0bb407c831a1",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241afe72aa9e3ab6211be5107e",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.902+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23aa74703fbd80bac54c124845",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 27,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241afe72aa9e3ab6211be5107e",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241b1073f2b0b9c1f3bef695a1",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.920+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d2408a170e0b216af3f459b6c79",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 18,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241b1073f2b0b9c1f3bef695a1",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241b21714fafe5d32123ff5a70",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.937+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23a74f7092a6e982795b897e54",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 21,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241b21714fafe5d32123ff5a70",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241b2c713abdcfee6d7a62a047",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.948+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23a775702e8f37536267ab6c5b",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 20,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241b2c713abdcfee6d7a62a047",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241b3d7394b3f0644aebeeae32",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.965+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23aa6371b0baf17d97a8065d16",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 23,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241b3d7394b3f0644aebeeae32",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241b52700aa05476b7513b663d",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:35.986+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23a786733abfea2e2f20d554dd",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 23,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241b52700aa05476b7513b663d",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241b6473d2b0105187b2b55876",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:36.004+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23aae072b7926fae4c994aa94d",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 19,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241b6473d2b0105187b2b55876",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241b777281bce9adf9cdb046a5",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:36.023+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d2408c37170a6f86b69e11ced1c",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 22,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241b777281bce9adf9cdb046a5",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241b8370c59ee50e3c30e15049",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:36.035+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23aaba73f28151573887260b30",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 20,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241b8370c59ee50e3c30e15049",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241b8e7049a76b5c4e6881b84d",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:36.046+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23ab497350adf90b6bc3a200f7",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 24,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241b8e7049a76b5c4e6881b84d",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241ba07331852eb19f19bcb855",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:36.064+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d23a79772ceb5b5cccef18b6ffe",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 25,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241ba07331852eb19f19bcb855",
+          "apiAlias": "tax_rule"
+        },
+        {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "tax_rule_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d241bb473a593cc184f6c094172",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:36.084+00:00",
+          "updatedAt": null,
+          "taxId": "01994d23acaa735295fdd1be0ed54aff",
+          "tax": null,
+          "countryId": "01994d239bb77295b97cb3b42bc2d283",
+          "country": null,
+          "taxRuleTypeId": "01994d23dc0b72e39e4ab4b65138d2a0",
+          "type": null,
+          "taxRate": 20,
+          "data": null,
+          "activeFrom": null,
+          "id": "01994d241bb473a593cc184f6c094172",
+          "apiAlias": "tax_rule"
+        }
+      ],
+      "shippingMethods": null,
+      "customFields": null,
+      "id": "01994d23acaa735295fdd1be0ed54aff",
+      "apiAlias": "tax"
+    },
+    "manufacturer": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "product_manufacturer_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "7f24e96676e944b0a0addc20d56728cb",
+      "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+      "translated": {
+        "name": "Shopware Fashion",
+        "description": null,
+        "customFields": []
+      },
+      "createdAt": "2025-09-15T11:32:13.579+00:00",
+      "updatedAt": null,
+      "mediaId": null,
+      "name": "Shopware Fashion",
+      "link": null,
+      "description": null,
+      "media": null,
+      "translations": null,
+      "products": null,
+      "customFields": null,
+      "id": "7f24e96676e944b0a0addc20d56728cb",
+      "apiAlias": "product_manufacturer"
+    },
+    "unit": null,
+    "prices": [],
+    "cover": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "product_media_foreign_keys_extension"
+        }
+      },
+      "_uniqueIdentifier": "55a1e7d9f9e84400a17e2b86d7a3fc89",
+      "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+      "translated": [],
+      "createdAt": "2025-09-15T11:32:13.590+00:00",
+      "updatedAt": null,
+      "productId": "43a23e0c03bf4ceabc6055a2185faa87",
+      "mediaId": "102ac62ba27347a688030a05c1790db7",
+      "position": 1,
+      "media": {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "media_foreign_keys_extension"
+          },
+          "internal_mapping_storage": {
+            "extensions": [],
+            "apiAlias": null
+          }
+        },
+        "_uniqueIdentifier": "102ac62ba27347a688030a05c1790db7",
+        "versionId": null,
+        "translated": {
+          "alt": null,
+          "title": null,
+          "customFields": []
+        },
+        "createdAt": "2025-09-15T11:32:11.999+00:00",
+        "updatedAt": "2025-09-15T11:32:12.104+00:00",
+        "userId": null,
+        "mimeType": "image/jpeg",
+        "fileExtension": "jpg",
+        "fileSize": 21481,
+        "title": null,
+        "metaData": {
+          "type": 2,
+          "width": 600,
+          "height": 600
+        },
+        "mediaType": {
+          "extensions": [],
+          "name": "IMAGE",
+          "flags": [],
+          "apiAlias": "media_type_IMAGE"
+        },
+        "uploadedAt": "2025-09-15T11:32:12.103+00:00",
+        "alt": null,
+        "url": "http://localhost:8080/media/01/9e/ea/1757935932/shirt_600x600.jpg?ts=1757935932",
+        "fileName": "shirt_600x600",
+        "user": null,
+        "translations": null,
+        "categories": null,
+        "themes": null,
+        "productManufacturers": null,
+        "productMedia": null,
+        "avatarUsers": null,
+        "thumbnails": [],
+        "mediaFolderId": "01994d23ada87207aa7d8cb9994f5198",
+        "mediaFolder": null,
+        "hasFile": true,
+        "private": false,
+        "propertyGroupOptions": null,
+        "mailTemplateMedia": null,
+        "tags": null,
+        "path": "media/01/9e/ea/1757935932/shirt_600x600.jpg",
+        "documentBaseConfigs": null,
+        "shippingMethods": null,
+        "paymentMethods": null,
+        "productConfiguratorSettings": null,
+        "orderLineItems": null,
+        "cmsBlocks": null,
+        "cmsSections": null,
+        "cmsPages": null,
+        "documents": null,
+        "appPaymentMethods": null,
+        "appShippingMethods": null,
+        "productDownloads": null,
+        "orderLineItemDownloads": null,
+        "config": null,
+        "fileHash": null,
+        "customFields": null,
+        "id": "102ac62ba27347a688030a05c1790db7",
+        "apiAlias": "media"
+      },
+      "product": null,
+      "coverProducts": null,
+      "customFields": null,
+      "id": "55a1e7d9f9e84400a17e2b86d7a3fc89",
+      "apiAlias": "product_media"
+    },
+    "parent": null,
+    "children": null,
+    "media": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "product_media_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "55a1e7d9f9e84400a17e2b86d7a3fc89",
+        "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "translated": [],
+        "createdAt": "2025-09-15T11:32:13.590+00:00",
+        "updatedAt": null,
+        "productId": "43a23e0c03bf4ceabc6055a2185faa87",
+        "mediaId": "102ac62ba27347a688030a05c1790db7",
+        "position": 1,
+        "media": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "media_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "102ac62ba27347a688030a05c1790db7",
+          "versionId": null,
+          "translated": {
+            "alt": null,
+            "title": null,
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:32:11.999+00:00",
+          "updatedAt": "2025-09-15T11:32:12.104+00:00",
+          "userId": null,
+          "mimeType": "image/jpeg",
+          "fileExtension": "jpg",
+          "fileSize": 21481,
+          "title": null,
+          "metaData": {
+            "type": 2,
+            "width": 600,
+            "height": 600
+          },
+          "mediaType": {
+            "extensions": [],
+            "name": "IMAGE",
+            "flags": [],
+            "apiAlias": "media_type_IMAGE"
+          },
+          "uploadedAt": "2025-09-15T11:32:12.103+00:00",
+          "alt": null,
+          "url": "http://localhost:8080/media/01/9e/ea/1757935932/shirt_600x600.jpg?ts=1757935932",
+          "fileName": "shirt_600x600",
+          "user": null,
+          "translations": null,
+          "categories": null,
+          "themes": null,
+          "productManufacturers": null,
+          "productMedia": null,
+          "avatarUsers": null,
+          "thumbnails": [],
+          "mediaFolderId": "01994d23ada87207aa7d8cb9994f5198",
+          "mediaFolder": null,
+          "hasFile": true,
+          "private": false,
+          "propertyGroupOptions": null,
+          "mailTemplateMedia": null,
+          "tags": null,
+          "path": "media/01/9e/ea/1757935932/shirt_600x600.jpg",
+          "documentBaseConfigs": null,
+          "shippingMethods": null,
+          "paymentMethods": null,
+          "productConfiguratorSettings": null,
+          "orderLineItems": null,
+          "cmsBlocks": null,
+          "cmsSections": null,
+          "cmsPages": null,
+          "documents": null,
+          "appPaymentMethods": null,
+          "appShippingMethods": null,
+          "productDownloads": null,
+          "orderLineItemDownloads": null,
+          "config": null,
+          "fileHash": null,
+          "customFields": null,
+          "id": "102ac62ba27347a688030a05c1790db7",
+          "apiAlias": "media"
+        },
+        "product": null,
+        "coverProducts": null,
+        "customFields": null,
+        "id": "55a1e7d9f9e84400a17e2b86d7a3fc89",
+        "apiAlias": "product_media"
+      }
+    ],
+    "cmsPageId": "7a6d253a67204037966f42b0119704d5",
+    "cmsPage": null,
+    "slotConfig": null,
+    "searchKeywords": null,
+    "translations": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "product_translation_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "43a23e0c03bf4ceabc6055a2185faa87-01994d239970718a8f44e92089b804dd",
+        "versionId": null,
+        "translated": [],
+        "createdAt": "2025-09-15T11:32:13.594+00:00",
+        "updatedAt": null,
+        "languageId": "01994d239970718a8f44e92089b804dd",
+        "language": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "language_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01994d239970718a8f44e92089b804dd",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:02.757+00:00",
+          "updatedAt": null,
+          "parentId": null,
+          "localeId": "01994d239970718a8f44e92089b75351",
+          "translationCodeId": "01994d239970718a8f44e92089b75351",
+          "translationCode": null,
+          "name": "Deutsch",
+          "active": true,
+          "locale": {
+            "extensions": {
+              "foreignKeys": {
+                "extensions": [],
+                "apiAlias": "locale_foreign_keys_extension"
+              },
+              "internal_mapping_storage": {
+                "extensions": [],
+                "apiAlias": null
+              }
+            },
+            "_uniqueIdentifier": "01994d239970718a8f44e92089b75351",
+            "versionId": null,
+            "translated": {
+              "name": "German",
+              "territory": "Germany",
+              "customFields": []
+            },
+            "createdAt": "2025-09-15T11:30:02.743+00:00",
+            "updatedAt": null,
+            "code": "de-DE",
+            "name": "German",
+            "territory": "Germany",
+            "translations": null,
+            "users": null,
+            "languages": null,
+            "customFields": null,
+            "id": "01994d239970718a8f44e92089b75351",
+            "apiAlias": "locale"
+          },
+          "parent": null,
+          "children": null,
+          "salesChannels": null,
+          "customers": null,
+          "salesChannelDefaultAssignments": null,
+          "categoryTranslations": null,
+          "countryStateTranslations": null,
+          "countryTranslations": null,
+          "currencyTranslations": null,
+          "customerGroupTranslations": null,
+          "localeTranslations": null,
+          "mediaTranslations": null,
+          "paymentMethodTranslations": null,
+          "productManufacturerTranslations": null,
+          "productTranslations": null,
+          "shippingMethodTranslations": null,
+          "unitTranslations": null,
+          "propertyGroupTranslations": null,
+          "propertyGroupOptionTranslations": null,
+          "salesChannelTranslations": null,
+          "salesChannelTypeTranslations": null,
+          "salutationTranslations": null,
+          "salesChannelDomains": null,
+          "pluginTranslations": null,
+          "productStreamTranslations": null,
+          "stateMachineTranslations": null,
+          "stateMachineStateTranslations": null,
+          "cmsPageTranslations": null,
+          "cmsSlotTranslations": null,
+          "mailTemplateTranslations": null,
+          "mailHeaderFooterTranslations": null,
+          "documentTypeTranslations": null,
+          "deliveryTimeTranslations": null,
+          "newsletterRecipients": null,
+          "orders": null,
+          "numberRangeTypeTranslations": null,
+          "productSearchKeywords": null,
+          "productKeywordDictionaries": null,
+          "mailTemplateTypeTranslations": null,
+          "promotionTranslations": null,
+          "numberRangeTranslations": null,
+          "productReviews": null,
+          "seoUrlTranslations": null,
+          "taxRuleTypeTranslations": null,
+          "productCrossSellingTranslations": null,
+          "importExportProfileTranslations": null,
+          "productFeatureSetTranslations": null,
+          "appTranslations": null,
+          "actionButtonTranslations": null,
+          "productSortingTranslations": null,
+          "productSearchConfig": null,
+          "landingPageTranslations": null,
+          "appCmsBlockTranslations": null,
+          "appScriptConditionTranslations": null,
+          "appFlowActionTranslations": null,
+          "taxProviderTranslations": null,
+          "customFields": null,
+          "id": "01994d239970718a8f44e92089b804dd",
+          "apiAlias": "language"
+        },
+        "productId": "43a23e0c03bf4ceabc6055a2185faa87",
+        "productVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "metaDescription": null,
+        "name": "Variantenprodukt",
+        "keywords": null,
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        "metaTitle": null,
+        "packUnit": null,
+        "packUnitPlural": null,
+        "product": null,
+        "slotConfig": null,
+        "customSearchKeywords": null,
+        "customFields": null,
+        "apiAlias": "product_translation"
+      },
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "product_translation_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "43a23e0c03bf4ceabc6055a2185faa87-2fbb5fe2e29a4d70aa5854ce7ce3e20b",
+        "versionId": null,
+        "translated": [],
+        "createdAt": "2025-09-15T11:32:13.594+00:00",
+        "updatedAt": "2026-09-21T15:54:49.230+00:00",
+        "languageId": "2fbb5fe2e29a4d70aa5854ce7ce3e20b",
+        "language": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "language_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "2fbb5fe2e29a4d70aa5854ce7ce3e20b",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:02.749+00:00",
+          "updatedAt": null,
+          "parentId": null,
+          "localeId": "01994d239970718a8f44e920897fb4c7",
+          "translationCodeId": "01994d239970718a8f44e920897fb4c7",
+          "translationCode": null,
+          "name": "English",
+          "active": true,
+          "locale": {
+            "extensions": {
+              "foreignKeys": {
+                "extensions": [],
+                "apiAlias": "locale_foreign_keys_extension"
+              },
+              "internal_mapping_storage": {
+                "extensions": [],
+                "apiAlias": null
+              }
+            },
+            "_uniqueIdentifier": "01994d239970718a8f44e920897fb4c7",
+            "versionId": null,
+            "translated": {
+              "name": "English",
+              "territory": "United Kingdom",
+              "customFields": []
+            },
+            "createdAt": "2025-09-15T11:30:02.736+00:00",
+            "updatedAt": null,
+            "code": "en-GB",
+            "name": "English",
+            "territory": "United Kingdom",
+            "translations": null,
+            "users": null,
+            "languages": null,
+            "customFields": null,
+            "id": "01994d239970718a8f44e920897fb4c7",
+            "apiAlias": "locale"
+          },
+          "parent": null,
+          "children": null,
+          "salesChannels": null,
+          "customers": null,
+          "salesChannelDefaultAssignments": null,
+          "categoryTranslations": null,
+          "countryStateTranslations": null,
+          "countryTranslations": null,
+          "currencyTranslations": null,
+          "customerGroupTranslations": null,
+          "localeTranslations": null,
+          "mediaTranslations": null,
+          "paymentMethodTranslations": null,
+          "productManufacturerTranslations": null,
+          "productTranslations": null,
+          "shippingMethodTranslations": null,
+          "unitTranslations": null,
+          "propertyGroupTranslations": null,
+          "propertyGroupOptionTranslations": null,
+          "salesChannelTranslations": null,
+          "salesChannelTypeTranslations": null,
+          "salutationTranslations": null,
+          "salesChannelDomains": null,
+          "pluginTranslations": null,
+          "productStreamTranslations": null,
+          "stateMachineTranslations": null,
+          "stateMachineStateTranslations": null,
+          "cmsPageTranslations": null,
+          "cmsSlotTranslations": null,
+          "mailTemplateTranslations": null,
+          "mailHeaderFooterTranslations": null,
+          "documentTypeTranslations": null,
+          "deliveryTimeTranslations": null,
+          "newsletterRecipients": null,
+          "orders": null,
+          "numberRangeTypeTranslations": null,
+          "productSearchKeywords": null,
+          "productKeywordDictionaries": null,
+          "mailTemplateTypeTranslations": null,
+          "promotionTranslations": null,
+          "numberRangeTranslations": null,
+          "productReviews": null,
+          "seoUrlTranslations": null,
+          "taxRuleTypeTranslations": null,
+          "productCrossSellingTranslations": null,
+          "importExportProfileTranslations": null,
+          "productFeatureSetTranslations": null,
+          "appTranslations": null,
+          "actionButtonTranslations": null,
+          "productSortingTranslations": null,
+          "productSearchConfig": null,
+          "landingPageTranslations": null,
+          "appCmsBlockTranslations": null,
+          "appScriptConditionTranslations": null,
+          "appFlowActionTranslations": null,
+          "taxProviderTranslations": null,
+          "customFields": null,
+          "id": "2fbb5fe2e29a4d70aa5854ce7ce3e20b",
+          "apiAlias": "language"
+        },
+        "productId": "43a23e0c03bf4ceabc6055a2185faa87",
+        "productVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "metaDescription": null,
+        "name": "Variant product",
+        "keywords": null,
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+        "metaTitle": null,
+        "packUnit": null,
+        "packUnitPlural": null,
+        "product": null,
+        "slotConfig": null,
+        "customSearchKeywords": null,
+        "customFields": {
+          "eloshon_specs_fragile": false,
+          "eloshon_specs_material": "Cotton",
+          "eloshon_specs_warranty_months": 24
+        },
+        "apiAlias": "product_translation"
+      }
+    ],
+    "categories": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "category_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "8de9b484c54f441c894774e5f57e485c",
+        "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "translated": {
+          "breadcrumb": [
+            "Catalogue #1",
+            "Clothing",
+            "Women"
+          ],
+          "name": "Women",
+          "customFields": [],
+          "slotConfig": null,
+          "linkType": null,
+          "internalLink": null,
+          "externalLink": null,
+          "linkNewTab": null,
+          "description": null,
+          "metaTitle": null,
+          "metaDescription": null,
+          "keywords": null
+        },
+        "createdAt": "2025-09-15T11:32:12.566+00:00",
+        "updatedAt": null,
+        "afterCategoryId": null,
+        "parentId": "a515ae260223466f8e37471d279e6406",
+        "autoIncrement": 7,
+        "mediaId": null,
+        "name": "Women",
+        "breadcrumb": [
+          "Catalogue #1",
+          "Clothing",
+          "Women"
+        ],
+        "path": "|01994d23acb670fa926de3796d173b74|a515ae260223466f8e37471d279e6406|",
+        "level": 3,
+        "active": true,
+        "childCount": 0,
+        "visibleChildCount": 0,
+        "displayNestedProducts": true,
+        "parent": null,
+        "children": null,
+        "translations": null,
+        "media": null,
+        "products": null,
+        "nestedProducts": null,
+        "tags": null,
+        "cmsPageId": "01994d23b471708b841e2d1869bf4811",
+        "cmsPageIdSwitched": false,
+        "cmsPage": null,
+        "productStreamId": null,
+        "productStream": null,
+        "slotConfig": null,
+        "navigationSalesChannels": null,
+        "footerSalesChannels": null,
+        "serviceSalesChannels": null,
+        "linkType": null,
+        "linkNewTab": null,
+        "internalLink": null,
+        "externalLink": null,
+        "visible": true,
+        "type": "page",
+        "productAssignmentType": "product",
+        "description": null,
+        "metaTitle": null,
+        "metaDescription": null,
+        "keywords": null,
+        "mainCategories": null,
+        "seoUrls": null,
+        "customEntityTypeId": null,
+        "customFields": null,
+        "id": "8de9b484c54f441c894774e5f57e485c",
+        "apiAlias": "category"
+      }
+    ],
+    "customFieldSets": [],
+    "tags": null,
+    "properties": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "property_group_option_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "5997d91dc0784997bdef68dfc5a08912",
+        "versionId": null,
+        "translated": {
+          "name": "M",
+          "position": 1,
+          "customFields": []
+        },
+        "createdAt": "2025-09-15T11:32:13.495+00:00",
+        "updatedAt": null,
+        "groupId": "75f353b589d04bf48e8a9ab1f5422b0e",
+        "name": "M",
+        "position": 1,
+        "colorHexCode": null,
+        "mediaId": null,
+        "group": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "property_group_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "75f353b589d04bf48e8a9ab1f5422b0e",
+          "versionId": null,
+          "translated": {
+            "name": "Size",
+            "description": null,
+            "position": 1,
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:32:13.498+00:00",
+          "updatedAt": null,
+          "name": "Size",
+          "displayType": "text",
+          "sortingType": "alphanumeric",
+          "description": null,
+          "position": 1,
+          "filterable": true,
+          "visibleOnProductDetailPage": true,
+          "options": null,
+          "translations": null,
+          "customFields": null,
+          "id": "75f353b589d04bf48e8a9ab1f5422b0e",
+          "apiAlias": "property_group"
+        },
+        "translations": null,
+        "productConfiguratorSettings": null,
+        "productProperties": null,
+        "productOptions": null,
+        "media": null,
+        "combinable": false,
+        "customFields": null,
+        "id": "5997d91dc0784997bdef68dfc5a08912",
+        "apiAlias": "property_group_option"
+      },
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "property_group_option_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "7cab88165ae5420f921232511b6e8f7d",
+        "versionId": null,
+        "translated": {
+          "name": "Woman",
+          "position": 1,
+          "customFields": []
+        },
+        "createdAt": "2025-09-15T11:32:13.479+00:00",
+        "updatedAt": null,
+        "groupId": "1857bb30fe6448c88f8ad331cf6dfa0c",
+        "name": "Woman",
+        "position": 1,
+        "colorHexCode": null,
+        "mediaId": null,
+        "group": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "property_group_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "1857bb30fe6448c88f8ad331cf6dfa0c",
+          "versionId": null,
+          "translated": {
+            "name": "Target group",
+            "description": null,
+            "position": 1,
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:32:13.481+00:00",
+          "updatedAt": null,
+          "name": "Target group",
+          "displayType": "text",
+          "sortingType": "alphanumeric",
+          "description": null,
+          "position": 1,
+          "filterable": true,
+          "visibleOnProductDetailPage": true,
+          "options": null,
+          "translations": null,
+          "customFields": null,
+          "id": "1857bb30fe6448c88f8ad331cf6dfa0c",
+          "apiAlias": "property_group"
+        },
+        "translations": null,
+        "productConfiguratorSettings": null,
+        "productProperties": null,
+        "productOptions": null,
+        "media": null,
+        "combinable": false,
+        "customFields": null,
+        "id": "7cab88165ae5420f921232511b6e8f7d",
+        "apiAlias": "property_group_option"
+      },
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "property_group_option_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "96638a1c7ab847bbb3ca64167ab30a3e",
+        "versionId": null,
+        "translated": {
+          "name": "Cotton",
+          "position": 1,
+          "customFields": []
+        },
+        "createdAt": "2025-09-15T11:32:13.501+00:00",
+        "updatedAt": null,
+        "groupId": "a67cdd9627cb488bb4cd91f3e8d66e32",
+        "name": "Cotton",
+        "position": 1,
+        "colorHexCode": null,
+        "mediaId": null,
+        "group": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "property_group_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "a67cdd9627cb488bb4cd91f3e8d66e32",
+          "versionId": null,
+          "translated": {
+            "name": "Material",
+            "description": null,
+            "position": 1,
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:32:13.507+00:00",
+          "updatedAt": null,
+          "name": "Material",
+          "displayType": "text",
+          "sortingType": "alphanumeric",
+          "description": null,
+          "position": 1,
+          "filterable": true,
+          "visibleOnProductDetailPage": true,
+          "options": null,
+          "translations": null,
+          "customFields": null,
+          "id": "a67cdd9627cb488bb4cd91f3e8d66e32",
+          "apiAlias": "property_group"
+        },
+        "translations": null,
+        "productConfiguratorSettings": null,
+        "productProperties": null,
+        "productOptions": null,
+        "media": null,
+        "combinable": false,
+        "customFields": null,
+        "id": "96638a1c7ab847bbb3ca64167ab30a3e",
+        "apiAlias": "property_group_option"
+      },
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "property_group_option_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "acfd7586d02848f1ac801f4776efa414",
+        "versionId": null,
+        "translated": {
+          "name": "XL",
+          "position": 1,
+          "customFields": []
+        },
+        "createdAt": "2025-09-15T11:32:13.497+00:00",
+        "updatedAt": null,
+        "groupId": "75f353b589d04bf48e8a9ab1f5422b0e",
+        "name": "XL",
+        "position": 1,
+        "colorHexCode": null,
+        "mediaId": null,
+        "group": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "property_group_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "75f353b589d04bf48e8a9ab1f5422b0e",
+          "versionId": null,
+          "translated": {
+            "name": "Size",
+            "description": null,
+            "position": 1,
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:32:13.498+00:00",
+          "updatedAt": null,
+          "name": "Size",
+          "displayType": "text",
+          "sortingType": "alphanumeric",
+          "description": null,
+          "position": 1,
+          "filterable": true,
+          "visibleOnProductDetailPage": true,
+          "options": null,
+          "translations": null,
+          "customFields": null,
+          "id": "75f353b589d04bf48e8a9ab1f5422b0e",
+          "apiAlias": "property_group"
+        },
+        "translations": null,
+        "productConfiguratorSettings": null,
+        "productProperties": null,
+        "productOptions": null,
+        "media": null,
+        "combinable": false,
+        "customFields": null,
+        "id": "acfd7586d02848f1ac801f4776efa414",
+        "apiAlias": "property_group_option"
+      }
+    ],
+    "options": [],
+    "configuratorSettings": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "product_configurator_setting_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01994d25986b70c6b9f95df5f4986b4c",
+        "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "translated": [],
+        "createdAt": "2025-09-15T11:32:13.591+00:00",
+        "updatedAt": null,
+        "productId": "43a23e0c03bf4ceabc6055a2185faa87",
+        "optionId": "2bfd278e87204807a890da4a3e81dd90",
+        "mediaId": "6cbbdc03b43f4207be80b5f752d5a1c4",
+        "position": 0,
+        "price": null,
+        "option": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "property_group_option_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "2bfd278e87204807a890da4a3e81dd90",
+          "versionId": null,
+          "translated": {
+            "name": "Blue",
+            "position": 1,
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:32:13.482+00:00",
+          "updatedAt": null,
+          "groupId": "269c7e40a54a462e884edb004c5f7bc8",
+          "name": "Blue",
+          "position": 1,
+          "colorHexCode": "#0000ffff",
+          "mediaId": null,
+          "group": {
+            "extensions": {
+              "foreignKeys": {
+                "extensions": [],
+                "apiAlias": "property_group_foreign_keys_extension"
+              },
+              "internal_mapping_storage": {
+                "extensions": [],
+                "apiAlias": null
+              }
+            },
+            "_uniqueIdentifier": "269c7e40a54a462e884edb004c5f7bc8",
+            "versionId": null,
+            "translated": {
+              "name": "Colour",
+              "description": null,
+              "position": 1,
+              "customFields": []
+            },
+            "createdAt": "2025-09-15T11:32:13.485+00:00",
+            "updatedAt": null,
+            "name": "Colour",
+            "displayType": "color",
+            "sortingType": "alphanumeric",
+            "description": null,
+            "position": 1,
+            "filterable": true,
+            "visibleOnProductDetailPage": true,
+            "options": null,
+            "translations": null,
+            "customFields": null,
+            "id": "269c7e40a54a462e884edb004c5f7bc8",
+            "apiAlias": "property_group"
+          },
+          "translations": null,
+          "productConfiguratorSettings": null,
+          "productProperties": null,
+          "productOptions": null,
+          "media": null,
+          "combinable": false,
+          "customFields": null,
+          "id": "2bfd278e87204807a890da4a3e81dd90",
+          "apiAlias": "property_group_option"
+        },
+        "media": null,
+        "selected": false,
+        "product": null,
+        "customFields": null,
+        "id": "01994d25986b70c6b9f95df5f4986b4c",
+        "apiAlias": "product_configurator_setting"
+      },
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "product_configurator_setting_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01994d25986b70c6b9f95df5f5aaf695",
+        "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "translated": [],
+        "createdAt": "2025-09-15T11:32:13.592+00:00",
+        "updatedAt": null,
+        "productId": "43a23e0c03bf4ceabc6055a2185faa87",
+        "optionId": "52454db2adf942b2ac079a296f454a10",
+        "mediaId": "f69ab8ae42d04e17b2bab5ec2ff0a93c",
+        "position": 0,
+        "price": null,
+        "option": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "property_group_option_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "52454db2adf942b2ac079a296f454a10",
+          "versionId": null,
+          "translated": {
+            "name": "Red",
+            "position": 1,
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:32:13.484+00:00",
+          "updatedAt": null,
+          "groupId": "269c7e40a54a462e884edb004c5f7bc8",
+          "name": "Red",
+          "position": 1,
+          "colorHexCode": "#ff0000ff",
+          "mediaId": null,
+          "group": {
+            "extensions": {
+              "foreignKeys": {
+                "extensions": [],
+                "apiAlias": "property_group_foreign_keys_extension"
+              },
+              "internal_mapping_storage": {
+                "extensions": [],
+                "apiAlias": null
+              }
+            },
+            "_uniqueIdentifier": "269c7e40a54a462e884edb004c5f7bc8",
+            "versionId": null,
+            "translated": {
+              "name": "Colour",
+              "description": null,
+              "position": 1,
+              "customFields": []
+            },
+            "createdAt": "2025-09-15T11:32:13.485+00:00",
+            "updatedAt": null,
+            "name": "Colour",
+            "displayType": "color",
+            "sortingType": "alphanumeric",
+            "description": null,
+            "position": 1,
+            "filterable": true,
+            "visibleOnProductDetailPage": true,
+            "options": null,
+            "translations": null,
+            "customFields": null,
+            "id": "269c7e40a54a462e884edb004c5f7bc8",
+            "apiAlias": "property_group"
+          },
+          "translations": null,
+          "productConfiguratorSettings": null,
+          "productProperties": null,
+          "productOptions": null,
+          "media": null,
+          "combinable": false,
+          "customFields": null,
+          "id": "52454db2adf942b2ac079a296f454a10",
+          "apiAlias": "property_group_option"
+        },
+        "media": null,
+        "selected": false,
+        "product": null,
+        "customFields": null,
+        "id": "01994d25986b70c6b9f95df5f5aaf695",
+        "apiAlias": "product_configurator_setting"
+      },
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "product_configurator_setting_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01994d25986b70c6b9f95df5f5685c2c",
+        "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "translated": [],
+        "createdAt": "2025-09-15T11:32:13.591+00:00",
+        "updatedAt": null,
+        "productId": "43a23e0c03bf4ceabc6055a2185faa87",
+        "optionId": "5997d91dc0784997bdef68dfc5a08912",
+        "mediaId": null,
+        "position": 0,
+        "price": null,
+        "option": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "property_group_option_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "5997d91dc0784997bdef68dfc5a08912",
+          "versionId": null,
+          "translated": {
+            "name": "M",
+            "position": 1,
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:32:13.495+00:00",
+          "updatedAt": null,
+          "groupId": "75f353b589d04bf48e8a9ab1f5422b0e",
+          "name": "M",
+          "position": 1,
+          "colorHexCode": null,
+          "mediaId": null,
+          "group": {
+            "extensions": {
+              "foreignKeys": {
+                "extensions": [],
+                "apiAlias": "property_group_foreign_keys_extension"
+              },
+              "internal_mapping_storage": {
+                "extensions": [],
+                "apiAlias": null
+              }
+            },
+            "_uniqueIdentifier": "75f353b589d04bf48e8a9ab1f5422b0e",
+            "versionId": null,
+            "translated": {
+              "name": "Size",
+              "description": null,
+              "position": 1,
+              "customFields": []
+            },
+            "createdAt": "2025-09-15T11:32:13.498+00:00",
+            "updatedAt": null,
+            "name": "Size",
+            "displayType": "text",
+            "sortingType": "alphanumeric",
+            "description": null,
+            "position": 1,
+            "filterable": true,
+            "visibleOnProductDetailPage": true,
+            "options": null,
+            "translations": null,
+            "customFields": null,
+            "id": "75f353b589d04bf48e8a9ab1f5422b0e",
+            "apiAlias": "property_group"
+          },
+          "translations": null,
+          "productConfiguratorSettings": null,
+          "productProperties": null,
+          "productOptions": null,
+          "media": null,
+          "combinable": false,
+          "customFields": null,
+          "id": "5997d91dc0784997bdef68dfc5a08912",
+          "apiAlias": "property_group_option"
+        },
+        "media": null,
+        "selected": false,
+        "product": null,
+        "customFields": null,
+        "id": "01994d25986b70c6b9f95df5f5685c2c",
+        "apiAlias": "product_configurator_setting"
+      },
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "product_configurator_setting_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01994d25986b70c6b9f95df5f40572a6",
+        "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "translated": [],
+        "createdAt": "2025-09-15T11:32:13.591+00:00",
+        "updatedAt": null,
+        "productId": "43a23e0c03bf4ceabc6055a2185faa87",
+        "optionId": "acfd7586d02848f1ac801f4776efa414",
+        "mediaId": null,
+        "position": 0,
+        "price": null,
+        "option": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "property_group_option_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "acfd7586d02848f1ac801f4776efa414",
+          "versionId": null,
+          "translated": {
+            "name": "XL",
+            "position": 1,
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:32:13.497+00:00",
+          "updatedAt": null,
+          "groupId": "75f353b589d04bf48e8a9ab1f5422b0e",
+          "name": "XL",
+          "position": 1,
+          "colorHexCode": null,
+          "mediaId": null,
+          "group": {
+            "extensions": {
+              "foreignKeys": {
+                "extensions": [],
+                "apiAlias": "property_group_foreign_keys_extension"
+              },
+              "internal_mapping_storage": {
+                "extensions": [],
+                "apiAlias": null
+              }
+            },
+            "_uniqueIdentifier": "75f353b589d04bf48e8a9ab1f5422b0e",
+            "versionId": null,
+            "translated": {
+              "name": "Size",
+              "description": null,
+              "position": 1,
+              "customFields": []
+            },
+            "createdAt": "2025-09-15T11:32:13.498+00:00",
+            "updatedAt": null,
+            "name": "Size",
+            "displayType": "text",
+            "sortingType": "alphanumeric",
+            "description": null,
+            "position": 1,
+            "filterable": true,
+            "visibleOnProductDetailPage": true,
+            "options": null,
+            "translations": null,
+            "customFields": null,
+            "id": "75f353b589d04bf48e8a9ab1f5422b0e",
+            "apiAlias": "property_group"
+          },
+          "translations": null,
+          "productConfiguratorSettings": null,
+          "productProperties": null,
+          "productOptions": null,
+          "media": null,
+          "combinable": false,
+          "customFields": null,
+          "id": "acfd7586d02848f1ac801f4776efa414",
+          "apiAlias": "property_group_option"
+        },
+        "media": null,
+        "selected": false,
+        "product": null,
+        "customFields": null,
+        "id": "01994d25986b70c6b9f95df5f40572a6",
+        "apiAlias": "product_configurator_setting"
+      },
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "product_configurator_setting_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01994d25986b70c6b9f95df5f5fcb5fd",
+        "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "translated": [],
+        "createdAt": "2025-09-15T11:32:13.592+00:00",
+        "updatedAt": null,
+        "productId": "43a23e0c03bf4ceabc6055a2185faa87",
+        "optionId": "ad735af1ebfb421e93e408b073c4a89a",
+        "mediaId": "102ac62ba27347a688030a05c1790db7",
+        "position": 0,
+        "price": null,
+        "option": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "property_group_option_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "ad735af1ebfb421e93e408b073c4a89a",
+          "versionId": null,
+          "translated": {
+            "name": "White",
+            "position": 1,
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:32:13.485+00:00",
+          "updatedAt": null,
+          "groupId": "269c7e40a54a462e884edb004c5f7bc8",
+          "name": "White",
+          "position": 1,
+          "colorHexCode": "#ffffffff",
+          "mediaId": null,
+          "group": {
+            "extensions": {
+              "foreignKeys": {
+                "extensions": [],
+                "apiAlias": "property_group_foreign_keys_extension"
+              },
+              "internal_mapping_storage": {
+                "extensions": [],
+                "apiAlias": null
+              }
+            },
+            "_uniqueIdentifier": "269c7e40a54a462e884edb004c5f7bc8",
+            "versionId": null,
+            "translated": {
+              "name": "Colour",
+              "description": null,
+              "position": 1,
+              "customFields": []
+            },
+            "createdAt": "2025-09-15T11:32:13.485+00:00",
+            "updatedAt": null,
+            "name": "Colour",
+            "displayType": "color",
+            "sortingType": "alphanumeric",
+            "description": null,
+            "position": 1,
+            "filterable": true,
+            "visibleOnProductDetailPage": true,
+            "options": null,
+            "translations": null,
+            "customFields": null,
+            "id": "269c7e40a54a462e884edb004c5f7bc8",
+            "apiAlias": "property_group"
+          },
+          "translations": null,
+          "productConfiguratorSettings": null,
+          "productProperties": null,
+          "productOptions": null,
+          "media": null,
+          "combinable": false,
+          "customFields": null,
+          "id": "ad735af1ebfb421e93e408b073c4a89a",
+          "apiAlias": "property_group_option"
+        },
+        "media": null,
+        "selected": false,
+        "product": null,
+        "customFields": null,
+        "id": "01994d25986b70c6b9f95df5f5fcb5fd",
+        "apiAlias": "product_configurator_setting"
+      }
+    ],
+    "categoriesRo": null,
+    "coverId": "55a1e7d9f9e84400a17e2b86d7a3fc89",
+    "visibilities": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "product_visibility_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "6c6041a1de0940378ab05ad4ca892745",
+        "versionId": null,
+        "translated": [],
+        "createdAt": "2025-09-15T11:32:13.592+00:00",
+        "updatedAt": null,
+        "visibility": 30,
+        "productId": "43a23e0c03bf4ceabc6055a2185faa87",
+        "salesChannelId": "01994d25627d7303ba92b97e96becd52",
+        "product": null,
+        "salesChannel": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "sales_channel_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "01994d25627d7303ba92b97e96becd52",
+          "versionId": null,
+          "translated": {
+            "name": "Storefront",
+            "customFields": [],
+            "homeSlotConfig": null,
+            "homeEnabled": true,
+            "homeName": null,
+            "homeMetaTitle": null,
+            "homeMetaDescription": null,
+            "homeKeywords": null
+          },
+          "createdAt": "2025-09-15T11:31:59.783+00:00",
+          "updatedAt": null,
+          "typeId": "8a243080f92e4c719546314b577cf82b",
+          "languageId": "2fbb5fe2e29a4d70aa5854ce7ce3e20b",
+          "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+          "paymentMethodId": "01994d23abf47265bd0870b524d21af7",
+          "shippingMethodId": "01994d23ac6472abbd10d0fe562146f6",
+          "countryId": "01994d239a5271d384aaf1fb9596c42c",
+          "navigationCategoryId": "01994d23acb670fa926de3796d173b74",
+          "navigationCategoryVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+          "navigationCategoryDepth": 3,
+          "homeSlotConfig": null,
+          "homeCmsPageId": null,
+          "homeCmsPageVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+          "homeCmsPage": null,
+          "homeEnabled": true,
+          "homeName": null,
+          "homeMetaTitle": null,
+          "homeMetaDescription": null,
+          "homeKeywords": null,
+          "footerCategoryId": null,
+          "footerCategoryVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+          "serviceCategoryId": null,
+          "serviceCategoryVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+          "name": "Storefront",
+          "shortName": null,
+          "accessKey": "SWSCD0LVRFBJBZYXM0VRTEC3ZW",
+          "currencies": null,
+          "languages": null,
+          "configuration": null,
+          "active": true,
+          "maintenance": false,
+          "maintenanceIpWhitelist": null,
+          "taxCalculationType": "horizontal",
+          "type": null,
+          "currency": null,
+          "language": null,
+          "paymentMethod": null,
+          "shippingMethod": null,
+          "country": null,
+          "orders": null,
+          "customers": null,
+          "countries": null,
+          "paymentMethods": null,
+          "shippingMethods": null,
+          "translations": null,
+          "domains": null,
+          "systemConfigs": null,
+          "navigationCategory": null,
+          "footerCategory": null,
+          "serviceCategory": null,
+          "productVisibilities": null,
+          "mailHeaderFooterId": null,
+          "numberRangeSalesChannels": null,
+          "mailHeaderFooter": null,
+          "customerGroupId": "cfbd5018d38d41d8adca10d94fc8bdd6",
+          "customerGroup": null,
+          "newsletterRecipients": null,
+          "promotionSalesChannels": null,
+          "documentBaseConfigSalesChannels": null,
+          "productReviews": null,
+          "seoUrls": null,
+          "seoUrlTemplates": null,
+          "mainCategories": null,
+          "paymentMethodIds": [
+            "01994d23abca7205bb588089bcb5dbf5",
+            "01994d23abe272a59016df112c638ef6",
+            "01994d23abf47265bd0870b524d21af7",
+            "01994d23ac08703ab5f0151f750acbb2"
+          ],
+          "productExports": null,
+          "hreflangActive": false,
+          "hreflangDefaultDomainId": null,
+          "hreflangDefaultDomain": null,
+          "analyticsId": null,
+          "analytics": null,
+          "customerGroupsRegistrations": null,
+          "boundCustomers": null,
+          "wishlists": null,
+          "landingPages": null,
+          "measurementUnits": {
+            "extensions": [],
+            "system": "metric",
+            "units": {
+              "length": "mm",
+              "weight": "kg"
+            },
+            "apiAlias": "measurement_system_info"
+          },
+          "customFields": null,
+          "id": "01994d25627d7303ba92b97e96becd52",
+          "apiAlias": "sales_channel"
+        },
+        "id": "6c6041a1de0940378ab05ad4ca892745",
+        "apiAlias": "product_visibility"
+      }
+    ],
+    "tagIds": null,
+    "categoryIds": [
+      "8de9b484c54f441c894774e5f57e485c"
+    ],
+    "productReviews": null,
+    "ratingAverage": null,
+    "mainCategories": null,
+    "seoUrls": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "seo_url_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01994d259bbf71f7b34525ec963473fa",
+        "versionId": null,
+        "translated": [],
+        "createdAt": "2025-09-15T11:32:14.388+00:00",
+        "updatedAt": null,
+        "salesChannelId": "01994d25627d7303ba92b97e96becd52",
+        "languageId": "2fbb5fe2e29a4d70aa5854ce7ce3e20b",
+        "routeName": "frontend.detail.page",
+        "foreignKey": "43a23e0c03bf4ceabc6055a2185faa87",
+        "pathInfo": "/detail/43a23e0c03bf4ceabc6055a2185faa87",
+        "seoPathInfo": "Variant-product/SWDEMO10005",
+        "isCanonical": true,
+        "isModified": false,
+        "isDeleted": false,
+        "salesChannel": null,
+        "language": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "language_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "2fbb5fe2e29a4d70aa5854ce7ce3e20b",
+          "versionId": null,
+          "translated": [],
+          "createdAt": "2025-09-15T11:30:02.749+00:00",
+          "updatedAt": null,
+          "parentId": null,
+          "localeId": "01994d239970718a8f44e920897fb4c7",
+          "translationCodeId": "01994d239970718a8f44e920897fb4c7",
+          "translationCode": null,
+          "name": "English",
+          "active": true,
+          "locale": {
+            "extensions": {
+              "foreignKeys": {
+                "extensions": [],
+                "apiAlias": "locale_foreign_keys_extension"
+              },
+              "internal_mapping_storage": {
+                "extensions": [],
+                "apiAlias": null
+              }
+            },
+            "_uniqueIdentifier": "01994d239970718a8f44e920897fb4c7",
+            "versionId": null,
+            "translated": {
+              "name": "English",
+              "territory": "United Kingdom",
+              "customFields": []
+            },
+            "createdAt": "2025-09-15T11:30:02.736+00:00",
+            "updatedAt": null,
+            "code": "en-GB",
+            "name": "English",
+            "territory": "United Kingdom",
+            "translations": null,
+            "users": null,
+            "languages": null,
+            "customFields": null,
+            "id": "01994d239970718a8f44e920897fb4c7",
+            "apiAlias": "locale"
+          },
+          "parent": null,
+          "children": null,
+          "salesChannels": null,
+          "customers": null,
+          "salesChannelDefaultAssignments": null,
+          "categoryTranslations": null,
+          "countryStateTranslations": null,
+          "countryTranslations": null,
+          "currencyTranslations": null,
+          "customerGroupTranslations": null,
+          "localeTranslations": null,
+          "mediaTranslations": null,
+          "paymentMethodTranslations": null,
+          "productManufacturerTranslations": null,
+          "productTranslations": null,
+          "shippingMethodTranslations": null,
+          "unitTranslations": null,
+          "propertyGroupTranslations": null,
+          "propertyGroupOptionTranslations": null,
+          "salesChannelTranslations": null,
+          "salesChannelTypeTranslations": null,
+          "salutationTranslations": null,
+          "salesChannelDomains": null,
+          "pluginTranslations": null,
+          "productStreamTranslations": null,
+          "stateMachineTranslations": null,
+          "stateMachineStateTranslations": null,
+          "cmsPageTranslations": null,
+          "cmsSlotTranslations": null,
+          "mailTemplateTranslations": null,
+          "mailHeaderFooterTranslations": null,
+          "documentTypeTranslations": null,
+          "deliveryTimeTranslations": null,
+          "newsletterRecipients": null,
+          "orders": null,
+          "numberRangeTypeTranslations": null,
+          "productSearchKeywords": null,
+          "productKeywordDictionaries": null,
+          "mailTemplateTypeTranslations": null,
+          "promotionTranslations": null,
+          "numberRangeTranslations": null,
+          "productReviews": null,
+          "seoUrlTranslations": null,
+          "taxRuleTypeTranslations": null,
+          "productCrossSellingTranslations": null,
+          "importExportProfileTranslations": null,
+          "productFeatureSetTranslations": null,
+          "appTranslations": null,
+          "actionButtonTranslations": null,
+          "productSortingTranslations": null,
+          "productSearchConfig": null,
+          "landingPageTranslations": null,
+          "appCmsBlockTranslations": null,
+          "appScriptConditionTranslations": null,
+          "appFlowActionTranslations": null,
+          "taxProviderTranslations": null,
+          "customFields": null,
+          "id": "2fbb5fe2e29a4d70aa5854ce7ce3e20b",
+          "apiAlias": "language"
+        },
+        "error": null,
+        "customFields": null,
+        "id": "01994d259bbf71f7b34525ec963473fa",
+        "apiAlias": "seo_url"
+      }
+    ],
+    "orderLineItems": null,
+    "crossSellings": [],
+    "crossSellingAssignedProducts": null,
+    "featureSetId": null,
+    "featureSet": null,
+    "customFieldSetSelectionActive": null,
+    "customSearchKeywords": null,
+    "wishlists": null,
+    "canonicalProductId": null,
+    "canonicalProduct": null,
+    "streams": null,
+    "downloads": null,
+    "states": [
+      "is-physical"
+    ],
+    "customFields": {
+      "eloshon_specs_fragile": false,
+      "eloshon_specs_material": "Cotton",
+      "eloshon_specs_warranty_months": 24
+    },
+    "id": "43a23e0c03bf4ceabc6055a2185faa87",
+    "apiAlias": "product"
+  }
+]

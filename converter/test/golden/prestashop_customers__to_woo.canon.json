@@ -1,0 +1,466 @@
+[
+  {
+    "firstName": "Test",
+    "lastName": "Customer 1",
+    "email": "customer1@example.test",
+    "phone": "+32 000 00 00 00",
+    "address": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "",
+      "provinceCode": "",
+      "country": "FR",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "firstName": "Test",
+      "lastName": "Customer 4",
+      "label": "Anonymous",
+      "sourceId": "1"
+    },
+    "shipping": null,
+    "acceptsEmail": null,
+    "acceptsSms": null,
+    "note": "",
+    "tags": [],
+    "taxExempt": false,
+    "addresses": [
+      {
+        "company": "Test Co",
+        "address1": "1 Test Street",
+        "address2": "",
+        "city": "Testville",
+        "province": "",
+        "provinceCode": "",
+        "country": "FR",
+        "zip": "1000",
+        "phone": "+32 000 00 00 00",
+        "firstName": "Test",
+        "lastName": "Customer 4",
+        "label": "Anonymous",
+        "sourceId": "1"
+      }
+    ],
+    "marketingConsent": {
+      "email": {
+        "state": "opted_out",
+        "channel": "email",
+        "source": {
+          "platform": "prestashop",
+          "field": "newsletter",
+          "raw": "0"
+        },
+        "requiresReconfirmation": true
+      }
+    },
+    "identity": {
+      "sourceId": "1",
+      "timestamps": {
+        "created": "2026-09-21 03:38:56",
+        "modified": "2026-09-21 03:38:56"
+      }
+    },
+    "active": false,
+    "isGuest": false,
+    "gender": "male",
+    "group": {
+      "ref": "3",
+      "name": "Customer"
+    },
+    "locale": "en",
+    "sourceExtension": {
+      "prestashop": {
+        "optin": "0",
+        "deleted": "0",
+        "website": "",
+        "outstanding_allow_amount": "0.000000",
+        "show_public_prices": "0",
+        "id_risk": 0,
+        "max_payment_days": 0,
+        "id_shop": 1,
+        "id_shop_group": 1,
+        "associations": {
+          "groups": [
+            {
+              "id": 3
+            }
+          ]
+        }
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "prestashop",
+        "sourceField": "optin",
+        "sourceValue": "0",
+        "reason": "no-canon-field",
+        "note": "Partner-offers opt-in: a DISTINCT consent (not the newsletter). Reported to the merchant, never merged into marketingConsent."
+      }
+    ],
+    "provenance": {
+      "email": {
+        "platform": "prestashop",
+        "sourceField": "email",
+        "sourceValue": "customer1@example.test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "firstName": {
+        "platform": "prestashop",
+        "sourceField": "firstname",
+        "sourceValue": "Test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "lastName": {
+        "platform": "prestashop",
+        "sourceField": "lastname",
+        "sourceValue": "Customer 1",
+        "transform": "text",
+        "method": "exact"
+      },
+      "address": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 1,
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "addresses": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 1,
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "marketingConsent.email": {
+        "platform": "prestashop",
+        "sourceField": "newsletter + newsletter_date_add",
+        "sourceValue": "0",
+        "transform": "marketing_consent",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 1,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.timestamps.created": {
+        "platform": "prestashop",
+        "sourceField": "date_add",
+        "sourceValue": "2026-09-21 03:38:56",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.timestamps.modified": {
+        "platform": "prestashop",
+        "sourceField": "date_upd",
+        "sourceValue": "2026-09-21 03:38:56",
+        "transform": "text",
+        "method": "exact"
+      },
+      "active": {
+        "platform": "prestashop",
+        "sourceField": "active",
+        "sourceValue": "0",
+        "transform": "bool",
+        "method": "exact"
+      },
+      "isGuest": {
+        "platform": "prestashop",
+        "sourceField": "is_guest",
+        "sourceValue": "0",
+        "transform": "bool",
+        "method": "exact"
+      },
+      "gender": {
+        "platform": "prestashop",
+        "sourceField": "id_gender",
+        "sourceValue": 1,
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "group.ref": {
+        "platform": "prestashop",
+        "sourceField": "id_default_group",
+        "sourceValue": 3,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "group.name": {
+        "platform": "prestashop",
+        "sourceField": "id_default_group",
+        "sourceValue": 3,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "locale": {
+        "platform": "prestashop",
+        "sourceField": "id_lang",
+        "sourceValue": 1,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "note": {
+        "platform": "prestashop",
+        "sourceField": "note",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      },
+      "phone": {
+        "platform": "canon",
+        "sourceField": "address.phone",
+        "transform": "first_non_empty",
+        "method": "structural"
+      }
+    }
+  },
+  {
+    "firstName": "Test",
+    "lastName": "Customer 2",
+    "email": "customer2@example.test",
+    "phone": "+32 000 00 00 00",
+    "address": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "",
+      "provinceCode": "",
+      "country": "FR",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "firstName": "Test",
+      "lastName": "Customer 5",
+      "label": "Mon adresse",
+      "sourceId": "2"
+    },
+    "shipping": null,
+    "acceptsEmail": null,
+    "acceptsSms": null,
+    "note": "",
+    "tags": [],
+    "taxExempt": false,
+    "addresses": [
+      {
+        "company": "Test Co",
+        "address1": "1 Test Street",
+        "address2": "",
+        "city": "Testville",
+        "province": "",
+        "provinceCode": "",
+        "country": "FR",
+        "zip": "1000",
+        "phone": "+32 000 00 00 00",
+        "firstName": "Test",
+        "lastName": "Customer 5",
+        "label": "Mon adresse",
+        "sourceId": "2"
+      },
+      {
+        "company": "Test Co",
+        "address1": "1 Test Street",
+        "address2": "",
+        "city": "Testville",
+        "province": "Florida",
+        "provinceCode": "FL",
+        "country": "US",
+        "zip": "1000",
+        "phone": "+32 000 00 00 00",
+        "firstName": "Test",
+        "lastName": "Customer 6",
+        "label": "My address",
+        "sourceId": "5"
+      }
+    ],
+    "marketingConsent": {
+      "email": {
+        "state": "opted_in",
+        "channel": "email",
+        "source": {
+          "platform": "prestashop",
+          "field": "newsletter",
+          "raw": "1"
+        },
+        "at": "2013-12-13 08:19:15",
+        "requiresReconfirmation": true
+      }
+    },
+    "identity": {
+      "sourceId": "2",
+      "timestamps": {
+        "created": "2026-09-21 03:39:32",
+        "modified": "2026-09-21 03:39:32"
+      }
+    },
+    "active": true,
+    "isGuest": false,
+    "gender": "male",
+    "birthday": "1990-01-01",
+    "group": {
+      "ref": "3",
+      "name": "Customer"
+    },
+    "locale": "en",
+    "sourceExtension": {
+      "prestashop": {
+        "optin": "1",
+        "deleted": "0",
+        "website": "",
+        "outstanding_allow_amount": "0.000000",
+        "show_public_prices": "0",
+        "id_risk": 0,
+        "max_payment_days": 0,
+        "id_shop": 1,
+        "id_shop_group": 1,
+        "associations": {
+          "groups": [
+            {
+              "id": 3
+            }
+          ]
+        }
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "prestashop",
+        "sourceField": "optin",
+        "sourceValue": "1",
+        "reason": "no-canon-field",
+        "note": "Partner-offers opt-in: a DISTINCT consent (not the newsletter). Reported to the merchant, never merged into marketingConsent."
+      }
+    ],
+    "provenance": {
+      "email": {
+        "platform": "prestashop",
+        "sourceField": "email",
+        "sourceValue": "customer2@example.test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "firstName": {
+        "platform": "prestashop",
+        "sourceField": "firstname",
+        "sourceValue": "Test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "lastName": {
+        "platform": "prestashop",
+        "sourceField": "lastname",
+        "sourceValue": "Customer 2",
+        "transform": "text",
+        "method": "exact"
+      },
+      "address": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 2,
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "addresses": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 2,
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "marketingConsent.email": {
+        "platform": "prestashop",
+        "sourceField": "newsletter + newsletter_date_add",
+        "sourceValue": "1",
+        "transform": "marketing_consent",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 2,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.timestamps.created": {
+        "platform": "prestashop",
+        "sourceField": "date_add",
+        "sourceValue": "2026-09-21 03:39:32",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.timestamps.modified": {
+        "platform": "prestashop",
+        "sourceField": "date_upd",
+        "sourceValue": "2026-09-21 03:39:32",
+        "transform": "text",
+        "method": "exact"
+      },
+      "active": {
+        "platform": "prestashop",
+        "sourceField": "active",
+        "sourceValue": "1",
+        "transform": "bool",
+        "method": "exact"
+      },
+      "isGuest": {
+        "platform": "prestashop",
+        "sourceField": "is_guest",
+        "sourceValue": "0",
+        "transform": "bool",
+        "method": "exact"
+      },
+      "gender": {
+        "platform": "prestashop",
+        "sourceField": "id_gender",
+        "sourceValue": 1,
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "birthday": {
+        "platform": "prestashop",
+        "sourceField": "birthday",
+        "sourceValue": "1990-01-01",
+        "transform": "date_present",
+        "method": "exact"
+      },
+      "group.ref": {
+        "platform": "prestashop",
+        "sourceField": "id_default_group",
+        "sourceValue": 3,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "group.name": {
+        "platform": "prestashop",
+        "sourceField": "id_default_group",
+        "sourceValue": 3,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "locale": {
+        "platform": "prestashop",
+        "sourceField": "id_lang",
+        "sourceValue": 1,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "note": {
+        "platform": "prestashop",
+        "sourceField": "note",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      },
+      "phone": {
+        "platform": "canon",
+        "sourceField": "address.phone",
+        "transform": "first_non_empty",
+        "method": "structural"
+      }
+    }
+  }
+]

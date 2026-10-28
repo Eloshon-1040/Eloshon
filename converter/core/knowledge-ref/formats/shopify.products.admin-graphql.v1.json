@@ -1,0 +1,743 @@
+{
+  "schemaVersion": 1,
+  "id": "shopify.products.admin-graphql.v1",
+  "displayName": "Shopify Products (Admin GraphQL API)",
+  "provenance": "native-platform",
+  "medium": "json-api",
+  "platformHint": "shopify",
+  "entity": "products",
+  "version": "admin-graphql-2025-xx",
+  "sibling": "shopify.products.csv.v1",
+  "signatures": [
+    {
+      "kind": "json-shape",
+      "requiredPaths": [
+        "id",
+        "handle",
+        "title",
+        "variants",
+        "hasOnlyDefaultVariant"
+      ],
+      "hintPaths": [
+        "descriptionHtml",
+        "seo",
+        "metafields",
+        "priceRangeV2",
+        "legacyResourceId",
+        "media"
+      ]
+    }
+  ],
+  "structure": {
+    "unit": "product",
+    "variants": {
+      "inlinePath": "variants.nodes",
+      "keyedBy": "id",
+      "selfWhenNone": true
+    },
+    "companions": {},
+    "notes": "Response shape kept verbatim: connections are { nodes: [...] }. Every variant is explicit (no inheritance): a product with no variants has ONE variant whose option is Title = Default Title."
+  },
+  "fields": [
+    {
+      "path": "handle",
+      "canon": "handle",
+      "transform": "text",
+      "confidence": "verified-live",
+      "source": "live:example-store:2026-09-21"
+    },
+    {
+      "path": "handle",
+      "canon": "identity.slug",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "identity.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live",
+      "notes": "GID verbatim (gid://shopify/Product/…); the numeric form is legacyResourceId below."
+    },
+    {
+      "path": "legacyResourceId",
+      "canon": "sourceExtension.shopify.legacyResourceId",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "createdAt",
+      "inputs": [
+        "createdAt",
+        "updatedAt"
+      ],
+      "canon": "identity.timestamps",
+      "transform": "timestamps",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "title",
+      "canon": "title",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "descriptionHtml",
+      "canon": "bodyHtml",
+      "transform": "html",
+      "confidence": "verified-live",
+      "samplePolicy": "hash-only"
+    },
+    {
+      "path": "vendor",
+      "canon": "vendor",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "productType",
+      "canon": "productType",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "Free text; the closed taxonomy node is `category` (kept below, D1)."
+    },
+    {
+      "path": "tags",
+      "canon": "tags",
+      "transform": "list",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "status",
+      "canon": "status",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "ACTIVE": "active",
+          "DRAFT": "draft",
+          "ARCHIVED": "archived"
+        },
+        "default": "active"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "publishedAt",
+      "canon": "published",
+      "transform": "is_set",
+      "confidence": "verified-live",
+      "notes": "publishedAt is null until the product is published to the Online Store channel."
+    },
+    {
+      "path": "publishedAt",
+      "canon": "sourceExtension.shopify.publishedAt",
+      "transform": "date_iso",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "hasOnlyDefaultVariant",
+      "canon": "kind",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "true": "simple",
+          "false": "variable"
+        },
+        "default": "simple"
+      },
+      "confidence": "verified-live",
+      "notes": "simple / variable; overridden by kind=bundle below when the product has bundle variants (6.4)."
+    },
+    {
+      "path": "seo.title",
+      "canon": "seoTitle",
+      "transform": "text",
+      "confidence": "verified-live",
+      "consumes": [
+        "seo"
+      ],
+      "notes": "D3: `seo.*` is the read alias of the metafields global.title_tag / global.description_tag — those two are CONSUMED from metafields below so the value is carried once."
+    },
+    {
+      "path": "seo.description",
+      "canon": "seoDescription",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "options",
+      "canon": "options",
+      "transform": "options_from_attributes",
+      "args": {
+        "name": "name",
+        "values": "values",
+        "when": "",
+        "dropIfValuesIn": [
+          "Default Title"
+        ]
+      },
+      "confidence": "verified-live",
+      "notes": "First-class option objects; the Title = Default Title axis is Shopify's encoding of \"no variants\", not an axis."
+    },
+    {
+      "path": "options",
+      "canon": "sourceExtension.shopify.options",
+      "transform": "copy",
+      "confidence": "verified-live",
+      "notes": "Option ids and per-VALUE ids (ProductOptionValue) — stable references no other platform exposes; canon options[].values are strings."
+    },
+    {
+      "path": "media.nodes",
+      "canon": "images",
+      "transform": "images_from_objects",
+      "args": {
+        "src": "image.url",
+        "alt": "alt",
+        "id": "id",
+        "width": "image.width",
+        "height": "image.height"
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "media"
+      ],
+      "notes": "MediaImage only carries image.url; a video / 3D model has none and is dropped from images[] (it stays in the raw media copy below)."
+    },
+    {
+      "path": "media.nodes",
+      "canon": "sourceExtension.shopify.media",
+      "transform": "copy",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "collections.nodes",
+      "canon": "categories",
+      "transform": "names_of",
+      "args": {
+        "key": "title"
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "collections"
+      ],
+      "notes": "A3: collections are flat, many-to-many → one canon category per collection title."
+    },
+    {
+      "path": "collections.nodes",
+      "canon": "sourceExtension.shopify.collections",
+      "transform": "copy",
+      "confidence": "verified-live",
+      "notes": "Handle + ruleSet: an automatic (rule-based) collection is distinguishable from a manual one here only."
+    },
+    {
+      "path": "category",
+      "canon": "sourceExtension.shopify.category",
+      "transform": "copy",
+      "confidence": "verified-live",
+      "notes": "D1: Shopify Standard Product Taxonomy node { id, name, fullName } — closed external taxonomy, no canon field; fullName is a readable path a shopping feed can reuse."
+    },
+    {
+      "path": "metafields.nodes",
+      "canon": "metafields",
+      "transform": "metafields_from_pairs",
+      "args": {
+        "key": "key",
+        "value": "value",
+        "namespace": "namespace",
+        "type": "type",
+        "hiddenPrefix": "",
+        "drop": [
+          "global.title_tag",
+          "global.description_tag"
+        ]
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "metafields"
+      ],
+      "notes": "P2: namespace + declared type verbatim. D3: global.title_tag / global.description_tag are the storage of seo.title / seo.description — consumed here, never duplicated. App-injected namespaces (mm-google-shopping observed) are carried, never dropped."
+    },
+    {
+      "path": "translations",
+      "canon": "translations",
+      "transform": "translations_from_pairs",
+      "args": {
+        "locale": "locale",
+        "key": "key",
+        "value": "value",
+        "keyMap": {
+          "title": "title",
+          "body_html": "bodyHtml",
+          "meta_title": "seoTitle",
+          "meta_description": "seoDescription",
+          "handle": "slug"
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "P1: translations(locale: <non-primary>) pairs; the primary locale is the flat fields. Store observed: fr primary, en published without product translations → []."
+    },
+    {
+      "path": "translations",
+      "canon": "sourceExtension.shopify.translations",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "Raw per-locale surface (also product_type, outside the canon translation shape)."
+    },
+    {
+      "path": "bundleComponents.nodes",
+      "canon": "sourceExtension.shopify.bundleComponents",
+      "transform": "copy",
+      "confidence": "verified-live",
+      "consumes": [
+        "bundleComponents"
+      ],
+      "notes": "6.4: the FIXED-BUNDLE configuration (component products + option selections that generate the bundle variants) — platform-specific; the concrete composition is variants[].components."
+    },
+    {
+      "path": "hasVariantsThatRequiresComponents",
+      "canon": "kind",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "true": "bundle"
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "6.4: a product with bundle variants is kind=bundle (overrides simple/variable above); absent map value → the earlier kind stands."
+    },
+    {
+      "path": "hasVariantsThatRequiresComponents",
+      "canon": "sourceExtension.shopify.hasVariantsThatRequiresComponents",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "resourcePublicationsV2.nodes",
+      "canon": "sourceExtension.shopify.publications",
+      "transform": "copy",
+      "confidence": "verified-live",
+      "consumes": [
+        "resourcePublicationsV2"
+      ],
+      "notes": "Per sales-channel publication; canon has one `published` flag."
+    },
+    {
+      "path": "templateSuffix",
+      "canon": "sourceExtension.shopify.templateSuffix",
+      "transform": "copy",
+      "confidence": "verified-live",
+      "notes": "Theme template — presentation, not catalogue data."
+    },
+    {
+      "path": "onlineStoreUrl",
+      "canon": "sourceExtension.shopify.onlineStoreUrl",
+      "transform": "copy",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "onlineStorePreviewUrl",
+      "canon": "sourceExtension.shopify.onlineStorePreviewUrl",
+      "transform": "copy",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "isGiftCard",
+      "canon": "sourceExtension.shopify.isGiftCard",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "requiresSellingPlan",
+      "canon": "sourceExtension.shopify.requiresSellingPlan",
+      "transform": "bool",
+      "confidence": "verified-live",
+      "notes": "Subscription-only products."
+    },
+    {
+      "path": "combinedListingRole",
+      "canon": "sourceExtension.shopify.combinedListingRole",
+      "transform": "copy",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "hasOutOfStockVariants",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "Computed from the variants' inventory."
+    },
+    {
+      "path": "totalInventory",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "Sum of the variants' inventoryQuantity."
+    },
+    {
+      "path": "tracksInventory",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "Any variant tracked — per-variant flag carried as stockPolicy.manageStock."
+    },
+    {
+      "path": "priceRangeV2",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "Computed min/max of the variants' prices."
+    },
+    {
+      "path": "compareAtPriceRange",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "Computed from the variants' compareAtPrice."
+    },
+    {
+      "path": "variants",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "Read by structure.variants.inlinePath (variants.nodes)."
+    },
+    {
+      "path": "sku",
+      "canon": "variants[].sku",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "barcode",
+      "canon": "variants[].barcode",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "Shopify's single untyped identifier — the canon barcode as-is (P3 keeps it native)."
+    },
+    {
+      "path": "price",
+      "canon": "variants[].price",
+      "transform": "money",
+      "confidence": "verified-live",
+      "notes": "Money as a decimal string; charged price."
+    },
+    {
+      "path": "compareAtPrice",
+      "canon": "variants[].compareAtPrice",
+      "transform": "money",
+      "confidence": "verified-live",
+      "notes": "Crossed-out \"was\" price — same invariant as the canon, no swap needed."
+    },
+    {
+      "path": "taxable",
+      "canon": "variants[].taxable",
+      "transform": "bool",
+      "args": {
+        "default": true
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "inventoryQuantity",
+      "canon": "variants[].inventoryQty",
+      "transform": "int",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "inventoryItem.tracked",
+      "canon": "variants[].stockPolicy.manageStock",
+      "transform": "bool",
+      "confidence": "verified-live",
+      "consumes": [
+        "inventoryItem"
+      ],
+      "notes": "Per VARIANT — observed mixed on one product (8 tracked, 1 not)."
+    },
+    {
+      "path": "inventoryPolicy",
+      "canon": "variants[].stockPolicy.backorders",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "DENY": "no",
+          "CONTINUE": "yes"
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "inventoryItem.requiresShipping",
+      "canon": "variants[].requiresShipping",
+      "transform": "bool",
+      "args": {
+        "default": true
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "inventoryItem.measurement.weight",
+      "canon": "variants[].grams",
+      "transform": "weight_to_grams",
+      "args": {
+        "valuePath": "value",
+        "unitPath": "unit",
+        "unit": "g"
+      },
+      "confidence": "verified-live",
+      "notes": "{ value, unit } with the unit per variant (GRAMS on one, KILOGRAMS on another) — read from the data, never assumed."
+    },
+    {
+      "path": "inventoryItem.unitCost.amount",
+      "canon": "variants[].cost",
+      "transform": "money",
+      "confidence": "verified-live",
+      "notes": "null without the \"View product costs\" permission or when unset — indistinguishable from the API."
+    },
+    {
+      "path": "inventoryItem.harmonizedSystemCode",
+      "canon": "variants[].identifiers.hsCode",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "P3: customs identifier per variant."
+    },
+    {
+      "path": "inventoryItem.countryCodeOfOrigin",
+      "canon": "variants[].identifiers.originCountry",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "inventoryItem.provinceCodeOfOrigin",
+      "canon": "sourceExtension.shopify.provinceCodeOfOrigin",
+      "scope": "variant",
+      "transform": "copy",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "inventoryItem.id",
+      "canon": "sourceExtension.shopify.inventoryItemId",
+      "scope": "variant",
+      "transform": "copy",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "selectedOptions",
+      "canon": "variants[].optionValues",
+      "transform": "option_values_from_attributes",
+      "args": {
+        "name": "name",
+        "value": "value"
+      },
+      "confidence": "verified-live",
+      "notes": "Aligned on product.options; empty when the only axis was the Default Title sentinel."
+    },
+    {
+      "path": "image.url",
+      "canon": "variants[].imageSrc",
+      "transform": "text",
+      "confidence": "verified-live",
+      "consumes": [
+        "image"
+      ],
+      "notes": "Deprecated field kept by the API; media.nodes below is the live surface."
+    },
+    {
+      "path": "media.nodes",
+      "canon": "variants[].images",
+      "transform": "images_from_objects",
+      "args": {
+        "src": "image.url",
+        "id": "id"
+      },
+      "scope": "variant",
+      "confidence": "verified-live",
+      "consumes": [
+        "media"
+      ]
+    },
+    {
+      "path": "metafields.nodes",
+      "canon": "sourceExtension.shopify.metafields",
+      "scope": "variant",
+      "transform": "metafields_from_pairs",
+      "args": {
+        "key": "key",
+        "value": "value",
+        "namespace": "namespace",
+        "type": "type",
+        "hiddenPrefix": ""
+      },
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "consumes": [
+        "metafields"
+      ],
+      "notes": "Variant-level metafields: canon metafields are product-level (same as WooCommerce / Shopware)."
+    },
+    {
+      "path": "translations",
+      "canon": "sourceExtension.shopify.translations",
+      "scope": "variant",
+      "transform": "copy_present",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "notes": "Variant translations (option values) — P1 options[] shape is product-level; raw kept when present."
+    },
+    {
+      "path": "unitPrice",
+      "inputs": [
+        "unitPrice",
+        "unitPriceMeasurement",
+        "showUnitPrice"
+      ],
+      "canon": "sourceExtension.shopify.unitPricing",
+      "scope": "variant",
+      "transform": "copy",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "consumes": [
+        "unitPriceMeasurement",
+        "showUnitPrice"
+      ],
+      "notes": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+    },
+    {
+      "path": "productVariantComponents.nodes",
+      "canon": "variants[].components",
+      "transform": "bundle_components",
+      "args": {
+        "refs": [
+          {
+            "path": "productVariant.sku",
+            "kind": "sku"
+          },
+          {
+            "path": "productVariant.id",
+            "kind": "sourceId"
+          }
+        ],
+        "productRef": "productVariant.product.handle",
+        "productRefKind": "handle",
+        "quantity": "quantity"
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "productVariantComponents"
+      ],
+      "notes": "6.4 (D2): the bundle variant’s composition — component VARIANTS with quantities; ref = the component SKU when it has one, else its GID; productRef = the component product’s handle."
+    },
+    {
+      "path": "productVariantComponents.nodes",
+      "canon": "sourceExtension.shopify.components",
+      "scope": "variant",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "Raw component rows (ids)."
+    },
+    {
+      "path": "requiresComponents",
+      "canon": "sourceExtension.shopify.requiresComponents",
+      "scope": "variant",
+      "transform": "bool",
+      "confidence": "verified-live",
+      "notes": "D2 → 6.4."
+    },
+    {
+      "path": "id",
+      "canon": "sourceExtension.shopify.id",
+      "scope": "variant",
+      "transform": "copy",
+      "confidence": "verified-live",
+      "notes": "Variant GID (canon has no variant sourceId yet)."
+    },
+    {
+      "path": "legacyResourceId",
+      "canon": "sourceExtension.shopify.legacyResourceId",
+      "scope": "variant",
+      "transform": "copy",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "title",
+      "canon": "sourceExtension.shopify.title",
+      "scope": "variant",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "Pre-rendered \"11x5cm / 15 microns\" label — derived from selectedOptions."
+    },
+    {
+      "path": "position",
+      "canon": "sourceExtension.shopify.position",
+      "scope": "variant",
+      "transform": "int",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "availableForSale",
+      "canon": "sourceExtension.shopify.availableForSale",
+      "scope": "variant",
+      "transform": "bool",
+      "confidence": "verified-live",
+      "notes": "Computed (policy + stock + status)."
+    },
+    {
+      "path": "sellableOnlineQuantity",
+      "canon": "sourceExtension.shopify.sellableOnlineQuantity",
+      "scope": "variant",
+      "transform": "int",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "createdAt",
+      "inputs": [
+        "createdAt",
+        "updatedAt"
+      ],
+      "canon": "sourceExtension.shopify.timestamps",
+      "scope": "variant",
+      "transform": "timestamps",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "consumes": [
+        "updatedAt"
+      ],
+      "notes": "Variant timestamps: canon identity.timestamps is product-level."
+    },
+    {
+      "path": "displayName",
+      "canon": null,
+      "scope": "variant",
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "product.title + variant.title, derived."
+    }
+  ],
+  "invariantsExpected": [
+    "every product has at least one variant; hasOnlyDefaultVariant ⇔ options = [Title: Default Title] and the variant's selectedOptions = [Title = Default Title]",
+    "no inheritance: every variant carries price / sku / weight (with its OWN unit) / policy explicitly",
+    "seo.title / seo.description equal the metafields global.title_tag / global.description_tag when those exist",
+    "metafields carry namespace + type; app-owned namespaces (mm-google-shopping, app--<id>--…) appear without merchant action",
+    "collections are many-to-many and flat; category is one closed-taxonomy node",
+    "GIDs everywhere; Money values are decimal strings; enums are UPPER_CASE"
+  ],
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "live:example-store:2026-09-21",
+      "origin": "reference",
+      "diff": [
+        "Phase 6.3: full field map from the live Admin GraphQL payload (3 products, 24 variants) — every product and variant key has a declared fate; P1 translations, P2 namespaced/typed metafields (D3 SEO consumption), P3 customs identifiers"
+      ]
+    },
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "enrich",
+      "from": "schema:ProductVariantComponent + docs (no bundle on the dev store)",
+      "origin": "reference",
+      "diff": [
+        "Phase 6.4: kind=bundle from hasVariantsThatRequiresComponents; variants[].components from productVariantComponents.nodes (bundle_components)"
+      ]
+    }
+  ]
+}

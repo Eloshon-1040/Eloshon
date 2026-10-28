@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "id": "woocommerce.products.csv.legacy.v1",
+  "displayName": "WooCommerce products export (older format)",
+  "provenance": "native-platform",
+  "medium": "csv",
+  "platformHint": "woocommerce",
+  "entity": "products",
+  "signatures": [
+    {
+      "kind": "csv-header-set",
+      "required": [
+        "post_title",
+        "tax:product_cat"
+      ],
+      "hints": [
+        "post_name",
+        "post_content",
+        "regular_price",
+        "sku"
+      ]
+    }
+  ],
+  "structure": {
+    "rows": {
+      "children": {
+        "self": true
+      }
+    },
+    "parser": "generic"
+  },
+  "fields": [
+    {
+      "path": "post_name",
+      "inputs": [
+        "post_name",
+        "post_title"
+      ],
+      "canon": "handle",
+      "transform": "value_or_slug",
+      "args": {
+        "maxLen": 80,
+        "fallback": "product"
+      },
+      "confidence": "verified-fixture",
+      "notes": "The post slug, else a slug of the title."
+    },
+    {
+      "path": "post_title",
+      "canon": "title",
+      "transform": "copy",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "post_content",
+      "canon": "bodyHtml",
+      "transform": "copy",
+      "confidence": "verified-fixture",
+      "samplePolicy": "hash-only"
+    },
+    {
+      "path": "tax:product_brand",
+      "canon": "vendor",
+      "transform": "clean_text",
+      "args": {
+        "lastSegmentOf": ">"
+      },
+      "confidence": "verified-fixture",
+      "notes": "Leaf of the brand path ('Parent > Brand')."
+    },
+    {
+      "path": "tax:product_tag",
+      "canon": "tags",
+      "transform": "list",
+      "args": {
+        "sep": ","
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "post_status",
+      "canon": "status",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "publish": "active",
+          "": "active"
+        },
+        "default": "draft"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "post_status",
+      "canon": "published",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "publish": true,
+          "": true
+        },
+        "default": false
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "tax:product_cat",
+      "canon": "categories",
+      "transform": "category_path_split",
+      "args": {
+        "sep": ">",
+        "listSep": ",",
+        "keepEmptySegments": true
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "attribute:<name>",
+      "pathPattern": "^attribute:",
+      "canon": "options",
+      "transform": "options_from_columns",
+      "args": {
+        "stripPrefix": "attribute:",
+        "sep": "|"
+      },
+      "confidence": "verified-fixture",
+      "notes": "One column per attribute; the name follows the prefix, values are pipe-separated."
+    },
+    {
+      "path": "sku",
+      "canon": "variants[].sku",
+      "transform": "clean_text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "regular_price",
+      "inputs": [
+        "regular_price",
+        "sale_price"
+      ],
+      "canon": "variants[].price+variants[].compareAtPrice",
+      "transform": "price_promo",
+      "args": {
+        "noSaleFallback": true
+      },
+      "confidence": "verified-fixture",
+      "notes": "A sale below the regular price is the charged price; the regular price becomes the crossed-out one."
+    },
+    {
+      "path": "weight",
+      "canon": "variants[].grams",
+      "transform": "weight_to_grams",
+      "args": {
+        "unit": "kg"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "length",
+      "canon": "variants[].lengthCm",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "width",
+      "canon": "variants[].widthCm",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "height",
+      "canon": "variants[].heightCm",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "virtual",
+      "canon": "variants[].requiresShipping",
+      "transform": "equals_map",
+      "args": {
+        "value": "yes",
+        "then": false,
+        "else": true
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "tax_status",
+      "canon": "variants[].taxable",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "taxable": true,
+          "": true
+        },
+        "default": false
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "stock",
+      "canon": "variants[].inventoryQty",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    }
+  ],
+  "invariantsExpected": [
+    "One row per product; no per-variation rows or prices (attributes only)"
+  ],
+  "legacy": {
+    "formatId": "woo_products_legacy",
+    "platform": "woocommerce",
+    "entity": "products"
+  },
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "seed:core/src/detect.ts:SIGS",
+      "origin": "reference",
+      "diff": [
+        "signature moved from code to data (Phase 5.3)",
+        "Legacy WP-post-shaped export: post_title + tax:product_cat."
+      ]
+    },
+    {
+      "at": "2026-10-04T00:00:00.000Z",
+      "op": "enrich",
+      "from": "core/src/products.ts parseWooLegacy (retired: the generic parser reads this format) + mapping.ts SOURCE_FIELDS.woo_products_legacy",
+      "origin": "reference",
+      "diff": [
+        "Phase 2 Lot 3: full column map + row structure as data; undeclared columns preserved, declared ones traced"
+      ]
+    }
+  ]
+}

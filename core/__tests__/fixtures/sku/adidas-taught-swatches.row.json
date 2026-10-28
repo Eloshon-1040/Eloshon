@@ -1,0 +1,40 @@
+{
+  "_source": "job 20261027205754-x7tst (adidas.be, 27/10/2026), first row, trimmed to the fields that matter: a 🎯 Variantes rule taught on the colour-swatch strip",
+  "row": {
+    "source_url": "https://www.adidas.be/fr/chaussure-handball-spezial/IF6490.html",
+    "source_product_id": "IF6490",
+    "name": "Chaussure Handball Spezial",
+    "color": "Earth Strata / Off White / Gum",
+    "price": 110,
+    "variants": [
+      {
+        "code": "Couleur du produit : Aurora Coffee / Magic Mauve / Gum",
+        "type": "option",
+        "name": "Couleur du produit : Aurora Coffee / Magic Mauve / Gum",
+        "url": "https://www.adidas.be/fr/chaussure-handball-spezial-x-liberty-london/KH9814.html"
+      },
+      {
+        "code": "Couleur du produit : Earth Strata / Off White / Gum",
+        "type": "option",
+        "name": "Couleur du produit : Earth Strata / Off White / Gum",
+        "url": "https://www.adidas.be/fr/chaussure-handball-spezial/IF6490.html"
+      },
+      {
+        "code": "Couleur du produit : Alumina / Core Black / Cloud White",
+        "type": "option",
+        "name": "Couleur du produit : Alumina / Core Black / Cloud White",
+        "url": "https://www.adidas.be/fr/chaussure-handball-spezial/IF6562.html"
+      },
+      {
+        "code": "Couleur du produit : Aurora Coffee / Sandy Pink / Gum",
+        "type": "option",
+        "name": "Couleur du produit : Aurora Coffee / Sandy Pink / Gum",
+        "url": "https://www.adidas.be/fr/chaussure-handball-spezial/IH1507.html"
+      }
+    ],
+    "raw": {
+      "sku": "IF6490",
+      "brand": "adidas"
+    }
+  }
+}

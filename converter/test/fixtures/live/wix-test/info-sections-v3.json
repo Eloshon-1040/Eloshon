@@ -1,0 +1,406 @@
+[
+  {
+    "id": "3bf7ae96-18aa-4b31-a653-f73e899b75e2",
+    "revision": "1",
+    "createdDate": "2024-12-23T12:10:38.029Z",
+    "updatedDate": "2025-07-15T06:54:38.984Z",
+    "uniqueName": "Informations de livraison",
+    "title": "Informations de livraison",
+    "description": {
+      "nodes": [
+        {
+          "type": "PARAGRAPH",
+          "id": "jxioj14465",
+          "nodes": [
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": "C'est l'endroit idéal pour ajouter des informations supplémentaires sur vos ",
+                "decorations": []
+              }
+            },
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": "méthodes de livraison",
+                "decorations": [
+                  {
+                    "type": "BOLD",
+                    "fontWeightValue": 700
+                  }
+                ]
+              }
+            },
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": ", ",
+                "decorations": []
+              }
+            },
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": "vos emballages",
+                "decorations": [
+                  {
+                    "type": "BOLD",
+                    "fontWeightValue": 700
+                  }
+                ]
+              }
+            },
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": " et ",
+                "decorations": []
+              }
+            },
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": "vos frais",
+                "decorations": [
+                  {
+                    "type": "BOLD",
+                    "fontWeightValue": 700
+                  }
+                ]
+              }
+            },
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": ".",
+                "decorations": []
+              }
+            }
+          ],
+          "paragraphData": {}
+        },
+        {
+          "type": "PARAGRAPH",
+          "id": "hw23214469",
+          "nodes": [],
+          "paragraphData": {}
+        },
+        {
+          "type": "PARAGRAPH",
+          "id": "wrmcg14470",
+          "nodes": [
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": "Fournir des informations claires sur votre politique de livraison est un excellent moyen de gagner la confiance de vos clients et de les rassurer sur le fait qu'ils peuvent acheter chez vous sans crainte.",
+                "decorations": []
+              }
+            }
+          ],
+          "paragraphData": {}
+        }
+      ],
+      "documentStyle": {}
+    }
+  },
+  {
+    "id": "46588ae1-d3e1-452e-9cf6-d5877009a5fd",
+    "revision": "1",
+    "createdDate": "2024-12-23T12:10:09.324Z",
+    "updatedDate": "2025-07-14T11:15:25.408Z",
+    "uniqueName": "Politique de retour et de remboursement",
+    "title": "Politique de retour et de remboursement",
+    "description": {
+      "nodes": [
+        {
+          "type": "PARAGRAPH",
+          "id": "03fft13456",
+          "nodes": [
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": "C'est l'endroit idéal pour informer vos clients de la marche à suivre s'ils ne sont pas satisfaits de leur achat.",
+                "decorations": []
+              }
+            }
+          ],
+          "paragraphData": {
+            "textStyle": {
+              "textAlignment": "AUTO"
+            }
+          }
+        },
+        {
+          "type": "DIVIDER",
+          "id": "a6yd613458",
+          "nodes": [],
+          "dividerData": {
+            "containerData": {
+              "width": {},
+              "alignment": "CENTER",
+              "spoiler": {},
+              "height": {},
+              "textWrap": false
+            },
+            "lineStyle": "SINGLE",
+            "width": "LARGE",
+            "alignment": "CENTER"
+          }
+        },
+        {
+          "type": "BULLETED_LIST",
+          "id": "ppw5913459",
+          "nodes": [
+            {
+              "type": "LIST_ITEM",
+              "id": "qu63q13460",
+              "nodes": [
+                {
+                  "type": "PARAGRAPH",
+                  "id": "9eogp13461",
+                  "nodes": [
+                    {
+                      "type": "TEXT",
+                      "id": "",
+                      "nodes": [],
+                      "textData": {
+                        "text": "Retours et échanges faciles",
+                        "decorations": [
+                          {
+                            "type": "BOLD",
+                            "fontWeightValue": 700
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "paragraphData": {
+                    "textStyle": {
+                      "textAlignment": "AUTO"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "LIST_ITEM",
+              "id": "1v9hx13463",
+              "nodes": [
+                {
+                  "type": "PARAGRAPH",
+                  "id": "mzjcn13464",
+                  "nodes": [
+                    {
+                      "type": "TEXT",
+                      "id": "",
+                      "nodes": [],
+                      "textData": {
+                        "text": "Processus fluide",
+                        "decorations": [
+                          {
+                            "type": "BOLD",
+                            "fontWeightValue": 700
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "paragraphData": {
+                    "textStyle": {
+                      "textAlignment": "AUTO"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "LIST_ITEM",
+              "id": "odl9v13466",
+              "nodes": [
+                {
+                  "type": "PARAGRAPH",
+                  "id": "pwzgp9096",
+                  "nodes": [
+                    {
+                      "type": "TEXT",
+                      "id": "",
+                      "nodes": [],
+                      "textData": {
+                        "text": "Renforce la confiance des clients",
+                        "decorations": [
+                          {
+                            "type": "BOLD",
+                            "fontWeightValue": 700
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "paragraphData": {
+                    "textStyle": {
+                      "textAlignment": "AUTO"
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "bulletedListData": {
+            "indentation": 0
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "id": "rws5513468",
+          "nodes": [],
+          "paragraphData": {
+            "textStyle": {
+              "textAlignment": "AUTO"
+            }
+          }
+        },
+        {
+          "type": "PARAGRAPH",
+          "id": "3hnlr9101",
+          "nodes": [
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": "Une politique de remboursement ou d'échange claire est un excellent moyen de renforcer la confiance de vos clients et de les rassurer sur le fait qu'ils peuvent acheter sans crainte.",
+                "decorations": []
+              }
+            }
+          ],
+          "paragraphData": {
+            "textStyle": {
+              "textAlignment": "AUTO"
+            }
+          }
+        }
+      ],
+      "documentStyle": {}
+    }
+  },
+  {
+    "id": "6f44de88-049c-4069-a7b2-24c488c307f8",
+    "revision": "1",
+    "createdDate": "2024-12-23T12:09:30.041Z",
+    "updatedDate": "2025-07-14T09:10:44.278Z",
+    "uniqueName": "Informations sur l'article",
+    "title": "Informations sur l'article",
+    "description": {
+      "nodes": [
+        {
+          "type": "PARAGRAPH",
+          "id": "24nph5663",
+          "nodes": [
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": "C'est l'endroit idéal pour ajouter des informations sur votre article, telles que les ",
+                "decorations": []
+              }
+            },
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": "tailles disponibles",
+                "decorations": [
+                  {
+                    "type": "BOLD",
+                    "fontWeightValue": 700
+                  }
+                ]
+              }
+            },
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": ", ",
+                "decorations": []
+              }
+            },
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": "les matériaux utilisés",
+                "decorations": [
+                  {
+                    "type": "BOLD",
+                    "fontWeightValue": 700
+                  }
+                ]
+              }
+            },
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": ", ",
+                "decorations": []
+              }
+            },
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": "les instructions d'entretien et de nettoyage",
+                "decorations": [
+                  {
+                    "type": "BOLD",
+                    "fontWeightValue": 700
+                  }
+                ]
+              }
+            },
+            {
+              "type": "TEXT",
+              "id": "",
+              "nodes": [],
+              "textData": {
+                "text": ". Vous pouvez également utiliser cet espace pour expliquer ce qui rend cet article spécial et les avantages que vos clients peuvent en tirer.",
+                "decorations": []
+              }
+            }
+          ],
+          "paragraphData": {
+            "textStyle": {
+              "textAlignment": "AUTO"
+            }
+          }
+        }
+      ],
+      "documentStyle": {}
+    }
+  }
+]

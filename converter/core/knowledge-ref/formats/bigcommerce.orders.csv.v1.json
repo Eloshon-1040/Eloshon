@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "id": "bigcommerce.orders.csv.v1",
+  "displayName": "BigCommerce orders export (CSV)",
+  "provenance": "native-platform",
+  "medium": "csv",
+  "platformHint": "bigcommerce",
+  "entity": "orders",
+  "signatures": [
+    {
+      "kind": "csv-header-set",
+      "required": [
+        "Order ID",
+        "Order Total (inc tax)"
+      ],
+      "hints": [
+        "Subtotal (inc tax)",
+        "Order Status",
+        "Customer Email"
+      ]
+    }
+  ],
+  "structure": {
+    "rows": {
+      "groupBy": {
+        "column": "Order ID",
+        "trim": true,
+        "skipEmpty": true
+      },
+      "children": {
+        "where": {
+          "anyOf": [
+            {
+              "column": "Product Name",
+              "nonEmpty": true
+            },
+            {
+              "column": "Product SKU",
+              "nonEmpty": true
+            }
+          ]
+        }
+      }
+    }
+  },
+  "fields": [
+    {
+      "path": "Order ID",
+      "canon": "number",
+      "transform": "text",
+      "confidence": "verified-fixture",
+      "notes": "Also the grouping key of the order's rows."
+    },
+    {
+      "path": "Customer Email",
+      "canon": "email",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Order Date",
+      "canon": "createdAt",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Order Status",
+      "canon": "financialStatus+fulfillmentStatus",
+      "transform": "enum_map",
+      "confidence": "verified-fixture",
+      "notes": "refund / cancel / pending / … and ship / complete / deliver → the two target statuses."
+    },
+    {
+      "path": "Order Currency Code",
+      "canon": "currency",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Subtotal (inc tax)",
+      "canon": "subtotal",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping Cost (inc tax)",
+      "canon": "shipping",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Tax Total",
+      "canon": "taxes",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Order Total (inc tax)",
+      "canon": "total",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Coupon Code",
+      "canon": "discountCode",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Coupon Value",
+      "canon": "discountAmount",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Payment Method",
+      "canon": "paymentMethod",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Transaction ID",
+      "canon": "transactionId",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Customer Message",
+      "inputs": [
+        "Customer Message",
+        "Order Notes"
+      ],
+      "canon": "note",
+      "transform": "first_non_empty",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Fee details",
+      "inputs": [
+        "Fee details",
+        "Gift Certificate Amount Redeemed"
+      ],
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-fixture",
+      "notes": "Only probed: fees or a redeemed gift certificate raise bc_order_fees."
+    },
+    {
+      "path": "Product Name",
+      "canon": "lineItems[].name",
+      "transform": "text",
+      "confidence": "verified-fixture",
+      "notes": "A row with a product name or SKU is a line item."
+    },
+    {
+      "path": "Product SKU",
+      "canon": "lineItems[].sku",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Product Qty",
+      "canon": "lineItems[].quantity",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Product Unit Price",
+      "canon": "lineItems[].price",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing First Name",
+      "inputs": [
+        "Billing First Name",
+        "Billing Last Name"
+      ],
+      "canon": "billing.name",
+      "transform": "first_non_empty",
+      "confidence": "verified-fixture",
+      "notes": "First and last name joined."
+    },
+    {
+      "path": "Billing Company",
+      "canon": "billing.company",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing Street 1",
+      "canon": "billing.address1",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing Street 2",
+      "canon": "billing.address2",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing Suburb",
+      "canon": "billing.city",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing State Abbreviation",
+      "canon": "billing.province+billing.provinceCode",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing Country",
+      "canon": "billing.country",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing Zip",
+      "canon": "billing.zip",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing Phone",
+      "canon": "billing.phone",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping First Name",
+      "inputs": [
+        "Shipping First Name",
+        "Shipping Last Name"
+      ],
+      "canon": "shipping_.name",
+      "transform": "first_non_empty",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping Company",
+      "canon": "shipping_.company",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping Street 1",
+      "canon": "shipping_.address1",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping Street 2",
+      "canon": "shipping_.address2",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping Suburb",
+      "canon": "shipping_.city",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping State Abbreviation",
+      "canon": "shipping_.province+shipping_.provinceCode",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping Country",
+      "canon": "shipping_.country",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping Zip",
+      "canon": "shipping_.zip",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping Phone",
+      "canon": "shipping_.phone",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    }
+  ],
+  "invariantsExpected": [
+    "Rows sharing an Order ID are one order (line items or consignments); order-level fields on the first row"
+  ],
+  "legacy": {
+    "formatId": "bigcommerce_orders",
+    "platform": "bigcommerce",
+    "entity": "orders"
+  },
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "seed:core/src/detect.ts:SIGS",
+      "origin": "reference",
+      "diff": [
+        "signature moved from code to data (Phase 5.3)",
+        "inc/ex-tax totals are unmistakably BigCommerce."
+      ]
+    },
+    {
+      "at": "2026-10-04T00:00:00.000Z",
+      "op": "enrich",
+      "from": "core/src/bigcommerce.ts parseBigCommerceOrders + mapping.ts SOURCE_FIELDS.bigcommerce_orders",
+      "origin": "reference",
+      "diff": [
+        "Phase 2 Lot 3: full column map + row structure as data; undeclared columns preserved, declared ones traced"
+      ]
+    }
+  ]
+}

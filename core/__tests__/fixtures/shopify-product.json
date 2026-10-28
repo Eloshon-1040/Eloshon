@@ -1,0 +1,7 @@
+{"product":{"id":123,"title":"Classic Tee","vendor":"Acme","product_type":"Apparel",
+"body_html":"<p>Soft cotton tee.</p>",
+"variants":[
+{"id":1,"title":"S","price":"19.90","compare_at_price":"29.90","sku":"TEE-S","barcode":"3700000000010","available":true},
+{"id":2,"title":"M","price":"19.90","compare_at_price":"29.90","sku":"TEE-M","barcode":"3700000000027","available":true},
+{"id":3,"title":"L","price":"21.90","compare_at_price":"29.90","sku":"TEE-L","barcode":"3700000000034","available":false}],
+"images":[{"src":"https://cdn.shopify.com/img/tee-1.jpg"},{"src":"https://cdn.shopify.com/img/tee-2.jpg"}]}}

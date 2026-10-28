@@ -1,0 +1,6 @@
+Type,SKU,Name,Published,Visibility in catalog,Short description,Description,In stock?,Stock,Regular price,Sale price,Tax status,Virtual,Weight (kg),Length (cm),Width (cm),Height (cm),Categories,Tags,Images,Parent,Attribute 1 name,Attribute 1 value(s),Attribute 1 visible,Attribute 1 global,Attribute 2 name,Attribute 2 value(s),Attribute 2 visible,Attribute 2 global,Attribute 3 name,Attribute 3 value(s),Attribute 3 visible,Attribute 3 global,Brands,Meta: wix_ribbon,Meta: info_entretien,Meta: wix_custom_text,Meta: swatch_couleur
+variable,SAC-EN-CUIR,Sac en cuir,1,visible,,<p>Cuir tanné végétal.</p>,,,,,,,,,,,"Sacs, Nouveautés",,"https://cdn.example.com/sac-1.jpg, https://cdn.example.com/sac-2.jpg",,Couleur,"Tan, Noir",1,1,Format,"Petit, Grand",1,1,,,,,Maroquinerie,Nouveau,Nettoyer avec un chiffon doux.,Gravure (offerte),#8B5A2B;#000000
+variation,SAC-TAN-P,"Sac en cuir - Tan, Petit",1,,,,,5,150,135,taxable,no,0.8,,,,,,,SAC-EN-CUIR,Couleur,Tan,,,Format,Petit,,,,,,,,,,,
+variation,SAC-NOIR-G,"Sac en cuir - Noir, Grand",1,,,,,3,170,153,taxable,no,0.9,,,,,,,SAC-EN-CUIR,Couleur,Noir,,,Format,Grand,,,,,,,,,,,
+simple,BOUGIE-FIGUE,Bougie cire de soja,1,visible,,<p>Parfum figue.</p>,1,,24,,taxable,no,0.4,,,,Maison,,https://cdn.example.com/bougie.jpg,,,,,,,,,,,,,,ChezSoi,,,,
+simple,TEST-1,Produit test,0,visible,,,1,0,5,,taxable,no,,,,,,,,,,,,,,,,,,,,,,,,,

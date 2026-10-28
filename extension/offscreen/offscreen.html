@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="utf-8"><title>Eloshon offscreen</title></head>
+<body>
+  <!-- Offscreen document: gives the service worker a DOM (DOMParser) for parsing
+       large HTML payloads and other long tasks the SW cannot do itself. Created
+       on demand by the service worker and closed when idle. No UI, no network. -->
+  <script type="module" src="offscreen.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "ok": true,
+  "sourceFormat": "shopware.products.admin-api.v1",
+  "targetFormat": "shopify_products",
+  "counts": {
+    "inputUnits": 1,
+    "outputUnits": 1,
+    "failedUnits": 0,
+    "outputRows": 6
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_shopify_translations",
+      "params": {
+        "locales": "de-DE"
+      }
+    },
+    {
+      "code": "loss_shopify_identifiers",
+      "params": {
+        "kinds": "mpn"
+      }
+    },
+    {
+      "code": "loss_shopify_category_taxonomy",
+      "params": {
+        "count": 1,
+        "extra": 0
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false
+}

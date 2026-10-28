@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "sourceFormat": "scraper.eloshon-export.v1",
+  "targetFormat": "woo_products_modern",
+  "counts": {
+    "inputUnits": 5,
+    "outputUnits": 5,
+    "failedUnits": 0,
+    "outputRows": 5
+  },
+  "errors": [],
+  "losses": [],
+  "warnings": [
+    {
+      "code": "id_removed_woo"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

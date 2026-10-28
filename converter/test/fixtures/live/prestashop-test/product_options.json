@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "is_color_group": "0",
+    "group_type": "select",
+    "position": 0,
+    "name": [
+      {
+        "id": 1,
+        "value": "Size"
+      },
+      {
+        "id": 2,
+        "value": "Size"
+      }
+    ],
+    "public_name": [
+      {
+        "id": 1,
+        "value": "Size"
+      },
+      {
+        "id": 2,
+        "value": "Size"
+      }
+    ],
+    "associations": {
+      "product_option_values": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "is_color_group": "1",
+    "group_type": "color",
+    "position": 1,
+    "name": [
+      {
+        "id": 1,
+        "value": "Color"
+      },
+      {
+        "id": 2,
+        "value": "Color"
+      }
+    ],
+    "public_name": [
+      {
+        "id": 1,
+        "value": "Color"
+      },
+      {
+        "id": 2,
+        "value": "Color"
+      }
+    ],
+    "associations": {
+      "product_option_values": [
+        {
+          "id": 5
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 7
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 9
+        },
+        {
+          "id": 10
+        },
+        {
+          "id": 11
+        },
+        {
+          "id": 12
+        },
+        {
+          "id": 13
+        },
+        {
+          "id": 14
+        },
+        {
+          "id": 15
+        },
+        {
+          "id": 16
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 18
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "is_color_group": "0",
+    "group_type": "select",
+    "position": 2,
+    "name": [
+      {
+        "id": 1,
+        "value": "Dimension"
+      },
+      {
+        "id": 2,
+        "value": "Dimension"
+      }
+    ],
+    "public_name": [
+      {
+        "id": 1,
+        "value": "Dimension"
+      },
+      {
+        "id": 2,
+        "value": "Dimension"
+      }
+    ],
+    "associations": {
+      "product_option_values": [
+        {
+          "id": 19
+        },
+        {
+          "id": 20
+        },
+        {
+          "id": 21
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "is_color_group": "0",
+    "group_type": "select",
+    "position": 3,
+    "name": [
+      {
+        "id": 1,
+        "value": "Paper Type"
+      },
+      {
+        "id": 2,
+        "value": "Paper Type"
+      }
+    ],
+    "public_name": [
+      {
+        "id": 1,
+        "value": "Paper Type"
+      },
+      {
+        "id": 2,
+        "value": "Paper Type"
+      }
+    ],
+    "associations": {
+      "product_option_values": [
+        {
+          "id": 22
+        },
+        {
+          "id": 23
+        },
+        {
+          "id": 24
+        },
+        {
+          "id": 25
+        }
+      ]
+    }
+  }
+]

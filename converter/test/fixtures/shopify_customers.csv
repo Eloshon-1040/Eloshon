@@ -1,0 +1,5 @@
+First Name,Last Name,Email,Phone,Accepts Email Marketing,Accepts SMS Marketing,Default Address Company,Default Address Address1,Default Address Address2,Default Address City,Default Address Province Code,Default Address Country Code,Default Address Zip,Default Address Phone,Note,Tags,Tax Exempt
+Camille,Durand,camille.durand@example.com,'+33612345678,yes,no,,12 rue des Fleurs,,Lyon,,FR,69001,,Cliente fidèle,"vip, newsletter",no
+John,Smith,john.smith@example.com,,no,,,5 Main St,,Austin,TX,US,73301,,,,yes
+Camille,D.,camille.durand@example.com,,yes,,,,,Paris,,FR,,,,,
+Sans,Email,,,,,,,,Nice,,FR,,,,,

@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="fr" data-theme="light" data-app="converter">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planche du système de design Eloshon</title>
+<!-- The real tokens: shared/design/ is the single source (system.md). This page adds only specimen layout. -->
+<link rel="stylesheet" href="../../shared/design/tokens.base.css">
+<link rel="stylesheet" href="../../shared/design/tokens.converter.css">
+<link rel="stylesheet" href="../../shared/design/tokens.scraper.css">
+<style>
+@font-face { font-family: 'Poppins'; font-weight: 600; font-display: swap; src: url(../../app/renderer/fonts/poppins-600.woff2) format('woff2'); }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { font: var(--t-body); color: var(--ink); background: var(--canvas); -webkit-font-smoothing: antialiased; }
+svg.i { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+/* app frame: 232 px sidebar, content gutters 24 px (32 px from 1366 px) */
+.frame { display: grid; grid-template-columns: 232px minmax(0, 1fr); min-height: 100vh; }
+.side { background: var(--chrome); color: var(--chrome-ink); border-right: 1px solid var(--chrome-line); padding: 12px; display: flex; flex-direction: column; gap: 4px; }
+.main { padding: 24px; min-width: 0; }
+@media (min-width: 1366px) { .main { padding: 32px; } }
+.lockup { display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 4px; margin-bottom: 8px; color: var(--chrome-ink); font: var(--t-label); }
+.lockup .mark { width: 24px; height: 24px; border-radius: var(--r-md); background: var(--signal); color: #FFFFFF; display: grid; place-items: center; flex: none; }
+.lockup .mark svg { width: 16px; height: 16px; }
+.lockup b { font-weight: 600; }
+.lockup span { font-weight: 400; }
+.nav { display: flex; align-items: center; gap: 8px; height: 32px; padding: 0 10px; border-radius: var(--r-sm); color: var(--chrome-muted); font: var(--t-label); }
+.nav.on { background: var(--accent); color: var(--on-accent); }
+
+.page-h { font: var(--t-page); letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+.sec { font: var(--t-section); margin: 32px 0 12px; }
+.cap { font: var(--t-caption); color: var(--muted); }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); padding: 16px; }
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.stack { display: grid; gap: 12px; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 16px; }
+.num { font-variant-numeric: tabular-nums; }
+
+.sw { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 8px; }
+.sw div { border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface); overflow: hidden; }
+.sw i { display: block; height: 28px; border-bottom: 1px solid var(--line); }
+.sw span { display: block; padding: 4px 8px 0; font: var(--t-caption); color: var(--ink-2); }
+.sw code { display: block; padding: 0 8px 6px; font: 400 11px/16px var(--font-mono); color: var(--muted); }
+.type { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 6px 16px; align-items: baseline; }
+
+.btn { display: inline-flex; align-items: center; gap: 8px; height: 32px; padding: 0 12px; border-radius: var(--r-sm); font: var(--t-label);
+  border: 1px solid var(--line-control); background: var(--surface); color: var(--ink); cursor: pointer;
+  transition: background-color var(--dur-hover) var(--ease), transform var(--dur-press) var(--ease); }
+.btn:hover, .btn.is-hover { background: var(--row-hover); }
+.btn:active { transform: scale(.98); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn.primary:hover, .btn.primary.is-hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+.btn.quiet { border-color: transparent; background: transparent; color: var(--ink-2); height: 28px; padding: 0 10px; }
+.btn.quiet:hover, .btn.quiet.is-hover { background: var(--row-hover); color: var(--ink); }
+.btn.danger { color: var(--danger); border-color: var(--danger); }
+.btn.icon { width: 32px; padding: 0; justify-content: center; }
+.btn[aria-disabled="true"] { color: var(--disabled); background: var(--sunken); border-color: var(--line-subtle); cursor: not-allowed; }
+.is-focus { outline: var(--focus-width) solid var(--focus); outline-offset: var(--focus-offset); }
+kbd { display: inline-flex; align-items: center; gap: 2px; height: 18px; padding: 0 4px; border: 1px solid var(--line); border-radius: var(--r-sm);
+  background: var(--sunken); color: var(--ink-2); font: 500 11px/16px var(--font-mono); }
+kbd svg.i { width: 11px; height: 11px; }
+.keys { display: flex; flex-wrap: wrap; gap: 6px 16px; font: var(--t-caption); color: var(--muted); }
+.keys span { display: inline-flex; align-items: center; gap: 4px; }
+
+.field { display: grid; gap: 4px; align-content: start; }
+.field label { font: var(--t-label); color: var(--ink-2); }
+.field input { height: 32px; width: 220px; padding: 0 10px; background: var(--sunken); border: 1px solid var(--line-control); border-radius: var(--r-sm); font: var(--t-body); color: var(--ink); }
+.field input.mono { font: var(--t-value); }
+.field input::placeholder { color: var(--muted); }
+.field .help { font: var(--t-caption); color: var(--muted); max-width: 240px; }
+.field.err input { border-color: var(--danger); }
+.field.err .help { color: var(--danger); display: flex; gap: 4px; align-items: flex-start; }
+.field.err .help svg.i { width: 12px; height: 12px; margin-top: 2px; }
+
+.chipgrid { display: grid; grid-template-columns: 170px repeat(4, max-content); gap: 10px 12px; align-items: center; }
+.pill { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; border: 1px solid var(--line); border-radius: var(--r-sm);
+  background: var(--surface); font: var(--t-label); color: var(--ink-2); cursor: pointer; }
+.pill b { font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.pill[aria-pressed="true"] { background: var(--accent-tint); color: var(--accent-tint-ink); border-color: var(--accent-ink); }
+.pill[aria-pressed="true"] b { color: inherit; }
+.search { display: inline-flex; align-items: center; gap: 6px; height: 28px; width: 220px; padding: 0 8px; background: var(--sunken);
+  border: 1px solid var(--line-control); border-radius: var(--r-sm); color: var(--muted); font: var(--t-body); }
+
+/* mapping table: two-line rows by default, one-line rows when the table is >= 960 px wide */
+.map { container: map / inline-size; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); }
+.map table { width: 100%; border-collapse: separate; border-spacing: 0; table-layout: fixed; }
+.map th { position: sticky; top: 0; height: var(--row-head); padding: 0 12px; text-align: left; font: var(--t-th); text-transform: uppercase;
+  letter-spacing: .04em; color: var(--muted); background: var(--surface); border-bottom: 1px solid var(--line-strong); }
+.map th:first-child { border-top-left-radius: var(--r-md); } .map th:last-child { border-top-right-radius: var(--r-md); }
+.map td { padding: 8px 12px 7px; vertical-align: top; border-bottom: 1px solid var(--line-subtle); }
+.map tbody tr:last-child td { border-bottom: 0; }
+.map tr.is-hover td { background: var(--row-hover); }
+.map tr.is-focus { outline: var(--focus-width) solid var(--focus); outline-offset: calc(-1 * var(--focus-width)); }
+.map col.c1 { width: 28%; } .map col.c2 { width: 30%; } .map col.c3 { width: 28%; } .map col.c4 { width: 96px; }
+.cell { display: grid; gap: 0; min-width: 0; }
+.l1, .l2 { display: flex; align-items: center; gap: 8px; min-width: 0; min-height: 20px; }
+.l2 { color: var(--muted); font: 500 11px/20px var(--font-ui); }
+.l2.vals { font: 400 12px/20px var(--font-mono); }
+.why-wrap { display: flex; gap: 4px; align-items: flex-start; font: 500 11px/16px var(--font-ui); color: var(--muted); padding-top: 2px; }
+.why-wrap.alert { color: var(--warn); }
+.why-wrap svg.i { width: 12px; height: 12px; margin-top: 2px; }
+.trunc { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.colname { font: 500 12px/20px var(--font-mono); color: var(--ink); white-space: nowrap; }
+.fill { width: 40px; height: 4px; flex: none; background: var(--line); border-radius: 2px; overflow: hidden; }
+.fill i { display: block; height: 100%; background: var(--ink-2); }
+.ratio { font: 500 11px/16px var(--font-ui); color: var(--ink-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ratio.empty { color: var(--muted); }
+.dest { font: 600 13px/20px var(--font-ui); color: var(--ink); white-space: nowrap; }
+.platcol { font: 400 12px/20px var(--font-mono); color: var(--ink-2); white-space: nowrap; }
+.arrow { display: inline-flex; color: var(--muted); } .arrow svg.i { width: 14px; height: 14px; }
+td.act { text-align: right; padding-top: 4px; padding-bottom: 3px; }
+tr.tech td { padding: 0 12px 8px; }
+details summary { font: var(--t-caption); color: var(--muted); cursor: pointer; width: max-content; }
+details dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 2px 12px; margin: 6px 0 0; font: var(--t-caption); color: var(--ink-2); }
+details dt { color: var(--muted); } details dd { margin: 0; font: 400 12px/16px var(--font-mono); overflow-wrap: anywhere; }
+@container map (min-width: 960px) {
+  .map col.c1 { width: 28%; } .map col.c2 { width: 36%; } .map col.c3 { width: auto; }
+  .map .cell { display: flex; align-items: flex-start; gap: 8px; }
+  .map .l1 { flex: none; }
+  .map .l2, .map .why-wrap { flex: 1 1 auto; min-width: 0; }
+}
+.frame-660 { width: 660px; max-width: 100%; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.drop { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; min-height: 120px; padding: 16px;
+  border: 1px dashed var(--line-control); border-radius: var(--r-md); background: var(--sunken); color: var(--ink-2); text-align: center; }
+.drop.over { border: 2px solid var(--accent-ink); padding: 15px; background: var(--accent-tint); color: var(--accent-tint-ink); }
+.drop svg.i { width: 20px; height: 20px; }
+.bar { height: 4px; background: var(--line-subtle); border-radius: 2px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--accent); }
+.bar.paused i { background: var(--neutral); }
+.meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 4px 16px; font: var(--t-caption); color: var(--muted); font-variant-numeric: tabular-nums; }
+.meta b { display: block; font: var(--t-label); color: var(--ink); }
+.banner { display: flex; gap: 12px; align-items: flex-start; padding: 12px 16px; border: 1px solid var(--danger); background: var(--danger-bg); border-radius: var(--r-md); color: var(--ink); }
+.banner > svg.i { color: var(--danger); margin-top: 2px; }
+.banner b { display: block; font: var(--t-label); color: var(--danger); }
+.banner p { margin: 0; }
+.scrim { background: var(--scrim); border-radius: var(--r-md); padding: 16px; display: grid; place-items: center; }
+.dialog { width: 100%; max-width: 380px; background: var(--surface); border: 1px solid var(--line-strong); border-radius: var(--r-lg); padding: 16px; display: grid; gap: 12px; }
+.dialog h3 { font: var(--t-sub); margin: 0; }
+.dialog p { margin: 0; color: var(--ink-2); }
+.chrome { display: flex; align-items: center; gap: 12px; height: 48px; padding: 0 12px; border: 1px solid var(--chrome-line); border-radius: var(--r-md); background: var(--chrome); }
+.brand-h { font: 600 22px/28px var(--font-brand); margin: 0; }
+.intl { display: grid; grid-template-columns: 90px repeat(2, max-content); gap: 6px 24px; align-items: baseline; }
+.intl .v { font: var(--t-label); font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4 2.8 19.5a1 1 0 0 0 .9 1.5h16.6a1 1 0 0 0 .9-1.5L12 4z"/><path d="M12 10v4"/><path d="M12 17.5h.01"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.3 2.4c-.5.2-.8.7-.8 1.2v.4"/><path d="M12 17h.01"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+  <symbol id="i-empty" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></symbol>
+  <symbol id="i-archive" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9"/><path d="M10 13h4"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></symbol>
+  <symbol id="i-ring" viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 1-8 8"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-pause-c" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 9v6"/><path d="M14 9v6"/></symbol>
+  <symbol id="i-octagon-x" viewBox="0 0 24 24"><path d="M8.2 3h7.6L21 8.2v7.6L15.8 21H8.2L3 15.8V8.2z"/><path d="m9 9 6 6"/><path d="m15 9-6 6"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 13V6.5a1.5 1.5 0 0 1 3 0V12"/><path d="M11 11V4.5a1.5 1.5 0 0 1 3 0V12"/><path d="M14 11.5V6a1.5 1.5 0 0 1 3 0v7"/><path d="M8 13 6.4 11a1.6 1.6 0 0 0-2.6 1.8L7 17.5A6 6 0 0 0 12.2 21h.8a5 5 0 0 0 5-5v-3"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h14"/><path d="m13 7 5 5-5 5"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M20 12H6"/><path d="m11 7-5 5 5 5"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V6"/><path d="m7 11 5-5 5 5"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v14"/><path d="m7 13 5 5 5-5"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15V4"/><path d="m7 9 5-5 5 5"/><path d="M5 15v4a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-4"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 5v14l11-7z"/></symbol>
+  <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="1"/></symbol>
+  <symbol id="i-x-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 9h13l-3.5-3.5"/><path d="M20 15H7l3.5 3.5"/></symbol>
+  <symbol id="e-mark" viewBox="0 0 64 64"><g fill="currentColor" stroke="none"><rect x="8" y="11" width="11" height="41" rx="5"/><rect x="23" y="11" width="33" height="11" rx="5.5"/><rect x="23" y="26" width="20" height="11" rx="5.5"/><rect x="47" y="26" width="9" height="11" rx="4.5" opacity=".55"/><rect x="23" y="41" width="33" height="11" rx="5.5"/></g></symbol>
+</svg>
+
+<template id="tpl-mapping">
+  <div class="map">
+    <table role="grid" aria-label="Correspondance des colonnes">
+      <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"></colgroup>
+      <thead><tr><th>Votre colonne</th><th>Sera écrite dans</th><th>Fiabilité</th><th><span class="sr">Actions</span></th></tr></thead>
+      <tbody data-rows></tbody>
+    </table>
+  </div>
+</template>
+
+<div class="frame">
+  <aside class="side">
+    <div class="lockup"><span class="mark"><svg><use href="#e-mark"/></svg></span><b>Eloshon</b><span>Converter</span></div>
+    <span class="nav on"><svg class="i"><use href="#i-swap"/></svg>Nouvelle conversion</span>
+    <span class="nav">Historique</span>
+    <span class="nav">Modèles de correspondance</span>
+    <span class="nav">Paramètres</span>
+  </aside>
+
+  <main class="main">
+    <header class="row" style="justify-content:space-between">
+      <div>
+        <h1 class="page-h">Planche du système de design Eloshon</h1>
+        <div class="cap">Direction A, précision et densité · tokens lus dans shared/design/ · thème <span id="theme-name"></span> · fenêtre <span id="vw" class="num"></span> px</div>
+      </div>
+    </header>
+
+    <h2 class="sec">Couleurs</h2>
+    <div class="stack">
+      <div class="cap">Neutres</div>
+      <div class="sw" data-tokens="--canvas --surface --sunken --row-hover --ink --ink-2 --muted --disabled --line --line-subtle --line-strong --line-control"></div>
+      <div class="cap">États</div>
+      <div class="sw" data-tokens="--ok --ok-bg --warn --warn-bg --danger --danger-bg --neutral --neutral-bg"></div>
+      <div class="cap">Accent Converter</div>
+      <div class="sw" data-tokens="--accent --accent-hover --accent-press --accent-ink --accent-tint --accent-tint-ink --chrome --signal"></div>
+      <div class="cap">Accent Scraper</div>
+      <div class="sw" data-app="scraper" data-tokens="--accent --accent-hover --accent-press --accent-ink --accent-tint --accent-tint-ink --chrome --signal"></div>
+    </div>
+
+    <h2 class="sec">Typographie</h2>
+    <div class="panel type">
+      <span class="cap">Grand titre · 27/32 · 600</span><span style="font:var(--t-display);letter-spacing:-.015em">Convertissez votre catalogue</span>
+      <span class="cap">Titre de page · 22/28 · 600</span><span style="font:var(--t-page);letter-spacing:-.01em">Correspondance des colonnes</span>
+      <span class="cap">Titre de section · 19/24 · 600</span><span style="font:var(--t-section)">Champs de la plateforme non alimentés</span>
+      <span class="cap">Sous-titre · 16/24 · 600</span><span style="font:var(--t-sub)">Générateur de SKU</span>
+      <span class="cap">Texte · 13/20 · 400</span><span>Voici comment chaque colonne de votre fichier sera utilisée dans votre fichier Shopify.</span>
+      <span class="cap">Libellé · 13/20 · 500</span><span style="font:var(--t-label)">Nom du produit</span>
+      <span class="cap">Valeur · mono 12/20</span><span style="font:var(--t-value)">CHM-LIN-38 · 3701234567890 · https://www.adidas.be/fr/…/IF6490.html</span>
+      <span class="cap">Légende · 11/16 · 500</span><span class="cap">Reconnu par son nom · 5 valeurs sur 5 sont des nombres</span>
+    </div>
+
+    <h2 class="sec">Nombres et dates</h2>
+    <div class="panel stack">
+      <div class="intl" id="intl"></div>
+      <div class="cap">Calculé à l’affichage par Intl.NumberFormat et Intl.DateTimeFormat, avec la langue de l’interface. Jamais formaté à la main.</div>
+    </div>
+
+    <h2 class="sec">Contrôles et états</h2>
+    <div class="panel stack">
+      <div class="row">
+        <button class="btn primary">Continuer vers le contrôle</button>
+        <button class="btn">Choisir un fichier…</button>
+        <button class="btn quiet">Modifier</button>
+        <button class="btn danger">Arrêter</button>
+        <button class="btn icon" aria-label="Rechercher une colonne" title="Rechercher une colonne (Ctrl+F)"><svg class="i"><use href="#i-search"/></svg></button>
+      </div>
+      <div class="row">
+        <span class="cap" style="width:96px">Survol</span>
+        <button class="btn primary is-hover">Continuer vers le contrôle</button>
+        <button class="btn is-hover">Choisir un fichier…</button>
+        <button class="btn quiet is-hover">Modifier</button>
+      </div>
+      <div class="row">
+        <span class="cap" style="width:96px">Focus clavier</span>
+        <button class="btn primary is-focus">Continuer vers le contrôle</button>
+        <button class="btn is-focus">Choisir un fichier…</button>
+        <button class="btn quiet is-focus">Modifier</button>
+      </div>
+      <div class="row" style="align-items:flex-start">
+        <span class="cap" style="width:96px;padding-top:6px">Indisponible</span>
+        <div class="field"><button class="btn" aria-disabled="true" aria-describedby="why-export">Exporter</button>
+          <span class="help" id="why-export">Disponible quand le contrôle est terminé.</span></div>
+      </div>
+      <div class="row" style="align-items:flex-start">
+        <div class="field"><label for="f-prefix">Préfixe du SKU</label><input id="f-prefix" class="mono" placeholder="ELO…">
+          <span class="help">Facultatif, 12 caractères au plus. Placé devant chaque SKU généré, suivi du séparateur.</span></div>
+        <div class="field"><label for="f-len">Longueur maximale</label><input id="f-len" class="num is-focus" value="32">
+          <span class="help">Entre 8 et 64 caractères, préfixe compris.</span></div>
+        <div class="field err"><label for="f-len2">Longueur maximale</label><input id="f-len2" class="num" value="4" aria-invalid="true">
+          <span class="help"><svg class="i"><use href="#i-x-circle"/></svg>Choisissez une longueur entre 8 et 64.</span></div>
+      </div>
+    </div>
+
+    <h2 class="sec">Pastilles d’état</h2>
+    <div class="panel stack">
+      <div class="chipgrid">
+        <span class="cap">Converter · fiabilité</span>
+        <span class="status-chip" data-tone="ok" data-shape="settled"><svg class="i"><use href="#i-check-circle"/></svg>Sûr</span>
+        <span class="status-chip" data-tone="warn" data-shape="attention"><svg class="i"><use href="#i-alert"/></svg>À vérifier</span>
+        <span class="status-chip" data-tone="warn" data-shape="uncertain"><svg class="i"><use href="#i-help"/></svg>Incertain</span>
+        <span class="status-chip" data-tone="neutral" data-shape="settled"><svg class="i"><use href="#i-empty"/></svg>Vide</span>
+        <span class="cap">Converter · conversion</span>
+        <span class="status-chip" data-tone="ok" data-shape="settled"><svg class="i"><use href="#i-check"/></svg>Converti</span>
+        <span class="status-chip" data-tone="neutral" data-shape="settled"><svg class="i"><use href="#i-archive"/></svg>Conservé</span>
+        <span class="status-chip" data-tone="warn" data-shape="attention"><svg class="i"><use href="#i-flag"/></svg>Signalé</span>
+        <span></span>
+        <span class="cap">Scraper · job</span>
+        <span class="status-chip" data-tone="neutral" data-shape="settled"><svg class="i moving"><use href="#i-ring"/></svg><svg class="i still"><use href="#i-clock"/></svg>En cours</span>
+        <span class="status-chip" data-tone="neutral" data-shape="paused"><svg class="i"><use href="#i-pause-c"/></svg>En pause</span>
+        <span class="status-chip" data-tone="ok" data-shape="settled"><svg class="i"><use href="#i-check"/></svg>Terminé</span>
+        <span></span>
+        <span></span>
+        <span class="status-chip" data-tone="danger" data-shape="attention"><svg class="i"><use href="#i-octagon-x"/></svg>Bloqué</span>
+        <span class="status-chip" data-tone="warn" data-shape="attention"><svg class="i"><use href="#i-hand"/></svg>CAPTCHA requis</span>
+      </div>
+      <div class="cap">Contour = réglé · fond teinté = demande votre attention · fond teinté + pointillé = incertain · fond neutre sans contour = en pause. Toujours une icône et un mot ; le rouge est réservé aux erreurs, au blocage et aux actions destructrices.</div>
+      <div class="cap">Mouvement réduit : l’anneau de « En cours » est remplacé par une horloge fixe.</div>
+    </div>
+
+    <h2 class="sec">Ligne de correspondance</h2>
+    <div class="stack">
+      <div class="row">
+        <span class="search"><svg class="i"><use href="#i-search"/></svg>Rechercher une colonne…</span>
+        <button class="pill" aria-pressed="true" title="Ctrl+1">À traiter <b>3</b></button>
+        <button class="pill" title="Ctrl+2">Toutes <b>25</b></button>
+        <button class="pill" title="Ctrl+3">Sûres <b>11</b></button>
+        <button class="pill" title="Ctrl+4">À vérifier <b>2</b></button>
+        <button class="pill" title="Ctrl+5">Incertaines <b>1</b></button>
+        <button class="pill" title="Ctrl+6">Vides <b>9</b></button>
+        <button class="pill" title="Ctrl+7">Ignorées <b>2</b></button>
+      </div>
+      <div class="cap">Ouverture par défaut : au moins une ligne demande une action, le tableau s’ouvre sur « À traiter ». Ligne « variants » avec le focus clavier.</div>
+      <div data-mapping="todo"></div>
+      <div class="keys">
+        <span><kbd><svg class="i"><use href="#i-up"/></svg></kbd><kbd><svg class="i"><use href="#i-down"/></svg></kbd>Changer de ligne</span>
+        <span><kbd><svg class="i"><use href="#i-arrow"/></svg></kbd>Déplier les détails</span>
+        <span><kbd><svg class="i"><use href="#i-left"/></svg></kbd>Replier</span>
+        <span><kbd>Entrée</kbd>Modifier</span>
+        <span><kbd>Échap</kbd>Fermer</span>
+        <span><kbd>Ctrl</kbd><kbd>F</kbd>Rechercher</span>
+        <span><kbd>Ctrl</kbd><kbd>1</kbd>à<kbd>7</kbd>Filtres</span>
+      </div>
+      <div class="cap" style="margin-top:12px">Filtre « Toutes », trié par fiabilité, la plus basse d’abord.</div>
+      <div data-mapping="all"></div>
+      <div class="cap" style="margin-top:12px">Largeur minimale : tableau de 660 px (fenêtre de 940 px moins le menu et les marges).</div>
+      <div class="frame-660" data-mapping="all"></div>
+    </div>
+
+    <h2 class="sec">Comportements de bureau</h2>
+    <div class="cols">
+      <div class="stack">
+        <div class="drop"><svg class="i"><use href="#i-upload"/></svg><span style="font:var(--t-label)">Déposez votre fichier ici</span>
+          <button class="btn">Choisir un fichier…</button><span class="cap">CSV, TSV, JSON ou .eloshon</span></div>
+        <div class="drop over"><svg class="i"><use href="#i-upload"/></svg><span style="font:var(--t-label)">Relâchez pour importer « export-adidas.csv »</span></div>
+        <div class="banner" role="alert"><svg class="i"><use href="#i-x-circle"/></svg>
+          <div><b>Votre choix n’a pas été enregistré.</b><p>Le fichier des formats appris est ouvert dans une autre fenêtre du Converter. Fermez-la, puis cliquez sur Réessayer.</p>
+          <div class="row" style="margin-top:8px"><button class="btn">Réessayer</button></div></div></div>
+      </div>
+      <div class="stack" data-app="scraper">
+        <div class="panel stack">
+          <div class="row" style="justify-content:space-between"><span style="font:var(--t-sub)">Lecture des pages</span>
+            <span class="status-chip" data-tone="neutral" data-shape="settled"><svg class="i moving"><use href="#i-ring"/></svg><svg class="i still"><use href="#i-clock"/></svg>En cours</span></div>
+          <div class="bar" role="progressbar" aria-label="Pages lues" aria-valuenow="128" aria-valuemin="0" aria-valuemax="1240"><i style="width:10.3%"></i></div>
+          <div class="meta">
+            <span>Pages<b data-n="128/1240"></b></span>
+            <span>Temps écoulé<b>2 min 14 s</b></span>
+            <span>Temps restant<b>environ 19 min</b></span>
+            <span>Crédits<b><span data-n="18"></span> utilisés · environ <span data-n="40"></span> prévus</b></span>
+          </div>
+          <div class="row"><button class="btn"><svg class="i"><use href="#i-pause"/></svg>Mettre en pause</button><button class="btn danger"><svg class="i"><use href="#i-stop"/></svg>Arrêter…</button></div>
+        </div>
+        <div class="panel stack">
+          <div class="row" style="justify-content:space-between"><span style="font:var(--t-sub)">Lecture des pages</span>
+            <span class="status-chip" data-tone="neutral" data-shape="paused"><svg class="i"><use href="#i-pause-c"/></svg>En pause</span></div>
+          <div class="bar paused"><i style="width:10.3%"></i></div>
+          <div class="row"><button class="btn primary"><svg class="i"><use href="#i-play"/></svg>Reprendre</button><button class="btn danger"><svg class="i"><use href="#i-stop"/></svg>Arrêter…</button></div>
+        </div>
+        <div class="scrim"><div class="dialog" role="dialog" aria-labelledby="stop-h">
+          <h3 id="stop-h">Arrêter la lecture ?</h3>
+          <p>Les <span data-n="412"></span> produits déjà lus sont gardés. Une lecture arrêtée ne reprend pas ; mettez-la en pause pour la reprendre plus tard.</p>
+          <div class="row" style="justify-content:flex-end"><button class="btn is-focus">Continuer la lecture</button><button class="btn danger">Arrêter</button></div>
+        </div></div>
+        <div class="cap">Valeurs d’exemple. Les crédits viennent du compte et de la configuration, jamais d’une valeur écrite dans le code.</div>
+      </div>
+    </div>
+
+    <h2 class="sec">Logotype de la suite</h2>
+    <div class="stack">
+      <div class="chrome" data-app="converter"><span class="lockup" style="margin:0"><span class="mark"><svg><use href="#e-mark"/></svg></span><b>Eloshon</b><span>Converter</span></span></div>
+      <div class="chrome" data-app="scraper"><span class="lockup" style="margin:0"><span class="mark"><svg><use href="#e-mark"/></svg></span><b>Eloshon</b><span>Scraper</span></span></div>
+      <div class="panel row" data-app="scraper" style="justify-content:space-between"><h3 class="brand-h">Nouveau scraping</h3><button class="btn primary">Lancer le scraping</button></div>
+      <div class="cap">Même structure pour les deux apps : marque Eloshon, « Eloshon » en 600, nom du produit en 400, en Inter. Seuls l’accent et l’habillage changent. Poppins reste pour les titres du Scraper de 22 px et plus.</div>
+    </div>
+  </main>
+</div>
+
+<script>
+  const params = new URLSearchParams(location.search);
+  const theme = params.get('theme') === 'dark' ? 'dark' : 'light';
+  document.documentElement.dataset.theme = theme;
+  document.getElementById('theme-name').textContent = theme === 'dark' ? 'sombre' : 'clair';
+  const vw = document.getElementById('vw'); const setVw = () => { vw.textContent = String(innerWidth); }; setVw(); addEventListener('resize', setVw);
+
+  const U = (id) => `<svg class="i"><use href="#${id}"/></svg>`;
+  const chip = { ok: `<span class="status-chip" data-tone="ok" data-shape="settled">${U('i-check-circle')}Sûr</span>`,
+    check: `<span class="status-chip" data-tone="warn" data-shape="attention">${U('i-alert')}À vérifier</span>`,
+    unsure: `<span class="status-chip" data-tone="warn" data-shape="uncertain">${U('i-help')}Incertain</span>`,
+    empty: `<span class="status-chip" data-tone="neutral" data-shape="settled">${U('i-empty')}Vide</span>` };
+  const ROWS = {
+    rating: { level: 'unsure', name: 'rating', fill: 80, ratio: '4/5', vals: ['4.83', '4.6', '4.9', '4.75'], dest: 'Note moyenne', col: 'métachamp rating', how: 'Nombre repris tel quel',
+      why: 'Déduit des valeurs : nombres de 0 à 5.', tech: ['sourceExtension.eloshon.rating', 'number'] },
+    variants: { level: 'check', name: 'variants', fill: 80, ratio: '4/5', vals: ['Couleur du produit : Aurora Coffee / Wonder White', 'Couleur du produit : Core Black'], dest: 'SKU de la variante', col: 'Variant SKU', how: 'Une variante par valeur', alert: true,
+      why: 'Ce sont des libellés, pas des SKU.', tech: ['variants[].sku', 'option_values_from_typed'] },
+    color: { level: 'check', name: 'color', fill: 80, ratio: '4/5', vals: ['Earth Strata / Off White / Gum', 'Core Black / Cloud White'], dest: 'Couleur', col: 'Option1 Value', how: 'Valeur d’option reprise telle quelle',
+      why: 'Plusieurs couleurs dans une case.', tech: ['attributesRich[].color', 'attribute_single'] },
+    name: { level: 'ok', name: 'name', fill: 100, ratio: '5/5', vals: ['Chaussure Handball Spezial', 'Chaussure de football F50 Hyperfast Elite'], dest: 'Nom du produit', col: 'Title', how: 'Texte repris tel quel',
+      why: 'Reconnu par son nom · 5 textes sur 5', tech: ['title', 'string_id'] },
+    price: { level: 'ok', name: 'price', fill: 100, ratio: '5/5', vals: ['110', '260', '90'], dest: 'Prix de vente', col: 'Variant Price', how: 'Prix en nombre',
+      why: 'Règle connue pour ce format · 5 nombres sur 5', tech: ['variants[].price', 'money'] },
+    barcode: { level: 'empty', name: 'barcode', fill: 0, ratio: '0/5', vals: [], dest: 'Code-barres', col: 'Variant Barcode', how: 'Restera vide dans le fichier Shopify',
+      why: 'Rien à écrire : la colonne est vide', tech: ['variants[].barcode', 'string_id'] },
+  };
+  const q = (s) => `« ${s} »`;
+  function row(r, opts = {}) {
+    const needs = r.level === 'check' || r.level === 'unsure';
+    const full = r.vals.map(q).join(', ');
+    const reason = needs
+      ? `<div class="why-wrap${r.alert ? ' alert' : ''}">${r.alert ? U('i-alert') : ''}<span>${r.why}</span></div>`
+      : `<div class="l2"><span class="trunc" title="${r.why}">${r.why}</span></div>`;
+    const tr = `<tr tabindex="-1" ${needs ? 'data-needs' : 'data-settled'}${opts.focus ? ' class="is-focus" aria-selected="true"' : ''}>
+      <td><div class="cell"><div class="l1"><span class="colname">${r.name}</span><span class="fill"><i style="width:${r.fill}%"></i></span><span class="ratio${r.fill ? '' : ' empty'}">${r.ratio}</span></div>
+        <div class="l2 ${r.vals.length ? 'vals' : ''}">${r.vals.length ? `<span class="trunc" title="${full}">${full}</span>` : '<span class="trunc">Vide sur 5 lignes sur 5</span>'}</div></div></td>
+      <td><div class="cell"><div class="l1"><span class="arrow">${U('i-arrow')}</span><span class="dest">${r.dest}</span></div>
+        <div class="l2"><span class="platcol">${r.col}</span><span class="trunc" title="${r.how}">· ${r.how}</span></div></div></td>
+      <td><div class="cell"><div class="l1">${chip[r.level]}</div>${reason}</div></td>
+      <td class="act"><button class="btn quiet" tabindex="-1">Modifier</button></td></tr>`;
+    const tech = opts.open ? `<tr class="tech"><td colspan="4"><details open><summary>Détails techniques</summary><dl>
+      <dt>Exemples complets</dt><dd>${full || '—'}</dd><dt>Champ interne</dt><dd>${r.tech[0]}</dd><dt>Transformation</dt><dd>${r.tech[1]}</dd></dl></details></td></tr>` : '';
+    return tr + tech;
+  }
+  const SETS = { todo: [['rating'], ['variants', { focus: true, open: true }], ['color']],
+    all: [['rating'], ['variants'], ['color'], ['name'], ['price'], ['barcode']] };
+  const tpl = document.getElementById('tpl-mapping');
+  for (const host of document.querySelectorAll('[data-mapping]')) {
+    host.appendChild(tpl.content.cloneNode(true));
+    host.querySelector('[data-rows]').innerHTML = SETS[host.dataset.mapping].map(([k, o]) => row(ROWS[k], o)).join('');
+  }
+
+  const LANGS = [['fr', 'Français'], ['nl', 'Nederlands'], ['en', 'English'], ['es', 'Español']];
+  const intl = document.getElementById('intl');
+  intl.innerHTML = '<span class="cap">Langue</span><span class="cap">1111,1 en euros</span><span class="cap">28/10/2026</span>' + LANGS.map(([l, n]) =>
+    `<span class="cap">${n}</span><span class="v">${new Intl.NumberFormat(l, { style: 'currency', currency: 'EUR' }).format(1111.1)}</span>`
+    + `<span class="v">${new Intl.DateTimeFormat(l, { dateStyle: 'medium' }).format(new Date(2026, 9, 28))}</span>`).join('');
+  const nf = new Intl.NumberFormat(document.documentElement.lang);
+  for (const el of document.querySelectorAll('[data-n]')) el.textContent = el.dataset.n.split('/').map((x) => nf.format(Number(x))).join(' / ');
+
+  const probe = document.createElement('i'); document.body.appendChild(probe);
+  const hex = (rgb) => { const m = rgb.match(/[\d.]+/g).map(Number); const h = m.slice(0, 3).map((x) => x.toString(16).padStart(2, '0')).join('').toUpperCase(); return m.length > 3 && m[3] < 1 ? `#${h} ${Math.round(m[3] * 100)} %` : `#${h}`; };
+  for (const sw of document.querySelectorAll('.sw[data-tokens]')) {
+    for (const t of sw.dataset.tokens.split(' ')) {
+      sw.appendChild(probe); probe.style.color = `var(${t})`;
+      const d = document.createElement('div');
+      d.innerHTML = '<i></i><span></span><code></code>';
+      d.querySelector('i').style.background = `var(${t})`;
+      d.querySelector('span').textContent = t;
+      d.querySelector('code').textContent = hex(getComputedStyle(probe).color);
+      sw.appendChild(d);
+    }
+  }
+  probe.remove();
+  for (const el of document.querySelectorAll('.trunc')) if (!el.title) el.title = el.textContent;
+</script>
+</body>
+</html>

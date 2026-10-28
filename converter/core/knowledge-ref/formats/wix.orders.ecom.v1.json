@@ -1,0 +1,991 @@
+{
+  "schemaVersion": 1,
+  "id": "wix.orders.ecom.v1",
+  "displayName": "Wix Orders (eCommerce Orders API)",
+  "provenance": "native-platform",
+  "medium": "json-api",
+  "platformHint": "wix",
+  "entity": "orders",
+  "version": "wix-ecom-v1",
+  "signatures": [
+    {
+      "kind": "json-shape",
+      "requiredPaths": [
+        "id",
+        "number",
+        "lineItems",
+        "paymentStatus",
+        "fulfillmentStatus",
+        "priceSummary"
+      ],
+      "hintPaths": [
+        "balanceSummary",
+        "buyerLanguage",
+        "taxIncludedInPrices",
+        "channelInfo",
+        "activities"
+      ]
+    }
+  ],
+  "structure": {
+    "unit": "order",
+    "items": {
+      "inlinePath": "lineItems",
+      "keyedBy": "id"
+    },
+    "companions": {
+      "_transactions": {
+        "route": "GET /ecom/v1/payments/orders/{id} (Order Transactions API; inlined as _transactions = { orderId, payments[], refunds[] })",
+        "keyedByParent": false
+      }
+    }
+  },
+  "invariantsExpected": [
+    "number is the display number (10001…); the target never receives it as its own sequence (7.4)",
+    "every amount is { amount, formattedAmount } — amount is a decimal string; taxIncludedInPrices is the order-level flag",
+    "paymentStatus / fulfillmentStatus / status are three separate enums; balanceSummary carries paid / refunded / balance",
+    "buyerInfo and billingInfo are absent on a back-office order; shippingInfo.logistics carries the delivery destination when there is one",
+    "demo orders exist (demo: true) — treated as test orders",
+    "the Order Transactions record is one object per order: payments[] (manual payments carry no regularPaymentDetails) and refunds[]"
+  ],
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "live:wix-test:2026-09-21",
+      "origin": "reference",
+      "diff": [
+        "Phase 7.6: full field map from the live site (1 approved / paid / fulfilled order)"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "path": "number",
+      "canon": "numbering.sourceNumber",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "Display number. Immutable reference on the target (7.4)."
+    },
+    {
+      "path": "id",
+      "canon": "numbering.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "identity.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "paymentStatus",
+      "canon": "status.financial",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "PAID": "paid",
+          "NOT_PAID": "pending",
+          "PARTIALLY_PAID": "partially_paid",
+          "PARTIALLY_REFUNDED": "partially_refunded",
+          "FULLY_REFUNDED": "refunded",
+          "PENDING": "pending",
+          "UNSPECIFIED": "unknown"
+        },
+        "default": "unknown"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "fulfillmentStatus",
+      "canon": "status.fulfillment",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "FULFILLED": "fulfilled",
+          "NOT_FULFILLED": "unfulfilled",
+          "PARTIALLY_FULFILLED": "partial"
+        },
+        "default": "unknown"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "status",
+      "canon": "status.lifecycle",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "APPROVED": "open",
+          "CANCELED": "cancelled",
+          "INITIALIZED": "draft",
+          "PENDING": "open"
+        },
+        "default": "unknown"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "status",
+      "canon": "status.sourceState",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "activities",
+      "canon": "status.history",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "at": {
+            "path": "createdDate",
+            "as": "date"
+          },
+          "state": "type"
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "currency",
+      "canon": "currency",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "taxIncludedInPrices",
+      "canon": "amounts.taxIncluded",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "priceSummary.subtotal.amount",
+      "canon": "amounts.subtotal",
+      "transform": "money",
+      "confidence": "verified-live",
+      "consumes": [
+        "priceSummary"
+      ]
+    },
+    {
+      "path": "priceSummary.shipping.amount",
+      "canon": "amounts.shipping",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "priceSummary.tax.amount",
+      "canon": "amounts.taxes",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "priceSummary.discount.amount",
+      "canon": "amounts.discounts",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "priceSummary.totalAdditionalFees.amount",
+      "canon": "amounts.fees",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "priceSummary.total.amount",
+      "canon": "amounts.total",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "priceSummary",
+      "canon": "sourceExtension.wix.priceSummary",
+      "transform": "object_map",
+      "args": {
+        "fields": {
+          "totalPrice": {
+            "path": "totalPrice.amount",
+            "as": "number"
+          },
+          "totalWithGiftCard": {
+            "path": "totalWithGiftCard.amount",
+            "as": "number"
+          },
+          "totalWithoutGiftCard": {
+            "path": "totalWithoutGiftCard.amount",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "balanceSummary.paid.amount",
+      "canon": "amounts.paid",
+      "transform": "money",
+      "confidence": "verified-live",
+      "consumes": [
+        "balanceSummary"
+      ]
+    },
+    {
+      "path": "balanceSummary.refunded.amount",
+      "canon": "amounts.refunded",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "balanceSummary.balance.amount",
+      "canon": "amounts.balance",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "balanceSummary",
+      "canon": "sourceExtension.wix.balanceSummary",
+      "transform": "object_map",
+      "args": {
+        "fields": {
+          "authorized": {
+            "path": "authorized.amount",
+            "as": "number"
+          },
+          "pending": {
+            "path": "pending.amount",
+            "as": "number"
+          },
+          "pendingRefund": {
+            "path": "pendingRefund.amount",
+            "as": "number"
+          },
+          "chargeback": {
+            "path": "chargeback.amount",
+            "as": "number"
+          },
+          "platformFees": {
+            "path": "platformFees.amount",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "taxInfo.taxBreakdown",
+      "canon": "taxLines",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "title": "taxName",
+          "rate": {
+            "path": "rate",
+            "as": "number"
+          },
+          "amount": {
+            "path": "taxAmount.amount",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "taxInfo"
+      ]
+    },
+    {
+      "path": "taxSummary",
+      "canon": "sourceExtension.wix.taxSummary",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shippingInfo",
+      "canon": "shippingLines[]",
+      "transform": "object_map",
+      "args": {
+        "fields": {
+          "method": "title",
+          "code": "code",
+          "amount": {
+            "path": "cost.price.amount",
+            "as": "number"
+          },
+          "tax": {
+            "path": "cost.taxDetails.totalTax.amount",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shippingInfo.logistics.shippingDestination",
+      "canon": "shipping_",
+      "transform": "address_from",
+      "args": {
+        "fields": {
+          "address1": "address.addressLine1",
+          "address2": "address.addressLine2",
+          "city": "address.city",
+          "provinceCode": "address.subdivision",
+          "country": "address.country",
+          "zip": "address.postalCode",
+          "phone": "contactDetails.phone",
+          "company": "contactDetails.company"
+        },
+        "nameFrom": [
+          "contactDetails.firstName",
+          "contactDetails.lastName"
+        ]
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shippingInfo.logistics",
+      "canon": "sourceExtension.wix.logistics",
+      "transform": "object_map",
+      "args": {
+        "fields": {
+          "deliveryTime": "deliveryTime",
+          "from": "deliveryTimeSlot.from",
+          "to": "deliveryTimeSlot.to"
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shippingInfo.region",
+      "canon": "sourceExtension.wix.shippingRegion",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "billingInfo",
+      "canon": "billing",
+      "transform": "address_from",
+      "args": {
+        "fields": {
+          "address1": "address.addressLine1",
+          "address2": "address.addressLine2",
+          "city": "address.city",
+          "provinceCode": "address.subdivision",
+          "country": "address.country",
+          "zip": "address.postalCode",
+          "phone": "contactDetails.phone",
+          "company": "contactDetails.company"
+        },
+        "nameFrom": [
+          "contactDetails.firstName",
+          "contactDetails.lastName"
+        ]
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "buyerInfo.email",
+      "canon": "customerRef.email",
+      "transform": "text",
+      "confidence": "verified-live",
+      "consumes": [
+        "buyerInfo"
+      ]
+    },
+    {
+      "path": "buyerInfo.memberId",
+      "canon": "customerRef.sourceId",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "buyerInfo.memberId",
+      "canon": "customerRef.isGuest",
+      "transform": "is_unset",
+      "args": {
+        "requireParent": "buyerInfo"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "buyerInfo.contactId",
+      "canon": "sourceExtension.wix.contactId",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "buyerLanguage",
+      "canon": "locale",
+      "transform": "text_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "siteLanguage",
+      "canon": "sourceExtension.wix.siteLanguage",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "channelInfo.type",
+      "canon": "channel",
+      "transform": "text_present",
+      "confidence": "verified-live",
+      "consumes": [
+        "channelInfo"
+      ]
+    },
+    {
+      "path": "attributionSource",
+      "canon": "sourceExtension.wix.attributionSource",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "createdBy",
+      "canon": "sourceExtension.wix.createdBy",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "buyerNote",
+      "canon": "note",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "createdDate",
+      "canon": "timestamps.created",
+      "transform": "date_iso",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "updatedDate",
+      "canon": "timestamps.updated",
+      "transform": "date_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "purchasedDate",
+      "canon": "sourceExtension.wix.purchasedDate",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "appliedDiscounts",
+      "canon": "discounts",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "code": "coupon.code",
+          "kind": {
+            "path": "discountType",
+            "as": "map",
+            "map": {
+              "GLOBAL": "automatic",
+              "SPECIFIC_ITEMS": "automatic",
+              "SHIPPING": "automatic"
+            },
+            "default": "unknown"
+          },
+          "amount": {
+            "path": "coupon.amount.amount",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "additionalFees",
+      "canon": "fees",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "name": "name",
+          "amount": {
+            "path": "price.amount",
+            "as": "number"
+          },
+          "tax": {
+            "path": "taxDetails.totalTax.amount",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "_transactions.payments",
+      "canon": "payments",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "kind": {
+            "value": "sale"
+          },
+          "status": {
+            "path": "status",
+            "as": "map",
+            "map": {
+              "APPROVED": "success",
+              "PENDING": "pending",
+              "DECLINED": "failed",
+              "CANCELED": "cancelled",
+              "REFUNDED": "success",
+              "AUTHORIZED": "success",
+              "PENDING_MERCHANT": "pending"
+            },
+            "default": "unknown"
+          },
+          "amount": {
+            "path": "amount.amount",
+            "as": "number"
+          },
+          "method": "regularPaymentDetails.paymentMethod",
+          "gateway": "regularPaymentDetails.paymentProviderName",
+          "providerRef": "regularPaymentDetails.gatewayTransactionId",
+          "at": {
+            "path": "createdDate",
+            "as": "date"
+          },
+          "instrument.brand": "regularPaymentDetails.creditCardDetails.cardType"
+        }
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "_transactions"
+      ],
+      "notes": "Observed on a back-office (manual) payment: id, createdDate, amount, status, refundDisabled — no regularPaymentDetails; the online-payment sub-paths come from the documented Payment shape (creditCardDetails is a card container the 7.7 scanner reduces to the brand)."
+    },
+    {
+      "path": "_transactions.refunds",
+      "canon": "refunds",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "sourceId": "id",
+          "at": {
+            "path": "createdDate",
+            "as": "date"
+          },
+          "amount": {
+            "path": "details.amount.amount",
+            "as": "number"
+          },
+          "reason": "details.reason"
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "Order Transactions refunds[] — [] on the live order, declared from the documented Refund shape, unverified on real data."
+    },
+    {
+      "path": "_transactions.orderId",
+      "canon": "sourceExtension.wix.transactionsOrderId",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "demo",
+      "canon": "test",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "archived",
+      "canon": "sourceExtension.wix.archived",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "seenByAHuman",
+      "canon": "sourceExtension.wix.seenByAHuman",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "isInternalOrderCreate",
+      "canon": "sourceExtension.wix.isInternalOrderCreate",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "customFields",
+      "canon": "sourceExtension.wix.customFields",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "forms",
+      "canon": "sourceExtension.wix.forms",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "settings",
+      "canon": "sourceExtension.wix.settings",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "platformFeeSummary",
+      "canon": "sourceExtension.wix.platformFeeSummary",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "payAfterFreeTrial",
+      "canon": "sourceExtension.wix.payAfterFreeTrial",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "weightUnit",
+      "canon": "sourceExtension.wix.weightUnit",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "imported",
+      "canon": "sourceExtension.wix.imported",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "productName.original",
+      "canon": "items[].name",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item",
+      "consumes": [
+        "productName"
+      ]
+    },
+    {
+      "path": "physicalProperties.sku",
+      "canon": "items[].sku",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item",
+      "consumes": [
+        "physicalProperties"
+      ]
+    },
+    {
+      "path": "quantity",
+      "canon": "items[].quantity",
+      "transform": "int",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "price.amount",
+      "canon": "items[].unitPrice",
+      "transform": "money",
+      "confidence": "verified-live",
+      "scope": "item",
+      "consumes": [
+        "price"
+      ]
+    },
+    {
+      "path": "priceBeforeDiscounts.amount",
+      "canon": "items[].unitPriceBeforeDiscount",
+      "transform": "money_present",
+      "confidence": "verified-live",
+      "scope": "item",
+      "consumes": [
+        "priceBeforeDiscounts"
+      ]
+    },
+    {
+      "path": "totalPriceAfterTax.amount",
+      "canon": "items[].total",
+      "transform": "money",
+      "confidence": "verified-live",
+      "scope": "item",
+      "consumes": [
+        "totalPriceAfterTax"
+      ]
+    },
+    {
+      "path": "taxDetails.totalTax.amount",
+      "canon": "items[].totalTax",
+      "transform": "money",
+      "confidence": "verified-live",
+      "scope": "item",
+      "consumes": [
+        "taxDetails"
+      ]
+    },
+    {
+      "path": "totalDiscount.amount",
+      "canon": "items[].discount",
+      "transform": "money_nonzero",
+      "confidence": "verified-live",
+      "scope": "item",
+      "consumes": [
+        "totalDiscount"
+      ]
+    },
+    {
+      "path": "taxInfo.taxIncludedInPrice",
+      "canon": "items[].taxIncluded",
+      "transform": "bool",
+      "confidence": "verified-live",
+      "scope": "item",
+      "consumes": [
+        "taxInfo"
+      ]
+    },
+    {
+      "path": "taxInfo.taxBreakdown",
+      "canon": "items[].taxLines",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "rate": {
+            "path": "rate",
+            "as": "number"
+          },
+          "amount": {
+            "path": "taxAmount.amount",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "itemType.preset",
+      "canon": "items[].kind",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "PHYSICAL": "product",
+          "DIGITAL": "product",
+          "GIFT_CARD": "gift_card",
+          "SERVICE": "service",
+          "CUSTOM": "custom"
+        },
+        "default": "custom"
+      },
+      "confidence": "verified-live",
+      "scope": "item",
+      "consumes": [
+        "itemType"
+      ]
+    },
+    {
+      "path": "catalogReference.catalogItemId",
+      "canon": "items[].productRef",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item",
+      "consumes": [
+        "catalogReference"
+      ]
+    },
+    {
+      "path": "catalogReference.options.variantId",
+      "canon": "items[].variantRef",
+      "transform": "id_or_none",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "catalogReference.appId",
+      "canon": "sourceExtension.wix.catalogAppId",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "descriptionLines",
+      "canon": "items[].options",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "name": "name.original",
+          "value": "plainText.original"
+        }
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "physicalProperties.shippable",
+      "canon": "items[].requiresShipping",
+      "transform": "bool",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "physicalProperties.weight",
+      "canon": "items[].weightGrams",
+      "transform": "weight_to_grams",
+      "args": {
+        "unit": "kg"
+      },
+      "confidence": "verified-live",
+      "scope": "item",
+      "notes": "unit = the order weightUnit (KG on this site)"
+    },
+    {
+      "path": "image.url",
+      "canon": "items[].imageSrc",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item",
+      "consumes": [
+        "image"
+      ]
+    },
+    {
+      "path": "id",
+      "canon": "sourceExtension.wix.line_id",
+      "transform": "string_id",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "restockLocations",
+      "canon": "sourceExtension.wix.restockLocations",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "paymentOption",
+      "canon": "sourceExtension.wix.paymentOption",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "deliveryProfileId",
+      "canon": "sourceExtension.wix.deliveryProfileId",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "shippingGroupId",
+      "canon": "sourceExtension.wix.shippingGroupId",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "locations",
+      "canon": "sourceExtension.wix.locations",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "lineItemPrice",
+      "canon": "sourceExtension.wix.lineItemPrice",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "customLineItem",
+      "canon": "sourceExtension.wix.customLineItem",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "rootCatalogItemId",
+      "canon": "sourceExtension.wix.rootCatalogItemId",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "taxableAddress",
+      "canon": "sourceExtension.wix.taxableAddress",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "inventoryAppId",
+      "canon": "sourceExtension.wix.inventoryAppId",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "priceUndetermined",
+      "canon": "sourceExtension.wix.priceUndetermined",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "fixedQuantity",
+      "canon": "sourceExtension.wix.fixedQuantity",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "modifierGroups",
+      "canon": "sourceExtension.wix.modifierGroups",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "priceBeforeDiscountsAndTax",
+      "canon": "sourceExtension.wix.priceBeforeDiscountsAndTax",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "totalPriceBeforeTax",
+      "canon": "sourceExtension.wix.totalPriceBeforeTax",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "subscriptionInfo",
+      "canon": "sourceExtension.wix.subscriptionInfo",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "digitalFile",
+      "canon": "sourceExtension.wix.digitalFile",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "itemAvailability",
+      "canon": "sourceExtension.wix.itemAvailability",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "depositAmount",
+      "canon": "sourceExtension.wix.depositAmount",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "lineItemPriceWithoutDiscounts",
+      "canon": "sourceExtension.wix.lineItemPriceWithoutDiscounts",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "sourceFormat": "bigcommerce_orders",
+  "targetFormat": "woo_orders",
+  "counts": {
+    "inputUnits": 2,
+    "outputUnits": 2,
+    "failedUnits": 0,
+    "outputRows": 2
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_bc_order_fees"
+    },
+    {
+      "code": "loss_refund_risk"
+    },
+    {
+      "code": "loss_woo_order_numbering",
+      "params": {
+        "orders": 2,
+        "min": "9001",
+        "max": "9002"
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false,
+  "numberingReport": {
+    "orders": 2,
+    "sourceSequence": {
+      "min": "9001",
+      "max": "9002",
+      "numeric": true,
+      "gaps": [],
+      "duplicates": []
+    },
+    "invoices": {
+      "withNumber": 0,
+      "withoutNumber": 2,
+      "gaps": []
+    },
+    "targetPolicy": "native-sequence",
+    "warnings": []
+  }
+}

@@ -1,0 +1,28 @@
+node_modules/
+dist/
+out/
+core/dist/
+*.log
+.DS_Store
+Thumbs.db
+# user data never lives in the repo — OS app-data at runtime
+data/
+scratch/tools/out/
+# REAL customer export: 4204 identified people (names, e-mails, addresses,
+# phones). Kept locally only so scripts/gen-synthetic-customers.mjs can copy
+# the column list and build its collision denylist. It must NEVER be committed
+# and never published — only the synthetic twin in
+# test/fixtures/shopify-customers-synthetic/ ever leaves this machine.
+test/fixtures/shopify-customers-real/
+# Secrets: cover every .env variant and *.secret HERE, not only at the repo
+# root — converter/ must stay protected even if it is ever split out again.
+.env
+.env.*
+.env.local
+.env*.local
+*.secret
+# local tooling stays ignored; the converter's own skill is versioned
+.claude/*
+!.claude/skills/
+.claude/skills/*
+!.claude/skills/eloshon-csv-mapping-expert/

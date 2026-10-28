@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "sourceFormat": "supplier.fournisseur-x.v1",
+  "targetFormat": "woo_products_modern",
+  "counts": {
+    "inputUnits": 3,
+    "outputUnits": 3,
+    "failedUnits": 0,
+    "outputRows": 3
+  },
+  "errors": [],
+  "losses": [],
+  "warnings": [
+    {
+      "code": "id_removed_woo"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

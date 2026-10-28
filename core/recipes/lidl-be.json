@@ -1,0 +1,54 @@
+{
+  "domain": "lidl.be",
+  "type": "internal_api",
+  "base_url": "https://www.lidl.be",
+  "endpoint_tpl": "https://www.lidl.be/q/api/search?assortment=BE&locale={lang}_BE&version=v2.0.0&campaign={campaign}&automatedCampaign={campaign}&fetchsize={fetchsize}&offset={offset}",
+  "endpoint_variants": [
+    { "require": "campaign", "endpoint_tpl": "https://www.lidl.be/q/api/search?assortment=BE&locale={lang}_BE&version=v2.0.0&campaign={campaign}&automatedCampaign={campaign}&fetchsize={fetchsize}&offset={offset}" },
+    { "require": "categoryId", "endpoint_tpl": "https://www.lidl.be/q/api/search?assortment=BE&locale={lang}_BE&version=2.1.0&category.id={categoryId}&fetchsize={fetchsize}&offset={offset}" }
+  ],
+  "method": "GET",
+  "static_headers": {
+    "Accept": "*/*",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+  },
+  "vars": {
+    "campaign": {
+      "source": "url",
+      "pattern": "/a(\\d+)(?:[/?#]|$)",
+      "optional": true
+    },
+    "categoryId": {
+      "source": "url",
+      "pattern": "/s(\\d+)(?:[/?#]|$)",
+      "optional": true
+    },
+    "lang": {
+      "source": "url",
+      "pattern": "/([a-z]{2})-BE/"
+    }
+  },
+  "pagination": {
+    "type": "offset",
+    "param": "offset",
+    "size_param": "fetchsize",
+    "size": 48,
+    "start": 0,
+    "total_json_path": "numFound"
+  },
+  "json_path": "items",
+  "field_map": {
+    "name": "gridbox.data.fullTitle",
+    "price": "gridbox.data.price.price",
+    "listPrice": "gridbox.data.price.oldPrice",
+    "currency": "gridbox.data.price.currencyCode",
+    "sku": "gridbox.data.erpNumber",
+    "image": "gridbox.data.image",
+    "url": "gridbox.data.canonicalPath",
+    "brand": "gridbox.data.brand.name",
+    "description": "gridbox.data.keyfacts.supplementalDescription",
+    "category": "gridbox.data.category",
+    "weightText": "gridbox.data.price.basePrice.text"
+  },
+  "notes": "Lidl BE campaign/search API — no cookies, no dynamic headers, no JS. Accept MUST stay */* (application/json → 406). Two URL shapes on the SAME /q/api/search endpoint, selected by endpoint_variants: (1) campaign — the a<ID> suffix of /c/.../a<ID> promo URLs → campaign=<id>&automatedCampaign=<id>; (2) section — the s<ID> suffix of /c/.../s<ID> category URLs → category.id=<id> (version 2.1.0). Both vars are optional and mutually exclusive per URL; campaign wins if both somehow match. A section id that is a NAV/service hub (Lidl s1000xxxx: assortiment, local-et-frais, dépliants, abonner) returns type:empty/0 items — correct, it has no catalogue; real product categories (s1006xxxx/s1007xxxx: aliments-boissons=122, cuisine-menage=957, bricolage-jardinage=1472) return the full catalogue. locale is rebuilt as {lang}_BE from the URL's nl-BE|fr-BE segment (API wants an underscore). fetchsize is server-capped at ~60/request, so 48 keeps offset += size == items served. A &q=<term> search may answer 301 with a JSON redirectURL — campaign/section queries answer 200 directly. canonicalPath/canonicalUrl are BOTH site-relative (no absolute product URL anywhere in the payload); cutoutimageV2 is always empty — never map it. ians[] are Lidl IANs (6-9 digits), NOT EANs — never map to gtin. weightText reads price.basePrice.text (500 g - 2,58 EUR/kg): the normaliser keeps its quantity part (500 g) — present on food items only; non-food items carry their weight, when they have one, in the description (labelled-weight gap filler). Validated live: campaign 2026-09-25 (114 products); section 2026-09-26 (category.id, aliments-boissons 122 products, paginated)."
+}

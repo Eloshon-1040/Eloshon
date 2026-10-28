@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 1,
+  "id": "shopware.customers.admin-api.v1",
+  "displayName": "Shopware Customers (Admin API, 6.7)",
+  "provenance": "native-platform",
+  "medium": "json-api",
+  "platformHint": "shopware",
+  "entity": "customers",
+  "version": "sw-6.7.x",
+  "signatures": [
+    {
+      "kind": "json-shape",
+      "requiredPaths": [
+        "id",
+        "customerNumber",
+        "email",
+        "guest",
+        "defaultBillingAddressId",
+        "groupId"
+      ],
+      "hintPaths": [
+        "doubleOptInRegistration",
+        "orderCount",
+        "accountType",
+        "salutation"
+      ]
+    }
+  ],
+  "structure": {
+    "unit": "customer",
+    "companions": {
+      "newsletterRecipients": {
+        "route": "POST /api/search/newsletter-recipient",
+        "keyedByParent": false,
+        "note": "the newsletter opt-in lives OUTSIDE the customer (keyed by e-mail): status direct | optIn | optOut | notSet, confirmedAt"
+      }
+    }
+  },
+  "invariantsExpected": [
+    "Marketing consent is NOT on the customer: newsletter_recipient (by e-mail) carries status + confirmedAt; doubleOptIn* on the customer is the ACCOUNT registration opt-in",
+    "customerNumber comes from the `customer` number range; guest = true for guest checkouts; the password hash is stripped at capture (7.7)",
+    "defaultBillingAddress / defaultShippingAddress / addresses[] — country.iso only when the country association is loaded"
+  ],
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "live:shopware-test:2026-09-21",
+      "origin": "reference",
+      "diff": [
+        "Phase 7.6: full field map from the live Admin API payload; 7.3 consent from the newsletter-recipient companion (evidence only)"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "path": "email",
+      "canon": "email",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "firstName",
+      "canon": "firstName",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "lastName",
+      "canon": "lastName",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "defaultBillingAddress.phoneNumber",
+      "canon": "phone",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "defaultBillingAddress",
+      "canon": "address",
+      "transform": "address_from",
+      "args": {
+        "withName": false,
+        "fields": {
+          "company": "company",
+          "address1": "street",
+          "address2": "additionalAddressLine1",
+          "city": "city",
+          "country": "country.iso",
+          "zip": "zipcode",
+          "phone": "phoneNumber",
+          "firstName": "firstName",
+          "lastName": "lastName",
+          "sourceId": "id",
+          "vatNumber": "vatId"
+        }
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "defaultBillingAddressId"
+      ]
+    },
+    {
+      "path": "defaultShippingAddress",
+      "canon": "shipping",
+      "transform": "address_from",
+      "args": {
+        "withName": false,
+        "fields": {
+          "company": "company",
+          "address1": "street",
+          "address2": "additionalAddressLine1",
+          "city": "city",
+          "country": "country.iso",
+          "zip": "zipcode",
+          "phone": "phoneNumber",
+          "firstName": "firstName",
+          "lastName": "lastName",
+          "sourceId": "id",
+          "vatNumber": "vatId"
+        }
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "defaultShippingAddressId"
+      ]
+    },
+    {
+      "path": "addresses",
+      "canon": "addresses",
+      "transform": "address_from",
+      "args": {
+        "withName": false,
+        "fields": {
+          "company": "company",
+          "address1": "street",
+          "address2": "additionalAddressLine1",
+          "city": "city",
+          "country": "country.iso",
+          "zip": "zipcode",
+          "phone": "phoneNumber",
+          "firstName": "firstName",
+          "lastName": "lastName",
+          "sourceId": "id",
+          "vatNumber": "vatId"
+        },
+        "each": true,
+        "defaults": {
+          "isDefaultBilling": "defaultBillingAddressId",
+          "isDefaultShipping": "defaultShippingAddressId"
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "email",
+      "canon": "marketingConsent.email",
+      "transform": "marketing_consent",
+      "args": {
+        "channel": "email",
+        "lookup": {
+          "in": "newsletterRecipients",
+          "key": "email",
+          "statement": "status",
+          "at": "confirmedAt",
+          "level": "status"
+        },
+        "optedIn": [
+          "direct",
+          "optIn"
+        ],
+        "optedOut": [
+          "optOut"
+        ],
+        "pending": [
+          "notSet"
+        ],
+        "levelMap": {
+          "direct": "single_opt_in",
+          "optIn": "confirmed_opt_in"
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "7.3: evidence only (requiresReconfirmation). opted_in needs the recipient row AND its confirmedAt; a direct (single opt-in) row without confirmedAt is pending."
+    },
+    {
+      "path": "id",
+      "canon": "identity.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "customerNumber",
+      "canon": "identity.customerNumber",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "createdAt",
+      "canon": "identity.timestamps",
+      "transform": "timestamps",
+      "confidence": "verified-live",
+      "inputs": [
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    {
+      "path": "lastLogin",
+      "canon": "identity.timestamps.lastLogin",
+      "transform": "date_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "firstLogin",
+      "canon": "sourceExtension.shopware.firstLogin",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "active",
+      "canon": "active",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "guest",
+      "canon": "isGuest",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "accountType",
+      "canon": "sourceExtension.shopware.accountType",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "company",
+      "canon": "company.name",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "vatIds",
+      "canon": "company.vatIds",
+      "transform": "list",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "birthday",
+      "canon": "birthday",
+      "transform": "text_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "salutation.salutationKey",
+      "canon": "gender",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "mr": "male",
+          "mrs": "female"
+        }
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "salutation",
+        "salutationId"
+      ]
+    },
+    {
+      "path": "title",
+      "canon": "sourceExtension.shopware.title",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "group.name",
+      "canon": "group.name",
+      "transform": "text",
+      "confidence": "verified-live",
+      "consumes": [
+        "group"
+      ]
+    },
+    {
+      "path": "groupId",
+      "canon": "group.ref",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "orderCount",
+      "canon": "stats.orderCount",
+      "transform": "int",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "orderTotalAmount",
+      "canon": "stats.totalSpent",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "lastOrderDate",
+      "canon": "stats.lastOrderAt",
+      "transform": "date_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "reviewCount",
+      "canon": "sourceExtension.shopware.reviewCount",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "tags",
+      "canon": "tags",
+      "transform": "names_of",
+      "args": {
+        "key": "name"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "tagIds",
+      "canon": "sourceExtension.shopware.tagIds",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "customFields",
+      "canon": "sourceExtension.shopware.customFields",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "affiliateCode",
+      "canon": "sourceExtension.shopware.affiliateCode",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "campaignCode",
+      "canon": "sourceExtension.shopware.campaignCode",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "doubleOptInRegistration",
+      "canon": "sourceExtension.shopware.doubleOptInRegistration",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "doubleOptInEmailSentDate",
+      "canon": "sourceExtension.shopware.doubleOptInEmailSentDate",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "doubleOptInConfirmDate",
+      "canon": "sourceExtension.shopware.doubleOptInConfirmDate",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "languageId",
+      "canon": "sourceExtension.shopware.languageId",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "salesChannelId",
+      "canon": "sourceExtension.shopware.salesChannelId",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "lastPaymentMethodId",
+      "canon": "sourceExtension.shopware.lastPaymentMethodId",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "boundSalesChannelId",
+      "canon": "sourceExtension.shopware.boundSalesChannelId",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "requestedGroupId",
+      "canon": "sourceExtension.shopware.requestedGroupId",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "remoteAddress",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "IP address — personal data, not migrated"
+    },
+    {
+      "path": "extensions",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "_uniqueIdentifier",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "versionId",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "translated",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "apiAlias",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "autoIncrement",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "salesChannel",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "language",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "lastPaymentMethod",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "activeBillingAddress",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "activeShippingAddress",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "orderCustomers",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "promotions",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "recoveryCustomer",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "productReviews",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "requestedGroup",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "boundSalesChannel",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "wishlists",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "createdById",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "createdBy",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "updatedById",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "updatedBy",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "password",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "hash",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "legacyPassword",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "legacyEncoder",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    }
+  ]
+}

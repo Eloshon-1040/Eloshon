@@ -1,0 +1,5477 @@
+[
+  {
+    "handle": "ac-infinity-ciseaux-secateur-droit",
+    "title": "AC Infinity - ciseaux/sécateur droit en acier inoxydable 16,8cm",
+    "bodyHtml": "<h2><span style=\"text-decoration: underline;\">Caractéristiques du ciseaux droit</span></h2>\n<p>Le ciseaux droit AC Infinity est conçu pour défolier petites plantes et fleurs afin d'améliorer leur processus de croissance. Idéal pour tailler des fleurs, des herbes, des bonsaïs, des légumes ou d'autres plantes. Ses lames à micro-pointes vous permettent de faire des coupes de précision même dans les plus petits espaces et resteront affûtées. Utilisez-le dans n'importe quel environnement de culture comme les jardins extérieurs, les constructions hydroponiques, les tentes de culture et les serres.</p>\n<ul>\n<li>Longueur: 16,8cm</li>\n<li>Matière: acier inoxydable</li>\n<li>Angle d'ouverture max: 10°</li>\n<li>Finition: Revêtement antiadhésif en téflon</li>\n<li>Poignée: Gel de silicone</li>\n</ul>",
+    "vendor": "AC Infinity",
+    "productType": "sécateur",
+    "tags": [
+      "ac infinity",
+      "ciseaux",
+      "défoliation",
+      "récolte",
+      "sécateur"
+    ],
+    "status": "active",
+    "categories": [
+      "Ventes Flash"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "AC-PSA3",
+        "price": 15.5,
+        "compareAtPrice": 19,
+        "cost": null,
+        "barcode": "819137021495",
+        "grams": 150,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160668356941",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53133007651149",
+            "legacyResourceId": "53133007651149",
+            "title": "Default Title",
+            "position": 1,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:50:50.000Z",
+              "modified": "2026-01-06T20:50:50.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:50:50Z",
+              "2026-01-06T20:50:50Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "AC-PSA3",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "819137021495",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "15.50",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": "19.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-en-acier-ac-infinity-defoliation-recolte.jpg?v=1767732654",
+        "position": 1,
+        "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+        "id": "gid://shopify/MediaImage/59361453834573",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-de-jardinage-en-acier-ac-infinity-defoliation-recolte_2.jpg?v=1767732653",
+        "position": 2,
+        "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+        "id": "gid://shopify/MediaImage/59361453867341",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-de-jardinage-en-acier-ac-infinity-defoliation-recolte.jpg?v=1767732653",
+        "position": 3,
+        "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+        "id": "gid://shopify/MediaImage/59361453900109",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-de-jardinage-en-acier-ac-infinity-defoliation-recolte_3.jpg?v=1767732653",
+        "position": 4,
+        "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+        "id": "gid://shopify/MediaImage/59361453932877",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-de-jardinage-en-acier-ac-infinity-defoliation-recolte_4.jpg?v=1767732653",
+        "position": 5,
+        "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+        "id": "gid://shopify/MediaImage/59361453965645",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-de-jardinage-en-acier-ac-infinity-defoliation-recolte_5.jpg?v=1767732654",
+        "position": 6,
+        "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+        "id": "gid://shopify/MediaImage/59361453998413",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "metafields": [
+      {
+        "key": "google_product_category",
+        "value": "Home & Garden > Lawn & Garden > Gardening > Gardening Tools > Pruning Shears",
+        "namespace": "mm-google-shopping",
+        "type": "string"
+      },
+      {
+        "key": "condition",
+        "value": "new",
+        "namespace": "mm-google-shopping",
+        "type": "string"
+      },
+      {
+        "key": "custom_product",
+        "value": "true",
+        "namespace": "mm-google-shopping",
+        "type": "boolean"
+      }
+    ],
+    "seoTitle": "Ciseaux/sécateur droit en acier inoxydable AC Infinity",
+    "seoDescription": "Découvrez ce ciseaux pour défoliation de la marque AC Infinity,. Avec sa lame droite en acier inoxydable, il permet de défolier vos plantes sans difficulté.",
+    "identity": {
+      "slug": "ac-infinity-ciseaux-secateur-droit",
+      "sourceId": "gid://shopify/Product/10480230990157",
+      "timestamps": {
+        "created": "2026-01-06T20:50:50.000Z",
+        "modified": "2026-01-07T08:51:04.000Z"
+      }
+    },
+    "kind": "simple",
+    "sourceExtension": {
+      "shopify": {
+        "legacyResourceId": "10480230990157",
+        "publishedAt": "2026-01-06T20:50:50.000Z",
+        "options": [
+          {
+            "id": "gid://shopify/ProductOption/13161846636877",
+            "name": "Title",
+            "position": 1,
+            "values": [
+              "Default Title"
+            ],
+            "optionValues": [
+              {
+                "id": "gid://shopify/ProductOptionValue/6957387022669",
+                "name": "Default Title",
+                "hasVariants": true
+              }
+            ]
+          }
+        ],
+        "media": [
+          {
+            "id": "gid://shopify/MediaImage/59361453834573",
+            "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+            "mediaContentType": "IMAGE",
+            "status": "READY",
+            "image": {
+              "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-en-acier-ac-infinity-defoliation-recolte.jpg?v=1767732654",
+              "width": 1200,
+              "height": 1200
+            }
+          },
+          {
+            "id": "gid://shopify/MediaImage/59361453867341",
+            "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+            "mediaContentType": "IMAGE",
+            "status": "READY",
+            "image": {
+              "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-de-jardinage-en-acier-ac-infinity-defoliation-recolte_2.jpg?v=1767732653",
+              "width": 1200,
+              "height": 1200
+            }
+          },
+          {
+            "id": "gid://shopify/MediaImage/59361453900109",
+            "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+            "mediaContentType": "IMAGE",
+            "status": "READY",
+            "image": {
+              "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-de-jardinage-en-acier-ac-infinity-defoliation-recolte.jpg?v=1767732653",
+              "width": 1200,
+              "height": 1200
+            }
+          },
+          {
+            "id": "gid://shopify/MediaImage/59361453932877",
+            "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+            "mediaContentType": "IMAGE",
+            "status": "READY",
+            "image": {
+              "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-de-jardinage-en-acier-ac-infinity-defoliation-recolte_3.jpg?v=1767732653",
+              "width": 1200,
+              "height": 1200
+            }
+          },
+          {
+            "id": "gid://shopify/MediaImage/59361453965645",
+            "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+            "mediaContentType": "IMAGE",
+            "status": "READY",
+            "image": {
+              "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-de-jardinage-en-acier-ac-infinity-defoliation-recolte_4.jpg?v=1767732653",
+              "width": 1200,
+              "height": 1200
+            }
+          },
+          {
+            "id": "gid://shopify/MediaImage/59361453998413",
+            "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+            "mediaContentType": "IMAGE",
+            "status": "READY",
+            "image": {
+              "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-de-jardinage-en-acier-ac-infinity-defoliation-recolte_5.jpg?v=1767732654",
+              "width": 1200,
+              "height": 1200
+            }
+          }
+        ],
+        "collections": [
+          {
+            "id": "gid://shopify/Collection/653181321549",
+            "handle": "ventes-flash",
+            "title": "Ventes Flash",
+            "ruleSet": {
+              "appliedDisjunctively": false,
+              "rules": [
+                {
+                  "column": "IS_PRICE_REDUCED",
+                  "relation": "IS_SET",
+                  "condition": ""
+                },
+                {
+                  "column": "VARIANT_PRICE",
+                  "relation": "GREATER_THAN",
+                  "condition": "0"
+                }
+              ]
+            }
+          }
+        ],
+        "category": {
+          "id": "gid://shopify/TaxonomyCategory/hg-12-1-7-9",
+          "name": "Sécateurs",
+          "fullName": "Maison et jardin > Pelouses et jardins > Jardinage > Outils de jardinage > Sécateurs",
+          "isLeaf": true,
+          "isRoot": false
+        },
+        "bundleComponents": [],
+        "hasVariantsThatRequiresComponents": false,
+        "publications": [
+          {
+            "isPublished": true,
+            "publication": {
+              "id": "gid://shopify/Publication/312549212493",
+              "name": "Boutique en ligne",
+              "catalog": {
+                "id": "gid://shopify/AppCatalog/154778960205",
+                "title": "Channel Catalog 312549212493 for Online Store"
+              }
+            },
+            "publishDate": "2026-01-06T20:50:50Z"
+          }
+        ],
+        "templateSuffix": null,
+        "onlineStoreUrl": null,
+        "onlineStorePreviewUrl": "https://example-store.myshopify.com/products/ac-infinity-ciseaux-secateur-droit",
+        "isGiftCard": false,
+        "requiresSellingPlan": false,
+        "combinedListingRole": null
+      }
+    },
+    "provenance": {
+      "handle": {
+        "platform": "shopify",
+        "sourceField": "handle",
+        "sourceValue": "ac-infinity-ciseaux-secateur-droit",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "shopify",
+        "sourceField": "handle",
+        "sourceValue": "ac-infinity-ciseaux-secateur-droit",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "shopify",
+        "sourceField": "id",
+        "sourceValue": "gid://shopify/Product/10480230990157",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.timestamps": {
+        "platform": "shopify",
+        "sourceField": "createdAt + updatedAt",
+        "sourceValue": "2026-01-06T20:50:50Z",
+        "transform": "timestamps",
+        "method": "exact"
+      },
+      "title": {
+        "platform": "shopify",
+        "sourceField": "title",
+        "sourceValue": "AC Infinity - ciseaux/sécateur droit en acier inoxydable 16,8cm",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "shopify",
+        "sourceField": "descriptionHtml",
+        "sourceValue": "<h2><span style=\"text-decoration: underline;\">Caractéristiques du ciseaux droit</span></h2>\n<p>Le ciseaux droit AC Infinity est conçu pour défolier petites plantes et fleurs afin d'améliorer leur proc…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "vendor": {
+        "platform": "shopify",
+        "sourceField": "vendor",
+        "sourceValue": "AC Infinity",
+        "transform": "text",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "shopify",
+        "sourceField": "productType",
+        "sourceValue": "sécateur",
+        "transform": "text",
+        "method": "exact"
+      },
+      "tags": {
+        "platform": "shopify",
+        "sourceField": "tags",
+        "transform": "list",
+        "method": "exact"
+      },
+      "status": {
+        "platform": "shopify",
+        "sourceField": "status",
+        "sourceValue": "ACTIVE",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "published": {
+        "platform": "shopify",
+        "sourceField": "publishedAt",
+        "sourceValue": "2026-01-06T20:50:50Z",
+        "transform": "is_set",
+        "method": "exact"
+      },
+      "kind": {
+        "platform": "shopify",
+        "sourceField": "hasOnlyDefaultVariant",
+        "sourceValue": true,
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "seoTitle": {
+        "platform": "shopify",
+        "sourceField": "seo.title",
+        "sourceValue": "Ciseaux/sécateur droit en acier inoxydable AC Infinity",
+        "transform": "text",
+        "method": "exact"
+      },
+      "seoDescription": {
+        "platform": "shopify",
+        "sourceField": "seo.description",
+        "sourceValue": "Découvrez ce ciseaux pour défoliation de la marque AC Infinity,. Avec sa lame droite en acier inoxydable, il permet de défolier vos plantes sans difficulté.",
+        "transform": "text",
+        "method": "exact"
+      },
+      "options": {
+        "platform": "shopify",
+        "sourceField": "options",
+        "transform": "options_from_attributes",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "shopify",
+        "sourceField": "media.nodes",
+        "transform": "images_from_objects",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "shopify",
+        "sourceField": "collections.nodes",
+        "transform": "names_of",
+        "method": "exact"
+      },
+      "metafields": {
+        "platform": "shopify",
+        "sourceField": "metafields.nodes",
+        "transform": "metafields_from_pairs",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "qnubu-sac-a-presse-de-11x11cm-10pcs",
+    "title": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs",
+    "bodyHtml": "<h2><span style=\"text-decoration: underline;\">Caractéristiques des Sacs à Presse Rosin Qnubu</span></h2>\n<p>Les <strong>sacs à presse Qnubu</strong> sont spécialement conçus pour l’extraction à chaud de matières végétales. Disponibles en <strong>2 formats</strong> pratiques – 5x11 cm et 11x11 cm – ils conviennent aussi bien aux petites qu’aux grandes quantités d’extraction.</p>\n<p>Chaque modèle est proposé en <strong>5 tailles de maille</strong> : <em>25μ, 37μ, 90μ, 120μ et 160μ</em>, offrant une filtration adaptée selon le type de matière et le niveau de pureté souhaité. Plus le micronage est fin, plus l’extraction est filtrée.</p>\n<h3>Atouts des Sacs Qnubu :</h3>\n<ul>\n<li>Compatibles avec toutes les presses à chaud rosin</li>\n<li>Fabrication résistante à haute température</li>\n<li>Filtration homogène pour une extraction propre</li>\n<li>Réduction des impuretés et meilleure qualité finale</li>\n</ul>",
+    "vendor": "Qnubu",
+    "productType": "sac à presse",
+    "tags": [
+      "extraction",
+      "presse",
+      "Presse Bolt Manuelle",
+      "PRESSE HYDRAULIQUE",
+      "qnubu",
+      "récolte",
+      "sac à presse"
+    ],
+    "status": "active",
+    "categories": [],
+    "published": true,
+    "options": [
+      {
+        "name": "Taille",
+        "values": [
+          "11x5cm",
+          "11x11cm"
+        ]
+      },
+      {
+        "name": "Taille des mailles",
+        "values": [
+          "15 microns",
+          "25 microns",
+          "37 microns",
+          "70 microns",
+          "90 microns",
+          "120 microns",
+          "160 microns"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "optionValues": [
+          "11x5cm",
+          "15 microns"
+        ],
+        "sku": "Qnubu-Sacs-à-Presse-1",
+        "price": 9,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 50,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361105510733"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160420925773",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132760613197",
+            "legacyResourceId": "53132760613197",
+            "title": "11x5cm / 15 microns",
+            "position": 1,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:35:18.000Z",
+              "modified": "2026-01-06T20:35:18.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:35:18Z",
+              "2026-01-06T20:35:18Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Qnubu-Sacs-à-Presse-1",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "9.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "11x5cm",
+          "25 microns"
+        ],
+        "sku": "Qnubu-Sacs-à-Presse-2",
+        "price": 9,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 50,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361105510733"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160420958541",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132760645965",
+            "legacyResourceId": "53132760645965",
+            "title": "11x5cm / 25 microns",
+            "position": 2,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:35:18.000Z",
+              "modified": "2026-01-06T20:35:18.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:35:18Z",
+              "2026-01-06T20:35:18Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Qnubu-Sacs-à-Presse-2",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "9.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "11x5cm",
+          "37 microns"
+        ],
+        "sku": "Qnubu-Sacs-à-Presse-3",
+        "price": 9,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 50,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361105510733"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160420991309",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132760678733",
+            "legacyResourceId": "53132760678733",
+            "title": "11x5cm / 37 microns",
+            "position": 3,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:35:18.000Z",
+              "modified": "2026-01-06T20:35:18.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:35:18Z",
+              "2026-01-06T20:35:18Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Qnubu-Sacs-à-Presse-3",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "9.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "11x5cm",
+          "70 microns"
+        ],
+        "sku": "Qnubu-Sacs-à-Presse-4",
+        "price": 9,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 50,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361105510733"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160421024077",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132760711501",
+            "legacyResourceId": "53132760711501",
+            "title": "11x5cm / 70 microns",
+            "position": 4,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:35:18.000Z",
+              "modified": "2026-01-06T20:35:18.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:35:18Z",
+              "2026-01-06T20:35:18Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Qnubu-Sacs-à-Presse-4",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "9.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "11x5cm",
+          "90 microns"
+        ],
+        "sku": "Qnubu-Sacs-à-Presse-5",
+        "price": 9,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 50,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361105510733"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160421056845",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132760744269",
+            "legacyResourceId": "53132760744269",
+            "title": "11x5cm / 90 microns",
+            "position": 5,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:35:18.000Z",
+              "modified": "2026-01-06T20:35:18.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:35:18Z",
+              "2026-01-06T20:35:18Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Qnubu-Sacs-à-Presse-5",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "9.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "11x5cm",
+          "120 microns"
+        ],
+        "sku": "Qnubu-Sacs-à-Presse-6",
+        "price": 9,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 50,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361105510733"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160421089613",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132760777037",
+            "legacyResourceId": "53132760777037",
+            "title": "11x5cm / 120 microns",
+            "position": 6,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:35:18.000Z",
+              "modified": "2026-01-06T20:35:18.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:35:18Z",
+              "2026-01-06T20:35:18Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Qnubu-Sacs-à-Presse-6",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "9.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "11x5cm",
+          "160 microns"
+        ],
+        "sku": "Qnubu-Sacs-à-Presse-7",
+        "price": 9,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 50,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361105510733"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160421122381",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132760809805",
+            "legacyResourceId": "53132760809805",
+            "title": "11x5cm / 160 microns",
+            "position": 7,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:35:18.000Z",
+              "modified": "2026-01-06T20:35:18.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:35:18Z",
+              "2026-01-06T20:35:18Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Qnubu-Sacs-à-Presse-7",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "9.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "11x11cm",
+          "15 microns"
+        ],
+        "sku": "Qnubu-Sacs-à-Presse-8",
+        "price": 13,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 50,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361105510733"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160421155149",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132760842573",
+            "legacyResourceId": "53132760842573",
+            "title": "11x11cm / 15 microns",
+            "position": 8,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:35:18.000Z",
+              "modified": "2026-01-06T20:35:18.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:35:18Z",
+              "2026-01-06T20:35:18Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Qnubu-Sacs-à-Presse-8",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "13.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "11x11cm",
+          "25 microns"
+        ],
+        "sku": "Qnubu-Sacs-à-Presse-9",
+        "price": 13,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 50,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361105510733"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160421187917",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132760875341",
+            "legacyResourceId": "53132760875341",
+            "title": "11x11cm / 25 microns",
+            "position": 9,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:35:18.000Z",
+              "modified": "2026-01-06T20:35:18.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:35:18Z",
+              "2026-01-06T20:35:18Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Qnubu-Sacs-à-Presse-9",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "13.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "11x11cm",
+          "37 microns"
+        ],
+        "sku": "Qnubu-Sacs-à-Presse-10",
+        "price": 13,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 50,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361105510733"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160421220685",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132760908109",
+            "legacyResourceId": "53132760908109",
+            "title": "11x11cm / 37 microns",
+            "position": 10,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:35:18.000Z",
+              "modified": "2026-01-06T20:35:18.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:35:18Z",
+              "2026-01-06T20:35:18Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Qnubu-Sacs-à-Presse-10",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "13.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "11x11cm",
+          "70 microns"
+        ],
+        "sku": "Qnubu-Sacs-à-Presse-11",
+        "price": 13,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 50,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361105510733"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160421253453",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132760940877",
+            "legacyResourceId": "53132760940877",
+            "title": "11x11cm / 70 microns",
+            "position": 11,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:35:18.000Z",
+              "modified": "2026-01-06T20:35:18.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:35:18Z",
+              "2026-01-06T20:35:18Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Qnubu-Sacs-à-Presse-11",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "13.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "11x11cm",
+          "90 microns"
+        ],
+        "sku": "Qnubu-Sacs-à-Presse-12",
+        "price": 13,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 50,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361105510733"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160421286221",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132760973645",
+            "legacyResourceId": "53132760973645",
+            "title": "11x11cm / 90 microns",
+            "position": 12,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:35:18.000Z",
+              "modified": "2026-01-06T20:35:18.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:35:18Z",
+              "2026-01-06T20:35:18Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Qnubu-Sacs-à-Presse-12",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "13.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "11x11cm",
+          "120 microns"
+        ],
+        "sku": "Qnubu-Sacs-à-Presse-13",
+        "price": 13,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 50,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361105510733"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160421318989",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132761006413",
+            "legacyResourceId": "53132761006413",
+            "title": "11x11cm / 120 microns",
+            "position": 13,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:35:18.000Z",
+              "modified": "2026-01-06T20:35:18.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:35:18Z",
+              "2026-01-06T20:35:18Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Qnubu-Sacs-à-Presse-13",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "13.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "11x11cm",
+          "160 microns"
+        ],
+        "sku": "Qnubu-Sacs-à-Presse-14",
+        "price": 13,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 50,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361105510733"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160421351757",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132761039181",
+            "legacyResourceId": "53132761039181",
+            "title": "11x11cm / 160 microns",
+            "position": 14,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:35:18.000Z",
+              "modified": "2026-01-06T20:35:18.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:35:18Z",
+              "2026-01-06T20:35:18Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Qnubu-Sacs-à-Presse-14",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "13.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+        "position": 1,
+        "alt": "Les sacs pour presses Qnubu, compatible avec les presse à chaud",
+        "id": "gid://shopify/MediaImage/59361105510733",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "Sacs à presse Qnubu pour extraction – 5 à 11 cm",
+    "seoDescription": "Sacs Qnubu en 5 tailles de maille, résistants et précis pour extractions végétales. Formats 5x11 et 11x11 cm, compatibles avec les presses à chaud.",
+    "identity": {
+      "slug": "qnubu-sac-a-presse-de-11x11cm-10pcs",
+      "sourceId": "gid://shopify/Product/10480183181645",
+      "timestamps": {
+        "created": "2026-01-06T20:35:18.000Z",
+        "modified": "2026-01-07T08:35:42.000Z"
+      }
+    },
+    "kind": "variable",
+    "sourceExtension": {
+      "shopify": {
+        "legacyResourceId": "10480183181645",
+        "publishedAt": "2026-01-06T20:35:18.000Z",
+        "options": [
+          {
+            "id": "gid://shopify/ProductOption/13161792307533",
+            "name": "Taille",
+            "position": 1,
+            "values": [
+              "11x5cm",
+              "11x11cm"
+            ],
+            "optionValues": [
+              {
+                "id": "gid://shopify/ProductOptionValue/6957147586893",
+                "name": "11x5cm",
+                "hasVariants": true
+              },
+              {
+                "id": "gid://shopify/ProductOptionValue/6957147619661",
+                "name": "11x11cm",
+                "hasVariants": true
+              }
+            ]
+          },
+          {
+            "id": "gid://shopify/ProductOption/13161792340301",
+            "name": "Taille des mailles",
+            "position": 2,
+            "values": [
+              "15 microns",
+              "25 microns",
+              "37 microns",
+              "70 microns",
+              "90 microns",
+              "120 microns",
+              "160 microns"
+            ],
+            "optionValues": [
+              {
+                "id": "gid://shopify/ProductOptionValue/6957147652429",
+                "name": "15 microns",
+                "hasVariants": true
+              },
+              {
+                "id": "gid://shopify/ProductOptionValue/6957147685197",
+                "name": "25 microns",
+                "hasVariants": true
+              },
+              {
+                "id": "gid://shopify/ProductOptionValue/6957147717965",
+                "name": "37 microns",
+                "hasVariants": true
+              },
+              {
+                "id": "gid://shopify/ProductOptionValue/6957147750733",
+                "name": "70 microns",
+                "hasVariants": true
+              },
+              {
+                "id": "gid://shopify/ProductOptionValue/6957147783501",
+                "name": "90 microns",
+                "hasVariants": true
+              },
+              {
+                "id": "gid://shopify/ProductOptionValue/6957147816269",
+                "name": "120 microns",
+                "hasVariants": true
+              },
+              {
+                "id": "gid://shopify/ProductOptionValue/6957147849037",
+                "name": "160 microns",
+                "hasVariants": true
+              }
+            ]
+          }
+        ],
+        "media": [
+          {
+            "id": "gid://shopify/MediaImage/59361105510733",
+            "alt": "Les sacs pour presses Qnubu, compatible avec les presse à chaud",
+            "mediaContentType": "IMAGE",
+            "status": "READY",
+            "image": {
+              "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+              "width": 1200,
+              "height": 1200
+            }
+          }
+        ],
+        "collections": [],
+        "category": {
+          "id": "gid://shopify/TaxonomyCategory/hg-17-4",
+          "name": "Kits de plantation",
+          "fullName": "Maison et jardin > Plantes > Kits de plantation",
+          "isLeaf": false,
+          "isRoot": false
+        },
+        "bundleComponents": [],
+        "hasVariantsThatRequiresComponents": false,
+        "publications": [
+          {
+            "isPublished": true,
+            "publication": {
+              "id": "gid://shopify/Publication/312549212493",
+              "name": "Boutique en ligne",
+              "catalog": {
+                "id": "gid://shopify/AppCatalog/154778960205",
+                "title": "Channel Catalog 312549212493 for Online Store"
+              }
+            },
+            "publishDate": "2026-01-06T20:35:18Z"
+          }
+        ],
+        "templateSuffix": null,
+        "onlineStoreUrl": null,
+        "onlineStorePreviewUrl": "https://example-store.myshopify.com/products/qnubu-sac-a-presse-de-11x11cm-10pcs",
+        "isGiftCard": false,
+        "requiresSellingPlan": false,
+        "combinedListingRole": null
+      }
+    },
+    "provenance": {
+      "handle": {
+        "platform": "shopify",
+        "sourceField": "handle",
+        "sourceValue": "qnubu-sac-a-presse-de-11x11cm-10pcs",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "shopify",
+        "sourceField": "handle",
+        "sourceValue": "qnubu-sac-a-presse-de-11x11cm-10pcs",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "shopify",
+        "sourceField": "id",
+        "sourceValue": "gid://shopify/Product/10480183181645",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.timestamps": {
+        "platform": "shopify",
+        "sourceField": "createdAt + updatedAt",
+        "sourceValue": "2026-01-06T20:35:18Z",
+        "transform": "timestamps",
+        "method": "exact"
+      },
+      "title": {
+        "platform": "shopify",
+        "sourceField": "title",
+        "sourceValue": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "shopify",
+        "sourceField": "descriptionHtml",
+        "sourceValue": "<h2><span style=\"text-decoration: underline;\">Caractéristiques des Sacs à Presse Rosin Qnubu</span></h2>\n<p>Les <strong>sacs à presse Qnubu</strong> sont spécialement conçus pour l’extraction à chaud …",
+        "transform": "html",
+        "method": "exact"
+      },
+      "vendor": {
+        "platform": "shopify",
+        "sourceField": "vendor",
+        "sourceValue": "Qnubu",
+        "transform": "text",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "shopify",
+        "sourceField": "productType",
+        "sourceValue": "sac à presse",
+        "transform": "text",
+        "method": "exact"
+      },
+      "tags": {
+        "platform": "shopify",
+        "sourceField": "tags",
+        "transform": "list",
+        "method": "exact"
+      },
+      "status": {
+        "platform": "shopify",
+        "sourceField": "status",
+        "sourceValue": "ACTIVE",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "published": {
+        "platform": "shopify",
+        "sourceField": "publishedAt",
+        "sourceValue": "2026-01-06T20:35:18Z",
+        "transform": "is_set",
+        "method": "exact"
+      },
+      "kind": {
+        "platform": "shopify",
+        "sourceField": "hasOnlyDefaultVariant",
+        "sourceValue": false,
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "seoTitle": {
+        "platform": "shopify",
+        "sourceField": "seo.title",
+        "sourceValue": "Sacs à presse Qnubu pour extraction – 5 à 11 cm",
+        "transform": "text",
+        "method": "exact"
+      },
+      "seoDescription": {
+        "platform": "shopify",
+        "sourceField": "seo.description",
+        "sourceValue": "Sacs Qnubu en 5 tailles de maille, résistants et précis pour extractions végétales. Formats 5x11 et 11x11 cm, compatibles avec les presses à chaud.",
+        "transform": "text",
+        "method": "exact"
+      },
+      "options": {
+        "platform": "shopify",
+        "sourceField": "options",
+        "transform": "options_from_attributes",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "shopify",
+        "sourceField": "media.nodes",
+        "transform": "images_from_objects",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "shopify",
+        "sourceField": "collections.nodes",
+        "transform": "names_of",
+        "method": "exact"
+      },
+      "metafields": {
+        "platform": "shopify",
+        "sourceField": "metafields.nodes",
+        "transform": "metafields_from_pairs",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "pack-advanced-nutrients",
+    "title": "Pack Advanced Nutrients - expert",
+    "bodyHtml": "<h2><span style=\"text-decoration: underline;\">Caractéristiques des kits de culture Advanced Nutrients</span></h2>\n<p>Voici les <em><strong>packs</strong></em> d'<em><strong>engrais</strong></em> qui feront passer votre culture au niveau supérieur, les <em><strong>kits</strong></em> <em><strong>Advanced Nutrients</strong></em> sont parfait pour les cultivateurs qui ont déjà une certaine expérience et qui désirent exploiter le potentiel de leurs plantes au maximum.<br></p>\n<p>Dans ces Packs Advanced Nutrients vous pourrez choisir entre différentes bases, en fonction du style de culture désiré.</p>\n<p> </p>\n<p><strong>Les bases d'engrais disponible sont</strong>:</p>\n<ul>\n<li>Ph Perfect Micro - Grow - Bloom 1L ou 4L</li>\n<li>PH Perfect Sensi Grow - Bloom A+B <span data-mce-fragment=\"1\">1L ou 4L</span>\n</li>\n<li>Ph Perfect Connoisseur Grow - Bloom A+B <span data-mce-fragment=\"1\">1L ou 4L</span>\n</li>\n</ul>\n( Compatible avec la culture hydroponique )<br>\n<ul></ul>\n<p><strong>Les additifs compris dans les kits</strong>:<br></p>\n<ul>\n<li>Voodoo Juice 250ml, 500ml ou 1L</li>\n<li>Tarantula <span data-mce-fragment=\"1\">250ml, </span><span data-mce-fragment=\"1\">500ml ou 1L</span>\n</li>\n<li><span data-mce-fragment=\"1\">Piranha 250ml, 500ml ou 1L</span></li>\n<li>B52 <span data-mce-fragment=\"1\">250ml, </span><span data-mce-fragment=\"1\">500ml ou 1L</span>\n</li>\n<li>Rhino Skin <span data-mce-fragment=\"1\">250ml, </span><span data-mce-fragment=\"1\">500ml ou 1L</span>\n</li>\n<li>Big Bud <span data-mce-fragment=\"1\">250ml, </span><span data-mce-fragment=\"1\">500ml ou 1L (coco sur demande)</span>\n</li>\n<li>Bud Candy <span data-mce-fragment=\"1\">250ml, </span><span data-mce-fragment=\"1\">500ml ou 1L</span>\n</li>\n<li><span data-mce-fragment=\"1\">Bud Ignitor 250ml, 500ml ou 1L</span></li>\n<li>Overdrive <span data-mce-fragment=\"1\">250ml, </span><span data-mce-fragment=\"1\">500ml ou 1L</span>\n</li>\n</ul>\n<p>Pour toute modification de votre kit n'hésitez pas à prendre contact.</p>\n<h3>Les photos sont à titre d'exemple, le contenu du kit peut différé.</h3>\n<ul></ul>",
+    "vendor": "Advanced Nutrients",
+    "productType": "engrais",
+    "tags": [
+      "advanced nutrients",
+      "connoisseur",
+      "engrais",
+      "kit",
+      "kit engrais",
+      "pack",
+      "PH PERFECT BLOOM",
+      "ph perfect grow",
+      "Ph Perfect micro",
+      "ph perfect sensi bloom",
+      "ph perfect sensi grow"
+    ],
+    "status": "active",
+    "categories": [
+      "Engrais"
+    ],
+    "published": true,
+    "options": [
+      {
+        "name": "Base",
+        "values": [
+          "PH Perfect Grow Micro Bloom",
+          "PH Perfect Sensi",
+          "PH Perfect Connoisseur"
+        ]
+      },
+      {
+        "name": "Capacité",
+        "values": [
+          "Bases 1L - additifs 500ml",
+          "Bases 4L - additifs 1L",
+          "Bases 1L - additifs 250ml"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "optionValues": [
+          "PH Perfect Grow Micro Bloom",
+          "Bases 1L - additifs 500ml"
+        ],
+        "sku": "Pack-PH-perfect-medium-500ml",
+        "price": 280,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 10000,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361287766349"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160622776653",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132962464077",
+            "legacyResourceId": "53132962464077",
+            "title": "PH Perfect Grow Micro Bloom / Bases 1L - additifs 500ml",
+            "position": 1,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:46:35.000Z",
+              "modified": "2026-01-06T20:46:35.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:46:35Z",
+              "2026-01-06T20:46:35Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Pack-PH-perfect-medium-500ml",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "280.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "PH Perfect Grow Micro Bloom",
+          "Bases 4L - additifs 1L"
+        ],
+        "sku": "Advanced-Nutrients-Pack-complet-1",
+        "price": 450,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 22000,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361287766349"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160622809421",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132962496845",
+            "legacyResourceId": "53132962496845",
+            "title": "PH Perfect Grow Micro Bloom / Bases 4L - additifs 1L",
+            "position": 2,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:46:35.000Z",
+              "modified": "2026-01-06T20:46:35.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:46:35Z",
+              "2026-01-06T20:46:35Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Advanced-Nutrients-Pack-complet-1",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "450.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "PH Perfect Grow Micro Bloom",
+          "Bases 1L - additifs 250ml"
+        ],
+        "sku": "PacAdvanced-Ph-Perfect-250ml",
+        "price": 180,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 6000,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361287766349"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160622842189",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132962529613",
+            "legacyResourceId": "53132962529613",
+            "title": "PH Perfect Grow Micro Bloom / Bases 1L - additifs 250ml",
+            "position": 3,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:46:35.000Z",
+              "modified": "2026-01-06T20:46:35.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:46:35Z",
+              "2026-01-06T20:46:35Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "PacAdvanced-Ph-Perfect-250ml",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "180.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "PH Perfect Sensi",
+          "Bases 1L - additifs 500ml"
+        ],
+        "sku": "Pack-sensi-expert-medium",
+        "price": 290,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 13000,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361287831885"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160622874957",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132962562381",
+            "legacyResourceId": "53132962562381",
+            "title": "PH Perfect Sensi / Bases 1L - additifs 500ml",
+            "position": 4,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:46:35.000Z",
+              "modified": "2026-01-06T20:46:35.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:46:35Z",
+              "2026-01-06T20:46:35Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Pack-sensi-expert-medium",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "290.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "PH Perfect Sensi",
+          "Bases 4L - additifs 1L"
+        ],
+        "sku": "Advanced-Nutrients-Pack-complet-2",
+        "price": 509,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 25000,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361287831885"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160622907725",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132962595149",
+            "legacyResourceId": "53132962595149",
+            "title": "PH Perfect Sensi / Bases 4L - additifs 1L",
+            "position": 5,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:46:35.000Z",
+              "modified": "2026-01-06T20:46:35.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:46:35Z",
+              "2026-01-06T20:46:35Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Advanced-Nutrients-Pack-complet-2",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "509.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "PH Perfect Sensi",
+          "Bases 1L - additifs 250ml"
+        ],
+        "sku": "Pack-Advanced-Nutrient-Sensi-250ml",
+        "price": 193,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 5500,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361287831885"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160622940493",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132962627917",
+            "legacyResourceId": "53132962627917",
+            "title": "PH Perfect Sensi / Bases 1L - additifs 250ml",
+            "position": 6,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:46:35.000Z",
+              "modified": "2026-01-06T20:46:35.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:46:35Z",
+              "2026-01-06T20:46:35Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Pack-Advanced-Nutrient-Sensi-250ml",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "193.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "PH Perfect Connoisseur",
+          "Bases 1L - additifs 500ml"
+        ],
+        "sku": "Pack-Connoisseur-expert-moyen-500ml",
+        "price": 335,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 13000,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398",
+        "stockPolicy": {
+          "manageStock": false,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361287799117"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160622973261",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132962660685",
+            "legacyResourceId": "53132962660685",
+            "title": "PH Perfect Connoisseur / Bases 1L - additifs 500ml",
+            "position": 7,
+            "availableForSale": true,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:46:35.000Z",
+              "modified": "2026-01-06T20:46:35.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:46:35Z",
+              "2026-01-06T20:46:35Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Pack-Connoisseur-expert-moyen-500ml",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "335.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": false,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "PH Perfect Connoisseur",
+          "Bases 4L - additifs 1L"
+        ],
+        "sku": "Advanced-Nutrients-Pack-complet-3",
+        "price": 525,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 25000,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361287799117"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160623006029",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132962693453",
+            "legacyResourceId": "53132962693453",
+            "title": "PH Perfect Connoisseur / Bases 4L - additifs 1L",
+            "position": 8,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:46:35.000Z",
+              "modified": "2026-01-06T20:46:35.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:46:35Z",
+              "2026-01-06T20:46:35Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Advanced-Nutrients-Pack-complet-3",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "525.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "PH Perfect Connoisseur",
+          "Bases 1L - additifs 250ml"
+        ],
+        "sku": "Pacj-Advanced-Nutrients-Connoisseur-250ml",
+        "price": 210,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 5500,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no"
+        },
+        "images": [
+          {
+            "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398",
+            "position": 1,
+            "alt": "",
+            "id": "gid://shopify/MediaImage/59361287799117"
+          }
+        ],
+        "sourceExtension": {
+          "shopify": {
+            "provinceCodeOfOrigin": null,
+            "inventoryItemId": "gid://shopify/InventoryItem/55160623038797",
+            "metafields": [],
+            "unitPricing": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "requiresComponents": false,
+            "id": "gid://shopify/ProductVariant/53132962726221",
+            "legacyResourceId": "53132962726221",
+            "title": "PH Perfect Connoisseur / Bases 1L - additifs 250ml",
+            "position": 9,
+            "availableForSale": false,
+            "sellableOnlineQuantity": 0,
+            "timestamps": {
+              "created": "2026-01-06T20:46:35.000Z",
+              "modified": "2026-01-06T20:46:35.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "shopify",
+            "sourceField": "unitPrice",
+            "sourceValue": [
+              null,
+              {
+                "measuredType": null,
+                "quantityUnit": null,
+                "quantityValue": 0,
+                "referenceUnit": null,
+                "referenceValue": 0
+              },
+              false
+            ],
+            "reason": "no-canon-field",
+            "note": "Reference-unit pricing (€/kg) — same family as sourceExtension.shopware.packaging."
+          },
+          {
+            "platform": "shopify",
+            "sourceField": "createdAt",
+            "sourceValue": [
+              "2026-01-06T20:46:35Z",
+              "2026-01-06T20:46:35Z"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "shopify",
+            "sourceField": "sku",
+            "sourceValue": "Pacj-Advanced-Nutrients-Connoisseur-250ml",
+            "transform": "text",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "shopify",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "shopify",
+            "sourceField": "price",
+            "sourceValue": "210.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "shopify",
+            "sourceField": "compareAtPrice",
+            "sourceValue": null,
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "shopify",
+            "sourceField": "taxable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "shopify",
+            "sourceField": "inventoryQuantity",
+            "sourceValue": 0,
+            "transform": "int",
+            "method": "exact"
+          },
+          "stockPolicy.manageStock": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.tracked",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "stockPolicy.backorders": {
+            "platform": "shopify",
+            "sourceField": "inventoryPolicy",
+            "sourceValue": "DENY",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.requiresShipping",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.measurement.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "cost": {
+            "platform": "shopify",
+            "sourceField": "inventoryItem.unitCost.amount",
+            "transform": "money",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "shopify",
+            "sourceField": "selectedOptions",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "shopify",
+            "sourceField": "image.url",
+            "sourceValue": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398",
+            "transform": "text",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "shopify",
+            "sourceField": "media.nodes",
+            "transform": "images_from_objects",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400",
+        "position": 1,
+        "alt": "Kit d'engrais Advanced Nutrients PH Perfect Grow Micro Bloom",
+        "id": "gid://shopify/MediaImage/59361287766349",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398",
+        "position": 2,
+        "alt": "Kit d'engrais Advanced Nutrients Connoisseur",
+        "id": "gid://shopify/MediaImage/59361287799117",
+        "width": 1200,
+        "height": 1200
+      },
+      {
+        "src": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398",
+        "position": 3,
+        "alt": "Kit d'engrais Advanced Nutrients Sensi Grow et Bloom",
+        "id": "gid://shopify/MediaImage/59361287831885",
+        "width": 1200,
+        "height": 1200
+      }
+    ],
+    "metafields": [
+      {
+        "key": "google_product_category",
+        "value": "Home & Garden > Lawn & Garden > Gardening > Fertilizers",
+        "namespace": "mm-google-shopping",
+        "type": "string"
+      },
+      {
+        "key": "condition",
+        "value": "new",
+        "namespace": "mm-google-shopping",
+        "type": "string"
+      },
+      {
+        "key": "custom_product",
+        "value": "true",
+        "namespace": "mm-google-shopping",
+        "type": "boolean"
+      }
+    ],
+    "seoTitle": "Pack complet Advanced Nutrients PH Perfect | Saucegrowing",
+    "seoDescription": "Le kit Advanced Nutrients Expert combine les éléments nutritifs nécessaires pour cultiver des plantes saines et obtenir des récoltes abondantes. Contenant un kit d'engrais complet, cette solution sophistiquée augmentera considérablement votre rendement sans compromettre la qualité de vos cultures.",
+    "identity": {
+      "slug": "pack-advanced-nutrients",
+      "sourceId": "gid://shopify/Product/10480216867149",
+      "timestamps": {
+        "created": "2026-01-06T20:46:35.000Z",
+        "modified": "2026-01-07T08:46:51.000Z"
+      }
+    },
+    "kind": "variable",
+    "sourceExtension": {
+      "shopify": {
+        "legacyResourceId": "10480216867149",
+        "publishedAt": "2026-01-06T20:46:35.000Z",
+        "options": [
+          {
+            "id": "gid://shopify/ProductOption/13161832022349",
+            "name": "Base",
+            "position": 1,
+            "values": [
+              "PH Perfect Grow Micro Bloom",
+              "PH Perfect Sensi",
+              "PH Perfect Connoisseur"
+            ],
+            "optionValues": [
+              {
+                "id": "gid://shopify/ProductOptionValue/6957327679821",
+                "name": "PH Perfect Grow Micro Bloom",
+                "hasVariants": true
+              },
+              {
+                "id": "gid://shopify/ProductOptionValue/6957327712589",
+                "name": "PH Perfect Sensi",
+                "hasVariants": true
+              },
+              {
+                "id": "gid://shopify/ProductOptionValue/6957327745357",
+                "name": "PH Perfect Connoisseur",
+                "hasVariants": true
+              }
+            ]
+          },
+          {
+            "id": "gid://shopify/ProductOption/13161832055117",
+            "name": "Capacité",
+            "position": 2,
+            "values": [
+              "Bases 1L - additifs 500ml",
+              "Bases 4L - additifs 1L",
+              "Bases 1L - additifs 250ml"
+            ],
+            "optionValues": [
+              {
+                "id": "gid://shopify/ProductOptionValue/6957327778125",
+                "name": "Bases 1L - additifs 500ml",
+                "hasVariants": true
+              },
+              {
+                "id": "gid://shopify/ProductOptionValue/6957327810893",
+                "name": "Bases 4L - additifs 1L",
+                "hasVariants": true
+              },
+              {
+                "id": "gid://shopify/ProductOptionValue/6957327843661",
+                "name": "Bases 1L - additifs 250ml",
+                "hasVariants": true
+              }
+            ]
+          }
+        ],
+        "media": [
+          {
+            "id": "gid://shopify/MediaImage/59361287766349",
+            "alt": "Kit d'engrais Advanced Nutrients PH Perfect Grow Micro Bloom",
+            "mediaContentType": "IMAGE",
+            "status": "READY",
+            "image": {
+              "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400",
+              "width": 1200,
+              "height": 1200
+            }
+          },
+          {
+            "id": "gid://shopify/MediaImage/59361287799117",
+            "alt": "Kit d'engrais Advanced Nutrients Connoisseur",
+            "mediaContentType": "IMAGE",
+            "status": "READY",
+            "image": {
+              "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398",
+              "width": 1200,
+              "height": 1200
+            }
+          },
+          {
+            "id": "gid://shopify/MediaImage/59361287831885",
+            "alt": "Kit d'engrais Advanced Nutrients Sensi Grow et Bloom",
+            "mediaContentType": "IMAGE",
+            "status": "READY",
+            "image": {
+              "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398",
+              "width": 1200,
+              "height": 1200
+            }
+          }
+        ],
+        "collections": [
+          {
+            "id": "gid://shopify/Collection/653170344269",
+            "handle": "engrais",
+            "title": "Engrais",
+            "ruleSet": {
+              "appliedDisjunctively": false,
+              "rules": [
+                {
+                  "column": "TAG",
+                  "relation": "EQUALS",
+                  "condition": "engrais"
+                }
+              ]
+            }
+          }
+        ],
+        "category": {
+          "id": "gid://shopify/TaxonomyCategory/hg-12-1-3",
+          "name": "Engrais",
+          "fullName": "Maison et jardin > Pelouses et jardins > Jardinage > Engrais",
+          "isLeaf": true,
+          "isRoot": false
+        },
+        "bundleComponents": [],
+        "hasVariantsThatRequiresComponents": false,
+        "publications": [
+          {
+            "isPublished": true,
+            "publication": {
+              "id": "gid://shopify/Publication/312549212493",
+              "name": "Boutique en ligne",
+              "catalog": {
+                "id": "gid://shopify/AppCatalog/154778960205",
+                "title": "Channel Catalog 312549212493 for Online Store"
+              }
+            },
+            "publishDate": "2026-01-06T20:46:35Z"
+          }
+        ],
+        "templateSuffix": null,
+        "onlineStoreUrl": null,
+        "onlineStorePreviewUrl": "https://example-store.myshopify.com/products/pack-advanced-nutrients",
+        "isGiftCard": false,
+        "requiresSellingPlan": false,
+        "combinedListingRole": null
+      }
+    },
+    "provenance": {
+      "handle": {
+        "platform": "shopify",
+        "sourceField": "handle",
+        "sourceValue": "pack-advanced-nutrients",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "shopify",
+        "sourceField": "handle",
+        "sourceValue": "pack-advanced-nutrients",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "shopify",
+        "sourceField": "id",
+        "sourceValue": "gid://shopify/Product/10480216867149",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.timestamps": {
+        "platform": "shopify",
+        "sourceField": "createdAt + updatedAt",
+        "sourceValue": "2026-01-06T20:46:35Z",
+        "transform": "timestamps",
+        "method": "exact"
+      },
+      "title": {
+        "platform": "shopify",
+        "sourceField": "title",
+        "sourceValue": "Pack Advanced Nutrients - expert",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "shopify",
+        "sourceField": "descriptionHtml",
+        "sourceValue": "<h2><span style=\"text-decoration: underline;\">Caractéristiques des kits de culture Advanced Nutrients</span></h2>\n<p>Voici les <em><strong>packs</strong></em> d'<em><strong>engrais</strong></em> qui f…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "vendor": {
+        "platform": "shopify",
+        "sourceField": "vendor",
+        "sourceValue": "Advanced Nutrients",
+        "transform": "text",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "shopify",
+        "sourceField": "productType",
+        "sourceValue": "engrais",
+        "transform": "text",
+        "method": "exact"
+      },
+      "tags": {
+        "platform": "shopify",
+        "sourceField": "tags",
+        "transform": "list",
+        "method": "exact"
+      },
+      "status": {
+        "platform": "shopify",
+        "sourceField": "status",
+        "sourceValue": "ACTIVE",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "published": {
+        "platform": "shopify",
+        "sourceField": "publishedAt",
+        "sourceValue": "2026-01-06T20:46:35Z",
+        "transform": "is_set",
+        "method": "exact"
+      },
+      "kind": {
+        "platform": "shopify",
+        "sourceField": "hasOnlyDefaultVariant",
+        "sourceValue": false,
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "seoTitle": {
+        "platform": "shopify",
+        "sourceField": "seo.title",
+        "sourceValue": "Pack complet Advanced Nutrients PH Perfect | Saucegrowing",
+        "transform": "text",
+        "method": "exact"
+      },
+      "seoDescription": {
+        "platform": "shopify",
+        "sourceField": "seo.description",
+        "sourceValue": "Le kit Advanced Nutrients Expert combine les éléments nutritifs nécessaires pour cultiver des plantes saines et obtenir des récoltes abondantes. Contenant un kit d'engrais complet, cette solution soph…",
+        "transform": "text",
+        "method": "exact"
+      },
+      "options": {
+        "platform": "shopify",
+        "sourceField": "options",
+        "transform": "options_from_attributes",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "shopify",
+        "sourceField": "media.nodes",
+        "transform": "images_from_objects",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "shopify",
+        "sourceField": "collections.nodes",
+        "transform": "names_of",
+        "method": "exact"
+      },
+      "metafields": {
+        "platform": "shopify",
+        "sourceField": "metafields.nodes",
+        "transform": "metafields_from_pairs",
+        "method": "exact"
+      }
+    }
+  }
+]

@@ -1,0 +1,154 @@
+[
+  {
+    "firstName": "Test",
+    "lastName": "Customer",
+    "email": "customer1@example.test",
+    "phone": "",
+    "address": {
+      "company": "",
+      "address1": "",
+      "address2": "",
+      "city": "",
+      "province": "",
+      "provinceCode": "",
+      "country": "",
+      "zip": "",
+      "phone": ""
+    },
+    "shipping": null,
+    "acceptsEmail": null,
+    "acceptsSms": null,
+    "note": "",
+    "tags": [],
+    "taxExempt": false,
+    "marketingConsent": {
+      "email": {
+        "state": "pending",
+        "channel": "email",
+        "source": {
+          "platform": "wix",
+          "field": "primaryEmail.subscriptionStatus",
+          "raw": "NOT_SET"
+        },
+        "requiresReconfirmation": true
+      }
+    },
+    "identity": {
+      "sourceId": "4a4afb0e-f01b-40a3-93a1-69a4531df1d5",
+      "timestamps": {
+        "created": "2026-09-21T17:37:18.784Z",
+        "modified": "2026-09-21T17:37:28.330Z"
+      }
+    },
+    "isGuest": false,
+    "state": "ACTIVE",
+    "sourceExtension": {
+      "wix": {
+        "deliverabilityStatus": "NOT_SET",
+        "member": {
+          "memberId": "da66a92b-6a89-402b-92cf-bfee98904802",
+          "signupDate": "2026-09-21T17:37:18Z",
+          "emailVerified": true,
+          "status": "ACTIVE"
+        },
+        "emails": {
+          "items": [
+            {
+              "tag": "UNTAGGED",
+              "email": "customer1@example.test",
+              "primary": true
+            }
+          ]
+        },
+        "extendedFields": {
+          "contacts.displayByLastName": "Test Customer 1",
+          "emailSubscriptions.deliverabilityStatus": "NOT_SET",
+          "members.membershipStatus": "APPROVED",
+          "emailSubscriptions.subscriptionStatus": "NOT_SET",
+          "members.mobile": false,
+          "emailSubscriptions.effectiveEmail": "customer1@example.test",
+          "contacts.displayByFirstName": "Test Customer 1"
+        },
+        "revision": 2,
+        "source": {
+          "sourceType": "WIX_SITE_MEMBERS",
+          "wixAppId": "eb377299-86b4-4a86-a1b5-774a2d1d374b",
+          "appId": "eb377299-86b4-4a86-a1b5-774a2d1d374b"
+        },
+        "lastActivity": {
+          "activityType": "GENERAL",
+          "date": "2026-09-21T17:37:18.784Z",
+          "description": "Contact was created",
+          "icon": {
+            "name": "User",
+            "url": "https://wixmp-8be454c954980f083caba37c.wixmp.com/activity-log/User.png"
+          }
+        }
+      }
+    },
+    "provenance": {
+      "email": {
+        "platform": "wix",
+        "sourceField": "primaryInfo.email",
+        "sourceValue": "customer1@example.test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "firstName": {
+        "platform": "wix",
+        "sourceField": "info.name.first",
+        "sourceValue": "Test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "lastName": {
+        "platform": "wix",
+        "sourceField": "info.name.last",
+        "sourceValue": "Customer",
+        "transform": "text",
+        "method": "exact"
+      },
+      "marketingConsent.email": {
+        "platform": "wix",
+        "sourceField": "primaryEmail.subscriptionStatus",
+        "sourceValue": "NOT_SET",
+        "transform": "marketing_consent",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "wix",
+        "sourceField": "id",
+        "sourceValue": "4a4afb0e-f01b-40a3-93a1-69a4531df1d5",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.timestamps": {
+        "platform": "wix",
+        "sourceField": "createdDate + updatedDate",
+        "sourceValue": "2026-09-21T17:37:18.784Z",
+        "transform": "timestamps",
+        "method": "exact"
+      },
+      "isGuest": {
+        "platform": "wix",
+        "sourceField": "memberInfo.memberId",
+        "sourceValue": "da66a92b-6a89-402b-92cf-bfee98904802",
+        "transform": "is_unset",
+        "method": "exact"
+      },
+      "state": {
+        "platform": "wix",
+        "sourceField": "memberInfo.status",
+        "sourceValue": "ACTIVE",
+        "transform": "text_present",
+        "method": "exact"
+      },
+      "tags": {
+        "platform": "wix",
+        "sourceField": "info.labelKeys.items",
+        "transform": "list",
+        "method": "exact"
+      }
+    }
+  }
+]

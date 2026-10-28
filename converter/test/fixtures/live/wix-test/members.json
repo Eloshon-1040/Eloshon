@@ -1,0 +1,33 @@
+[
+  {
+    "id": "da66a92b-6a89-402b-92cf-bfee98904802",
+    "loginEmail": "customer1@example.test",
+    "loginEmailVerified": true,
+    "status": "APPROVED",
+    "contactId": "4a4afb0e-f01b-40a3-93a1-69a4531df1d5",
+    "contact": {
+      "contactId": "4a4afb0e-f01b-40a3-93a1-69a4531df1d5",
+      "firstName": "Test",
+      "lastName": "Customer 2",
+      "phones": [],
+      "emails": [],
+      "addresses": [],
+      "customFields": {}
+    },
+    "profile": {
+      "nickname": "Test Customer",
+      "slug": "customer2",
+      "photo": {
+        "id": "",
+        "url": "https://lh3.googleusercontent.com/a/ACg8ocJ2k6zJAGp7NEdEDxD0gzvv-7IjvhQQp1xcXq3c5dBFraZRpeTI%3Ds96-c",
+        "height": 0,
+        "width": 0
+      }
+    },
+    "privacyStatus": "PUBLIC",
+    "activityStatus": "ACTIVE",
+    "createdDate": "2026-09-21T17:37:18Z",
+    "updatedDate": "2026-09-21T17:37:18.851Z",
+    "lastLoginDate": "2026-09-21T17:37:18Z"
+  }
+]

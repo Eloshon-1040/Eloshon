@@ -1,0 +1,44 @@
+[
+  {
+    "id": "a87dfceb-7b14-4b5b-a00d-bbf2d1547a34",
+    "revision": "1",
+    "createdDate": "2025-01-21T12:18:28.060Z",
+    "updatedDate": "2025-07-14T08:56:50.784Z",
+    "name": "Cadeau idéal"
+  },
+  {
+    "id": "e2a0d462-dd45-45cc-a3c9-2f22e356b597",
+    "revision": "1",
+    "createdDate": "2025-01-21T11:39:55.872Z",
+    "updatedDate": "2025-07-14T09:00:13.620Z",
+    "name": "Bientôt disponible"
+  },
+  {
+    "id": "f31d4c11-71c8-4872-bcce-6734d7134382",
+    "revision": "1",
+    "createdDate": "2025-01-21T11:37:45.835Z",
+    "updatedDate": "2025-07-14T09:17:03.051Z",
+    "name": "Abonnez-vous & économisez"
+  },
+  {
+    "id": "49e69f9d-42db-4eab-b335-4f06e18bb6f5",
+    "revision": "1",
+    "createdDate": "2024-12-29T10:09:20.558Z",
+    "updatedDate": "2025-07-14T08:56:29.732Z",
+    "name": "Meilleure vente"
+  },
+  {
+    "id": "5879bf73-e934-41cb-a7c6-2714e9496059",
+    "revision": "1",
+    "createdDate": "2024-12-29T09:55:49.578Z",
+    "updatedDate": "2025-07-14T09:17:39.588Z",
+    "name": "Nouveau"
+  },
+  {
+    "id": "991e5451-f48e-46cd-9827-8f4951e4943e",
+    "revision": "1",
+    "createdDate": "2024-12-25T07:54:28.879Z",
+    "updatedDate": "2025-07-14T08:59:50.118Z",
+    "name": "Promotion"
+  }
+]

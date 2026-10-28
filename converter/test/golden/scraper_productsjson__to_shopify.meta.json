@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "sourceFormat": "scraper.products-json.v1",
+  "targetFormat": "shopify_products",
+  "counts": {
+    "inputUnits": 3,
+    "outputUnits": 3,
+    "failedUnits": 0,
+    "outputRows": 7
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_shopify_translations",
+      "params": {
+        "locales": "en"
+      }
+    },
+    {
+      "code": "loss_shopify_category_taxonomy",
+      "params": {
+        "count": 3,
+        "extra": 0
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "code": "colour_family_grouped",
+      "params": {
+        "count": 1
+      }
+    },
+    {
+      "code": "stock_untracked",
+      "params": {
+        "count": 2
+      }
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

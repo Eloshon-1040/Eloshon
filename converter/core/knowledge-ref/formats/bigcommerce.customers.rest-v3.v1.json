@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "id": "bigcommerce.customers.rest-v3.v1",
+  "displayName": "BigCommerce Customers (REST v3)",
+  "provenance": "native-platform",
+  "medium": "json-api",
+  "platformHint": "bigcommerce",
+  "entity": "customers",
+  "version": "bc-v3",
+  "signatures": [
+    {
+      "kind": "json-shape",
+      "requiredPaths": [
+        "id",
+        "email",
+        "customer_group_id",
+        "accepts_product_review_abandoned_cart_emails",
+        "addresses"
+      ],
+      "hintPaths": [
+        "tax_exempt_category",
+        "store_credit_amounts",
+        "authentication",
+        "_consent"
+      ]
+    }
+  ],
+  "structure": {
+    "unit": "customer",
+    "companions": {
+      "subscribers": {
+        "route": "GET /v3/customers/subscribers",
+        "keyedByParent": false,
+        "note": "the newsletter list (by e-mail) — being listed is the statement; date_created its timestamp"
+      }
+    }
+  },
+  "invariantsExpected": [
+    "Marketing consent is NOT on the customer: /v3/customers/subscribers (by e-mail) is the list; accepts_product_review_abandoned_cart_emails and /consent (cookies) are NOT marketing consents",
+    "addresses[] is an address book without billing/shipping roles (address_type residential | commercial)",
+    "authentication carries only force_password_reset; passwords never leave BigCommerce"
+  ],
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "live:bigcommerce-test:2026-09-21",
+      "origin": "reference",
+      "diff": [
+        "Phase 7.6: full field map from the live trial store; 7.3 consent from the subscribers companion"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "path": "email",
+      "canon": "email",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "first_name",
+      "canon": "firstName",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "last_name",
+      "canon": "lastName",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "phone",
+      "canon": "phone",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "addresses",
+      "canon": "address",
+      "transform": "address_from",
+      "args": {
+        "withName": false,
+        "fields": {
+          "company": "company",
+          "address1": "address1",
+          "address2": "address2",
+          "city": "city",
+          "province": "state_or_province",
+          "country": "country_code",
+          "zip": "postal_code",
+          "phone": "phone",
+          "firstName": "first_name",
+          "lastName": "last_name",
+          "label": "address_type",
+          "sourceId": "id"
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "addresses",
+      "canon": "addresses",
+      "transform": "address_from",
+      "args": {
+        "withName": false,
+        "fields": {
+          "company": "company",
+          "address1": "address1",
+          "address2": "address2",
+          "city": "city",
+          "province": "state_or_province",
+          "country": "country_code",
+          "zip": "postal_code",
+          "phone": "phone",
+          "firstName": "first_name",
+          "lastName": "last_name",
+          "label": "address_type",
+          "sourceId": "id"
+        },
+        "each": true
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "address_count",
+      "canon": "sourceExtension.bigcommerce.address_count",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "email",
+      "canon": "marketingConsent.email",
+      "transform": "marketing_consent",
+      "args": {
+        "channel": "email",
+        "lookup": {
+          "in": "subscribers",
+          "key": "email",
+          "presence": true,
+          "at": "date_created"
+        },
+        "optedIn": [
+          "listed"
+        ]
+      },
+      "confidence": "verified-live",
+      "notes": "7.3: listed in /subscribers = stated; opted_in only with the subscriber date_created; evidence only."
+    },
+    {
+      "path": "accepts_product_review_abandoned_cart_emails",
+      "canon": "sourceExtension.bigcommerce.accepts_product_review_abandoned_cart_emails",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "consent",
+      "canon": "sourceExtension.bigcommerce.consent",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "_consent",
+      "canon": "sourceExtension.bigcommerce._consent",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "identity.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "date_created",
+      "canon": "identity.timestamps",
+      "transform": "timestamps",
+      "confidence": "verified-live",
+      "inputs": [
+        "date_created",
+        "date_modified"
+      ]
+    },
+    {
+      "path": "company",
+      "canon": "company.name",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "customer_group_id",
+      "canon": "group.ref",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "notes",
+      "canon": "note",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "tax_exempt_category",
+      "canon": "taxExempt",
+      "transform": "is_set",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "tax_exempt_category",
+      "canon": "sourceExtension.bigcommerce.tax_exempt_category",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "store_credit_amounts",
+      "canon": "sourceExtension.bigcommerce.store_credit_amounts",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "form_fields",
+      "canon": "sourceExtension.bigcommerce.form_fields",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "origin_channel_id",
+      "canon": "sourceExtension.bigcommerce.origin_channel_id",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "channel_ids",
+      "canon": "sourceExtension.bigcommerce.channel_ids",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "authentication",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "registration_ip_address",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "IP — personal data"
+    }
+  ]
+}

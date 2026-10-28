@@ -1,0 +1,983 @@
+{
+  "schemaVersion": 1,
+  "id": "prestashop.products.webservice.v1",
+  "displayName": "PrestaShop Products (Webservice, 9.0.x)",
+  "provenance": "native-platform",
+  "medium": "json-api",
+  "platformHint": "prestashop",
+  "entity": "products",
+  "version": "ps-9.0.x",
+  "signatures": [
+    {
+      "kind": "json-shape",
+      "requiredPaths": [
+        "id",
+        "reference",
+        "id_manufacturer",
+        "id_category_default",
+        "associations"
+      ],
+      "hintPaths": [
+        "id_default_combination",
+        "link_rewrite",
+        "associations.combinations",
+        "associations.product_features",
+        "product_type",
+        "id_tax_rules_group",
+        "meta_title",
+        "wholesale_price"
+      ]
+    }
+  ],
+  "structure": {
+    "unit": "product",
+    "variants": {
+      "companion": "variations",
+      "keyedBy": "id",
+      "childParentPath": "id_product",
+      "selfWhenNone": true,
+      "sameEntity": false
+    },
+    "companions": {
+      "variations": {
+        "route": "GET /api/combinations?display=full&filter[id_product]=<id>",
+        "keyedByParent": false,
+        "note": "PrestaShop resource: combinations (aka product attributes). Flat array; children reference the parent via id_product; per-combination reference/ean13/upc/mpn/isbn plus price/weight DELTAS (unit_price_impact) — the effective price is parent + delta"
+      },
+      "stock": {
+        "route": "GET /api/stock_availables?display=full",
+        "keyedByParent": false,
+        "note": "one row per (id_product, id_product_attribute, id_shop). Product-level row uses id_product_attribute = 0; combination stock uses id_product_attribute = <combination id>"
+      },
+      "specificPrices": {
+        "route": "GET /api/specific_prices?display=full",
+        "keyedByParent": false,
+        "note": "per-product / per-combination discounts + quantity tiers (from_quantity + reduction/reduction_type)"
+      },
+      "productFeatures": {
+        "route": "GET /api/product_features?display=full",
+        "keyedByParent": false,
+        "note": "descriptive attributes (Composition, Property, …) — multilingual name"
+      },
+      "productFeatureValues": {
+        "route": "GET /api/product_feature_values?display=full",
+        "keyedByParent": false,
+        "note": "the assignable values of each feature (Polyester, Wool, Ceramic, …) — multilingual value"
+      },
+      "productOptions": {
+        "route": "GET /api/product_options?display=full",
+        "keyedByParent": false,
+        "note": "variation axes (Size, Color, Dimension, Paper Type) — multilingual name + is_color_group"
+      },
+      "productOptionValues": {
+        "route": "GET /api/product_option_values?display=full",
+        "keyedByParent": false,
+        "note": "the option values referenced by combinations.associations.product_option_values[].id; carries id_attribute_group linking back to product_options"
+      },
+      "categories": {
+        "route": "GET /api/categories?display=full",
+        "keyedByParent": false,
+        "note": "hierarchy (id_parent, level_depth); multilingual name/link_rewrite"
+      },
+      "manufacturers": {
+        "route": "GET /api/manufacturers?display=full",
+        "keyedByParent": false,
+        "note": "id → name; brand as a first-class entity"
+      },
+      "languages": {
+        "route": "GET /api/languages?display=full",
+        "keyedByParent": false,
+        "note": "the shop's languages; id ↔ locale (BCP-47, e.g. en-US) ↔ iso_code"
+      }
+    }
+  },
+  "invariantsExpected": [
+    "every multilingual field is [{ id, value }] — id is the language id (join through the languages companion), value is a string (may be '')",
+    "combinations are stored as a separate resource, not nested in the product; each combination has id_product = parent id",
+    "combination.price is a DELTA on top of the parent price (unit_price_impact); combination.weight is a DELTA too",
+    "stock lives in stock_availables keyed by (id_product, id_product_attribute); product-level row uses id_product_attribute = 0",
+    "id_manufacturer = 0 means 'no brand' (not a real id) — never resolved into a name",
+    "product_type ∈ { standard, combinations, virtual, pack } — a pack carries its composition under associations.product_bundle[] (id, id_product_attribute, quantity)",
+    "PrestaShop weight unit is kg (shop-configurable but 'kg' by default and unchanged on the demo instance)",
+    "associations.product_features[].{id, id_feature_value} pair a feature (name) with one of its declared values — resolved via two companions",
+    "the SEO-friendly URL slug is link_rewrite (multilingual) — the canonical URL is built from category + slug"
+  ],
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "live:prestashop-test:2026-09-21",
+      "origin": "reference",
+      "diff": [
+        "Products connector — full field map from the local instance (PS 9.0.3, demo catalogue + seeded identifiers + one quantity tier); models the Shopware entry (variants companion, inheritance-safe parent fields, multilingual joins)"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "path": "name",
+      "canon": "title",
+      "transform": "first_lang_value",
+      "confidence": "verified-live",
+      "source": "live:prestashop-test:2026-09-21",
+      "notes": "Multilingual [{ id, value }] → the first non-empty value; per-locale strings are re-emitted under translations[locale]."
+    },
+    {
+      "path": "link_rewrite",
+      "canon": "handle",
+      "transform": "first_lang_value",
+      "confidence": "verified-live",
+      "notes": "Multilingual URL slug (per language); the first non-empty value is the canon handle."
+    },
+    {
+      "path": "id",
+      "canon": "identity.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "link_rewrite",
+      "canon": "identity.slug",
+      "transform": "first_lang_value",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "date_add",
+      "inputs": [
+        "date_add",
+        "date_upd"
+      ],
+      "canon": "identity.timestamps",
+      "transform": "timestamps",
+      "confidence": "verified-live",
+      "notes": "Shop-local, no zone (kept verbatim by the timestamps transform)."
+    },
+    {
+      "path": "description",
+      "canon": "bodyHtml",
+      "transform": "first_lang_value",
+      "confidence": "verified-live",
+      "consumes": [],
+      "notes": "Multilingual HTML; the first non-empty value is the canon body; per-locale strings under translations[locale]."
+    },
+    {
+      "path": "meta_title",
+      "canon": "seoTitle",
+      "transform": "first_lang_value",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "meta_description",
+      "canon": "seoDescription",
+      "transform": "first_lang_value",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_manufacturer",
+      "canon": "vendor",
+      "transform": "lookup",
+      "args": {
+        "in": "manufacturers",
+        "key": "id",
+        "pick": "name"
+      },
+      "confidence": "verified-live",
+      "notes": "id_manufacturer = 0 → 'no brand'; the lookup naturally yields undefined and vendor stays empty."
+    },
+    {
+      "path": "product_type",
+      "canon": "kind",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "standard": "simple",
+          "combinations": "variable",
+          "virtual": "digital",
+          "pack": "bundle"
+        },
+        "default": "simple"
+      },
+      "confidence": "verified-live",
+      "notes": "The full PrestaShop kind (standard / combinations / virtual / pack) → canon kind. Pack composition is preserved in sourceExtension."
+    },
+    {
+      "path": "active",
+      "canon": "status",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "1": "active",
+          "0": "draft",
+          "true": "active",
+          "false": "draft"
+        },
+        "default": "draft"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "active",
+      "canon": "published",
+      "transform": "bool",
+      "args": {
+        "default": true
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "associations.categories",
+      "canon": "categories",
+      "transform": "lookup",
+      "args": {
+        "in": "categories",
+        "key": "id",
+        "multiple": true,
+        "pick": "name"
+      },
+      "confidence": "verified-live",
+      "notes": "Category NAMES resolved via the categories companion (multilingual name → first value). Full hierarchical path (Root > … > Leaf) would require walking id_parent — declared as a canon-evolution gap and preserved verbatim in sourceExtension."
+    },
+    {
+      "path": "id",
+      "canon": "options",
+      "transform": "prestashop_product_options",
+      "confidence": "verified-live",
+      "consumes": [
+        "associations.combinations"
+      ],
+      "notes": "Axis of variation derived by walking every combination of this product (companions.variations) through the two companion lookups productOptionValues (id → axis id + value label) and productOptions (axis id → axis label). Ordered by axis position, then by value position — same rule Shopware's options_from_settings applies."
+    },
+    {
+      "path": "associations.product_features",
+      "canon": "attributesRich[]",
+      "transform": "lookup",
+      "args": {
+        "in": "productFeatureValues",
+        "key": "id",
+        "multiple": true,
+        "fields": {
+          "name": {
+            "path": "id_feature",
+            "ref": {
+              "in": "productFeatures",
+              "key": "id",
+              "pick": "name"
+            }
+          },
+          "values": {
+            "path": "value",
+            "as": "first_value"
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "Descriptive product features (Composition = Polyester, Property = Ceramic, …). Each association carries the feature-value id; the value's id_feature resolves the feature's name through the productFeatures companion."
+    },
+    {
+      "path": "meta_keywords",
+      "canon": "sourceExtension.prestashop.meta_keywords",
+      "transform": "first_lang_value",
+      "confidence": "verified-live",
+      "notes": "Raw multilingual keywords copy for round-trip; canon tags stores only the first-language value."
+    },
+    {
+      "path": "translations",
+      "inputs": [
+        "name",
+        "description",
+        "meta_title",
+        "meta_description",
+        "link_rewrite"
+      ],
+      "canon": "sourceExtension.prestashop.i18n",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "Multilingual bag preserved verbatim; each source field is [{ id, value }] where id joins the languages companion for the locale. Full CanonTranslation lift is canon-evolution-open (needs a multi-input translation builder — declared as a loss below)."
+    },
+    {
+      "path": "associations.product_features",
+      "canon": "sourceExtension.prestashop.product_features",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "Raw pairs { id, id_feature_value } — the resolved canon attributesRich is above."
+    },
+    {
+      "path": "associations.combinations",
+      "canon": "sourceExtension.prestashop.combination_refs",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "Ordered list of combination ids as declared on the product; the variants[] output is built from the combinations companion via the structure declaration."
+    },
+    {
+      "path": "associations.product_bundle",
+      "canon": "sourceExtension.prestashop.product_bundle",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "Pack composition [{ id, id_product_attribute, quantity }] — canon bundleComponents is canon-evolution-open (needs the bundle_components transform hooked to this shape); preserved verbatim for round-trip."
+    },
+    {
+      "path": "associations.stock_availables",
+      "canon": "sourceExtension.prestashop.stock_availables",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "Ids into the stock_availables companion (with id_product_attribute per row)."
+    },
+    {
+      "path": "associations.images",
+      "canon": "sourceExtension.prestashop.image_ids",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "Image resource ids; canon images (url + alt) require the images companion which PrestaShop 9.0.3 exposes only as binary streams (the JSON index returns HTTP 500 — README quirk). Preserved as ids only; canon-evolution-open."
+    },
+    {
+      "path": "associations.categories",
+      "canon": "sourceExtension.prestashop.category_ids",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_category_default",
+      "canon": "sourceExtension.prestashop.id_category_default",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_default_combination",
+      "canon": "sourceExtension.prestashop.id_default_combination",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "0 = no default combination (simple / virtual / pack)."
+    },
+    {
+      "path": "id_tax_rules_group",
+      "canon": "meta:loss_prestashop_tax_rules_group",
+      "transform": "copy_present",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "notes": "Multi-country tax rules group — canon tax model is per-variant taxable/taxClass; the rules matrix has no canon equivalent."
+    },
+    {
+      "path": "id_shop_default",
+      "canon": "sourceExtension.prestashop.id_shop_default",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_supplier",
+      "canon": "sourceExtension.prestashop.id_supplier",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "supplier_reference",
+      "canon": "sourceExtension.prestashop.supplier_reference",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "wholesale_price",
+      "canon": "sourceExtension.prestashop.wholesale_price",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "Product-level cost; variants[].cost is set per combination when non-zero."
+    },
+    {
+      "path": "ecotax",
+      "canon": "sourceExtension.prestashop.ecotax",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "unity",
+      "inputs": [
+        "unity",
+        "unit_price",
+        "unit_price_ratio"
+      ],
+      "canon": "sourceExtension.prestashop.unit_pricing",
+      "transform": "copy_present",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "notes": "Selling unit / per-unit price ratio — canon has no unit pricing."
+    },
+    {
+      "path": "additional_shipping_cost",
+      "canon": "sourceExtension.prestashop.additional_shipping_cost",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "condition",
+      "canon": "sourceExtension.prestashop.condition",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "new / used / refurbished — canon-evolution-open."
+    },
+    {
+      "path": "visibility",
+      "canon": "visibility.featured",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "both": false,
+          "catalog": true,
+          "search": false,
+          "none": false
+        },
+        "default": false
+      },
+      "confidence": "verified-live",
+      "notes": "PrestaShop 'visibility' is where the product appears (both, catalog, search, none). Not really 'featured'; kept in sourceExtension too."
+    },
+    {
+      "path": "visibility",
+      "canon": "sourceExtension.prestashop.visibility",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "available_for_order",
+      "canon": "sourceExtension.prestashop.available_for_order",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "show_price",
+      "canon": "sourceExtension.prestashop.show_price",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "on_sale",
+      "canon": "sourceExtension.prestashop.on_sale",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "online_only",
+      "canon": "sourceExtension.prestashop.online_only",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "is_virtual",
+      "canon": "sourceExtension.prestashop.is_virtual",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "cache_is_pack",
+      "canon": "sourceExtension.prestashop.cache_is_pack",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "cache_has_attachments",
+      "canon": "sourceExtension.prestashop.cache_has_attachments",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "cache_default_attribute",
+      "canon": "sourceExtension.prestashop.cache_default_attribute",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "state",
+      "canon": "sourceExtension.prestashop.state",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "indexed",
+      "canon": "sourceExtension.prestashop.indexed",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "redirect_type",
+      "inputs": [
+        "redirect_type",
+        "id_type_redirected"
+      ],
+      "canon": "sourceExtension.prestashop.redirect",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "show_condition",
+      "canon": "sourceExtension.prestashop.show_condition",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "advanced_stock_management",
+      "canon": "sourceExtension.prestashop.advanced_stock_management",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "pack_stock_type",
+      "canon": "sourceExtension.prestashop.pack_stock_type",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "quantity",
+      "canon": "sourceExtension.prestashop.quantity",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "Cached product-level total; the source-of-truth stock is stock_availables."
+    },
+    {
+      "path": "quantity_discount",
+      "canon": "sourceExtension.prestashop.quantity_discount",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "customizable",
+      "inputs": [
+        "customizable",
+        "text_fields",
+        "uploadable_files"
+      ],
+      "canon": "sourceExtension.prestashop.customizable",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "delivery_in_stock",
+      "inputs": [
+        "delivery_in_stock",
+        "delivery_out_stock",
+        "additional_delivery_times"
+      ],
+      "canon": "sourceExtension.prestashop.delivery_messages",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "available_now",
+      "canon": "sourceExtension.prestashop.available_now",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "available_later",
+      "canon": "sourceExtension.prestashop.available_later",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "description_short",
+      "canon": "sourceExtension.prestashop.description_short",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "available_date",
+      "canon": "sourceExtension.prestashop.available_date",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "low_stock_threshold",
+      "canon": "sourceExtension.prestashop.low_stock_threshold",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "low_stock_alert",
+      "canon": "sourceExtension.prestashop.low_stock_alert",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "type",
+      "canon": "sourceExtension.prestashop.type",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "Legacy 'type' field ('simple'); the real classification is product_type."
+    },
+    {
+      "path": "new",
+      "canon": "sourceExtension.prestashop.new",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "position_in_category",
+      "canon": "sourceExtension.prestashop.position_in_category",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "manufacturer_name",
+      "canon": "sourceExtension.prestashop.manufacturer_name_cached",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "Cached manufacturer name (false when no brand); the resolved canon vendor is the join above."
+    },
+    {
+      "path": "id_default_image",
+      "canon": "sourceExtension.prestashop.id_default_image",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "location",
+      "canon": "sourceExtension.prestashop.location",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "Warehouse location string (product-level fallback)."
+    },
+    {
+      "path": "translations",
+      "canon": "meta:loss_prestashop_translations",
+      "transform": "ignore",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "notes": "Canon translations[locale] with joined-locale keys (en-US, fr) requires a multi-input translation builder that also joins the languages companion — canon-evolution-open. The multilingual arrays remain in sourceExtension.prestashop.i18n and each per-locale value is reachable there."
+    },
+
+    {
+      "path": "id",
+      "canon": "sourceExtension.prestashop.id",
+      "scope": "variant",
+      "when": "child",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "reference",
+      "canon": "variants[].sku",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "Combination reference; falls back to the parent reference on a self-variant (source is the product)."
+    },
+    {
+      "path": "supplier_reference",
+      "canon": "sourceExtension.prestashop.supplier_reference",
+      "scope": "variant",
+      "when": "child",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "ean13",
+      "canon": "variants[].barcode",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "EAN-13 as the untyped variant barcode (canon 6.1 A5); the typed split is identifiers.ean below. On a self-variant the parent ean13 is used."
+    },
+    {
+      "path": "ean13",
+      "canon": "variants[].identifiers.ean",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "P3: typed EAN per variant."
+    },
+    {
+      "path": "upc",
+      "canon": "variants[].identifiers.upc",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "isbn",
+      "canon": "variants[].identifiers.isbn",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "mpn",
+      "canon": "variants[].identifiers.mpn",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "weight",
+      "canon": "variants[].grams",
+      "transform": "weight_to_grams",
+      "args": {
+        "unit": "kg"
+      },
+      "confidence": "verified-live",
+      "notes": "PrestaShop weight is kg by default. On a combination this is a DELTA (unit_price_impact-style) — recorded as-is; parent-plus-delta arithmetic is a canon-evolution gap."
+    },
+    {
+      "path": "price",
+      "canon": "variants[].price",
+      "when": "self",
+      "transform": "money",
+      "confidence": "verified-live",
+      "notes": "Self-variant (simple / virtual / pack) uses the product price directly."
+    },
+    {
+      "path": "id",
+      "canon": "variants[].price",
+      "when": "child",
+      "transform": "parent_field",
+      "args": {
+        "field": "price",
+        "as": "money"
+      },
+      "confidence": "verified-live",
+      "notes": "Combination variant: canon price = parent product price. The combination's own price is a DELTA (unit_price_impact); the delta is preserved verbatim in sourceExtension.prestashop.price_delta so a consumer can rebuild parent + delta."
+    },
+    {
+      "path": "price",
+      "canon": "sourceExtension.prestashop.price_delta",
+      "scope": "variant",
+      "when": "child",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "Per-combination price delta (unit_price_impact); canon price on the variant is the parent's price (see above)."
+    },
+    {
+      "path": "wholesale_price",
+      "canon": "variants[].cost",
+      "when": "child",
+      "transform": "money",
+      "confidence": "verified-live",
+      "notes": "Per-combination wholesale cost when non-zero; falls back to the product-level wholesale_price (in sourceExtension) when 0."
+    },
+    {
+      "path": "id",
+      "canon": "variants[].inventoryQty",
+      "when": "self",
+      "transform": "lookup",
+      "args": {
+        "in": "stock",
+        "key": "id_product",
+        "where": {
+          "id_product_attribute": 0
+        },
+        "pick": "quantity"
+      },
+      "confidence": "verified-live",
+      "notes": "Self-variant stock: the product-level row of stock_availables (id_product = source.id AND id_product_attribute = 0)."
+    },
+    {
+      "path": "id",
+      "canon": "variants[].inventoryQty",
+      "when": "child",
+      "transform": "lookup",
+      "args": {
+        "in": "stock",
+        "key": "id_product_attribute",
+        "pick": "quantity"
+      },
+      "confidence": "verified-live",
+      "notes": "Combination stock: stock_availables row keyed by id_product_attribute = combination id (unique across products)."
+    },
+    {
+      "path": "minimal_quantity",
+      "canon": "variants[].stockPolicy.soldIndividually",
+      "transform": "equals_map",
+      "args": {
+        "value": 1,
+        "then": false,
+        "else": false
+      },
+      "confidence": "verified-live",
+      "notes": "PrestaShop tracks a minimum order quantity, not 'sell individually' — always emitted as false; the raw value is preserved in sourceExtension."
+    },
+    {
+      "path": "minimal_quantity",
+      "canon": "sourceExtension.prestashop.minimal_quantity",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "variants[].stockPolicy.manageStock",
+      "transform": "constant",
+      "args": {
+        "value": true
+      },
+      "confidence": "verified-live",
+      "notes": "PrestaShop always tracks stock through stock_availables."
+    },
+    {
+      "path": "id",
+      "canon": "variants[].stockPolicy.backorders",
+      "when": "self",
+      "transform": "lookup",
+      "args": {
+        "in": "stock",
+        "key": "id_product",
+        "where": {
+          "id_product_attribute": 0
+        },
+        "pick": "out_of_stock",
+        "map": {
+          "0": "no",
+          "1": "yes",
+          "2": "no"
+        },
+        "default": "no"
+      },
+      "confidence": "verified-live",
+      "notes": "out_of_stock policy from stock_availables: 0 = deny order (no), 1 = allow order (yes), 2 = default (denyOrder on the demo instance)."
+    },
+    {
+      "path": "id",
+      "canon": "variants[].stockPolicy.backorders",
+      "when": "child",
+      "transform": "lookup",
+      "args": {
+        "in": "stock",
+        "key": "id_product_attribute",
+        "pick": "out_of_stock",
+        "map": {
+          "0": "no",
+          "1": "yes",
+          "2": "no"
+        },
+        "default": "no"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_tax_rules_group",
+      "canon": "variants[].taxable",
+      "when": "self",
+      "transform": "if_gt",
+      "args": {
+        "than": 0,
+        "then": true,
+        "else": false
+      },
+      "confidence": "verified-live",
+      "notes": "id_tax_rules_group = 0 means 'no tax'; any other id means taxable through the shop's rules."
+    },
+    {
+      "path": "id",
+      "canon": "variants[].taxable",
+      "when": "child",
+      "transform": "parent_field",
+      "args": {
+        "field": "id_tax_rules_group",
+        "as": "if_gt",
+        "asArgs": {
+          "than": 0,
+          "then": true,
+          "else": false
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "Tax group lives on the product; combinations inherit."
+    },
+    {
+      "path": "location",
+      "canon": "sourceExtension.prestashop.location",
+      "scope": "variant",
+      "when": "child",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "Per-combination warehouse location string."
+    },
+    {
+      "path": "unit_price_impact",
+      "canon": "sourceExtension.prestashop.unit_price_impact",
+      "scope": "variant",
+      "when": "child",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "ecotax",
+      "canon": "sourceExtension.prestashop.ecotax",
+      "scope": "variant",
+      "when": "child",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "default_on",
+      "canon": "sourceExtension.prestashop.default_on",
+      "scope": "variant",
+      "when": "child",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "'1' on the parent's default combination (matches id_default_combination on the product)."
+    },
+    {
+      "path": "available_date",
+      "canon": "sourceExtension.prestashop.available_date",
+      "scope": "variant",
+      "when": "child",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "available_now",
+      "canon": "sourceExtension.prestashop.available_now",
+      "scope": "variant",
+      "when": "child",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "available_later",
+      "canon": "sourceExtension.prestashop.available_later",
+      "scope": "variant",
+      "when": "child",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "low_stock_threshold",
+      "canon": "sourceExtension.prestashop.low_stock_threshold",
+      "scope": "variant",
+      "when": "child",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "low_stock_alert",
+      "canon": "sourceExtension.prestashop.low_stock_alert",
+      "scope": "variant",
+      "when": "child",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "associations.product_option_values",
+      "canon": "sourceExtension.prestashop.option_value_ids",
+      "scope": "variant",
+      "when": "child",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "notes": "Ordered option-value ids on this combination — preserved verbatim so a re-import into PrestaShop keeps the exact source ids. The resolved (axis, value) pair — used by every serializer — is filled by the entry below."
+    },
+    {
+      "path": "associations.product_option_values",
+      "canon": "variants[].optionValues",
+      "when": "child",
+      "transform": "prestashop_variant_option_values",
+      "confidence": "verified-live",
+      "notes": "Each id resolved via productOptionValues (id_attribute_group + multilingual name) → productOptions (multilingual name) → aligned to the parent product.options[] order (already populated by the parent-scope entry above)."
+    },
+    {
+      "path": "associations.images",
+      "canon": "sourceExtension.prestashop.image_ids",
+      "scope": "variant",
+      "when": "child",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_product",
+      "canon": null,
+      "scope": "variant",
+      "when": "child",
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "Structural link (structure.variants.childParentPath)."
+    }
+  ]
+}

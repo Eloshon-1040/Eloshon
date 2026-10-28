@@ -1,0 +1,8 @@
+Type,SKU,Name,Published,Visibility in catalog,Short description,Description,In stock?,Stock,Regular price,Sale price,Tax status,Virtual,Weight (kg),Length (cm),Width (cm),Height (cm),Categories,Tags,Images,Parent,Attribute 1 name,Attribute 1 value(s),Attribute 1 visible,Attribute 1 global,Attribute 2 name,Attribute 2 value(s),Attribute 2 visible,Attribute 2 global,Attribute 3 name,Attribute 3 value(s),Attribute 3 visible,Attribute 3 global,"GTIN, UPC, EAN, or ISBN",Brands
+variable,HC-100-BL-2470,Housse de coussin en lin,1,visible,,Housse 45 x 45 cm en lin lavé.,,,,,,,,,,,Maison > Textile,,"https://shop.example/img/housse-bleu-1.jpg, https://shop.example/img/housse-bleu-2.jpg, https://shop.example/img/housse-vert-1.jpg",,Couleur,"Bleu, Vert",1,1,,,,,,,,,,Lin & Co
+variation,HC-100-BL,Housse de coussin en lin - Bleu,1,,,,1,,29.9,24.9,taxable,no,0.25,,,,,,https://shop.example/img/housse-bleu-1.jpg,HC-100-BL-2470,Couleur,Bleu,,,,,,,,,,,3701234567906,
+variation,,Housse de coussin en lin - Vert,1,,,,1,,24.9,,taxable,no,0.25,,,,,,https://shop.example/img/housse-vert-1.jpg,HC-100-BL-2470,Couleur,Vert,,,,,,,,,,,,
+variable,POT-200,Pot en grès émaillé,1,visible,,"Pot émaillé, résistant au gel.",,,,,,,,,,,Jardin > Pots,,"https://shop.example/img/pot-1.jpg, https://shop.example/img/pot-2.jpg, https://cdn.example/pot-3.jpg",,Taille,"S, L",1,1,,,,,,,,,,Terre Cuite
+variation,POT-200-S,Pot en grès émaillé - S,1,,,,1,,12.5,,taxable,no,1.2,,,,,,,POT-200,Taille,S,,,,,,,,,,,,
+variation,POT-200-L,Pot en grès émaillé - L,1,,,,1,,18,,taxable,no,1.2,,,,,,,POT-200,Taille,L,,,,,,,,,,,,
+simple,BG-310,Bougie parfumée cèdre,0,visible,,"Bougie 180 g, cire végétale.",1,,12.9,,taxable,no,0.18,,,,Maison > Bougies,,https://shop.example/img/bougie.jpg,,,,,,,,,,,,,,,

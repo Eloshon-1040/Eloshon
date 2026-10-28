@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "sourceFormat": "woocommerce.orders.rest.v1",
+  "targetFormat": "shopify_orders",
+  "counts": {
+    "inputUnits": 2,
+    "outputUnits": 2,
+    "failedUnits": 0,
+    "outputRows": 3
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_per_tax"
+    },
+    {
+      "code": "loss_coupons_as_lines"
+    },
+    {
+      "code": "loss_shopify_order_rows",
+      "params": {
+        "orders": 1
+      }
+    },
+    {
+      "code": "loss_shopify_order_numbering",
+      "params": {
+        "orders": 2,
+        "min": "32",
+        "max": "33"
+      }
+    },
+    {
+      "code": "loss_shopify_payments_detail",
+      "params": {
+        "count": 2
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false,
+  "numberingReport": {
+    "orders": 2,
+    "sourceSequence": {
+      "min": "32",
+      "max": "33",
+      "numeric": true,
+      "gaps": [],
+      "duplicates": []
+    },
+    "invoices": {
+      "withNumber": 0,
+      "withoutNumber": 2,
+      "gaps": []
+    },
+    "targetPolicy": "native-sequence",
+    "warnings": []
+  }
+}

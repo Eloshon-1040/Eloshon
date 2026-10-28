@@ -1,0 +1,2957 @@
+[
+  {
+    "handle": "ac-infinity-a8-200mm",
+    "title": "AC Infinity A8 - 200mm",
+    "bodyHtml": "<p>Ventilateur de conduit optimal pour des box de 150x200x200cm et pour des espaces interiurs, la maison etc...</p>\n",
+    "vendor": "AC Infinity",
+    "productType": "",
+    "tags": [
+      "200mm",
+      "extracteur",
+      "ventilation"
+    ],
+    "status": "active",
+    "categories": [
+      "Ventilation > Extracteurs"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "AC-INFA8",
+        "price": 150,
+        "compareAtPrice": 200,
+        "cost": null,
+        "barcode": "06735597626425",
+        "grams": 14000,
+        "lengthCm": 45,
+        "widthCm": 24,
+        "heightCm": 56,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 6,
+        "imageSrc": "http://localhost:8881/wp-content/uploads/2026/09/logo-levis.jpg",
+        "taxClass": "",
+        "shippingClass": "",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "no",
+          "soldIndividually": false
+        },
+        "provenance": {
+          "sku": {
+            "platform": "woocommerce",
+            "sourceField": "sku",
+            "sourceValue": "AC-INFA8",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "200",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "150",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "woocommerce",
+            "sourceField": "global_unique_id",
+            "sourceValue": "06735597626425",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "woocommerce",
+            "sourceField": "weight",
+            "sourceValue": "14",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "lengthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.length",
+            "sourceValue": "45",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "widthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.width",
+            "sourceValue": "24",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "heightCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.height",
+            "sourceValue": "56",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "woocommerce",
+            "sourceField": "virtual",
+            "sourceValue": false,
+            "transform": "bool_not",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "woocommerce",
+            "sourceField": "tax_status",
+            "sourceValue": "taxable",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "taxClass": {
+            "platform": "woocommerce",
+            "sourceField": "tax_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "shippingClass": {
+            "platform": "woocommerce",
+            "sourceField": "shipping_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "stockPolicy": {
+            "platform": "woocommerce",
+            "sourceField": "manage_stock + backorders + sold_individually",
+            "sourceValue": true,
+            "transform": "stock_policy",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "woocommerce",
+            "sourceField": "stock_quantity",
+            "sourceValue": 6,
+            "transform": "int",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "woocommerce",
+            "sourceField": "images",
+            "transform": "first_image_src",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "woocommerce",
+            "sourceField": "attributes",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "http://localhost:8881/wp-content/uploads/2026/09/logo-levis.jpg",
+        "position": 1,
+        "alt": "le logo de levis",
+        "id": 28
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "ac-infinity-a8-200mm",
+      "sourceId": "27",
+      "timestamps": {
+        "created": "2026-09-20T20:57:14.000Z",
+        "modified": "2026-09-20T20:57:15.000Z"
+      }
+    },
+    "kind": "simple",
+    "visibility": {
+      "featured": false,
+      "catalogVisibility": "visible"
+    },
+    "shortDescription": "<p>Avec cet extracteur d&#8217;air votre salle de bain sera optimale pour tout ventiler toute l&#8217;année et en silence</p>\n",
+    "attributesRich": [
+      {
+        "name": "Diamètre",
+        "values": [
+          "150",
+          "200",
+          "300"
+        ],
+        "position": 0,
+        "visible": true,
+        "forVariation": false
+      },
+      {
+        "name": "Couleur",
+        "values": [
+          "noir",
+          "blanc",
+          "gris"
+        ],
+        "position": 1,
+        "visible": true,
+        "forVariation": false
+      }
+    ],
+    "merchandising": {
+      "related": [
+        "13"
+      ],
+      "menuOrder": 0
+    },
+    "sourceExtension": {
+      "woocommerce": {
+        "brands": [
+          "AC Infinity"
+        ],
+        "downloadable": false,
+        "permalink": "http://localhost:8881/product/ac-infinity-a8-200mm/",
+        "parent_id": 0,
+        "purchasable": true,
+        "total_sales": 0,
+        "average_rating": 0,
+        "rating_count": 0,
+        "reviews_allowed": true,
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "has_options": false,
+        "post_password": "",
+        "low_stock_amount": 10,
+        "stock_status": "instock",
+        "backorders_allowed": false,
+        "backordered": false,
+        "shipping_class_id": 0
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "woocommerce",
+        "sourceField": "total_sales",
+        "sourceValue": 0,
+        "reason": "no-canon-field",
+        "note": "Sales counter — canon has no analytics field."
+      },
+      {
+        "platform": "woocommerce",
+        "sourceField": "average_rating",
+        "sourceValue": "0.00",
+        "reason": "no-canon-field",
+        "note": "Reviews/ratings: promotable concept."
+      },
+      {
+        "platform": "woocommerce",
+        "sourceField": "rating_count",
+        "sourceValue": 0,
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "woocommerce",
+        "sourceField": "low_stock_amount",
+        "sourceValue": 10,
+        "reason": "no-canon-field",
+        "note": "Low-stock threshold: candidate for stockPolicy."
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "woocommerce",
+        "sourceField": "name",
+        "sourceValue": "AC Infinity A8 - 200mm",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "woocommerce",
+        "sourceField": "slug",
+        "sourceValue": "ac-infinity-a8-200mm",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "woocommerce",
+        "sourceField": "slug",
+        "sourceValue": "ac-infinity-a8-200mm",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "woocommerce",
+        "sourceField": "id",
+        "sourceValue": 27,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.timestamps": {
+        "platform": "woocommerce",
+        "sourceField": "date_created_gmt + date_modified_gmt",
+        "sourceValue": "2026-09-20T20:57:14",
+        "transform": "timestamps",
+        "method": "exact"
+      },
+      "kind": {
+        "platform": "woocommerce",
+        "sourceField": "type",
+        "sourceValue": "simple",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status": {
+        "platform": "woocommerce",
+        "sourceField": "status",
+        "sourceValue": "publish",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "published": {
+        "platform": "woocommerce",
+        "sourceField": "status",
+        "sourceValue": "publish",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "visibility.featured": {
+        "platform": "woocommerce",
+        "sourceField": "featured",
+        "sourceValue": false,
+        "transform": "bool",
+        "method": "exact"
+      },
+      "visibility.catalogVisibility": {
+        "platform": "woocommerce",
+        "sourceField": "catalog_visibility",
+        "sourceValue": "visible",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "woocommerce",
+        "sourceField": "description",
+        "sourceValue": "<p>Ventilateur de conduit optimal pour des box de 150x200x200cm et pour des espaces interiurs, la maison etc...</p>\n",
+        "transform": "html",
+        "method": "exact"
+      },
+      "shortDescription": {
+        "platform": "woocommerce",
+        "sourceField": "short_description",
+        "sourceValue": "<p>Avec cet extracteur d&#8217;air votre salle de bain sera optimale pour tout ventiler toute l&#8217;année et en silence</p>\n",
+        "transform": "html",
+        "method": "exact"
+      },
+      "vendor": {
+        "platform": "woocommerce",
+        "sourceField": "brands",
+        "transform": "name_of_first",
+        "method": "exact"
+      },
+      "tags": {
+        "platform": "woocommerce",
+        "sourceField": "tags",
+        "transform": "names_of",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "woocommerce",
+        "sourceField": "categories",
+        "transform": "category_paths_from_terms",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "woocommerce",
+        "sourceField": "images",
+        "transform": "images_from_objects",
+        "method": "exact"
+      },
+      "attributesRich": {
+        "platform": "woocommerce",
+        "sourceField": "attributes",
+        "transform": "attributes_rich",
+        "method": "exact"
+      },
+      "options": {
+        "platform": "woocommerce",
+        "sourceField": "attributes",
+        "transform": "options_from_attributes",
+        "method": "exact"
+      },
+      "merchandising.related": {
+        "platform": "woocommerce",
+        "sourceField": "related_ids",
+        "transform": "ids_to_strings",
+        "method": "exact"
+      },
+      "merchandising.menuOrder": {
+        "platform": "woocommerce",
+        "sourceField": "menu_order",
+        "sourceValue": 0,
+        "transform": "int",
+        "method": "exact"
+      },
+      "metafields": {
+        "platform": "woocommerce",
+        "sourceField": "meta_data",
+        "transform": "metafields_from_pairs",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "ac-infinity-a7-150mm",
+    "title": "AC Infinity A7 - 150mm",
+    "bodyHtml": "<p>Extracteur d'air optimal pour une box de 150x150x200cm</p>\n",
+    "vendor": "AC Infinity",
+    "productType": "",
+    "tags": [
+      "150mm",
+      "ac infinity",
+      "extracteur"
+    ],
+    "status": "active",
+    "categories": [
+      "Ventilation > Extracteurs"
+    ],
+    "published": true,
+    "options": [
+      {
+        "name": "Couleur / variante",
+        "values": [
+          "bleu",
+          "rouge",
+          "rose",
+          "orange"
+        ]
+      },
+      {
+        "name": "Taille",
+        "values": [
+          "Large",
+          "Moyen",
+          "small"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "optionValues": [
+          "orange",
+          "small"
+        ],
+        "sku": "AC-INFA7",
+        "price": 300,
+        "compareAtPrice": 400,
+        "cost": null,
+        "barcode": "",
+        "grams": 12000,
+        "lengthCm": 20,
+        "widthCm": 16,
+        "heightCm": 40,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": -1,
+        "imageSrc": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+        "taxClass": "",
+        "shippingClass": "",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "notify"
+        },
+        "images": [
+          {
+            "src": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+            "position": 1,
+            "alt": "image de test de produit",
+            "id": 26
+          }
+        ],
+        "sourceExtension": {
+          "woocommerce": {
+            "id": 25,
+            "name": "orange, small",
+            "permalink": "http://localhost:8881/product/ac-infinity-a7-150mm/?attribute_couleur-variante=orange&attribute_taille=small",
+            "description": "",
+            "status": "publish",
+            "purchasable": true,
+            "downloads": [],
+            "download_limit": -1,
+            "download_expiry": -1,
+            "stock_status": "onbackorder",
+            "backorders_allowed": true,
+            "backordered": true,
+            "low_stock_amount": null,
+            "shipping_class_id": 0,
+            "gallery_image_ids": [],
+            "menu_order": 12,
+            "meta_data": [],
+            "timestamps": {
+              "created": "2026-09-20T20:14:25.000Z",
+              "modified": "2026-09-20T20:36:35.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "woocommerce",
+            "sourceField": "date_created_gmt",
+            "sourceValue": [
+              "2026-09-20T20:14:25",
+              "2026-09-20T20:36:35"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "woocommerce",
+            "sourceField": "sku",
+            "sourceValue": "AC-INFA7",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "400",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "300",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "woocommerce",
+            "sourceField": "global_unique_id",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "woocommerce",
+            "sourceField": "weight",
+            "sourceValue": "12",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "lengthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.length",
+            "sourceValue": "20",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "widthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.width",
+            "sourceValue": "16",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "heightCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.height",
+            "sourceValue": "40",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "woocommerce",
+            "sourceField": "virtual",
+            "sourceValue": false,
+            "transform": "bool_not",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "woocommerce",
+            "sourceField": "tax_status",
+            "sourceValue": "taxable",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "taxClass": {
+            "platform": "woocommerce",
+            "sourceField": "tax_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "shippingClass": {
+            "platform": "woocommerce",
+            "sourceField": "shipping_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "stockPolicy": {
+            "platform": "woocommerce",
+            "sourceField": "manage_stock + backorders + sold_individually",
+            "sourceValue": "parent",
+            "transform": "stock_policy",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "woocommerce",
+            "sourceField": "stock_quantity",
+            "sourceValue": -1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "image_src",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "images_from_objects",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "woocommerce",
+            "sourceField": "attributes",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "orange",
+          "Moyen"
+        ],
+        "sku": "AC-INFA7",
+        "price": 300,
+        "compareAtPrice": 400,
+        "cost": null,
+        "barcode": "",
+        "grams": 12000,
+        "lengthCm": 20,
+        "widthCm": 16,
+        "heightCm": 40,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": -1,
+        "imageSrc": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+        "taxClass": "",
+        "shippingClass": "",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "notify"
+        },
+        "images": [
+          {
+            "src": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+            "position": 1,
+            "alt": "image de test de produit",
+            "id": 26
+          }
+        ],
+        "sourceExtension": {
+          "woocommerce": {
+            "id": 24,
+            "name": "orange, Moyen",
+            "permalink": "http://localhost:8881/product/ac-infinity-a7-150mm/?attribute_couleur-variante=orange&attribute_taille=Moyen",
+            "description": "",
+            "status": "publish",
+            "purchasable": true,
+            "downloads": [],
+            "download_limit": -1,
+            "download_expiry": -1,
+            "stock_status": "onbackorder",
+            "backorders_allowed": true,
+            "backordered": true,
+            "low_stock_amount": null,
+            "shipping_class_id": 0,
+            "gallery_image_ids": [],
+            "menu_order": 11,
+            "meta_data": [],
+            "timestamps": {
+              "created": "2026-09-20T20:14:25.000Z",
+              "modified": "2026-09-20T20:36:35.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "woocommerce",
+            "sourceField": "date_created_gmt",
+            "sourceValue": [
+              "2026-09-20T20:14:25",
+              "2026-09-20T20:36:35"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "woocommerce",
+            "sourceField": "sku",
+            "sourceValue": "AC-INFA7",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "400",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "300",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "woocommerce",
+            "sourceField": "global_unique_id",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "woocommerce",
+            "sourceField": "weight",
+            "sourceValue": "12",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "lengthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.length",
+            "sourceValue": "20",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "widthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.width",
+            "sourceValue": "16",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "heightCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.height",
+            "sourceValue": "40",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "woocommerce",
+            "sourceField": "virtual",
+            "sourceValue": false,
+            "transform": "bool_not",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "woocommerce",
+            "sourceField": "tax_status",
+            "sourceValue": "taxable",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "taxClass": {
+            "platform": "woocommerce",
+            "sourceField": "tax_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "shippingClass": {
+            "platform": "woocommerce",
+            "sourceField": "shipping_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "stockPolicy": {
+            "platform": "woocommerce",
+            "sourceField": "manage_stock + backorders + sold_individually",
+            "sourceValue": "parent",
+            "transform": "stock_policy",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "woocommerce",
+            "sourceField": "stock_quantity",
+            "sourceValue": -1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "image_src",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "images_from_objects",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "woocommerce",
+            "sourceField": "attributes",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "orange",
+          "Large"
+        ],
+        "sku": "AC-INFA7",
+        "price": 300,
+        "compareAtPrice": 400,
+        "cost": null,
+        "barcode": "",
+        "grams": 12000,
+        "lengthCm": 20,
+        "widthCm": 16,
+        "heightCm": 40,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": -1,
+        "imageSrc": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+        "taxClass": "",
+        "shippingClass": "",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "notify"
+        },
+        "images": [
+          {
+            "src": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+            "position": 1,
+            "alt": "image de test de produit",
+            "id": 26
+          }
+        ],
+        "sourceExtension": {
+          "woocommerce": {
+            "id": 23,
+            "name": "orange, Large",
+            "permalink": "http://localhost:8881/product/ac-infinity-a7-150mm/?attribute_couleur-variante=orange&attribute_taille=Large",
+            "description": "",
+            "status": "publish",
+            "purchasable": true,
+            "downloads": [],
+            "download_limit": -1,
+            "download_expiry": -1,
+            "stock_status": "onbackorder",
+            "backorders_allowed": true,
+            "backordered": true,
+            "low_stock_amount": null,
+            "shipping_class_id": 0,
+            "gallery_image_ids": [],
+            "menu_order": 10,
+            "meta_data": [],
+            "timestamps": {
+              "created": "2026-09-20T20:14:24.000Z",
+              "modified": "2026-09-20T20:36:36.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "woocommerce",
+            "sourceField": "date_created_gmt",
+            "sourceValue": [
+              "2026-09-20T20:14:24",
+              "2026-09-20T20:36:36"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "woocommerce",
+            "sourceField": "sku",
+            "sourceValue": "AC-INFA7",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "400",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "300",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "woocommerce",
+            "sourceField": "global_unique_id",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "woocommerce",
+            "sourceField": "weight",
+            "sourceValue": "12",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "lengthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.length",
+            "sourceValue": "20",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "widthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.width",
+            "sourceValue": "16",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "heightCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.height",
+            "sourceValue": "40",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "woocommerce",
+            "sourceField": "virtual",
+            "sourceValue": false,
+            "transform": "bool_not",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "woocommerce",
+            "sourceField": "tax_status",
+            "sourceValue": "taxable",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "taxClass": {
+            "platform": "woocommerce",
+            "sourceField": "tax_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "shippingClass": {
+            "platform": "woocommerce",
+            "sourceField": "shipping_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "stockPolicy": {
+            "platform": "woocommerce",
+            "sourceField": "manage_stock + backorders + sold_individually",
+            "sourceValue": "parent",
+            "transform": "stock_policy",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "woocommerce",
+            "sourceField": "stock_quantity",
+            "sourceValue": -1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "image_src",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "images_from_objects",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "woocommerce",
+            "sourceField": "attributes",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "rose",
+          "small"
+        ],
+        "sku": "AC-INFA7",
+        "price": 300,
+        "compareAtPrice": 400,
+        "cost": null,
+        "barcode": "",
+        "grams": 12000,
+        "lengthCm": 20,
+        "widthCm": 16,
+        "heightCm": 40,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": -1,
+        "imageSrc": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+        "taxClass": "",
+        "shippingClass": "",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "notify"
+        },
+        "images": [
+          {
+            "src": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+            "position": 1,
+            "alt": "image de test de produit",
+            "id": 26
+          }
+        ],
+        "sourceExtension": {
+          "woocommerce": {
+            "id": 22,
+            "name": "rose, small",
+            "permalink": "http://localhost:8881/product/ac-infinity-a7-150mm/?attribute_couleur-variante=rose&attribute_taille=small",
+            "description": "",
+            "status": "publish",
+            "purchasable": true,
+            "downloads": [],
+            "download_limit": -1,
+            "download_expiry": -1,
+            "stock_status": "onbackorder",
+            "backorders_allowed": true,
+            "backordered": true,
+            "low_stock_amount": null,
+            "shipping_class_id": 0,
+            "gallery_image_ids": [],
+            "menu_order": 9,
+            "meta_data": [],
+            "timestamps": {
+              "created": "2026-09-20T20:14:24.000Z",
+              "modified": "2026-09-20T20:36:36.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "woocommerce",
+            "sourceField": "date_created_gmt",
+            "sourceValue": [
+              "2026-09-20T20:14:24",
+              "2026-09-20T20:36:36"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "woocommerce",
+            "sourceField": "sku",
+            "sourceValue": "AC-INFA7",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "400",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "300",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "woocommerce",
+            "sourceField": "global_unique_id",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "woocommerce",
+            "sourceField": "weight",
+            "sourceValue": "12",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "lengthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.length",
+            "sourceValue": "20",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "widthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.width",
+            "sourceValue": "16",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "heightCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.height",
+            "sourceValue": "40",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "woocommerce",
+            "sourceField": "virtual",
+            "sourceValue": false,
+            "transform": "bool_not",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "woocommerce",
+            "sourceField": "tax_status",
+            "sourceValue": "taxable",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "taxClass": {
+            "platform": "woocommerce",
+            "sourceField": "tax_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "shippingClass": {
+            "platform": "woocommerce",
+            "sourceField": "shipping_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "stockPolicy": {
+            "platform": "woocommerce",
+            "sourceField": "manage_stock + backorders + sold_individually",
+            "sourceValue": "parent",
+            "transform": "stock_policy",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "woocommerce",
+            "sourceField": "stock_quantity",
+            "sourceValue": -1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "image_src",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "images_from_objects",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "woocommerce",
+            "sourceField": "attributes",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "rose",
+          "Moyen"
+        ],
+        "sku": "AC-INFA7",
+        "price": 300,
+        "compareAtPrice": 400,
+        "cost": null,
+        "barcode": "",
+        "grams": 12000,
+        "lengthCm": 20,
+        "widthCm": 16,
+        "heightCm": 40,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": -1,
+        "imageSrc": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+        "taxClass": "",
+        "shippingClass": "",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "notify"
+        },
+        "images": [
+          {
+            "src": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+            "position": 1,
+            "alt": "image de test de produit",
+            "id": 26
+          }
+        ],
+        "sourceExtension": {
+          "woocommerce": {
+            "id": 21,
+            "name": "rose, Moyen",
+            "permalink": "http://localhost:8881/product/ac-infinity-a7-150mm/?attribute_couleur-variante=rose&attribute_taille=Moyen",
+            "description": "",
+            "status": "publish",
+            "purchasable": true,
+            "downloads": [],
+            "download_limit": -1,
+            "download_expiry": -1,
+            "stock_status": "onbackorder",
+            "backorders_allowed": true,
+            "backordered": true,
+            "low_stock_amount": null,
+            "shipping_class_id": 0,
+            "gallery_image_ids": [],
+            "menu_order": 8,
+            "meta_data": [],
+            "timestamps": {
+              "created": "2026-09-20T20:14:24.000Z",
+              "modified": "2026-09-20T20:36:36.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "woocommerce",
+            "sourceField": "date_created_gmt",
+            "sourceValue": [
+              "2026-09-20T20:14:24",
+              "2026-09-20T20:36:36"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "woocommerce",
+            "sourceField": "sku",
+            "sourceValue": "AC-INFA7",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "400",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "300",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "woocommerce",
+            "sourceField": "global_unique_id",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "woocommerce",
+            "sourceField": "weight",
+            "sourceValue": "12",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "lengthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.length",
+            "sourceValue": "20",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "widthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.width",
+            "sourceValue": "16",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "heightCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.height",
+            "sourceValue": "40",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "woocommerce",
+            "sourceField": "virtual",
+            "sourceValue": false,
+            "transform": "bool_not",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "woocommerce",
+            "sourceField": "tax_status",
+            "sourceValue": "taxable",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "taxClass": {
+            "platform": "woocommerce",
+            "sourceField": "tax_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "shippingClass": {
+            "platform": "woocommerce",
+            "sourceField": "shipping_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "stockPolicy": {
+            "platform": "woocommerce",
+            "sourceField": "manage_stock + backorders + sold_individually",
+            "sourceValue": "parent",
+            "transform": "stock_policy",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "woocommerce",
+            "sourceField": "stock_quantity",
+            "sourceValue": -1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "image_src",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "images_from_objects",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "woocommerce",
+            "sourceField": "attributes",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "rose",
+          "Large"
+        ],
+        "sku": "AC-INFA7",
+        "price": 300,
+        "compareAtPrice": 400,
+        "cost": null,
+        "barcode": "",
+        "grams": 12000,
+        "lengthCm": 20,
+        "widthCm": 16,
+        "heightCm": 40,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": -1,
+        "imageSrc": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+        "taxClass": "",
+        "shippingClass": "",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "notify"
+        },
+        "images": [
+          {
+            "src": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+            "position": 1,
+            "alt": "image de test de produit",
+            "id": 26
+          }
+        ],
+        "sourceExtension": {
+          "woocommerce": {
+            "id": 20,
+            "name": "rose, Large",
+            "permalink": "http://localhost:8881/product/ac-infinity-a7-150mm/?attribute_couleur-variante=rose&attribute_taille=Large",
+            "description": "",
+            "status": "publish",
+            "purchasable": true,
+            "downloads": [],
+            "download_limit": -1,
+            "download_expiry": -1,
+            "stock_status": "onbackorder",
+            "backorders_allowed": true,
+            "backordered": true,
+            "low_stock_amount": null,
+            "shipping_class_id": 0,
+            "gallery_image_ids": [],
+            "menu_order": 7,
+            "meta_data": [],
+            "timestamps": {
+              "created": "2026-09-20T20:14:24.000Z",
+              "modified": "2026-09-20T20:36:35.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "woocommerce",
+            "sourceField": "date_created_gmt",
+            "sourceValue": [
+              "2026-09-20T20:14:24",
+              "2026-09-20T20:36:35"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "woocommerce",
+            "sourceField": "sku",
+            "sourceValue": "AC-INFA7",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "400",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "300",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "woocommerce",
+            "sourceField": "global_unique_id",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "woocommerce",
+            "sourceField": "weight",
+            "sourceValue": "12",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "lengthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.length",
+            "sourceValue": "20",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "widthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.width",
+            "sourceValue": "16",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "heightCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.height",
+            "sourceValue": "40",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "woocommerce",
+            "sourceField": "virtual",
+            "sourceValue": false,
+            "transform": "bool_not",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "woocommerce",
+            "sourceField": "tax_status",
+            "sourceValue": "taxable",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "taxClass": {
+            "platform": "woocommerce",
+            "sourceField": "tax_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "shippingClass": {
+            "platform": "woocommerce",
+            "sourceField": "shipping_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "stockPolicy": {
+            "platform": "woocommerce",
+            "sourceField": "manage_stock + backorders + sold_individually",
+            "sourceValue": "parent",
+            "transform": "stock_policy",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "woocommerce",
+            "sourceField": "stock_quantity",
+            "sourceValue": -1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "image_src",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "images_from_objects",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "woocommerce",
+            "sourceField": "attributes",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "rouge",
+          "small"
+        ],
+        "sku": "AC-INFA7",
+        "price": 300,
+        "compareAtPrice": 400,
+        "cost": null,
+        "barcode": "",
+        "grams": 12000,
+        "lengthCm": 20,
+        "widthCm": 16,
+        "heightCm": 40,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": -1,
+        "imageSrc": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+        "taxClass": "",
+        "shippingClass": "",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "notify"
+        },
+        "images": [
+          {
+            "src": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+            "position": 1,
+            "alt": "image de test de produit",
+            "id": 26
+          }
+        ],
+        "sourceExtension": {
+          "woocommerce": {
+            "id": 19,
+            "name": "rouge, small",
+            "permalink": "http://localhost:8881/product/ac-infinity-a7-150mm/?attribute_couleur-variante=rouge&attribute_taille=small",
+            "description": "",
+            "status": "publish",
+            "purchasable": true,
+            "downloads": [],
+            "download_limit": -1,
+            "download_expiry": -1,
+            "stock_status": "onbackorder",
+            "backorders_allowed": true,
+            "backordered": true,
+            "low_stock_amount": null,
+            "shipping_class_id": 0,
+            "gallery_image_ids": [],
+            "menu_order": 6,
+            "meta_data": [],
+            "timestamps": {
+              "created": "2026-09-20T20:14:24.000Z",
+              "modified": "2026-09-20T20:36:35.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "woocommerce",
+            "sourceField": "date_created_gmt",
+            "sourceValue": [
+              "2026-09-20T20:14:24",
+              "2026-09-20T20:36:35"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "woocommerce",
+            "sourceField": "sku",
+            "sourceValue": "AC-INFA7",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "400",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "300",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "woocommerce",
+            "sourceField": "global_unique_id",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "woocommerce",
+            "sourceField": "weight",
+            "sourceValue": "12",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "lengthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.length",
+            "sourceValue": "20",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "widthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.width",
+            "sourceValue": "16",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "heightCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.height",
+            "sourceValue": "40",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "woocommerce",
+            "sourceField": "virtual",
+            "sourceValue": false,
+            "transform": "bool_not",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "woocommerce",
+            "sourceField": "tax_status",
+            "sourceValue": "taxable",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "taxClass": {
+            "platform": "woocommerce",
+            "sourceField": "tax_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "shippingClass": {
+            "platform": "woocommerce",
+            "sourceField": "shipping_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "stockPolicy": {
+            "platform": "woocommerce",
+            "sourceField": "manage_stock + backorders + sold_individually",
+            "sourceValue": "parent",
+            "transform": "stock_policy",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "woocommerce",
+            "sourceField": "stock_quantity",
+            "sourceValue": -1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "image_src",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "images_from_objects",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "woocommerce",
+            "sourceField": "attributes",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "rouge",
+          "Moyen"
+        ],
+        "sku": "AC-INFA7",
+        "price": 300,
+        "compareAtPrice": 400,
+        "cost": null,
+        "barcode": "",
+        "grams": 12000,
+        "lengthCm": 20,
+        "widthCm": 16,
+        "heightCm": 40,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": -1,
+        "imageSrc": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+        "taxClass": "",
+        "shippingClass": "",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "notify"
+        },
+        "images": [
+          {
+            "src": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+            "position": 1,
+            "alt": "image de test de produit",
+            "id": 26
+          }
+        ],
+        "sourceExtension": {
+          "woocommerce": {
+            "id": 18,
+            "name": "rouge, Moyen",
+            "permalink": "http://localhost:8881/product/ac-infinity-a7-150mm/?attribute_couleur-variante=rouge&attribute_taille=Moyen",
+            "description": "",
+            "status": "publish",
+            "purchasable": true,
+            "downloads": [],
+            "download_limit": -1,
+            "download_expiry": -1,
+            "stock_status": "onbackorder",
+            "backorders_allowed": true,
+            "backordered": true,
+            "low_stock_amount": null,
+            "shipping_class_id": 0,
+            "gallery_image_ids": [],
+            "menu_order": 5,
+            "meta_data": [],
+            "timestamps": {
+              "created": "2026-09-20T20:14:23.000Z",
+              "modified": "2026-09-20T20:36:36.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "woocommerce",
+            "sourceField": "date_created_gmt",
+            "sourceValue": [
+              "2026-09-20T20:14:23",
+              "2026-09-20T20:36:36"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "woocommerce",
+            "sourceField": "sku",
+            "sourceValue": "AC-INFA7",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "400",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "300",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "woocommerce",
+            "sourceField": "global_unique_id",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "woocommerce",
+            "sourceField": "weight",
+            "sourceValue": "12",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "lengthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.length",
+            "sourceValue": "20",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "widthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.width",
+            "sourceValue": "16",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "heightCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.height",
+            "sourceValue": "40",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "woocommerce",
+            "sourceField": "virtual",
+            "sourceValue": false,
+            "transform": "bool_not",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "woocommerce",
+            "sourceField": "tax_status",
+            "sourceValue": "taxable",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "taxClass": {
+            "platform": "woocommerce",
+            "sourceField": "tax_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "shippingClass": {
+            "platform": "woocommerce",
+            "sourceField": "shipping_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "stockPolicy": {
+            "platform": "woocommerce",
+            "sourceField": "manage_stock + backorders + sold_individually",
+            "sourceValue": "parent",
+            "transform": "stock_policy",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "woocommerce",
+            "sourceField": "stock_quantity",
+            "sourceValue": -1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "image_src",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "images_from_objects",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "woocommerce",
+            "sourceField": "attributes",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "rouge",
+          "Large"
+        ],
+        "sku": "AC-INFA7",
+        "price": 300,
+        "compareAtPrice": 400,
+        "cost": null,
+        "barcode": "",
+        "grams": 12000,
+        "lengthCm": 20,
+        "widthCm": 16,
+        "heightCm": 40,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": -1,
+        "imageSrc": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+        "taxClass": "",
+        "shippingClass": "",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "notify"
+        },
+        "images": [
+          {
+            "src": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+            "position": 1,
+            "alt": "image de test de produit",
+            "id": 26
+          }
+        ],
+        "sourceExtension": {
+          "woocommerce": {
+            "id": 17,
+            "name": "rouge, Large",
+            "permalink": "http://localhost:8881/product/ac-infinity-a7-150mm/?attribute_couleur-variante=rouge&attribute_taille=Large",
+            "description": "",
+            "status": "publish",
+            "purchasable": true,
+            "downloads": [],
+            "download_limit": -1,
+            "download_expiry": -1,
+            "stock_status": "onbackorder",
+            "backorders_allowed": true,
+            "backordered": true,
+            "low_stock_amount": null,
+            "shipping_class_id": 0,
+            "gallery_image_ids": [],
+            "menu_order": 4,
+            "meta_data": [],
+            "timestamps": {
+              "created": "2026-09-20T20:14:23.000Z",
+              "modified": "2026-09-20T20:36:36.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "woocommerce",
+            "sourceField": "date_created_gmt",
+            "sourceValue": [
+              "2026-09-20T20:14:23",
+              "2026-09-20T20:36:36"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "woocommerce",
+            "sourceField": "sku",
+            "sourceValue": "AC-INFA7",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "400",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "300",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "woocommerce",
+            "sourceField": "global_unique_id",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "woocommerce",
+            "sourceField": "weight",
+            "sourceValue": "12",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "lengthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.length",
+            "sourceValue": "20",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "widthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.width",
+            "sourceValue": "16",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "heightCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.height",
+            "sourceValue": "40",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "woocommerce",
+            "sourceField": "virtual",
+            "sourceValue": false,
+            "transform": "bool_not",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "woocommerce",
+            "sourceField": "tax_status",
+            "sourceValue": "taxable",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "taxClass": {
+            "platform": "woocommerce",
+            "sourceField": "tax_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "shippingClass": {
+            "platform": "woocommerce",
+            "sourceField": "shipping_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "stockPolicy": {
+            "platform": "woocommerce",
+            "sourceField": "manage_stock + backorders + sold_individually",
+            "sourceValue": "parent",
+            "transform": "stock_policy",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "woocommerce",
+            "sourceField": "stock_quantity",
+            "sourceValue": -1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "image_src",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "images_from_objects",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "woocommerce",
+            "sourceField": "attributes",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "bleu",
+          "small"
+        ],
+        "sku": "AC-INFA7",
+        "price": 300,
+        "compareAtPrice": 400,
+        "cost": null,
+        "barcode": "",
+        "grams": 12000,
+        "lengthCm": 20,
+        "widthCm": 16,
+        "heightCm": 40,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": -1,
+        "imageSrc": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+        "taxClass": "",
+        "shippingClass": "",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "notify"
+        },
+        "images": [
+          {
+            "src": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+            "position": 1,
+            "alt": "image de test de produit",
+            "id": 26
+          }
+        ],
+        "sourceExtension": {
+          "woocommerce": {
+            "id": 16,
+            "name": "bleu, small",
+            "permalink": "http://localhost:8881/product/ac-infinity-a7-150mm/?attribute_couleur-variante=bleu&attribute_taille=small",
+            "description": "",
+            "status": "publish",
+            "purchasable": true,
+            "downloads": [],
+            "download_limit": -1,
+            "download_expiry": -1,
+            "stock_status": "onbackorder",
+            "backorders_allowed": true,
+            "backordered": true,
+            "low_stock_amount": null,
+            "shipping_class_id": 0,
+            "gallery_image_ids": [],
+            "menu_order": 3,
+            "meta_data": [],
+            "timestamps": {
+              "created": "2026-09-20T20:14:23.000Z",
+              "modified": "2026-09-20T20:36:36.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "woocommerce",
+            "sourceField": "date_created_gmt",
+            "sourceValue": [
+              "2026-09-20T20:14:23",
+              "2026-09-20T20:36:36"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "woocommerce",
+            "sourceField": "sku",
+            "sourceValue": "AC-INFA7",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "400",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "300",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "woocommerce",
+            "sourceField": "global_unique_id",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "woocommerce",
+            "sourceField": "weight",
+            "sourceValue": "12",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "lengthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.length",
+            "sourceValue": "20",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "widthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.width",
+            "sourceValue": "16",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "heightCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.height",
+            "sourceValue": "40",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "woocommerce",
+            "sourceField": "virtual",
+            "sourceValue": false,
+            "transform": "bool_not",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "woocommerce",
+            "sourceField": "tax_status",
+            "sourceValue": "taxable",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "taxClass": {
+            "platform": "woocommerce",
+            "sourceField": "tax_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "shippingClass": {
+            "platform": "woocommerce",
+            "sourceField": "shipping_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "stockPolicy": {
+            "platform": "woocommerce",
+            "sourceField": "manage_stock + backorders + sold_individually",
+            "sourceValue": "parent",
+            "transform": "stock_policy",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "woocommerce",
+            "sourceField": "stock_quantity",
+            "sourceValue": -1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "image_src",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "images_from_objects",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "woocommerce",
+            "sourceField": "attributes",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "bleu",
+          "Moyen"
+        ],
+        "sku": "AC-INFA7",
+        "price": 300,
+        "compareAtPrice": 400,
+        "cost": null,
+        "barcode": "",
+        "grams": 12000,
+        "lengthCm": 20,
+        "widthCm": 16,
+        "heightCm": 40,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": -1,
+        "imageSrc": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+        "taxClass": "",
+        "shippingClass": "",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "notify"
+        },
+        "images": [
+          {
+            "src": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+            "position": 1,
+            "alt": "image de test de produit",
+            "id": 26
+          }
+        ],
+        "sourceExtension": {
+          "woocommerce": {
+            "id": 15,
+            "name": "bleu, Moyen",
+            "permalink": "http://localhost:8881/product/ac-infinity-a7-150mm/?attribute_couleur-variante=bleu&attribute_taille=Moyen",
+            "description": "",
+            "status": "publish",
+            "purchasable": true,
+            "downloads": [],
+            "download_limit": -1,
+            "download_expiry": -1,
+            "stock_status": "onbackorder",
+            "backorders_allowed": true,
+            "backordered": true,
+            "low_stock_amount": null,
+            "shipping_class_id": 0,
+            "gallery_image_ids": [],
+            "menu_order": 2,
+            "meta_data": [],
+            "timestamps": {
+              "created": "2026-09-20T20:14:23.000Z",
+              "modified": "2026-09-20T20:36:36.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "woocommerce",
+            "sourceField": "date_created_gmt",
+            "sourceValue": [
+              "2026-09-20T20:14:23",
+              "2026-09-20T20:36:36"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "woocommerce",
+            "sourceField": "sku",
+            "sourceValue": "AC-INFA7",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "400",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "300",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "woocommerce",
+            "sourceField": "global_unique_id",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "woocommerce",
+            "sourceField": "weight",
+            "sourceValue": "12",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "lengthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.length",
+            "sourceValue": "20",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "widthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.width",
+            "sourceValue": "16",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "heightCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.height",
+            "sourceValue": "40",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "woocommerce",
+            "sourceField": "virtual",
+            "sourceValue": false,
+            "transform": "bool_not",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "woocommerce",
+            "sourceField": "tax_status",
+            "sourceValue": "taxable",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "taxClass": {
+            "platform": "woocommerce",
+            "sourceField": "tax_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "shippingClass": {
+            "platform": "woocommerce",
+            "sourceField": "shipping_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "stockPolicy": {
+            "platform": "woocommerce",
+            "sourceField": "manage_stock + backorders + sold_individually",
+            "sourceValue": "parent",
+            "transform": "stock_policy",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "woocommerce",
+            "sourceField": "stock_quantity",
+            "sourceValue": -1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "image_src",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "images_from_objects",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "woocommerce",
+            "sourceField": "attributes",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "optionValues": [
+          "bleu",
+          "Large"
+        ],
+        "sku": "AC-INFA7",
+        "price": 300,
+        "compareAtPrice": 400,
+        "cost": null,
+        "barcode": "08374628475658",
+        "grams": 12000,
+        "lengthCm": 20,
+        "widthCm": 16,
+        "heightCm": 40,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": -1,
+        "imageSrc": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+        "taxClass": "",
+        "shippingClass": "",
+        "stockPolicy": {
+          "manageStock": true,
+          "backorders": "notify"
+        },
+        "images": [
+          {
+            "src": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+            "position": 1,
+            "alt": "image de test de produit",
+            "id": 26
+          }
+        ],
+        "sourceExtension": {
+          "woocommerce": {
+            "id": 14,
+            "name": "bleu, Large",
+            "permalink": "http://localhost:8881/product/ac-infinity-a7-150mm/?attribute_couleur-variante=bleu&attribute_taille=Large",
+            "description": "<p>OPTIMAL POUR LE RESTE</p>\n",
+            "status": "publish",
+            "purchasable": true,
+            "downloads": [],
+            "download_limit": -1,
+            "download_expiry": -1,
+            "stock_status": "onbackorder",
+            "backorders_allowed": true,
+            "backordered": true,
+            "low_stock_amount": null,
+            "shipping_class_id": 0,
+            "gallery_image_ids": [],
+            "menu_order": 1,
+            "meta_data": [],
+            "timestamps": {
+              "created": "2026-09-20T20:14:23.000Z",
+              "modified": "2026-09-20T20:37:30.000Z"
+            }
+          }
+        },
+        "unmapped": [
+          {
+            "platform": "woocommerce",
+            "sourceField": "description",
+            "sourceValue": "<p>OPTIMAL POUR LE RESTE</p>\n",
+            "reason": "no-canon-field",
+            "note": "Variant-level description: canon has none (promotable)."
+          },
+          {
+            "platform": "woocommerce",
+            "sourceField": "date_created_gmt",
+            "sourceValue": [
+              "2026-09-20T20:14:23",
+              "2026-09-20T20:37:30"
+            ],
+            "reason": "no-canon-field",
+            "note": "Variant timestamps: canon identity.timestamps is product-level."
+          }
+        ],
+        "provenance": {
+          "sku": {
+            "platform": "woocommerce",
+            "sourceField": "sku",
+            "sourceValue": "AC-INFA7",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "400",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "compareAtPrice": {
+            "platform": "woocommerce",
+            "sourceField": "regular_price + sale_price + on_sale",
+            "sourceValue": "300",
+            "transform": "price_promo",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "woocommerce",
+            "sourceField": "global_unique_id",
+            "sourceValue": "08374628475658",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "woocommerce",
+            "sourceField": "weight",
+            "sourceValue": "12",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "lengthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.length",
+            "sourceValue": "20",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "widthCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.width",
+            "sourceValue": "16",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "heightCm": {
+            "platform": "woocommerce",
+            "sourceField": "dimensions.height",
+            "sourceValue": "40",
+            "transform": "length_to_cm",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "woocommerce",
+            "sourceField": "virtual",
+            "sourceValue": false,
+            "transform": "bool_not",
+            "method": "exact"
+          },
+          "taxable": {
+            "platform": "woocommerce",
+            "sourceField": "tax_status",
+            "sourceValue": "taxable",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "taxClass": {
+            "platform": "woocommerce",
+            "sourceField": "tax_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "shippingClass": {
+            "platform": "woocommerce",
+            "sourceField": "shipping_class",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "stockPolicy": {
+            "platform": "woocommerce",
+            "sourceField": "manage_stock + backorders + sold_individually",
+            "sourceValue": "parent",
+            "transform": "stock_policy",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "woocommerce",
+            "sourceField": "stock_quantity",
+            "sourceValue": -1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "image_src",
+            "method": "exact"
+          },
+          "images": {
+            "platform": "woocommerce",
+            "sourceField": "image",
+            "transform": "images_from_objects",
+            "method": "exact"
+          },
+          "optionValues": {
+            "platform": "woocommerce",
+            "sourceField": "attributes",
+            "transform": "option_values_from_attributes",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+        "position": 1,
+        "alt": "image de test de produit",
+        "id": 26
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "ac-infinity-a7-150mm",
+      "sourceId": "13",
+      "timestamps": {
+        "created": "2026-09-20T20:09:26.000Z",
+        "modified": "2026-09-21T02:22:23.000Z"
+      }
+    },
+    "kind": "variable",
+    "visibility": {
+      "featured": false,
+      "catalogVisibility": "visible"
+    },
+    "shortDescription": "<p>Optimal pour les aérations de divers pieces etc&#8230;. à tester à la maison et chez vos amis</p>\n",
+    "attributesRich": [
+      {
+        "name": "Couleur / variante",
+        "values": [
+          "bleu",
+          "rouge",
+          "rose",
+          "orange"
+        ],
+        "position": 0,
+        "visible": true,
+        "forVariation": true
+      },
+      {
+        "name": "Taille",
+        "values": [
+          "Large",
+          "Moyen",
+          "small"
+        ],
+        "position": 1,
+        "visible": true,
+        "forVariation": true
+      }
+    ],
+    "merchandising": {
+      "related": [
+        "27"
+      ],
+      "menuOrder": 0
+    },
+    "sourceExtension": {
+      "woocommerce": {
+        "brands": [
+          "AC Infinity"
+        ],
+        "downloadable": false,
+        "permalink": "http://localhost:8881/product/ac-infinity-a7-150mm/",
+        "parent_id": 0,
+        "purchasable": true,
+        "total_sales": 6,
+        "average_rating": 0,
+        "rating_count": 0,
+        "reviews_allowed": true,
+        "shipping_required": true,
+        "shipping_taxable": true,
+        "has_options": true,
+        "post_password": "",
+        "low_stock_amount": 7,
+        "stock_status": "onbackorder",
+        "backorders_allowed": true,
+        "backordered": true,
+        "shipping_class_id": 0
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "woocommerce",
+        "sourceField": "total_sales",
+        "sourceValue": 6,
+        "reason": "no-canon-field",
+        "note": "Sales counter — canon has no analytics field."
+      },
+      {
+        "platform": "woocommerce",
+        "sourceField": "average_rating",
+        "sourceValue": "0.00",
+        "reason": "no-canon-field",
+        "note": "Reviews/ratings: promotable concept."
+      },
+      {
+        "platform": "woocommerce",
+        "sourceField": "rating_count",
+        "sourceValue": 0,
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "woocommerce",
+        "sourceField": "low_stock_amount",
+        "sourceValue": 7,
+        "reason": "no-canon-field",
+        "note": "Low-stock threshold: candidate for stockPolicy."
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "woocommerce",
+        "sourceField": "name",
+        "sourceValue": "AC Infinity A7 - 150mm",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "woocommerce",
+        "sourceField": "slug",
+        "sourceValue": "ac-infinity-a7-150mm",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "woocommerce",
+        "sourceField": "slug",
+        "sourceValue": "ac-infinity-a7-150mm",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "woocommerce",
+        "sourceField": "id",
+        "sourceValue": 13,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.timestamps": {
+        "platform": "woocommerce",
+        "sourceField": "date_created_gmt + date_modified_gmt",
+        "sourceValue": "2026-09-20T20:09:26",
+        "transform": "timestamps",
+        "method": "exact"
+      },
+      "kind": {
+        "platform": "woocommerce",
+        "sourceField": "type",
+        "sourceValue": "variable",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status": {
+        "platform": "woocommerce",
+        "sourceField": "status",
+        "sourceValue": "publish",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "published": {
+        "platform": "woocommerce",
+        "sourceField": "status",
+        "sourceValue": "publish",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "visibility.featured": {
+        "platform": "woocommerce",
+        "sourceField": "featured",
+        "sourceValue": false,
+        "transform": "bool",
+        "method": "exact"
+      },
+      "visibility.catalogVisibility": {
+        "platform": "woocommerce",
+        "sourceField": "catalog_visibility",
+        "sourceValue": "visible",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "woocommerce",
+        "sourceField": "description",
+        "sourceValue": "<p>Extracteur d'air optimal pour une box de 150x150x200cm</p>\n",
+        "transform": "html",
+        "method": "exact"
+      },
+      "shortDescription": {
+        "platform": "woocommerce",
+        "sourceField": "short_description",
+        "sourceValue": "<p>Optimal pour les aérations de divers pieces etc&#8230;. à tester à la maison et chez vos amis</p>\n",
+        "transform": "html",
+        "method": "exact"
+      },
+      "vendor": {
+        "platform": "woocommerce",
+        "sourceField": "brands",
+        "transform": "name_of_first",
+        "method": "exact"
+      },
+      "tags": {
+        "platform": "woocommerce",
+        "sourceField": "tags",
+        "transform": "names_of",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "woocommerce",
+        "sourceField": "categories",
+        "transform": "category_paths_from_terms",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "woocommerce",
+        "sourceField": "images",
+        "transform": "images_from_objects",
+        "method": "exact"
+      },
+      "attributesRich": {
+        "platform": "woocommerce",
+        "sourceField": "attributes",
+        "transform": "attributes_rich",
+        "method": "exact"
+      },
+      "options": {
+        "platform": "woocommerce",
+        "sourceField": "attributes",
+        "transform": "options_from_attributes",
+        "method": "exact"
+      },
+      "merchandising.related": {
+        "platform": "woocommerce",
+        "sourceField": "related_ids",
+        "transform": "ids_to_strings",
+        "method": "exact"
+      },
+      "merchandising.menuOrder": {
+        "platform": "woocommerce",
+        "sourceField": "menu_order",
+        "sourceValue": 0,
+        "transform": "int",
+        "method": "exact"
+      },
+      "metafields": {
+        "platform": "woocommerce",
+        "sourceField": "meta_data",
+        "transform": "metafields_from_pairs",
+        "method": "exact"
+      }
+    }
+  }
+]

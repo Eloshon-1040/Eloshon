@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "address_count": 2,
+    "addresses": [
+      {
+        "id": 1,
+        "address1": "1 Test Street",
+        "address2": "",
+        "address_type": "residential",
+        "city": "Testville",
+        "company": "Test Co",
+        "country": "Belgium",
+        "country_code": "BE",
+        "customer_id": 1,
+        "first_name": "Test",
+        "last_name": "Customer 1",
+        "phone": "+32 000 00 00 00",
+        "postal_code": "1000",
+        "state_or_province": "",
+        "form_fields": []
+      },
+      {
+        "id": 2,
+        "address1": "1 Test Street",
+        "address2": "",
+        "address_type": "residential",
+        "city": "Testville",
+        "company": "Test Co",
+        "country": "Belgium",
+        "country_code": "BE",
+        "customer_id": 1,
+        "first_name": "Test",
+        "last_name": "Customer 2",
+        "phone": "+32 000 00 00 00",
+        "postal_code": "1000",
+        "state_or_province": "",
+        "form_fields": []
+      }
+    ],
+    "authentication": {
+      "force_password_reset": false
+    },
+    "company": "Test Co",
+    "customer_group_id": 1,
+    "email": "customer1@example.test",
+    "first_name": "Test",
+    "last_name": "Customer 1",
+    "notes": "",
+    "phone": "+32 000 00 00 00",
+    "registration_ip_address": "",
+    "tax_exempt_category": "",
+    "date_created": "2026-09-21T18:52:18Z",
+    "date_modified": "2026-09-21T18:53:45Z",
+    "form_fields": [],
+    "accepts_product_review_abandoned_cart_emails": true,
+    "store_credit_amounts": [
+      {
+        "amount": 12
+      }
+    ],
+    "origin_channel_id": 1,
+    "channel_ids": null,
+    "consent": {
+      "allow": [
+        "analytics",
+        "functional",
+        "targeting"
+      ],
+      "deny": []
+    },
+    "_consent": {
+      "allow": [
+        "analytics",
+        "functional",
+        "targeting"
+      ],
+      "deny": [],
+      "updated_at": "2026-09-21T21:02:34Z"
+    }
+  }
+]

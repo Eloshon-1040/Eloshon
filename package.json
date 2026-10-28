@@ -1,0 +1,105 @@
+{
+  "name": "eloshon-scraper",
+  "productName": "Eloshon Scraper",
+  "version": "0.5.59",
+  "private": true,
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "type": "module",
+  "description": "Application autonome de scraping de produits (Windows + macOS). Générique : n'importe quel site compatible.",
+  "author": "Eloshon",
+  "main": "app/main.mjs",
+  "scripts": {
+    "pretest": "node scripts/build-extension.mjs",
+    "test": "node --test core/__tests__/*.test.mjs shared/__tests__/*.test.mjs tests/extension/*.test.mjs native-host/__tests__/*.test.mjs app/__tests__/*.test.mjs lib/__tests__/*.test.mjs",
+    "host:gen": "node scripts/gen-native-host.mjs",
+    "verify-core": "node scripts/verify-core.mjs",
+    "verify-controller": "node scripts/verify-controller.mjs",
+    "verify-settings": "node scripts/verify-settings.mjs",
+    "smoke:live": "node scripts/smoke-live.mjs",
+    "pw:install": "node scripts/install-browser.mjs",
+    "ext:key": "node scripts/gen-extension-key.mjs",
+    "ext:build": "node scripts/build-extension.mjs",
+    "package:extension": "node scripts/package-extension.mjs",
+    "verify:extension": "node scripts/verify-extension-zip.mjs",
+    "start": "electron .",
+    "smoke": "electron . --smoke",
+    "dist:win": "electron-builder --win",
+    "dist:mac": "electron-builder --mac --x64 --arm64",
+    "dist:converter": "npm --prefix converter run dist"
+  },
+  "dependencies": {
+    "linkedom": "^0.18.13",
+    "playwright": "^1.63.0",
+    "undici": "^7.29.1"
+  },
+  "devDependencies": {
+    "@fontsource/archivo": "^5.3.0",
+    "@fontsource/poppins": "^5.3.0",
+    "electron": "^44.3.0",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.eloshon.scraper",
+    "productName": "Eloshon Scraper",
+    "files": [
+      "app/**/*",
+      "!app/**/__tests__/**",
+      "core/**/*",
+      "!core/**/__tests__/**",
+      "shared/**/*",
+      "!shared/**/__tests__/**",
+      "lib/**/*",
+      "!lib/**/__tests__/**",
+      "native-host/**/*",
+      "!native-host/__tests__/**",
+      "!converter/**",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": ".playwright-browsers",
+        "to": "ms-playwright",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "asarUnpack": [
+      "node_modules/playwright/**",
+      "node_modules/playwright-core/**",
+      "core/unlock/**",
+      "native-host/**",
+      "shared/**"
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "mac": {
+      "icon": "build/icon.ico",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "category": "public.app-category.developer-tools"
+    },
+    "directories": {
+      "output": "dist"
+    },
+    "nsis": {
+      "include": "build/installer.nsh"
+    }
+  }
+}

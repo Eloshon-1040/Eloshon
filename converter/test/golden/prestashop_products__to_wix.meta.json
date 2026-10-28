@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "sourceFormat": "prestashop.products.webservice.v1",
+  "targetFormat": "wix_products",
+  "counts": {
+    "inputUnits": 25,
+    "outputUnits": 25,
+    "failedUnits": 0,
+    "outputRows": 64
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_wix_option_type"
+    },
+    {
+      "code": "loss_wix_identifiers",
+      "params": {
+        "kinds": "mpn"
+      }
+    },
+    {
+      "code": "loss_wix_bundles",
+      "params": {
+        "count": 1,
+        "handles": "pack-mug-framed-poster"
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false
+}

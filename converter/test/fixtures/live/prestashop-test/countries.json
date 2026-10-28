@@ -1,0 +1,5545 @@
+[
+  {
+    "id": 1,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 49,
+    "iso_code": "DE",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Germany"
+      },
+      {
+        "id": 2,
+        "value": "Germany"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 43,
+    "iso_code": "AT",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Austria"
+      },
+      {
+        "id": 2,
+        "value": "Austria"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 32,
+    "iso_code": "BE",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Belgium"
+      },
+      {
+        "id": 2,
+        "value": "Belgium"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "id_zone": 2,
+    "id_currency": 0,
+    "call_prefix": 1,
+    "iso_code": "CA",
+    "active": "0",
+    "contains_states": "1",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "LNL NLN",
+    "display_tax_label": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "Canada"
+      },
+      {
+        "id": 2,
+        "value": "Canada"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 86,
+    "iso_code": "CN",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "China"
+      },
+      {
+        "id": 2,
+        "value": "China"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 34,
+    "iso_code": "ES",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "1",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Spain"
+      },
+      {
+        "id": 2,
+        "value": "Spain"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 358,
+    "iso_code": "FI",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Finland"
+      },
+      {
+        "id": 2,
+        "value": "Finland"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 33,
+    "iso_code": "FR",
+    "active": "1",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "France"
+      },
+      {
+        "id": 2,
+        "value": "France"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 30,
+    "iso_code": "GR",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Greece"
+      },
+      {
+        "id": 2,
+        "value": "Greece"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 39,
+    "iso_code": "IT",
+    "active": "0",
+    "contains_states": "1",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Italy"
+      },
+      {
+        "id": 2,
+        "value": "Italy"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 81,
+    "iso_code": "JP",
+    "active": "0",
+    "contains_states": "1",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNN-NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Japan"
+      },
+      {
+        "id": 2,
+        "value": "Japan"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 352,
+    "iso_code": "LU",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Luxembourg"
+      },
+      {
+        "id": 2,
+        "value": "Luxembourg"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 31,
+    "iso_code": "NL",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN LL",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Netherlands"
+      },
+      {
+        "id": 2,
+        "value": "Netherlands"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 48,
+    "iso_code": "PL",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NN-NNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Poland"
+      },
+      {
+        "id": 2,
+        "value": "Poland"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 351,
+    "iso_code": "PT",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN-NNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Portugal"
+      },
+      {
+        "id": 2,
+        "value": "Portugal"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 420,
+    "iso_code": "CZ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNN NN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Czechia"
+      },
+      {
+        "id": 2,
+        "value": "Czechia"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 44,
+    "iso_code": "GB",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "United Kingdom"
+      },
+      {
+        "id": 2,
+        "value": "United Kingdom"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 46,
+    "iso_code": "SE",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNN NN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Sweden"
+      },
+      {
+        "id": 2,
+        "value": "Sweden"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 41,
+    "iso_code": "CH",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Switzerland"
+      },
+      {
+        "id": 2,
+        "value": "Switzerland"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 45,
+    "iso_code": "DK",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Denmark"
+      },
+      {
+        "id": 2,
+        "value": "Denmark"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "id_zone": 2,
+    "id_currency": 0,
+    "call_prefix": 1,
+    "iso_code": "US",
+    "active": "1",
+    "contains_states": "1",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "United States"
+      },
+      {
+        "id": 2,
+        "value": "United States"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 852,
+    "iso_code": "HK",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "0",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Hong Kong SAR China"
+      },
+      {
+        "id": 2,
+        "value": "Hong Kong SAR China"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 47,
+    "iso_code": "NO",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Norway"
+      },
+      {
+        "id": 2,
+        "value": "Norway"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 61,
+    "iso_code": "AU",
+    "active": "0",
+    "contains_states": "1",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Australia"
+      },
+      {
+        "id": 2,
+        "value": "Australia"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 65,
+    "iso_code": "SG",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Singapore"
+      },
+      {
+        "id": 2,
+        "value": "Singapore"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 353,
+    "iso_code": "IE",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "0",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Ireland"
+      },
+      {
+        "id": 2,
+        "value": "Ireland"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 64,
+    "iso_code": "NZ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "New Zealand"
+      },
+      {
+        "id": 2,
+        "value": "New Zealand"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 82,
+    "iso_code": "KR",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "South Korea"
+      },
+      {
+        "id": 2,
+        "value": "South Korea"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 972,
+    "iso_code": "IL",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Israel"
+      },
+      {
+        "id": 2,
+        "value": "Israel"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 27,
+    "iso_code": "ZA",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "South Africa"
+      },
+      {
+        "id": 2,
+        "value": "South Africa"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 234,
+    "iso_code": "NG",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Nigeria"
+      },
+      {
+        "id": 2,
+        "value": "Nigeria"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 225,
+    "iso_code": "CI",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Côte d’Ivoire"
+      },
+      {
+        "id": 2,
+        "value": "Côte d’Ivoire"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 228,
+    "iso_code": "TG",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Togo"
+      },
+      {
+        "id": 2,
+        "value": "Togo"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "id_zone": 6,
+    "id_currency": 0,
+    "call_prefix": 591,
+    "iso_code": "BO",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Bolivia"
+      },
+      {
+        "id": 2,
+        "value": "Bolivia"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 230,
+    "iso_code": "MU",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Mauritius"
+      },
+      {
+        "id": 2,
+        "value": "Mauritius"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 40,
+    "iso_code": "RO",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Romania"
+      },
+      {
+        "id": 2,
+        "value": "Romania"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 421,
+    "iso_code": "SK",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNN NN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Slovakia"
+      },
+      {
+        "id": 2,
+        "value": "Slovakia"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 213,
+    "iso_code": "DZ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Algeria"
+      },
+      {
+        "id": 2,
+        "value": "Algeria"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "id_zone": 2,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "AS",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "American Samoa"
+      },
+      {
+        "id": 2,
+        "value": "American Samoa"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 376,
+    "iso_code": "AD",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "CNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Andorra"
+      },
+      {
+        "id": 2,
+        "value": "Andorra"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 244,
+    "iso_code": "AO",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "0",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Angola"
+      },
+      {
+        "id": 2,
+        "value": "Angola"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "AI",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Anguilla"
+      },
+      {
+        "id": 2,
+        "value": "Anguilla"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "id_zone": 2,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "AG",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Antigua & Barbuda"
+      },
+      {
+        "id": 2,
+        "value": "Antigua & Barbuda"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "id_zone": 6,
+    "id_currency": 0,
+    "call_prefix": 54,
+    "iso_code": "AR",
+    "active": "0",
+    "contains_states": "1",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "LNNNNLLL",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Argentina"
+      },
+      {
+        "id": 2,
+        "value": "Argentina"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 374,
+    "iso_code": "AM",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Armenia"
+      },
+      {
+        "id": 2,
+        "value": "Armenia"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 297,
+    "iso_code": "AW",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Aruba"
+      },
+      {
+        "id": 2,
+        "value": "Aruba"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 994,
+    "iso_code": "AZ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "CNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Azerbaijan"
+      },
+      {
+        "id": 2,
+        "value": "Azerbaijan"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "id_zone": 2,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "BS",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Bahamas"
+      },
+      {
+        "id": 2,
+        "value": "Bahamas"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 973,
+    "iso_code": "BH",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Bahrain"
+      },
+      {
+        "id": 2,
+        "value": "Bahrain"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 880,
+    "iso_code": "BD",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Bangladesh"
+      },
+      {
+        "id": 2,
+        "value": "Bangladesh"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "id_zone": 2,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "BB",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "CNNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Barbados"
+      },
+      {
+        "id": 2,
+        "value": "Barbados"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "BY",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Belarus"
+      },
+      {
+        "id": 2,
+        "value": "Belarus"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 501,
+    "iso_code": "BZ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "0",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Belize"
+      },
+      {
+        "id": 2,
+        "value": "Belize"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 229,
+    "iso_code": "BJ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "0",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Benin"
+      },
+      {
+        "id": 2,
+        "value": "Benin"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "id_zone": 2,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "BM",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Bermuda"
+      },
+      {
+        "id": 2,
+        "value": "Bermuda"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 975,
+    "iso_code": "BT",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Bhutan"
+      },
+      {
+        "id": 2,
+        "value": "Bhutan"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 267,
+    "iso_code": "BW",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Botswana"
+      },
+      {
+        "id": 2,
+        "value": "Botswana"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "id_zone": 6,
+    "id_currency": 0,
+    "call_prefix": 55,
+    "iso_code": "BR",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN-NNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Brazil"
+      },
+      {
+        "id": 2,
+        "value": "Brazil"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 673,
+    "iso_code": "BN",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "LLNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Brunei"
+      },
+      {
+        "id": 2,
+        "value": "Brunei"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 226,
+    "iso_code": "BF",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Burkina Faso"
+      },
+      {
+        "id": 2,
+        "value": "Burkina Faso"
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 95,
+    "iso_code": "MM",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Myanmar (Burma)"
+      },
+      {
+        "id": 2,
+        "value": "Myanmar (Burma)"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 257,
+    "iso_code": "BI",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Burundi"
+      },
+      {
+        "id": 2,
+        "value": "Burundi"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 855,
+    "iso_code": "KH",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Cambodia"
+      },
+      {
+        "id": 2,
+        "value": "Cambodia"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 237,
+    "iso_code": "CM",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Cameroon"
+      },
+      {
+        "id": 2,
+        "value": "Cameroon"
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 238,
+    "iso_code": "CV",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Cape Verde"
+      },
+      {
+        "id": 2,
+        "value": "Cape Verde"
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 236,
+    "iso_code": "CF",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Central African Republic"
+      },
+      {
+        "id": 2,
+        "value": "Central African Republic"
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 235,
+    "iso_code": "TD",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Chad"
+      },
+      {
+        "id": 2,
+        "value": "Chad"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "id_zone": 6,
+    "id_currency": 0,
+    "call_prefix": 56,
+    "iso_code": "CL",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNN-NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Chile"
+      },
+      {
+        "id": 2,
+        "value": "Chile"
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "id_zone": 6,
+    "id_currency": 0,
+    "call_prefix": 57,
+    "iso_code": "CO",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Colombia"
+      },
+      {
+        "id": 2,
+        "value": "Colombia"
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 269,
+    "iso_code": "KM",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Comoros"
+      },
+      {
+        "id": 2,
+        "value": "Comoros"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 243,
+    "iso_code": "CD",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Congo - Kinshasa"
+      },
+      {
+        "id": 2,
+        "value": "Congo - Kinshasa"
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 242,
+    "iso_code": "CG",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Congo - Brazzaville"
+      },
+      {
+        "id": 2,
+        "value": "Congo - Brazzaville"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 506,
+    "iso_code": "CR",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Costa Rica"
+      },
+      {
+        "id": 2,
+        "value": "Costa Rica"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 385,
+    "iso_code": "HR",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Croatia"
+      },
+      {
+        "id": 2,
+        "value": "Croatia"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 53,
+    "iso_code": "CU",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Cuba"
+      },
+      {
+        "id": 2,
+        "value": "Cuba"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 357,
+    "iso_code": "CY",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Cyprus"
+      },
+      {
+        "id": 2,
+        "value": "Cyprus"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 253,
+    "iso_code": "DJ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Djibouti"
+      },
+      {
+        "id": 2,
+        "value": "Djibouti"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "DM",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Dominica"
+      },
+      {
+        "id": 2,
+        "value": "Dominica"
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "DO",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Dominican Republic"
+      },
+      {
+        "id": 2,
+        "value": "Dominican Republic"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 670,
+    "iso_code": "TL",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Timor-Leste"
+      },
+      {
+        "id": 2,
+        "value": "Timor-Leste"
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "id_zone": 6,
+    "id_currency": 0,
+    "call_prefix": 593,
+    "iso_code": "EC",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "CNNNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Ecuador"
+      },
+      {
+        "id": 2,
+        "value": "Ecuador"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 20,
+    "iso_code": "EG",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Egypt"
+      },
+      {
+        "id": 2,
+        "value": "Egypt"
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 503,
+    "iso_code": "SV",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "El Salvador"
+      },
+      {
+        "id": 2,
+        "value": "El Salvador"
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 240,
+    "iso_code": "GQ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Equatorial Guinea"
+      },
+      {
+        "id": 2,
+        "value": "Equatorial Guinea"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 291,
+    "iso_code": "ER",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Eritrea"
+      },
+      {
+        "id": 2,
+        "value": "Eritrea"
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 372,
+    "iso_code": "EE",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Estonia"
+      },
+      {
+        "id": 2,
+        "value": "Estonia"
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 251,
+    "iso_code": "ET",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Ethiopia"
+      },
+      {
+        "id": 2,
+        "value": "Ethiopia"
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "FK",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "LLLL NLL",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Falkland Islands"
+      },
+      {
+        "id": 2,
+        "value": "Falkland Islands"
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 298,
+    "iso_code": "FO",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Faroe Islands"
+      },
+      {
+        "id": 2,
+        "value": "Faroe Islands"
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 679,
+    "iso_code": "FJ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Fiji"
+      },
+      {
+        "id": 2,
+        "value": "Fiji"
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 241,
+    "iso_code": "GA",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Gabon"
+      },
+      {
+        "id": 2,
+        "value": "Gabon"
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 220,
+    "iso_code": "GM",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Gambia"
+      },
+      {
+        "id": 2,
+        "value": "Gambia"
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 995,
+    "iso_code": "GE",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Georgia"
+      },
+      {
+        "id": 2,
+        "value": "Georgia"
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 233,
+    "iso_code": "GH",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Ghana"
+      },
+      {
+        "id": 2,
+        "value": "Ghana"
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "GD",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Grenada"
+      },
+      {
+        "id": 2,
+        "value": "Grenada"
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 299,
+    "iso_code": "GL",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Greenland"
+      },
+      {
+        "id": 2,
+        "value": "Greenland"
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 350,
+    "iso_code": "GI",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Gibraltar"
+      },
+      {
+        "id": 2,
+        "value": "Gibraltar"
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 590,
+    "iso_code": "GP",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Guadeloupe"
+      },
+      {
+        "id": 2,
+        "value": "Guadeloupe"
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "GU",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Guam"
+      },
+      {
+        "id": 2,
+        "value": "Guam"
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 502,
+    "iso_code": "GT",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Guatemala"
+      },
+      {
+        "id": 2,
+        "value": "Guatemala"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "GG",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "LLN NLL",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Guernsey"
+      },
+      {
+        "id": 2,
+        "value": "Guernsey"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 224,
+    "iso_code": "GN",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Guinea"
+      },
+      {
+        "id": 2,
+        "value": "Guinea"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 245,
+    "iso_code": "GW",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Guinea-Bissau"
+      },
+      {
+        "id": 2,
+        "value": "Guinea-Bissau"
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "id_zone": 6,
+    "id_currency": 0,
+    "call_prefix": 592,
+    "iso_code": "GY",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Guyana"
+      },
+      {
+        "id": 2,
+        "value": "Guyana"
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 509,
+    "iso_code": "HT",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Haiti"
+      },
+      {
+        "id": 2,
+        "value": "Haiti"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 379,
+    "iso_code": "VA",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Vatican City"
+      },
+      {
+        "id": 2,
+        "value": "Vatican City"
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 504,
+    "iso_code": "HN",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Honduras"
+      },
+      {
+        "id": 2,
+        "value": "Honduras"
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 354,
+    "iso_code": "IS",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Iceland"
+      },
+      {
+        "id": 2,
+        "value": "Iceland"
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 91,
+    "iso_code": "IN",
+    "active": "0",
+    "contains_states": "1",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNN NNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "India"
+      },
+      {
+        "id": 2,
+        "value": "India"
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 62,
+    "iso_code": "ID",
+    "active": "0",
+    "contains_states": "1",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Indonesia"
+      },
+      {
+        "id": 2,
+        "value": "Indonesia"
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 98,
+    "iso_code": "IR",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN-NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Iran"
+      },
+      {
+        "id": 2,
+        "value": "Iran"
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 964,
+    "iso_code": "IQ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Iraq"
+      },
+      {
+        "id": 2,
+        "value": "Iraq"
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "IM",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "CN NLL",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Isle of Man"
+      },
+      {
+        "id": 2,
+        "value": "Isle of Man"
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "JM",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Jamaica"
+      },
+      {
+        "id": 2,
+        "value": "Jamaica"
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "JE",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "CN NLL",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Jersey"
+      },
+      {
+        "id": 2,
+        "value": "Jersey"
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 962,
+    "iso_code": "JO",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Jordan"
+      },
+      {
+        "id": 2,
+        "value": "Jordan"
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 7,
+    "iso_code": "KZ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Kazakhstan"
+      },
+      {
+        "id": 2,
+        "value": "Kazakhstan"
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 254,
+    "iso_code": "KE",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Kenya"
+      },
+      {
+        "id": 2,
+        "value": "Kenya"
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 686,
+    "iso_code": "KI",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Kiribati"
+      },
+      {
+        "id": 2,
+        "value": "Kiribati"
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 850,
+    "iso_code": "KP",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "North Korea"
+      },
+      {
+        "id": 2,
+        "value": "North Korea"
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 965,
+    "iso_code": "KW",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Kuwait"
+      },
+      {
+        "id": 2,
+        "value": "Kuwait"
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 996,
+    "iso_code": "KG",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Kyrgyzstan"
+      },
+      {
+        "id": 2,
+        "value": "Kyrgyzstan"
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 856,
+    "iso_code": "LA",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Laos"
+      },
+      {
+        "id": 2,
+        "value": "Laos"
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 371,
+    "iso_code": "LV",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "C-NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Latvia"
+      },
+      {
+        "id": 2,
+        "value": "Latvia"
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 961,
+    "iso_code": "LB",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Lebanon"
+      },
+      {
+        "id": 2,
+        "value": "Lebanon"
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 266,
+    "iso_code": "LS",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Lesotho"
+      },
+      {
+        "id": 2,
+        "value": "Lesotho"
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 231,
+    "iso_code": "LR",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Liberia"
+      },
+      {
+        "id": 2,
+        "value": "Liberia"
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 218,
+    "iso_code": "LY",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Libya"
+      },
+      {
+        "id": 2,
+        "value": "Libya"
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 423,
+    "iso_code": "LI",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Liechtenstein"
+      },
+      {
+        "id": 2,
+        "value": "Liechtenstein"
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 370,
+    "iso_code": "LT",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Lithuania"
+      },
+      {
+        "id": 2,
+        "value": "Lithuania"
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 853,
+    "iso_code": "MO",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "0",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Macao SAR China"
+      },
+      {
+        "id": 2,
+        "value": "Macao SAR China"
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 389,
+    "iso_code": "MK",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "North Macedonia"
+      },
+      {
+        "id": 2,
+        "value": "North Macedonia"
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 261,
+    "iso_code": "MG",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Madagascar"
+      },
+      {
+        "id": 2,
+        "value": "Madagascar"
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 265,
+    "iso_code": "MW",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Malawi"
+      },
+      {
+        "id": 2,
+        "value": "Malawi"
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 60,
+    "iso_code": "MY",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Malaysia"
+      },
+      {
+        "id": 2,
+        "value": "Malaysia"
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 960,
+    "iso_code": "MV",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Maldives"
+      },
+      {
+        "id": 2,
+        "value": "Maldives"
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 223,
+    "iso_code": "ML",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Mali"
+      },
+      {
+        "id": 2,
+        "value": "Mali"
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 356,
+    "iso_code": "MT",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "LLL NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Malta"
+      },
+      {
+        "id": 2,
+        "value": "Malta"
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 692,
+    "iso_code": "MH",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Marshall Islands"
+      },
+      {
+        "id": 2,
+        "value": "Marshall Islands"
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 596,
+    "iso_code": "MQ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Martinique"
+      },
+      {
+        "id": 2,
+        "value": "Martinique"
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 222,
+    "iso_code": "MR",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Mauritania"
+      },
+      {
+        "id": 2,
+        "value": "Mauritania"
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 36,
+    "iso_code": "HU",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Hungary"
+      },
+      {
+        "id": 2,
+        "value": "Hungary"
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 262,
+    "iso_code": "YT",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Mayotte"
+      },
+      {
+        "id": 2,
+        "value": "Mayotte"
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "id_zone": 2,
+    "id_currency": 0,
+    "call_prefix": 52,
+    "iso_code": "MX",
+    "active": "0",
+    "contains_states": "1",
+    "need_identification_number": "1",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Mexico"
+      },
+      {
+        "id": 2,
+        "value": "Mexico"
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 691,
+    "iso_code": "FM",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Micronesia"
+      },
+      {
+        "id": 2,
+        "value": "Micronesia"
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 373,
+    "iso_code": "MD",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "C-NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Moldova"
+      },
+      {
+        "id": 2,
+        "value": "Moldova"
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 377,
+    "iso_code": "MC",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "980NN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Monaco"
+      },
+      {
+        "id": 2,
+        "value": "Monaco"
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 976,
+    "iso_code": "MN",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Mongolia"
+      },
+      {
+        "id": 2,
+        "value": "Mongolia"
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 382,
+    "iso_code": "ME",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Montenegro"
+      },
+      {
+        "id": 2,
+        "value": "Montenegro"
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "MS",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Montserrat"
+      },
+      {
+        "id": 2,
+        "value": "Montserrat"
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 212,
+    "iso_code": "MA",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Morocco"
+      },
+      {
+        "id": 2,
+        "value": "Morocco"
+      }
+    ]
+  },
+  {
+    "id": 152,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 258,
+    "iso_code": "MZ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Mozambique"
+      },
+      {
+        "id": 2,
+        "value": "Mozambique"
+      }
+    ]
+  },
+  {
+    "id": 153,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 264,
+    "iso_code": "NA",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Namibia"
+      },
+      {
+        "id": 2,
+        "value": "Namibia"
+      }
+    ]
+  },
+  {
+    "id": 154,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 674,
+    "iso_code": "NR",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Nauru"
+      },
+      {
+        "id": 2,
+        "value": "Nauru"
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 977,
+    "iso_code": "NP",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Nepal"
+      },
+      {
+        "id": 2,
+        "value": "Nepal"
+      }
+    ]
+  },
+  {
+    "id": 156,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 687,
+    "iso_code": "NC",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "New Caledonia"
+      },
+      {
+        "id": 2,
+        "value": "New Caledonia"
+      }
+    ]
+  },
+  {
+    "id": 157,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 505,
+    "iso_code": "NI",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Nicaragua"
+      },
+      {
+        "id": 2,
+        "value": "Nicaragua"
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 227,
+    "iso_code": "NE",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Niger"
+      },
+      {
+        "id": 2,
+        "value": "Niger"
+      }
+    ]
+  },
+  {
+    "id": 159,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 683,
+    "iso_code": "NU",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Niue"
+      },
+      {
+        "id": 2,
+        "value": "Niue"
+      }
+    ]
+  },
+  {
+    "id": 160,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "NF",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Norfolk Island"
+      },
+      {
+        "id": 2,
+        "value": "Norfolk Island"
+      }
+    ]
+  },
+  {
+    "id": 161,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "MP",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Northern Mariana Islands"
+      },
+      {
+        "id": 2,
+        "value": "Northern Mariana Islands"
+      }
+    ]
+  },
+  {
+    "id": 162,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 968,
+    "iso_code": "OM",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Oman"
+      },
+      {
+        "id": 2,
+        "value": "Oman"
+      }
+    ]
+  },
+  {
+    "id": 163,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 92,
+    "iso_code": "PK",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Pakistan"
+      },
+      {
+        "id": 2,
+        "value": "Pakistan"
+      }
+    ]
+  },
+  {
+    "id": 164,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 680,
+    "iso_code": "PW",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Palau"
+      },
+      {
+        "id": 2,
+        "value": "Palau"
+      }
+    ]
+  },
+  {
+    "id": 165,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "PS",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Palestinian Territories"
+      },
+      {
+        "id": 2,
+        "value": "Palestinian Territories"
+      }
+    ]
+  },
+  {
+    "id": 166,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 507,
+    "iso_code": "PA",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Panama"
+      },
+      {
+        "id": 2,
+        "value": "Panama"
+      }
+    ]
+  },
+  {
+    "id": 167,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 675,
+    "iso_code": "PG",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Papua New Guinea"
+      },
+      {
+        "id": 2,
+        "value": "Papua New Guinea"
+      }
+    ]
+  },
+  {
+    "id": 168,
+    "id_zone": 6,
+    "id_currency": 0,
+    "call_prefix": 595,
+    "iso_code": "PY",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Paraguay"
+      },
+      {
+        "id": 2,
+        "value": "Paraguay"
+      }
+    ]
+  },
+  {
+    "id": 169,
+    "id_zone": 6,
+    "id_currency": 0,
+    "call_prefix": 51,
+    "iso_code": "PE",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Peru"
+      },
+      {
+        "id": 2,
+        "value": "Peru"
+      }
+    ]
+  },
+  {
+    "id": 170,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 63,
+    "iso_code": "PH",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Philippines"
+      },
+      {
+        "id": 2,
+        "value": "Philippines"
+      }
+    ]
+  },
+  {
+    "id": 171,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "PN",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "LLLL NLL",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Pitcairn Islands"
+      },
+      {
+        "id": 2,
+        "value": "Pitcairn Islands"
+      }
+    ]
+  },
+  {
+    "id": 172,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "PR",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Puerto Rico"
+      },
+      {
+        "id": 2,
+        "value": "Puerto Rico"
+      }
+    ]
+  },
+  {
+    "id": 173,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 974,
+    "iso_code": "QA",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Qatar"
+      },
+      {
+        "id": 2,
+        "value": "Qatar"
+      }
+    ]
+  },
+  {
+    "id": 174,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 262,
+    "iso_code": "RE",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Réunion"
+      },
+      {
+        "id": 2,
+        "value": "Réunion"
+      }
+    ]
+  },
+  {
+    "id": 175,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 7,
+    "iso_code": "RU",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Russia"
+      },
+      {
+        "id": 2,
+        "value": "Russia"
+      }
+    ]
+  },
+  {
+    "id": 176,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 250,
+    "iso_code": "RW",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Rwanda"
+      },
+      {
+        "id": 2,
+        "value": "Rwanda"
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "BL",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "St. Barthélemy"
+      },
+      {
+        "id": 2,
+        "value": "St. Barthélemy"
+      }
+    ]
+  },
+  {
+    "id": 178,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "KN",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "St. Kitts & Nevis"
+      },
+      {
+        "id": 2,
+        "value": "St. Kitts & Nevis"
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "LC",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "St. Lucia"
+      },
+      {
+        "id": 2,
+        "value": "St. Lucia"
+      }
+    ]
+  },
+  {
+    "id": 180,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "MF",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "St. Martin"
+      },
+      {
+        "id": 2,
+        "value": "St. Martin"
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 508,
+    "iso_code": "PM",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "St. Pierre & Miquelon"
+      },
+      {
+        "id": 2,
+        "value": "St. Pierre & Miquelon"
+      }
+    ]
+  },
+  {
+    "id": 182,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "VC",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "St. Vincent & Grenadines"
+      },
+      {
+        "id": 2,
+        "value": "St. Vincent & Grenadines"
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 685,
+    "iso_code": "WS",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Samoa"
+      },
+      {
+        "id": 2,
+        "value": "Samoa"
+      }
+    ]
+  },
+  {
+    "id": 184,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 378,
+    "iso_code": "SM",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "San Marino"
+      },
+      {
+        "id": 2,
+        "value": "San Marino"
+      }
+    ]
+  },
+  {
+    "id": 185,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 239,
+    "iso_code": "ST",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "São Tomé & Príncipe"
+      },
+      {
+        "id": 2,
+        "value": "São Tomé & Príncipe"
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 966,
+    "iso_code": "SA",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Saudi Arabia"
+      },
+      {
+        "id": 2,
+        "value": "Saudi Arabia"
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 221,
+    "iso_code": "SN",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Senegal"
+      },
+      {
+        "id": 2,
+        "value": "Senegal"
+      }
+    ]
+  },
+  {
+    "id": 188,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 381,
+    "iso_code": "RS",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Serbia"
+      },
+      {
+        "id": 2,
+        "value": "Serbia"
+      }
+    ]
+  },
+  {
+    "id": 189,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 248,
+    "iso_code": "SC",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Seychelles"
+      },
+      {
+        "id": 2,
+        "value": "Seychelles"
+      }
+    ]
+  },
+  {
+    "id": 190,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 232,
+    "iso_code": "SL",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Sierra Leone"
+      },
+      {
+        "id": 2,
+        "value": "Sierra Leone"
+      }
+    ]
+  },
+  {
+    "id": 191,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 386,
+    "iso_code": "SI",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "C-NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Slovenia"
+      },
+      {
+        "id": 2,
+        "value": "Slovenia"
+      }
+    ]
+  },
+  {
+    "id": 192,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 677,
+    "iso_code": "SB",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Solomon Islands"
+      },
+      {
+        "id": 2,
+        "value": "Solomon Islands"
+      }
+    ]
+  },
+  {
+    "id": 193,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 252,
+    "iso_code": "SO",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Somalia"
+      },
+      {
+        "id": 2,
+        "value": "Somalia"
+      }
+    ]
+  },
+  {
+    "id": 194,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "GS",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "LLLL NLL",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "South Georgia & South Sandwich Islands"
+      },
+      {
+        "id": 2,
+        "value": "South Georgia & South Sandwich Islands"
+      }
+    ]
+  },
+  {
+    "id": 195,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 94,
+    "iso_code": "LK",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Sri Lanka"
+      },
+      {
+        "id": 2,
+        "value": "Sri Lanka"
+      }
+    ]
+  },
+  {
+    "id": 196,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 249,
+    "iso_code": "SD",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Sudan"
+      },
+      {
+        "id": 2,
+        "value": "Sudan"
+      }
+    ]
+  },
+  {
+    "id": 197,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 597,
+    "iso_code": "SR",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Suriname"
+      },
+      {
+        "id": 2,
+        "value": "Suriname"
+      }
+    ]
+  },
+  {
+    "id": 198,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "SJ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Svalbard & Jan Mayen"
+      },
+      {
+        "id": 2,
+        "value": "Svalbard & Jan Mayen"
+      }
+    ]
+  },
+  {
+    "id": 199,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 268,
+    "iso_code": "SZ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Eswatini"
+      },
+      {
+        "id": 2,
+        "value": "Eswatini"
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 963,
+    "iso_code": "SY",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Syria"
+      },
+      {
+        "id": 2,
+        "value": "Syria"
+      }
+    ]
+  },
+  {
+    "id": 201,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 886,
+    "iso_code": "TW",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Taiwan"
+      },
+      {
+        "id": 2,
+        "value": "Taiwan"
+      }
+    ]
+  },
+  {
+    "id": 202,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 992,
+    "iso_code": "TJ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Tajikistan"
+      },
+      {
+        "id": 2,
+        "value": "Tajikistan"
+      }
+    ]
+  },
+  {
+    "id": 203,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 255,
+    "iso_code": "TZ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Tanzania"
+      },
+      {
+        "id": 2,
+        "value": "Tanzania"
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 66,
+    "iso_code": "TH",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Thailand"
+      },
+      {
+        "id": 2,
+        "value": "Thailand"
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 690,
+    "iso_code": "TK",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Tokelau"
+      },
+      {
+        "id": 2,
+        "value": "Tokelau"
+      }
+    ]
+  },
+  {
+    "id": 206,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 676,
+    "iso_code": "TO",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Tonga"
+      },
+      {
+        "id": 2,
+        "value": "Tonga"
+      }
+    ]
+  },
+  {
+    "id": 207,
+    "id_zone": 6,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "TT",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Trinidad & Tobago"
+      },
+      {
+        "id": 2,
+        "value": "Trinidad & Tobago"
+      }
+    ]
+  },
+  {
+    "id": 208,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 216,
+    "iso_code": "TN",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Tunisia"
+      },
+      {
+        "id": 2,
+        "value": "Tunisia"
+      }
+    ]
+  },
+  {
+    "id": 209,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 90,
+    "iso_code": "TR",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Türkiye"
+      },
+      {
+        "id": 2,
+        "value": "Türkiye"
+      }
+    ]
+  },
+  {
+    "id": 210,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 993,
+    "iso_code": "TM",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Turkmenistan"
+      },
+      {
+        "id": 2,
+        "value": "Turkmenistan"
+      }
+    ]
+  },
+  {
+    "id": 211,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "TC",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "LLLL NLL",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Turks & Caicos Islands"
+      },
+      {
+        "id": 2,
+        "value": "Turks & Caicos Islands"
+      }
+    ]
+  },
+  {
+    "id": 212,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 688,
+    "iso_code": "TV",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Tuvalu"
+      },
+      {
+        "id": 2,
+        "value": "Tuvalu"
+      }
+    ]
+  },
+  {
+    "id": 213,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 256,
+    "iso_code": "UG",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Uganda"
+      },
+      {
+        "id": 2,
+        "value": "Uganda"
+      }
+    ]
+  },
+  {
+    "id": 214,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 380,
+    "iso_code": "UA",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Ukraine"
+      },
+      {
+        "id": 2,
+        "value": "Ukraine"
+      }
+    ]
+  },
+  {
+    "id": 215,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 971,
+    "iso_code": "AE",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "United Arab Emirates"
+      },
+      {
+        "id": 2,
+        "value": "United Arab Emirates"
+      }
+    ]
+  },
+  {
+    "id": 216,
+    "id_zone": 6,
+    "id_currency": 0,
+    "call_prefix": 598,
+    "iso_code": "UY",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Uruguay"
+      },
+      {
+        "id": 2,
+        "value": "Uruguay"
+      }
+    ]
+  },
+  {
+    "id": 217,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 998,
+    "iso_code": "UZ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Uzbekistan"
+      },
+      {
+        "id": 2,
+        "value": "Uzbekistan"
+      }
+    ]
+  },
+  {
+    "id": 218,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 678,
+    "iso_code": "VU",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Vanuatu"
+      },
+      {
+        "id": 2,
+        "value": "Vanuatu"
+      }
+    ]
+  },
+  {
+    "id": 219,
+    "id_zone": 6,
+    "id_currency": 0,
+    "call_prefix": 58,
+    "iso_code": "VE",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Venezuela"
+      },
+      {
+        "id": 2,
+        "value": "Venezuela"
+      }
+    ]
+  },
+  {
+    "id": 220,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 84,
+    "iso_code": "VN",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Vietnam"
+      },
+      {
+        "id": 2,
+        "value": "Vietnam"
+      }
+    ]
+  },
+  {
+    "id": 221,
+    "id_zone": 2,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "VG",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "CNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "British Virgin Islands"
+      },
+      {
+        "id": 2,
+        "value": "British Virgin Islands"
+      }
+    ]
+  },
+  {
+    "id": 222,
+    "id_zone": 2,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "VI",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "U.S. Virgin Islands"
+      },
+      {
+        "id": 2,
+        "value": "U.S. Virgin Islands"
+      }
+    ]
+  },
+  {
+    "id": 223,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 681,
+    "iso_code": "WF",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Wallis & Futuna"
+      },
+      {
+        "id": 2,
+        "value": "Wallis & Futuna"
+      }
+    ]
+  },
+  {
+    "id": 224,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "EH",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Western Sahara"
+      },
+      {
+        "id": 2,
+        "value": "Western Sahara"
+      }
+    ]
+  },
+  {
+    "id": 225,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 967,
+    "iso_code": "YE",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Yemen"
+      },
+      {
+        "id": 2,
+        "value": "Yemen"
+      }
+    ]
+  },
+  {
+    "id": 226,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 260,
+    "iso_code": "ZM",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Zambia"
+      },
+      {
+        "id": 2,
+        "value": "Zambia"
+      }
+    ]
+  },
+  {
+    "id": 227,
+    "id_zone": 4,
+    "id_currency": 0,
+    "call_prefix": 263,
+    "iso_code": "ZW",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Zimbabwe"
+      },
+      {
+        "id": 2,
+        "value": "Zimbabwe"
+      }
+    ]
+  },
+  {
+    "id": 228,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 355,
+    "iso_code": "AL",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Albania"
+      },
+      {
+        "id": 2,
+        "value": "Albania"
+      }
+    ]
+  },
+  {
+    "id": 229,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 93,
+    "iso_code": "AF",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Afghanistan"
+      },
+      {
+        "id": 2,
+        "value": "Afghanistan"
+      }
+    ]
+  },
+  {
+    "id": 230,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "AQ",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Antarctica"
+      },
+      {
+        "id": 2,
+        "value": "Antarctica"
+      }
+    ]
+  },
+  {
+    "id": 231,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 387,
+    "iso_code": "BA",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Bosnia & Herzegovina"
+      },
+      {
+        "id": 2,
+        "value": "Bosnia & Herzegovina"
+      }
+    ]
+  },
+  {
+    "id": 232,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "IO",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "LLLL NLL",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "British Indian Ocean Territory"
+      },
+      {
+        "id": 2,
+        "value": "British Indian Ocean Territory"
+      }
+    ]
+  },
+  {
+    "id": 233,
+    "id_zone": 1,
+    "id_currency": 0,
+    "call_prefix": 359,
+    "iso_code": "BG",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Bulgaria"
+      },
+      {
+        "id": 2,
+        "value": "Bulgaria"
+      }
+    ]
+  },
+  {
+    "id": 234,
+    "id_zone": 8,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "KY",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Cayman Islands"
+      },
+      {
+        "id": 2,
+        "value": "Cayman Islands"
+      }
+    ]
+  },
+  {
+    "id": 235,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "CX",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Christmas Island"
+      },
+      {
+        "id": 2,
+        "value": "Christmas Island"
+      }
+    ]
+  },
+  {
+    "id": 236,
+    "id_zone": 3,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "CC",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Cocos (Keeling) Islands"
+      },
+      {
+        "id": 2,
+        "value": "Cocos (Keeling) Islands"
+      }
+    ]
+  },
+  {
+    "id": 237,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 682,
+    "iso_code": "CK",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Cook Islands"
+      },
+      {
+        "id": 2,
+        "value": "Cook Islands"
+      }
+    ]
+  },
+  {
+    "id": 238,
+    "id_zone": 6,
+    "id_currency": 0,
+    "call_prefix": 594,
+    "iso_code": "GF",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "French Guiana"
+      },
+      {
+        "id": 2,
+        "value": "French Guiana"
+      }
+    ]
+  },
+  {
+    "id": 239,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 689,
+    "iso_code": "PF",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "French Polynesia"
+      },
+      {
+        "id": 2,
+        "value": "French Polynesia"
+      }
+    ]
+  },
+  {
+    "id": 240,
+    "id_zone": 5,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "TF",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "French Southern Territories"
+      },
+      {
+        "id": 2,
+        "value": "French Southern Territories"
+      }
+    ]
+  },
+  {
+    "id": 241,
+    "id_zone": 7,
+    "id_currency": 0,
+    "call_prefix": 0,
+    "iso_code": "AX",
+    "active": "0",
+    "contains_states": "0",
+    "need_identification_number": "0",
+    "need_zip_code": "1",
+    "zip_code_format": "NNNNN",
+    "display_tax_label": "1",
+    "name": [
+      {
+        "id": 1,
+        "value": "Åland Islands"
+      },
+      {
+        "id": 2,
+        "value": "Åland Islands"
+      }
+    ]
+  }
+]

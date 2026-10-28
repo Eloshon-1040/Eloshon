@@ -1,0 +1,3292 @@
+[
+  {
+    "number": "XKBKNABJK",
+    "email": "customer2@example.test",
+    "createdAt": "2026-09-21 03:39:36",
+    "financialStatus": "pending",
+    "fulfillmentStatus": "unfulfilled",
+    "currency": "EUR",
+    "subtotal": 59.8,
+    "shipping": 8.4,
+    "taxes": 1.4,
+    "total": 68.2,
+    "discountCode": "",
+    "discountAmount": 0,
+    "paymentMethod": "Payment by check",
+    "transactionId": "",
+    "note": "",
+    "billing": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "Florida",
+      "provinceCode": "FL",
+      "country": "US",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "name": "Test Customer 6",
+      "firstName": "Test",
+      "lastName": "Customer 6",
+      "label": "My address",
+      "sourceId": "5"
+    },
+    "shipping_": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "Florida",
+      "provinceCode": "FL",
+      "country": "US",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "name": "Test Customer 6",
+      "firstName": "Test",
+      "lastName": "Customer 6",
+      "label": "My address",
+      "sourceId": "5"
+    },
+    "lineItems": [
+      {
+        "name": "Hummingbird printed t-shirt",
+        "sku": "demo_1",
+        "quantity": 1,
+        "price": 23.9
+      },
+      {
+        "name": "Hummingbird printed sweater",
+        "sku": "demo_3",
+        "quantity": 1,
+        "price": 35.9
+      }
+    ],
+    "numbering": {
+      "sourceNumber": "XKBKNABJK",
+      "sourceId": "1",
+      "format": {
+        "prefix": "#IN",
+        "pattern": "#IN{n:6}"
+      }
+    },
+    "identity": {
+      "sourceId": "1"
+    },
+    "status": {
+      "sourceState": "Canceled",
+      "financial": "pending",
+      "fulfillment": "unfulfilled",
+      "lifecycle": "cancelled",
+      "history": [
+        {
+          "at": "2026-09-21 03:39:36",
+          "state": "Awaiting check payment",
+          "by": "0"
+        },
+        {
+          "at": "2026-09-21 03:39:36",
+          "state": "Canceled",
+          "by": "1"
+        }
+      ]
+    },
+    "amounts": {
+      "exchangeRate": 1,
+      "total": 68.2,
+      "paid": 0,
+      "subtotal": 59.8,
+      "shipping": 8.4,
+      "shippingTax": 1.4,
+      "taxes": 1.4,
+      "discounts": 0,
+      "fees": 0
+    },
+    "customerRef": {
+      "sourceId": "2",
+      "email": "customer2@example.test",
+      "isGuest": false
+    },
+    "shippingLines": [
+      {
+        "amount": 8.4
+      }
+    ],
+    "timestamps": {
+      "created": "2026-09-21 03:39:36",
+      "updated": "2026-09-21 03:39:36"
+    },
+    "locale": "en",
+    "items": [
+      {
+        "name": "Hummingbird printed t-shirt",
+        "sku": "demo_1",
+        "quantity": 1,
+        "unitPrice": 23.9,
+        "total": 23.9,
+        "options": [
+          {
+            "name": "Color",
+            "value": "White"
+          },
+          {
+            "name": "Size",
+            "value": "S"
+          }
+        ],
+        "totalTax": 0,
+        "unitPriceBeforeDiscount": 23.9,
+        "productRef": "1",
+        "variantRef": "1",
+        "weightGrams": 0,
+        "kind": "product",
+        "sourceExtension": {
+          "prestashop": {
+            "line_id": "1",
+            "product_price": "23.900000",
+            "unit_price_tax_excl": "23.900000",
+            "total_price_tax_excl": "23.900000",
+            "product_supplier_reference": "",
+            "reduction_percent": "0.00",
+            "reduction_amount": "0.000000",
+            "reduction_amount_tax_excl": "0.000000",
+            "product_quantity_discount": "0.000000",
+            "group_reduction": "0.00",
+            "discount_quantity_applied": 0,
+            "product_quantity_in_stock": 1,
+            "product_quantity_return": 0,
+            "product_quantity_reinjected": 0,
+            "tax_computation_method": 0,
+            "id_tax_rules_group": 0,
+            "ecotax": "0.000000",
+            "ecotax_tax_rate": "0.000",
+            "total_shipping_price_tax_excl": "0.000000",
+            "total_shipping_price_tax_incl": "0.000000",
+            "purchase_supplier_price": "0.000000",
+            "original_wholesale_price": "5.490000",
+            "total_refunded_tax_excl": "0.000000",
+            "id_order_invoice": 0,
+            "id_warehouse": 0,
+            "id_shop": 1,
+            "id_customization": 0,
+            "download_nb": 0,
+            "download_deadline": "0000-00-00 00:00:00"
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "prestashop",
+            "sourceField": "product_name",
+            "sourceValue": "Hummingbird printed t-shirt - Color : White, Size : S",
+            "transform": "split_name_options",
+            "method": "exact"
+          },
+          "options": {
+            "platform": "prestashop",
+            "sourceField": "product_name",
+            "sourceValue": "Hummingbird printed t-shirt - Color : White, Size : S",
+            "transform": "split_name_options",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "prestashop",
+            "sourceField": "product_reference",
+            "sourceValue": "demo_1",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "prestashop",
+            "sourceField": "product_quantity",
+            "sourceValue": 1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "prestashop",
+            "sourceField": "unit_price_tax_incl",
+            "sourceValue": "23.900000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "prestashop",
+            "sourceField": "total_price_tax_incl",
+            "sourceValue": "23.900000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "prestashop",
+            "sourceField": "total_price_tax_incl + total_price_tax_excl",
+            "sourceValue": "23.900000",
+            "transform": "subtract",
+            "method": "exact"
+          },
+          "unitPriceBeforeDiscount": {
+            "platform": "prestashop",
+            "sourceField": "original_product_price",
+            "sourceValue": "23.900000",
+            "transform": "money_present",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "prestashop",
+            "sourceField": "product_id",
+            "sourceValue": 1,
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "variantRef": {
+            "platform": "prestashop",
+            "sourceField": "product_attribute_id",
+            "sourceValue": 1,
+            "transform": "id_or_none",
+            "method": "exact"
+          },
+          "weightGrams": {
+            "platform": "prestashop",
+            "sourceField": "product_weight",
+            "sourceValue": "0.000000",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "prestashop",
+            "sourceField": "id",
+            "sourceValue": 1,
+            "transform": "constant",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "name": "Hummingbird printed sweater",
+        "sku": "demo_3",
+        "quantity": 1,
+        "unitPrice": 35.9,
+        "total": 35.9,
+        "options": [
+          {
+            "name": "Color",
+            "value": "White"
+          },
+          {
+            "name": "Size",
+            "value": "S"
+          }
+        ],
+        "totalTax": 0,
+        "unitPriceBeforeDiscount": 35.9,
+        "productRef": "2",
+        "variantRef": "9",
+        "weightGrams": 0,
+        "kind": "product",
+        "sourceExtension": {
+          "prestashop": {
+            "line_id": "2",
+            "product_price": "35.900000",
+            "unit_price_tax_excl": "35.900000",
+            "total_price_tax_excl": "35.900000",
+            "product_supplier_reference": "",
+            "reduction_percent": "0.00",
+            "reduction_amount": "0.000000",
+            "reduction_amount_tax_excl": "0.000000",
+            "product_quantity_discount": "0.000000",
+            "group_reduction": "0.00",
+            "discount_quantity_applied": 0,
+            "product_quantity_in_stock": 1,
+            "product_quantity_return": 0,
+            "product_quantity_reinjected": 0,
+            "tax_computation_method": 0,
+            "id_tax_rules_group": 0,
+            "ecotax": "0.000000",
+            "ecotax_tax_rate": "0.000",
+            "total_shipping_price_tax_excl": "0.000000",
+            "total_shipping_price_tax_incl": "0.000000",
+            "purchase_supplier_price": "0.000000",
+            "original_wholesale_price": "5.490000",
+            "total_refunded_tax_excl": "0.000000",
+            "id_order_invoice": 0,
+            "id_warehouse": 0,
+            "id_shop": 1,
+            "id_customization": 0,
+            "download_nb": 0,
+            "download_deadline": "0000-00-00 00:00:00"
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "prestashop",
+            "sourceField": "product_name",
+            "sourceValue": "Hummingbird printed sweater - Color : White, Size : S",
+            "transform": "split_name_options",
+            "method": "exact"
+          },
+          "options": {
+            "platform": "prestashop",
+            "sourceField": "product_name",
+            "sourceValue": "Hummingbird printed sweater - Color : White, Size : S",
+            "transform": "split_name_options",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "prestashop",
+            "sourceField": "product_reference",
+            "sourceValue": "demo_3",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "prestashop",
+            "sourceField": "product_quantity",
+            "sourceValue": 1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "prestashop",
+            "sourceField": "unit_price_tax_incl",
+            "sourceValue": "35.900000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "prestashop",
+            "sourceField": "total_price_tax_incl",
+            "sourceValue": "35.900000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "prestashop",
+            "sourceField": "total_price_tax_incl + total_price_tax_excl",
+            "sourceValue": "35.900000",
+            "transform": "subtract",
+            "method": "exact"
+          },
+          "unitPriceBeforeDiscount": {
+            "platform": "prestashop",
+            "sourceField": "original_product_price",
+            "sourceValue": "35.900000",
+            "transform": "money_present",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "prestashop",
+            "sourceField": "product_id",
+            "sourceValue": 2,
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "variantRef": {
+            "platform": "prestashop",
+            "sourceField": "product_attribute_id",
+            "sourceValue": 9,
+            "transform": "id_or_none",
+            "method": "exact"
+          },
+          "weightGrams": {
+            "platform": "prestashop",
+            "sourceField": "product_weight",
+            "sourceValue": "0.000000",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "prestashop",
+            "sourceField": "id",
+            "sourceValue": 2,
+            "transform": "constant",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "sourceExtension": {
+      "prestashop": {
+        "delivery_date": "0000-00-00 00:00:00",
+        "valid": "0",
+        "module": "ps_checkpayment",
+        "payment_label": "Payment by check",
+        "total_paid": "61.800000",
+        "total_paid_tax_excl": "66.800000",
+        "total_products": "59.800000",
+        "total_shipping": "7.000000",
+        "carrier_tax_rate": "0.000",
+        "total_discounts": "0.000000",
+        "total_discounts_tax_excl": "0.000000",
+        "total_wrapping": "0.000000",
+        "total_wrapping_tax_excl": "0.000000",
+        "carrier": "My carrier",
+        "shipping_number": "",
+        "gift_message": "",
+        "gift": "0",
+        "recyclable": "0",
+        "mobile_theme": "0",
+        "id_cart": 1,
+        "id_shop": 1,
+        "id_shop_group": 1,
+        "round_mode": 0,
+        "round_type": 0,
+        "associations": {
+          "order_rows": [
+            {
+              "id": 1,
+              "product_id": 1,
+              "product_attribute_id": 1,
+              "product_quantity": 1,
+              "product_name": "Hummingbird printed t-shirt - Color : White, Size : S",
+              "product_reference": "demo_1",
+              "product_ean13": "",
+              "product_isbn": "",
+              "product_upc": "",
+              "product_price": "23.900000",
+              "id_customization": 0,
+              "unit_price_tax_incl": "23.900000",
+              "unit_price_tax_excl": "23.900000"
+            },
+            {
+              "id": 2,
+              "product_id": 2,
+              "product_attribute_id": 9,
+              "product_quantity": 1,
+              "product_name": "Hummingbird printed sweater - Color : White, Size : S",
+              "product_reference": "demo_3",
+              "product_ean13": "",
+              "product_isbn": "",
+              "product_upc": "",
+              "product_price": "35.900000",
+              "id_customization": 0,
+              "unit_price_tax_incl": "35.900000",
+              "unit_price_tax_excl": "35.900000"
+            }
+          ]
+        }
+      }
+    },
+    "provenance": {
+      "numbering.sourceNumber": {
+        "platform": "prestashop",
+        "sourceField": "reference",
+        "sourceValue": "XKBKNABJK",
+        "transform": "text",
+        "method": "exact"
+      },
+      "numbering.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 1,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 1,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "numbering.format": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 1,
+        "transform": "constant",
+        "method": "exact"
+      },
+      "status.sourceState": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 6,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.financial": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 6,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.fulfillment": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 6,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.lifecycle": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 6,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.history": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 1,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "paymentMethod": {
+        "platform": "prestashop",
+        "sourceField": "payment",
+        "sourceValue": "Payment by check",
+        "transform": "text",
+        "method": "exact"
+      },
+      "currency": {
+        "platform": "prestashop",
+        "sourceField": "id_currency",
+        "sourceValue": 1,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "amounts.exchangeRate": {
+        "platform": "prestashop",
+        "sourceField": "conversion_rate",
+        "sourceValue": "1.000000",
+        "transform": "float",
+        "method": "exact"
+      },
+      "amounts.total": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl",
+        "sourceValue": "68.200000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.paid": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_real",
+        "sourceValue": "0.000000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.subtotal": {
+        "platform": "prestashop",
+        "sourceField": "total_products_wt",
+        "sourceValue": "59.800000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shipping": {
+        "platform": "prestashop",
+        "sourceField": "total_shipping_tax_incl",
+        "sourceValue": "8.400000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shippingTax": {
+        "platform": "prestashop",
+        "sourceField": "total_shipping_tax_incl + total_shipping_tax_excl",
+        "sourceValue": "8.400000",
+        "transform": "subtract",
+        "method": "exact"
+      },
+      "amounts.taxes": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl + total_paid_tax_excl",
+        "sourceValue": "68.200000",
+        "transform": "subtract",
+        "method": "exact"
+      },
+      "amounts.discounts": {
+        "platform": "prestashop",
+        "sourceField": "total_discounts_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.fees": {
+        "platform": "prestashop",
+        "sourceField": "total_wrapping_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "customerRef.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "customerRef.email": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "customerRef.isGuest": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "billing": {
+        "platform": "prestashop",
+        "sourceField": "id_address_invoice",
+        "sourceValue": 5,
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shipping_": {
+        "platform": "prestashop",
+        "sourceField": "id_address_delivery",
+        "sourceValue": 5,
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shippingLines": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 1,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "note": {
+        "platform": "prestashop",
+        "sourceField": "note",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      },
+      "timestamps.created": {
+        "platform": "prestashop",
+        "sourceField": "date_add",
+        "sourceValue": "2026-09-21 03:39:36",
+        "transform": "text",
+        "method": "exact"
+      },
+      "timestamps.updated": {
+        "platform": "prestashop",
+        "sourceField": "date_upd",
+        "sourceValue": "2026-09-21 03:39:36",
+        "transform": "text",
+        "method": "exact"
+      },
+      "locale": {
+        "platform": "prestashop",
+        "sourceField": "id_lang",
+        "sourceValue": 1,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "items": {
+        "platform": "prestashop",
+        "sourceField": "order_details",
+        "transform": "items",
+        "method": "structural"
+      },
+      "lineItems": {
+        "platform": "prestashop",
+        "sourceField": "items",
+        "transform": "line_items_from_items",
+        "method": "structural"
+      },
+      "number": {
+        "platform": "prestashop",
+        "sourceField": "reference",
+        "sourceValue": "XKBKNABJK",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "email": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "createdAt": {
+        "platform": "prestashop",
+        "sourceField": "date_add",
+        "sourceValue": "2026-09-21 03:39:36",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "financialStatus": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 6,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "fulfillmentStatus": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 6,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "subtotal": {
+        "platform": "prestashop",
+        "sourceField": "total_products_wt",
+        "sourceValue": "59.800000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "shipping": {
+        "platform": "prestashop",
+        "sourceField": "total_shipping_tax_incl",
+        "sourceValue": "8.400000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "taxes": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl + total_paid_tax_excl",
+        "sourceValue": "68.200000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "total": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl",
+        "sourceValue": "68.200000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "discountAmount": {
+        "platform": "prestashop",
+        "sourceField": "total_discounts_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "first_number",
+        "method": "structural"
+      }
+    }
+  },
+  {
+    "number": "OHSATSERP",
+    "email": "customer2@example.test",
+    "createdAt": "2026-09-21 03:39:36",
+    "financialStatus": "paid",
+    "fulfillmentStatus": "unfulfilled",
+    "currency": "EUR",
+    "subtotal": 169.9,
+    "shipping": 0,
+    "taxes": 0,
+    "total": 169.9,
+    "discountCode": "",
+    "discountAmount": 0,
+    "paymentMethod": "Payment by check",
+    "transactionId": "",
+    "note": "",
+    "billing": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "Florida",
+      "provinceCode": "FL",
+      "country": "US",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "name": "Test Customer 6",
+      "firstName": "Test",
+      "lastName": "Customer 6",
+      "label": "My address",
+      "sourceId": "5"
+    },
+    "shipping_": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "Florida",
+      "provinceCode": "FL",
+      "country": "US",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "name": "Test Customer 6",
+      "firstName": "Test",
+      "lastName": "Customer 6",
+      "label": "My address",
+      "sourceId": "5"
+    },
+    "lineItems": [
+      {
+        "name": "The adventure begins Framed poster",
+        "sku": "demo_5",
+        "quantity": 2,
+        "price": 79
+      },
+      {
+        "name": "Mug Today is a good day",
+        "sku": "demo_13",
+        "quantity": 1,
+        "price": 11.9
+      }
+    ],
+    "numbering": {
+      "sourceNumber": "OHSATSERP",
+      "sourceId": "2",
+      "sourceInvoiceNumber": "#IN000001",
+      "sourceInvoiceDate": "2026-09-21 21:32:45",
+      "format": {
+        "prefix": "#IN",
+        "pattern": "#IN{n:6}"
+      }
+    },
+    "identity": {
+      "sourceId": "2"
+    },
+    "status": {
+      "sourceState": "Payment accepted",
+      "financial": "paid",
+      "fulfillment": "unfulfilled",
+      "lifecycle": "open",
+      "history": [
+        {
+          "at": "2026-09-21 03:39:36",
+          "state": "Awaiting check payment",
+          "by": "0"
+        },
+        {
+          "at": "2026-09-21 21:32:46",
+          "state": "Payment accepted",
+          "by": "0"
+        }
+      ]
+    },
+    "amounts": {
+      "exchangeRate": 1,
+      "total": 169.9,
+      "paid": 169.9,
+      "subtotal": 169.9,
+      "shipping": 0,
+      "shippingTax": 0,
+      "taxes": 0,
+      "discounts": 0,
+      "fees": 0
+    },
+    "payments": [
+      {
+        "kind": "sale",
+        "status": "success",
+        "amount": 169.9,
+        "method": "Payments by check",
+        "at": "2026-09-21 21:32:46"
+      }
+    ],
+    "customerRef": {
+      "sourceId": "2",
+      "email": "customer2@example.test",
+      "isGuest": false
+    },
+    "shippingLines": [
+      {
+        "amount": 8.4
+      }
+    ],
+    "timestamps": {
+      "created": "2026-09-21 03:39:36",
+      "updated": "2026-09-21 21:32:46"
+    },
+    "locale": "en",
+    "items": [
+      {
+        "name": "The adventure begins Framed poster",
+        "sku": "demo_5",
+        "quantity": 2,
+        "unitPrice": 79,
+        "total": 158,
+        "options": [
+          {
+            "name": "Size",
+            "value": "80x120cm"
+          }
+        ],
+        "totalTax": 0,
+        "unitPriceBeforeDiscount": 79,
+        "productRef": "4",
+        "variantRef": "18",
+        "weightGrams": 0,
+        "kind": "product",
+        "sourceExtension": {
+          "prestashop": {
+            "line_id": "3",
+            "product_price": "79.000000",
+            "unit_price_tax_excl": "79.000000",
+            "total_price_tax_excl": "158.000000",
+            "product_supplier_reference": "",
+            "reduction_percent": "0.00",
+            "reduction_amount": "0.000000",
+            "reduction_amount_tax_excl": "0.000000",
+            "product_quantity_discount": "0.000000",
+            "group_reduction": "0.00",
+            "discount_quantity_applied": 0,
+            "product_quantity_in_stock": 3,
+            "product_quantity_return": 0,
+            "product_quantity_reinjected": 0,
+            "tax_computation_method": 0,
+            "id_tax_rules_group": 0,
+            "ecotax": "0.000000",
+            "ecotax_tax_rate": "0.000",
+            "total_shipping_price_tax_excl": "0.000000",
+            "total_shipping_price_tax_incl": "0.000000",
+            "purchase_supplier_price": "0.000000",
+            "original_wholesale_price": "5.490000",
+            "total_refunded_tax_excl": "0.000000",
+            "id_order_invoice": 1,
+            "id_warehouse": 0,
+            "id_shop": 1,
+            "id_customization": 0,
+            "download_nb": 0,
+            "download_deadline": "0000-00-00 00:00:00"
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "prestashop",
+            "sourceField": "product_name",
+            "sourceValue": "The adventure begins Framed poster - Size : 80x120cm",
+            "transform": "split_name_options",
+            "method": "exact"
+          },
+          "options": {
+            "platform": "prestashop",
+            "sourceField": "product_name",
+            "sourceValue": "The adventure begins Framed poster - Size : 80x120cm",
+            "transform": "split_name_options",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "prestashop",
+            "sourceField": "product_reference",
+            "sourceValue": "demo_5",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "prestashop",
+            "sourceField": "product_quantity",
+            "sourceValue": 2,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "prestashop",
+            "sourceField": "unit_price_tax_incl",
+            "sourceValue": "79.000000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "prestashop",
+            "sourceField": "total_price_tax_incl",
+            "sourceValue": "158.000000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "prestashop",
+            "sourceField": "total_price_tax_incl + total_price_tax_excl",
+            "sourceValue": "158.000000",
+            "transform": "subtract",
+            "method": "exact"
+          },
+          "unitPriceBeforeDiscount": {
+            "platform": "prestashop",
+            "sourceField": "original_product_price",
+            "sourceValue": "79.000000",
+            "transform": "money_present",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "prestashop",
+            "sourceField": "product_id",
+            "sourceValue": 4,
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "variantRef": {
+            "platform": "prestashop",
+            "sourceField": "product_attribute_id",
+            "sourceValue": 18,
+            "transform": "id_or_none",
+            "method": "exact"
+          },
+          "weightGrams": {
+            "platform": "prestashop",
+            "sourceField": "product_weight",
+            "sourceValue": "0.000000",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "prestashop",
+            "sourceField": "id",
+            "sourceValue": 3,
+            "transform": "constant",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "name": "Mug Today is a good day",
+        "sku": "demo_13",
+        "quantity": 1,
+        "unitPrice": 11.9,
+        "total": 11.9,
+        "totalTax": 0,
+        "unitPriceBeforeDiscount": 11.9,
+        "productRef": "8",
+        "weightGrams": 0,
+        "kind": "product",
+        "sourceExtension": {
+          "prestashop": {
+            "line_id": "4",
+            "product_price": "11.900000",
+            "unit_price_tax_excl": "11.900000",
+            "total_price_tax_excl": "11.900000",
+            "product_supplier_reference": "",
+            "reduction_percent": "0.00",
+            "reduction_amount": "0.000000",
+            "reduction_amount_tax_excl": "0.000000",
+            "product_quantity_discount": "0.000000",
+            "group_reduction": "0.00",
+            "discount_quantity_applied": 0,
+            "product_quantity_in_stock": 1,
+            "product_quantity_return": 0,
+            "product_quantity_reinjected": 0,
+            "tax_computation_method": 0,
+            "id_tax_rules_group": 0,
+            "ecotax": "0.000000",
+            "ecotax_tax_rate": "0.000",
+            "total_shipping_price_tax_excl": "0.000000",
+            "total_shipping_price_tax_incl": "0.000000",
+            "purchase_supplier_price": "0.000000",
+            "original_wholesale_price": "5.490000",
+            "total_refunded_tax_excl": "0.000000",
+            "id_order_invoice": 1,
+            "id_warehouse": 0,
+            "id_shop": 1,
+            "id_customization": 0,
+            "download_nb": 0,
+            "download_deadline": "0000-00-00 00:00:00"
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "prestashop",
+            "sourceField": "product_name",
+            "sourceValue": "Mug Today is a good day",
+            "transform": "split_name_options",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "prestashop",
+            "sourceField": "product_reference",
+            "sourceValue": "demo_13",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "prestashop",
+            "sourceField": "product_quantity",
+            "sourceValue": 1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "prestashop",
+            "sourceField": "unit_price_tax_incl",
+            "sourceValue": "11.900000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "prestashop",
+            "sourceField": "total_price_tax_incl",
+            "sourceValue": "11.900000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "prestashop",
+            "sourceField": "total_price_tax_incl + total_price_tax_excl",
+            "sourceValue": "11.900000",
+            "transform": "subtract",
+            "method": "exact"
+          },
+          "unitPriceBeforeDiscount": {
+            "platform": "prestashop",
+            "sourceField": "original_product_price",
+            "sourceValue": "11.900000",
+            "transform": "money_present",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "prestashop",
+            "sourceField": "product_id",
+            "sourceValue": 8,
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "weightGrams": {
+            "platform": "prestashop",
+            "sourceField": "product_weight",
+            "sourceValue": "0.000000",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "prestashop",
+            "sourceField": "id",
+            "sourceValue": 4,
+            "transform": "constant",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "sourceExtension": {
+      "prestashop": {
+        "delivery_date": "0000-00-00 00:00:00",
+        "valid": "1",
+        "module": "ps_checkpayment",
+        "payment_label": "Payment by check",
+        "total_paid": "169.900000",
+        "total_paid_tax_excl": "169.900000",
+        "total_products": "169.900000",
+        "total_shipping": "0.000000",
+        "carrier_tax_rate": "0.000",
+        "total_discounts": "0.000000",
+        "total_discounts_tax_excl": "0.000000",
+        "total_wrapping": "0.000000",
+        "total_wrapping_tax_excl": "0.000000",
+        "carrier": "My carrier",
+        "shipping_number": "",
+        "gift_message": "",
+        "gift": "0",
+        "recyclable": "0",
+        "mobile_theme": "0",
+        "id_cart": 2,
+        "id_shop": 1,
+        "id_shop_group": 1,
+        "round_mode": 0,
+        "round_type": 0,
+        "associations": {
+          "order_rows": [
+            {
+              "id": 3,
+              "product_id": 4,
+              "product_attribute_id": 18,
+              "product_quantity": 2,
+              "product_name": "The adventure begins Framed poster - Size : 80x120cm",
+              "product_reference": "demo_5",
+              "product_ean13": "",
+              "product_isbn": "",
+              "product_upc": "",
+              "product_price": "79.000000",
+              "id_customization": 0,
+              "unit_price_tax_incl": "79.000000",
+              "unit_price_tax_excl": "79.000000"
+            },
+            {
+              "id": 4,
+              "product_id": 8,
+              "product_attribute_id": 0,
+              "product_quantity": 1,
+              "product_name": "Mug Today is a good day",
+              "product_reference": "demo_13",
+              "product_ean13": "",
+              "product_isbn": "",
+              "product_upc": "",
+              "product_price": "11.900000",
+              "id_customization": 0,
+              "unit_price_tax_incl": "11.900000",
+              "unit_price_tax_excl": "11.900000"
+            }
+          ]
+        }
+      }
+    },
+    "provenance": {
+      "numbering.sourceNumber": {
+        "platform": "prestashop",
+        "sourceField": "reference",
+        "sourceValue": "OHSATSERP",
+        "transform": "text",
+        "method": "exact"
+      },
+      "numbering.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 2,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 2,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "numbering.sourceInvoiceNumber": {
+        "platform": "prestashop",
+        "sourceField": "invoice_number",
+        "sourceValue": 1,
+        "transform": "format_number",
+        "method": "exact"
+      },
+      "numbering.sourceInvoiceDate": {
+        "platform": "prestashop",
+        "sourceField": "invoice_date",
+        "sourceValue": "2026-09-21 21:32:45",
+        "transform": "date_present",
+        "method": "exact"
+      },
+      "numbering.format": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 2,
+        "transform": "constant",
+        "method": "exact"
+      },
+      "status.sourceState": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.financial": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.fulfillment": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.lifecycle": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.history": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "paymentMethod": {
+        "platform": "prestashop",
+        "sourceField": "payment",
+        "sourceValue": "Payment by check",
+        "transform": "text",
+        "method": "exact"
+      },
+      "currency": {
+        "platform": "prestashop",
+        "sourceField": "id_currency",
+        "sourceValue": 1,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "amounts.exchangeRate": {
+        "platform": "prestashop",
+        "sourceField": "conversion_rate",
+        "sourceValue": "1.000000",
+        "transform": "float",
+        "method": "exact"
+      },
+      "amounts.total": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl",
+        "sourceValue": "169.900000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.paid": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_real",
+        "sourceValue": "169.900000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.subtotal": {
+        "platform": "prestashop",
+        "sourceField": "total_products_wt",
+        "sourceValue": "169.900000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shipping": {
+        "platform": "prestashop",
+        "sourceField": "total_shipping_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shippingTax": {
+        "platform": "prestashop",
+        "sourceField": "total_shipping_tax_incl + total_shipping_tax_excl",
+        "sourceValue": "0.000000",
+        "transform": "subtract",
+        "method": "exact"
+      },
+      "amounts.taxes": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl + total_paid_tax_excl",
+        "sourceValue": "169.900000",
+        "transform": "subtract",
+        "method": "exact"
+      },
+      "amounts.discounts": {
+        "platform": "prestashop",
+        "sourceField": "total_discounts_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.fees": {
+        "platform": "prestashop",
+        "sourceField": "total_wrapping_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "payments": {
+        "platform": "prestashop",
+        "sourceField": "reference",
+        "sourceValue": "OHSATSERP",
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "customerRef.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "customerRef.email": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "customerRef.isGuest": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "billing": {
+        "platform": "prestashop",
+        "sourceField": "id_address_invoice",
+        "sourceValue": 5,
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shipping_": {
+        "platform": "prestashop",
+        "sourceField": "id_address_delivery",
+        "sourceValue": 5,
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shippingLines": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "note": {
+        "platform": "prestashop",
+        "sourceField": "note",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      },
+      "timestamps.created": {
+        "platform": "prestashop",
+        "sourceField": "date_add",
+        "sourceValue": "2026-09-21 03:39:36",
+        "transform": "text",
+        "method": "exact"
+      },
+      "timestamps.updated": {
+        "platform": "prestashop",
+        "sourceField": "date_upd",
+        "sourceValue": "2026-09-21 21:32:46",
+        "transform": "text",
+        "method": "exact"
+      },
+      "locale": {
+        "platform": "prestashop",
+        "sourceField": "id_lang",
+        "sourceValue": 1,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "items": {
+        "platform": "prestashop",
+        "sourceField": "order_details",
+        "transform": "items",
+        "method": "structural"
+      },
+      "lineItems": {
+        "platform": "prestashop",
+        "sourceField": "items",
+        "transform": "line_items_from_items",
+        "method": "structural"
+      },
+      "number": {
+        "platform": "prestashop",
+        "sourceField": "reference",
+        "sourceValue": "OHSATSERP",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "email": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "createdAt": {
+        "platform": "prestashop",
+        "sourceField": "date_add",
+        "sourceValue": "2026-09-21 03:39:36",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "financialStatus": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 2,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "fulfillmentStatus": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 2,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "subtotal": {
+        "platform": "prestashop",
+        "sourceField": "total_products_wt",
+        "sourceValue": "169.900000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "shipping": {
+        "platform": "prestashop",
+        "sourceField": "total_shipping_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "taxes": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl + total_paid_tax_excl",
+        "sourceValue": "169.900000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "total": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl",
+        "sourceValue": "169.900000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "discountAmount": {
+        "platform": "prestashop",
+        "sourceField": "total_discounts_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "first_number",
+        "method": "structural"
+      }
+    }
+  },
+  {
+    "number": "UOYEVOLI",
+    "email": "customer2@example.test",
+    "createdAt": "2026-09-21 03:39:36",
+    "financialStatus": "pending",
+    "fulfillmentStatus": "unfulfilled",
+    "currency": "EUR",
+    "subtotal": 12.9,
+    "shipping": 8.4,
+    "taxes": 1.4,
+    "total": 21.3,
+    "discountCode": "",
+    "discountAmount": 0,
+    "paymentMethod": "Payment by check",
+    "transactionId": "",
+    "note": "",
+    "billing": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "Florida",
+      "provinceCode": "FL",
+      "country": "US",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "name": "Test Customer 6",
+      "firstName": "Test",
+      "lastName": "Customer 6",
+      "label": "My address",
+      "sourceId": "5"
+    },
+    "shipping_": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "Florida",
+      "provinceCode": "FL",
+      "country": "US",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "name": "Test Customer 6",
+      "firstName": "Test",
+      "lastName": "Customer 6",
+      "label": "My address",
+      "sourceId": "5"
+    },
+    "lineItems": [
+      {
+        "name": "Mountain fox notebook Style : Ruled",
+        "sku": "demo_8",
+        "quantity": 1,
+        "price": 12.9
+      }
+    ],
+    "numbering": {
+      "sourceNumber": "UOYEVOLI",
+      "sourceId": "3",
+      "format": {
+        "prefix": "#IN",
+        "pattern": "#IN{n:6}"
+      }
+    },
+    "identity": {
+      "sourceId": "3"
+    },
+    "status": {
+      "sourceState": "Payment error",
+      "financial": "pending",
+      "fulfillment": "unfulfilled",
+      "lifecycle": "open",
+      "history": [
+        {
+          "at": "2026-09-21 03:39:36",
+          "state": "Awaiting check payment",
+          "by": "0"
+        },
+        {
+          "at": "2026-09-21 03:39:36",
+          "state": "Payment error",
+          "by": "1"
+        }
+      ]
+    },
+    "amounts": {
+      "exchangeRate": 1,
+      "total": 21.3,
+      "paid": 0,
+      "subtotal": 12.9,
+      "shipping": 8.4,
+      "shippingTax": 1.4,
+      "taxes": 1.4,
+      "discounts": 0,
+      "fees": 0
+    },
+    "customerRef": {
+      "sourceId": "2",
+      "email": "customer2@example.test",
+      "isGuest": false
+    },
+    "shippingLines": [
+      {
+        "amount": 8.4
+      }
+    ],
+    "timestamps": {
+      "created": "2026-09-21 03:39:36",
+      "updated": "2026-09-21 03:39:36"
+    },
+    "locale": "en",
+    "items": [
+      {
+        "name": "Mountain fox notebook Style : Ruled",
+        "sku": "demo_8",
+        "quantity": 1,
+        "unitPrice": 12.9,
+        "total": 12.9,
+        "totalTax": 0,
+        "unitPriceBeforeDiscount": 12.9,
+        "productRef": "16",
+        "variantRef": "28",
+        "weightGrams": 0,
+        "kind": "product",
+        "sourceExtension": {
+          "prestashop": {
+            "line_id": "5",
+            "product_price": "12.900000",
+            "unit_price_tax_excl": "12.900000",
+            "total_price_tax_excl": "12.900000",
+            "product_supplier_reference": "",
+            "reduction_percent": "0.00",
+            "reduction_amount": "0.000000",
+            "reduction_amount_tax_excl": "0.000000",
+            "product_quantity_discount": "0.000000",
+            "group_reduction": "0.00",
+            "discount_quantity_applied": 0,
+            "product_quantity_in_stock": 1,
+            "product_quantity_return": 0,
+            "product_quantity_reinjected": 0,
+            "tax_computation_method": 0,
+            "id_tax_rules_group": 0,
+            "ecotax": "0.000000",
+            "ecotax_tax_rate": "0.000",
+            "total_shipping_price_tax_excl": "0.000000",
+            "total_shipping_price_tax_incl": "0.000000",
+            "purchase_supplier_price": "0.000000",
+            "original_wholesale_price": "5.490000",
+            "total_refunded_tax_excl": "0.000000",
+            "id_order_invoice": 0,
+            "id_warehouse": 0,
+            "id_shop": 1,
+            "id_customization": 0,
+            "download_nb": 0,
+            "download_deadline": "0000-00-00 00:00:00"
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "prestashop",
+            "sourceField": "product_name",
+            "sourceValue": "Mountain fox notebook Style : Ruled",
+            "transform": "split_name_options",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "prestashop",
+            "sourceField": "product_reference",
+            "sourceValue": "demo_8",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "prestashop",
+            "sourceField": "product_quantity",
+            "sourceValue": 1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "prestashop",
+            "sourceField": "unit_price_tax_incl",
+            "sourceValue": "12.900000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "prestashop",
+            "sourceField": "total_price_tax_incl",
+            "sourceValue": "12.900000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "prestashop",
+            "sourceField": "total_price_tax_incl + total_price_tax_excl",
+            "sourceValue": "12.900000",
+            "transform": "subtract",
+            "method": "exact"
+          },
+          "unitPriceBeforeDiscount": {
+            "platform": "prestashop",
+            "sourceField": "original_product_price",
+            "sourceValue": "12.900000",
+            "transform": "money_present",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "prestashop",
+            "sourceField": "product_id",
+            "sourceValue": 16,
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "variantRef": {
+            "platform": "prestashop",
+            "sourceField": "product_attribute_id",
+            "sourceValue": 28,
+            "transform": "id_or_none",
+            "method": "exact"
+          },
+          "weightGrams": {
+            "platform": "prestashop",
+            "sourceField": "product_weight",
+            "sourceValue": "0.000000",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "prestashop",
+            "sourceField": "id",
+            "sourceValue": 5,
+            "transform": "constant",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "sourceExtension": {
+      "prestashop": {
+        "delivery_date": "0000-00-00 00:00:00",
+        "valid": "0",
+        "module": "ps_checkpayment",
+        "payment_label": "Payment by check",
+        "total_paid": "14.900000",
+        "total_paid_tax_excl": "19.900000",
+        "total_products": "12.900000",
+        "total_shipping": "7.000000",
+        "carrier_tax_rate": "0.000",
+        "total_discounts": "0.000000",
+        "total_discounts_tax_excl": "0.000000",
+        "total_wrapping": "0.000000",
+        "total_wrapping_tax_excl": "0.000000",
+        "carrier": "My carrier",
+        "shipping_number": "",
+        "gift_message": "",
+        "gift": "0",
+        "recyclable": "0",
+        "mobile_theme": "0",
+        "id_cart": 3,
+        "id_shop": 1,
+        "id_shop_group": 1,
+        "round_mode": 0,
+        "round_type": 0,
+        "associations": {
+          "order_rows": [
+            {
+              "id": 5,
+              "product_id": 16,
+              "product_attribute_id": 28,
+              "product_quantity": 1,
+              "product_name": "Mountain fox notebook Style : Ruled",
+              "product_reference": "demo_8",
+              "product_ean13": "",
+              "product_isbn": "",
+              "product_upc": "",
+              "product_price": "12.900000",
+              "id_customization": 0,
+              "unit_price_tax_incl": "12.900000",
+              "unit_price_tax_excl": "12.900000"
+            }
+          ]
+        }
+      }
+    },
+    "provenance": {
+      "numbering.sourceNumber": {
+        "platform": "prestashop",
+        "sourceField": "reference",
+        "sourceValue": "UOYEVOLI",
+        "transform": "text",
+        "method": "exact"
+      },
+      "numbering.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 3,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 3,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "numbering.format": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 3,
+        "transform": "constant",
+        "method": "exact"
+      },
+      "status.sourceState": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 8,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.financial": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 8,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.fulfillment": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 8,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.lifecycle": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 8,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.history": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 3,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "paymentMethod": {
+        "platform": "prestashop",
+        "sourceField": "payment",
+        "sourceValue": "Payment by check",
+        "transform": "text",
+        "method": "exact"
+      },
+      "currency": {
+        "platform": "prestashop",
+        "sourceField": "id_currency",
+        "sourceValue": 1,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "amounts.exchangeRate": {
+        "platform": "prestashop",
+        "sourceField": "conversion_rate",
+        "sourceValue": "1.000000",
+        "transform": "float",
+        "method": "exact"
+      },
+      "amounts.total": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl",
+        "sourceValue": "21.300000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.paid": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_real",
+        "sourceValue": "0.000000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.subtotal": {
+        "platform": "prestashop",
+        "sourceField": "total_products_wt",
+        "sourceValue": "12.900000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shipping": {
+        "platform": "prestashop",
+        "sourceField": "total_shipping_tax_incl",
+        "sourceValue": "8.400000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shippingTax": {
+        "platform": "prestashop",
+        "sourceField": "total_shipping_tax_incl + total_shipping_tax_excl",
+        "sourceValue": "8.400000",
+        "transform": "subtract",
+        "method": "exact"
+      },
+      "amounts.taxes": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl + total_paid_tax_excl",
+        "sourceValue": "21.300000",
+        "transform": "subtract",
+        "method": "exact"
+      },
+      "amounts.discounts": {
+        "platform": "prestashop",
+        "sourceField": "total_discounts_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.fees": {
+        "platform": "prestashop",
+        "sourceField": "total_wrapping_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "customerRef.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "customerRef.email": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "customerRef.isGuest": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "billing": {
+        "platform": "prestashop",
+        "sourceField": "id_address_invoice",
+        "sourceValue": 5,
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shipping_": {
+        "platform": "prestashop",
+        "sourceField": "id_address_delivery",
+        "sourceValue": 5,
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shippingLines": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 3,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "note": {
+        "platform": "prestashop",
+        "sourceField": "note",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      },
+      "timestamps.created": {
+        "platform": "prestashop",
+        "sourceField": "date_add",
+        "sourceValue": "2026-09-21 03:39:36",
+        "transform": "text",
+        "method": "exact"
+      },
+      "timestamps.updated": {
+        "platform": "prestashop",
+        "sourceField": "date_upd",
+        "sourceValue": "2026-09-21 03:39:36",
+        "transform": "text",
+        "method": "exact"
+      },
+      "locale": {
+        "platform": "prestashop",
+        "sourceField": "id_lang",
+        "sourceValue": 1,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "items": {
+        "platform": "prestashop",
+        "sourceField": "order_details",
+        "transform": "items",
+        "method": "structural"
+      },
+      "lineItems": {
+        "platform": "prestashop",
+        "sourceField": "items",
+        "transform": "line_items_from_items",
+        "method": "structural"
+      },
+      "number": {
+        "platform": "prestashop",
+        "sourceField": "reference",
+        "sourceValue": "UOYEVOLI",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "email": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "createdAt": {
+        "platform": "prestashop",
+        "sourceField": "date_add",
+        "sourceValue": "2026-09-21 03:39:36",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "financialStatus": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 8,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "fulfillmentStatus": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 8,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "subtotal": {
+        "platform": "prestashop",
+        "sourceField": "total_products_wt",
+        "sourceValue": "12.900000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "shipping": {
+        "platform": "prestashop",
+        "sourceField": "total_shipping_tax_incl",
+        "sourceValue": "8.400000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "taxes": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl + total_paid_tax_excl",
+        "sourceValue": "21.300000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "total": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl",
+        "sourceValue": "21.300000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "discountAmount": {
+        "platform": "prestashop",
+        "sourceField": "total_discounts_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "first_number",
+        "method": "structural"
+      }
+    }
+  },
+  {
+    "number": "FFATNOMMJ",
+    "email": "customer2@example.test",
+    "createdAt": "2026-09-21 03:39:36",
+    "financialStatus": "paid",
+    "fulfillmentStatus": "unfulfilled",
+    "currency": "EUR",
+    "subtotal": 12.9,
+    "shipping": 8.4,
+    "taxes": 1.4,
+    "total": 21.3,
+    "discountCode": "",
+    "discountAmount": 0,
+    "paymentMethod": "Payment by check",
+    "transactionId": "",
+    "note": "",
+    "billing": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "Florida",
+      "provinceCode": "FL",
+      "country": "US",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "name": "Test Customer 6",
+      "firstName": "Test",
+      "lastName": "Customer 6",
+      "label": "My address",
+      "sourceId": "5"
+    },
+    "shipping_": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "Florida",
+      "provinceCode": "FL",
+      "country": "US",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "name": "Test Customer 6",
+      "firstName": "Test",
+      "lastName": "Customer 6",
+      "label": "My address",
+      "sourceId": "5"
+    },
+    "lineItems": [
+      {
+        "name": "Mountain fox notebook Style : Plain",
+        "sku": "demo_8",
+        "quantity": 1,
+        "price": 12.9
+      }
+    ],
+    "numbering": {
+      "sourceNumber": "FFATNOMMJ",
+      "sourceId": "4",
+      "sourceInvoiceNumber": "#IN000002",
+      "sourceInvoiceDate": "2026-09-21 21:32:46",
+      "format": {
+        "prefix": "#IN",
+        "pattern": "#IN{n:6}"
+      }
+    },
+    "identity": {
+      "sourceId": "4"
+    },
+    "status": {
+      "sourceState": "Payment accepted",
+      "financial": "paid",
+      "fulfillment": "unfulfilled",
+      "lifecycle": "open",
+      "history": [
+        {
+          "at": "2026-09-21 03:39:36",
+          "state": "Awaiting check payment",
+          "by": "0"
+        },
+        {
+          "at": "2026-09-21 21:32:46",
+          "state": "Payment accepted",
+          "by": "0"
+        }
+      ]
+    },
+    "amounts": {
+      "exchangeRate": 1,
+      "total": 21.3,
+      "paid": 21.3,
+      "subtotal": 12.9,
+      "shipping": 8.4,
+      "shippingTax": 1.4,
+      "taxes": 1.4,
+      "discounts": 0,
+      "fees": 0
+    },
+    "payments": [
+      {
+        "kind": "sale",
+        "status": "success",
+        "amount": 21.3,
+        "method": "Payments by check",
+        "at": "2026-09-21 21:32:46"
+      }
+    ],
+    "customerRef": {
+      "sourceId": "2",
+      "email": "customer2@example.test",
+      "isGuest": false
+    },
+    "shippingLines": [
+      {
+        "amount": 8.4
+      }
+    ],
+    "timestamps": {
+      "created": "2026-09-21 03:39:36",
+      "updated": "2026-09-21 21:32:46"
+    },
+    "locale": "en",
+    "items": [
+      {
+        "name": "Mountain fox notebook Style : Plain",
+        "sku": "demo_8",
+        "quantity": 1,
+        "unitPrice": 12.9,
+        "total": 12.9,
+        "totalTax": 0,
+        "unitPriceBeforeDiscount": 12.9,
+        "productRef": "16",
+        "variantRef": "29",
+        "weightGrams": 0,
+        "kind": "product",
+        "sourceExtension": {
+          "prestashop": {
+            "line_id": "6",
+            "product_price": "12.900000",
+            "unit_price_tax_excl": "12.900000",
+            "total_price_tax_excl": "12.900000",
+            "product_supplier_reference": "",
+            "reduction_percent": "0.00",
+            "reduction_amount": "0.000000",
+            "reduction_amount_tax_excl": "0.000000",
+            "product_quantity_discount": "0.000000",
+            "group_reduction": "0.00",
+            "discount_quantity_applied": 0,
+            "product_quantity_in_stock": 1,
+            "product_quantity_return": 0,
+            "product_quantity_reinjected": 0,
+            "tax_computation_method": 0,
+            "id_tax_rules_group": 0,
+            "ecotax": "0.000000",
+            "ecotax_tax_rate": "0.000",
+            "total_shipping_price_tax_excl": "0.000000",
+            "total_shipping_price_tax_incl": "0.000000",
+            "purchase_supplier_price": "0.000000",
+            "original_wholesale_price": "5.490000",
+            "total_refunded_tax_excl": "0.000000",
+            "id_order_invoice": 2,
+            "id_warehouse": 0,
+            "id_shop": 1,
+            "id_customization": 0,
+            "download_nb": 0,
+            "download_deadline": "0000-00-00 00:00:00"
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "prestashop",
+            "sourceField": "product_name",
+            "sourceValue": "Mountain fox notebook Style : Plain",
+            "transform": "split_name_options",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "prestashop",
+            "sourceField": "product_reference",
+            "sourceValue": "demo_8",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "prestashop",
+            "sourceField": "product_quantity",
+            "sourceValue": 1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "prestashop",
+            "sourceField": "unit_price_tax_incl",
+            "sourceValue": "12.900000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "prestashop",
+            "sourceField": "total_price_tax_incl",
+            "sourceValue": "12.900000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "prestashop",
+            "sourceField": "total_price_tax_incl + total_price_tax_excl",
+            "sourceValue": "12.900000",
+            "transform": "subtract",
+            "method": "exact"
+          },
+          "unitPriceBeforeDiscount": {
+            "platform": "prestashop",
+            "sourceField": "original_product_price",
+            "sourceValue": "12.900000",
+            "transform": "money_present",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "prestashop",
+            "sourceField": "product_id",
+            "sourceValue": 16,
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "variantRef": {
+            "platform": "prestashop",
+            "sourceField": "product_attribute_id",
+            "sourceValue": 29,
+            "transform": "id_or_none",
+            "method": "exact"
+          },
+          "weightGrams": {
+            "platform": "prestashop",
+            "sourceField": "product_weight",
+            "sourceValue": "0.000000",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "prestashop",
+            "sourceField": "id",
+            "sourceValue": 6,
+            "transform": "constant",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "sourceExtension": {
+      "prestashop": {
+        "delivery_date": "0000-00-00 00:00:00",
+        "valid": "1",
+        "module": "ps_checkpayment",
+        "payment_label": "Payment by check",
+        "total_paid": "14.900000",
+        "total_paid_tax_excl": "19.900000",
+        "total_products": "12.900000",
+        "total_shipping": "7.000000",
+        "carrier_tax_rate": "0.000",
+        "total_discounts": "0.000000",
+        "total_discounts_tax_excl": "0.000000",
+        "total_wrapping": "0.000000",
+        "total_wrapping_tax_excl": "0.000000",
+        "carrier": "My carrier",
+        "shipping_number": "",
+        "gift_message": "",
+        "gift": "0",
+        "recyclable": "0",
+        "mobile_theme": "0",
+        "id_cart": 4,
+        "id_shop": 1,
+        "id_shop_group": 1,
+        "round_mode": 0,
+        "round_type": 0,
+        "associations": {
+          "order_rows": [
+            {
+              "id": 6,
+              "product_id": 16,
+              "product_attribute_id": 29,
+              "product_quantity": 1,
+              "product_name": "Mountain fox notebook Style : Plain",
+              "product_reference": "demo_8",
+              "product_ean13": "",
+              "product_isbn": "",
+              "product_upc": "",
+              "product_price": "12.900000",
+              "id_customization": 0,
+              "unit_price_tax_incl": "12.900000",
+              "unit_price_tax_excl": "12.900000"
+            }
+          ]
+        }
+      }
+    },
+    "provenance": {
+      "numbering.sourceNumber": {
+        "platform": "prestashop",
+        "sourceField": "reference",
+        "sourceValue": "FFATNOMMJ",
+        "transform": "text",
+        "method": "exact"
+      },
+      "numbering.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 4,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 4,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "numbering.sourceInvoiceNumber": {
+        "platform": "prestashop",
+        "sourceField": "invoice_number",
+        "sourceValue": 2,
+        "transform": "format_number",
+        "method": "exact"
+      },
+      "numbering.sourceInvoiceDate": {
+        "platform": "prestashop",
+        "sourceField": "invoice_date",
+        "sourceValue": "2026-09-21 21:32:46",
+        "transform": "date_present",
+        "method": "exact"
+      },
+      "numbering.format": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 4,
+        "transform": "constant",
+        "method": "exact"
+      },
+      "status.sourceState": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.financial": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.fulfillment": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.lifecycle": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.history": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 4,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "paymentMethod": {
+        "platform": "prestashop",
+        "sourceField": "payment",
+        "sourceValue": "Payment by check",
+        "transform": "text",
+        "method": "exact"
+      },
+      "currency": {
+        "platform": "prestashop",
+        "sourceField": "id_currency",
+        "sourceValue": 1,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "amounts.exchangeRate": {
+        "platform": "prestashop",
+        "sourceField": "conversion_rate",
+        "sourceValue": "1.000000",
+        "transform": "float",
+        "method": "exact"
+      },
+      "amounts.total": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl",
+        "sourceValue": "21.300000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.paid": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_real",
+        "sourceValue": "21.300000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.subtotal": {
+        "platform": "prestashop",
+        "sourceField": "total_products_wt",
+        "sourceValue": "12.900000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shipping": {
+        "platform": "prestashop",
+        "sourceField": "total_shipping_tax_incl",
+        "sourceValue": "8.400000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shippingTax": {
+        "platform": "prestashop",
+        "sourceField": "total_shipping_tax_incl + total_shipping_tax_excl",
+        "sourceValue": "8.400000",
+        "transform": "subtract",
+        "method": "exact"
+      },
+      "amounts.taxes": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl + total_paid_tax_excl",
+        "sourceValue": "21.300000",
+        "transform": "subtract",
+        "method": "exact"
+      },
+      "amounts.discounts": {
+        "platform": "prestashop",
+        "sourceField": "total_discounts_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.fees": {
+        "platform": "prestashop",
+        "sourceField": "total_wrapping_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "payments": {
+        "platform": "prestashop",
+        "sourceField": "reference",
+        "sourceValue": "FFATNOMMJ",
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "customerRef.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "customerRef.email": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "customerRef.isGuest": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "billing": {
+        "platform": "prestashop",
+        "sourceField": "id_address_invoice",
+        "sourceValue": 5,
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shipping_": {
+        "platform": "prestashop",
+        "sourceField": "id_address_delivery",
+        "sourceValue": 5,
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shippingLines": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 4,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "note": {
+        "platform": "prestashop",
+        "sourceField": "note",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      },
+      "timestamps.created": {
+        "platform": "prestashop",
+        "sourceField": "date_add",
+        "sourceValue": "2026-09-21 03:39:36",
+        "transform": "text",
+        "method": "exact"
+      },
+      "timestamps.updated": {
+        "platform": "prestashop",
+        "sourceField": "date_upd",
+        "sourceValue": "2026-09-21 21:32:46",
+        "transform": "text",
+        "method": "exact"
+      },
+      "locale": {
+        "platform": "prestashop",
+        "sourceField": "id_lang",
+        "sourceValue": 1,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "items": {
+        "platform": "prestashop",
+        "sourceField": "order_details",
+        "transform": "items",
+        "method": "structural"
+      },
+      "lineItems": {
+        "platform": "prestashop",
+        "sourceField": "items",
+        "transform": "line_items_from_items",
+        "method": "structural"
+      },
+      "number": {
+        "platform": "prestashop",
+        "sourceField": "reference",
+        "sourceValue": "FFATNOMMJ",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "email": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "createdAt": {
+        "platform": "prestashop",
+        "sourceField": "date_add",
+        "sourceValue": "2026-09-21 03:39:36",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "financialStatus": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 2,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "fulfillmentStatus": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 2,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "subtotal": {
+        "platform": "prestashop",
+        "sourceField": "total_products_wt",
+        "sourceValue": "12.900000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "shipping": {
+        "platform": "prestashop",
+        "sourceField": "total_shipping_tax_incl",
+        "sourceValue": "8.400000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "taxes": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl + total_paid_tax_excl",
+        "sourceValue": "21.300000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "total": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl",
+        "sourceValue": "21.300000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "discountAmount": {
+        "platform": "prestashop",
+        "sourceField": "total_discounts_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "first_number",
+        "method": "structural"
+      }
+    }
+  },
+  {
+    "number": "KHWLILZLL",
+    "email": "customer2@example.test",
+    "createdAt": "2026-09-21 03:39:36",
+    "financialStatus": "pending",
+    "fulfillmentStatus": "unfulfilled",
+    "currency": "EUR",
+    "subtotal": 18.9,
+    "shipping": 8.4,
+    "taxes": 1.4,
+    "total": 27.3,
+    "discountCode": "",
+    "discountAmount": 0,
+    "paymentMethod": "Bank wire",
+    "transactionId": "",
+    "note": "",
+    "billing": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "Florida",
+      "provinceCode": "FL",
+      "country": "US",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "name": "Test Customer 6",
+      "firstName": "Test",
+      "lastName": "Customer 6",
+      "label": "My address",
+      "sourceId": "5"
+    },
+    "shipping_": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "Florida",
+      "provinceCode": "FL",
+      "country": "US",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "name": "Test Customer 6",
+      "firstName": "Test",
+      "lastName": "Customer 6",
+      "label": "My address",
+      "sourceId": "5"
+    },
+    "lineItems": [
+      {
+        "name": "Brown bear cushion Color : Black",
+        "sku": "demo_16",
+        "quantity": 1,
+        "price": 18.9
+      }
+    ],
+    "numbering": {
+      "sourceNumber": "KHWLILZLL",
+      "sourceId": "5",
+      "format": {
+        "prefix": "#IN",
+        "pattern": "#IN{n:6}"
+      }
+    },
+    "identity": {
+      "sourceId": "5"
+    },
+    "status": {
+      "sourceState": "Awaiting bank wire payment",
+      "financial": "pending",
+      "fulfillment": "unfulfilled",
+      "lifecycle": "open",
+      "history": [
+        {
+          "at": "2026-09-21 03:39:36",
+          "state": "Awaiting bank wire payment",
+          "by": "0"
+        }
+      ]
+    },
+    "amounts": {
+      "exchangeRate": 1,
+      "total": 27.3,
+      "paid": 0,
+      "subtotal": 18.9,
+      "shipping": 8.4,
+      "shippingTax": 1.4,
+      "taxes": 1.4,
+      "discounts": 0,
+      "fees": 0
+    },
+    "customerRef": {
+      "sourceId": "2",
+      "email": "customer2@example.test",
+      "isGuest": false
+    },
+    "shippingLines": [
+      {
+        "amount": 8.4
+      }
+    ],
+    "timestamps": {
+      "created": "2026-09-21 03:39:36",
+      "updated": "2026-09-21 03:39:36"
+    },
+    "locale": "en",
+    "items": [
+      {
+        "name": "Brown bear cushion Color : Black",
+        "sku": "demo_16",
+        "quantity": 1,
+        "unitPrice": 18.9,
+        "total": 18.9,
+        "totalTax": 0,
+        "unitPriceBeforeDiscount": 18.9,
+        "productRef": "10",
+        "variantRef": "25",
+        "weightGrams": 0,
+        "kind": "product",
+        "sourceExtension": {
+          "prestashop": {
+            "line_id": "7",
+            "product_price": "18.900000",
+            "unit_price_tax_excl": "18.900000",
+            "total_price_tax_excl": "18.900000",
+            "product_supplier_reference": "",
+            "reduction_percent": "0.00",
+            "reduction_amount": "0.000000",
+            "reduction_amount_tax_excl": "0.000000",
+            "product_quantity_discount": "0.000000",
+            "group_reduction": "0.00",
+            "discount_quantity_applied": 0,
+            "product_quantity_in_stock": 1,
+            "product_quantity_return": 0,
+            "product_quantity_reinjected": 0,
+            "tax_computation_method": 0,
+            "id_tax_rules_group": 0,
+            "ecotax": "0.000000",
+            "ecotax_tax_rate": "0.000",
+            "total_shipping_price_tax_excl": "0.000000",
+            "total_shipping_price_tax_incl": "0.000000",
+            "purchase_supplier_price": "0.000000",
+            "original_wholesale_price": "5.490000",
+            "total_refunded_tax_excl": "0.000000",
+            "id_order_invoice": 0,
+            "id_warehouse": 0,
+            "id_shop": 1,
+            "id_customization": 0,
+            "download_nb": 0,
+            "download_deadline": "0000-00-00 00:00:00"
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "prestashop",
+            "sourceField": "product_name",
+            "sourceValue": "Brown bear cushion Color : Black",
+            "transform": "split_name_options",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "prestashop",
+            "sourceField": "product_reference",
+            "sourceValue": "demo_16",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "prestashop",
+            "sourceField": "product_quantity",
+            "sourceValue": 1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "prestashop",
+            "sourceField": "unit_price_tax_incl",
+            "sourceValue": "18.900000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "prestashop",
+            "sourceField": "total_price_tax_incl",
+            "sourceValue": "18.900000",
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "prestashop",
+            "sourceField": "total_price_tax_incl + total_price_tax_excl",
+            "sourceValue": "18.900000",
+            "transform": "subtract",
+            "method": "exact"
+          },
+          "unitPriceBeforeDiscount": {
+            "platform": "prestashop",
+            "sourceField": "original_product_price",
+            "sourceValue": "18.900000",
+            "transform": "money_present",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "prestashop",
+            "sourceField": "product_id",
+            "sourceValue": 10,
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "variantRef": {
+            "platform": "prestashop",
+            "sourceField": "product_attribute_id",
+            "sourceValue": 25,
+            "transform": "id_or_none",
+            "method": "exact"
+          },
+          "weightGrams": {
+            "platform": "prestashop",
+            "sourceField": "product_weight",
+            "sourceValue": "0.000000",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "prestashop",
+            "sourceField": "id",
+            "sourceValue": 7,
+            "transform": "constant",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "sourceExtension": {
+      "prestashop": {
+        "delivery_date": "0000-00-00 00:00:00",
+        "valid": "0",
+        "module": "ps_wirepayment",
+        "payment_label": "Bank wire",
+        "total_paid": "20.900000",
+        "total_paid_tax_excl": "25.900000",
+        "total_products": "18.900000",
+        "total_shipping": "7.000000",
+        "carrier_tax_rate": "0.000",
+        "total_discounts": "0.000000",
+        "total_discounts_tax_excl": "0.000000",
+        "total_wrapping": "0.000000",
+        "total_wrapping_tax_excl": "0.000000",
+        "carrier": "My carrier",
+        "shipping_number": "",
+        "gift_message": "",
+        "gift": "0",
+        "recyclable": "0",
+        "mobile_theme": "0",
+        "id_cart": 5,
+        "id_shop": 1,
+        "id_shop_group": 1,
+        "round_mode": 0,
+        "round_type": 0,
+        "associations": {
+          "order_rows": [
+            {
+              "id": 7,
+              "product_id": 10,
+              "product_attribute_id": 25,
+              "product_quantity": 1,
+              "product_name": "Brown bear cushion Color : Black",
+              "product_reference": "demo_16",
+              "product_ean13": "",
+              "product_isbn": "",
+              "product_upc": "",
+              "product_price": "18.900000",
+              "id_customization": 0,
+              "unit_price_tax_incl": "18.900000",
+              "unit_price_tax_excl": "18.900000"
+            }
+          ]
+        }
+      }
+    },
+    "provenance": {
+      "numbering.sourceNumber": {
+        "platform": "prestashop",
+        "sourceField": "reference",
+        "sourceValue": "KHWLILZLL",
+        "transform": "text",
+        "method": "exact"
+      },
+      "numbering.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 5,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 5,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "numbering.format": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 5,
+        "transform": "constant",
+        "method": "exact"
+      },
+      "status.sourceState": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 10,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.financial": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 10,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.fulfillment": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 10,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.lifecycle": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 10,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "status.history": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 5,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "paymentMethod": {
+        "platform": "prestashop",
+        "sourceField": "payment",
+        "sourceValue": "Bank wire",
+        "transform": "text",
+        "method": "exact"
+      },
+      "currency": {
+        "platform": "prestashop",
+        "sourceField": "id_currency",
+        "sourceValue": 1,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "amounts.exchangeRate": {
+        "platform": "prestashop",
+        "sourceField": "conversion_rate",
+        "sourceValue": "1.000000",
+        "transform": "float",
+        "method": "exact"
+      },
+      "amounts.total": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl",
+        "sourceValue": "27.300000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.paid": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_real",
+        "sourceValue": "0.000000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.subtotal": {
+        "platform": "prestashop",
+        "sourceField": "total_products_wt",
+        "sourceValue": "18.900000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shipping": {
+        "platform": "prestashop",
+        "sourceField": "total_shipping_tax_incl",
+        "sourceValue": "8.400000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shippingTax": {
+        "platform": "prestashop",
+        "sourceField": "total_shipping_tax_incl + total_shipping_tax_excl",
+        "sourceValue": "8.400000",
+        "transform": "subtract",
+        "method": "exact"
+      },
+      "amounts.taxes": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl + total_paid_tax_excl",
+        "sourceValue": "27.300000",
+        "transform": "subtract",
+        "method": "exact"
+      },
+      "amounts.discounts": {
+        "platform": "prestashop",
+        "sourceField": "total_discounts_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.fees": {
+        "platform": "prestashop",
+        "sourceField": "total_wrapping_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "money",
+        "method": "exact"
+      },
+      "customerRef.sourceId": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "customerRef.email": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "customerRef.isGuest": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "billing": {
+        "platform": "prestashop",
+        "sourceField": "id_address_invoice",
+        "sourceValue": 5,
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shipping_": {
+        "platform": "prestashop",
+        "sourceField": "id_address_delivery",
+        "sourceValue": 5,
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shippingLines": {
+        "platform": "prestashop",
+        "sourceField": "id",
+        "sourceValue": 5,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "note": {
+        "platform": "prestashop",
+        "sourceField": "note",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      },
+      "timestamps.created": {
+        "platform": "prestashop",
+        "sourceField": "date_add",
+        "sourceValue": "2026-09-21 03:39:36",
+        "transform": "text",
+        "method": "exact"
+      },
+      "timestamps.updated": {
+        "platform": "prestashop",
+        "sourceField": "date_upd",
+        "sourceValue": "2026-09-21 03:39:36",
+        "transform": "text",
+        "method": "exact"
+      },
+      "locale": {
+        "platform": "prestashop",
+        "sourceField": "id_lang",
+        "sourceValue": 1,
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "items": {
+        "platform": "prestashop",
+        "sourceField": "order_details",
+        "transform": "items",
+        "method": "structural"
+      },
+      "lineItems": {
+        "platform": "prestashop",
+        "sourceField": "items",
+        "transform": "line_items_from_items",
+        "method": "structural"
+      },
+      "number": {
+        "platform": "prestashop",
+        "sourceField": "reference",
+        "sourceValue": "KHWLILZLL",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "email": {
+        "platform": "prestashop",
+        "sourceField": "id_customer",
+        "sourceValue": 2,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "createdAt": {
+        "platform": "prestashop",
+        "sourceField": "date_add",
+        "sourceValue": "2026-09-21 03:39:36",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "financialStatus": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 10,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "fulfillmentStatus": {
+        "platform": "prestashop",
+        "sourceField": "current_state",
+        "sourceValue": 10,
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "subtotal": {
+        "platform": "prestashop",
+        "sourceField": "total_products_wt",
+        "sourceValue": "18.900000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "shipping": {
+        "platform": "prestashop",
+        "sourceField": "total_shipping_tax_incl",
+        "sourceValue": "8.400000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "taxes": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl + total_paid_tax_excl",
+        "sourceValue": "27.300000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "total": {
+        "platform": "prestashop",
+        "sourceField": "total_paid_tax_incl",
+        "sourceValue": "27.300000",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "discountAmount": {
+        "platform": "prestashop",
+        "sourceField": "total_discounts_tax_incl",
+        "sourceValue": "0.000000",
+        "transform": "first_number",
+        "method": "structural"
+      }
+    }
+  }
+]

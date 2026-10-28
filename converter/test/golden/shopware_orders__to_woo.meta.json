@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "sourceFormat": "shopware.orders.admin-api.v1",
+  "targetFormat": "woo_orders",
+  "counts": {
+    "inputUnits": 2,
+    "outputUnits": 2,
+    "failedUnits": 0,
+    "outputRows": 2
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_refund_risk"
+    },
+    {
+      "code": "loss_woo_order_numbering",
+      "params": {
+        "orders": 2,
+        "min": "10000",
+        "max": "10001"
+      }
+    },
+    {
+      "code": "loss_woo_invoice_numbers",
+      "params": {
+        "count": 2
+      }
+    },
+    {
+      "code": "loss_woo_payments_detail",
+      "params": {
+        "count": 2
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false,
+  "numberingReport": {
+    "orders": 2,
+    "sourceSequence": {
+      "min": "10000",
+      "max": "10001",
+      "numeric": true,
+      "gaps": [],
+      "duplicates": []
+    },
+    "invoices": {
+      "withNumber": 2,
+      "withoutNumber": 0,
+      "gaps": []
+    },
+    "targetPolicy": "native-sequence",
+    "warnings": [
+      "invoice_numbers_not_carried"
+    ]
+  }
+}

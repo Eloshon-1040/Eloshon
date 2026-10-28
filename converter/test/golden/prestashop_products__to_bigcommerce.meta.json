@@ -1,0 +1,34 @@
+{
+  "ok": true,
+  "sourceFormat": "prestashop.products.webservice.v1",
+  "targetFormat": "bigcommerce_products",
+  "counts": {
+    "inputUnits": 25,
+    "outputUnits": 25,
+    "failedUnits": 0,
+    "outputRows": 64
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_bc_categories_target"
+    },
+    {
+      "code": "loss_bc_images_target"
+    },
+    {
+      "code": "loss_bc_bundles",
+      "params": {
+        "count": 1,
+        "handles": "pack-mug-framed-poster"
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "code": "id_removed_bc"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

@@ -1,0 +1,785 @@
+[
+  {
+    "number": "10001",
+    "email": "",
+    "createdAt": "2026-09-21T19:03:29.822Z",
+    "financialStatus": "paid",
+    "fulfillmentStatus": "fulfilled",
+    "currency": "EUR",
+    "subtotal": 294,
+    "shipping": 15,
+    "taxes": 64.89,
+    "total": 373.89,
+    "discountCode": "",
+    "discountAmount": 0,
+    "paymentMethod": "",
+    "transactionId": "",
+    "note": "",
+    "billing": {
+      "name": "",
+      "company": "",
+      "address1": "",
+      "address2": "",
+      "city": "",
+      "province": "",
+      "provinceCode": "",
+      "country": "",
+      "zip": "",
+      "phone": ""
+    },
+    "shipping_": {
+      "name": "",
+      "company": "",
+      "address1": "",
+      "address2": "",
+      "city": "",
+      "province": "",
+      "provinceCode": "",
+      "country": "",
+      "zip": "",
+      "phone": ""
+    },
+    "lineItems": [
+      {
+        "name": "Boloss 400",
+        "sku": "tEST-cLAUDE",
+        "quantity": 1,
+        "price": 24
+      },
+      {
+        "name": "Vase en céramique",
+        "sku": "364215376135191",
+        "quantity": 1,
+        "price": 270
+      }
+    ],
+    "numbering": {
+      "sourceNumber": "10001",
+      "sourceId": "c3af207c-7c27-41c0-9391-d141ffa7bce4"
+    },
+    "identity": {
+      "sourceId": "c3af207c-7c27-41c0-9391-d141ffa7bce4"
+    },
+    "status": {
+      "financial": "paid",
+      "fulfillment": "fulfilled",
+      "lifecycle": "open",
+      "sourceState": "APPROVED",
+      "history": [
+        {
+          "at": "2026-09-21T18:58:50.354Z",
+          "state": "ORDER_PLACED"
+        },
+        {
+          "at": "2026-09-21T19:21:34.499Z",
+          "state": "ORDER_PAID"
+        }
+      ]
+    },
+    "amounts": {
+      "taxIncluded": false,
+      "subtotal": 294,
+      "shipping": 15,
+      "taxes": 64.89,
+      "discounts": 0,
+      "fees": 0,
+      "total": 373.89,
+      "paid": 373.89,
+      "refunded": 0,
+      "balance": 0
+    },
+    "shippingLines": [
+      {
+        "method": "Livraison à domicile",
+        "code": "custom-delivery-method:draft-order-id:c86f63a5-0ffa-4539-afaa-a108eb6bb45a:2026-09-21T18:59:51.383Z",
+        "amount": 15,
+        "tax": 3.15
+      }
+    ],
+    "locale": "fr",
+    "channel": "BACKOFFICE_MERCHANT",
+    "timestamps": {
+      "created": "2026-09-21T19:03:29.822Z",
+      "updated": "2026-09-21T19:22:32.180Z"
+    },
+    "payments": [
+      {
+        "kind": "sale",
+        "status": "success",
+        "amount": 373.89,
+        "at": "2026-09-21T19:21:33.733Z"
+      }
+    ],
+    "test": false,
+    "items": [
+      {
+        "name": "Boloss 400",
+        "sku": "tEST-cLAUDE",
+        "quantity": 1,
+        "unitPrice": 24,
+        "total": 29.04,
+        "unitPriceBeforeDiscount": 24,
+        "totalTax": 5.04,
+        "taxIncluded": false,
+        "taxLines": [
+          {
+            "rate": 0.21,
+            "amount": 5.04
+          }
+        ],
+        "kind": "product",
+        "productRef": "5e07f72a-c6df-4434-b17f-3810ed1a419e",
+        "variantRef": "d31a5787-59b7-4a40-ba17-9ea28606f05d",
+        "requiresShipping": true,
+        "weightGrams": 12000,
+        "imageSrc": "https://static.wixstatic.com/media/da66a9_be37485a4e6647718d2c8c26e1abc119~mv2.jpg/v1/fit/w_9227,h_2307,q_90/file.jpg",
+        "sourceExtension": {
+          "wix": {
+            "catalogAppId": "215238eb-22a5-4c36-9e7b-e7c08025e04e",
+            "line_id": "00000000-0000-0000-0000-000000000001",
+            "paymentOption": "FULL_PAYMENT_ONLINE",
+            "deliveryProfileId": "24307425-2025-465b-ba73-6ad9ba4d2947",
+            "shippingGroupId": "24307425-2025-465b-ba73-6ad9ba4d2947",
+            "lineItemPrice": {
+              "amount": "24.00",
+              "formattedAmount": "24,00€"
+            },
+            "customLineItem": false,
+            "rootCatalogItemId": "5e07f72a-c6df-4434-b17f-3810ed1a419e",
+            "taxableAddress": {
+              "addressType": "SHIPPING"
+            },
+            "inventoryAppId": "215238eb-22a5-4c36-9e7b-e7c08025e04e",
+            "priceUndetermined": false,
+            "fixedQuantity": false,
+            "priceBeforeDiscountsAndTax": {
+              "amount": "24.00",
+              "formattedAmount": "24,00€"
+            },
+            "totalPriceBeforeTax": {
+              "amount": "24.00",
+              "formattedAmount": "24,00€"
+            }
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "wix",
+            "sourceField": "productName.original",
+            "sourceValue": "Boloss 400",
+            "transform": "text",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "wix",
+            "sourceField": "physicalProperties.sku",
+            "sourceValue": "tEST-cLAUDE",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "wix",
+            "sourceField": "quantity",
+            "sourceValue": 1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "wix",
+            "sourceField": "price.amount",
+            "sourceValue": "24.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "unitPriceBeforeDiscount": {
+            "platform": "wix",
+            "sourceField": "priceBeforeDiscounts.amount",
+            "sourceValue": "24.00",
+            "transform": "money_present",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "wix",
+            "sourceField": "totalPriceAfterTax.amount",
+            "sourceValue": "29.04",
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "wix",
+            "sourceField": "taxDetails.totalTax.amount",
+            "sourceValue": "5.04",
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxIncluded": {
+            "platform": "wix",
+            "sourceField": "taxInfo.taxIncludedInPrice",
+            "sourceValue": false,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "taxLines": {
+            "platform": "wix",
+            "sourceField": "taxInfo.taxBreakdown",
+            "transform": "objects_map",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "wix",
+            "sourceField": "itemType.preset",
+            "sourceValue": "PHYSICAL",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "wix",
+            "sourceField": "catalogReference.catalogItemId",
+            "sourceValue": "5e07f72a-c6df-4434-b17f-3810ed1a419e",
+            "transform": "text",
+            "method": "exact"
+          },
+          "variantRef": {
+            "platform": "wix",
+            "sourceField": "catalogReference.options.variantId",
+            "sourceValue": "d31a5787-59b7-4a40-ba17-9ea28606f05d",
+            "transform": "id_or_none",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "wix",
+            "sourceField": "physicalProperties.shippable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "weightGrams": {
+            "platform": "wix",
+            "sourceField": "physicalProperties.weight",
+            "sourceValue": 12,
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "wix",
+            "sourceField": "image.url",
+            "sourceValue": "https://static.wixstatic.com/media/da66a9_be37485a4e6647718d2c8c26e1abc119~mv2.jpg/v1/fit/w_9227,h_2307,q_90/file.jpg",
+            "transform": "text",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "name": "Vase en céramique",
+        "sku": "364215376135191",
+        "quantity": 1,
+        "unitPrice": 270,
+        "total": 326.7,
+        "unitPriceBeforeDiscount": 270,
+        "totalTax": 56.7,
+        "taxIncluded": false,
+        "taxLines": [
+          {
+            "rate": 0.21,
+            "amount": 56.7
+          }
+        ],
+        "kind": "product",
+        "productRef": "7ef5f127-5e5d-4ebb-9957-d122ce56daec",
+        "requiresShipping": true,
+        "weightGrams": null,
+        "imageSrc": "https://static.wixstatic.com/media/22e53e_5a34c410f18f4760b451208652e8cf27~mv2.jpg/v1/fit/w_3000,h_3000,q_90/file.jpg",
+        "sourceExtension": {
+          "wix": {
+            "catalogAppId": "215238eb-22a5-4c36-9e7b-e7c08025e04e",
+            "line_id": "00000000-0000-0000-0000-000000000002",
+            "paymentOption": "FULL_PAYMENT_ONLINE",
+            "deliveryProfileId": "24307425-2025-465b-ba73-6ad9ba4d2947",
+            "shippingGroupId": "24307425-2025-465b-ba73-6ad9ba4d2947",
+            "lineItemPrice": {
+              "amount": "270.00",
+              "formattedAmount": "270,00€"
+            },
+            "customLineItem": false,
+            "rootCatalogItemId": "7ef5f127-5e5d-4ebb-9957-d122ce56daec",
+            "taxableAddress": {
+              "addressType": "SHIPPING"
+            },
+            "inventoryAppId": "215238eb-22a5-4c36-9e7b-e7c08025e04e",
+            "priceUndetermined": false,
+            "fixedQuantity": false,
+            "priceBeforeDiscountsAndTax": {
+              "amount": "270.00",
+              "formattedAmount": "270,00€"
+            },
+            "totalPriceBeforeTax": {
+              "amount": "270.00",
+              "formattedAmount": "270,00€"
+            }
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "wix",
+            "sourceField": "productName.original",
+            "sourceValue": "Vase en céramique",
+            "transform": "text",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "wix",
+            "sourceField": "physicalProperties.sku",
+            "sourceValue": "364215376135191",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "wix",
+            "sourceField": "quantity",
+            "sourceValue": 1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "wix",
+            "sourceField": "price.amount",
+            "sourceValue": "270.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "unitPriceBeforeDiscount": {
+            "platform": "wix",
+            "sourceField": "priceBeforeDiscounts.amount",
+            "sourceValue": "270.00",
+            "transform": "money_present",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "wix",
+            "sourceField": "totalPriceAfterTax.amount",
+            "sourceValue": "326.70",
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "wix",
+            "sourceField": "taxDetails.totalTax.amount",
+            "sourceValue": "56.70",
+            "transform": "money",
+            "method": "exact"
+          },
+          "taxIncluded": {
+            "platform": "wix",
+            "sourceField": "taxInfo.taxIncludedInPrice",
+            "sourceValue": false,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "taxLines": {
+            "platform": "wix",
+            "sourceField": "taxInfo.taxBreakdown",
+            "transform": "objects_map",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "wix",
+            "sourceField": "itemType.preset",
+            "sourceValue": "PHYSICAL",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "wix",
+            "sourceField": "catalogReference.catalogItemId",
+            "sourceValue": "7ef5f127-5e5d-4ebb-9957-d122ce56daec",
+            "transform": "text",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "wix",
+            "sourceField": "physicalProperties.shippable",
+            "sourceValue": true,
+            "transform": "bool",
+            "method": "exact"
+          },
+          "weightGrams": {
+            "platform": "wix",
+            "sourceField": "physicalProperties.weight",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "wix",
+            "sourceField": "image.url",
+            "sourceValue": "https://static.wixstatic.com/media/22e53e_5a34c410f18f4760b451208652e8cf27~mv2.jpg/v1/fit/w_3000,h_3000,q_90/file.jpg",
+            "transform": "text",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "sourceExtension": {
+      "wix": {
+        "priceSummary": {
+          "totalPrice": 373.89,
+          "totalWithGiftCard": 373.89,
+          "totalWithoutGiftCard": 373.89
+        },
+        "balanceSummary": {
+          "authorized": 0,
+          "pending": 0,
+          "pendingRefund": 0,
+          "chargeback": 0,
+          "platformFees": 0
+        },
+        "taxSummary": {
+          "totalTax": {
+            "amount": "64.89",
+            "formattedAmount": "64,89€"
+          },
+          "manualTaxRate": "0"
+        },
+        "logistics": {
+          "deliveryTime": "21 sept. 2026, 20:59",
+          "from": "2026-09-21T18:59:25.713Z",
+          "to": "2026-09-21T18:59:25.713Z"
+        },
+        "shippingRegion": {
+          "name": "Belgique"
+        },
+        "siteLanguage": "fr",
+        "attributionSource": "UNSPECIFIED",
+        "createdBy": {
+          "userId": "da66a92b-6a89-402b-92cf-bfee98904802"
+        },
+        "purchasedDate": "2026-09-21T18:58:50.354Z",
+        "transactionsOrderId": "c3af207c-7c27-41c0-9391-d141ffa7bce4",
+        "archived": false,
+        "seenByAHuman": true,
+        "isInternalOrderCreate": false,
+        "settings": {
+          "editableByEveryone": true,
+          "specificItemsCouponBehavior": "ITEM_SUBTOTAL_INCLUDES_DISCOUNT",
+          "createInvoice": true
+        },
+        "platformFeeSummary": {
+          "total": {
+            "amount": "0.00",
+            "formattedAmount": "0,00€"
+          },
+          "totalPassOn": {
+            "amount": "0.00",
+            "formattedAmount": "0,00€"
+          },
+          "totalAbsorbed": {
+            "amount": "0.00",
+            "formattedAmount": "0,00€"
+          },
+          "fees": []
+        },
+        "payAfterFreeTrial": {
+          "subtotal": {
+            "amount": "0.00",
+            "formattedAmount": "0,00€"
+          },
+          "shipping": {
+            "amount": "0.00",
+            "formattedAmount": "0,00€"
+          },
+          "tax": {
+            "amount": "0.00",
+            "formattedAmount": "0,00€"
+          },
+          "discount": {
+            "amount": "0.00",
+            "formattedAmount": "0,00€"
+          },
+          "totalPrice": {
+            "amount": "0.00",
+            "formattedAmount": "0,00€"
+          },
+          "total": {
+            "amount": "0.00",
+            "formattedAmount": "0,00€"
+          },
+          "totalWithGiftCard": {
+            "amount": "0.00",
+            "formattedAmount": "0,00€"
+          },
+          "totalWithoutGiftCard": {
+            "amount": "0.00",
+            "formattedAmount": "0,00€"
+          },
+          "totalAdditionalFees": {
+            "amount": "0.00",
+            "formattedAmount": "0,00€"
+          }
+        },
+        "weightUnit": "KG",
+        "imported": false
+      }
+    },
+    "provenance": {
+      "numbering.sourceNumber": {
+        "platform": "wix",
+        "sourceField": "number",
+        "sourceValue": "10001",
+        "transform": "text",
+        "method": "exact"
+      },
+      "numbering.sourceId": {
+        "platform": "wix",
+        "sourceField": "id",
+        "sourceValue": "c3af207c-7c27-41c0-9391-d141ffa7bce4",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "wix",
+        "sourceField": "id",
+        "sourceValue": "c3af207c-7c27-41c0-9391-d141ffa7bce4",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "status.financial": {
+        "platform": "wix",
+        "sourceField": "paymentStatus",
+        "sourceValue": "PAID",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status.fulfillment": {
+        "platform": "wix",
+        "sourceField": "fulfillmentStatus",
+        "sourceValue": "FULFILLED",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status.lifecycle": {
+        "platform": "wix",
+        "sourceField": "status",
+        "sourceValue": "APPROVED",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status.sourceState": {
+        "platform": "wix",
+        "sourceField": "status",
+        "sourceValue": "APPROVED",
+        "transform": "text",
+        "method": "exact"
+      },
+      "status.history": {
+        "platform": "wix",
+        "sourceField": "activities",
+        "transform": "objects_map",
+        "method": "exact"
+      },
+      "currency": {
+        "platform": "wix",
+        "sourceField": "currency",
+        "sourceValue": "EUR",
+        "transform": "text",
+        "method": "exact"
+      },
+      "amounts.taxIncluded": {
+        "platform": "wix",
+        "sourceField": "taxIncludedInPrices",
+        "sourceValue": false,
+        "transform": "bool",
+        "method": "exact"
+      },
+      "amounts.subtotal": {
+        "platform": "wix",
+        "sourceField": "priceSummary.subtotal.amount",
+        "sourceValue": "294.00",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shipping": {
+        "platform": "wix",
+        "sourceField": "priceSummary.shipping.amount",
+        "sourceValue": "15.00",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.taxes": {
+        "platform": "wix",
+        "sourceField": "priceSummary.tax.amount",
+        "sourceValue": "64.89",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.discounts": {
+        "platform": "wix",
+        "sourceField": "priceSummary.discount.amount",
+        "sourceValue": "0.00",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.fees": {
+        "platform": "wix",
+        "sourceField": "priceSummary.totalAdditionalFees.amount",
+        "sourceValue": "0.00",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.total": {
+        "platform": "wix",
+        "sourceField": "priceSummary.total.amount",
+        "sourceValue": "373.89",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.paid": {
+        "platform": "wix",
+        "sourceField": "balanceSummary.paid.amount",
+        "sourceValue": "373.89",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.refunded": {
+        "platform": "wix",
+        "sourceField": "balanceSummary.refunded.amount",
+        "sourceValue": "0",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.balance": {
+        "platform": "wix",
+        "sourceField": "balanceSummary.balance.amount",
+        "sourceValue": "0.00",
+        "transform": "money",
+        "method": "exact"
+      },
+      "shippingLines[0]": {
+        "platform": "wix",
+        "sourceField": "shippingInfo",
+        "transform": "object_map",
+        "method": "exact"
+      },
+      "locale": {
+        "platform": "wix",
+        "sourceField": "buyerLanguage",
+        "sourceValue": "fr",
+        "transform": "text_present",
+        "method": "exact"
+      },
+      "channel": {
+        "platform": "wix",
+        "sourceField": "channelInfo.type",
+        "sourceValue": "BACKOFFICE_MERCHANT",
+        "transform": "text_present",
+        "method": "exact"
+      },
+      "note": {
+        "platform": "wix",
+        "sourceField": "buyerNote",
+        "transform": "text",
+        "method": "exact"
+      },
+      "timestamps.created": {
+        "platform": "wix",
+        "sourceField": "createdDate",
+        "sourceValue": "2026-09-21T19:03:29.822Z",
+        "transform": "date_iso",
+        "method": "exact"
+      },
+      "timestamps.updated": {
+        "platform": "wix",
+        "sourceField": "updatedDate",
+        "sourceValue": "2026-09-21T19:22:32.180Z",
+        "transform": "date_present",
+        "method": "exact"
+      },
+      "payments": {
+        "platform": "wix",
+        "sourceField": "_transactions.payments",
+        "transform": "objects_map",
+        "method": "exact"
+      },
+      "test": {
+        "platform": "wix",
+        "sourceField": "demo",
+        "sourceValue": false,
+        "transform": "bool",
+        "method": "exact"
+      },
+      "items": {
+        "platform": "wix",
+        "sourceField": "lineItems",
+        "transform": "items",
+        "method": "structural"
+      },
+      "lineItems": {
+        "platform": "wix",
+        "sourceField": "items",
+        "transform": "line_items_from_items",
+        "method": "structural"
+      },
+      "number": {
+        "platform": "wix",
+        "sourceField": "number",
+        "sourceValue": "10001",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "createdAt": {
+        "platform": "wix",
+        "sourceField": "createdDate",
+        "sourceValue": "2026-09-21T19:03:29.822Z",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "financialStatus": {
+        "platform": "wix",
+        "sourceField": "paymentStatus",
+        "sourceValue": "PAID",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "fulfillmentStatus": {
+        "platform": "wix",
+        "sourceField": "fulfillmentStatus",
+        "sourceValue": "FULFILLED",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "subtotal": {
+        "platform": "wix",
+        "sourceField": "priceSummary.subtotal.amount",
+        "sourceValue": "294.00",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "shipping": {
+        "platform": "wix",
+        "sourceField": "priceSummary.shipping.amount",
+        "sourceValue": "15.00",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "taxes": {
+        "platform": "wix",
+        "sourceField": "priceSummary.tax.amount",
+        "sourceValue": "64.89",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "total": {
+        "platform": "wix",
+        "sourceField": "priceSummary.total.amount",
+        "sourceValue": "373.89",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "discountAmount": {
+        "platform": "wix",
+        "sourceField": "priceSummary.discount.amount",
+        "sourceValue": "0.00",
+        "transform": "first_number",
+        "method": "structural"
+      }
+    }
+  }
+]

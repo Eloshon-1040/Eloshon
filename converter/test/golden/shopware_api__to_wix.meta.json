@@ -1,0 +1,34 @@
+{
+  "ok": true,
+  "sourceFormat": "shopware.products.admin-api.v1",
+  "targetFormat": "wix_products",
+  "counts": {
+    "inputUnits": 3,
+    "outputUnits": 3,
+    "failedUnits": 0,
+    "outputRows": 16
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_wix_option_type"
+    },
+    {
+      "code": "loss_wix_category_hierarchy",
+      "params": {
+        "count": 3
+      }
+    },
+    {
+      "code": "loss_wix_price_tiers",
+      "params": {
+        "count": 2,
+        "products": 1,
+        "handles": "SWDEMO10002"
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false
+}

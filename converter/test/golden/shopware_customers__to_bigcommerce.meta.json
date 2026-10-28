@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "sourceFormat": "shopware.customers.admin-api.v1",
+  "targetFormat": "bigcommerce_customers",
+  "counts": {
+    "inputUnits": 1,
+    "outputUnits": 1,
+    "failedUnits": 0,
+    "outputRows": 1
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_bc_passwords"
+    },
+    {
+      "code": "loss_bc_marketing_consent",
+      "params": {
+        "customers": 1,
+        "explicit": 0,
+        "timestamped": 0,
+        "pending": 0
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false,
+  "consentReport": {
+    "customers": 1,
+    "explicitSourceConsent": 0,
+    "withTimestamp": 0,
+    "pending": 0,
+    "optedOut": 0,
+    "unknown": 1,
+    "targetPolicy": "not-subscribed",
+    "requiresReconfirmation": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "report": {
+    "status": "OK",
+    "discovered": 1,
+    "fetched": 1,
+    "detected": 1,
+    "normalized": 1,
+    "accepted": 1,
+    "toVerify": 0,
+    "excluded": 0,
+    "incomplete": 0,
+    "duplicates": 0,
+    "networkErrors": 0,
+    "parseErrors": 0,
+    "notAProductPage": 0,
+    "browserRequired": 1,
+    "browserUsed": 1,
+    "byStatus": {
+      "JAVASCRIPT_REQUIRED": 1
+    },
+    "blocked": null,
+    "remaining": 0,
+    "resumeCount": 0
+  },
+  "products": [
+    {
+      "name": "Montre connectée Series 5",
+      "price": 149,
+      "currency": "EUR",
+      "list_price": null,
+      "availability": "InStock",
+      "barcode": "5410000000050",
+      "sku": "WATCH-5",
+      "source_product_id": "5410000000050",
+      "weight_kg": null,
+      "image_url": "https://spa.example/img/montre.jpg",
+      "source_category": null,
+      "product_type": null,
+      "extractor": "generic-jsonld",
+      "eligibility": "accepted"
+    }
+  ],
+  "renders": 1
+}

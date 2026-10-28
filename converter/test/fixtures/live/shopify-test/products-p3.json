@@ -1,0 +1,58 @@
+[
+  {
+    "id": "gid://shopify/Product/10480135635277",
+    "legacyResourceId": "10480135635277",
+    "handle": "bionova-coco-brick-1-x-10-litres",
+    "title": "Bionova Coco Brick - 1 x 10 Litres",
+    "descriptionHtml": "<h2><span style=\"text-decoration: underline;\">Caractéristiques du substrat coco vendu à la pièce</span></h2>\n<p><strong>BioNova Coco Brick</strong> est un substrat 100 % naturel à base de fibre de coco lavée et tamponnée avec du calcium et du magnésium. Cette brique compressée permet d’obtenir un terreau coco de qualité, léger, aéré et prêt à l’emploi après ajout d’eau.</p>\n<p>La structure de la fibre garantit une excellente rétention d’eau tout en favorisant le drainage et l’oxygénation des racines. Elle est idéale pour la culture de <strong>plantes d’intérieur, tomates, piments, concombres, fraises, fines herbes</strong> ou pour vos projets en <strong>jardinage urbain et potager</strong>.</p>\n<ul>\n<li>\n<strong>Substrat coco premium</strong> : lavé et tamponné pour éviter les excès de sels</li>\n<li>\n<strong>Utilisation simple</strong> : à hydrater avec 4 litres d’eau pour activer le substrat</li>\n<li>\n<strong>Convient à tous types de cultures</strong> : terre, pots, bacs, culture hors-sol</li>\n<li>\n<strong>pH stable</strong> autour de 6.0 et <strong>EC &lt; 0.5 mS/cm</strong>\n</li>\n<li>\n<strong>Astuce</strong> : pour une réhydratation plus rapide, utilisez BioNova Freeflow</li>\n</ul>\n<p>Parfait pour les jardiniers à la recherche d’un <strong>terreau coco propre, équilibré et sans tourbe</strong>, ce produit s’intègre facilement dans tout programme de culture bio ou organique.</p>",
+    "vendor": "Bionova",
+    "productType": "substrat",
+    "tags": ["bloc de coco", "brique de coco", "coco", "coco bric", "coco brick", "coco brix", "fibre de coco", "substrat"],
+    "status": "ACTIVE",
+    "createdAt": "2026-01-06T20:20:55Z",
+    "updatedAt": "2026-09-21T21:14:57Z",
+    "publishedAt": "2026-01-06T20:20:55Z",
+    "templateSuffix": null,
+    "onlineStoreUrl": null,
+    "onlineStorePreviewUrl": "https://example-store.myshopify.com/products/bionova-coco-brick-1-x-10-litres",
+    "isGiftCard": false,
+    "requiresSellingPlan": false,
+    "hasOnlyDefaultVariant": true,
+    "hasOutOfStockVariants": false,
+    "hasVariantsThatRequiresComponents": false,
+    "totalInventory": 12,
+    "tracksInventory": true,
+    "combinedListingRole": null,
+    "category": { "id": "gid://shopify/TaxonomyCategory/na", "name": "Non classé", "fullName": "Non classé", "isLeaf": true, "isRoot": true },
+    "seo": { "title": "BioNova Coco Brick – Substrat de Coco Compressé", "description": "Bionova Coco Brick est une brique de coco lavée et tamponnée, parfaite pour tomates, fraises, piments et plantes d’intérieur. Substrat stable et naturel." },
+    "priceRangeV2": { "minVariantPrice": { "amount": "2.5", "currencyCode": "EUR" }, "maxVariantPrice": { "amount": "2.5", "currencyCode": "EUR" } },
+    "compareAtPriceRange": null,
+    "options": [{ "id": "gid://shopify/ProductOption/13161736700237", "name": "Title", "position": 1, "values": ["Default Title"], "optionValues": [{ "id": "gid://shopify/ProductOptionValue/6956902973773", "name": "Default Title", "hasVariants": true }] }],
+    "media": { "nodes": [{ "id": "gid://shopify/MediaImage/59360900874573", "alt": "Un paquet de substrat Bionova Coco Brick, vendu à la pièce", "mediaContentType": "IMAGE", "status": "READY", "image": { "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/substrat-bionova-coco-brick-1-piece_165da9b6-6b05-4294-a92b-5f6fc0bf35d3.jpg?v=1767730858", "width": 1200, "height": 1200 } }] },
+    "collections": { "nodes": [{ "id": "gid://shopify/Collection/653169131853", "handle": "frontpage", "title": "Home page", "ruleSet": null }, { "id": "gid://shopify/Collection/653170606413", "handle": "terreaux", "title": "Terreaux", "ruleSet": { "appliedDisjunctively": false, "rules": [{ "column": "TYPE", "relation": "EQUALS", "condition": "substrat" }] } }] },
+    "metafields": { "nodes": [
+      { "id": "gid://shopify/Metafield/55525366923597", "namespace": "global", "key": "title_tag", "type": "string", "value": "BioNova Coco Brick – Substrat de Coco Compressé" },
+      { "id": "gid://shopify/Metafield/55525366956365", "namespace": "global", "key": "description_tag", "type": "string", "value": "Bionova Coco Brick est une brique de coco lavée et tamponnée, parfaite pour tomates, fraises, piments et plantes d’intérieur. Substrat stable et naturel." },
+      { "id": "gid://shopify/Metafield/63175559807309", "namespace": "eloshon", "key": "p3_material", "type": "single_line_text_field", "value": "coco fibre" },
+      { "id": "gid://shopify/Metafield/63175559840077", "namespace": "eloshon", "key": "p3_volume_l", "type": "number_integer", "value": "10" }
+    ] },
+    "bundleComponents": { "nodes": [] },
+    "resourcePublicationsV2": { "nodes": [{ "isPublished": true, "publication": { "id": "gid://shopify/Publication/312549212493", "name": "Boutique en ligne", "catalog": { "id": "gid://shopify/AppCatalog/154778960205", "title": "Channel Catalog 312549212493 for Online Store" } }, "publishDate": "2026-01-06T20:20:55Z" }] },
+    "translations": [
+      { "key": "title", "value": "Bionova Coco Brick - 1 x 10 Litres (EN)", "locale": "en", "outdated": false },
+      { "key": "handle", "value": "bionova-coco-brick-1-x-10-litres-en", "locale": "en", "outdated": false },
+      { "key": "meta_title", "value": "BioNova Coco Brick – Compressed Coco Substrate", "locale": "en", "outdated": false }
+    ],
+    "variants": { "nodes": [{
+      "id": "gid://shopify/ProductVariant/53132518588749", "legacyResourceId": "53132518588749", "title": "Default Title", "sku": "Bionova-Coco-Brick-PCS", "barcode": "", "price": "2.50", "compareAtPrice": null, "position": 1, "taxable": true,
+      "inventoryQuantity": 12, "inventoryPolicy": "DENY", "availableForSale": true, "requiresComponents": false, "sellableOnlineQuantity": 12, "showUnitPrice": false,
+      "createdAt": "2026-01-06T20:20:55Z", "updatedAt": "2026-09-21T21:14:57Z", "displayName": "Bionova Coco Brick - 1 x 10 Litres - Default Title",
+      "selectedOptions": [{ "name": "Title", "value": "Default Title", "optionValue": { "id": "gid://shopify/ProductOptionValue/6956902973773", "name": "Default Title" } }],
+      "image": null, "media": { "nodes": [] },
+      "inventoryItem": { "id": "gid://shopify/InventoryItem/55160178508109", "sku": "Bionova-Coco-Brick-PCS", "tracked": true, "requiresShipping": true, "harmonizedSystemCode": null, "countryCodeOfOrigin": null, "provinceCodeOfOrigin": null, "unitCost": null, "measurement": { "weight": { "value": 900, "unit": "GRAMS" } } },
+      "metafields": { "nodes": [] }, "unitPrice": null,
+      "unitPriceMeasurement": { "measuredType": null, "quantityUnit": null, "quantityValue": 0, "referenceUnit": null, "referenceValue": 0 },
+      "productVariantComponents": { "nodes": [] }, "translations": []
+    }] }
+  }
+]

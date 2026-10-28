@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "id_order": 1,
+    "id_carrier": 2,
+    "id_order_invoice": 0,
+    "weight": "0.000000",
+    "shipping_cost_tax_excl": "7.000000",
+    "shipping_cost_tax_incl": "8.400000",
+    "tracking_number": "",
+    "date_add": "2026-09-21 03:39:36"
+  },
+  {
+    "id": 2,
+    "id_order": 2,
+    "id_carrier": 2,
+    "id_order_invoice": 1,
+    "weight": "0.000000",
+    "shipping_cost_tax_excl": "7.000000",
+    "shipping_cost_tax_incl": "8.400000",
+    "tracking_number": "",
+    "date_add": "2026-09-21 03:39:36"
+  },
+  {
+    "id": 3,
+    "id_order": 3,
+    "id_carrier": 2,
+    "id_order_invoice": 0,
+    "weight": "0.000000",
+    "shipping_cost_tax_excl": "7.000000",
+    "shipping_cost_tax_incl": "8.400000",
+    "tracking_number": "",
+    "date_add": "2026-09-21 03:39:36"
+  },
+  {
+    "id": 4,
+    "id_order": 4,
+    "id_carrier": 2,
+    "id_order_invoice": 2,
+    "weight": "0.000000",
+    "shipping_cost_tax_excl": "7.000000",
+    "shipping_cost_tax_incl": "8.400000",
+    "tracking_number": "",
+    "date_add": "2026-09-21 03:39:36"
+  },
+  {
+    "id": 5,
+    "id_order": 5,
+    "id_carrier": 2,
+    "id_order_invoice": 0,
+    "weight": "0.000000",
+    "shipping_cost_tax_excl": "7.000000",
+    "shipping_cost_tax_incl": "8.400000",
+    "tracking_number": "",
+    "date_add": "2026-09-21 03:39:36"
+  }
+]

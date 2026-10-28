@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "sourceFormat": "prestashop.orders.webservice.v1",
+  "targetFormat": "shopify_orders",
+  "counts": {
+    "inputUnits": 5,
+    "outputUnits": 5,
+    "failedUnits": 0,
+    "outputRows": 7
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_per_tax"
+    },
+    {
+      "code": "loss_coupons_as_lines"
+    },
+    {
+      "code": "loss_shopify_order_rows",
+      "params": {
+        "orders": 2
+      }
+    },
+    {
+      "code": "loss_shopify_order_numbering",
+      "params": {
+        "orders": 5,
+        "min": "FFATNOMMJ",
+        "max": "XKBKNABJK"
+      }
+    },
+    {
+      "code": "loss_shopify_invoice_numbers",
+      "params": {
+        "count": 2
+      }
+    },
+    {
+      "code": "loss_shopify_payments_detail",
+      "params": {
+        "count": 2
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false,
+  "numberingReport": {
+    "orders": 5,
+    "sourceSequence": {
+      "min": "FFATNOMMJ",
+      "max": "XKBKNABJK",
+      "numeric": false,
+      "gaps": [],
+      "duplicates": []
+    },
+    "invoices": {
+      "withNumber": 2,
+      "withoutNumber": 3,
+      "gaps": []
+    },
+    "targetPolicy": "native-sequence",
+    "warnings": [
+      "invoice_numbers_not_carried"
+    ]
+  }
+}

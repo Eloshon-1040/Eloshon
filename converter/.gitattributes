@@ -1,0 +1,5 @@
+# Regression fixtures and golden outputs must be byte-stable: no EOL conversion.
+test/fixtures/** -text
+test/golden/** -text
+# Vendored catalog runtime: byte-identical to @eloshon/catalog (drift-tested).
+core/vendor/** -text

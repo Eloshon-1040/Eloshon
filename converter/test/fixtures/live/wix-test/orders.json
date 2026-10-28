@@ -1,0 +1,558 @@
+[
+  {
+    "id": "c3af207c-7c27-41c0-9391-d141ffa7bce4",
+    "number": "10001",
+    "createdDate": "2026-09-21T19:03:29.822Z",
+    "updatedDate": "2026-09-21T19:22:32.180Z",
+    "lineItems": [
+      {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "productName": {
+          "original": "Boloss 400",
+          "translated": "Boloss 400"
+        },
+        "catalogReference": {
+          "catalogItemId": "5e07f72a-c6df-4434-b17f-3810ed1a419e",
+          "appId": "215238eb-22a5-4c36-9e7b-e7c08025e04e",
+          "options": {
+            "variantId": "d31a5787-59b7-4a40-ba17-9ea28606f05d"
+          }
+        },
+        "quantity": 1,
+        "totalDiscount": {
+          "amount": "0.00",
+          "formattedAmount": "0,00€"
+        },
+        "descriptionLines": [],
+        "image": {
+          "id": "da66a9_be37485a4e6647718d2c8c26e1abc119~mv2.jpg",
+          "url": "https://static.wixstatic.com/media/da66a9_be37485a4e6647718d2c8c26e1abc119~mv2.jpg/v1/fit/w_9227,h_2307,q_90/file.jpg",
+          "height": 2307,
+          "width": 9227
+        },
+        "physicalProperties": {
+          "weight": 12,
+          "sku": "tEST-cLAUDE",
+          "shippable": true,
+          "packageDimensions": {
+            "length": "25",
+            "width": "16",
+            "height": "36",
+            "unit": "CM"
+          }
+        },
+        "itemType": {
+          "preset": "PHYSICAL"
+        },
+        "restockLocations": [],
+        "price": {
+          "amount": "24.00",
+          "formattedAmount": "24,00€"
+        },
+        "priceBeforeDiscounts": {
+          "amount": "24.00",
+          "formattedAmount": "24,00€"
+        },
+        "priceBeforeDiscountsAndTax": {
+          "amount": "24.00",
+          "formattedAmount": "24,00€"
+        },
+        "totalPriceBeforeTax": {
+          "amount": "24.00",
+          "formattedAmount": "24,00€"
+        },
+        "totalPriceAfterTax": {
+          "amount": "29.04",
+          "formattedAmount": "29,04€"
+        },
+        "paymentOption": "FULL_PAYMENT_ONLINE",
+        "taxDetails": {
+          "taxableAmount": {
+            "amount": "24.00",
+            "formattedAmount": "24,00€"
+          },
+          "taxRate": "0.2100",
+          "totalTax": {
+            "amount": "5.04",
+            "formattedAmount": "5,04€"
+          }
+        },
+        "taxInfo": {
+          "taxAmount": {
+            "amount": "5.04",
+            "formattedAmount": "5,04€"
+          },
+          "taxableAmount": {
+            "amount": "24.00",
+            "formattedAmount": "24,00€"
+          },
+          "taxRate": "0.2100",
+          "taxIncludedInPrice": false,
+          "taxBreakdown": [
+            {
+              "jurisdiction": "",
+              "rate": "0.210000",
+              "taxAmount": {
+                "amount": "5.04",
+                "formattedAmount": "5,04€"
+              },
+              "taxType": "",
+              "taxName": "Taxe",
+              "jurisdictionType": "UNDEFINED",
+              "nonTaxableAmount": {
+                "amount": "0",
+                "formattedAmount": "0,00€"
+              },
+              "taxableAmount": {
+                "amount": "24.00",
+                "formattedAmount": "24,00€"
+              },
+              "exemptAmount": {
+                "amount": "0.00",
+                "formattedAmount": "0,00€"
+              }
+            }
+          ],
+          "exemptAmount": {
+            "amount": "0.00",
+            "formattedAmount": "0,00€"
+          }
+        },
+        "deliveryProfileId": "24307425-2025-465b-ba73-6ad9ba4d2947",
+        "shippingGroupId": "24307425-2025-465b-ba73-6ad9ba4d2947",
+        "locations": [],
+        "lineItemPrice": {
+          "amount": "24.00",
+          "formattedAmount": "24,00€"
+        },
+        "customLineItem": false,
+        "rootCatalogItemId": "5e07f72a-c6df-4434-b17f-3810ed1a419e",
+        "taxableAddress": {
+          "addressType": "SHIPPING"
+        },
+        "inventoryAppId": "215238eb-22a5-4c36-9e7b-e7c08025e04e",
+        "priceUndetermined": false,
+        "fixedQuantity": false,
+        "modifierGroups": []
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000002",
+        "productName": {
+          "original": "Vase en céramique",
+          "translated": "Vase en céramique"
+        },
+        "catalogReference": {
+          "catalogItemId": "7ef5f127-5e5d-4ebb-9957-d122ce56daec",
+          "appId": "215238eb-22a5-4c36-9e7b-e7c08025e04e"
+        },
+        "quantity": 1,
+        "totalDiscount": {
+          "amount": "0.00",
+          "formattedAmount": "0,00€"
+        },
+        "descriptionLines": [],
+        "image": {
+          "id": "22e53e_5a34c410f18f4760b451208652e8cf27~mv2.jpg",
+          "url": "https://static.wixstatic.com/media/22e53e_5a34c410f18f4760b451208652e8cf27~mv2.jpg/v1/fit/w_3000,h_3000,q_90/file.jpg",
+          "height": 3000,
+          "width": 3000
+        },
+        "physicalProperties": {
+          "sku": "364215376135191",
+          "shippable": true
+        },
+        "itemType": {
+          "preset": "PHYSICAL"
+        },
+        "restockLocations": [],
+        "price": {
+          "amount": "270.00",
+          "formattedAmount": "270,00€"
+        },
+        "priceBeforeDiscounts": {
+          "amount": "270.00",
+          "formattedAmount": "270,00€"
+        },
+        "priceBeforeDiscountsAndTax": {
+          "amount": "270.00",
+          "formattedAmount": "270,00€"
+        },
+        "totalPriceBeforeTax": {
+          "amount": "270.00",
+          "formattedAmount": "270,00€"
+        },
+        "totalPriceAfterTax": {
+          "amount": "326.70",
+          "formattedAmount": "326,70€"
+        },
+        "paymentOption": "FULL_PAYMENT_ONLINE",
+        "taxDetails": {
+          "taxableAmount": {
+            "amount": "270.00",
+            "formattedAmount": "270,00€"
+          },
+          "taxRate": "0.2100",
+          "totalTax": {
+            "amount": "56.70",
+            "formattedAmount": "56,70€"
+          }
+        },
+        "taxInfo": {
+          "taxAmount": {
+            "amount": "56.70",
+            "formattedAmount": "56,70€"
+          },
+          "taxableAmount": {
+            "amount": "270.00",
+            "formattedAmount": "270,00€"
+          },
+          "taxRate": "0.2100",
+          "taxIncludedInPrice": false,
+          "taxBreakdown": [
+            {
+              "jurisdiction": "",
+              "rate": "0.210000",
+              "taxAmount": {
+                "amount": "56.70",
+                "formattedAmount": "56,70€"
+              },
+              "taxType": "",
+              "taxName": "Taxe",
+              "jurisdictionType": "UNDEFINED",
+              "nonTaxableAmount": {
+                "amount": "0",
+                "formattedAmount": "0,00€"
+              },
+              "taxableAmount": {
+                "amount": "270.00",
+                "formattedAmount": "270,00€"
+              },
+              "exemptAmount": {
+                "amount": "0.00",
+                "formattedAmount": "0,00€"
+              }
+            }
+          ],
+          "exemptAmount": {
+            "amount": "0.00",
+            "formattedAmount": "0,00€"
+          }
+        },
+        "deliveryProfileId": "24307425-2025-465b-ba73-6ad9ba4d2947",
+        "shippingGroupId": "24307425-2025-465b-ba73-6ad9ba4d2947",
+        "locations": [],
+        "lineItemPrice": {
+          "amount": "270.00",
+          "formattedAmount": "270,00€"
+        },
+        "customLineItem": false,
+        "rootCatalogItemId": "7ef5f127-5e5d-4ebb-9957-d122ce56daec",
+        "taxableAddress": {
+          "addressType": "SHIPPING"
+        },
+        "inventoryAppId": "215238eb-22a5-4c36-9e7b-e7c08025e04e",
+        "priceUndetermined": false,
+        "fixedQuantity": false,
+        "modifierGroups": []
+      }
+    ],
+    "paymentStatus": "PAID",
+    "fulfillmentStatus": "FULFILLED",
+    "buyerLanguage": "fr",
+    "weightUnit": "KG",
+    "currency": "EUR",
+    "taxIncludedInPrices": false,
+    "siteLanguage": "fr",
+    "priceSummary": {
+      "subtotal": {
+        "amount": "294.00",
+        "formattedAmount": "294,00€"
+      },
+      "shipping": {
+        "amount": "15.00",
+        "formattedAmount": "15,00€"
+      },
+      "tax": {
+        "amount": "64.89",
+        "formattedAmount": "64,89€"
+      },
+      "discount": {
+        "amount": "0.00",
+        "formattedAmount": "0,00€"
+      },
+      "totalPrice": {
+        "amount": "373.89",
+        "formattedAmount": "373,89€"
+      },
+      "total": {
+        "amount": "373.89",
+        "formattedAmount": "373,89€"
+      },
+      "totalWithGiftCard": {
+        "amount": "373.89",
+        "formattedAmount": "373,89€"
+      },
+      "totalWithoutGiftCard": {
+        "amount": "373.89",
+        "formattedAmount": "373,89€"
+      },
+      "totalAdditionalFees": {
+        "amount": "0.00",
+        "formattedAmount": "0,00€"
+      }
+    },
+    "shippingInfo": {
+      "code": "custom-delivery-method:draft-order-id:c86f63a5-0ffa-4539-afaa-a108eb6bb45a:2026-09-21T18:59:51.383Z",
+      "title": "Livraison à domicile",
+      "logistics": {
+        "deliveryTime": "21 sept. 2026, 20:59",
+        "deliveryTimeSlot": {
+          "from": "2026-09-21T18:59:25.713Z",
+          "to": "2026-09-21T18:59:25.713Z"
+        }
+      },
+      "cost": {
+        "price": {
+          "amount": "15",
+          "formattedAmount": "15,00€"
+        },
+        "totalPriceBeforeTax": {
+          "amount": "15",
+          "formattedAmount": "15,00€"
+        },
+        "totalPriceAfterTax": {
+          "amount": "18.15",
+          "formattedAmount": "18,15€"
+        },
+        "taxDetails": {
+          "taxableAmount": {
+            "amount": "15.00",
+            "formattedAmount": "15,00€"
+          },
+          "taxRate": "0.2100",
+          "totalTax": {
+            "amount": "3.15",
+            "formattedAmount": "3,15€"
+          }
+        },
+        "taxInfo": {
+          "taxAmount": {
+            "amount": "3.15",
+            "formattedAmount": "3,15€"
+          },
+          "taxableAmount": {
+            "amount": "15.00",
+            "formattedAmount": "15,00€"
+          },
+          "taxRate": "0.2100",
+          "taxIncludedInPrice": false,
+          "taxBreakdown": [
+            {
+              "jurisdiction": "",
+              "rate": "0.210000",
+              "taxAmount": {
+                "amount": "3.15",
+                "formattedAmount": "3,15€"
+              },
+              "taxType": "",
+              "taxName": "Taxe",
+              "jurisdictionType": "UNDEFINED",
+              "nonTaxableAmount": {
+                "amount": "0",
+                "formattedAmount": "0,00€"
+              },
+              "taxableAmount": {
+                "amount": "15.00",
+                "formattedAmount": "15,00€"
+              },
+              "exemptAmount": {
+                "amount": "0.00",
+                "formattedAmount": "0,00€"
+              }
+            }
+          ],
+          "exemptAmount": {
+            "amount": "0.00",
+            "formattedAmount": "0,00€"
+          }
+        }
+      },
+      "region": {
+        "name": "Belgique"
+      }
+    },
+    "status": "APPROVED",
+    "archived": false,
+    "taxSummary": {
+      "totalTax": {
+        "amount": "64.89",
+        "formattedAmount": "64,89€"
+      },
+      "manualTaxRate": "0"
+    },
+    "taxInfo": {
+      "totalTax": {
+        "amount": "64.89",
+        "formattedAmount": "64,89€"
+      },
+      "taxBreakdown": [],
+      "manualTaxRate": "0",
+      "totalExempt": {
+        "amount": "0.00",
+        "formattedAmount": "0,00€"
+      }
+    },
+    "appliedDiscounts": [],
+    "activities": [
+      {
+        "id": "eef918e0-86b0-47f3-a786-9441159ae46e",
+        "createdDate": "2026-09-21T18:58:50.354Z",
+        "type": "ORDER_PLACED",
+        "activityType": "ORDER_PLACED"
+      },
+      {
+        "id": "c6154662-dd51-42b2-bbf0-ae3204f996c6",
+        "createdDate": "2026-09-21T19:21:34.499Z",
+        "type": "ORDER_PAID",
+        "activityType": "ORDER_PAID"
+      }
+    ],
+    "attributionSource": "UNSPECIFIED",
+    "createdBy": {
+      "userId": "da66a92b-6a89-402b-92cf-bfee98904802"
+    },
+    "channelInfo": {
+      "type": "BACKOFFICE_MERCHANT"
+    },
+    "seenByAHuman": true,
+    "customFields": [],
+    "isInternalOrderCreate": false,
+    "balanceSummary": {
+      "balance": {
+        "amount": "0.00",
+        "formattedAmount": "0,00€"
+      },
+      "paid": {
+        "amount": "373.89",
+        "formattedAmount": "373,89€"
+      },
+      "refunded": {
+        "amount": "0",
+        "formattedAmount": "0,00€"
+      },
+      "authorized": {
+        "amount": "0",
+        "formattedAmount": "0,00€"
+      },
+      "pendingRefund": {
+        "amount": "0",
+        "formattedAmount": "0,00€"
+      },
+      "pending": {
+        "amount": "0",
+        "formattedAmount": "0,00€"
+      },
+      "chargeback": {
+        "amount": "0",
+        "formattedAmount": "0,00€"
+      },
+      "chargebackReversal": {
+        "amount": "0",
+        "formattedAmount": "0,00€"
+      },
+      "platformFees": {
+        "amount": "0",
+        "formattedAmount": "0,00€"
+      },
+      "totalMinusPlatformFees": {
+        "amount": "373.89",
+        "formattedAmount": "373,89€"
+      },
+      "cashRoundingAdjustment": {
+        "amount": "0",
+        "formattedAmount": "0,00€"
+      }
+    },
+    "additionalFees": [],
+    "purchasedDate": "2026-09-21T18:58:50.354Z",
+    "payAfterFreeTrial": {
+      "subtotal": {
+        "amount": "0.00",
+        "formattedAmount": "0,00€"
+      },
+      "shipping": {
+        "amount": "0.00",
+        "formattedAmount": "0,00€"
+      },
+      "tax": {
+        "amount": "0.00",
+        "formattedAmount": "0,00€"
+      },
+      "discount": {
+        "amount": "0.00",
+        "formattedAmount": "0,00€"
+      },
+      "totalPrice": {
+        "amount": "0.00",
+        "formattedAmount": "0,00€"
+      },
+      "total": {
+        "amount": "0.00",
+        "formattedAmount": "0,00€"
+      },
+      "totalWithGiftCard": {
+        "amount": "0.00",
+        "formattedAmount": "0,00€"
+      },
+      "totalWithoutGiftCard": {
+        "amount": "0.00",
+        "formattedAmount": "0,00€"
+      },
+      "totalAdditionalFees": {
+        "amount": "0.00",
+        "formattedAmount": "0,00€"
+      }
+    },
+    "settings": {
+      "editableByEveryone": true,
+      "specificItemsCouponBehavior": "ITEM_SUBTOTAL_INCLUDES_DISCOUNT",
+      "createInvoice": true
+    },
+    "forms": [],
+    "platformFeeSummary": {
+      "total": {
+        "amount": "0.00",
+        "formattedAmount": "0,00€"
+      },
+      "totalPassOn": {
+        "amount": "0.00",
+        "formattedAmount": "0,00€"
+      },
+      "totalAbsorbed": {
+        "amount": "0.00",
+        "formattedAmount": "0,00€"
+      },
+      "fees": []
+    },
+    "imported": false,
+    "demo": false,
+    "_transactions": {
+      "orderId": "c3af207c-7c27-41c0-9391-d141ffa7bce4",
+      "payments": [
+        {
+          "id": "0c11826e-7233-4493-8d77-69d16c953b07",
+          "createdDate": "2026-09-21T19:21:33.733Z",
+          "updatedDate": "2026-09-21T19:21:34.333Z",
+          "amount": {
+            "amount": "373.89",
+            "formattedAmount": "373,89€"
+          },
+          "refundDisabled": false,
+          "supportReceiptGeneration": true,
+          "status": "APPROVED"
+        }
+      ],
+      "refunds": []
+    }
+  }
+]

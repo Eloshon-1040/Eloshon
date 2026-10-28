@@ -1,0 +1,13 @@
+export function fixSmartPunctuation(s: string): string;
+export function cleanScalar(v: string): string;
+export function splitUrlList(value: string | string[] | null | undefined, sep?: string | null): string[];
+export function looksLikeUrl(s: unknown): boolean;
+export function encodeUrlForList(url: string | null | undefined, sep: string): string;
+export function stripExcelGuard(v: string | undefined): string;
+export function parseConsent(v: string | undefined): boolean | null;
+export function stateToCode(state: string, country: string): string;
+export function stateToName(state: string, country: string): string;
+export function numericTokens(s: string): string[];
+export function parseNumberToken(tok: string, decimal?: string): number | null;
+export function decimalSeparatorOf(values: string[]): { decimal: ',' | '.' | null; ambiguous: number };
+export function columnKey(s: string): string;

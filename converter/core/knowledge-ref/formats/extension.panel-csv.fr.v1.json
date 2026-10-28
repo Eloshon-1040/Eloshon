@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "id": "extension.panel-csv.fr.v1",
+  "displayName": "Eloshon Scraper extension panel export (CSV)",
+  "provenance": "scraper-generated",
+  "medium": "csv",
+  "platformHint": "eloshon",
+  "entity": "products",
+  "version": "extension 0.7.x — « Exporter CSV » of the side panel, French field names of the « Produits » template; a manifest (<file>.manifest.json) may sit beside it",
+  "signatures": [
+    {
+      "kind": "csv-header-set",
+      "required": ["Nom", "Prix", "Lien"],
+      "hints": ["Prix barré", "Marque", "Collection", "Image", "Référence", "Description", "Caractéristiques techniques", "Variantes", "Type de produit", "Étiquettes", "Statut à l’import", "Genre", "Matière", "Saison", "Pays d’origine", "Garantie"],
+      "separator": ",",
+      "closed": true
+    }
+  ],
+  "structure": {
+    "unit": "product",
+    "variants": {
+      "inlinePath": "Variantes",
+      "parseText": { "itemSep": "|", "kvSep": ":" },
+      "selfWhenNone": true
+    },
+    "options": {
+      "fromVariants": { "name": "type", "value": "name" }
+    }
+  },
+  "routing": { "platform": "eloshon", "entity": "products" },
+  "invariantsExpected": [
+    "one row = one product; the user may rename, add or remove columns (then the manifest beside the file says each column's role)",
+    "Variantes is text « 30 ML : 77.7 | 50 ML : 115.5 (épuisé) » (value : price, « (épuisé) » = out of stock) or names only « S, M, L »",
+    "Caractéristiques techniques is text « Résolution : Full HD ; Taille : 55 »",
+    "Image may hold several addresses separated by « , »",
+    "a preview export (before « Accepter ») fills the product-page columns (Description, Marque…) only for the few pages read: the manifest says so"
+  ],
+  "fields": [
+    { "path": "Nom", "canon": "title", "transform": "text", "confidence": "verified-fixture", "source": "extension:ui/panel.mjs TEMPLATES.produits" },
+    { "path": "Prix", "canon": "variants[].price", "transform": "money", "when": "self", "confidence": "verified-fixture" },
+    { "path": "Prix barré", "inputs": ["Prix barré", "Prix"], "canon": "variants[].compareAtPrice", "transform": "money_if_above", "when": "self", "confidence": "verified-fixture", "notes": "Crossed-out price, only when above the charged price." },
+    { "path": "Prix barré", "canon": "sourceExtension.eloshon.list_price", "transform": "copy_present", "confidence": "verified-fixture" },
+    { "path": "Marque", "canon": "vendor", "transform": "text", "confidence": "verified-fixture" },
+    { "path": "Type de produit", "canon": "productType", "transform": "text", "confidence": "verified-fixture", "notes": "A fixed value of the panel (« Valeurs fixes ») or a designated column." },
+    { "path": "Étiquettes", "canon": "tags", "transform": "list", "args": { "sep": "," }, "confidence": "verified-fixture" },
+    { "path": "Statut à l’import", "canon": "status", "transform": "enum_map", "args": { "map": { "draft": "draft", "active": "active" }, "default": "active" }, "confidence": "verified-fixture", "notes": "« draft »: imported hidden, to review before it is on sale." },
+    { "path": "Genre", "canon": "attributesRich[]", "transform": "attribute_single", "args": { "name": "Genre", "visible": true }, "confidence": "verified-fixture", "notes": "Established fixed-value terms (shared/export/constants.mjs ATTRIBUTE_TERMS)." },
+    { "path": "Matière", "canon": "attributesRich[]", "transform": "attribute_single", "args": { "name": "Matière", "visible": true }, "confidence": "verified-fixture" },
+    { "path": "Saison", "canon": "attributesRich[]", "transform": "attribute_single", "args": { "name": "Saison", "visible": true }, "confidence": "verified-fixture" },
+    { "path": "Pays d’origine", "canon": "attributesRich[]", "transform": "attribute_single", "args": { "name": "Pays d’origine", "visible": true }, "confidence": "verified-fixture" },
+    { "path": "Garantie", "canon": "attributesRich[]", "transform": "attribute_single", "args": { "name": "Garantie", "visible": true }, "confidence": "verified-fixture" },
+    { "path": "Collection", "canon": "categories", "transform": "category_path_split", "args": { "sep": ">", "listSep": "\n" }, "confidence": "verified-fixture", "notes": "The site's collection / breadcrumb « A > B »." },
+    { "path": "Image", "canon": "images", "transform": "images_from_urls", "confidence": "verified-fixture" },
+    { "path": "Lien", "canon": "sourceExtension.eloshon.source_url", "transform": "copy_present", "confidence": "verified-fixture", "notes": "Product page address: kept for traceability." },
+    { "path": "Référence", "canon": "identity.sourceId", "transform": "string_id", "confidence": "verified-fixture" },
+    { "path": "Référence", "canon": "variants[].sku", "transform": "text", "when": "self", "confidence": "verified-fixture", "notes": "The reference the page declares (the SKU guard still removes labels)." },
+    { "path": "Description", "canon": "bodyHtml", "transform": "html", "confidence": "verified-fixture" },
+    { "path": "Caractéristiques techniques", "canon": "descriptionSections[]", "transform": "description_section", "args": { "label": "Caractéristiques techniques", "pairSep": " ; ", "kv": " : " }, "confidence": "verified-fixture", "notes": "Appended to the description as a list." },
+    { "path": "Variantes", "canon": null, "transform": "ignore", "confidence": "verified-fixture", "notes": "Read by structure.variants.parseText." },
+    { "path": "type", "canon": "variants[].optionValues", "transform": "option_values_from_typed", "args": { "name": "type", "value": "name" }, "when": "child", "confidence": "verified-fixture", "notes": "Axis named from the values (Contenance, Taille, Variante)." },
+    { "path": "name", "canon": null, "transform": "ignore", "when": "child", "confidence": "verified-fixture", "notes": "Read by option_values_from_typed." },
+    { "path": "price", "canon": "variants[].price", "transform": "inherit_from_parent", "args": { "parentPath": "Prix", "as": "money" }, "when": "child", "confidence": "verified-fixture", "notes": "The value's own price, else the product price." },
+    { "path": "price", "canon": "variants[].compareAtPrice", "transform": "parent_when_absent", "args": { "parentInputs": ["Prix barré", "Prix"], "as": "money_if_above" }, "when": "child", "confidence": "verified-fixture" },
+    { "path": "availability", "canon": "variants[].inventoryQty", "transform": "regex_map", "args": { "rules": [{ "pattern": "out ?of ?stock|sold ?out|discontinued|rupture|épuisé|epuise|indisponible|ausverkauft|uitverkocht", "flags": "i", "value": 0 }] }, "when": "child", "confidence": "verified-fixture" },
+    { "path": "availability", "canon": "sourceExtension.eloshon.availability", "transform": "copy_present", "preservationReason": "no-canon-field", "when": "child", "confidence": "verified-fixture" }
+  ],
+  "history": [
+    { "at": "2026-10-28T00:00:00.000Z", "op": "seed", "from": "extension/ui/panel.mjs (« Exporter CSV », template « Produits »)", "origin": "reference", "diff": ["Built-in: the panel CSV is recognised without any manual mapping"] }
+  ]
+}

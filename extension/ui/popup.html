@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eloshon Scraper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../icons/icon-32.png" alt="" width="24" height="24">
+    <h1>Eloshon Scraper</h1>
+  </header>
+
+  <section class="status" aria-live="polite">
+    <div class="row"><span class="label">Application</span><span id="link-status" class="pill">…</span></div>
+    <div class="row"><span class="label">Navigateur</span><span id="browser" class="pill neutral">—</span></div>
+    <div class="row"><span class="label">Domaine actif</span><span id="domain" class="pill neutral">—</span></div>
+    <div class="row"><span class="label">Autorisation</span><span id="perm-status" class="pill">—</span></div>
+  </section>
+
+  <section id="job" class="job hidden">
+    <div class="row"><span class="label">Travail</span><span id="job-state" class="pill">—</span></div>
+    <p id="job-msg" class="msg"></p>
+    <progress id="job-progress" max="100" value="0"></progress>
+    <div class="actions">
+      <button id="btn-resume" class="hidden">Reprendre</button>
+      <button id="btn-stop" class="danger hidden">Abandonner</button>
+    </div>
+  </section>
+
+  <section class="activate">
+    <p class="hint">Activez un domaine pour autoriser l'extraction dans votre navigateur (votre IP, votre session).</p>
+    <div class="activate-row">
+      <input id="domain-input" type="text" placeholder="ex. colruyt.be" autocomplete="off" spellcheck="false">
+      <button id="btn-activate">Activer ce domaine</button>
+    </div>
+    <p id="activate-result" class="msg"></p>
+  </section>
+
+  <footer><span id="version"></span> · votre navigateur</footer>
+  <script type="module" src="popup.mjs"></script>
+</body>
+</html>

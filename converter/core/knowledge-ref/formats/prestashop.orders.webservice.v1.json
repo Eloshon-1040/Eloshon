@@ -1,0 +1,1145 @@
+{
+  "schemaVersion": 1,
+  "id": "prestashop.orders.webservice.v1",
+  "displayName": "PrestaShop Orders (Webservice, 9.x)",
+  "provenance": "native-platform",
+  "medium": "json-api",
+  "platformHint": "prestashop",
+  "entity": "orders",
+  "version": "ps-9.x",
+  "signatures": [
+    {
+      "kind": "json-shape",
+      "requiredPaths": [
+        "id",
+        "reference",
+        "id_customer",
+        "current_state",
+        "invoice_number",
+        "total_paid_tax_incl"
+      ],
+      "hintPaths": [
+        "id_address_delivery",
+        "module",
+        "valid",
+        "conversion_rate",
+        "associations"
+      ]
+    }
+  ],
+  "structure": {
+    "unit": "order",
+    "items": {
+      "companion": "order_details",
+      "keyedBy": "id",
+      "childParentPath": "id_order"
+    },
+    "companions": {
+      "order_details": {
+        "route": "GET /api/order_details?display=full",
+        "keyedByParent": false,
+        "note": "one row per line; flat, id_order"
+      },
+      "order_invoices": {
+        "route": "GET /api/order_invoices?display=full",
+        "keyedByParent": false,
+        "note": "one row per invoice (number = the legal sequence, also mirrored on orders.invoice_number)"
+      },
+      "order_payments": {
+        "route": "GET /api/order_payments?display=full",
+        "keyedByParent": false,
+        "note": "keyed by order_reference (NOT id_order); card_* fields are stripped at capture (7.7), card_brand kept"
+      },
+      "order_histories": {
+        "route": "GET /api/order_histories?display=full",
+        "keyedByParent": false,
+        "note": "state changes (id_order_state, date_add)"
+      },
+      "order_states": {
+        "route": "GET /api/order_states?display=full",
+        "keyedByParent": false,
+        "note": "state flags: paid, shipped, invoice, delivery, logable; name multilingual"
+      },
+      "order_carriers": {
+        "route": "GET /api/order_carriers?display=full",
+        "keyedByParent": false,
+        "note": "shipping cost + tracking per order"
+      },
+      "order_slips": {
+        "route": "GET /api/order_slip?display=full",
+        "keyedByParent": false,
+        "note": "credit slips = refunds (amount, shipping_cost_amount, partial, date_add) keyed by id_order — 0 rows on the local instance"
+      },
+      "addresses": {
+        "route": "GET /api/addresses?display=full",
+        "keyedByParent": false
+      },
+      "customers": {
+        "route": "GET /api/customers?display=full",
+        "keyedByParent": false
+      },
+      "countries": {
+        "route": "GET /api/countries?display=full",
+        "keyedByParent": false,
+        "note": "id → iso_code"
+      },
+      "states": {
+        "route": "GET /api/states?display=full",
+        "keyedByParent": false
+      },
+      "currencies": {
+        "route": "GET /api/currencies?display=full",
+        "keyedByParent": false
+      },
+      "languages": {
+        "route": "GET /api/languages?display=full",
+        "keyedByParent": false
+      }
+    }
+  },
+  "invariantsExpected": [
+    "reference (9 letters) is the customer-facing number; id is the technical sequence — neither becomes the target number (7.4)",
+    "invoice_number is the LEGAL sequence: 0 until a state with invoice=1 is reached, then assigned in state-change order (observed: orders 2 then 4 → invoices 1, 2; prefix #IN from PS_INVOICE_PREFIX, displayed zero-padded); delivery_number likewise (#DE)",
+    "valid = 1 once a logable state is reached; total_paid_real is what was actually paid; every amount exists tax-incl and tax-excl",
+    "the state is a foreign key (current_state → order_states.*): paid / shipped / delivery flags typed the statuses",
+    "order_payments rows are keyed by order_reference and exist only once paid",
+    "addresses / customers / countries / states are separate resources: a numeric id on the order resolves through the companions",
+    "dates are shop-local without zone (kept verbatim)"
+  ],
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "live:prestashop-test:2026-09-21",
+      "origin": "reference",
+      "diff": [
+        "Phase 7.6: full field map from the local instance (PS 9.0.3) after two orders were paid through the back office: invoice numbering observed in motion (7.4); companions-based joins declared as data"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "path": "reference",
+      "canon": "numbering.sourceNumber",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "Customer-facing reference (9 letters). Immutable reference on the target (7.4)."
+    },
+    {
+      "path": "id",
+      "canon": "numbering.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "identity.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "invoice_number",
+      "canon": "numbering.sourceInvoiceNumber",
+      "transform": "format_number",
+      "args": {
+        "prefix": "#IN",
+        "pad": 6
+      },
+      "confidence": "verified-live",
+      "notes": "The LEGAL invoice sequence, as PrestaShop displays it (#IN + 6 digits, default PS_INVOICE_PREFIX). 0 = no invoice yet. Reported, never re-emitted (7.4)."
+    },
+    {
+      "path": "invoice_date",
+      "canon": "numbering.sourceInvoiceDate",
+      "transform": "date_present",
+      "args": {
+        "assumeUtc": false
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "delivery_number",
+      "canon": "numbering.sourceDeliveryNumber",
+      "transform": "format_number",
+      "args": {
+        "prefix": "#DE",
+        "pad": 6
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "delivery_date",
+      "canon": "sourceExtension.prestashop.delivery_date",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "numbering.format",
+      "transform": "constant",
+      "args": {
+        "value": {
+          "prefix": "#IN",
+          "pattern": "#IN{n:6}"
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "Invoice format for the report only — never used to generate."
+    },
+    {
+      "path": "current_state",
+      "canon": "status.sourceState",
+      "transform": "lookup",
+      "args": {
+        "in": "order_states",
+        "key": "id",
+        "pick": "name"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "current_state",
+      "canon": "status.financial",
+      "transform": "lookup",
+      "args": {
+        "in": "order_states",
+        "key": "id",
+        "pick": "paid",
+        "map": {
+          "0": "pending",
+          "1": "paid"
+        },
+        "default": "unknown"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "current_state",
+      "canon": "status.fulfillment",
+      "transform": "lookup",
+      "args": {
+        "in": "order_states",
+        "key": "id",
+        "pick": "shipped",
+        "map": {
+          "0": "unfulfilled",
+          "1": "fulfilled"
+        },
+        "default": "unknown"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "current_state",
+      "canon": "status.lifecycle",
+      "transform": "lookup",
+      "args": {
+        "in": "order_states",
+        "key": "id",
+        "pick": "name",
+        "map": {
+          "Canceled": "cancelled",
+          "Cancelled": "cancelled",
+          "Delivered": "closed",
+          "Refunded": "closed"
+        },
+        "default": "open"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "status.history",
+      "transform": "lookup",
+      "args": {
+        "in": "order_histories",
+        "key": "id_order",
+        "multiple": true,
+        "fields": {
+          "at": {
+            "path": "date_add",
+            "as": "text"
+          },
+          "state": {
+            "path": "id_order_state",
+            "ref": {
+              "in": "order_states",
+              "key": "id",
+              "pick": "name"
+            }
+          },
+          "by": {
+            "path": "id_employee",
+            "as": "text"
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "state = the order_states name resolved through a second companion (ref), verbatim in the request language."
+    },
+    {
+      "path": "id",
+      "canon": "refunds",
+      "transform": "lookup",
+      "args": {
+        "in": "order_slips",
+        "key": "id_order",
+        "multiple": true,
+        "fields": {
+          "sourceId": {
+            "path": "id",
+            "as": "text"
+          },
+          "amount": {
+            "path": "amount",
+            "as": "number"
+          },
+          "at": {
+            "path": "date_add",
+            "as": "text"
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "Credit slips (order_slip). Declared from the resource schema — no slip on the local instance, unverified on real data."
+    },
+    {
+      "path": "valid",
+      "canon": "sourceExtension.prestashop.valid",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "module",
+      "canon": "sourceExtension.prestashop.module",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "payment",
+      "canon": "sourceExtension.prestashop.payment_label",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "payment",
+      "canon": "paymentMethod",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_currency",
+      "canon": "currency",
+      "transform": "lookup",
+      "args": {
+        "in": "currencies",
+        "key": "id",
+        "pick": "iso_code"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "conversion_rate",
+      "canon": "amounts.exchangeRate",
+      "transform": "float",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_paid_tax_incl",
+      "canon": "amounts.total",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_paid",
+      "canon": "sourceExtension.prestashop.total_paid",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_paid_tax_excl",
+      "canon": "sourceExtension.prestashop.total_paid_tax_excl",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_paid_real",
+      "canon": "amounts.paid",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_products_wt",
+      "canon": "amounts.subtotal",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_products",
+      "canon": "sourceExtension.prestashop.total_products",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_shipping_tax_incl",
+      "canon": "amounts.shipping",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_shipping",
+      "canon": "sourceExtension.prestashop.total_shipping",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_shipping_tax_incl",
+      "canon": "amounts.shippingTax",
+      "transform": "subtract",
+      "confidence": "verified-live",
+      "inputs": [
+        "total_shipping_tax_incl",
+        "total_shipping_tax_excl"
+      ]
+    },
+    {
+      "path": "carrier_tax_rate",
+      "canon": "sourceExtension.prestashop.carrier_tax_rate",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_paid_tax_incl",
+      "canon": "amounts.taxes",
+      "transform": "subtract",
+      "confidence": "verified-live",
+      "inputs": [
+        "total_paid_tax_incl",
+        "total_paid_tax_excl"
+      ]
+    },
+    {
+      "path": "total_discounts_tax_incl",
+      "canon": "amounts.discounts",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_discounts",
+      "canon": "sourceExtension.prestashop.total_discounts",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_discounts_tax_excl",
+      "canon": "sourceExtension.prestashop.total_discounts_tax_excl",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_wrapping_tax_incl",
+      "canon": "amounts.fees",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_wrapping_tax_incl",
+      "canon": "fees[]",
+      "transform": "object_map",
+      "args": {
+        "fromSource": true,
+        "require": [
+          "amount"
+        ],
+        "fields": {
+          "name": {
+            "value": "gift wrapping"
+          },
+          "amount": {
+            "path": "total_wrapping_tax_incl",
+            "as": "number",
+            "skipZero": true
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_wrapping",
+      "canon": "sourceExtension.prestashop.total_wrapping",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_wrapping_tax_excl",
+      "canon": "sourceExtension.prestashop.total_wrapping_tax_excl",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "reference",
+      "canon": "payments",
+      "transform": "lookup",
+      "args": {
+        "in": "order_payments",
+        "key": "order_reference",
+        "multiple": true,
+        "fields": {
+          "kind": {
+            "value": "sale"
+          },
+          "status": {
+            "value": "success"
+          },
+          "amount": {
+            "path": "amount",
+            "as": "number"
+          },
+          "method": "payment_method",
+          "providerRef": "transaction_id",
+          "at": {
+            "path": "date_add",
+            "as": "text"
+          },
+          "instrument.brand": "card_brand"
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "order_payments rows (by order_reference). card_number / card_expiration / card_holder never reach this entry (7.7); card_brand is a payment fact."
+    },
+    {
+      "path": "id_customer",
+      "canon": "customerRef.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_customer",
+      "canon": "customerRef.email",
+      "transform": "lookup",
+      "args": {
+        "in": "customers",
+        "key": "id",
+        "pick": "email"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_customer",
+      "canon": "customerRef.isGuest",
+      "transform": "lookup",
+      "args": {
+        "in": "customers",
+        "key": "id",
+        "pick": "is_guest",
+        "map": {
+          "0": false,
+          "1": true
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_address_invoice",
+      "canon": "billing",
+      "transform": "address_from",
+      "args": {
+        "lookup": {
+          "in": "addresses",
+          "key": "id"
+        },
+        "fields": {
+          "company": "company",
+          "address1": "address1",
+          "address2": "address2",
+          "city": "city",
+          "province": "id_state",
+          "provinceCode": "id_state",
+          "country": "id_country",
+          "zip": "postcode",
+          "phone": "phone",
+          "firstName": "firstname",
+          "lastName": "lastname",
+          "label": "alias",
+          "vatNumber": "vat_number",
+          "sourceId": "id"
+        },
+        "nameFrom": [
+          "firstname",
+          "lastname"
+        ],
+        "refs": {
+          "country": {
+            "in": "countries",
+            "key": "id",
+            "pick": "iso_code"
+          },
+          "province": {
+            "in": "states",
+            "key": "id",
+            "pick": "name"
+          },
+          "provinceCode": {
+            "in": "states",
+            "key": "id",
+            "pick": "iso_code"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_address_delivery",
+      "canon": "shipping_",
+      "transform": "address_from",
+      "args": {
+        "lookup": {
+          "in": "addresses",
+          "key": "id"
+        },
+        "fields": {
+          "company": "company",
+          "address1": "address1",
+          "address2": "address2",
+          "city": "city",
+          "province": "id_state",
+          "provinceCode": "id_state",
+          "country": "id_country",
+          "zip": "postcode",
+          "phone": "phone",
+          "firstName": "firstname",
+          "lastName": "lastname",
+          "label": "alias",
+          "vatNumber": "vat_number",
+          "sourceId": "id"
+        },
+        "nameFrom": [
+          "firstname",
+          "lastname"
+        ],
+        "refs": {
+          "country": {
+            "in": "countries",
+            "key": "id",
+            "pick": "iso_code"
+          },
+          "province": {
+            "in": "states",
+            "key": "id",
+            "pick": "name"
+          },
+          "provinceCode": {
+            "in": "states",
+            "key": "id",
+            "pick": "iso_code"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "shippingLines",
+      "transform": "lookup",
+      "args": {
+        "in": "order_carriers",
+        "key": "id_order",
+        "multiple": true,
+        "fields": {
+          "amount": {
+            "path": "shipping_cost_tax_incl",
+            "as": "number"
+          },
+          "trackingNumber": "tracking_number"
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "shipments",
+      "transform": "lookup",
+      "args": {
+        "in": "order_carriers",
+        "key": "id_order",
+        "multiple": true,
+        "require": [
+          "trackingNumber"
+        ],
+        "fields": {
+          "trackingNumber": "tracking_number",
+          "at": {
+            "path": "date_add",
+            "as": "text"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_carrier",
+      "canon": "sourceExtension.prestashop.carrier",
+      "transform": "lookup",
+      "args": {
+        "in": "carriers",
+        "key": "id",
+        "pick": "name"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shipping_number",
+      "canon": "sourceExtension.prestashop.shipping_number",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "note",
+      "canon": "note",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "gift_message",
+      "canon": "sourceExtension.prestashop.gift_message",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "gift",
+      "canon": "sourceExtension.prestashop.gift",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "recyclable",
+      "canon": "sourceExtension.prestashop.recyclable",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "mobile_theme",
+      "canon": "sourceExtension.prestashop.mobile_theme",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "date_add",
+      "canon": "timestamps.created",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "shop-local, no zone"
+    },
+    {
+      "path": "date_upd",
+      "canon": "timestamps.updated",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_lang",
+      "canon": "locale",
+      "transform": "lookup",
+      "args": {
+        "in": "languages",
+        "key": "id",
+        "pick": "iso_code"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_cart",
+      "canon": "sourceExtension.prestashop.id_cart",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_shop",
+      "canon": "sourceExtension.prestashop.id_shop",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id_shop_group",
+      "canon": "sourceExtension.prestashop.id_shop_group",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "round_mode",
+      "canon": "sourceExtension.prestashop.round_mode",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "round_type",
+      "canon": "sourceExtension.prestashop.round_type",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "associations",
+      "canon": "sourceExtension.prestashop.associations",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "product_name",
+      "canon": "items[].name + items[].options",
+      "transform": "split_name_options",
+      "confidence": "verified-live",
+      "scope": "item",
+      "notes": "\"Name - Color : White, Size : S\" → name + options[] (PrestaShop folds the combination into the line name)"
+    },
+    {
+      "path": "product_reference",
+      "canon": "items[].sku",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_quantity",
+      "canon": "items[].quantity",
+      "transform": "int",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "unit_price_tax_incl",
+      "canon": "items[].unitPrice",
+      "transform": "money",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "total_price_tax_incl",
+      "canon": "items[].total",
+      "transform": "money",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "total_price_tax_incl",
+      "canon": "items[].totalTax",
+      "transform": "subtract",
+      "confidence": "verified-live",
+      "scope": "item",
+      "inputs": [
+        "total_price_tax_incl",
+        "total_price_tax_excl"
+      ]
+    },
+    {
+      "path": "original_product_price",
+      "canon": "items[].unitPriceBeforeDiscount",
+      "transform": "money_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "reduction_amount_tax_incl",
+      "canon": "items[].discount",
+      "transform": "money_nonzero",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_ean13",
+      "canon": "items[].identifiers.ean",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_isbn",
+      "canon": "items[].identifiers.isbn",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_upc",
+      "canon": "items[].identifiers.upc",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_mpn",
+      "canon": "items[].identifiers.mpn",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_id",
+      "canon": "items[].productRef",
+      "transform": "string_id",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_attribute_id",
+      "canon": "items[].variantRef",
+      "transform": "id_or_none",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_weight",
+      "canon": "items[].weightGrams",
+      "transform": "weight_to_grams",
+      "args": {
+        "unit": "kg"
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_quantity_refunded",
+      "canon": "items[].refunded.quantity",
+      "transform": "int_or_null",
+      "args": {
+        "nullWhen": 0
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "total_refunded_tax_incl",
+      "canon": "items[].refunded.amount",
+      "transform": "money_nonzero",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "id",
+      "canon": "items[].kind",
+      "transform": "constant",
+      "args": {
+        "value": "product"
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "id",
+      "canon": "sourceExtension.prestashop.line_id",
+      "transform": "string_id",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_price",
+      "canon": "sourceExtension.prestashop.product_price",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "unit_price_tax_excl",
+      "canon": "sourceExtension.prestashop.unit_price_tax_excl",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "total_price_tax_excl",
+      "canon": "sourceExtension.prestashop.total_price_tax_excl",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_supplier_reference",
+      "canon": "sourceExtension.prestashop.product_supplier_reference",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "reduction_percent",
+      "canon": "sourceExtension.prestashop.reduction_percent",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "reduction_amount",
+      "canon": "sourceExtension.prestashop.reduction_amount",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "reduction_amount_tax_excl",
+      "canon": "sourceExtension.prestashop.reduction_amount_tax_excl",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_quantity_discount",
+      "canon": "sourceExtension.prestashop.product_quantity_discount",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "group_reduction",
+      "canon": "sourceExtension.prestashop.group_reduction",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "discount_quantity_applied",
+      "canon": "sourceExtension.prestashop.discount_quantity_applied",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_quantity_in_stock",
+      "canon": "sourceExtension.prestashop.product_quantity_in_stock",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_quantity_return",
+      "canon": "sourceExtension.prestashop.product_quantity_return",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_quantity_reinjected",
+      "canon": "sourceExtension.prestashop.product_quantity_reinjected",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "tax_computation_method",
+      "canon": "sourceExtension.prestashop.tax_computation_method",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "id_tax_rules_group",
+      "canon": "sourceExtension.prestashop.id_tax_rules_group",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "ecotax",
+      "canon": "sourceExtension.prestashop.ecotax",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "ecotax_tax_rate",
+      "canon": "sourceExtension.prestashop.ecotax_tax_rate",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "total_shipping_price_tax_excl",
+      "canon": "sourceExtension.prestashop.total_shipping_price_tax_excl",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "total_shipping_price_tax_incl",
+      "canon": "sourceExtension.prestashop.total_shipping_price_tax_incl",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "purchase_supplier_price",
+      "canon": "sourceExtension.prestashop.purchase_supplier_price",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "original_wholesale_price",
+      "canon": "sourceExtension.prestashop.original_wholesale_price",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "total_refunded_tax_excl",
+      "canon": "sourceExtension.prestashop.total_refunded_tax_excl",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "id_order_invoice",
+      "canon": "sourceExtension.prestashop.id_order_invoice",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "id_warehouse",
+      "canon": "sourceExtension.prestashop.id_warehouse",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "id_shop",
+      "canon": "sourceExtension.prestashop.id_shop",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "id_customization",
+      "canon": "sourceExtension.prestashop.id_customization",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "download_nb",
+      "canon": "sourceExtension.prestashop.download_nb",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "download_deadline",
+      "canon": "sourceExtension.prestashop.download_deadline",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "id_order",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "download_hash",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "download token — never carried",
+      "scope": "item"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "sourceFormat": "bigcommerce_customers",
+  "targetFormat": "woo_customers",
+  "counts": {
+    "inputUnits": 2,
+    "outputUnits": 2,
+    "failedUnits": 0,
+    "outputRows": 2
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_pw_generic"
+    },
+    {
+      "code": "loss_woo_marketing_consent",
+      "params": {
+        "customers": 2,
+        "explicit": 1,
+        "timestamped": 0,
+        "pending": 1
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false,
+  "consentReport": {
+    "customers": 2,
+    "explicitSourceConsent": 1,
+    "withTimestamp": 0,
+    "pending": 1,
+    "optedOut": 1,
+    "unknown": 0,
+    "targetPolicy": "not-subscribed",
+    "requiresReconfirmation": true
+  }
+}

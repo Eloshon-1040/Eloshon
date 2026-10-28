@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "sourceFormat": "scraper.eloshon-export.v1",
+  "targetFormat": "wix_products",
+  "counts": {
+    "inputUnits": 15,
+    "outputUnits": 15,
+    "failedUnits": 0,
+    "outputRows": 30
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_wix_option_type"
+    },
+    {
+      "code": "loss_wix_category_hierarchy",
+      "params": {
+        "count": 15
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "code": "dedupe_handles",
+      "params": {
+        "handle": "daisy-128h8v"
+      }
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

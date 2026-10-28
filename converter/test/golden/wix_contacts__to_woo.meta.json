@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "sourceFormat": "wix.contacts.v4.v1",
+  "targetFormat": "woo_customers",
+  "counts": {
+    "inputUnits": 1,
+    "outputUnits": 1,
+    "failedUnits": 0,
+    "outputRows": 1
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_pw_generic"
+    },
+    {
+      "code": "loss_woo_marketing_consent",
+      "params": {
+        "customers": 1,
+        "explicit": 1,
+        "timestamped": 0,
+        "pending": 1
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false,
+  "consentReport": {
+    "customers": 1,
+    "explicitSourceConsent": 1,
+    "withTimestamp": 0,
+    "pending": 1,
+    "optedOut": 0,
+    "unknown": 0,
+    "targetPolicy": "not-subscribed",
+    "requiresReconfirmation": true
+  }
+}

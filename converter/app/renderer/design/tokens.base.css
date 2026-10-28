@@ -1,0 +1,111 @@
+/* Eloshon design tokens: shared base (Converter and Scraper).
+ * Source of truth: .interface-design/system.md. Every token value lives in shared/design/ and nowhere else;
+ * an app's app.css only uses them. App files: tokens.converter.css, tokens.scraper.css (accent and chrome).
+ *
+ * Theme: set data-theme="light" | "dark" | "system" on <html>. Colors are written once with light-dark(),
+ * resolved by color-scheme, so "system" follows Windows without a second copy of the dark values.
+ * Loading: the Scraper renderer links shared/design/ directly (packaged with shared/**); the Converter ships
+ * a committed copy in converter/app/renderer/design/ (scripts/sync-design.mjs), guarded by
+ * converter/test/design-sync.test.mjs.
+ *
+ * Fonts: Inter and JetBrains Mono, variable woff2, Latin + Latin Extended subsets, OFL (fonts/OFL-*.txt),
+ * from @fontsource-variable/inter and @fontsource-variable/jetbrains-mono 5.3.0. */
+
+@font-face { font-family: 'Inter Variable'; font-style: normal; font-display: swap; font-weight: 100 900;
+  src: url(fonts/inter-latin-ext-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: 'Inter Variable'; font-style: normal; font-display: swap; font-weight: 100 900;
+  src: url(fonts/inter-latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'JetBrains Mono Variable'; font-style: normal; font-display: swap; font-weight: 100 800;
+  src: url(fonts/jetbrains-mono-latin-ext-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: 'JetBrains Mono Variable'; font-style: normal; font-display: swap; font-weight: 100 800;
+  src: url(fonts/jetbrains-mono-latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+
+/* ---- Theme selection: on <html> only (a control carrying data-theme, such as a theme button, must not switch itself) ---- */
+:root, :root[data-theme="system"] { color-scheme: light dark; }
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
+
+:root {
+  /* Neutrals: light-dark(light, dark) */
+  --canvas: light-dark(#EEF0F3, #0F1013);
+  --surface: light-dark(#FFFFFF, #17191E);
+  --sunken: light-dark(#F6F7F9, #121418);
+  --row-hover: light-dark(#F3F5F8, #1C1F25);
+  --ink: light-dark(#16181D, #E8EAEE);
+  --ink-2: light-dark(#454A54, #C1C6CF);
+  --muted: light-dark(#5C6370, #959CA8);
+  --disabled: light-dark(#8A8F98, #646B76);
+  --line: light-dark(#E1E4E9, #2A2E35);
+  --line-subtle: light-dark(#EDEFF2, #22252B);
+  --line-strong: light-dark(#C9CED6, #3A3F48);
+  --line-control: light-dark(#848B96, #6B7380);
+  --scrim: light-dark(rgba(10, 12, 16, .48), rgba(0, 0, 0, .6));
+  --window-close: #C42B1C; /* Windows convention: red hover of the window close button */
+
+  /* States: distinct from the accent, always with a word and an icon */
+  --ok: light-dark(#157A4C, #4DC48C);
+  --ok-bg: light-dark(#E9F6EF, #15291F);
+  --warn: light-dark(#704F00, #F0C75E);
+  --warn-bg: light-dark(#FBF3E2, #2C2410);
+  --danger: light-dark(#B42318, #F27D73);
+  --danger-bg: light-dark(#FCEBEA, #301A19);
+  --neutral: light-dark(#454A54, #C1C6CF);
+  --neutral-bg: light-dark(#EEF0F3, #22252B);
+
+  /* Type: 13 px base, ratio 1.2 */
+  --font-ui: 'Inter Variable', sans-serif;
+  --font-mono: 'JetBrains Mono Variable', monospace;
+  --t-display: 600 27px/32px var(--font-ui);
+  --t-page: 600 22px/28px var(--font-ui);
+  --t-section: 600 19px/24px var(--font-ui);
+  --t-sub: 600 16px/24px var(--font-ui);
+  --t-body: 400 13px/20px var(--font-ui);
+  --t-label: 500 13px/20px var(--font-ui);
+  --t-value: 400 12px/20px var(--font-mono);
+  --t-caption: 500 11px/16px var(--font-ui);
+  --t-th: 600 11px/16px var(--font-ui);
+
+  /* Spacing (4 px grid), density, radii */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 20px; --s-6: 24px; --s-8: 32px; --s-10: 40px; --s-12: 48px;
+  --row: 36px; --row-head: 32px; --row-map: 56px;
+  --r-sm: 4px; --r-md: 6px; --r-lg: 8px;
+
+  /* Focus (color comes from the app file: --focus) */
+  --focus-width: 2px; --focus-offset: 2px;
+
+  /* Status chips */
+  --chip-h: 20px; --chip-px: 6px; --chip-icon: 12px; --chip-font: 600 11px/16px var(--font-ui);
+
+  /* Motion */
+  --ease: cubic-bezier(.23, 1, .32, 1);
+  --dur-press: 100ms; --dur-hover: 120ms; --dur-pop: 160ms;
+}
+
+/* ---- Shared primitives (identical in both apps) ---- */
+:focus-visible { outline: var(--focus-width) solid var(--focus); outline-offset: var(--focus-offset); }
+
+/* Status chip: <span class="status-chip" data-tone="ok|warn|danger|neutral" data-shape="settled|attention|uncertain|paused">
+ *   <svg class="moving">…</svg><svg class="still">…</svg>Word</span>
+ * Shapes: settled = outline; attention = tinted fill + outline; uncertain = tinted fill + dashed outline;
+ * paused = neutral tinted fill, no outline. Never color alone: every chip has an icon and a word. */
+.status-chip { display: inline-flex; align-items: center; gap: 4px; height: var(--chip-h); padding: 0 var(--chip-px);
+  border: 1px solid currentColor; border-radius: var(--r-sm); font: var(--chip-font); white-space: nowrap; }
+.status-chip svg { width: var(--chip-icon); height: var(--chip-icon); flex: none; }
+.status-chip[data-tone="ok"] { color: var(--ok); --chip-bg: var(--ok-bg); }
+.status-chip[data-tone="warn"] { color: var(--warn); --chip-bg: var(--warn-bg); }
+.status-chip[data-tone="danger"] { color: var(--danger); --chip-bg: var(--danger-bg); }
+.status-chip[data-tone="neutral"] { color: var(--neutral); --chip-bg: var(--neutral-bg); }
+.status-chip[data-shape="attention"] { background: var(--chip-bg); }
+.status-chip[data-shape="uncertain"] { background: var(--chip-bg); border-style: dashed; }
+.status-chip[data-shape="paused"] { background: var(--chip-bg); border-color: transparent; }
+.status-chip .still { display: none; }
+.status-chip .moving { animation: status-spin 1s linear infinite; }
+@keyframes status-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .status-chip .moving { display: none; animation: none; }
+  .status-chip .still { display: inline; }
+}

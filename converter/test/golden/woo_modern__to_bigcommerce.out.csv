@@ -1,0 +1,9 @@
+Item,Name,Type,SKU,Options,Inventory Tracking,Current Stock,Price,Sale Price,Description,Product URL,Free Shipping,Weight,Width,Depth,Is Visible,Product Condition,Show Product Condition,Image URL (Import),Image is Thumbnail,Image Sort Order
+Product,Pull côtelé,physical,,,variant,,79.00,59.00,<p>Pull chaud.</p>,/PULL-COT/,FALSE,0.6,,,TRUE,New,FALSE,,,
+Variant,,,PULL-COT-NOIR,Type=Dropdown|Name=Couleur|Value=Noir,,8,79.00,59.00,,,,0.6,,,,,,,,
+Variant,,,PULL-COT-ECRU,Type=Dropdown|Name=Couleur|Value=Écru,,3,79.00,,,,,0.6,,,,,,,,
+Image,,,,,,,,,,,,,,,,,,https://cdn.example.com/pull-1.jpg,TRUE,0
+Image,,,,,,,,,,,,,,,,,,https://cdn.example.com/pull-2.jpg,FALSE,1
+Product,Ceinture cuir — Tan,physical,CEINTURE-TAN,,product,31,65.00,49.00,<p>Cuir pleine fleur.</p>,/CEINTURE-TAN/,FALSE,0.2,4,110,TRUE,New,FALSE,,,
+Image,,,,,,,,,,,,,,,,,,https://cdn.example.com/ceinture.jpg,TRUE,0
+Product,Écharpe alpaga,physical,ECHARPE-01,,none,,,,,/ECHARPE-01/,FALSE,,,,FALSE,New,FALSE,,,

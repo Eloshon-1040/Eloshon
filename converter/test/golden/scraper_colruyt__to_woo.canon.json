@@ -1,0 +1,827 @@
+[
+  {
+    "handle": "pepersalami-halal-rzczr",
+    "title": "Pepersalami Halal",
+    "bodyHtml": "Marhaba Pepersalami Halal",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": null,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 100,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://static.colruytgroup.com/images/500x500/std.lang.all/77/62/asset-3587762.jpg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://static.colruytgroup.com/images/500x500/std.lang.all/77/62/asset-3587762.jpg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "0.1",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://static.colruytgroup.com/images/500x500/std.lang.all/77/62/asset-3587762.jpg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "pepersalami-halal-rzczr",
+      "sourceId": "19164"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Pepersalami Halal",
+        "slug_en": "pepersalami-halal-rzczr",
+        "description_en": "Marhaba Pepersalami Halal",
+        "source_url": "https://www.colruyt.be/nl/producten/19164",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "COL",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Pepersalami Halal",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "pepersalami-halal-rzczr",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Marhaba Pepersalami Halal",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Pepersalami Halal",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "pepersalami-halal-rzczr",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "pepersalami-halal-rzczr",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Marhaba Pepersalami Halal",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "19164",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://static.colruytgroup.com/images/500x500/std.lang.all/77/62/asset-3587762.jpg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "vanille-ijs-t141f",
+    "title": "Vanille ijs",
+    "bodyHtml": "Everyday Vanille ijs",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": null,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://static.colruytgroup.com/images/500x500/std.lang.all/53/03/asset-625303.jpg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://static.colruytgroup.com/images/500x500/std.lang.all/53/03/asset-625303.jpg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://static.colruytgroup.com/images/500x500/std.lang.all/53/03/asset-625303.jpg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "vanille-ijs-t141f",
+      "sourceId": "36501"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Vanille ijs",
+        "slug_en": "vanille-ijs-t141f",
+        "description_en": "Everyday Vanille ijs",
+        "source_url": "https://www.colruyt.be/nl/producten/36501",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "COL",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Vanille ijs",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "vanille-ijs-t141f",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Everyday Vanille ijs",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Vanille ijs",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "vanille-ijs-t141f",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "vanille-ijs-t141f",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Everyday Vanille ijs",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "36501",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://static.colruytgroup.com/images/500x500/std.lang.all/53/03/asset-625303.jpg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "noveenkaars-sint-rita-qxb70d",
+    "title": "Noveenkaars Sint Rita",
+    "bodyHtml": "Altijd voor de laagste prijs. Bekijk alle productinformatie, promo’s én de huidige prijzen in je winkel. Voeg meteen toe aan je lijstje.",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": null,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://static.colruytgroup.com/images/500x500/std.lang.all/61/42/asset-396142.jpg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://static.colruytgroup.com/images/500x500/std.lang.all/61/42/asset-396142.jpg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://static.colruytgroup.com/images/500x500/std.lang.all/61/42/asset-396142.jpg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "noveenkaars-sint-rita-qxb70d",
+      "sourceId": "789445"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Noveenkaars Sint Rita",
+        "slug_en": "noveenkaars-sint-rita-qxb70d",
+        "description_en": "Altijd voor de laagste prijs. Bekijk alle productinformatie, promo’s én de huidige prijzen in je winkel. Voeg meteen toe aan je lijstje.",
+        "source_url": "https://www.colruyt.be/nl/producten/789445",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "COL",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Noveenkaars Sint Rita",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "noveenkaars-sint-rita-qxb70d",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Altijd voor de laagste prijs. Bekijk alle productinformatie, promo’s én de huidige prijzen in je winkel. Voeg meteen toe aan je lijstje.",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Noveenkaars Sint Rita",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "noveenkaars-sint-rita-qxb70d",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "noveenkaars-sint-rita-qxb70d",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Altijd voor de laagste prijs. Bekijk alle productinformatie, promo’s én de huidige prijzen in je winkel. Voeg meteen toe aan je lijstje.",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "789445",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://static.colruytgroup.com/images/500x500/std.lang.all/61/42/asset-396142.jpg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "cocktailworstjes-halal-rzdo0",
+    "title": "Cocktailworstjes Halal",
+    "bodyHtml": "Marhaba Cocktailworstjes Halal",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": null,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": 400,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://static.colruytgroup.com/images/500x500/std.lang.all/77/63/asset-3587763.jpg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://static.colruytgroup.com/images/500x500/std.lang.all/77/63/asset-3587763.jpg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "0.4",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://static.colruytgroup.com/images/500x500/std.lang.all/77/63/asset-3587763.jpg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "cocktailworstjes-halal-rzdo0",
+      "sourceId": "19239"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Cocktailworstjes Halal",
+        "slug_en": "cocktailworstjes-halal-rzdo0",
+        "description_en": "Marhaba Cocktailworstjes Halal",
+        "source_url": "https://www.colruyt.be/nl/producten/19239",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "COL",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Cocktailworstjes Halal",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "cocktailworstjes-halal-rzdo0",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Marhaba Cocktailworstjes Halal",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Cocktailworstjes Halal",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "cocktailworstjes-halal-rzdo0",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "cocktailworstjes-halal-rzdo0",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Marhaba Cocktailworstjes Halal",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "19239",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://static.colruytgroup.com/images/500x500/std.lang.all/77/63/asset-3587763.jpg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "neusspray-qg898d",
+    "title": "Neusspray",
+    "bodyHtml": "Mercurochrome Neusspray",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": null,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://static.colruytgroup.com/images/500x500/std.lang.all/26/36/asset-362636.jpg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://static.colruytgroup.com/images/500x500/std.lang.all/26/36/asset-362636.jpg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://static.colruytgroup.com/images/500x500/std.lang.all/26/36/asset-362636.jpg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "neusspray-qg898d",
+      "sourceId": "687277"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Neusspray",
+        "slug_en": "neusspray-qg898d",
+        "description_en": "Mercurochrome Neusspray",
+        "source_url": "https://www.colruyt.be/nl/producten/687277",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "COL",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Neusspray",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "neusspray-qg898d",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Mercurochrome Neusspray",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Neusspray",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "neusspray-qg898d",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "neusspray-qg898d",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Mercurochrome Neusspray",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "687277",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://static.colruytgroup.com/images/500x500/std.lang.all/26/36/asset-362636.jpg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  }
+]

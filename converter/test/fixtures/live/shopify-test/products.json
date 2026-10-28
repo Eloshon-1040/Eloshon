@@ -1,0 +1,2727 @@
+[
+  {
+    "id": "gid://shopify/Product/10480230990157",
+    "legacyResourceId": "10480230990157",
+    "handle": "ac-infinity-ciseaux-secateur-droit",
+    "title": "AC Infinity - ciseaux/sécateur droit en acier inoxydable 16,8cm",
+    "descriptionHtml": "<h2><span style=\"text-decoration: underline;\">Caractéristiques du ciseaux droit</span></h2>\n<p>Le ciseaux droit AC Infinity est conçu pour défolier petites plantes et fleurs afin d'améliorer leur processus de croissance. Idéal pour tailler des fleurs, des herbes, des bonsaïs, des légumes ou d'autres plantes. Ses lames à micro-pointes vous permettent de faire des coupes de précision même dans les plus petits espaces et resteront affûtées. Utilisez-le dans n'importe quel environnement de culture comme les jardins extérieurs, les constructions hydroponiques, les tentes de culture et les serres.</p>\n<ul>\n<li>Longueur: 16,8cm</li>\n<li>Matière: acier inoxydable</li>\n<li>Angle d'ouverture max: 10°</li>\n<li>Finition: Revêtement antiadhésif en téflon</li>\n<li>Poignée: Gel de silicone</li>\n</ul>",
+    "vendor": "AC Infinity",
+    "productType": "sécateur",
+    "tags": [
+      "ac infinity",
+      "ciseaux",
+      "défoliation",
+      "récolte",
+      "sécateur"
+    ],
+    "status": "ACTIVE",
+    "createdAt": "2026-01-06T20:50:50Z",
+    "updatedAt": "2026-01-07T08:51:04Z",
+    "publishedAt": "2026-01-06T20:50:50Z",
+    "templateSuffix": null,
+    "onlineStoreUrl": null,
+    "onlineStorePreviewUrl": "https://example-store.myshopify.com/products/ac-infinity-ciseaux-secateur-droit",
+    "isGiftCard": false,
+    "requiresSellingPlan": false,
+    "hasOnlyDefaultVariant": true,
+    "hasOutOfStockVariants": true,
+    "hasVariantsThatRequiresComponents": false,
+    "totalInventory": 0,
+    "tracksInventory": true,
+    "combinedListingRole": null,
+    "category": {
+      "id": "gid://shopify/TaxonomyCategory/hg-12-1-7-9",
+      "name": "Sécateurs",
+      "fullName": "Maison et jardin > Pelouses et jardins > Jardinage > Outils de jardinage > Sécateurs",
+      "isLeaf": true,
+      "isRoot": false
+    },
+    "seo": {
+      "title": "Ciseaux/sécateur droit en acier inoxydable AC Infinity",
+      "description": "Découvrez ce ciseaux pour défoliation de la marque AC Infinity,. Avec sa lame droite en acier inoxydable, il permet de défolier vos plantes sans difficulté."
+    },
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "15.5",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "15.5",
+        "currencyCode": "EUR"
+      }
+    },
+    "compareAtPriceRange": {
+      "minVariantCompareAtPrice": {
+        "amount": "19.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantCompareAtPrice": {
+        "amount": "19.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "options": [
+      {
+        "id": "gid://shopify/ProductOption/13161846636877",
+        "name": "Title",
+        "position": 1,
+        "values": [
+          "Default Title"
+        ],
+        "optionValues": [
+          {
+            "id": "gid://shopify/ProductOptionValue/6957387022669",
+            "name": "Default Title",
+            "hasVariants": true
+          }
+        ]
+      }
+    ],
+    "media": {
+      "nodes": [
+        {
+          "id": "gid://shopify/MediaImage/59361453834573",
+          "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+          "mediaContentType": "IMAGE",
+          "status": "READY",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-en-acier-ac-infinity-defoliation-recolte.jpg?v=1767732654",
+            "width": 1200,
+            "height": 1200
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/59361453867341",
+          "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+          "mediaContentType": "IMAGE",
+          "status": "READY",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-de-jardinage-en-acier-ac-infinity-defoliation-recolte_2.jpg?v=1767732653",
+            "width": 1200,
+            "height": 1200
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/59361453900109",
+          "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+          "mediaContentType": "IMAGE",
+          "status": "READY",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-de-jardinage-en-acier-ac-infinity-defoliation-recolte.jpg?v=1767732653",
+            "width": 1200,
+            "height": 1200
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/59361453932877",
+          "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+          "mediaContentType": "IMAGE",
+          "status": "READY",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-de-jardinage-en-acier-ac-infinity-defoliation-recolte_3.jpg?v=1767732653",
+            "width": 1200,
+            "height": 1200
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/59361453965645",
+          "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+          "mediaContentType": "IMAGE",
+          "status": "READY",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-de-jardinage-en-acier-ac-infinity-defoliation-recolte_4.jpg?v=1767732653",
+            "width": 1200,
+            "height": 1200
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/59361453998413",
+          "alt": "AC Infinity ciseaux sécateur en acier inoxydable droit 16,8cm",
+          "mediaContentType": "IMAGE",
+          "status": "READY",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/ciseaux-de-jardinage-en-acier-ac-infinity-defoliation-recolte_5.jpg?v=1767732654",
+            "width": 1200,
+            "height": 1200
+          }
+        }
+      ]
+    },
+    "collections": {
+      "nodes": [
+        {
+          "id": "gid://shopify/Collection/653181321549",
+          "handle": "ventes-flash",
+          "title": "Ventes Flash",
+          "ruleSet": {
+            "appliedDisjunctively": false,
+            "rules": [
+              {
+                "column": "IS_PRICE_REDUCED",
+                "relation": "IS_SET",
+                "condition": ""
+              },
+              {
+                "column": "VARIANT_PRICE",
+                "relation": "GREATER_THAN",
+                "condition": "0"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "id": "gid://shopify/Metafield/55525759779149",
+          "namespace": "global",
+          "key": "title_tag",
+          "type": "string",
+          "value": "Ciseaux/sécateur droit en acier inoxydable AC Infinity"
+        },
+        {
+          "id": "gid://shopify/Metafield/55525759811917",
+          "namespace": "global",
+          "key": "description_tag",
+          "type": "string",
+          "value": "Découvrez ce ciseaux pour défoliation de la marque AC Infinity,. Avec sa lame droite en acier inoxydable, il permet de défolier vos plantes sans difficulté."
+        },
+        {
+          "id": "gid://shopify/Metafield/55525759877453",
+          "namespace": "mm-google-shopping",
+          "key": "google_product_category",
+          "type": "string",
+          "value": "Home & Garden > Lawn & Garden > Gardening > Gardening Tools > Pruning Shears"
+        },
+        {
+          "id": "gid://shopify/Metafield/55525759910221",
+          "namespace": "mm-google-shopping",
+          "key": "condition",
+          "type": "string",
+          "value": "new"
+        },
+        {
+          "id": "gid://shopify/Metafield/55525759942989",
+          "namespace": "mm-google-shopping",
+          "key": "custom_product",
+          "type": "boolean",
+          "value": "true"
+        }
+      ]
+    },
+    "bundleComponents": {
+      "nodes": []
+    },
+    "resourcePublicationsV2": {
+      "nodes": [
+        {
+          "isPublished": true,
+          "publication": {
+            "id": "gid://shopify/Publication/312549212493",
+            "name": "Boutique en ligne",
+            "catalog": {
+              "id": "gid://shopify/AppCatalog/154778960205",
+              "title": "Channel Catalog 312549212493 for Online Store"
+            }
+          },
+          "publishDate": "2026-01-06T20:50:50Z"
+        }
+      ]
+    },
+    "translations": [],
+    "variants": {
+      "nodes": [
+        {
+          "id": "gid://shopify/ProductVariant/53133007651149",
+          "legacyResourceId": "53133007651149",
+          "title": "Default Title",
+          "sku": "AC-PSA3",
+          "barcode": "819137021495",
+          "price": "15.50",
+          "compareAtPrice": "19.00",
+          "position": 1,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:50:50Z",
+          "updatedAt": "2026-01-06T20:50:50Z",
+          "displayName": "AC Infinity - ciseaux/sécateur droit en acier inoxydable 16,8cm - Default Title",
+          "selectedOptions": [
+            {
+              "name": "Title",
+              "value": "Default Title",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957387022669",
+                "name": "Default Title"
+              }
+            }
+          ],
+          "image": null,
+          "media": {
+            "nodes": []
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160668356941",
+            "sku": "AC-PSA3",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 150,
+                "unit": "GRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        }
+      ]
+    }
+  },
+  {
+    "id": "gid://shopify/Product/10480183181645",
+    "legacyResourceId": "10480183181645",
+    "handle": "qnubu-sac-a-presse-de-11x11cm-10pcs",
+    "title": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs",
+    "descriptionHtml": "<h2><span style=\"text-decoration: underline;\">Caractéristiques des Sacs à Presse Rosin Qnubu</span></h2>\n<p>Les <strong>sacs à presse Qnubu</strong> sont spécialement conçus pour l’extraction à chaud de matières végétales. Disponibles en <strong>2 formats</strong> pratiques – 5x11 cm et 11x11 cm – ils conviennent aussi bien aux petites qu’aux grandes quantités d’extraction.</p>\n<p>Chaque modèle est proposé en <strong>5 tailles de maille</strong> : <em>25μ, 37μ, 90μ, 120μ et 160μ</em>, offrant une filtration adaptée selon le type de matière et le niveau de pureté souhaité. Plus le micronage est fin, plus l’extraction est filtrée.</p>\n<h3>Atouts des Sacs Qnubu :</h3>\n<ul>\n<li>Compatibles avec toutes les presses à chaud rosin</li>\n<li>Fabrication résistante à haute température</li>\n<li>Filtration homogène pour une extraction propre</li>\n<li>Réduction des impuretés et meilleure qualité finale</li>\n</ul>",
+    "vendor": "Qnubu",
+    "productType": "sac à presse",
+    "tags": [
+      "extraction",
+      "presse",
+      "Presse Bolt Manuelle",
+      "PRESSE HYDRAULIQUE",
+      "qnubu",
+      "récolte",
+      "sac à presse"
+    ],
+    "status": "ACTIVE",
+    "createdAt": "2026-01-06T20:35:18Z",
+    "updatedAt": "2026-01-07T08:35:42Z",
+    "publishedAt": "2026-01-06T20:35:18Z",
+    "templateSuffix": null,
+    "onlineStoreUrl": null,
+    "onlineStorePreviewUrl": "https://example-store.myshopify.com/products/qnubu-sac-a-presse-de-11x11cm-10pcs",
+    "isGiftCard": false,
+    "requiresSellingPlan": false,
+    "hasOnlyDefaultVariant": false,
+    "hasOutOfStockVariants": true,
+    "hasVariantsThatRequiresComponents": false,
+    "totalInventory": 0,
+    "tracksInventory": true,
+    "combinedListingRole": null,
+    "category": {
+      "id": "gid://shopify/TaxonomyCategory/hg-17-4",
+      "name": "Kits de plantation",
+      "fullName": "Maison et jardin > Plantes > Kits de plantation",
+      "isLeaf": false,
+      "isRoot": false
+    },
+    "seo": {
+      "title": "Sacs à presse Qnubu pour extraction – 5 à 11 cm",
+      "description": "Sacs Qnubu en 5 tailles de maille, résistants et précis pour extractions végétales. Formats 5x11 et 11x11 cm, compatibles avec les presses à chaud."
+    },
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "9.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "13.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "compareAtPriceRange": null,
+    "options": [
+      {
+        "id": "gid://shopify/ProductOption/13161792307533",
+        "name": "Taille",
+        "position": 1,
+        "values": [
+          "11x5cm",
+          "11x11cm"
+        ],
+        "optionValues": [
+          {
+            "id": "gid://shopify/ProductOptionValue/6957147586893",
+            "name": "11x5cm",
+            "hasVariants": true
+          },
+          {
+            "id": "gid://shopify/ProductOptionValue/6957147619661",
+            "name": "11x11cm",
+            "hasVariants": true
+          }
+        ]
+      },
+      {
+        "id": "gid://shopify/ProductOption/13161792340301",
+        "name": "Taille des mailles",
+        "position": 2,
+        "values": [
+          "15 microns",
+          "25 microns",
+          "37 microns",
+          "70 microns",
+          "90 microns",
+          "120 microns",
+          "160 microns"
+        ],
+        "optionValues": [
+          {
+            "id": "gid://shopify/ProductOptionValue/6957147652429",
+            "name": "15 microns",
+            "hasVariants": true
+          },
+          {
+            "id": "gid://shopify/ProductOptionValue/6957147685197",
+            "name": "25 microns",
+            "hasVariants": true
+          },
+          {
+            "id": "gid://shopify/ProductOptionValue/6957147717965",
+            "name": "37 microns",
+            "hasVariants": true
+          },
+          {
+            "id": "gid://shopify/ProductOptionValue/6957147750733",
+            "name": "70 microns",
+            "hasVariants": true
+          },
+          {
+            "id": "gid://shopify/ProductOptionValue/6957147783501",
+            "name": "90 microns",
+            "hasVariants": true
+          },
+          {
+            "id": "gid://shopify/ProductOptionValue/6957147816269",
+            "name": "120 microns",
+            "hasVariants": true
+          },
+          {
+            "id": "gid://shopify/ProductOptionValue/6957147849037",
+            "name": "160 microns",
+            "hasVariants": true
+          }
+        ]
+      }
+    ],
+    "media": {
+      "nodes": [
+        {
+          "id": "gid://shopify/MediaImage/59361105510733",
+          "alt": "Les sacs pour presses Qnubu, compatible avec les presse à chaud",
+          "mediaContentType": "IMAGE",
+          "status": "READY",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "width": 1200,
+            "height": 1200
+          }
+        }
+      ]
+    },
+    "collections": {
+      "nodes": []
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "id": "gid://shopify/Metafield/55525547016525",
+          "namespace": "global",
+          "key": "title_tag",
+          "type": "string",
+          "value": "Sacs à presse Qnubu pour extraction – 5 à 11 cm"
+        },
+        {
+          "id": "gid://shopify/Metafield/55525547049293",
+          "namespace": "global",
+          "key": "description_tag",
+          "type": "string",
+          "value": "Sacs Qnubu en 5 tailles de maille, résistants et précis pour extractions végétales. Formats 5x11 et 11x11 cm, compatibles avec les presses à chaud."
+        }
+      ]
+    },
+    "bundleComponents": {
+      "nodes": []
+    },
+    "resourcePublicationsV2": {
+      "nodes": [
+        {
+          "isPublished": true,
+          "publication": {
+            "id": "gid://shopify/Publication/312549212493",
+            "name": "Boutique en ligne",
+            "catalog": {
+              "id": "gid://shopify/AppCatalog/154778960205",
+              "title": "Channel Catalog 312549212493 for Online Store"
+            }
+          },
+          "publishDate": "2026-01-06T20:35:18Z"
+        }
+      ]
+    },
+    "translations": [],
+    "variants": {
+      "nodes": [
+        {
+          "id": "gid://shopify/ProductVariant/53132760613197",
+          "legacyResourceId": "53132760613197",
+          "title": "11x5cm / 15 microns",
+          "sku": "Qnubu-Sacs-à-Presse-1",
+          "barcode": "",
+          "price": "9.00",
+          "compareAtPrice": null,
+          "position": 1,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:35:18Z",
+          "updatedAt": "2026-01-06T20:35:18Z",
+          "displayName": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs - 11x5cm / 15 microns",
+          "selectedOptions": [
+            {
+              "name": "Taille",
+              "value": "11x5cm",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147586893",
+                "name": "11x5cm"
+              }
+            },
+            {
+              "name": "Taille des mailles",
+              "value": "15 microns",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147652429",
+                "name": "15 microns"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78950094209357",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Les sacs pour presses Qnubu, compatible avec les presse à chaud"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361105510733",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160420925773",
+            "sku": "Qnubu-Sacs-à-Presse-1",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 50,
+                "unit": "GRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132760645965",
+          "legacyResourceId": "53132760645965",
+          "title": "11x5cm / 25 microns",
+          "sku": "Qnubu-Sacs-à-Presse-2",
+          "barcode": "",
+          "price": "9.00",
+          "compareAtPrice": null,
+          "position": 2,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:35:18Z",
+          "updatedAt": "2026-01-06T20:35:18Z",
+          "displayName": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs - 11x5cm / 25 microns",
+          "selectedOptions": [
+            {
+              "name": "Taille",
+              "value": "11x5cm",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147586893",
+                "name": "11x5cm"
+              }
+            },
+            {
+              "name": "Taille des mailles",
+              "value": "25 microns",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147685197",
+                "name": "25 microns"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78950094209357",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Les sacs pour presses Qnubu, compatible avec les presse à chaud"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361105510733",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160420958541",
+            "sku": "Qnubu-Sacs-à-Presse-2",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 50,
+                "unit": "GRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132760678733",
+          "legacyResourceId": "53132760678733",
+          "title": "11x5cm / 37 microns",
+          "sku": "Qnubu-Sacs-à-Presse-3",
+          "barcode": "",
+          "price": "9.00",
+          "compareAtPrice": null,
+          "position": 3,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:35:18Z",
+          "updatedAt": "2026-01-06T20:35:18Z",
+          "displayName": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs - 11x5cm / 37 microns",
+          "selectedOptions": [
+            {
+              "name": "Taille",
+              "value": "11x5cm",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147586893",
+                "name": "11x5cm"
+              }
+            },
+            {
+              "name": "Taille des mailles",
+              "value": "37 microns",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147717965",
+                "name": "37 microns"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78950094209357",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Les sacs pour presses Qnubu, compatible avec les presse à chaud"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361105510733",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160420991309",
+            "sku": "Qnubu-Sacs-à-Presse-3",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 50,
+                "unit": "GRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132760711501",
+          "legacyResourceId": "53132760711501",
+          "title": "11x5cm / 70 microns",
+          "sku": "Qnubu-Sacs-à-Presse-4",
+          "barcode": "",
+          "price": "9.00",
+          "compareAtPrice": null,
+          "position": 4,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:35:18Z",
+          "updatedAt": "2026-01-06T20:35:18Z",
+          "displayName": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs - 11x5cm / 70 microns",
+          "selectedOptions": [
+            {
+              "name": "Taille",
+              "value": "11x5cm",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147586893",
+                "name": "11x5cm"
+              }
+            },
+            {
+              "name": "Taille des mailles",
+              "value": "70 microns",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147750733",
+                "name": "70 microns"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78950094209357",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Les sacs pour presses Qnubu, compatible avec les presse à chaud"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361105510733",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160421024077",
+            "sku": "Qnubu-Sacs-à-Presse-4",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 50,
+                "unit": "GRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132760744269",
+          "legacyResourceId": "53132760744269",
+          "title": "11x5cm / 90 microns",
+          "sku": "Qnubu-Sacs-à-Presse-5",
+          "barcode": "",
+          "price": "9.00",
+          "compareAtPrice": null,
+          "position": 5,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:35:18Z",
+          "updatedAt": "2026-01-06T20:35:18Z",
+          "displayName": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs - 11x5cm / 90 microns",
+          "selectedOptions": [
+            {
+              "name": "Taille",
+              "value": "11x5cm",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147586893",
+                "name": "11x5cm"
+              }
+            },
+            {
+              "name": "Taille des mailles",
+              "value": "90 microns",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147783501",
+                "name": "90 microns"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78950094209357",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Les sacs pour presses Qnubu, compatible avec les presse à chaud"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361105510733",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160421056845",
+            "sku": "Qnubu-Sacs-à-Presse-5",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 50,
+                "unit": "GRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132760777037",
+          "legacyResourceId": "53132760777037",
+          "title": "11x5cm / 120 microns",
+          "sku": "Qnubu-Sacs-à-Presse-6",
+          "barcode": "",
+          "price": "9.00",
+          "compareAtPrice": null,
+          "position": 6,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:35:18Z",
+          "updatedAt": "2026-01-06T20:35:18Z",
+          "displayName": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs - 11x5cm / 120 microns",
+          "selectedOptions": [
+            {
+              "name": "Taille",
+              "value": "11x5cm",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147586893",
+                "name": "11x5cm"
+              }
+            },
+            {
+              "name": "Taille des mailles",
+              "value": "120 microns",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147816269",
+                "name": "120 microns"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78950094209357",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Les sacs pour presses Qnubu, compatible avec les presse à chaud"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361105510733",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160421089613",
+            "sku": "Qnubu-Sacs-à-Presse-6",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 50,
+                "unit": "GRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132760809805",
+          "legacyResourceId": "53132760809805",
+          "title": "11x5cm / 160 microns",
+          "sku": "Qnubu-Sacs-à-Presse-7",
+          "barcode": "",
+          "price": "9.00",
+          "compareAtPrice": null,
+          "position": 7,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:35:18Z",
+          "updatedAt": "2026-01-06T20:35:18Z",
+          "displayName": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs - 11x5cm / 160 microns",
+          "selectedOptions": [
+            {
+              "name": "Taille",
+              "value": "11x5cm",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147586893",
+                "name": "11x5cm"
+              }
+            },
+            {
+              "name": "Taille des mailles",
+              "value": "160 microns",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147849037",
+                "name": "160 microns"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78950094209357",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Les sacs pour presses Qnubu, compatible avec les presse à chaud"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361105510733",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160421122381",
+            "sku": "Qnubu-Sacs-à-Presse-7",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 50,
+                "unit": "GRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132760842573",
+          "legacyResourceId": "53132760842573",
+          "title": "11x11cm / 15 microns",
+          "sku": "Qnubu-Sacs-à-Presse-8",
+          "barcode": "",
+          "price": "13.00",
+          "compareAtPrice": null,
+          "position": 8,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:35:18Z",
+          "updatedAt": "2026-01-06T20:35:18Z",
+          "displayName": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs - 11x11cm / 15 microns",
+          "selectedOptions": [
+            {
+              "name": "Taille",
+              "value": "11x11cm",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147619661",
+                "name": "11x11cm"
+              }
+            },
+            {
+              "name": "Taille des mailles",
+              "value": "15 microns",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147652429",
+                "name": "15 microns"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78950094209357",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Les sacs pour presses Qnubu, compatible avec les presse à chaud"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361105510733",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160421155149",
+            "sku": "Qnubu-Sacs-à-Presse-8",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 50,
+                "unit": "GRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132760875341",
+          "legacyResourceId": "53132760875341",
+          "title": "11x11cm / 25 microns",
+          "sku": "Qnubu-Sacs-à-Presse-9",
+          "barcode": "",
+          "price": "13.00",
+          "compareAtPrice": null,
+          "position": 9,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:35:18Z",
+          "updatedAt": "2026-01-06T20:35:18Z",
+          "displayName": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs - 11x11cm / 25 microns",
+          "selectedOptions": [
+            {
+              "name": "Taille",
+              "value": "11x11cm",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147619661",
+                "name": "11x11cm"
+              }
+            },
+            {
+              "name": "Taille des mailles",
+              "value": "25 microns",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147685197",
+                "name": "25 microns"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78950094209357",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Les sacs pour presses Qnubu, compatible avec les presse à chaud"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361105510733",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160421187917",
+            "sku": "Qnubu-Sacs-à-Presse-9",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 50,
+                "unit": "GRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132760908109",
+          "legacyResourceId": "53132760908109",
+          "title": "11x11cm / 37 microns",
+          "sku": "Qnubu-Sacs-à-Presse-10",
+          "barcode": "",
+          "price": "13.00",
+          "compareAtPrice": null,
+          "position": 10,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:35:18Z",
+          "updatedAt": "2026-01-06T20:35:18Z",
+          "displayName": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs - 11x11cm / 37 microns",
+          "selectedOptions": [
+            {
+              "name": "Taille",
+              "value": "11x11cm",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147619661",
+                "name": "11x11cm"
+              }
+            },
+            {
+              "name": "Taille des mailles",
+              "value": "37 microns",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147717965",
+                "name": "37 microns"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78950094209357",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Les sacs pour presses Qnubu, compatible avec les presse à chaud"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361105510733",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160421220685",
+            "sku": "Qnubu-Sacs-à-Presse-10",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 50,
+                "unit": "GRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132760940877",
+          "legacyResourceId": "53132760940877",
+          "title": "11x11cm / 70 microns",
+          "sku": "Qnubu-Sacs-à-Presse-11",
+          "barcode": "",
+          "price": "13.00",
+          "compareAtPrice": null,
+          "position": 11,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:35:18Z",
+          "updatedAt": "2026-01-06T20:35:18Z",
+          "displayName": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs - 11x11cm / 70 microns",
+          "selectedOptions": [
+            {
+              "name": "Taille",
+              "value": "11x11cm",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147619661",
+                "name": "11x11cm"
+              }
+            },
+            {
+              "name": "Taille des mailles",
+              "value": "70 microns",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147750733",
+                "name": "70 microns"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78950094209357",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Les sacs pour presses Qnubu, compatible avec les presse à chaud"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361105510733",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160421253453",
+            "sku": "Qnubu-Sacs-à-Presse-11",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 50,
+                "unit": "GRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132760973645",
+          "legacyResourceId": "53132760973645",
+          "title": "11x11cm / 90 microns",
+          "sku": "Qnubu-Sacs-à-Presse-12",
+          "barcode": "",
+          "price": "13.00",
+          "compareAtPrice": null,
+          "position": 12,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:35:18Z",
+          "updatedAt": "2026-01-06T20:35:18Z",
+          "displayName": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs - 11x11cm / 90 microns",
+          "selectedOptions": [
+            {
+              "name": "Taille",
+              "value": "11x11cm",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147619661",
+                "name": "11x11cm"
+              }
+            },
+            {
+              "name": "Taille des mailles",
+              "value": "90 microns",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147783501",
+                "name": "90 microns"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78950094209357",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Les sacs pour presses Qnubu, compatible avec les presse à chaud"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361105510733",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160421286221",
+            "sku": "Qnubu-Sacs-à-Presse-12",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 50,
+                "unit": "GRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132761006413",
+          "legacyResourceId": "53132761006413",
+          "title": "11x11cm / 120 microns",
+          "sku": "Qnubu-Sacs-à-Presse-13",
+          "barcode": "",
+          "price": "13.00",
+          "compareAtPrice": null,
+          "position": 13,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:35:18Z",
+          "updatedAt": "2026-01-06T20:35:18Z",
+          "displayName": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs - 11x11cm / 120 microns",
+          "selectedOptions": [
+            {
+              "name": "Taille",
+              "value": "11x11cm",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147619661",
+                "name": "11x11cm"
+              }
+            },
+            {
+              "name": "Taille des mailles",
+              "value": "120 microns",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147816269",
+                "name": "120 microns"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78950094209357",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Les sacs pour presses Qnubu, compatible avec les presse à chaud"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361105510733",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160421318989",
+            "sku": "Qnubu-Sacs-à-Presse-13",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 50,
+                "unit": "GRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132761039181",
+          "legacyResourceId": "53132761039181",
+          "title": "11x11cm / 160 microns",
+          "sku": "Qnubu-Sacs-à-Presse-14",
+          "barcode": "",
+          "price": "13.00",
+          "compareAtPrice": null,
+          "position": 14,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:35:18Z",
+          "updatedAt": "2026-01-06T20:35:18Z",
+          "displayName": "Qnubu - Sacs à presse de 11x5cm/11x11cm - 10pcs - 11x11cm / 160 microns",
+          "selectedOptions": [
+            {
+              "name": "Taille",
+              "value": "11x11cm",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147619661",
+                "name": "11x11cm"
+              }
+            },
+            {
+              "name": "Taille des mailles",
+              "value": "160 microns",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957147849037",
+                "name": "160 microns"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78950094209357",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Les sacs pour presses Qnubu, compatible avec les presse à chaud"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361105510733",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/qnubu-sac-a-presse-11x11-cm.jpg?v=1767731721"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160421351757",
+            "sku": "Qnubu-Sacs-à-Presse-14",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 50,
+                "unit": "GRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        }
+      ]
+    }
+  },
+  {
+    "id": "gid://shopify/Product/10480216867149",
+    "legacyResourceId": "10480216867149",
+    "handle": "pack-advanced-nutrients",
+    "title": "Pack Advanced Nutrients - expert",
+    "descriptionHtml": "<h2><span style=\"text-decoration: underline;\">Caractéristiques des kits de culture Advanced Nutrients</span></h2>\n<p>Voici les <em><strong>packs</strong></em> d'<em><strong>engrais</strong></em> qui feront passer votre culture au niveau supérieur, les <em><strong>kits</strong></em> <em><strong>Advanced Nutrients</strong></em> sont parfait pour les cultivateurs qui ont déjà une certaine expérience et qui désirent exploiter le potentiel de leurs plantes au maximum.<br></p>\n<p>Dans ces Packs Advanced Nutrients vous pourrez choisir entre différentes bases, en fonction du style de culture désiré.</p>\n<p> </p>\n<p><strong>Les bases d'engrais disponible sont</strong>:</p>\n<ul>\n<li>Ph Perfect Micro - Grow - Bloom 1L ou 4L</li>\n<li>PH Perfect Sensi Grow - Bloom A+B <span data-mce-fragment=\"1\">1L ou 4L</span>\n</li>\n<li>Ph Perfect Connoisseur Grow - Bloom A+B <span data-mce-fragment=\"1\">1L ou 4L</span>\n</li>\n</ul>\n( Compatible avec la culture hydroponique )<br>\n<ul></ul>\n<p><strong>Les additifs compris dans les kits</strong>:<br></p>\n<ul>\n<li>Voodoo Juice 250ml, 500ml ou 1L</li>\n<li>Tarantula <span data-mce-fragment=\"1\">250ml, </span><span data-mce-fragment=\"1\">500ml ou 1L</span>\n</li>\n<li><span data-mce-fragment=\"1\">Piranha 250ml, 500ml ou 1L</span></li>\n<li>B52 <span data-mce-fragment=\"1\">250ml, </span><span data-mce-fragment=\"1\">500ml ou 1L</span>\n</li>\n<li>Rhino Skin <span data-mce-fragment=\"1\">250ml, </span><span data-mce-fragment=\"1\">500ml ou 1L</span>\n</li>\n<li>Big Bud <span data-mce-fragment=\"1\">250ml, </span><span data-mce-fragment=\"1\">500ml ou 1L (coco sur demande)</span>\n</li>\n<li>Bud Candy <span data-mce-fragment=\"1\">250ml, </span><span data-mce-fragment=\"1\">500ml ou 1L</span>\n</li>\n<li><span data-mce-fragment=\"1\">Bud Ignitor 250ml, 500ml ou 1L</span></li>\n<li>Overdrive <span data-mce-fragment=\"1\">250ml, </span><span data-mce-fragment=\"1\">500ml ou 1L</span>\n</li>\n</ul>\n<p>Pour toute modification de votre kit n'hésitez pas à prendre contact.</p>\n<h3>Les photos sont à titre d'exemple, le contenu du kit peut différé.</h3>\n<ul></ul>",
+    "vendor": "Advanced Nutrients",
+    "productType": "engrais",
+    "tags": [
+      "advanced nutrients",
+      "connoisseur",
+      "engrais",
+      "kit",
+      "kit engrais",
+      "pack",
+      "PH PERFECT BLOOM",
+      "ph perfect grow",
+      "Ph Perfect micro",
+      "ph perfect sensi bloom",
+      "ph perfect sensi grow"
+    ],
+    "status": "ACTIVE",
+    "createdAt": "2026-01-06T20:46:35Z",
+    "updatedAt": "2026-01-07T08:46:51Z",
+    "publishedAt": "2026-01-06T20:46:35Z",
+    "templateSuffix": null,
+    "onlineStoreUrl": null,
+    "onlineStorePreviewUrl": "https://example-store.myshopify.com/products/pack-advanced-nutrients",
+    "isGiftCard": false,
+    "requiresSellingPlan": false,
+    "hasOnlyDefaultVariant": false,
+    "hasOutOfStockVariants": true,
+    "hasVariantsThatRequiresComponents": false,
+    "totalInventory": 0,
+    "tracksInventory": true,
+    "combinedListingRole": null,
+    "category": {
+      "id": "gid://shopify/TaxonomyCategory/hg-12-1-3",
+      "name": "Engrais",
+      "fullName": "Maison et jardin > Pelouses et jardins > Jardinage > Engrais",
+      "isLeaf": true,
+      "isRoot": false
+    },
+    "seo": {
+      "title": "Pack complet Advanced Nutrients PH Perfect | Saucegrowing",
+      "description": "Le kit Advanced Nutrients Expert combine les éléments nutritifs nécessaires pour cultiver des plantes saines et obtenir des récoltes abondantes. Contenant un kit d'engrais complet, cette solution sophistiquée augmentera considérablement votre rendement sans compromettre la qualité de vos cultures."
+    },
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "180.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "525.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "compareAtPriceRange": null,
+    "options": [
+      {
+        "id": "gid://shopify/ProductOption/13161832022349",
+        "name": "Base",
+        "position": 1,
+        "values": [
+          "PH Perfect Grow Micro Bloom",
+          "PH Perfect Sensi",
+          "PH Perfect Connoisseur"
+        ],
+        "optionValues": [
+          {
+            "id": "gid://shopify/ProductOptionValue/6957327679821",
+            "name": "PH Perfect Grow Micro Bloom",
+            "hasVariants": true
+          },
+          {
+            "id": "gid://shopify/ProductOptionValue/6957327712589",
+            "name": "PH Perfect Sensi",
+            "hasVariants": true
+          },
+          {
+            "id": "gid://shopify/ProductOptionValue/6957327745357",
+            "name": "PH Perfect Connoisseur",
+            "hasVariants": true
+          }
+        ]
+      },
+      {
+        "id": "gid://shopify/ProductOption/13161832055117",
+        "name": "Capacité",
+        "position": 2,
+        "values": [
+          "Bases 1L - additifs 500ml",
+          "Bases 4L - additifs 1L",
+          "Bases 1L - additifs 250ml"
+        ],
+        "optionValues": [
+          {
+            "id": "gid://shopify/ProductOptionValue/6957327778125",
+            "name": "Bases 1L - additifs 500ml",
+            "hasVariants": true
+          },
+          {
+            "id": "gid://shopify/ProductOptionValue/6957327810893",
+            "name": "Bases 4L - additifs 1L",
+            "hasVariants": true
+          },
+          {
+            "id": "gid://shopify/ProductOptionValue/6957327843661",
+            "name": "Bases 1L - additifs 250ml",
+            "hasVariants": true
+          }
+        ]
+      }
+    ],
+    "media": {
+      "nodes": [
+        {
+          "id": "gid://shopify/MediaImage/59361287766349",
+          "alt": "Kit d'engrais Advanced Nutrients PH Perfect Grow Micro Bloom",
+          "mediaContentType": "IMAGE",
+          "status": "READY",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400",
+            "width": 1200,
+            "height": 1200
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/59361287799117",
+          "alt": "Kit d'engrais Advanced Nutrients Connoisseur",
+          "mediaContentType": "IMAGE",
+          "status": "READY",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398",
+            "width": 1200,
+            "height": 1200
+          }
+        },
+        {
+          "id": "gid://shopify/MediaImage/59361287831885",
+          "alt": "Kit d'engrais Advanced Nutrients Sensi Grow et Bloom",
+          "mediaContentType": "IMAGE",
+          "status": "READY",
+          "image": {
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398",
+            "width": 1200,
+            "height": 1200
+          }
+        }
+      ]
+    },
+    "collections": {
+      "nodes": [
+        {
+          "id": "gid://shopify/Collection/653170344269",
+          "handle": "engrais",
+          "title": "Engrais",
+          "ruleSet": {
+            "appliedDisjunctively": false,
+            "rules": [
+              {
+                "column": "TAG",
+                "relation": "EQUALS",
+                "condition": "engrais"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "id": "gid://shopify/Metafield/55525698601293",
+          "namespace": "global",
+          "key": "title_tag",
+          "type": "string",
+          "value": "Pack complet Advanced Nutrients PH Perfect | Saucegrowing"
+        },
+        {
+          "id": "gid://shopify/Metafield/55525698634061",
+          "namespace": "global",
+          "key": "description_tag",
+          "type": "string",
+          "value": "Le kit Advanced Nutrients Expert combine les éléments nutritifs nécessaires pour cultiver des plantes saines et obtenir des récoltes abondantes. Contenant un kit d'engrais complet, cette solution sophistiquée augmentera considérablement votre rendement sans compromettre la qualité de vos cultures."
+        },
+        {
+          "id": "gid://shopify/Metafield/55525698666829",
+          "namespace": "mm-google-shopping",
+          "key": "google_product_category",
+          "type": "string",
+          "value": "Home & Garden > Lawn & Garden > Gardening > Fertilizers"
+        },
+        {
+          "id": "gid://shopify/Metafield/55525698699597",
+          "namespace": "mm-google-shopping",
+          "key": "condition",
+          "type": "string",
+          "value": "new"
+        },
+        {
+          "id": "gid://shopify/Metafield/55525698732365",
+          "namespace": "mm-google-shopping",
+          "key": "custom_product",
+          "type": "boolean",
+          "value": "true"
+        }
+      ]
+    },
+    "bundleComponents": {
+      "nodes": []
+    },
+    "resourcePublicationsV2": {
+      "nodes": [
+        {
+          "isPublished": true,
+          "publication": {
+            "id": "gid://shopify/Publication/312549212493",
+            "name": "Boutique en ligne",
+            "catalog": {
+              "id": "gid://shopify/AppCatalog/154778960205",
+              "title": "Channel Catalog 312549212493 for Online Store"
+            }
+          },
+          "publishDate": "2026-01-06T20:46:35Z"
+        }
+      ]
+    },
+    "translations": [],
+    "variants": {
+      "nodes": [
+        {
+          "id": "gid://shopify/ProductVariant/53132962464077",
+          "legacyResourceId": "53132962464077",
+          "title": "PH Perfect Grow Micro Bloom / Bases 1L - additifs 500ml",
+          "sku": "Pack-PH-perfect-medium-500ml",
+          "barcode": "",
+          "price": "280.00",
+          "compareAtPrice": null,
+          "position": 1,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:46:35Z",
+          "updatedAt": "2026-01-06T20:46:35Z",
+          "displayName": "Pack Advanced Nutrients - expert - PH Perfect Grow Micro Bloom / Bases 1L - additifs 500ml",
+          "selectedOptions": [
+            {
+              "name": "Base",
+              "value": "PH Perfect Grow Micro Bloom",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327679821",
+                "name": "PH Perfect Grow Micro Bloom"
+              }
+            },
+            {
+              "name": "Capacité",
+              "value": "Bases 1L - additifs 500ml",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327778125",
+                "name": "Bases 1L - additifs 500ml"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78951258390861",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Kit d'engrais Advanced Nutrients PH Perfect Grow Micro Bloom"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361287766349",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160622776653",
+            "sku": "Pack-PH-perfect-medium-500ml",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 10,
+                "unit": "KILOGRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132962496845",
+          "legacyResourceId": "53132962496845",
+          "title": "PH Perfect Grow Micro Bloom / Bases 4L - additifs 1L",
+          "sku": "Advanced-Nutrients-Pack-complet-1",
+          "barcode": "",
+          "price": "450.00",
+          "compareAtPrice": null,
+          "position": 2,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:46:35Z",
+          "updatedAt": "2026-01-06T20:46:35Z",
+          "displayName": "Pack Advanced Nutrients - expert - PH Perfect Grow Micro Bloom / Bases 4L - additifs 1L",
+          "selectedOptions": [
+            {
+              "name": "Base",
+              "value": "PH Perfect Grow Micro Bloom",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327679821",
+                "name": "PH Perfect Grow Micro Bloom"
+              }
+            },
+            {
+              "name": "Capacité",
+              "value": "Bases 4L - additifs 1L",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327810893",
+                "name": "Bases 4L - additifs 1L"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78951258390861",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Kit d'engrais Advanced Nutrients PH Perfect Grow Micro Bloom"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361287766349",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160622809421",
+            "sku": "Advanced-Nutrients-Pack-complet-1",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 22,
+                "unit": "KILOGRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132962529613",
+          "legacyResourceId": "53132962529613",
+          "title": "PH Perfect Grow Micro Bloom / Bases 1L - additifs 250ml",
+          "sku": "PacAdvanced-Ph-Perfect-250ml",
+          "barcode": "",
+          "price": "180.00",
+          "compareAtPrice": null,
+          "position": 3,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:46:35Z",
+          "updatedAt": "2026-01-06T20:46:35Z",
+          "displayName": "Pack Advanced Nutrients - expert - PH Perfect Grow Micro Bloom / Bases 1L - additifs 250ml",
+          "selectedOptions": [
+            {
+              "name": "Base",
+              "value": "PH Perfect Grow Micro Bloom",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327679821",
+                "name": "PH Perfect Grow Micro Bloom"
+              }
+            },
+            {
+              "name": "Capacité",
+              "value": "Bases 1L - additifs 250ml",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327843661",
+                "name": "Bases 1L - additifs 250ml"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78951258390861",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Kit d'engrais Advanced Nutrients PH Perfect Grow Micro Bloom"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361287766349",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-advanced-nutrients-ph-perfect-micro-grow-bloom.png?v=1767732400"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160622842189",
+            "sku": "PacAdvanced-Ph-Perfect-250ml",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 6,
+                "unit": "KILOGRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132962562381",
+          "legacyResourceId": "53132962562381",
+          "title": "PH Perfect Sensi / Bases 1L - additifs 500ml",
+          "sku": "Pack-sensi-expert-medium",
+          "barcode": "",
+          "price": "290.00",
+          "compareAtPrice": null,
+          "position": 4,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:46:35Z",
+          "updatedAt": "2026-01-06T20:46:35Z",
+          "displayName": "Pack Advanced Nutrients - expert - PH Perfect Sensi / Bases 1L - additifs 500ml",
+          "selectedOptions": [
+            {
+              "name": "Base",
+              "value": "PH Perfect Sensi",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327712589",
+                "name": "PH Perfect Sensi"
+              }
+            },
+            {
+              "name": "Capacité",
+              "value": "Bases 1L - additifs 500ml",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327778125",
+                "name": "Bases 1L - additifs 500ml"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78951258456397",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Kit d'engrais Advanced Nutrients Sensi Grow et Bloom"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361287831885",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160622874957",
+            "sku": "Pack-sensi-expert-medium",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 13,
+                "unit": "KILOGRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132962595149",
+          "legacyResourceId": "53132962595149",
+          "title": "PH Perfect Sensi / Bases 4L - additifs 1L",
+          "sku": "Advanced-Nutrients-Pack-complet-2",
+          "barcode": "",
+          "price": "509.00",
+          "compareAtPrice": null,
+          "position": 5,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:46:35Z",
+          "updatedAt": "2026-01-06T20:46:35Z",
+          "displayName": "Pack Advanced Nutrients - expert - PH Perfect Sensi / Bases 4L - additifs 1L",
+          "selectedOptions": [
+            {
+              "name": "Base",
+              "value": "PH Perfect Sensi",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327712589",
+                "name": "PH Perfect Sensi"
+              }
+            },
+            {
+              "name": "Capacité",
+              "value": "Bases 4L - additifs 1L",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327810893",
+                "name": "Bases 4L - additifs 1L"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78951258456397",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Kit d'engrais Advanced Nutrients Sensi Grow et Bloom"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361287831885",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160622907725",
+            "sku": "Advanced-Nutrients-Pack-complet-2",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 25,
+                "unit": "KILOGRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132962627917",
+          "legacyResourceId": "53132962627917",
+          "title": "PH Perfect Sensi / Bases 1L - additifs 250ml",
+          "sku": "Pack-Advanced-Nutrient-Sensi-250ml",
+          "barcode": "",
+          "price": "193.00",
+          "compareAtPrice": null,
+          "position": 6,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:46:35Z",
+          "updatedAt": "2026-01-06T20:46:35Z",
+          "displayName": "Pack Advanced Nutrients - expert - PH Perfect Sensi / Bases 1L - additifs 250ml",
+          "selectedOptions": [
+            {
+              "name": "Base",
+              "value": "PH Perfect Sensi",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327712589",
+                "name": "PH Perfect Sensi"
+              }
+            },
+            {
+              "name": "Capacité",
+              "value": "Bases 1L - additifs 250ml",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327843661",
+                "name": "Bases 1L - additifs 250ml"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78951258456397",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Kit d'engrais Advanced Nutrients Sensi Grow et Bloom"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361287831885",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-sensi.jpg?v=1767732398"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160622940493",
+            "sku": "Pack-Advanced-Nutrient-Sensi-250ml",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 5.5,
+                "unit": "KILOGRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132962660685",
+          "legacyResourceId": "53132962660685",
+          "title": "PH Perfect Connoisseur / Bases 1L - additifs 500ml",
+          "sku": "Pack-Connoisseur-expert-moyen-500ml",
+          "barcode": "",
+          "price": "335.00",
+          "compareAtPrice": null,
+          "position": 7,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": true,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:46:35Z",
+          "updatedAt": "2026-01-06T20:46:35Z",
+          "displayName": "Pack Advanced Nutrients - expert - PH Perfect Connoisseur / Bases 1L - additifs 500ml",
+          "selectedOptions": [
+            {
+              "name": "Base",
+              "value": "PH Perfect Connoisseur",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327745357",
+                "name": "PH Perfect Connoisseur"
+              }
+            },
+            {
+              "name": "Capacité",
+              "value": "Bases 1L - additifs 500ml",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327778125",
+                "name": "Bases 1L - additifs 500ml"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78951258423629",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Kit d'engrais Advanced Nutrients Connoisseur"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361287799117",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160622973261",
+            "sku": "Pack-Connoisseur-expert-moyen-500ml",
+            "tracked": false,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 13,
+                "unit": "KILOGRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132962693453",
+          "legacyResourceId": "53132962693453",
+          "title": "PH Perfect Connoisseur / Bases 4L - additifs 1L",
+          "sku": "Advanced-Nutrients-Pack-complet-3",
+          "barcode": "",
+          "price": "525.00",
+          "compareAtPrice": null,
+          "position": 8,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:46:35Z",
+          "updatedAt": "2026-01-06T20:46:35Z",
+          "displayName": "Pack Advanced Nutrients - expert - PH Perfect Connoisseur / Bases 4L - additifs 1L",
+          "selectedOptions": [
+            {
+              "name": "Base",
+              "value": "PH Perfect Connoisseur",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327745357",
+                "name": "PH Perfect Connoisseur"
+              }
+            },
+            {
+              "name": "Capacité",
+              "value": "Bases 4L - additifs 1L",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327810893",
+                "name": "Bases 4L - additifs 1L"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78951258423629",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Kit d'engrais Advanced Nutrients Connoisseur"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361287799117",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160623006029",
+            "sku": "Advanced-Nutrients-Pack-complet-3",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 25,
+                "unit": "KILOGRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        },
+        {
+          "id": "gid://shopify/ProductVariant/53132962726221",
+          "legacyResourceId": "53132962726221",
+          "title": "PH Perfect Connoisseur / Bases 1L - additifs 250ml",
+          "sku": "Pacj-Advanced-Nutrients-Connoisseur-250ml",
+          "barcode": "",
+          "price": "210.00",
+          "compareAtPrice": null,
+          "position": 9,
+          "taxable": true,
+          "inventoryQuantity": 0,
+          "inventoryPolicy": "DENY",
+          "availableForSale": false,
+          "requiresComponents": false,
+          "sellableOnlineQuantity": 0,
+          "showUnitPrice": false,
+          "createdAt": "2026-01-06T20:46:35Z",
+          "updatedAt": "2026-01-06T20:46:35Z",
+          "displayName": "Pack Advanced Nutrients - expert - PH Perfect Connoisseur / Bases 1L - additifs 250ml",
+          "selectedOptions": [
+            {
+              "name": "Base",
+              "value": "PH Perfect Connoisseur",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327745357",
+                "name": "PH Perfect Connoisseur"
+              }
+            },
+            {
+              "name": "Capacité",
+              "value": "Bases 1L - additifs 250ml",
+              "optionValue": {
+                "id": "gid://shopify/ProductOptionValue/6957327843661",
+                "name": "Bases 1L - additifs 250ml"
+              }
+            }
+          ],
+          "image": {
+            "id": "gid://shopify/ProductImage/78951258423629",
+            "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398",
+            "width": 1200,
+            "height": 1200,
+            "altText": "Kit d'engrais Advanced Nutrients Connoisseur"
+          },
+          "media": {
+            "nodes": [
+              {
+                "id": "gid://shopify/MediaImage/59361287799117",
+                "mediaContentType": "IMAGE",
+                "image": {
+                  "url": "https://cdn.shopify.com/s/files/1/0942/9037/9085/files/kit-d_engrais-advanced-nutrients-connoisseur.jpg?v=1767732398"
+                }
+              }
+            ]
+          },
+          "inventoryItem": {
+            "id": "gid://shopify/InventoryItem/55160623038797",
+            "sku": "Pacj-Advanced-Nutrients-Connoisseur-250ml",
+            "tracked": true,
+            "requiresShipping": true,
+            "harmonizedSystemCode": null,
+            "countryCodeOfOrigin": null,
+            "provinceCodeOfOrigin": null,
+            "unitCost": null,
+            "measurement": {
+              "weight": {
+                "value": 5.5,
+                "unit": "KILOGRAMS"
+              }
+            }
+          },
+          "metafields": {
+            "nodes": []
+          },
+          "unitPrice": null,
+          "unitPriceMeasurement": {
+            "measuredType": null,
+            "quantityUnit": null,
+            "quantityValue": 0,
+            "referenceUnit": null,
+            "referenceValue": 0
+          },
+          "productVariantComponents": {
+            "nodes": []
+          },
+          "translations": []
+        }
+      ]
+    }
+  }
+]

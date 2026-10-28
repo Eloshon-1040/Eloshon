@@ -1,0 +1,4 @@
+Type,SKU,Name,Published,Visibility in catalog,Short description,Description,In stock?,Stock,Regular price,Sale price,Tax status,Virtual,Weight (kg),Length (cm),Width (cm),Height (cm),Categories,Tags,Images,Parent,Attribute 1 name,Attribute 1 value(s),Attribute 1 visible,Attribute 1 global,Attribute 2 name,Attribute 2 value(s),Attribute 2 visible,Attribute 2 global,Attribute 3 name,Attribute 3 value(s),Attribute 3 visible,Attribute 3 global,"GTIN, UPC, EAN, or ISBN",Brands
+simple,F-001,Table basse chêne,1,visible,,,1,12,129.9,,taxable,no,12.5,,,,Maison > Salon,,https://cdn.example.test/a.jpg,,,,,,,,,,,,,,3701234567890,Eloshon
+simple,F-002,Chaise scandinave,1,visible,,,1,0,59,,taxable,no,4.2,,,,Maison > Salon,,https://cdn.example.test/b.jpg,,,,,,,,,,,,,,3701234567906,Eloshon
+simple,F-003,Lampe de bureau,1,visible,,,1,5,39.9,,taxable,no,1.1,,,,Maison > Bureau,,https://cdn.example.test/c.png,,,,,,,,,,,,,,3701234567913,Lumo

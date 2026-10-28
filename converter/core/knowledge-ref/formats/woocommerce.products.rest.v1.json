@@ -1,0 +1,881 @@
+{
+  "schemaVersion": 1,
+  "id": "woocommerce.products.rest.v1",
+  "displayName": "WooCommerce Products (REST API v3)",
+  "provenance": "native-platform",
+  "medium": "json-api",
+  "platformHint": "woocommerce",
+  "entity": "products",
+  "version": "wc-9.x+",
+  "sibling": "woocommerce.products.csv.modern.v1",
+  "signatures": [
+    {
+      "kind": "json-shape",
+      "requiredPaths": [
+        "id",
+        "sku",
+        "type",
+        "regular_price"
+      ],
+      "hintPaths": [
+        "variations",
+        "meta_data",
+        "categories",
+        "attributes"
+      ]
+    }
+  ],
+  "structure": {
+    "unit": "product",
+    "variants": {
+      "companion": "variations",
+      "keyedBy": "id",
+      "childParentPath": "parent_id",
+      "inlinePath": "variations",
+      "selfWhenNone": true
+    },
+    "companions": {
+      "variations": {
+        "route": "/wc/v3/products/{id}/variations",
+        "keyedByParent": true
+      },
+      "categories": {
+        "route": "/wc/v3/products/categories",
+        "fields": [
+          "id",
+          "name",
+          "parent"
+        ]
+      }
+    }
+  },
+  "fields": [
+    {
+      "path": "name",
+      "canon": "title",
+      "transform": "text",
+      "confidence": "verified-live",
+      "source": "live:woocommerce-test:2026-09-21"
+    },
+    {
+      "path": "slug",
+      "canon": "handle",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "URL slug = migration handle (Shopify Handle, redirects)."
+    },
+    {
+      "path": "slug",
+      "canon": "identity.slug",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "identity.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "date_created_gmt",
+      "inputs": [
+        "date_created_gmt",
+        "date_modified_gmt"
+      ],
+      "canon": "identity.timestamps",
+      "transform": "timestamps",
+      "args": {
+        "assumeUtc": true
+      },
+      "consumes": [
+        "date_created",
+        "date_modified"
+      ],
+      "confidence": "verified-live",
+      "notes": "GMT variants used; local ones consumed."
+    },
+    {
+      "path": "type",
+      "canon": "kind",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "simple": "simple",
+          "variable": "variable",
+          "grouped": "grouped",
+          "external": "external"
+        },
+        "default": "simple"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "status",
+      "canon": "status",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "publish": "active",
+          "draft": "draft",
+          "pending": "draft",
+          "private": "draft",
+          "future": "draft",
+          "trash": "archived"
+        },
+        "default": "draft"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "status",
+      "canon": "published",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "publish": true
+        },
+        "default": false
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "featured",
+      "canon": "visibility.featured",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "catalog_visibility",
+      "canon": "visibility.catalogVisibility",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "visible": "visible",
+          "catalog": "catalog",
+          "search": "search",
+          "hidden": "hidden"
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "description",
+      "canon": "bodyHtml",
+      "transform": "html",
+      "confidence": "verified-live",
+      "samplePolicy": "hash-only"
+    },
+    {
+      "path": "short_description",
+      "canon": "shortDescription",
+      "transform": "html",
+      "confidence": "verified-live",
+      "notes": "Parity with the CSV parser (Short description → shortDescription)."
+    },
+    {
+      "path": "brands",
+      "canon": "vendor",
+      "transform": "name_of_first",
+      "args": {
+        "key": "name"
+      },
+      "confidence": "verified-live",
+      "notes": "WC 9.6+ core brands taxonomy; first brand = vendor. Others kept in sourceExtension."
+    },
+    {
+      "path": "brands",
+      "canon": "sourceExtension.woocommerce.brands",
+      "transform": "names_of",
+      "args": {
+        "key": "name"
+      },
+      "confidence": "verified-live",
+      "notes": "All brand names (canon vendor holds one)."
+    },
+    {
+      "path": "tags",
+      "canon": "tags",
+      "transform": "names_of",
+      "args": {
+        "key": "name"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "categories",
+      "canon": "categories",
+      "transform": "category_paths_from_terms",
+      "args": {
+        "lookup": "categories",
+        "name": "name",
+        "id": "id",
+        "lookupId": "id",
+        "lookupName": "name",
+        "lookupParent": "parent"
+      },
+      "confidence": "verified-live",
+      "notes": "Hierarchy rebuilt from the categories companion (parent ids); flat names without it."
+    },
+    {
+      "path": "images",
+      "canon": "images",
+      "transform": "images_from_objects",
+      "args": {
+        "src": "src",
+        "alt": "alt",
+        "id": "id"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "attributes",
+      "canon": "attributesRich",
+      "transform": "attributes_rich",
+      "args": {
+        "name": "name",
+        "values": "options",
+        "visible": "visible",
+        "forVariation": "variation",
+        "position": "position"
+      },
+      "confidence": "verified-live",
+      "notes": "ALL attributes, descriptive ones included (concept: options-vs-attributes-vs-features)."
+    },
+    {
+      "path": "attributes",
+      "canon": "options",
+      "transform": "options_from_attributes",
+      "args": {
+        "name": "name",
+        "values": "options",
+        "when": "variation"
+      },
+      "confidence": "verified-live",
+      "notes": "Axis of variation only."
+    },
+    {
+      "path": "default_attributes",
+      "canon": "defaultOptionValues",
+      "transform": "default_option_values",
+      "args": {
+        "name": "name",
+        "value": "option"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "upsell_ids",
+      "canon": "merchandising.upsells",
+      "transform": "ids_to_strings",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "cross_sell_ids",
+      "canon": "merchandising.crossSells",
+      "transform": "ids_to_strings",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "related_ids",
+      "canon": "merchandising.related",
+      "transform": "ids_to_strings",
+      "confidence": "verified-live",
+      "notes": "Computed by WC (same categories/tags); not user-curated."
+    },
+    {
+      "path": "grouped_products",
+      "canon": "merchandising.groupedChildren",
+      "transform": "ids_to_strings",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "menu_order",
+      "canon": "merchandising.menuOrder",
+      "transform": "int",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "purchase_note",
+      "canon": "notes.purchase",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "external_url",
+      "canon": "external.url",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "button_text",
+      "canon": "external.buttonText",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "downloads",
+      "canon": "digital.downloads",
+      "transform": "downloads",
+      "args": {
+        "name": "name",
+        "file": "file"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "download_limit",
+      "canon": "digital.downloadLimit",
+      "transform": "int_or_null",
+      "args": {
+        "nullWhen": -1
+      },
+      "confidence": "verified-live",
+      "notes": "-1 = unlimited → null."
+    },
+    {
+      "path": "download_expiry",
+      "canon": "digital.downloadExpiry",
+      "transform": "sentinel_to_null",
+      "args": {
+        "nullWhen": -1,
+        "asString": true
+      },
+      "confidence": "verified-live",
+      "notes": "Days as string; -1 = never → null."
+    },
+    {
+      "path": "meta_data",
+      "canon": "metafields",
+      "transform": "metafields_from_pairs",
+      "args": {
+        "key": "key",
+        "value": "value",
+        "hiddenPrefix": "_"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "downloadable",
+      "canon": "sourceExtension.woocommerce.downloadable",
+      "transform": "bool",
+      "confidence": "verified-live",
+      "notes": "Implied by digital.downloads; kept for round-trip."
+    },
+    {
+      "path": "permalink",
+      "canon": "sourceExtension.woocommerce.permalink",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "price_html",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "Rendered HTML derived from prices."
+    },
+    {
+      "path": "variations",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "Variation ids; objects come from structure.variants companion."
+    },
+    {
+      "path": "parent_id",
+      "canon": "sourceExtension.woocommerce.parent_id",
+      "transform": "copy",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "purchasable",
+      "canon": "sourceExtension.woocommerce.purchasable",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_sales",
+      "canon": "sourceExtension.woocommerce.total_sales",
+      "transform": "int",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "notes": "Sales counter — canon has no analytics field."
+    },
+    {
+      "path": "average_rating",
+      "canon": "sourceExtension.woocommerce.average_rating",
+      "transform": "float",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "notes": "Reviews/ratings: promotable concept."
+    },
+    {
+      "path": "rating_count",
+      "canon": "sourceExtension.woocommerce.rating_count",
+      "transform": "int",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "reviews_allowed",
+      "canon": "sourceExtension.woocommerce.reviews_allowed",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shipping_required",
+      "canon": "sourceExtension.woocommerce.shipping_required",
+      "transform": "bool",
+      "confidence": "verified-live",
+      "notes": "Derived from virtual (variant requiresShipping)."
+    },
+    {
+      "path": "shipping_taxable",
+      "canon": "sourceExtension.woocommerce.shipping_taxable",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "has_options",
+      "canon": "sourceExtension.woocommerce.has_options",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "post_password",
+      "canon": "sourceExtension.woocommerce.post_password",
+      "transform": "text",
+      "confidence": "verified-live",
+      "samplePolicy": "none"
+    },
+    {
+      "path": "low_stock_amount",
+      "canon": "sourceExtension.woocommerce.low_stock_amount",
+      "transform": "int",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "notes": "Low-stock threshold: candidate for stockPolicy."
+    },
+    {
+      "path": "stock_status",
+      "canon": "sourceExtension.woocommerce.stock_status",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "Derived from quantity + backorders."
+    },
+    {
+      "path": "backorders_allowed",
+      "canon": "sourceExtension.woocommerce.backorders_allowed",
+      "transform": "bool",
+      "confidence": "verified-live",
+      "notes": "Derived from backorders."
+    },
+    {
+      "path": "backordered",
+      "canon": "sourceExtension.woocommerce.backordered",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shipping_class_id",
+      "canon": "sourceExtension.woocommerce.shipping_class_id",
+      "transform": "copy",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "sold_individually",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "Consumed by the variant stock_policy entry (self variant)."
+    },
+    {
+      "path": "sku",
+      "canon": "variants[].sku",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "May equal the parent SKU on every variation (observed)."
+    },
+    {
+      "path": "regular_price",
+      "inputs": [
+        "regular_price",
+        "sale_price",
+        "on_sale"
+      ],
+      "canon": "variants[].price + variants[].compareAtPrice",
+      "transform": "price_promo",
+      "consumes": [
+        "price"
+      ],
+      "confidence": "verified-live",
+      "notes": "price = charged (sale when active), compareAtPrice = regular when on sale. `price` (current) consumed."
+    },
+    {
+      "path": "date_on_sale_from_gmt",
+      "inputs": [
+        "date_on_sale_from_gmt",
+        "date_on_sale_to_gmt"
+      ],
+      "canon": "variants[].salePeriod",
+      "transform": "sale_period",
+      "args": {
+        "assumeUtc": true
+      },
+      "consumes": [
+        "date_on_sale_from",
+        "date_on_sale_to"
+      ],
+      "confidence": "verified-live"
+    },
+    {
+      "path": "global_unique_id",
+      "canon": "variants[].barcode",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "GTIN/UPC/EAN/ISBN (WC 9.2+)."
+    },
+    {
+      "path": "weight",
+      "canon": "variants[].grams",
+      "transform": "weight_to_grams",
+      "args": {
+        "unit": "kg"
+      },
+      "confidence": "verified-live",
+      "notes": "Store weight unit assumed kg (WC default); make it a store setting when captured."
+    },
+    {
+      "path": "dimensions.length",
+      "canon": "variants[].lengthCm",
+      "transform": "length_to_cm",
+      "args": {
+        "unit": "cm"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "dimensions.width",
+      "canon": "variants[].widthCm",
+      "transform": "length_to_cm",
+      "args": {
+        "unit": "cm"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "dimensions.height",
+      "canon": "variants[].heightCm",
+      "transform": "length_to_cm",
+      "args": {
+        "unit": "cm"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "virtual",
+      "canon": "variants[].requiresShipping",
+      "transform": "bool_not",
+      "args": {
+        "default": true
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "tax_status",
+      "canon": "variants[].taxable",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "taxable": true,
+          "shipping": false,
+          "none": false
+        },
+        "default": true
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "tax_class",
+      "canon": "variants[].taxClass",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shipping_class",
+      "canon": "variants[].shippingClass",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "manage_stock",
+      "inputs": [
+        "manage_stock",
+        "backorders",
+        "sold_individually"
+      ],
+      "canon": "variants[].stockPolicy",
+      "transform": "stock_policy",
+      "args": {
+        "parentPath": "manage_stock"
+      },
+      "confidence": "verified-live",
+      "notes": "`manage_stock: \"parent\"` on a variation inherits the parent flag."
+    },
+    {
+      "path": "stock_quantity",
+      "canon": "variants[].inventoryQty",
+      "transform": "int",
+      "confidence": "verified-live",
+      "notes": "May be negative when backordered (observed -1)."
+    },
+    {
+      "path": "image",
+      "canon": "variants[].imageSrc",
+      "transform": "image_src",
+      "args": {
+        "src": "src"
+      },
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "image",
+      "canon": "variants[].images",
+      "transform": "images_from_objects",
+      "args": {
+        "src": "src",
+        "alt": "alt",
+        "id": "id"
+      },
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "images",
+      "canon": "variants[].imageSrc",
+      "transform": "first_image_src",
+      "args": {
+        "src": "src"
+      },
+      "when": "self",
+      "confidence": "verified-live",
+      "notes": "Simple product: first product image is the variant image (CSV parity)."
+    },
+    {
+      "path": "attributes",
+      "canon": "variants[].optionValues",
+      "transform": "option_values_from_attributes",
+      "args": {
+        "name": "name",
+        "value": "option"
+      },
+      "confidence": "verified-live",
+      "notes": "Aligned on product.options order; empty for simple products."
+    },
+    {
+      "path": "on_sale",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "Read by price_promo."
+    },
+    {
+      "path": "downloadable",
+      "canon": null,
+      "transform": "ignore",
+      "when": "child",
+      "confidence": "verified-live",
+      "notes": "Product-level digital block carries it."
+    },
+    {
+      "path": "id",
+      "canon": "sourceExtension.woocommerce.id",
+      "transform": "copy",
+      "when": "child",
+      "confidence": "verified-live",
+      "notes": "Variation id (canon has no variant sourceId yet)."
+    },
+    {
+      "path": "parent_id",
+      "canon": null,
+      "transform": "ignore",
+      "when": "child",
+      "confidence": "verified-live",
+      "notes": "Structural link (structure.variants)."
+    },
+    {
+      "path": "type",
+      "canon": null,
+      "transform": "ignore",
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "name",
+      "canon": "sourceExtension.woocommerce.name",
+      "transform": "text",
+      "when": "child",
+      "confidence": "verified-live",
+      "notes": "Derived \"Product - Attr\" label."
+    },
+    {
+      "path": "permalink",
+      "canon": "sourceExtension.woocommerce.permalink",
+      "transform": "text",
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "description",
+      "canon": "sourceExtension.woocommerce.description",
+      "transform": "html",
+      "preservationReason": "no-canon-field",
+      "when": "child",
+      "confidence": "verified-live",
+      "notes": "Variant-level description: canon has none (promotable).",
+      "samplePolicy": "hash-only"
+    },
+    {
+      "path": "status",
+      "canon": "sourceExtension.woocommerce.status",
+      "transform": "text",
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "purchasable",
+      "canon": "sourceExtension.woocommerce.purchasable",
+      "transform": "bool",
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "downloads",
+      "canon": "sourceExtension.woocommerce.downloads",
+      "transform": "copy",
+      "preservationReason": "no-canon-field",
+      "when": "child",
+      "confidence": "verified-live",
+      "notes": "Per-variant downloads: canon digital block is product-level."
+    },
+    {
+      "path": "download_limit",
+      "canon": "sourceExtension.woocommerce.download_limit",
+      "transform": "copy",
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "download_expiry",
+      "canon": "sourceExtension.woocommerce.download_expiry",
+      "transform": "copy",
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "stock_status",
+      "canon": "sourceExtension.woocommerce.stock_status",
+      "transform": "text",
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "backorders_allowed",
+      "canon": "sourceExtension.woocommerce.backorders_allowed",
+      "transform": "bool",
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "backordered",
+      "canon": "sourceExtension.woocommerce.backordered",
+      "transform": "bool",
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "low_stock_amount",
+      "canon": "sourceExtension.woocommerce.low_stock_amount",
+      "transform": "copy",
+      "preservationReason": "no-canon-field",
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shipping_class_id",
+      "canon": "sourceExtension.woocommerce.shipping_class_id",
+      "transform": "copy",
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "gallery_image_ids",
+      "canon": "sourceExtension.woocommerce.gallery_image_ids",
+      "transform": "copy",
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "menu_order",
+      "canon": "sourceExtension.woocommerce.menu_order",
+      "transform": "int",
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "meta_data",
+      "canon": "sourceExtension.woocommerce.meta_data",
+      "transform": "metafields_from_pairs",
+      "args": {
+        "key": "key",
+        "value": "value",
+        "hiddenPrefix": "_"
+      },
+      "preservationReason": "no-canon-field",
+      "when": "child",
+      "confidence": "verified-live",
+      "notes": "Variant-level metafields: canon has none."
+    },
+    {
+      "path": "date_created_gmt",
+      "inputs": [
+        "date_created_gmt",
+        "date_modified_gmt"
+      ],
+      "canon": "sourceExtension.woocommerce.timestamps",
+      "transform": "timestamps",
+      "args": {
+        "assumeUtc": true
+      },
+      "consumes": [
+        "date_created",
+        "date_modified"
+      ],
+      "preservationReason": "no-canon-field",
+      "when": "child",
+      "confidence": "verified-live",
+      "notes": "Variant timestamps: canon identity.timestamps is product-level."
+    }
+  ],
+  "invariantsExpected": [
+    "product.variations (ids).length === companion variations for that product (else warning variants_missing_companion)",
+    "variation.manage_stock may be the literal \"parent\" → inherits product.manage_stock",
+    "variation.sku may equal product.sku on every variation (WC allows shared SKUs)",
+    "stock_quantity may be negative when backorders are allowed",
+    "attributes[].variation=false attributes never appear in options[] but always in attributesRich[]",
+    "categories[] is FLAT (leaf and ancestors both listed); hierarchy needs the categories companion"
+  ],
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "live:woocommerce-test:2026-09-21",
+      "origin": "reference",
+      "diff": [
+        "Phase 5.2: signature + first field map",
+        "Phase 5.5: full field map from the live REST payload (WC 11.1.1) — every product/variation key has a declared fate"
+      ]
+    }
+  ]
+}

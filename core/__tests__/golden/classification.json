@@ -1,0 +1,52 @@
+{
+  "401": {
+    "code": "AUTH_REQUIRED",
+    "terminal": true,
+    "retryAfter": null
+  },
+  "503": {
+    "code": "BOT_CHALLENGE",
+    "terminal": true,
+    "retryAfter": null
+  },
+  "403-plain": {
+    "code": "ACCESS_DENIED",
+    "terminal": true,
+    "retryAfter": null
+  },
+  "403-cloudflare": {
+    "code": "BOT_CHALLENGE",
+    "terminal": true,
+    "retryAfter": null
+  },
+  "429-retry-after": {
+    "code": "RATE_LIMITED",
+    "terminal": true,
+    "retryAfter": 120
+  },
+  "captcha": {
+    "code": "CAPTCHA",
+    "terminal": true,
+    "retryAfter": null
+  },
+  "200-challenge": {
+    "code": "BOT_CHALLENGE",
+    "terminal": true,
+    "retryAfter": null
+  },
+  "timeout": {
+    "code": "NETWORK_ERROR",
+    "terminal": false,
+    "retryAfter": null
+  },
+  "200-empty": {
+    "code": "NOT_A_PRODUCT_PAGE",
+    "terminal": false,
+    "retryAfter": null
+  },
+  "200-valid-product": {
+    "code": "OK",
+    "terminal": false,
+    "retryAfter": null
+  }
+}

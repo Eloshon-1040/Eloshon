@@ -1,0 +1,974 @@
+{
+  "schemaVersion": 1,
+  "id": "shopware.products.admin-api.v1",
+  "displayName": "Shopware Products (Admin API, 6.7)",
+  "provenance": "native-platform",
+  "medium": "json-api",
+  "platformHint": "shopware",
+  "entity": "products",
+  "version": "sw-6.7.x",
+  "signatures": [
+    {
+      "kind": "json-shape",
+      "requiredPaths": [
+        "id",
+        "productNumber",
+        "parentId",
+        "childCount",
+        "price",
+        "stock"
+      ],
+      "hintPaths": [
+        "configuratorSettings",
+        "properties",
+        "visibilities",
+        "versionId",
+        "translated"
+      ]
+    }
+  ],
+  "structure": {
+    "unit": "product",
+    "variants": {
+      "companion": "variations",
+      "keyedBy": "id",
+      "childParentPath": "parentId",
+      "selfWhenNone": true,
+      "sameEntity": true
+    },
+    "inheritance": {
+      "nullMeansParent": true,
+      "exclude": [
+        "id",
+        "productNumber",
+        "parentId",
+        "seoUrls",
+        "variation",
+        "optionIds",
+        "options",
+        "stock",
+        "availableStock",
+        "available",
+        "displayGroup",
+        "childCount",
+        "autoIncrement",
+        "versionId",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "companions": {
+      "variations": {
+        "route": "POST /api/search/product filter parentId = <id>, same associations",
+        "keyedByParent": false,
+        "note": "flat array; nested `children` association lacks options/variation"
+      },
+      "customFieldSets": {
+        "route": "POST /api/search/custom-field-set associations customFields (+relations)",
+        "keyedByParent": false,
+        "note": "typed definitions of every custom field, grouped by set — the namespace/type source for metafields (P2)"
+      }
+    }
+  },
+  "fields": [
+    {
+      "path": "translated.name",
+      "canon": "title",
+      "transform": "text",
+      "confidence": "verified-live",
+      "source": "live:shopware-test:2026-09-21",
+      "consumes": [
+        "name",
+        "translated"
+      ],
+      "notes": "translated.* = value resolved in the request language; raw `name` may be null on inherited rows."
+    },
+    {
+      "path": "productNumber",
+      "canon": "handle",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "Stable, unique, user-facing (SWDEMO10005). Children: SWDEMO10005.1 …"
+    },
+    {
+      "path": "seoUrls",
+      "canon": "identity.slug",
+      "transform": "pick_where",
+      "args": {
+        "where": {
+          "isCanonical": true
+        },
+        "pick": "seoPathInfo",
+        "fallbackFirst": true
+      },
+      "confidence": "verified-live",
+      "notes": "Canonical SEO path of the first sales channel/language returned. Per-channel/per-language URLs kept below."
+    },
+    {
+      "path": "id",
+      "canon": "identity.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "createdAt",
+      "inputs": [
+        "createdAt",
+        "updatedAt"
+      ],
+      "canon": "identity.timestamps",
+      "transform": "timestamps",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "childCount",
+      "canon": "kind",
+      "transform": "if_gt",
+      "args": {
+        "than": 0,
+        "then": "variable",
+        "else": "simple"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "states",
+      "canon": "kind",
+      "transform": "includes_map",
+      "args": {
+        "includes": "is-download",
+        "then": "digital"
+      },
+      "confidence": "verified-live",
+      "notes": "Computed state machine: is-physical / is-download. Overrides kind when digital."
+    },
+    {
+      "path": "active",
+      "canon": "status",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "true": "active",
+          "false": "draft"
+        },
+        "default": "active"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "active",
+      "canon": "published",
+      "transform": "bool",
+      "args": {
+        "default": true
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "markAsTopseller",
+      "canon": "visibility.featured",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "translated.description",
+      "canon": "bodyHtml",
+      "transform": "html",
+      "confidence": "verified-live",
+      "consumes": [
+        "description"
+      ],
+      "samplePolicy": "hash-only"
+    },
+    {
+      "path": "translated.metaTitle",
+      "canon": "seoTitle",
+      "transform": "text",
+      "confidence": "verified-live",
+      "consumes": [
+        "metaTitle"
+      ]
+    },
+    {
+      "path": "translated.metaDescription",
+      "canon": "seoDescription",
+      "transform": "text",
+      "confidence": "verified-live",
+      "consumes": [
+        "metaDescription"
+      ]
+    },
+    {
+      "path": "manufacturer.name",
+      "canon": "vendor",
+      "transform": "text",
+      "confidence": "verified-live",
+      "consumes": [
+        "manufacturer",
+        "manufacturerId"
+      ],
+      "notes": "One manufacturer per product (no multi-brand taxonomy)."
+    },
+    {
+      "path": "tags",
+      "canon": "tags",
+      "transform": "names_of",
+      "args": {
+        "key": "name"
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "tagIds"
+      ],
+      "notes": "Internal tags (rules/flows), not storefront tags — still the closest concept."
+    },
+    {
+      "path": "categories",
+      "canon": "categories",
+      "transform": "category_paths_from_breadcrumbs",
+      "args": {
+        "breadcrumb": "breadcrumb",
+        "name": "name"
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "categoryIds",
+        "categoryTree",
+        "categoriesRo",
+        "mainCategories"
+      ],
+      "notes": "breadcrumb = full path incl. the sales-channel navigation root (\"Catalogue #1 > Clothing > Women\"); kept verbatim, no silent trimming."
+    },
+    {
+      "path": "media",
+      "canon": "images",
+      "transform": "images_from_objects",
+      "args": {
+        "src": "media.url",
+        "alt": "media.alt",
+        "id": "mediaId",
+        "sortBy": "position"
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "coverId"
+      ]
+    },
+    {
+      "path": "configuratorSettings",
+      "canon": "options",
+      "transform": "options_from_settings",
+      "args": {
+        "group": "option.group.name",
+        "value": "option.name",
+        "groupPosition": "option.group.position",
+        "position": "option.position"
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "optionIds"
+      ],
+      "notes": "Axis of variation lives on the PARENT as configurator settings (per-option media/price surcharge kept below)."
+    },
+    {
+      "path": "configuratorSettings",
+      "canon": "attributesRich[]",
+      "transform": "attributes_from_flat_options",
+      "args": {
+        "group": "option.group.name",
+        "value": "option.name",
+        "forVariation": true,
+        "visible": "option.group.visibleOnProductDetailPage",
+        "position": "option.group.position",
+        "valuePosition": "option.position"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "properties",
+      "canon": "attributesRich[]",
+      "transform": "attributes_from_flat_options",
+      "args": {
+        "group": "group.name",
+        "value": "name",
+        "forVariation": false,
+        "visible": "group.visibleOnProductDetailPage",
+        "position": "group.position",
+        "valuePosition": "position"
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "propertyIds"
+      ],
+      "notes": "Same entity type as configurator options (property_group_option) — the RELATION decides the role."
+    },
+    {
+      "path": "customFields",
+      "canon": "metafields",
+      "transform": "metafields_from_object",
+      "args": {
+        "hiddenPrefix": "_",
+        "sets": "customFieldSets",
+        "setsName": "name",
+        "setsFields": "customFields",
+        "fieldName": "name",
+        "fieldType": "type"
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "customFieldSets",
+        "customFieldSetSelectionActive"
+      ],
+      "notes": "P2: a custom field defined in a set gets namespace = the set name and type = the declared type (text / int / bool / select / date…) through the `customFieldSets` companion (POST /api/search/custom-field-set with customFields); the product-level customFieldSets association is only the per-product set SELECTION and is consumed. Custom fields are translatable: the request language’s values are read here."
+    },
+    {
+      "path": "downloads",
+      "canon": "digital.downloads",
+      "transform": "downloads",
+      "args": {
+        "name": "media.fileName",
+        "file": "media.url"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "crossSellings",
+      "canon": "sourceExtension.shopware.crossSellings",
+      "transform": "copy",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "consumes": [
+        "crossSellingAssignedProducts"
+      ],
+      "notes": "Named cross-selling GROUPS (assigned products not loaded here); canon merchandising has flat id lists only."
+    },
+    {
+      "path": "prices",
+      "canon": "sourceExtension.shopware.prices",
+      "transform": "copy",
+      "confidence": "verified-live",
+      "notes": "Rule-based × quantity-tier price matrix (product_price: ruleId, quantityStart/End, price[]) kept verbatim; the canon form is variants[].priceTiers (C1)."
+    },
+    {
+      "path": "prices",
+      "canon": "variants[].priceTiers",
+      "transform": "price_tiers",
+      "args": {
+        "min": "quantityStart",
+        "max": "quantityEnd",
+        "price": "price.0.gross",
+        "scope": {
+          "ruleRef": "ruleId",
+          "currency": "price.0.currencyId"
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "C1: one tier per product_price row — absolute gross unit price of the first currency, scoped by the Shopware rule (opaque ruleRef) and currency id. Observed: rule × (1–11 → 800, 12+ → 750) on a 950 base."
+    },
+    {
+      "path": "releaseDate",
+      "canon": "sourceExtension.shopware.releaseDate",
+      "transform": "date_iso",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "notes": "Scheduled availability date; canon salePeriod is a promo window, not a release."
+    },
+    {
+      "path": "visibilities",
+      "canon": "sourceExtension.shopware.visibilities",
+      "transform": "copy",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "notes": "Per-sales-channel graded visibility (30 = all). Canon has no multi-channel visibility."
+    },
+    {
+      "path": "seoUrls",
+      "canon": "sourceExtension.shopware.seoUrls",
+      "transform": "copy",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "notes": "Per sales channel AND language; multilingual = canon-evolution-open."
+    },
+    {
+      "path": "ratingAverage",
+      "canon": "sourceExtension.shopware.ratingAverage",
+      "transform": "float",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "sales",
+      "canon": "sourceExtension.shopware.sales",
+      "transform": "int",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "notes": "Sales counter (like WC total_sales)."
+    },
+    {
+      "path": "translated.keywords",
+      "canon": "sourceExtension.shopware.keywords",
+      "transform": "text",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "consumes": [
+        "keywords"
+      ],
+      "notes": "SEO keywords; canon has none."
+    },
+    {
+      "path": "translated.customSearchKeywords",
+      "canon": "sourceExtension.shopware.customSearchKeywords",
+      "transform": "copy",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "consumes": [
+        "customSearchKeywords",
+        "searchKeywords"
+      ]
+    },
+    {
+      "path": "translated.packUnit",
+      "inputs": [
+        "translated.packUnit",
+        "translated.packUnitPlural",
+        "purchaseUnit",
+        "referenceUnit",
+        "unit"
+      ],
+      "canon": "sourceExtension.shopware.packaging",
+      "transform": "copy",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "consumes": [
+        "packUnit",
+        "packUnitPlural",
+        "unitId"
+      ],
+      "notes": "Selling unit + reference unit (per 100 g…) — canon has no unit pricing."
+    },
+    {
+      "path": "minPurchase",
+      "inputs": [
+        "minPurchase",
+        "maxPurchase",
+        "purchaseSteps"
+      ],
+      "canon": "sourceExtension.shopware.purchaseConstraints",
+      "transform": "copy",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "notes": "Min/max/step quantities. soldIndividually derived from maxPurchase=1 below."
+    },
+    {
+      "path": "deliveryTime",
+      "canon": "sourceExtension.shopware.deliveryTime",
+      "transform": "copy",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "consumes": [
+        "deliveryTimeId",
+        "restockTime"
+      ],
+      "notes": "Delivery time as a reusable entity (name + day range)."
+    },
+    {
+      "path": "shippingFree",
+      "canon": "sourceExtension.shopware.shippingFree",
+      "transform": "bool",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "cmsPageId",
+      "canon": "sourceExtension.shopware.cmsPageId",
+      "transform": "copy",
+      "confidence": "verified-live",
+      "consumes": [
+        "cmsPage",
+        "slotConfig"
+      ],
+      "notes": "Per-product CMS layout — presentation, not catalogue data."
+    },
+    {
+      "path": "streamIds",
+      "canon": "sourceExtension.shopware.streamIds",
+      "transform": "copy",
+      "confidence": "verified-live",
+      "consumes": [
+        "streams"
+      ],
+      "notes": "Dynamic product streams (rule-computed membership)."
+    },
+    {
+      "path": "versionId",
+      "canon": "sourceExtension.shopware.versionId",
+      "transform": "copy",
+      "confidence": "verified-live",
+      "notes": "Entity versioning (live vs draft versions)."
+    },
+    {
+      "path": "manufacturerNumber",
+      "canon": "sourceExtension.shopware.manufacturerNumber",
+      "transform": "text",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "notes": "MPN distinct from productNumber and ean (identifiers-relation, borderline in 5.1)."
+    },
+    {
+      "path": "featureSetId",
+      "canon": "sourceExtension.shopware.featureSetId",
+      "transform": "copy",
+      "confidence": "verified-live",
+      "consumes": [
+        "featureSet"
+      ]
+    },
+    {
+      "path": "canonicalProductId",
+      "canon": "sourceExtension.shopware.canonicalProductId",
+      "transform": "copy",
+      "confidence": "verified-live",
+      "consumes": [
+        "canonicalProduct"
+      ]
+    },
+    {
+      "path": "variantListingConfig",
+      "inputs": [
+        "variantListingConfig",
+        "variantRestrictions"
+      ],
+      "canon": "sourceExtension.shopware.variantListing",
+      "transform": "copy",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "autoIncrement",
+      "canon": "sourceExtension.shopware.autoIncrement",
+      "transform": "copy",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "availableStock",
+      "canon": "sourceExtension.shopware.availableStock",
+      "transform": "int",
+      "confidence": "verified-live",
+      "notes": "Stock minus cart reservations; canon inventoryQty = stock."
+    },
+    {
+      "path": "available",
+      "canon": "sourceExtension.shopware.available",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "purchasePrices",
+      "canon": "sourceExtension.shopware.purchasePrices",
+      "transform": "copy",
+      "confidence": "verified-live",
+      "notes": "Full per-currency cost array; canon cost picks gross of the first currency."
+    },
+    {
+      "path": "extensions",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "_uniqueIdentifier",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "apiAlias",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "translations",
+      "inputs": [
+        "translations",
+        "seoUrls"
+      ],
+      "canon": "translations",
+      "transform": "translations_from_entities",
+      "args": {
+        "locale": "language.locale.code",
+        "fields": {
+          "title": "name",
+          "bodyHtml": "description",
+          "seoTitle": "metaTitle",
+          "seoDescription": "metaDescription"
+        },
+        "defaultWhere": {
+          "languageId": "2fbb5fe2e29a4d70aa5854ce7ce3e20b"
+        },
+        "slugs": {
+          "locale": "language.locale.code",
+          "path": "seoPathInfo",
+          "where": {
+            "isCanonical": true
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "source": "live:shopware-test:2026-09-21 (--i18n)",
+      "notes": "P1: product_translation entities (association translations.language.locale) → translations[<locale>]; the system language (2fbb5fe2…, what `translated.*` resolves to) is the flat fields and is skipped. Canonical seoUrls of the other languages give the per-locale slug. Requires the extraction to load the translations association (null otherwise → nothing emitted)."
+    },
+    {
+      "path": "translations",
+      "canon": "sourceExtension.shopware.translations",
+      "transform": "copy_present",
+      "preservationReason": "no-canon-field",
+      "confidence": "verified-live",
+      "notes": "Raw per-language rows (keywords, packUnit, customFields, slotConfig… per locale — outside the canon translation shape). Absent when the association was not loaded."
+    },
+    {
+      "path": "parentId",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "Structural link (structure.variants.childParentPath)."
+    },
+    {
+      "path": "parent",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "children",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "Variants come from the companion (nested children lack their associations)."
+    },
+    {
+      "path": "displayGroup",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "cover",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "Read at variant scope (imageSrc)."
+    },
+    {
+      "path": "productReviews",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "wishlists",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "orderLineItems",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "options",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "Read at variant scope (optionValues)."
+    },
+    {
+      "path": "variation",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "Read at variant scope."
+    },
+    {
+      "path": "productNumber",
+      "canon": "variants[].sku",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "price",
+      "canon": "variants[].price",
+      "transform": "price_pick",
+      "args": {
+        "field": "gross"
+      },
+      "confidence": "verified-live",
+      "notes": "Gross (customer pays) of the first currency; net kept in sourceExtension. Inherited from the parent when the variant has no own price."
+    },
+    {
+      "path": "price",
+      "canon": "variants[].compareAtPrice",
+      "transform": "price_pick",
+      "args": {
+        "field": "gross",
+        "sub": "listPrice"
+      },
+      "confidence": "verified-live",
+      "notes": "listPrice = crossed-out reference. regulationPrice (Omnibus) kept below — canon-evolution-open."
+    },
+    {
+      "path": "price",
+      "canon": "sourceExtension.shopware.price",
+      "scope": "variant",
+      "transform": "copy",
+      "confidence": "verified-live",
+      "notes": "Full per-currency array: net/gross/linked/listPrice/percentage/regulationPrice."
+    },
+    {
+      "path": "purchasePrices",
+      "canon": "variants[].cost",
+      "transform": "price_pick",
+      "args": {
+        "field": "gross"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "ean",
+      "canon": "variants[].barcode",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "Shopware’s EAN is the closest thing to a single barcode → kept as the direct mapping (6.1 A5: barcode = the platform’s untyped identifier); the typed split is identifiers.ean below. Inherited from the parent when the variant has none."
+    },
+    {
+      "path": "ean",
+      "canon": "variants[].identifiers.ean",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "P3."
+    },
+    {
+      "path": "manufacturerNumber",
+      "canon": "variants[].identifiers.mpn",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "P3: MPN per variant (inheritable, like ean). The product-level sourceExtension copy above predates P3 and is kept for round-trips."
+    },
+    {
+      "path": "weight",
+      "canon": "variants[].grams",
+      "transform": "weight_to_grams",
+      "args": {
+        "unit": "kg"
+      },
+      "confidence": "verified-live",
+      "notes": "Shopware weight is kg."
+    },
+    {
+      "path": "length",
+      "canon": "variants[].lengthCm",
+      "transform": "length_to_cm",
+      "args": {
+        "unit": "mm"
+      },
+      "confidence": "verified-live",
+      "notes": "Shopware dimensions are mm."
+    },
+    {
+      "path": "width",
+      "canon": "variants[].widthCm",
+      "transform": "length_to_cm",
+      "args": {
+        "unit": "mm"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "height",
+      "canon": "variants[].heightCm",
+      "transform": "length_to_cm",
+      "args": {
+        "unit": "mm"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "stock",
+      "canon": "variants[].inventoryQty",
+      "transform": "int",
+      "confidence": "verified-live",
+      "notes": "Own on every variant (not inherited in the data)."
+    },
+    {
+      "path": "states",
+      "canon": "variants[].requiresShipping",
+      "transform": "includes_map",
+      "args": {
+        "includes": "is-physical",
+        "then": true,
+        "else": false
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "tax.taxRate",
+      "canon": "variants[].taxable",
+      "transform": "if_gt",
+      "args": {
+        "than": 0,
+        "then": true,
+        "else": false
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "tax",
+        "taxId"
+      ],
+      "notes": "Tax entity inherited by variants."
+    },
+    {
+      "path": "tax.name",
+      "canon": "variants[].taxClass",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "tax",
+      "canon": "sourceExtension.shopware.tax",
+      "scope": "variant",
+      "transform": "copy",
+      "confidence": "verified-live",
+      "notes": "Base rate + per-country tax rules (canon-evolution-open: taxIncluded / per-country)."
+    },
+    {
+      "path": "stock",
+      "canon": "variants[].stockPolicy.manageStock",
+      "transform": "constant",
+      "args": {
+        "value": true
+      },
+      "confidence": "verified-live",
+      "notes": "Shopware always tracks stock."
+    },
+    {
+      "path": "isCloseout",
+      "canon": "variants[].stockPolicy.backorders",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "true": "no",
+          "false": "yes"
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "isCloseout=false → orderable at 0 stock (restockTime)."
+    },
+    {
+      "path": "maxPurchase",
+      "canon": "variants[].stockPolicy.soldIndividually",
+      "transform": "equals_map",
+      "args": {
+        "value": 1,
+        "then": true,
+        "else": false
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "cover",
+      "canon": "variants[].imageSrc",
+      "transform": "image_src",
+      "args": {
+        "src": "media.url"
+      },
+      "confidence": "verified-live",
+      "notes": "Variant cover; inherited from the parent cover when null."
+    },
+    {
+      "path": "variation",
+      "canon": "variants[].optionValues",
+      "transform": "option_values_from_attributes",
+      "args": {
+        "name": "group",
+        "value": "option"
+      },
+      "when": "child",
+      "confidence": "verified-live",
+      "notes": "[{group, option}] pre-rendered pairs, aligned on product.options."
+    },
+    {
+      "path": "seoUrls",
+      "canon": "sourceExtension.shopware.seoUrls",
+      "scope": "variant",
+      "transform": "copy",
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "sourceExtension.shopware.id",
+      "scope": "variant",
+      "transform": "copy",
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "productNumber",
+      "canon": "sourceExtension.shopware.productNumber",
+      "scope": "variant",
+      "transform": "copy",
+      "when": "child",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "translations",
+      "canon": null,
+      "scope": "variant",
+      "transform": "ignore",
+      "when": "child",
+      "confidence": "verified-live",
+      "notes": "Child translation rows carry null (inherited from the parent) — the parent rows are the translations."
+    }
+  ],
+  "invariantsExpected": [
+    "A variant row carries null for almost every field: null = inherited from the parent (DAL inheritance) — never an absence of data",
+    "variants are products (same entity, same keys): parentId != null, childCount = 0",
+    "price[] is per currency; gross/net linked by the tax rate; listPrice = crossed-out reference; regulationPrice = Omnibus reference",
+    "prices[] (product_price) adds a rule × quantity-tier matrix on top of price[]",
+    "configuratorSettings live on the parent; children carry optionIds/options/variation",
+    "properties and configurator options are the same entity (property_group_option); the relation decides the role",
+    "dimensions are mm, weight is kg; stock is always managed",
+    "category.breadcrumb includes the sales-channel navigation root",
+    "translations[] (when loaded) has one row per language; the system-language row equals translated.* and the flat fields; a child row carries null = inherited"
+  ],
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "live:shopware-test:2026-09-21",
+      "origin": "reference",
+      "diff": [
+        "Phase 5 (canon population): full field map from the live Admin API payload (SW 6.7.2.2) — every product key has a declared fate; parent → variant inheritance declared as data"
+      ]
+    },
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "enrich",
+      "from": "live:shopware-test:2026-09-21 (--i18n, seeded eloshon_specs set + EAN/MPN)",
+      "origin": "reference",
+      "diff": [
+        "Phase 6.3: P1 translations (+ per-locale slug from seoUrls), P2 typed/namespaced custom fields via the customFieldSets companion, P3 identifiers.ean / identifiers.mpn"
+      ]
+    },
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "enrich",
+      "from": "live:shopware-test:2026-09-21",
+      "origin": "reference",
+      "diff": [
+        "C1: prices[] → variants[].priceTiers (price_tiers)"
+      ]
+    }
+  ]
+}

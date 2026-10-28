@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "Eloshon Scraper — votre navigateur",
+  "version": "0.7.34",
+  "default_locale": "fr",
+  "description": "Exécute les recettes d'extraction Eloshon dans votre propre navigateur, avec votre IP et votre session. Nécessite l'application Eloshon Scraper.",
+  "minimum_chrome_version": "116",
+  "background": {
+    "service_worker": "background/service-worker.mjs",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Eloshon Scraper — ouvrir le panneau"
+  },
+  "side_panel": {
+    "default_path": "ui/panel.html"
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": [
+    "storage",
+    "alarms",
+    "scripting",
+    "nativeMessaging",
+    "notifications",
+    "offscreen",
+    "tabs",
+    "activeTab",
+    "sidePanel"
+  ],
+  "optional_host_permissions": [
+    "*://*/*"
+  ],
+  "host_permissions": [],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content/runner.mjs",
+        "vendor/shared/**/*.mjs"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; base-uri 'none'"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyCFqPGqMVV0jxuX+BHs6DuCaonN5M4/zlmLjkaBF1i842Ds4M/bqkHql2e5rtT6g8j+SBBukwaHnNS8ewIc84FklUFqICd3OwDxwx6IUBTtqiR9Lsz+zEvaMOx3I8iM+PIPfbAcXAmimnSH/XGNk/nOPOBYvU1oExAvmQDqr7UG5kOhhvhKm7ZXiMgtf/TsvYwk2KPrETuE0EI6E32U27D7aavUS27vDCP8ve/IHC/KTAADfMlkkVgyJgzACl4A3L2UeYYVfRyrcS/OqZxM2ey0eZgz3IK4jZTE5cZttjRDoaod0TufRx2SHMvOatnfbngRXf6mzZU6iipQOfX+gWwIDAQAB"
+}

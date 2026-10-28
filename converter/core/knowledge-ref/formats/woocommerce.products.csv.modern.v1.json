@@ -1,0 +1,388 @@
+{
+  "schemaVersion": 1,
+  "id": "woocommerce.products.csv.modern.v1",
+  "displayName": "WooCommerce products export (built-in exporter)",
+  "provenance": "native-platform",
+  "medium": "csv",
+  "platformHint": "woocommerce",
+  "entity": "products",
+  "signatures": [
+    {
+      "kind": "csv-header-set",
+      "required": [
+        "Type",
+        "Regular price"
+      ],
+      "anyOf": [
+        "Parent",
+        "Attribute 1 name",
+        "Sale price",
+        "Short description",
+        "Categories"
+      ],
+      "hints": [
+        "ID",
+        "SKU",
+        "Categories",
+        "Images"
+      ]
+    }
+  ],
+  "structure": {
+    "rows": {
+      "link": {
+        "childWhere": {
+          "column": "Type",
+          "equals": "variation"
+        },
+        "parentColumn": "Parent",
+        "stripPrefix": "id:",
+        "keyColumns": [
+          "ID",
+          "SKU"
+        ]
+      },
+      "children": {
+        "where": {
+          "column": "Type",
+          "equals": "variation"
+        },
+        "selfWhenNone": true
+      }
+    }
+  },
+  "fields": [
+    {
+      "path": "Type",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-fixture",
+      "notes": "Structural: simple / variable / variation; a variation row is a child of its parent (the canon kind is not set from it)."
+    },
+    {
+      "path": "Parent",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-fixture",
+      "notes": "Structural: links a variation to its parent (id:<ID> or SKU)."
+    },
+    {
+      "path": "ID",
+      "canon": "identity.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-fixture",
+      "notes": "Never written back to a WooCommerce target (it would overwrite another product)."
+    },
+    {
+      "path": "SKU",
+      "canon": "handle",
+      "transform": "text",
+      "confidence": "verified-fixture",
+      "notes": "The parent SKU is the handle (else a slug of the name)."
+    },
+    {
+      "path": "SKU",
+      "canon": "variants[].sku",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Name",
+      "canon": "title",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Description",
+      "canon": "bodyHtml",
+      "transform": "html",
+      "confidence": "verified-fixture",
+      "samplePolicy": "hash-only"
+    },
+    {
+      "path": "Short description",
+      "canon": "shortDescription",
+      "transform": "html",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Tags",
+      "canon": "tags",
+      "transform": "list",
+      "args": {
+        "sep": ","
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Categories",
+      "canon": "categories",
+      "transform": "category_path_split",
+      "args": {
+        "sep": ">",
+        "listSep": ","
+      },
+      "confidence": "verified-fixture",
+      "notes": "Comma list with WooCommerce's escaped commas."
+    },
+    {
+      "path": "Published",
+      "canon": "published+status",
+      "transform": "bool",
+      "args": {
+        "default": true
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Brands",
+      "inputs": [
+        "Brands",
+        "Brand"
+      ],
+      "canon": "vendor",
+      "transform": "first_non_empty",
+      "confidence": "verified-fixture",
+      "notes": "WC 9.6+ Brands: the first brand's leaf is the vendor, several brands are kept as a metafield; the older Brand column otherwise."
+    },
+    {
+      "path": "Images",
+      "canon": "images",
+      "transform": "images_from_urls",
+      "args": {
+        "sep": ","
+      },
+      "confidence": "verified-fixture",
+      "notes": "Relative URLs completed against the file's dominant image origin."
+    },
+    {
+      "path": "Images",
+      "canon": "variants[].imageSrc",
+      "transform": "first_image_src",
+      "confidence": "verified-fixture",
+      "notes": "A variation's first image."
+    },
+    {
+      "path": "Is featured?",
+      "canon": "visibility.featured",
+      "transform": "bool",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Visibility in catalog",
+      "canon": "visibility.catalogVisibility",
+      "transform": "enum_map",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Purchase note",
+      "canon": "notes.purchase",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Position",
+      "canon": "merchandising.menuOrder",
+      "transform": "int",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Upsells",
+      "canon": "merchandising.upsells",
+      "transform": "list",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Cross-sells",
+      "canon": "merchandising.crossSells",
+      "transform": "list",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "External URL",
+      "canon": "external.url",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Button text",
+      "canon": "external.buttonText",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Download <n> name / URL",
+      "pathPattern": "^Download [0-9]+ (name|URL)$",
+      "canon": "digital.downloads",
+      "transform": "downloads",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Download limit",
+      "canon": "digital.downloadLimit",
+      "transform": "int_or_null",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Download expiry",
+      "canon": "digital.downloadExpiry",
+      "transform": "int_or_null",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Attribute <n> name / value(s) / visible",
+      "pathPattern": "^Attribute [0-9]+ (name|value[(]s[)]|visible)$",
+      "canon": "options+attributesRich",
+      "transform": "attributes_rich",
+      "confidence": "verified-fixture",
+      "notes": "An attribute every variation fills is an option; a descriptive or partly-used one becomes a metafield + rich attribute."
+    },
+    {
+      "path": "Attribute <n> value(s)",
+      "pathPattern": "^Attribute [0-9]+ value[(]s[)]$",
+      "canon": "variants[].optionValues",
+      "transform": "option_values_from_attributes",
+      "confidence": "verified-fixture",
+      "notes": "On a variation row: its value for each option attribute."
+    },
+    {
+      "path": "Meta: <key>",
+      "pathPattern": "^Meta:(?! *_)",
+      "canon": "metafields",
+      "transform": "metafield_pair",
+      "confidence": "verified-fixture",
+      "notes": "Public meta keys only: a key starting with '_' is an internal (not declared here, so it is preserved and reported, never silently dropped)."
+    },
+    {
+      "path": "Regular price",
+      "inputs": [
+        "Regular price",
+        "Sale price"
+      ],
+      "canon": "variants[].price+variants[].compareAtPrice",
+      "transform": "price_promo",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Date sale price starts",
+      "inputs": [
+        "Date sale price starts",
+        "Date sale price ends"
+      ],
+      "canon": "variants[].salePeriod",
+      "transform": "sale_period",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Weight (kg)",
+      "canon": "variants[].grams",
+      "transform": "weight_to_grams",
+      "args": {
+        "unit": "kg"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Length (cm)",
+      "canon": "variants[].lengthCm",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Width (cm)",
+      "canon": "variants[].widthCm",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Height (cm)",
+      "canon": "variants[].heightCm",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Virtual",
+      "canon": "variants[].requiresShipping",
+      "transform": "bool_not",
+      "args": {
+        "default": true
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Tax status",
+      "canon": "variants[].taxable",
+      "transform": "equals_map",
+      "args": {
+        "value": "taxable",
+        "then": true,
+        "else": false
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Tax class",
+      "canon": "variants[].taxClass",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping class",
+      "canon": "variants[].shippingClass",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Stock",
+      "canon": "variants[].inventoryQty",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Backorders allowed?",
+      "inputs": [
+        "Backorders allowed?",
+        "Sold individually?"
+      ],
+      "canon": "variants[].stockPolicy",
+      "transform": "stock_policy",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "GTIN, UPC, EAN, or ISBN",
+      "canon": "variants[].barcode",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    }
+  ],
+  "invariantsExpected": [
+    "One row per product and one per variation; a variation names its parent as id:<ID> or by SKU",
+    "Meta: columns whose key starts with '_' are WordPress / plugin internals, not product data"
+  ],
+  "legacy": {
+    "formatId": "woo_products_modern",
+    "platform": "woocommerce",
+    "entity": "products"
+  },
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "seed:core/src/detect.ts:SIGS",
+      "origin": "reference",
+      "diff": [
+        "signature moved from code to data (Phase 5.3)",
+        "Built-in WC exporter: Type + Regular price, with Parent / Attribute 1 name."
+      ]
+    },
+    {
+      "at": "2026-10-04T00:00:00.000Z",
+      "op": "enrich",
+      "from": "core/src/products.ts parseWooModern / wooVariant + mapping.ts SOURCE_FIELDS.woo_products_modern",
+      "origin": "reference",
+      "diff": [
+        "Phase 2 Lot 3: full column map + row structure as data; undeclared columns preserved, declared ones traced"
+      ]
+    }
+  ]
+}

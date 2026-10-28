@@ -1,0 +1,34 @@
+{
+  "ok": true,
+  "sourceFormat": "woocommerce.products.rest.v1",
+  "targetFormat": "shopify_products",
+  "counts": {
+    "inputUnits": 2,
+    "outputUnits": 2,
+    "failedUnits": 0,
+    "outputRows": 13
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_shopify_dimensions"
+    },
+    {
+      "code": "loss_short_description",
+      "params": {
+        "target": "Shopify",
+        "count": 2
+      }
+    },
+    {
+      "code": "loss_shopify_category_taxonomy",
+      "params": {
+        "count": 2,
+        "extra": 0
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false
+}

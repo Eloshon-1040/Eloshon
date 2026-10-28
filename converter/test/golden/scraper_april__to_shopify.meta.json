@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "sourceFormat": "scraper.eloshon-export.v1",
+  "targetFormat": "shopify_products",
+  "counts": {
+    "inputUnits": 15,
+    "outputUnits": 15,
+    "failedUnits": 0,
+    "outputRows": 15
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_shopify_category_taxonomy",
+      "params": {
+        "count": 15,
+        "extra": 0
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "code": "dedupe_handles",
+      "params": {
+        "handle": "daisy-128h8v"
+      }
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

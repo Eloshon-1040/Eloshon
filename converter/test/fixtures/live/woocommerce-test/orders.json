@@ -1,0 +1,309 @@
+[
+  {
+    "id": 33,
+    "parent_id": 0,
+    "status": "processing",
+    "currency": "EUR",
+    "version": "11.1.1",
+    "prices_include_tax": false,
+    "date_created": "2026-09-21T02:16:16",
+    "date_modified": "2026-09-21T02:22:28",
+    "discount_total": "0.00",
+    "discount_tax": "0.00",
+    "shipping_total": "15.00",
+    "shipping_tax": "0.00",
+    "cart_tax": "0.00",
+    "total": "615.00",
+    "total_tax": "0.00",
+    "customer_id": 4,
+    "order_key": "wc_order_scrubbed1",
+    "billing": {
+      "first_name": "Test",
+      "last_name": "Customer 1",
+      "company": "Example Corp",
+      "address_1": "1 Rue Exemple",
+      "address_2": "",
+      "city": "Bruxelles",
+      "state": "",
+      "postcode": "1000",
+      "country": "BE",
+      "email": "customer1@example.test",
+      "phone": "+32470000000"
+    },
+    "shipping": {
+      "first_name": "Test",
+      "last_name": "Customer 1",
+      "company": "Example Corp",
+      "address_1": "1 Rue Exemple",
+      "address_2": "",
+      "city": "Bruxelles",
+      "state": "",
+      "postcode": "1000",
+      "country": "BE",
+      "phone": "+32470000000"
+    },
+    "payment_method": "other",
+    "payment_method_title": "Other",
+    "transaction_id": "6849669",
+    "customer_ip_address": "",
+    "customer_user_agent": "",
+    "created_via": "admin",
+    "customer_note": "",
+    "date_completed": null,
+    "date_paid": "2026-09-21T02:22:23",
+    "cart_hash": "",
+    "number": "33",
+    "meta_data": [
+      {
+        "id": 14,
+        "key": "_wc_order_attribution_source_type",
+        "value": "admin"
+      }
+    ],
+    "line_items": [
+      {
+        "id": 4,
+        "name": "AC Infinity A7 - 150mm",
+        "product_id": 13,
+        "variation_id": 14,
+        "quantity": 2,
+        "tax_class": "",
+        "subtotal": "600.00",
+        "subtotal_tax": "0.00",
+        "total": "600.00",
+        "total_tax": "0.00",
+        "taxes": [],
+        "meta_data": [
+          {
+            "id": 39,
+            "key": "couleur-variante",
+            "value": "bleu",
+            "display_key": "Couleur / variante",
+            "display_value": "bleu"
+          },
+          {
+            "id": 40,
+            "key": "taille",
+            "value": "Large",
+            "display_key": "Taille",
+            "display_value": "Large"
+          },
+          {
+            "id": 41,
+            "key": "Backordered",
+            "value": "1",
+            "display_key": "Backordered",
+            "display_value": "1"
+          },
+          {
+            "id": 42,
+            "key": "_reduced_stock",
+            "value": "2",
+            "display_key": "_reduced_stock",
+            "display_value": "2"
+          }
+        ],
+        "sku": "AC-INFA7",
+        "global_unique_id": "08374628475658",
+        "price": 300,
+        "image": {
+          "id": 26,
+          "src": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg"
+        },
+        "parent_name": "AC Infinity A7 - 150mm"
+      }
+    ],
+    "tax_lines": [],
+    "shipping_lines": [
+      {
+        "id": 3,
+        "method_title": "Flat rate",
+        "method_id": "flat_rate",
+        "instance_id": "0",
+        "total": "15.00",
+        "total_tax": "0.00",
+        "taxes": [],
+        "tax_status": "taxable",
+        "meta_data": []
+      }
+    ],
+    "fee_lines": [],
+    "coupon_lines": [],
+    "refunds": [],
+    "payment_url": "http://localhost:8881/checkout/order-pay/33/?key=scrubbed",
+    "is_editable": false,
+    "needs_payment": false,
+    "needs_processing": true,
+    "date_created_gmt": "2026-09-21T02:16:16",
+    "date_modified_gmt": "2026-09-21T02:22:28",
+    "date_completed_gmt": null,
+    "date_paid_gmt": "2026-09-21T02:22:23",
+    "currency_symbol": "€"
+  },
+  {
+    "id": 32,
+    "parent_id": 0,
+    "status": "completed",
+    "currency": "EUR",
+    "version": "11.1.1",
+    "prices_include_tax": false,
+    "date_created": "2026-09-21T01:57:19",
+    "date_modified": "2026-09-21T02:01:26",
+    "discount_total": "0.00",
+    "discount_tax": "0.00",
+    "shipping_total": "0.00",
+    "shipping_tax": "0.00",
+    "cart_tax": "0.00",
+    "total": "1200.00",
+    "total_tax": "0.00",
+    "customer_id": 0,
+    "order_key": "wc_order_scrubbed2",
+    "billing": {
+      "first_name": "",
+      "last_name": "",
+      "company": "",
+      "address_1": "",
+      "address_2": "",
+      "city": "",
+      "state": "",
+      "postcode": "",
+      "country": "",
+      "email": "",
+      "phone": ""
+    },
+    "shipping": {
+      "first_name": "Test",
+      "last_name": "Customer 2",
+      "company": "Example Corp",
+      "address_1": "1 Rue Exemple",
+      "address_2": "",
+      "city": "Bruxelles",
+      "state": "Hinaut",
+      "postcode": "1000",
+      "country": "BE",
+      "phone": "+32470000000"
+    },
+    "payment_method": "",
+    "payment_method_title": "",
+    "transaction_id": "",
+    "customer_ip_address": "",
+    "customer_user_agent": "",
+    "created_via": "admin",
+    "customer_note": "note test",
+    "date_completed": "2026-09-21T02:01:03",
+    "date_paid": "2026-09-21T02:01:03",
+    "cart_hash": "",
+    "number": "32",
+    "meta_data": [
+      {
+        "id": 10,
+        "key": "_wc_order_attribution_source_type",
+        "value": "admin"
+      }
+    ],
+    "line_items": [
+      {
+        "id": 1,
+        "name": "AC Infinity A7 - 150mm",
+        "product_id": 13,
+        "variation_id": 14,
+        "quantity": 3,
+        "tax_class": "",
+        "subtotal": "900.00",
+        "subtotal_tax": "0.00",
+        "total": "900.00",
+        "total_tax": "0.00",
+        "taxes": [],
+        "meta_data": [
+          {
+            "id": 10,
+            "key": "couleur-variante",
+            "value": "bleu",
+            "display_key": "Couleur / variante",
+            "display_value": "bleu"
+          },
+          {
+            "id": 11,
+            "key": "taille",
+            "value": "Large",
+            "display_key": "Taille",
+            "display_value": "Large"
+          },
+          {
+            "id": 23,
+            "key": "_reduced_stock",
+            "value": "3",
+            "display_key": "_reduced_stock",
+            "display_value": "3"
+          }
+        ],
+        "sku": "AC-INFA7",
+        "global_unique_id": "08374628475658",
+        "price": 300,
+        "image": {
+          "id": 26,
+          "src": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg"
+        },
+        "parent_name": "AC Infinity A7 - 150mm"
+      },
+      {
+        "id": 2,
+        "name": "AC Infinity A7 - 150mm",
+        "product_id": 13,
+        "variation_id": 17,
+        "quantity": 1,
+        "tax_class": "",
+        "subtotal": "300.00",
+        "subtotal_tax": "0.00",
+        "total": "300.00",
+        "total_tax": "0.00",
+        "taxes": [],
+        "meta_data": [
+          {
+            "id": 21,
+            "key": "couleur-variante",
+            "value": "rouge",
+            "display_key": "Couleur / variante",
+            "display_value": "rouge"
+          },
+          {
+            "id": 22,
+            "key": "taille",
+            "value": "Large",
+            "display_key": "Taille",
+            "display_value": "Large"
+          },
+          {
+            "id": 24,
+            "key": "_reduced_stock",
+            "value": "1",
+            "display_key": "_reduced_stock",
+            "display_value": "1"
+          }
+        ],
+        "sku": "AC-INFA7",
+        "global_unique_id": "",
+        "price": 300,
+        "image": {
+          "id": 26,
+          "src": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg"
+        },
+        "parent_name": "AC Infinity A7 - 150mm"
+      }
+    ],
+    "tax_lines": [],
+    "shipping_lines": [],
+    "fee_lines": [],
+    "coupon_lines": [],
+    "refunds": [],
+    "payment_url": "http://localhost:8881/checkout/order-pay/32/?key=scrubbed",
+    "is_editable": false,
+    "needs_payment": false,
+    "needs_processing": true,
+    "date_created_gmt": "2026-09-21T01:57:19",
+    "date_modified_gmt": "2026-09-21T02:01:26",
+    "date_completed_gmt": "2026-09-21T02:01:03",
+    "date_paid_gmt": "2026-09-21T02:01:03",
+    "currency_symbol": "€"
+  }
+]

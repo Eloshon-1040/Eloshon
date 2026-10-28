@@ -1,0 +1,4 @@
+Référence;Désignation;Prix de vente;Code EAN;Stock disponible;Visuel;Rayon;Marque;Poids (kg);Colonne interne
+F-001;Table basse chêne;129,90;3701234567890;12;https://cdn.example.test/a.jpg;Maison > Salon;Eloshon;12.5;zz1
+F-002;Chaise scandinave;59,00;3701234567906;0;https://cdn.example.test/b.jpg;Maison > Salon;Eloshon;4.2;zz2
+F-003;Lampe de bureau;39,90;3701234567913;5;https://cdn.example.test/c.png;Maison > Bureau;Lumo;1.1;zz3

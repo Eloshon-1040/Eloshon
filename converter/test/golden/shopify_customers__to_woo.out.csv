@@ -1,0 +1,4 @@
+user_login,user_email,first_name,last_name,roles,billing_first_name,billing_last_name,billing_company,billing_email,billing_phone,billing_address_1,billing_address_2,billing_city,billing_state,billing_postcode,billing_country,shipping_first_name,shipping_last_name,shipping_company,shipping_address_1,shipping_address_2,shipping_city,shipping_state,shipping_postcode,shipping_country
+camille.durand@example.com,camille.durand@example.com,Camille,Durand,customer,Camille,Durand,,camille.durand@example.com,+33612345678,12 rue des Fleurs,,Lyon,,69001,FR,Camille,Durand,,12 rue des Fleurs,,Lyon,,69001,FR
+john.smith@example.com,john.smith@example.com,John,Smith,customer,John,Smith,,john.smith@example.com,,5 Main St,,Austin,TX,73301,US,John,Smith,,5 Main St,,Austin,TX,73301,US
+camille.durand@example.com,camille.durand@example.com,Camille,D.,customer,Camille,D.,,camille.durand@example.com,,,,Paris,,,FR,Camille,D.,,,,Paris,,,FR

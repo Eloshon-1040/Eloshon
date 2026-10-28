@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "sourceFormat": "shopify_customers",
+  "targetFormat": "woo_customers",
+  "counts": {
+    "inputUnits": 60,
+    "outputUnits": 60,
+    "failedUnits": 0,
+    "outputRows": 60
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_pw_generic"
+    },
+    {
+      "code": "loss_woo_marketing_consent",
+      "params": {
+        "customers": 60,
+        "explicit": 34,
+        "timestamped": 0,
+        "pending": 34
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false,
+  "consentReport": {
+    "customers": 60,
+    "explicitSourceConsent": 34,
+    "withTimestamp": 0,
+    "pending": 34,
+    "optedOut": 26,
+    "unknown": 0,
+    "targetPolicy": "not-subscribed",
+    "requiresReconfirmation": true
+  }
+}

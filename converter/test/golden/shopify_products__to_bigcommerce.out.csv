@@ -1,0 +1,13 @@
+Item,Name,Type,SKU,Options,Inventory Tracking,Current Stock,Price,Cost Price,Sale Price,Description,Page Title,Product URL,Meta Description,UPC/EAN,Free Shipping,Weight,Is Visible,Product Condition,Show Product Condition,Image URL (Import),Image Description,Image is Thumbnail,Image Sort Order
+Product,Chemise en lin — Écru,physical,,,variant,,89.00,32.50,,<p>Chemise 100% lin.</p>,Chemise en lin écru,/chemise-lin-ecru/,Chemise légère en lin.,3401234567890,FALSE,0.25,TRUE,New,FALSE,,,,
+Variant,,,CHM-LIN-38,Type=Dropdown|Name=Taille|Value=38,,12,89.00,32.50,,,,,,3401234567890,,0.25,,,,,,,
+Variant,,,CHM-LIN-40,Type=Dropdown|Name=Taille|Value=40,,4,89.00,32.50,,,,,,3401234567891,,0.26,,,,,,,
+Image,,,,,,,,,,,,,,,,,,,,https://cdn.example.com/chemise-lin-1.jpg,Chemise lin écru,TRUE,0
+Product,Pull côtelé,physical,,,variant,,59.00,,45.00,<p>Pull chaud.</p>,,/pull-cotele/,,,FALSE,0.6,TRUE,New,FALSE,,,,
+Variant,,,PULL-M-NOIR,Type=Dropdown|Name=Taille|Value=MType=Dropdown|Name=Couleur|Value=Noir,,8,59.00,,45.00,,,,,,,0.6,,,,,,,
+Variant,,,PULL-L-NOIR,Type=Dropdown|Name=Taille|Value=LType=Dropdown|Name=Couleur|Value=Noir,,2,59.00,,,,,,,,,0.65,,,,,,,
+Image,,,,,,,,,,,,,,,,,,,,https://cdn.example.com/pull-1.jpg,Pull noir,TRUE,0
+Image,,,,,,,,,,,,,,,,,,,,https://cdn.example.com/pull-2.jpg,Pull détail,FALSE,1
+Product,"Robe d'été, coupe droite",physical,ROBE-01,,product,15,120.00,,,"<p>Tissu ""premium"" & doux</p>",,/robe-ete/,,,FALSE,0.3,TRUE,New,FALSE,,,,
+Image,,,,,,,,,,,,,,,,,,,,https://cdn.example.com/robe.jpg,,TRUE,0
+Product,Ancien modèle,physical,,,none,,,,,,,/archive-modele/,,,FALSE,,FALSE,New,FALSE,,,,

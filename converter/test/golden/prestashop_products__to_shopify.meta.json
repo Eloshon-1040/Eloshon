@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "sourceFormat": "prestashop.products.webservice.v1",
+  "targetFormat": "shopify_products",
+  "counts": {
+    "inputUnits": 25,
+    "outputUnits": 25,
+    "failedUnits": 0,
+    "outputRows": 53
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_shopify_identifiers",
+      "params": {
+        "kinds": "mpn"
+      }
+    },
+    {
+      "code": "loss_shopify_bundles",
+      "params": {
+        "count": 1,
+        "handles": "pack-mug-framed-poster"
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false
+}

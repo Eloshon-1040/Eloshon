@@ -1,0 +1,9 @@
+Type,SKU,Name,Published,Visibility in catalog,Short description,Description,In stock?,Stock,Regular price,Sale price,Tax status,Virtual,Weight (kg),Length (cm),Width (cm),Height (cm),Categories,Tags,Images,Parent,Attribute 1 name,Attribute 1 value(s),Attribute 1 visible,Attribute 1 global,Attribute 2 name,Attribute 2 value(s),Attribute 2 visible,Attribute 2 global,Attribute 3 name,Attribute 3 value(s),Attribute 3 visible,Attribute 3 global,"GTIN, UPC, EAN, or ISBN",Brands,Meta: matiere
+variable,CHEMISE-EN-LIN-ECRU,Chemise en lin — Écru,1,visible,Chemise légère en lin.,<p>Chemise 100% lin.</p>,,,,,,,,,,,Apparel > Tops,"femme, lin, été",https://cdn.example.com/chemise-lin-1.jpg,,Taille,"38, 40",1,1,,,,,,,,,,Atelier Léon,Lin
+variation,CHM-LIN-38,Chemise en lin — Écru - 38,1,,,,,12,89,,taxable,no,0.25,,,,,,,CHEMISE-EN-LIN-ECRU,Taille,38,,,,,,,,,,,3401234567890,,
+variation,CHM-LIN-40,Chemise en lin — Écru - 40,1,,,,,4,89,,taxable,no,0.26,,,,,,,CHEMISE-EN-LIN-ECRU,Taille,40,,,,,,,,,,,3401234567891,,
+variable,PULL-COTELE,Pull côtelé,1,visible,,<p>Pull chaud.</p>,,,,,,,,,,,,"hiver, laine","https://cdn.example.com/pull-1.jpg, https://cdn.example.com/pull-2.jpg",,Taille,"M, L",1,1,Couleur,Noir,1,1,,,,,,La Maille,Laine
+variation,PULL-M-NOIR,"Pull côtelé - M, Noir",1,,,,,8,59,45,taxable,no,0.6,,,,,,,PULL-COTELE,Taille,M,,,Couleur,Noir,,,,,,,,,
+variation,PULL-L-NOIR,"Pull côtelé - L, Noir",1,,,,,2,59,,taxable,no,0.65,,,,,,,PULL-COTELE,Taille,L,,,Couleur,Noir,,,,,,,,,
+simple,ROBE-01,"Robe d'été, coupe droite",1,visible,,"<p>Tissu ""premium"" & doux</p>",1,15,120,,taxable,no,0.3,,,,,,https://cdn.example.com/robe.jpg,,,,,,,,,,,,,,,Studio,
+simple,,Ancien modèle,0,visible,,,1,,,,taxable,no,,,,,,,,,,,,,,,,,,,,,,Studio,

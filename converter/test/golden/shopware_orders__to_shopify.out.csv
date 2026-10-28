@@ -1,0 +1,7 @@
+Name,Email,Financial Status,Fulfillment Status,Currency,Subtotal,Shipping,Taxes,Total,Discount Code,Discount Amount,Created at,Lineitem quantity,Lineitem name,Lineitem price,Lineitem sku,Billing Name,Billing Company,Billing Address1,Billing Address2,Billing City,Billing Zip,Billing Province,Billing Country,Billing Phone,Shipping Name,Shipping Company,Shipping Address1,Shipping Address2,Shipping City,Shipping Zip,Shipping Province,Shipping Country,Payment Method,Notes,Note Attributes
+,customer1@example.test,paid,unfulfilled,EUR,800.00,0.00,127.73,800.00,,,2026-09-21T19:34:02.073Z,1,Main product with advanced prices,800.00,SWDEMO10002,Test Customer 1,,1 Test Street,,Testville,1000,,DE,,Test Customer 2,,1 Test Street,,Testville,1000,,DE,Cash on delivery,,"source_order_number: 10000
+source_order_id: 01a0c576071271d5b12afb1e2d231305
+source_invoice_number: 1000"
+,customer1@example.test,paid,unfulfilled,EUR,1600.00,0.00,255.46,1600.00,,,2026-09-21T19:34:26.183Z,2,Main product with advanced prices,800.00,SWDEMO10002,Test Customer 3,,1 Test Street,,Testville,1000,,DE,,Test Customer 4,,1 Test Street,,Testville,1000,,DE,Cash on delivery,,"source_order_number: 10001
+source_order_id: 01a0c576664f7129b30ae8059cfbf4e6
+source_invoice_number: 1001"

@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "sourceFormat": "shopware.products.admin-api.v1",
+  "targetFormat": "woo_products_modern",
+  "counts": {
+    "inputUnits": 1,
+    "outputUnits": 1,
+    "failedUnits": 0,
+    "outputRows": 7
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_woo_translations",
+      "params": {
+        "locales": "de-DE"
+      }
+    },
+    {
+      "code": "loss_woo_identifiers",
+      "params": {
+        "kinds": "mpn"
+      }
+    },
+    {
+      "code": "loss_woo_attribute_collision",
+      "params": {
+        "names": "Size"
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "code": "id_removed_woo"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

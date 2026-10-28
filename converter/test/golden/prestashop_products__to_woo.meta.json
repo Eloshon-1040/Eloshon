@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "sourceFormat": "prestashop.products.webservice.v1",
+  "targetFormat": "woo_products_modern",
+  "counts": {
+    "inputUnits": 25,
+    "outputUnits": 25,
+    "failedUnits": 0,
+    "outputRows": 64
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_woo_cost"
+    },
+    {
+      "code": "loss_woo_identifiers",
+      "params": {
+        "kinds": "mpn"
+      }
+    },
+    {
+      "code": "loss_woo_bundles",
+      "params": {
+        "count": 1,
+        "handles": "pack-mug-framed-poster"
+      }
+    },
+    {
+      "code": "loss_woo_seo_title"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "woo_parent_skus_generated",
+      "params": {
+        "count": 11
+      }
+    },
+    {
+      "code": "duplicate_skus",
+      "params": {
+        "skus": "demo_1 (hummingbird-printed-t-shirt) · demo_3 (brown-bear-printed-sweater) · demo_6 (the-best-is-yet-to-come-framed-poster) · demo_5 (the-adventure-begins-framed-poster) · demo_7 (today-is-a-good-day-framed-poster) · demo_15 (mountain-fox-cushion) · demo_16 (brown-bear-cushion) · demo_17 (hummingbird-cushion) …"
+      }
+    },
+    {
+      "code": "id_removed_woo"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

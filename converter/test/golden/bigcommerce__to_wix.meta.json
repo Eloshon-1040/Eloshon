@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "sourceFormat": "bigcommerce_products",
+  "targetFormat": "wix_products",
+  "counts": {
+    "inputUnits": 2,
+    "outputUnits": 2,
+    "failedUnits": 0,
+    "outputRows": 6
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_bc_category_names"
+    },
+    {
+      "code": "loss_bc_brand_name"
+    },
+    {
+      "code": "loss_bc_warranty_bin"
+    },
+    {
+      "code": "loss_wix_option_type"
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false
+}

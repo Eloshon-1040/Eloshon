@@ -1,0 +1,19 @@
+Item,Name,Type,SKU,Options,Inventory Tracking,Current Stock,Price,Sale Price,Description,Product URL,UPC/EAN,Free Shipping,Weight,Width,Height,Depth,Is Visible,Product Condition,Show Product Condition,Variant Image URL,Image URL (Import),Image Description,Image is Thumbnail,Image Sort Order
+Product,AC Infinity A8 - 200mm,physical,AC-INFA8,,product,6,200.00,150.00,"<p>Ventilateur de conduit optimal pour des box de 150x200x200cm et pour des espaces interiurs, la maison etc...</p>
+",/ac-infinity-a8-200mm/,06735597626425,FALSE,14,24,56,45,TRUE,New,FALSE,,,,,
+Image,,,,,,,,,,,,,,,,,,,,,http://localhost:8881/wp-content/uploads/2026/09/logo-levis.jpg,le logo de levis,TRUE,0
+Product,AC Infinity A7 - 150mm,physical,,,variant,,400.00,300.00,"<p>Extracteur d'air optimal pour une box de 150x150x200cm</p>
+",/ac-infinity-a7-150mm/,,FALSE,12,16,40,20,TRUE,New,FALSE,,,,,
+Variant,,,AC-INFA7,Type=Dropdown|Name=Couleur / variante|Value=orangeType=Dropdown|Name=Taille|Value=small,,-1,400.00,300.00,,,,,12,,,,,,,http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg,,,,
+Variant,,,AC-INFA7,Type=Dropdown|Name=Couleur / variante|Value=orangeType=Dropdown|Name=Taille|Value=Moyen,,-1,400.00,300.00,,,,,12,,,,,,,http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg,,,,
+Variant,,,AC-INFA7,Type=Dropdown|Name=Couleur / variante|Value=orangeType=Dropdown|Name=Taille|Value=Large,,-1,400.00,300.00,,,,,12,,,,,,,http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg,,,,
+Variant,,,AC-INFA7,Type=Dropdown|Name=Couleur / variante|Value=roseType=Dropdown|Name=Taille|Value=small,,-1,400.00,300.00,,,,,12,,,,,,,http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg,,,,
+Variant,,,AC-INFA7,Type=Dropdown|Name=Couleur / variante|Value=roseType=Dropdown|Name=Taille|Value=Moyen,,-1,400.00,300.00,,,,,12,,,,,,,http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg,,,,
+Variant,,,AC-INFA7,Type=Dropdown|Name=Couleur / variante|Value=roseType=Dropdown|Name=Taille|Value=Large,,-1,400.00,300.00,,,,,12,,,,,,,http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg,,,,
+Variant,,,AC-INFA7,Type=Dropdown|Name=Couleur / variante|Value=rougeType=Dropdown|Name=Taille|Value=small,,-1,400.00,300.00,,,,,12,,,,,,,http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg,,,,
+Variant,,,AC-INFA7,Type=Dropdown|Name=Couleur / variante|Value=rougeType=Dropdown|Name=Taille|Value=Moyen,,-1,400.00,300.00,,,,,12,,,,,,,http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg,,,,
+Variant,,,AC-INFA7,Type=Dropdown|Name=Couleur / variante|Value=rougeType=Dropdown|Name=Taille|Value=Large,,-1,400.00,300.00,,,,,12,,,,,,,http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg,,,,
+Variant,,,AC-INFA7,Type=Dropdown|Name=Couleur / variante|Value=bleuType=Dropdown|Name=Taille|Value=small,,-1,400.00,300.00,,,,,12,,,,,,,http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg,,,,
+Variant,,,AC-INFA7,Type=Dropdown|Name=Couleur / variante|Value=bleuType=Dropdown|Name=Taille|Value=Moyen,,-1,400.00,300.00,,,,,12,,,,,,,http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg,,,,
+Variant,,,AC-INFA7,Type=Dropdown|Name=Couleur / variante|Value=bleuType=Dropdown|Name=Taille|Value=Large,,-1,400.00,300.00,,,08374628475658,,12,,,,,,,http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg,,,,
+Image,,,,,,,,,,,,,,,,,,,,,http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg,image de test de produit,TRUE,0

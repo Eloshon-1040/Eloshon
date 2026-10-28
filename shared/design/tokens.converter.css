@@ -1,0 +1,15 @@
+/* Eloshon Converter: accent and chrome only. Everything else is in tokens.base.css.
+ * Set data-app="converter" on <html>. Source of truth: .interface-design/system.md §2.2 and §2.4. */
+[data-app="converter"] {
+  --accent: #C2410C;
+  --accent-hover: light-dark(#A8360A, #B03A0A);
+  --accent-press: light-dark(#8F2E09, #9A3309);
+  --accent-ink: light-dark(#C2410C, #FF8F55);
+  --accent-tint: light-dark(#FDECE1, #2E2019);
+  --accent-tint-ink: light-dark(#9A3412, #FFB38A);
+  --on-accent: #FFFFFF;
+  --focus: var(--accent-ink);
+  --signal: #F26B1D;
+  --chrome: #111113; --chrome-2: #1A1A1D; --chrome-line: #26272B;
+  --chrome-ink: #E7E8EB; --chrome-muted: #A1A5AD;
+}

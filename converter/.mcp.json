@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "woocommerce_store": {
+      "command": "npx",
+      "args": ["-y", "@automattic/mcp-wordpress-remote@latest"],
+      "env": {
+        "WP_API_URL": "https://TON-SITE.com/wp-json/mcp/mcp-adapter-default-server",
+        "WP_API_USERNAME": "",
+        "WP_API_PASSWORD": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+Name,Email,Financial Status,Fulfillment Status,Currency,Subtotal,Shipping,Taxes,Total,Discount Code,Discount Amount,Created at,Lineitem quantity,Lineitem name,Lineitem price,Lineitem sku,Billing Name,Billing Company,Billing Address1,Billing Address2,Billing City,Billing Zip,Billing Province,Billing Country,Billing Phone,Shipping Name,Shipping Company,Shipping Address1,Shipping Address2,Shipping City,Shipping Zip,Shipping Province,Shipping Country,Payment Method,Notes,Note Attributes
+,,paid,fulfilled,EUR,294.00,15.00,64.89,373.89,,0.00,2026-09-21T19:03:29.822Z,1,Boloss 400,24.00,tEST-cLAUDE,,,,,,,,,,,,,,,,,,,,"source_order_number: 10001
+source_order_id: c3af207c-7c27-41c0-9391-d141ffa7bce4"
+,,,,,,,,,,,,1,Vase en céramique,270.00,364215376135191,,,,,,,,,,,,,,,,,,,,

@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "sourceFormat": "eloshon.catalog.v1",
+  "targetFormat": "woo_products_modern",
+  "counts": {
+    "inputUnits": 3,
+    "outputUnits": 3,
+    "failedUnits": 0,
+    "outputRows": 5
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_woo_translations",
+      "params": {
+        "locales": "en"
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "code": "eloshon_edits_applied",
+      "params": {
+        "count": 3
+      }
+    },
+    {
+      "code": "eloshon_products_removed",
+      "params": {
+        "count": 1
+      }
+    },
+    {
+      "code": "eloshon_other_entities",
+      "params": {
+        "products": 0,
+        "customers": 1,
+        "orders": 0
+      }
+    },
+    {
+      "code": "woo_parent_skus_generated",
+      "params": {
+        "count": 1
+      }
+    },
+    {
+      "code": "id_removed_woo"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

@@ -1,0 +1,491 @@
+{
+  "schemaVersion": 1,
+  "id": "canon.recognition.v1",
+  "notes": [
+    "Tunables of the semantic column recogniser (Phase 5.4). Everything the engine needs to decide is HERE, not in code: thresholds, stage weights, value-profile classifiers, name-normalisation stop tokens.",
+    "score = nameScore * weights.name + profileScore * weights.profile + contextScore * weights.context, then vetoes (contradictionPenalty by name strength). auto >= thresholds.auto ; grey zone in [thresholds.grey, thresholds.auto) ; below grey = no equivalent. An EMPTY column profile is neutral evidence (emptyNeutral), never negative.",
+    "Phase 6.5 — metafieldOwnership: a column that is a METAFIELD (Shopify (product.metafields.<ns>.<key>), WooCommerce Meta: <key>) gets an ownership tier — platform / merchant / thirdParty — from data only: the platform reservation grammar for app namespaces, the tiny merchant-owned and platform-standard lists, prefix clustering (>= minKeys keys of ONE file sharing a vendor-like prefix = one app family) and the default (an unknown NAMESPACE is third-party; a namespace-less key is merchant unless grammar/cluster says otherwise). A third-party column keeps its `metafields` candidate (carried, never dropped) and every other candidate is multiplied by thirdPartyPenalty (0 = never proposed). Learned decisions override, as everywhere.",
+    "Phase 6.7 — translations: how a locale-suffixed column (name_en, Title (fr), description_nl-BE, meta_title_de) resolves to { locale, field }. `patterns` capture the base and the locale (named groups base / locale); `baseFields` maps the normalised base word to the canon translation field. Default-locale election: when the plain base column exists in the file, every suffixed column is a translation; otherwise the FIRST suffixed column of that base (header order) is the default locale (its flat field) and the others are translations — surfaced with the locale so the user can change it.",
+    "Name tiers (Scraper CSV work, 2026-10): `normalized` = a known name once `_`, `-`, spaces, punctuation and camelCase are separators (product_name = Product Name = PRODUCT-NAME), same weight as an alias; `tokens` = the same words once tokenSynonyms, stopTokens and the unit are folded (nom_produit = Name, marca_producto = Brand). `ambiguous` lists names that alone fit several canon fields (value, available): each listed field gets ambiguousScore and the column values rank them, so the result is a suggestion, never an auto. `unitTokens` = the units a column name may state, by kind; `unitKindOf` = the kind each canon field is measured in; a stated unit of another kind multiplies the candidate by unitMismatchPenalty (Diamètre (mm) is never a stock)."
+  ],
+  "thresholds": {
+    "auto": 0.8,
+    "grey": 0.4
+  },
+  "weights": {
+    "name": 0.7,
+    "profile": 0.2,
+    "context": 0.1
+  },
+  "name": {
+    "exact": 1,
+    "alias": 0.95,
+    "normalized": 0.95,
+    "tokens": 0.9,
+    "tokensExclude": ["translations"],
+    "ambiguousScore": 0.6,
+    "ambiguous": {
+      "value": ["options", "grams", "metafields"],
+      "valeur": ["options", "grams", "metafields"],
+      "available": ["published", "inventoryQty", "stockStatus"],
+      "disponible": ["published", "inventoryQty", "stockStatus"]
+    },
+    "unitTokens": {
+      "mm": "length", "cm": "length", "m": "length", "inch": "length", "inches": "length",
+      "kg": "weight", "g": "weight", "gr": "weight", "grams": "weight", "lb": "weight", "lbs": "weight", "oz": "weight",
+      "eur": "currency", "usd": "currency", "gbp": "currency", "chf": "currency", "cad": "currency", "ttc": "currency", "ht": "currency",
+      "ml": "volume", "cl": "volume", "l": "volume",
+      "mois": "duration", "months": "duration", "jours": "duration", "days": "duration", "ans": "duration", "years": "duration",
+      "w": "power", "kw": "power", "v": "voltage"
+    },
+    "unitKindOf": {
+      "grams": "weight",
+      "lengthCm": "length", "widthCm": "length", "heightCm": "length",
+      "price": "currency", "compareAtPrice": "currency", "cost": "currency",
+      "subtotal": "currency", "shippingAmount": "currency", "taxes": "currency", "total": "currency", "discountAmount": "currency"
+    },
+    "unitMismatchPenalty": 0.5,
+    "similarityMax": 0.8,
+    "similarityMin": 0.55,
+    "stopTokens": [
+      "product",
+      "variant",
+      "default",
+      "item",
+      "the",
+      "de",
+      "du",
+      "des",
+      "le",
+      "la",
+      "les",
+      "d",
+      "l",
+      "of",
+      "code",
+      "export",
+      "import",
+      "en",
+      "in",
+      "par",
+      "a",
+      "et",
+      "and",
+      "ou",
+      "or"
+    ],
+    "tokenSynonyms": {
+      "qty": "quantity",
+      "qte": "quantity",
+      "quantite": "quantity",
+      "ref": "reference",
+      "sku": "reference",
+      "prix": "price",
+      "tarif": "price",
+      "img": "image",
+      "photo": "image",
+      "picture": "image",
+      "visuel": "image",
+      "desc": "description",
+      "descriptif": "description",
+      "nom": "name",
+      "titre": "title",
+      "libelle": "name",
+      "categorie": "category",
+      "categories": "category",
+      "collection": "category",
+      "marque": "brand",
+      "vendor": "brand",
+      "fabricant": "brand",
+      "manufacturer": "brand",
+      "poids": "weight",
+      "grams": "weight",
+      "kg": "weight",
+      "stock": "inventory",
+      "quantity": "inventory",
+      "available": "inventory",
+      "tel": "phone",
+      "telephone": "phone",
+      "mobile": "phone",
+      "courriel": "email",
+      "mail": "email",
+      "ville": "city",
+      "town": "city",
+      "pays": "country",
+      "postcode": "zip",
+      "postal": "zip",
+      "cp": "zip",
+      "tva": "tax",
+      "taxe": "tax",
+      "taxes": "tax",
+      "vat": "tax",
+      "statut": "status",
+      "etat": "status",
+      "state": "status",
+      "remise": "discount",
+      "reduction": "discount",
+      "coupon": "discount",
+      "promo": "discount",
+      "livraison": "shipping",
+      "port": "shipping",
+      "delivery": "shipping",
+      "total": "total",
+      "montant": "amount",
+      "commande": "order",
+      "devise": "currency",
+      "monnaie": "currency",
+      "ean13": "ean",
+      "gtin": "ean",
+      "upc": "ean",
+      "barcode": "ean",
+      "gencod": "ean",
+      "longueur": "length",
+      "largeur": "width",
+      "hauteur": "height",
+      "profondeur": "depth",
+      "produit": "product",
+      "producto": "product",
+      "prodotto": "product",
+      "produkt": "product",
+      "artikel": "item",
+      "nombre": "name",
+      "nome": "name",
+      "naam": "name",
+      "titulo": "title",
+      "marca": "brand",
+      "marchio": "brand",
+      "merk": "brand",
+      "marke": "brand",
+      "fabricante": "brand",
+      "hersteller": "brand",
+      "precio": "price",
+      "prezzo": "price",
+      "prijs": "price",
+      "preis": "price",
+      "peso": "weight",
+      "gewicht": "weight",
+      "imagen": "image",
+      "immagine": "image",
+      "afbeelding": "image",
+      "bild": "image",
+      "descripcion": "description",
+      "descrizione": "description",
+      "beschreibung": "description",
+      "omschrijving": "description",
+      "referencia": "reference",
+      "riferimento": "reference",
+      "existencias": "inventory",
+      "lager": "inventory",
+      "voorraad": "inventory"
+    }
+  },
+  "profiles": {
+    "sampleRows": 200,
+    "minNonEmpty": 3,
+    "classifiers": {
+      "bool": {
+        "values": [
+          "true",
+          "false",
+          "1",
+          "0",
+          "yes",
+          "no",
+          "oui",
+          "non",
+          "y",
+          "n",
+          "on",
+          "off",
+          "vrai",
+          "faux"
+        ],
+        "minRatio": 0.95
+      },
+      "int": {
+        "regex": "^-?\\d{1,12}$",
+        "minRatio": 0.95
+      },
+      "float": {
+        "regex": "^-?\\d{1,12}([.,]\\d+)?$",
+        "minRatio": 0.95
+      },
+      "price": {
+        "regex": "^-?\\s*(?:[€$£]\\s*)?\\d{1,9}(?:[ .,]\\d{3})*(?:[.,]\\d{1,4})?\\s*(?:€|\\$|£|EUR|USD|GBP|CHF)?$",
+        "minRatio": 0.9,
+        "needsDecimalRatio": 0.2
+      },
+      "ean": {
+        "regex": "^(\\d{8}|\\d{12}|\\d{13}|\\d{14})$",
+        "minRatio": 0.9
+      },
+      "date": {
+        "regex": "^(\\d{4}-\\d{2}-\\d{2}([T ]\\d{2}:\\d{2}(:\\d{2})?(\\.\\d+)?(Z|[+-]\\d{2}:?\\d{2})?)?|\\d{1,2}[/.-]\\d{1,2}[/.-]\\d{2,4}( \\d{1,2}:\\d{2}(:\\d{2})?)?)$",
+        "minRatio": 0.9
+      },
+      "email": {
+        "regex": "^[^\\s@]+@[^\\s@]+\\.[a-z]{2,}$",
+        "flags": "i",
+        "minRatio": 0.9
+      },
+      "phone": {
+        "regex": "^\\+?[\\d\\s().-]{6,20}$",
+        "minRatio": 0.9,
+        "requireDigits": 6
+      },
+      "imageUrl": {
+        "regex": "^https?://\\S+\\.(jpe?g|png|gif|webp|avif|svg|bmp|tiff?)(\\?\\S*)?$",
+        "flags": "i",
+        "minRatio": 0.7,
+        "listSeparators": [
+          ",",
+          "|",
+          ";",
+          "\n"
+        ]
+      },
+      "url": {
+        "regex": "^https?://\\S+$",
+        "flags": "i",
+        "minRatio": 0.9
+      },
+      "html": {
+        "regex": "<\\s*(p|br|div|span|ul|ol|li|strong|b|em|i|h[1-6]|table|img|a)\\b[^>]*>|&(nbsp|amp|lt|gt|quot);",
+        "flags": "i",
+        "minRatio": 0.3
+      },
+      "slug": {
+        "regex": "^[a-z0-9]+(?:[-_][a-z0-9]+)*$",
+        "minRatio": 0.95,
+        "minAvgLength": 4,
+        "minRows": 5
+      },
+      "countryCode": {
+        "regex": "^[A-Z]{2}$",
+        "minRatio": 0.95
+      },
+      "currencyCode": {
+        "regex": "^[A-Z]{3}$",
+        "minRatio": 0.95
+      },
+      "postcode": {
+        "regex": "^[A-Z0-9][A-Z0-9 -]{2,9}$",
+        "flags": "i",
+        "minRatio": 0.95,
+        "maxAvgLength": 10,
+        "minRows": 5
+      },
+      "state": {
+        "regex": "^[A-Z]{2,3}$|^[A-Za-zÀ-ÿ' -]{3,30}$",
+        "minRatio": 0.95,
+        "maxDistinctRatio": 0.5,
+        "minRows": 5
+      },
+      "path": {
+        "regex": "[>/»]|\\s>\\s",
+        "minRatio": 0.5,
+        "listSeparators": [
+          ",",
+          "|",
+          ";"
+        ]
+      },
+      "list": {
+        "regex": "[,|;]",
+        "minRatio": 0.5
+      },
+      "name": {
+        "regex": "^[A-Za-zÀ-ÿ'’. -]{2,40}$",
+        "minRatio": 0.95,
+        "maxDistinctRatio": 1.01,
+        "minRows": 5
+      },
+      "longText": {
+        "minAvgLength": 120
+      },
+      "id": {
+        "regex": "^[A-Za-z0-9_./-]{1,64}$",
+        "minRatio": 0.95,
+        "minUniqueRatio": 0.9,
+        "minRows": 5
+      }
+    },
+    "enum": {
+      "maxDistinct": 12,
+      "maxDistinctRatio": 0.3,
+      "minRows": 5
+    },
+    "uniqueness": {
+      "uniqueRatio": 0.95
+    },
+    "strongTyped": [
+      "bool",
+      "int",
+      "float",
+      "price",
+      "ean",
+      "date",
+      "email",
+      "phone",
+      "imageUrl",
+      "url",
+      "html"
+    ],
+    "neutral": [
+      "text",
+      "empty",
+      "enum",
+      "list",
+      "id",
+      "name",
+      "longText"
+    ],
+    "specificity": [
+      "ean",
+      "email",
+      "imageUrl",
+      "url",
+      "html",
+      "date",
+      "bool",
+      "countryCode",
+      "currencyCode",
+      "price",
+      "phone",
+      "postcode",
+      "slug",
+      "int",
+      "float",
+      "state",
+      "path",
+      "list",
+      "name",
+      "id",
+      "enum",
+      "longText",
+      "text"
+    ],
+    "emptyNeutral": 0.5,
+    "contradictionPenalty": {
+      "exact": 0.7,
+      "alias": 0.6,
+      "similar": 0.3,
+      "none": 0.3
+    },
+    "requiredEmptyRatio": 0.8
+  },
+  "context": {
+    "familyBoost": 0.9,
+    "referenceColumnBoost": 1,
+    "referenceInclusionRatio": 0.9,
+    "neighbourPairs": [
+      {
+        "pattern": "^(.*)(name|nom)$",
+        "counterpart": "$1value",
+        "canon": "options"
+      },
+      {
+        "pattern": "^(.*)(value|valeur)$",
+        "counterpart": "$1name",
+        "canon": "options"
+      }
+    ]
+  },
+  "samples": {
+    "perCandidate": 3,
+    "maxLength": 80
+  },
+  "metafieldOwnership": {
+    "columnPatterns": [
+      {
+        "platform": "shopify",
+        "pattern": "\\(product\\.metafields\\.([^.)]+)\\.([^.)]+)\\)\\s*$",
+        "namespace": 1,
+        "key": 2
+      },
+      {
+        "platform": "woocommerce",
+        "pattern": "^Meta:\\s*(.+?)\\s*$",
+        "key": 1
+      }
+    ],
+    "platformOwned": {
+      "shopify": [
+        "global",
+        "shopify"
+      ]
+    },
+    "merchantOwned": {
+      "shopify": [
+        "custom",
+        "my_fields"
+      ],
+      "woocommerce": []
+    },
+    "thirdPartyGrammar": [
+      {
+        "platform": "shopify",
+        "on": "namespace",
+        "pattern": "^app--\\d+--",
+        "note": "Shopify app-reserved namespace ($app: → app--<app id>--<ns>)"
+      },
+      {
+        "platform": "woocommerce",
+        "on": "key",
+        "pattern": "^_",
+        "note": "WordPress protected meta (is_protected_meta): plugin / core owned, hidden from the Custom Fields box"
+      }
+    ],
+    "unknownNamespaceIsThirdParty": true,
+    "prefixCluster": {
+      "minKeys": 3,
+      "separators": "[-_.]",
+      "minPrefixLength": 2,
+      "note": "keys of ONE file sharing a first token that is neither a stop token nor a field-vocabulary token (name.stopTokens / tokenSynonyms) form one app family"
+    },
+    "thirdPartyPenalty": 0
+  },
+  "translations": {
+    "patterns": [
+      {
+        "pattern": "^(?<base>.+?)[ _.-]*\\((?<locale>[a-z]{2}(?:[-_][A-Za-z]{2})?)\\)\\s*$",
+        "note": "Title (fr), Description (nl-BE)"
+      },
+      {
+        "pattern": "^(?<base>[A-Za-z][A-Za-z ]*?)[ _-](?<locale>[a-z]{2}(?:[-_][A-Za-z]{2})?)$",
+        "note": "name_en, title-fr, seo_title_de, description_nl-BE"
+      }
+    ],
+    "baseFields": {
+      "name": "title",
+      "title": "title",
+      "titre": "title",
+      "nom": "title",
+      "libelle": "title",
+      "libellé": "title",
+      "description": "bodyHtml",
+      "body": "bodyHtml",
+      "body html": "bodyHtml",
+      "description longue": "bodyHtml",
+      "content": "bodyHtml",
+      "slug": "slug",
+      "handle": "slug",
+      "url": "slug",
+      "link rewrite": "slug",
+      "seo title": "seoTitle",
+      "meta title": "seoTitle",
+      "page title": "seoTitle",
+      "titre seo": "seoTitle",
+      "seo description": "seoDescription",
+      "meta description": "seoDescription",
+      "description seo": "seoDescription"
+    },
+    "flatFieldOf": {
+      "title": "title",
+      "bodyHtml": "bodyHtml",
+      "slug": "handle",
+      "seoTitle": "seoTitle",
+      "seoDescription": "seoDescription"
+    }
+  }
+}

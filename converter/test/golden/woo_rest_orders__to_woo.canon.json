@@ -1,0 +1,1152 @@
+[
+  {
+    "number": "33",
+    "email": "customer1@example.test",
+    "createdAt": "2026-09-21T02:16:16.000Z",
+    "financialStatus": "paid",
+    "fulfillmentStatus": "unfulfilled",
+    "currency": "EUR",
+    "subtotal": 600,
+    "shipping": 15,
+    "taxes": 0,
+    "total": 615,
+    "discountCode": "",
+    "discountAmount": 0,
+    "paymentMethod": "Other",
+    "transactionId": "6849669",
+    "note": "",
+    "billing": {
+      "company": "Example Corp",
+      "address1": "1 Rue Exemple",
+      "address2": "",
+      "city": "Bruxelles",
+      "province": "",
+      "provinceCode": "",
+      "country": "BE",
+      "zip": "1000",
+      "phone": "+32470000000",
+      "name": "Test Customer 1"
+    },
+    "shipping_": {
+      "company": "Example Corp",
+      "address1": "1 Rue Exemple",
+      "address2": "",
+      "city": "Bruxelles",
+      "province": "",
+      "provinceCode": "",
+      "country": "BE",
+      "zip": "1000",
+      "phone": "+32470000000",
+      "name": "Test Customer 1"
+    },
+    "lineItems": [
+      {
+        "name": "AC Infinity A7 - 150mm",
+        "sku": "AC-INFA7",
+        "quantity": 2,
+        "price": 300
+      }
+    ],
+    "numbering": {
+      "sourceNumber": "33",
+      "sourceId": "33"
+    },
+    "identity": {
+      "sourceId": "33"
+    },
+    "status": {
+      "sourceState": "processing",
+      "financial": "paid",
+      "fulfillment": "unfulfilled",
+      "lifecycle": "open"
+    },
+    "amounts": {
+      "taxIncluded": false,
+      "total": 615,
+      "taxes": 0,
+      "shipping": 15,
+      "shippingTax": 0,
+      "discounts": 0,
+      "subtotal": 600
+    },
+    "timestamps": {
+      "created": "2026-09-21T02:16:16.000Z",
+      "updated": "2026-09-21T02:22:28.000Z",
+      "paid": "2026-09-21T02:22:23.000Z"
+    },
+    "customerRef": {
+      "sourceId": "4",
+      "isGuest": false,
+      "email": "customer1@example.test"
+    },
+    "payments": [
+      {
+        "kind": "sale",
+        "status": "success",
+        "amount": 615,
+        "currency": "EUR",
+        "method": "Other",
+        "gateway": "other",
+        "providerRef": "6849669",
+        "at": "2026-09-21T02:22:23.000Z"
+      }
+    ],
+    "source": "admin",
+    "shippingLines": [
+      {
+        "method": "Flat rate",
+        "code": "flat_rate",
+        "amount": 15,
+        "tax": 0
+      }
+    ],
+    "items": [
+      {
+        "name": "AC Infinity A7 - 150mm",
+        "sku": "AC-INFA7",
+        "quantity": 2,
+        "unitPrice": 300,
+        "total": 600,
+        "totalTax": 0,
+        "kind": "product",
+        "productRef": "13",
+        "variantRef": "14",
+        "identifiers": {
+          "gtin": "08374628475658"
+        },
+        "imageSrc": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+        "sourceExtension": {
+          "woocommerce": {
+            "subtotal": "600.00",
+            "subtotal_tax": "0.00",
+            "line_id": "4",
+            "meta_data": [
+              {
+                "id": 39,
+                "key": "couleur-variante",
+                "value": "bleu",
+                "display_key": "Couleur / variante",
+                "display_value": "bleu"
+              },
+              {
+                "id": 40,
+                "key": "taille",
+                "value": "Large",
+                "display_key": "Taille",
+                "display_value": "Large"
+              },
+              {
+                "id": 41,
+                "key": "Backordered",
+                "value": "1",
+                "display_key": "Backordered",
+                "display_value": "1"
+              },
+              {
+                "id": 42,
+                "key": "_reduced_stock",
+                "value": "2",
+                "display_key": "_reduced_stock",
+                "display_value": "2"
+              }
+            ],
+            "tax_class": "",
+            "parent_name": "AC Infinity A7 - 150mm"
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "woocommerce",
+            "sourceField": "name",
+            "sourceValue": "AC Infinity A7 - 150mm",
+            "transform": "text",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "woocommerce",
+            "sourceField": "sku",
+            "sourceValue": "AC-INFA7",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "woocommerce",
+            "sourceField": "quantity",
+            "sourceValue": 2,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "woocommerce",
+            "sourceField": "price",
+            "sourceValue": 300,
+            "transform": "money",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "woocommerce",
+            "sourceField": "total",
+            "sourceValue": "600.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "woocommerce",
+            "sourceField": "total_tax",
+            "sourceValue": "0.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "woocommerce",
+            "sourceField": "id",
+            "sourceValue": 4,
+            "transform": "constant",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "woocommerce",
+            "sourceField": "product_id",
+            "sourceValue": 13,
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "variantRef": {
+            "platform": "woocommerce",
+            "sourceField": "variation_id",
+            "sourceValue": 14,
+            "transform": "id_or_none",
+            "method": "exact"
+          },
+          "identifiers.gtin": {
+            "platform": "woocommerce",
+            "sourceField": "global_unique_id",
+            "sourceValue": "08374628475658",
+            "transform": "text",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "woocommerce",
+            "sourceField": "image.src",
+            "sourceValue": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+            "transform": "text",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "sourceExtension": {
+      "woocommerce": {
+        "currency_symbol": "€",
+        "discount_tax": "0.00",
+        "cart_tax": "0.00",
+        "date_created_local": "2026-09-21T02:16:16",
+        "date_modified_local": "2026-09-21T02:22:28",
+        "date_paid_local": "2026-09-21T02:22:23",
+        "meta_data": [
+          {
+            "id": 14,
+            "key": "_wc_order_attribution_source_type",
+            "value": "admin"
+          }
+        ],
+        "parent_id": 0,
+        "version": "11.1.1",
+        "is_editable": false,
+        "needs_payment": false,
+        "needs_processing": true
+      }
+    },
+    "provenance": {
+      "numbering.sourceNumber": {
+        "platform": "woocommerce",
+        "sourceField": "number",
+        "sourceValue": "33",
+        "transform": "text",
+        "method": "exact"
+      },
+      "numbering.sourceId": {
+        "platform": "woocommerce",
+        "sourceField": "id",
+        "sourceValue": 33,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "woocommerce",
+        "sourceField": "id",
+        "sourceValue": 33,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "status.sourceState": {
+        "platform": "woocommerce",
+        "sourceField": "status",
+        "sourceValue": "processing",
+        "transform": "text",
+        "method": "exact"
+      },
+      "status.financial": {
+        "platform": "woocommerce",
+        "sourceField": "status",
+        "sourceValue": "processing",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status.fulfillment": {
+        "platform": "woocommerce",
+        "sourceField": "status",
+        "sourceValue": "processing",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status.lifecycle": {
+        "platform": "woocommerce",
+        "sourceField": "status",
+        "sourceValue": "processing",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "currency": {
+        "platform": "woocommerce",
+        "sourceField": "currency",
+        "sourceValue": "EUR",
+        "transform": "text",
+        "method": "exact"
+      },
+      "amounts.taxIncluded": {
+        "platform": "woocommerce",
+        "sourceField": "prices_include_tax",
+        "sourceValue": false,
+        "transform": "bool",
+        "method": "exact"
+      },
+      "amounts.total": {
+        "platform": "woocommerce",
+        "sourceField": "total",
+        "sourceValue": "615.00",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.taxes": {
+        "platform": "woocommerce",
+        "sourceField": "total_tax",
+        "sourceValue": "0.00",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shipping": {
+        "platform": "woocommerce",
+        "sourceField": "shipping_total",
+        "sourceValue": "15.00",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shippingTax": {
+        "platform": "woocommerce",
+        "sourceField": "shipping_tax",
+        "sourceValue": "0.00",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.discounts": {
+        "platform": "woocommerce",
+        "sourceField": "discount_total",
+        "sourceValue": "0.00",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.subtotal": {
+        "platform": "woocommerce",
+        "sourceField": "line_items",
+        "transform": "sum_of",
+        "method": "exact"
+      },
+      "timestamps.created": {
+        "platform": "woocommerce",
+        "sourceField": "date_created_gmt",
+        "sourceValue": "2026-09-21T02:16:16",
+        "transform": "date_iso",
+        "method": "exact"
+      },
+      "timestamps.updated": {
+        "platform": "woocommerce",
+        "sourceField": "date_modified_gmt",
+        "sourceValue": "2026-09-21T02:22:28",
+        "transform": "date_iso",
+        "method": "exact"
+      },
+      "timestamps.paid": {
+        "platform": "woocommerce",
+        "sourceField": "date_paid_gmt",
+        "sourceValue": "2026-09-21T02:22:23",
+        "transform": "date_present",
+        "method": "exact"
+      },
+      "customerRef.sourceId": {
+        "platform": "woocommerce",
+        "sourceField": "customer_id",
+        "sourceValue": 4,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "customerRef.isGuest": {
+        "platform": "woocommerce",
+        "sourceField": "customer_id",
+        "sourceValue": 4,
+        "transform": "equals_map",
+        "method": "exact"
+      },
+      "customerRef.email": {
+        "platform": "woocommerce",
+        "sourceField": "billing.email",
+        "sourceValue": "customer1@example.test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "billing": {
+        "platform": "woocommerce",
+        "sourceField": "billing",
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shipping_": {
+        "platform": "woocommerce",
+        "sourceField": "shipping",
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "payments[0]": {
+        "platform": "woocommerce",
+        "sourceField": "payment_method",
+        "transform": "object_map",
+        "method": "exact"
+      },
+      "note": {
+        "platform": "woocommerce",
+        "sourceField": "customer_note",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      },
+      "source": {
+        "platform": "woocommerce",
+        "sourceField": "created_via",
+        "sourceValue": "admin",
+        "transform": "text_present",
+        "method": "exact"
+      },
+      "shippingLines": {
+        "platform": "woocommerce",
+        "sourceField": "shipping_lines",
+        "transform": "objects_map",
+        "method": "exact"
+      },
+      "items": {
+        "platform": "woocommerce",
+        "sourceField": "line_items",
+        "transform": "items",
+        "method": "structural"
+      },
+      "lineItems": {
+        "platform": "woocommerce",
+        "sourceField": "items",
+        "transform": "line_items_from_items",
+        "method": "structural"
+      },
+      "number": {
+        "platform": "woocommerce",
+        "sourceField": "number",
+        "sourceValue": "33",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "email": {
+        "platform": "woocommerce",
+        "sourceField": "billing.email",
+        "sourceValue": "customer1@example.test",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "createdAt": {
+        "platform": "woocommerce",
+        "sourceField": "date_created_gmt",
+        "sourceValue": "2026-09-21T02:16:16",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "financialStatus": {
+        "platform": "woocommerce",
+        "sourceField": "status",
+        "sourceValue": "processing",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "fulfillmentStatus": {
+        "platform": "woocommerce",
+        "sourceField": "status",
+        "sourceValue": "processing",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "subtotal": {
+        "platform": "woocommerce",
+        "sourceField": "line_items",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "shipping": {
+        "platform": "woocommerce",
+        "sourceField": "shipping_total",
+        "sourceValue": "15.00",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "taxes": {
+        "platform": "woocommerce",
+        "sourceField": "total_tax",
+        "sourceValue": "0.00",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "total": {
+        "platform": "woocommerce",
+        "sourceField": "total",
+        "sourceValue": "615.00",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "discountAmount": {
+        "platform": "woocommerce",
+        "sourceField": "discount_total",
+        "sourceValue": "0.00",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "paymentMethod": {
+        "platform": "canon",
+        "sourceField": "payments.0.method",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "transactionId": {
+        "platform": "canon",
+        "sourceField": "payments.0.providerRef",
+        "transform": "first_non_empty",
+        "method": "structural"
+      }
+    }
+  },
+  {
+    "number": "32",
+    "email": "",
+    "createdAt": "2026-09-21T01:57:19.000Z",
+    "financialStatus": "paid",
+    "fulfillmentStatus": "fulfilled",
+    "currency": "EUR",
+    "subtotal": 1200,
+    "shipping": 0,
+    "taxes": 0,
+    "total": 1200,
+    "discountCode": "",
+    "discountAmount": 0,
+    "paymentMethod": "",
+    "transactionId": "",
+    "note": "note test",
+    "billing": {
+      "name": "",
+      "company": "",
+      "address1": "",
+      "address2": "",
+      "city": "",
+      "province": "",
+      "provinceCode": "",
+      "country": "",
+      "zip": "",
+      "phone": ""
+    },
+    "shipping_": {
+      "company": "Example Corp",
+      "address1": "1 Rue Exemple",
+      "address2": "",
+      "city": "Bruxelles",
+      "province": "Hinaut",
+      "provinceCode": "Hinaut",
+      "country": "BE",
+      "zip": "1000",
+      "phone": "+32470000000",
+      "name": "Test Customer 2"
+    },
+    "lineItems": [
+      {
+        "name": "AC Infinity A7 - 150mm",
+        "sku": "AC-INFA7",
+        "quantity": 3,
+        "price": 300
+      },
+      {
+        "name": "AC Infinity A7 - 150mm",
+        "sku": "AC-INFA7",
+        "quantity": 1,
+        "price": 300
+      }
+    ],
+    "numbering": {
+      "sourceNumber": "32",
+      "sourceId": "32"
+    },
+    "identity": {
+      "sourceId": "32"
+    },
+    "status": {
+      "sourceState": "completed",
+      "financial": "paid",
+      "fulfillment": "fulfilled",
+      "lifecycle": "closed"
+    },
+    "amounts": {
+      "taxIncluded": false,
+      "total": 1200,
+      "taxes": 0,
+      "shipping": 0,
+      "shippingTax": 0,
+      "discounts": 0,
+      "subtotal": 1200
+    },
+    "timestamps": {
+      "created": "2026-09-21T01:57:19.000Z",
+      "updated": "2026-09-21T02:01:26.000Z",
+      "paid": "2026-09-21T02:01:03.000Z",
+      "completed": "2026-09-21T02:01:03.000Z"
+    },
+    "customerRef": {
+      "sourceId": "0",
+      "isGuest": true
+    },
+    "payments": [
+      {
+        "kind": "sale",
+        "status": "success",
+        "amount": 1200,
+        "currency": "EUR",
+        "at": "2026-09-21T02:01:03.000Z"
+      }
+    ],
+    "source": "admin",
+    "items": [
+      {
+        "name": "AC Infinity A7 - 150mm",
+        "sku": "AC-INFA7",
+        "quantity": 3,
+        "unitPrice": 300,
+        "total": 900,
+        "totalTax": 0,
+        "kind": "product",
+        "productRef": "13",
+        "variantRef": "14",
+        "identifiers": {
+          "gtin": "08374628475658"
+        },
+        "imageSrc": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+        "sourceExtension": {
+          "woocommerce": {
+            "subtotal": "900.00",
+            "subtotal_tax": "0.00",
+            "line_id": "1",
+            "meta_data": [
+              {
+                "id": 10,
+                "key": "couleur-variante",
+                "value": "bleu",
+                "display_key": "Couleur / variante",
+                "display_value": "bleu"
+              },
+              {
+                "id": 11,
+                "key": "taille",
+                "value": "Large",
+                "display_key": "Taille",
+                "display_value": "Large"
+              },
+              {
+                "id": 23,
+                "key": "_reduced_stock",
+                "value": "3",
+                "display_key": "_reduced_stock",
+                "display_value": "3"
+              }
+            ],
+            "tax_class": "",
+            "parent_name": "AC Infinity A7 - 150mm"
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "woocommerce",
+            "sourceField": "name",
+            "sourceValue": "AC Infinity A7 - 150mm",
+            "transform": "text",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "woocommerce",
+            "sourceField": "sku",
+            "sourceValue": "AC-INFA7",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "woocommerce",
+            "sourceField": "quantity",
+            "sourceValue": 3,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "woocommerce",
+            "sourceField": "price",
+            "sourceValue": 300,
+            "transform": "money",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "woocommerce",
+            "sourceField": "total",
+            "sourceValue": "900.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "woocommerce",
+            "sourceField": "total_tax",
+            "sourceValue": "0.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "woocommerce",
+            "sourceField": "id",
+            "sourceValue": 1,
+            "transform": "constant",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "woocommerce",
+            "sourceField": "product_id",
+            "sourceValue": 13,
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "variantRef": {
+            "platform": "woocommerce",
+            "sourceField": "variation_id",
+            "sourceValue": 14,
+            "transform": "id_or_none",
+            "method": "exact"
+          },
+          "identifiers.gtin": {
+            "platform": "woocommerce",
+            "sourceField": "global_unique_id",
+            "sourceValue": "08374628475658",
+            "transform": "text",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "woocommerce",
+            "sourceField": "image.src",
+            "sourceValue": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+            "transform": "text",
+            "method": "exact"
+          }
+        }
+      },
+      {
+        "name": "AC Infinity A7 - 150mm",
+        "sku": "AC-INFA7",
+        "quantity": 1,
+        "unitPrice": 300,
+        "total": 300,
+        "totalTax": 0,
+        "kind": "product",
+        "productRef": "13",
+        "variantRef": "17",
+        "imageSrc": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+        "sourceExtension": {
+          "woocommerce": {
+            "subtotal": "300.00",
+            "subtotal_tax": "0.00",
+            "line_id": "2",
+            "meta_data": [
+              {
+                "id": 21,
+                "key": "couleur-variante",
+                "value": "rouge",
+                "display_key": "Couleur / variante",
+                "display_value": "rouge"
+              },
+              {
+                "id": 22,
+                "key": "taille",
+                "value": "Large",
+                "display_key": "Taille",
+                "display_value": "Large"
+              },
+              {
+                "id": 24,
+                "key": "_reduced_stock",
+                "value": "1",
+                "display_key": "_reduced_stock",
+                "display_value": "1"
+              }
+            ],
+            "tax_class": "",
+            "parent_name": "AC Infinity A7 - 150mm"
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "woocommerce",
+            "sourceField": "name",
+            "sourceValue": "AC Infinity A7 - 150mm",
+            "transform": "text",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "woocommerce",
+            "sourceField": "sku",
+            "sourceValue": "AC-INFA7",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "woocommerce",
+            "sourceField": "quantity",
+            "sourceValue": 1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "woocommerce",
+            "sourceField": "price",
+            "sourceValue": 300,
+            "transform": "money",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "woocommerce",
+            "sourceField": "total",
+            "sourceValue": "300.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "woocommerce",
+            "sourceField": "total_tax",
+            "sourceValue": "0.00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "woocommerce",
+            "sourceField": "id",
+            "sourceValue": 2,
+            "transform": "constant",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "woocommerce",
+            "sourceField": "product_id",
+            "sourceValue": 13,
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "variantRef": {
+            "platform": "woocommerce",
+            "sourceField": "variation_id",
+            "sourceValue": 17,
+            "transform": "id_or_none",
+            "method": "exact"
+          },
+          "imageSrc": {
+            "platform": "woocommerce",
+            "sourceField": "image.src",
+            "sourceValue": "http://localhost:8881/wp-content/uploads/2026/09/eloshon-scraper-logo.jpg",
+            "transform": "text",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "sourceExtension": {
+      "woocommerce": {
+        "currency_symbol": "€",
+        "discount_tax": "0.00",
+        "cart_tax": "0.00",
+        "date_created_local": "2026-09-21T01:57:19",
+        "date_modified_local": "2026-09-21T02:01:26",
+        "date_paid_local": "2026-09-21T02:01:03",
+        "date_completed_local": "2026-09-21T02:01:03",
+        "meta_data": [
+          {
+            "id": 10,
+            "key": "_wc_order_attribution_source_type",
+            "value": "admin"
+          }
+        ],
+        "parent_id": 0,
+        "version": "11.1.1",
+        "is_editable": false,
+        "needs_payment": false,
+        "needs_processing": true
+      }
+    },
+    "provenance": {
+      "numbering.sourceNumber": {
+        "platform": "woocommerce",
+        "sourceField": "number",
+        "sourceValue": "32",
+        "transform": "text",
+        "method": "exact"
+      },
+      "numbering.sourceId": {
+        "platform": "woocommerce",
+        "sourceField": "id",
+        "sourceValue": 32,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "woocommerce",
+        "sourceField": "id",
+        "sourceValue": 32,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "status.sourceState": {
+        "platform": "woocommerce",
+        "sourceField": "status",
+        "sourceValue": "completed",
+        "transform": "text",
+        "method": "exact"
+      },
+      "status.financial": {
+        "platform": "woocommerce",
+        "sourceField": "status",
+        "sourceValue": "completed",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status.fulfillment": {
+        "platform": "woocommerce",
+        "sourceField": "status",
+        "sourceValue": "completed",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status.lifecycle": {
+        "platform": "woocommerce",
+        "sourceField": "status",
+        "sourceValue": "completed",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "currency": {
+        "platform": "woocommerce",
+        "sourceField": "currency",
+        "sourceValue": "EUR",
+        "transform": "text",
+        "method": "exact"
+      },
+      "amounts.taxIncluded": {
+        "platform": "woocommerce",
+        "sourceField": "prices_include_tax",
+        "sourceValue": false,
+        "transform": "bool",
+        "method": "exact"
+      },
+      "amounts.total": {
+        "platform": "woocommerce",
+        "sourceField": "total",
+        "sourceValue": "1200.00",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.taxes": {
+        "platform": "woocommerce",
+        "sourceField": "total_tax",
+        "sourceValue": "0.00",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shipping": {
+        "platform": "woocommerce",
+        "sourceField": "shipping_total",
+        "sourceValue": "0.00",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shippingTax": {
+        "platform": "woocommerce",
+        "sourceField": "shipping_tax",
+        "sourceValue": "0.00",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.discounts": {
+        "platform": "woocommerce",
+        "sourceField": "discount_total",
+        "sourceValue": "0.00",
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.subtotal": {
+        "platform": "woocommerce",
+        "sourceField": "line_items",
+        "transform": "sum_of",
+        "method": "exact"
+      },
+      "timestamps.created": {
+        "platform": "woocommerce",
+        "sourceField": "date_created_gmt",
+        "sourceValue": "2026-09-21T01:57:19",
+        "transform": "date_iso",
+        "method": "exact"
+      },
+      "timestamps.updated": {
+        "platform": "woocommerce",
+        "sourceField": "date_modified_gmt",
+        "sourceValue": "2026-09-21T02:01:26",
+        "transform": "date_iso",
+        "method": "exact"
+      },
+      "timestamps.paid": {
+        "platform": "woocommerce",
+        "sourceField": "date_paid_gmt",
+        "sourceValue": "2026-09-21T02:01:03",
+        "transform": "date_present",
+        "method": "exact"
+      },
+      "timestamps.completed": {
+        "platform": "woocommerce",
+        "sourceField": "date_completed_gmt",
+        "sourceValue": "2026-09-21T02:01:03",
+        "transform": "date_present",
+        "method": "exact"
+      },
+      "customerRef.sourceId": {
+        "platform": "woocommerce",
+        "sourceField": "customer_id",
+        "sourceValue": 0,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "customerRef.isGuest": {
+        "platform": "woocommerce",
+        "sourceField": "customer_id",
+        "sourceValue": 0,
+        "transform": "equals_map",
+        "method": "exact"
+      },
+      "shipping_": {
+        "platform": "woocommerce",
+        "sourceField": "shipping",
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "payments[0]": {
+        "platform": "woocommerce",
+        "sourceField": "payment_method",
+        "transform": "object_map",
+        "method": "exact"
+      },
+      "note": {
+        "platform": "woocommerce",
+        "sourceField": "customer_note",
+        "sourceValue": "note test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "source": {
+        "platform": "woocommerce",
+        "sourceField": "created_via",
+        "sourceValue": "admin",
+        "transform": "text_present",
+        "method": "exact"
+      },
+      "items": {
+        "platform": "woocommerce",
+        "sourceField": "line_items",
+        "transform": "items",
+        "method": "structural"
+      },
+      "lineItems": {
+        "platform": "woocommerce",
+        "sourceField": "items",
+        "transform": "line_items_from_items",
+        "method": "structural"
+      },
+      "number": {
+        "platform": "woocommerce",
+        "sourceField": "number",
+        "sourceValue": "32",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "createdAt": {
+        "platform": "woocommerce",
+        "sourceField": "date_created_gmt",
+        "sourceValue": "2026-09-21T01:57:19",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "financialStatus": {
+        "platform": "woocommerce",
+        "sourceField": "status",
+        "sourceValue": "completed",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "fulfillmentStatus": {
+        "platform": "woocommerce",
+        "sourceField": "status",
+        "sourceValue": "completed",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "subtotal": {
+        "platform": "woocommerce",
+        "sourceField": "line_items",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "shipping": {
+        "platform": "woocommerce",
+        "sourceField": "shipping_total",
+        "sourceValue": "0.00",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "taxes": {
+        "platform": "woocommerce",
+        "sourceField": "total_tax",
+        "sourceValue": "0.00",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "total": {
+        "platform": "woocommerce",
+        "sourceField": "total",
+        "sourceValue": "1200.00",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "discountAmount": {
+        "platform": "woocommerce",
+        "sourceField": "discount_total",
+        "sourceValue": "0.00",
+        "transform": "first_number",
+        "method": "structural"
+      }
+    }
+  }
+]

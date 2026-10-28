@@ -1,0 +1,614 @@
+[
+  {
+    "id": 2,
+    "unremovable": "1",
+    "delivery": "0",
+    "hidden": "0",
+    "send_email": "1",
+    "module_name": "",
+    "invoice": "1",
+    "color": "#3498D8",
+    "logable": "1",
+    "shipped": "0",
+    "paid": "1",
+    "pdf_delivery": "0",
+    "pdf_invoice": "1",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "Payment accepted"
+      },
+      {
+        "id": 2,
+        "value": "Payment accepted"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": "payment"
+      },
+      {
+        "id": 2,
+        "value": "payment"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "unremovable": "1",
+    "delivery": "1",
+    "hidden": "0",
+    "send_email": "1",
+    "module_name": "",
+    "invoice": "1",
+    "color": "#3498D8",
+    "logable": "1",
+    "shipped": "0",
+    "paid": "1",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "Processing in progress"
+      },
+      {
+        "id": 2,
+        "value": "Processing in progress"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": "preparation"
+      },
+      {
+        "id": 2,
+        "value": "preparation"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "unremovable": "1",
+    "delivery": "1",
+    "hidden": "0",
+    "send_email": "1",
+    "module_name": "",
+    "invoice": "1",
+    "color": "#01B887",
+    "logable": "1",
+    "shipped": "1",
+    "paid": "1",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "Shipped"
+      },
+      {
+        "id": 2,
+        "value": "Shipped"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": "shipped"
+      },
+      {
+        "id": 2,
+        "value": "shipped"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "unremovable": "1",
+    "delivery": "1",
+    "hidden": "0",
+    "send_email": "0",
+    "module_name": "",
+    "invoice": "1",
+    "color": "#01B887",
+    "logable": "1",
+    "shipped": "1",
+    "paid": "1",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "Delivered"
+      },
+      {
+        "id": 2,
+        "value": "Delivered"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "unremovable": "1",
+    "delivery": "0",
+    "hidden": "0",
+    "send_email": "1",
+    "module_name": "",
+    "invoice": "0",
+    "color": "#2C3E50",
+    "logable": "0",
+    "shipped": "0",
+    "paid": "0",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "Canceled"
+      },
+      {
+        "id": 2,
+        "value": "Canceled"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": "order_canceled"
+      },
+      {
+        "id": 2,
+        "value": "order_canceled"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "unremovable": "1",
+    "delivery": "0",
+    "hidden": "0",
+    "send_email": "1",
+    "module_name": "",
+    "invoice": "1",
+    "color": "#01B887",
+    "logable": "0",
+    "shipped": "0",
+    "paid": "0",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "Refunded"
+      },
+      {
+        "id": 2,
+        "value": "Refunded"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": "refund"
+      },
+      {
+        "id": 2,
+        "value": "refund"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "unremovable": "1",
+    "delivery": "0",
+    "hidden": "0",
+    "send_email": "1",
+    "module_name": "",
+    "invoice": "0",
+    "color": "#E74C3C",
+    "logable": "0",
+    "shipped": "0",
+    "paid": "0",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "Payment error"
+      },
+      {
+        "id": 2,
+        "value": "Payment error"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": "payment_error"
+      },
+      {
+        "id": 2,
+        "value": "payment_error"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "unremovable": "1",
+    "delivery": "0",
+    "hidden": "0",
+    "send_email": "1",
+    "module_name": "",
+    "invoice": "1",
+    "color": "#3498D8",
+    "logable": "0",
+    "shipped": "0",
+    "paid": "1",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "On backorder (paid)"
+      },
+      {
+        "id": 2,
+        "value": "On backorder (paid)"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": "outofstock"
+      },
+      {
+        "id": 2,
+        "value": "outofstock"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "unremovable": "1",
+    "delivery": "0",
+    "hidden": "0",
+    "send_email": "1",
+    "module_name": "",
+    "invoice": "1",
+    "color": "#3498D8",
+    "logable": "1",
+    "shipped": "0",
+    "paid": "1",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "Remote payment accepted"
+      },
+      {
+        "id": 2,
+        "value": "Remote payment accepted"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": "payment"
+      },
+      {
+        "id": 2,
+        "value": "payment"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "unremovable": "1",
+    "delivery": "0",
+    "hidden": "0",
+    "send_email": "1",
+    "module_name": "",
+    "invoice": "0",
+    "color": "#34209E",
+    "logable": "0",
+    "shipped": "0",
+    "paid": "0",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "On backorder (not paid)"
+      },
+      {
+        "id": 2,
+        "value": "On backorder (not paid)"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": "outofstock"
+      },
+      {
+        "id": 2,
+        "value": "outofstock"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "unremovable": "1",
+    "delivery": "0",
+    "hidden": "0",
+    "send_email": "0",
+    "module_name": "ps_cashondelivery",
+    "invoice": "0",
+    "color": "#34209E",
+    "logable": "0",
+    "shipped": "0",
+    "paid": "0",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "Awaiting Cash On Delivery validation"
+      },
+      {
+        "id": 2,
+        "value": "Awaiting Cash On Delivery validation"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": "cashondelivery"
+      },
+      {
+        "id": 2,
+        "value": "cashondelivery"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "unremovable": "1",
+    "delivery": "0",
+    "hidden": "0",
+    "send_email": "0",
+    "module_name": "ps_checkout",
+    "invoice": "0",
+    "color": "#34209E",
+    "logable": "0",
+    "shipped": "0",
+    "paid": "0",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "Waiting for payment"
+      },
+      {
+        "id": 2,
+        "value": "Waiting for payment"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "unremovable": "1",
+    "delivery": "0",
+    "hidden": "0",
+    "send_email": "0",
+    "module_name": "ps_checkout",
+    "invoice": "0",
+    "color": "#01B887",
+    "logable": "0",
+    "shipped": "0",
+    "paid": "0",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "Partial refund"
+      },
+      {
+        "id": 2,
+        "value": "Partial refund"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "unremovable": "1",
+    "delivery": "0",
+    "hidden": "0",
+    "send_email": "0",
+    "module_name": "ps_checkout",
+    "invoice": "0",
+    "color": "#3498D8",
+    "logable": "0",
+    "shipped": "0",
+    "paid": "0",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "Partial payment"
+      },
+      {
+        "id": 2,
+        "value": "Partial payment"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "unremovable": "1",
+    "delivery": "0",
+    "hidden": "0",
+    "send_email": "0",
+    "module_name": "ps_checkout",
+    "invoice": "0",
+    "color": "#3498D8",
+    "logable": "0",
+    "shipped": "0",
+    "paid": "0",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "Authorized. To be captured by merchant"
+      },
+      {
+        "id": 2,
+        "value": "Authorized. To be captured by merchant"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "unremovable": "1",
+    "delivery": "0",
+    "hidden": "0",
+    "send_email": "1",
+    "module_name": "ps_checkpayment",
+    "invoice": "0",
+    "color": "#34209E",
+    "logable": "0",
+    "shipped": "0",
+    "paid": "0",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "Awaiting check payment"
+      },
+      {
+        "id": 2,
+        "value": "Awaiting check payment"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": "cheque"
+      },
+      {
+        "id": 2,
+        "value": "cheque"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "unremovable": "1",
+    "delivery": "0",
+    "hidden": "0",
+    "send_email": "1",
+    "module_name": "ps_wirepayment",
+    "invoice": "0",
+    "color": "#34209E",
+    "logable": "0",
+    "shipped": "0",
+    "paid": "0",
+    "pdf_delivery": "0",
+    "pdf_invoice": "0",
+    "deleted": "0",
+    "name": [
+      {
+        "id": 1,
+        "value": "Awaiting bank wire payment"
+      },
+      {
+        "id": 2,
+        "value": "Awaiting bank wire payment"
+      }
+    ],
+    "template": [
+      {
+        "id": 1,
+        "value": "bankwire"
+      },
+      {
+        "id": 2,
+        "value": "bankwire"
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+Item,Name,Type,SKU,Options,Inventory Tracking,Current Stock,Price,Cost Price,Sale Price,Description,Product URL,Free Shipping,Weight,Is Visible,Product Condition,Show Product Condition,Image URL (Import),Image is Thumbnail,Image Sort Order
+Product,Sac en cuir,physical,,,variant,,150.00,70.00,135.00,<p>Cuir tanné végétal.</p>,/sac-cuir/,FALSE,0.8,TRUE,New,FALSE,,,
+Variant,,,SAC-TAN-P,Type=Dropdown|Name=Couleur|Value=TanType=Dropdown|Name=Format|Value=Petit,,5,150.00,70.00,135.00,,,,0.8,,,,,,
+Variant,,,SAC-NOIR-G,Type=Dropdown|Name=Couleur|Value=NoirType=Dropdown|Name=Format|Value=Grand,,3,170.00,70.00,153.00,,,,0.9,,,,,,
+Image,,,,,,,,,,,,,,,,,https://cdn.example.com/sac-1.jpg,TRUE,0
+Image,,,,,,,,,,,,,,,,,https://cdn.example.com/sac-2.jpg,FALSE,1
+Product,Bougie cire de soja,physical,BOUGIE-FIGUE,,none,,24.00,,,<p>Parfum figue.</p>,/bougie-cire/,FALSE,0.4,TRUE,New,FALSE,,,
+Image,,,,,,,,,,,,,,,,,https://cdn.example.com/bougie.jpg,TRUE,0
+Product,Produit test,physical,TEST-1,,product,0,5.00,,,,/test-cache/,FALSE,,FALSE,New,FALSE,,,

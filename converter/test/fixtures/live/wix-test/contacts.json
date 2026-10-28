@@ -1,0 +1,100 @@
+[
+  {
+    "id": "4a4afb0e-f01b-40a3-93a1-69a4531df1d5",
+    "revision": 2,
+    "source": {
+      "sourceType": "WIX_SITE_MEMBERS",
+      "wixAppId": "eb377299-86b4-4a86-a1b5-774a2d1d374b",
+      "appId": "eb377299-86b4-4a86-a1b5-774a2d1d374b"
+    },
+    "createdDate": "2026-09-21T17:37:18.784Z",
+    "updatedDate": "2026-09-21T17:37:28.330Z",
+    "lastActivity": {
+      "activityType": "GENERAL",
+      "date": "2026-09-21T17:37:18.784Z",
+      "description": "Contact was created",
+      "icon": {
+        "name": "User",
+        "url": "https://wixmp-8be454c954980f083caba37c.wixmp.com/activity-log/User.png"
+      }
+    },
+    "primaryInfo": {
+      "email": "customer1@example.test"
+    },
+    "picture": {
+      "id": "",
+      "url": "https://img-wixmp-8be454c954980f083caba37c.wixmp.com/sites/21c3af86-81e6-4a7b-aba1-b87f2b646adf/4a4afb0e-f01b-40a3-93a1-69a4531df1d5/a07f8948-c43d-42d7-a8f1-4fe804bba789-avatar-v5/v1/fit/w_100,h_100/image.jpeg?token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOmY1ODg2NzI1MzJlMzQxZmFhZDQwZjFiMDc3MTZhMjU3IiwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiLCJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl0sIm9iaiI6W1t7InBhdGgiOiIvc2l0ZXMvMjFjM2FmODYtODFlNi00YTdiLWFiYTEtYjg3ZjJiNjQ2YWRmLzRhNGFmYjBlLWYwMWItNDBhMy05M2ExLTY5YTQ1MzFkZjFkNS9hMDdmODk0OC1jNDNkLTQyZDctYThmMS00ZmU4MDRiYmE3ODktYXZhdGFyLXY1In1dXSwiaXNzIjoidXJuOmFwcDpmNTg4NjcyNTMyZTM0MWZhYWQ0MGYxYjA3NzE2YTI1NyIsImV4cCI6MTgyMTU2MDU1NSwiaWF0IjoxNzkwMDI0NTQ1LCJqdGkiOiIwMGFlY2VkYy03ZGZhLTQ5MzktYjQ4My0xNWIzYzY1ZjcwZWYifQ.9sNY8lz63qsrQFOaJcN5TK6L-iy7Cn_frDnzElF72Mk",
+      "height": 96,
+      "width": 96,
+      "urlExpirationDate": "2027-09-21T21:02:35.627179883Z"
+    },
+    "info": {
+      "name": {
+        "first": "Test",
+        "last": "Customer"
+      },
+      "emails": {
+        "items": [
+          {
+            "tag": "UNTAGGED",
+            "email": "customer1@example.test",
+            "primary": true
+          }
+        ]
+      },
+      "extendedFields": {
+        "items": {
+          "contacts.displayByLastName": "Test Customer 1",
+          "emailSubscriptions.deliverabilityStatus": "NOT_SET",
+          "members.membershipStatus": "APPROVED",
+          "emailSubscriptions.subscriptionStatus": "NOT_SET",
+          "members.mobile": false,
+          "emailSubscriptions.effectiveEmail": "customer1@example.test",
+          "contacts.displayByFirstName": "Test Customer 1"
+        }
+      },
+      "picture": {
+        "image": {
+          "id": "",
+          "url": "https://img-wixmp-8be454c954980f083caba37c.wixmp.com/sites/21c3af86-81e6-4a7b-aba1-b87f2b646adf/4a4afb0e-f01b-40a3-93a1-69a4531df1d5/a07f8948-c43d-42d7-a8f1-4fe804bba789-avatar-v5/v1/fit/w_100,h_100/image.jpeg?token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOmY1ODg2NzI1MzJlMzQxZmFhZDQwZjFiMDc3MTZhMjU3IiwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiLCJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl0sIm9iaiI6W1t7InBhdGgiOiIvc2l0ZXMvMjFjM2FmODYtODFlNi00YTdiLWFiYTEtYjg3ZjJiNjQ2YWRmLzRhNGFmYjBlLWYwMWItNDBhMy05M2ExLTY5YTQ1MzFkZjFkNS9hMDdmODk0OC1jNDNkLTQyZDctYThmMS00ZmU4MDRiYmE3ODktYXZhdGFyLXY1In1dXSwiaXNzIjoidXJuOmFwcDpmNTg4NjcyNTMyZTM0MWZhYWQ0MGYxYjA3NzE2YTI1NyIsImV4cCI6MTgyMTU2MDU1NSwiaWF0IjoxNzkwMDI0NTQ1LCJqdGkiOiIwMGFlY2VkYy03ZGZhLTQ5MzktYjQ4My0xNWIzYzY1ZjcwZWYifQ.9sNY8lz63qsrQFOaJcN5TK6L-iy7Cn_frDnzElF72Mk",
+          "height": 96,
+          "width": 96,
+          "urlExpirationDate": "2027-09-21T21:02:35.627179883Z"
+        },
+        "imageProvider": "EXTERNAL"
+      }
+    },
+    "primaryEmail": {
+      "email": "customer1@example.test",
+      "subscriptionStatus": "NOT_SET",
+      "deliverabilityStatus": "NOT_SET"
+    },
+    "memberInfo": {
+      "memberId": "da66a92b-6a89-402b-92cf-bfee98904802",
+      "signupDate": "2026-09-21T17:37:18Z",
+      "email": "customer1@example.test",
+      "emailVerified": true,
+      "emailVerificationRequired": false,
+      "status": "ACTIVE",
+      "profileInfo": {
+        "nickname": "Test Customer",
+        "privacyStatus": "PUBLIC",
+        "reported": false,
+        "muted": false,
+        "photo": {
+          "id": "",
+          "url": "https://lh3.googleusercontent.com/a/ACg8ocJ2k6zJAGp7NEdEDxD0gzvv-7IjvhQQp1xcXq3c5dBFraZRpeTI%3Ds96-c",
+          "height": 0,
+          "width": 0
+        }
+      },
+      "userInfo": {
+        "userId": "da66a92b-6a89-402b-92cf-bfee98904802",
+        "role": "OWNER"
+      },
+      "groupInfo": {
+        "groupIds": []
+      }
+    }
+  }
+]

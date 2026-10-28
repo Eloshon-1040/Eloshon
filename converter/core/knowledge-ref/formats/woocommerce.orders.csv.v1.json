@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 1,
+  "id": "woocommerce.orders.csv.v1",
+  "displayName": "WooCommerce orders export (CSV)",
+  "provenance": "native-platform",
+  "medium": "csv",
+  "platformHint": "woocommerce",
+  "entity": "orders",
+  "signatures": [
+    {
+      "kind": "csv-header-set",
+      "required": [
+        "order_status",
+        "item_name",
+        "item_type"
+      ],
+      "hints": [
+        "order_total",
+        "order_currency",
+        "customer_note"
+      ]
+    }
+  ],
+  "structure": {
+    "rows": {}
+  },
+  "fields": [
+    {
+      "path": "ORDERID",
+      "canon": "number",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_email",
+      "inputs": [
+        "billing_email",
+        "customer_user"
+      ],
+      "canon": "email",
+      "transform": "first_non_empty",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "order_date",
+      "canon": "createdAt",
+      "transform": "date_iso",
+      "confidence": "verified-fixture",
+      "notes": "Slash dates read with the detected (or answered) day/month order."
+    },
+    {
+      "path": "order_status",
+      "canon": "financialStatus+fulfillmentStatus",
+      "transform": "enum_map",
+      "confidence": "verified-fixture",
+      "notes": "wc-completed / processing / on-hold / pending / refunded / cancelled / failed → the two target statuses."
+    },
+    {
+      "path": "order_currency",
+      "canon": "currency",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "order_shipping",
+      "canon": "shipping",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "order_tax",
+      "canon": "taxes",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "order_total",
+      "canon": "total",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "cart_discount",
+      "canon": "discountAmount",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "payment_method_title",
+      "canon": "paymentMethod",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "transaction_id",
+      "canon": "transactionId",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "customer_note",
+      "canon": "note",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "item_name",
+      "inputs": [
+        "item_name",
+        "item_type",
+        "item_product_id",
+        "item_qty",
+        "item_line_total"
+      ],
+      "canon": "lineItems+discountCode",
+      "transform": "list",
+      "confidence": "verified-fixture",
+      "notes": "Parallel comma-lists: line_item entries become line items aligned to the product-level lists; a coupon's name is the discount code; coupons and fees are reported."
+    },
+    {
+      "path": "fee_line_tax_data",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-fixture",
+      "notes": "Only checked for the exporter's literal 'Array' serialisation bug (order_array_export)."
+    },
+    {
+      "path": "shipment_taxes",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-fixture",
+      "notes": "Same 'Array' check."
+    },
+    {
+      "path": "billing_first_name",
+      "inputs": [
+        "billing_first_name",
+        "billing_last_name"
+      ],
+      "canon": "billing.name",
+      "transform": "first_non_empty",
+      "confidence": "verified-fixture",
+      "notes": "First and last name joined."
+    },
+    {
+      "path": "billing_company",
+      "canon": "billing.company",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_address_1",
+      "canon": "billing.address1",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_address_2",
+      "canon": "billing.address2",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_city",
+      "canon": "billing.city",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_state",
+      "canon": "billing.province+billing.provinceCode",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_postcode",
+      "canon": "billing.zip",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_country",
+      "canon": "billing.country",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "billing_phone",
+      "canon": "billing.phone",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "shipping_first_name",
+      "inputs": [
+        "shipping_first_name",
+        "shipping_last_name"
+      ],
+      "canon": "shipping_.name",
+      "transform": "first_non_empty",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "shipping_company",
+      "canon": "shipping_.company",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "shipping_address_1",
+      "canon": "shipping_.address1",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "shipping_address_2",
+      "canon": "shipping_.address2",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "shipping_city",
+      "canon": "shipping_.city",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "shipping_state",
+      "canon": "shipping_.province+shipping_.provinceCode",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "shipping_postcode",
+      "canon": "shipping_.zip",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "shipping_country",
+      "canon": "shipping_.country",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "shipping_phone",
+      "canon": "shipping_.phone",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    }
+  ],
+  "invariantsExpected": [
+    "One row per order; line items packed in parallel comma-lists where item_type marks coupons and fees",
+    "order_date is MM/DD or DD/MM: detected across the column, asked when undecidable"
+  ],
+  "legacy": {
+    "formatId": "woo_orders",
+    "platform": "woocommerce",
+    "entity": "orders"
+  },
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "seed:core/src/detect.ts:SIGS",
+      "origin": "reference",
+      "diff": [
+        "signature moved from code to data (Phase 5.3)",
+        "Packed line-item columns (item_name / item_type)."
+      ]
+    },
+    {
+      "at": "2026-10-04T00:00:00.000Z",
+      "op": "enrich",
+      "from": "core/src/orders.ts parseWooOrders + mapping.ts SOURCE_FIELDS.woo_orders",
+      "origin": "reference",
+      "diff": [
+        "Phase 2 Lot 3: full column map + row structure as data; undeclared columns preserved, declared ones traced"
+      ]
+    }
+  ]
+}

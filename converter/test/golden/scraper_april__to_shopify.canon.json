@@ -1,0 +1,2507 @@
+[
+  {
+    "handle": "nettoyant-exfoliant-visage-128ful",
+    "title": "Nettoyant Exfoliant Visage",
+    "bodyHtml": "Un produit visage 2 en 1 qui nettoie et exfolie pour une peau parfaitement saine et nette. Le rasage est facilité, les poils incarnés évités. Les hommes de tous les âges et tous types de peau, qui souhaitent un soin 2 en 1 nettoyant et exfoliant.",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Shop > Soins visage > Soin visage homme > Nettoyage et gommage > Nettoyant Exfoliant Visage"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 28.5,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/52fdb0fce2e337ec9b54b13ad9817bc7cfdfcefc_fc7c6cbd-0d0a-412e-b814-front.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/52fdb0fce2e337ec9b54b13ad9817bc7cfdfcefc_fc7c6cbd-0d0a-412e-b814-front.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "28.5",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/52fdb0fce2e337ec9b54b13ad9817bc7cfdfcefc_fc7c6cbd-0d0a-412e-b814-front.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "nettoyant-exfoliant-visage-128ful",
+      "sourceId": "20007274"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Nettoyant Exfoliant Visage",
+        "slug_en": "nettoyant-exfoliant-visage-128ful",
+        "description_en": "Un produit visage 2 en 1 qui nettoie et exfolie pour une peau parfaitement saine et nette. Le rasage est facilité, les poils incarnés évités. Les hommes de tous les âges et tous types de peau, qui souhaitent un soin 2 en 1 nettoyant et exfoliant.",
+        "source_url": "https://www.april-beauty.be/fr/clarins-nettoyant-exfoliant-visage-2021452",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "April",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Nettoyant Exfoliant Visage",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "nettoyant-exfoliant-visage-128ful",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Un produit visage 2 en 1 qui nettoie et exfolie pour une peau parfaitement saine et nette. Le rasage est facilité, les poils incarnés évités. Les hommes de tous les âges et tous types de peau, qui souhaitent un soin 2 en 1 nettoyant et exfoliant.",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Nettoyant Exfoliant Visage",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "nettoyant-exfoliant-visage-128ful",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "nettoyant-exfoliant-visage-128ful",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Un produit visage 2 en 1 qui nettoie et exfolie pour une peau parfaitement saine et nette. Le rasage est facilité, les poils incarnés évités. Les hommes de tous les âges et tous types de peau, qui sou…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "20007274",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Shop > Soins visage > Soin visage homme > Nettoyage et gommage > Nettoyant Exfoliant Visage",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/52fdb0fce2e337ec9b54b13ad9817bc7cfdfcefc_fc7c6cbd-0d0a-412e-b814-front.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "nettoyant-visage-128ful",
+    "title": "Nettoyant Visage",
+    "bodyHtml": "Un produit visage 2 en 1 qui nettoie et exfolie, pour une peau parfaitement saine et nette. Le rasage est facilité et les poils incarnés évités.",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Shop > Soins visage > Soin visage homme > Nettoyage et gommage > Nettoyant Visage"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 27.9,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/afd701f1bec00447265a26ca7aa197e7bb0306b1_e658b1bb-72d0-4a73-acf9-front.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/afd701f1bec00447265a26ca7aa197e7bb0306b1_e658b1bb-72d0-4a73-acf9-front.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "27.9",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/afd701f1bec00447265a26ca7aa197e7bb0306b1_e658b1bb-72d0-4a73-acf9-front.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "nettoyant-visage-128ful",
+      "sourceId": "20007273"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Nettoyant Visage",
+        "slug_en": "nettoyant-visage-128ful",
+        "description_en": "Un produit visage 2 en 1 qui nettoie et exfolie, pour une peau parfaitement saine et nette. Le rasage est facilité et les poils incarnés évités.",
+        "source_url": "https://www.april-beauty.be/fr/clarins-nettoyant-visage-2021447",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "April",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Nettoyant Visage",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "nettoyant-visage-128ful",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Un produit visage 2 en 1 qui nettoie et exfolie, pour une peau parfaitement saine et nette. Le rasage est facilité et les poils incarnés évités.",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Nettoyant Visage",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "nettoyant-visage-128ful",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "nettoyant-visage-128ful",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Un produit visage 2 en 1 qui nettoie et exfolie, pour une peau parfaitement saine et nette. Le rasage est facilité et les poils incarnés évités.",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "20007273",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Shop > Soins visage > Soin visage homme > Nettoyage et gommage > Nettoyant Visage",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/afd701f1bec00447265a26ca7aa197e7bb0306b1_e658b1bb-72d0-4a73-acf9-front.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "deodorant-roll-on-128fcq",
+    "title": "Déodorant Roll-On",
+    "bodyHtml": "Un déodorant qui assure une fraîcheur longue durée à toutes les peaux, même les plus sensibles. Pour tous les types de peau, même les plus sensibles, y compris après une épilation à la cire.",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Shop > Corps et bain > Soin du corps > Déodorants > Déodorant Roll-On"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 24.5,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/1a21af2fe950035ab55bc70d725d41ccf3d94da0_f9ffcd4b-21e8-406a-85f6-front.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/1a21af2fe950035ab55bc70d725d41ccf3d94da0_f9ffcd4b-21e8-406a-85f6-front.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "24.5",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/1a21af2fe950035ab55bc70d725d41ccf3d94da0_f9ffcd4b-21e8-406a-85f6-front.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "deodorant-roll-on-128fcq",
+      "sourceId": "20006949"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Déodorant Roll-On",
+        "slug_en": "deodorant-roll-on-128fcq",
+        "description_en": "Un déodorant qui assure une fraîcheur longue durée à toutes les peaux, même les plus sensibles. Pour tous les types de peau, même les plus sensibles, y compris après une épilation à la cire.",
+        "source_url": "https://www.april-beauty.be/fr/clarins-deodorant-roll-on-2021406",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "April",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Déodorant Roll-On",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "deodorant-roll-on-128fcq",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Un déodorant qui assure une fraîcheur longue durée à toutes les peaux, même les plus sensibles. Pour tous les types de peau, même les plus sensibles, y compris après une épilation à la cire.",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Déodorant Roll-On",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "deodorant-roll-on-128fcq",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "deodorant-roll-on-128fcq",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Un déodorant qui assure une fraîcheur longue durée à toutes les peaux, même les plus sensibles. Pour tous les types de peau, même les plus sensibles, y compris après une épilation à la cire.",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "20006949",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Shop > Corps et bain > Soin du corps > Déodorants > Déodorant Roll-On",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/1a21af2fe950035ab55bc70d725d41ccf3d94da0_f9ffcd4b-21e8-406a-85f6-front.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "anti-transpirant-deo-roll-on-128fun",
+    "title": "Anti-Transpirant Déo Roll-on",
+    "bodyHtml": "L'Anti-Transpirant Déo Roll-on contrôle durablement la transpiration tout en respectant son processus naturel. Une efficacité déodorante haute endurance.",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Shop > Corps et bain > Soin du corps > Déodorants > Anti-Transpirant Déo Roll-on"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 20.9,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/52f6ea98207ba47c8f1b20bd623868a3f00a3127_eb5add8b-623d-48ae-af8c-front.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/52f6ea98207ba47c8f1b20bd623868a3f00a3127_eb5add8b-623d-48ae-af8c-front.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "20.9",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/52f6ea98207ba47c8f1b20bd623868a3f00a3127_eb5add8b-623d-48ae-af8c-front.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "anti-transpirant-deo-roll-on-128fun",
+      "sourceId": "20007290"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Anti-Transpirant Déo Roll-on",
+        "slug_en": "anti-transpirant-deo-roll-on-128fun",
+        "description_en": "L'Anti-Transpirant Déo Roll-on contrôle durablement la transpiration tout en respectant son processus naturel. Une efficacité déodorante haute endurance.",
+        "source_url": "https://www.april-beauty.be/fr/clarins-anti-transpirant-deo-roll-on-2021524",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "April",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Anti-Transpirant Déo Roll-on",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "anti-transpirant-deo-roll-on-128fun",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "L'Anti-Transpirant Déo Roll-on contrôle durablement la transpiration tout en respectant son processus naturel. Une efficacité déodorante haute endurance.",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Anti-Transpirant Déo Roll-on",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "anti-transpirant-deo-roll-on-128fun",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "anti-transpirant-deo-roll-on-128fun",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "L'Anti-Transpirant Déo Roll-on contrôle durablement la transpiration tout en respectant son processus naturel. Une efficacité déodorante haute endurance.",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "20007290",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Shop > Corps et bain > Soin du corps > Déodorants > Anti-Transpirant Déo Roll-on",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/52f6ea98207ba47c8f1b20bd623868a3f00a3127_eb5add8b-623d-48ae-af8c-front.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "gel-energisant-7de834",
+    "title": "Gel Energisant",
+    "bodyHtml": "Un produit pas comme les autres\nPeau énergisée, défatiguée et renforcée.\nPeau hydratée immédiatement.\nEffet frais de -2 degrés* qui perdure jusqu'à 5 minutes après application.\nPeau protégée des agressions extérieures à l'aide du complexe Anti-Pollution Clarins.\n*Test clinique. 20 hommes, effet qui perdure jusqu’à 5 minutes après l’application.\n\nEn savoir plus\nPar nature, la peau des hommes a besoin de plus d'énergie. Elle est aussi plus épaisse que celle des femmes et doit être réhydratée régulièrement pour rester en forme. Le gel Energisant va apporter un véritable shot de vitalité à la peau des hommes.Une formule puissante aux extraits végétaux pour recharger la peau en énergie et lui redonner tout son éclat. Son flacon pompe délivre la juste dose de gel pour une peau reposée et tonique, en pleine forme.Le Complexe Anti-Pollution Clarins contribue à protéger la peau des méfaits des polluants. Ses extraits de furcellaria et de marrube blanc bio apportent une multi-protection face aux pollutions intérieures et extérieures.La texture gel fraiche et non collante, légèrement parfumée, est un véritable boost pour la peau. Son effet frais de -2 degrés* devient vite indispensable à votre rituel soin.*Test clinique, 20 hommes, effet qui perdure jusqu'à 5 minutes après l'application.",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Shop > Soins visage > Soin visage homme > Rasage et après-rasage > Gel Energisant"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 51.5,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/dda50560b469c8193fbff3cb8e785805b2f69211_1ceebbcd-d093-4307-83ca-front.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/dda50560b469c8193fbff3cb8e785805b2f69211_1ceebbcd-d093-4307-83ca-front.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "51.5",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/dda50560b469c8193fbff3cb8e785805b2f69211_1ceebbcd-d093-4307-83ca-front.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "gel-energisant-7de834",
+      "sourceId": "clarins-gel-energisant-2021457"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Gel Energisant",
+        "slug_en": "gel-energisant-7de834",
+        "description_en": "Un produit pas comme les autres\nPeau énergisée, défatiguée et renforcée.\nPeau hydratée immédiatement.\nEffet frais de -2 degrés* qui perdure jusqu'à 5 minutes après application.\nPeau protégée des agressions extérieures à l'aide du complexe Anti-Pollution Clarins.\n*Test clinique. 20 hommes, effet qui perdure jusqu’à 5 minutes après l’application.\n\nEn savoir plus\nPar nature, la peau des hommes a besoin de plus d'énergie. Elle est aussi plus épaisse que celle des femmes et doit être réhydratée régulièrement pour rester en forme. Le gel Energisant va apporter un véritable shot de vitalité à la peau des hommes.Une formule puissante aux extraits végétaux pour recharger la peau en énergie et lui redonner tout son éclat. Son flacon pompe délivre la juste dose de gel pour une peau reposée et tonique, en pleine forme.Le Complexe Anti-Pollution Clarins contribue à protéger la peau des méfaits des polluants. Ses extraits de furcellaria et de marrube blanc bio apportent une multi-protection face aux pollutions intérieures et extérieures.La texture gel fraiche et non collante, légèrement parfumée, est un véritable boost pour la peau. Son effet frais de -2 degrés* devient vite indispensable à votre rituel soin.*Test clinique, 20 hommes, effet qui perdure jusqu'à 5 minutes après l'application.",
+        "source_url": "https://www.april-beauty.be/fr/clarins-gel-energisant-2021457",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "April",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Gel Energisant",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "gel-energisant-7de834",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Un produit pas comme les autres\nPeau énergisée, défatiguée et renforcée.\nPeau hydratée immédiatement.\nEffet frais de -2 degrés* qui perdure jusqu'à 5 minutes après application.\nPeau protégée des agressions extérieures à l'aide du complexe Anti-Pollution Clarins.\n*Test clinique. 20 hommes, effet qui perdure jusqu’à 5 minutes après l’application.\n\nEn savoir plus\nPar nature, la peau des hommes a besoin de plus d'énergie. Elle est aussi plus épaisse que celle des femmes et doit être réhydratée régulièrement pour rester en forme. Le gel Energisant va apporter un véritable shot de vitalité à la peau des hommes.Une formule puissante aux extraits végétaux pour recharger la peau en énergie et lui redonner tout son éclat. Son flacon pompe délivre la juste dose de gel pour une peau reposée et tonique, en pleine forme.Le Complexe Anti-Pollution Clarins contribue à protéger la peau des méfaits des polluants. Ses extraits de furcellaria et de marrube blanc bio apportent une multi-protection face aux pollutions intérieures et extérieures.La texture gel fraiche et non collante, légèrement parfumée, est un véritable boost pour la peau. Son effet frais de -2 degrés* devient vite indispensable à votre rituel soin.*Test clinique, 20 hommes, effet qui perdure jusqu'à 5 minutes après l'application.",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Gel Energisant",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "gel-energisant-7de834",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "gel-energisant-7de834",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Un produit pas comme les autres\nPeau énergisée, défatiguée et renforcée.\nPeau hydratée immédiatement.\nEffet frais de -2 degrés* qui perdure jusqu'à 5 minutes après application.\nPeau protégée des agres…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "clarins-gel-energisant-2021457",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Shop > Soins visage > Soin visage homme > Rasage et après-rasage > Gel Energisant",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/dda50560b469c8193fbff3cb8e785805b2f69211_1ceebbcd-d093-4307-83ca-front.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "daisy-djitsd",
+    "title": "Daisy",
+    "bodyHtml": "Avec son joyeux parfum de fruits, violettes et vanille, elle dégage un charme naturel. Daisy vous emmène dans un monde pur, dynamique et spontané. Le flacon est surmonté de marguerites qui s'épanouissent autour du bouchon doré. Les \"daisy's\" blanches et dorées sont de différentes tailles et possèdent une texture inattendue: les pétales en vinyle rétro cool se plient en effet lorsqu'on les touche.",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Shop > Parfums > Parfum Femme > Fragrances > Daisy"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 98.5,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/87f0704fe266e7bac7dae2d7076be1c38ce925d6_c7b5b582-e3e5-44c0-bc04-front.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/87f0704fe266e7bac7dae2d7076be1c38ce925d6_c7b5b582-e3e5-44c0-bc04-front.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "98.5",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/87f0704fe266e7bac7dae2d7076be1c38ce925d6_c7b5b582-e3e5-44c0-bc04-front.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "daisy-djitsd",
+      "sourceId": "marc-jacobs-daisy-2021732"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Daisy",
+        "slug_en": "daisy-djitsd",
+        "description_en": "Avec son joyeux parfum de fruits, violettes et vanille, elle dégage un charme naturel. Daisy vous emmène dans un monde pur, dynamique et spontané. Le flacon est surmonté de marguerites qui s'épanouissent autour du bouchon doré. Les \"daisy's\" blanches et dorées sont de différentes tailles et possèdent une texture inattendue: les pétales en vinyle rétro cool se plient en effet lorsqu'on les touche.",
+        "source_url": "https://www.april-beauty.be/fr/marc-jacobs-daisy-2021732",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "April",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Daisy",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "daisy-djitsd",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Avec son joyeux parfum de fruits, violettes et vanille, elle dégage un charme naturel. Daisy vous emmène dans un monde pur, dynamique et spontané. Le flacon est surmonté de marguerites qui s'épanouissent autour du bouchon doré. Les \"daisy's\" blanches et dorées sont de différentes tailles et possèdent une texture inattendue: les pétales en vinyle rétro cool se plient en effet lorsqu'on les touche.",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Daisy",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "daisy-djitsd",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "daisy-djitsd",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Avec son joyeux parfum de fruits, violettes et vanille, elle dégage un charme naturel. Daisy vous emmène dans un monde pur, dynamique et spontané. Le flacon est surmonté de marguerites qui s'épanouiss…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "marc-jacobs-daisy-2021732",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Shop > Parfums > Parfum Femme > Fragrances > Daisy",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/87f0704fe266e7bac7dae2d7076be1c38ce925d6_c7b5b582-e3e5-44c0-bc04-front.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "aromatics-elixir-nzhl9k",
+    "title": "Aromatics Elixir",
+    "bodyHtml": "Tellement plus qu'un parfum. Aromatics Elixir éveille les sens et révèle la sensualité pleine de mystère de chaque femme. Une harmonie boisée chyprée, avec un cœur de notes de Rose de Bulgarie, de Patchouli, d'Iris, autour desquelles s'exaltent des notes vivantes d'Ylang Ylang, de Vétiver, et de Camomille. Envoûtant, intemporel, mystérieux...",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Shop > Parfums > Parfum Femme > Fragrances > Aromatics Elixir"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 39,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/f3cc97daea2bb86cc31894013dc3d59a7da2bf77_0769dfcd-1687-454f-b3e7-front.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/f3cc97daea2bb86cc31894013dc3d59a7da2bf77_0769dfcd-1687-454f-b3e7-front.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "39",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/f3cc97daea2bb86cc31894013dc3d59a7da2bf77_0769dfcd-1687-454f-b3e7-front.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "aromatics-elixir-nzhl9k",
+      "sourceId": "clinique-aromatics-elixir-2021567"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Aromatics Elixir",
+        "slug_en": "aromatics-elixir-nzhl9k",
+        "description_en": "Tellement plus qu'un parfum. Aromatics Elixir éveille les sens et révèle la sensualité pleine de mystère de chaque femme. Une harmonie boisée chyprée, avec un cœur de notes de Rose de Bulgarie, de Patchouli, d'Iris, autour desquelles s'exaltent des notes vivantes d'Ylang Ylang, de Vétiver, et de Camomille. Envoûtant, intemporel, mystérieux...",
+        "source_url": "https://www.april-beauty.be/fr/clinique-aromatics-elixir-2021567",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "April",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Aromatics Elixir",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "aromatics-elixir-nzhl9k",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Tellement plus qu'un parfum. Aromatics Elixir éveille les sens et révèle la sensualité pleine de mystère de chaque femme. Une harmonie boisée chyprée, avec un cœur de notes de Rose de Bulgarie, de Patchouli, d'Iris, autour desquelles s'exaltent des notes vivantes d'Ylang Ylang, de Vétiver, et de Camomille. Envoûtant, intemporel, mystérieux...",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Aromatics Elixir",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "aromatics-elixir-nzhl9k",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "aromatics-elixir-nzhl9k",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Tellement plus qu'un parfum. Aromatics Elixir éveille les sens et révèle la sensualité pleine de mystère de chaque femme. Une harmonie boisée chyprée, avec un cœur de notes de Rose de Bulgarie, de Pat…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "clinique-aromatics-elixir-2021567",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Shop > Parfums > Parfum Femme > Fragrances > Aromatics Elixir",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/f3cc97daea2bb86cc31894013dc3d59a7da2bf77_0769dfcd-1687-454f-b3e7-front.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "gel-energisant-12aofz",
+    "title": "Gel Energisant",
+    "bodyHtml": "Un produit pas comme les autres\nPeau énergisée, défatiguée et renforcée.\nPeau hydratée immédiatement.\nEffet frais de -2 degrés* qui perdure jusqu'à 5 minutes après application.\nPeau protégée des agressions extérieures à l'aide du complexe Anti-Pollution Clarins.\n*Test clinique. 20 hommes, effet qui perdure jusqu’à 5 minutes après l’application.\n\nEn savoir plus\nPar nature, la peau des hommes a besoin de plus d'énergie. Elle est aussi plus épaisse que celle des femmes et doit être réhydratée régulièrement pour rester en forme. Le gel Energisant va apporter un véritable shot de vitalité à la peau des hommes.Une formule puissante aux extraits végétaux pour recharger la peau en énergie et lui redonner tout son éclat. Son flacon pompe délivre la juste dose de gel pour une peau reposée et tonique, en pleine forme.Le Complexe Anti-Pollution Clarins contribue à protéger la peau des méfaits des polluants. Ses extraits de furcellaria et de marrube blanc bio apportent une multi-protection face aux pollutions intérieures et extérieures.La texture gel fraiche et non collante, légèrement parfumée, est un véritable boost pour la peau. Son effet frais de -2 degrés* devient vite indispensable à votre rituel soin.*Test clinique, 20 hommes, effet qui perdure jusqu'à 5 minutes après l'application.",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Shop > Corps et bain > Soin corps homme > Hydratant et nourrissant > Gel Energisant"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 51.5,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/74957d416749e2b0b280b04518be1e99a6a9c664_9981270d-0583-4772-bf36-front.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/74957d416749e2b0b280b04518be1e99a6a9c664_9981270d-0583-4772-bf36-front.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "51.5",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/74957d416749e2b0b280b04518be1e99a6a9c664_9981270d-0583-4772-bf36-front.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "gel-energisant-12aofz",
+      "sourceId": "20049906"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Gel Energisant",
+        "slug_en": "gel-energisant-12aofz",
+        "description_en": "Un produit pas comme les autres\nPeau énergisée, défatiguée et renforcée.\nPeau hydratée immédiatement.\nEffet frais de -2 degrés* qui perdure jusqu'à 5 minutes après application.\nPeau protégée des agressions extérieures à l'aide du complexe Anti-Pollution Clarins.\n*Test clinique. 20 hommes, effet qui perdure jusqu’à 5 minutes après l’application.\n\nEn savoir plus\nPar nature, la peau des hommes a besoin de plus d'énergie. Elle est aussi plus épaisse que celle des femmes et doit être réhydratée régulièrement pour rester en forme. Le gel Energisant va apporter un véritable shot de vitalité à la peau des hommes.Une formule puissante aux extraits végétaux pour recharger la peau en énergie et lui redonner tout son éclat. Son flacon pompe délivre la juste dose de gel pour une peau reposée et tonique, en pleine forme.Le Complexe Anti-Pollution Clarins contribue à protéger la peau des méfaits des polluants. Ses extraits de furcellaria et de marrube blanc bio apportent une multi-protection face aux pollutions intérieures et extérieures.La texture gel fraiche et non collante, légèrement parfumée, est un véritable boost pour la peau. Son effet frais de -2 degrés* devient vite indispensable à votre rituel soin.*Test clinique, 20 hommes, effet qui perdure jusqu'à 5 minutes après l'application.",
+        "source_url": "https://www.april-beauty.be/fr/clarins-gel-energisant-2021468",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "April",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Gel Energisant",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "gel-energisant-12aofz",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Un produit pas comme les autres\nPeau énergisée, défatiguée et renforcée.\nPeau hydratée immédiatement.\nEffet frais de -2 degrés* qui perdure jusqu'à 5 minutes après application.\nPeau protégée des agressions extérieures à l'aide du complexe Anti-Pollution Clarins.\n*Test clinique. 20 hommes, effet qui perdure jusqu’à 5 minutes après l’application.\n\nEn savoir plus\nPar nature, la peau des hommes a besoin de plus d'énergie. Elle est aussi plus épaisse que celle des femmes et doit être réhydratée régulièrement pour rester en forme. Le gel Energisant va apporter un véritable shot de vitalité à la peau des hommes.Une formule puissante aux extraits végétaux pour recharger la peau en énergie et lui redonner tout son éclat. Son flacon pompe délivre la juste dose de gel pour une peau reposée et tonique, en pleine forme.Le Complexe Anti-Pollution Clarins contribue à protéger la peau des méfaits des polluants. Ses extraits de furcellaria et de marrube blanc bio apportent une multi-protection face aux pollutions intérieures et extérieures.La texture gel fraiche et non collante, légèrement parfumée, est un véritable boost pour la peau. Son effet frais de -2 degrés* devient vite indispensable à votre rituel soin.*Test clinique, 20 hommes, effet qui perdure jusqu'à 5 minutes après l'application.",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Gel Energisant",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "gel-energisant-12aofz",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "gel-energisant-12aofz",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Un produit pas comme les autres\nPeau énergisée, défatiguée et renforcée.\nPeau hydratée immédiatement.\nEffet frais de -2 degrés* qui perdure jusqu'à 5 minutes après application.\nPeau protégée des agres…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "20049906",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Shop > Corps et bain > Soin corps homme > Hydratant et nourrissant > Gel Energisant",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/74957d416749e2b0b280b04518be1e99a6a9c664_9981270d-0583-4772-bf36-front.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "daisy-128h8v",
+    "title": "Daisy",
+    "bodyHtml": "Avec son joyeux parfum de fruits, violettes et vanille, elle dégage un charme naturel. Daisy vous emmène dans un monde pur, dynamique et spontané. Le flacon est surmonté de marguerites qui s'épanouissent autour du bouchon doré. Les \"daisy's\" blanches et dorées sont de différentes tailles et possèdent une texture inattendue: les pétales en vinyle rétro cool se plient en effet lorsqu'on les touche.",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Shop > Parfums > Parfum Femme > Fragrances > Daisy"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 128.9,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/ed70805a0c602c330a59ca4ada6574609a0d0d55_69c55196-5f4c-4809-b5b5-front.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/ed70805a0c602c330a59ca4ada6574609a0d0d55_69c55196-5f4c-4809-b5b5-front.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "128.9",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/ed70805a0c602c330a59ca4ada6574609a0d0d55_69c55196-5f4c-4809-b5b5-front.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "daisy-128h8v",
+      "sourceId": "20009804"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Daisy",
+        "slug_en": "daisy-128h8v",
+        "description_en": "Avec son joyeux parfum de fruits, violettes et vanille, elle dégage un charme naturel. Daisy vous emmène dans un monde pur, dynamique et spontané. Le flacon est surmonté de marguerites qui s'épanouissent autour du bouchon doré. Les \"daisy's\" blanches et dorées sont de différentes tailles et possèdent une texture inattendue: les pétales en vinyle rétro cool se plient en effet lorsqu'on les touche.",
+        "source_url": "https://www.april-beauty.be/fr/marc-jacobs-daisy-2021743",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "April",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Daisy",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "daisy-128h8v",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Avec son joyeux parfum de fruits, violettes et vanille, elle dégage un charme naturel. Daisy vous emmène dans un monde pur, dynamique et spontané. Le flacon est surmonté de marguerites qui s'épanouissent autour du bouchon doré. Les \"daisy's\" blanches et dorées sont de différentes tailles et possèdent une texture inattendue: les pétales en vinyle rétro cool se plient en effet lorsqu'on les touche.",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Daisy",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "daisy-128h8v",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "daisy-128h8v",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Avec son joyeux parfum de fruits, violettes et vanille, elle dégage un charme naturel. Daisy vous emmène dans un monde pur, dynamique et spontané. Le flacon est surmonté de marguerites qui s'épanouiss…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "20009804",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Shop > Parfums > Parfum Femme > Fragrances > Daisy",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/ed70805a0c602c330a59ca4ada6574609a0d0d55_69c55196-5f4c-4809-b5b5-front.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "for-her-eau-de-parfum-1a7hqk",
+    "title": "For Her Eau de Parfum",
+    "bodyHtml": "LE PARFUM\r\nLe parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. \r\nfor her eau de parfum propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. Le cœur de musc demeure l’âme rayonnante de la fragrance et développe toute sa sensualité et sa sophistication sur une trame pastelle rosée. Des touches de rose et une sensation pêche apportent leur velouté, alors qu’un voile d’ambre doux et de bois ajoute mystère et profondeur à la composition.  for her eau de parfum est une fragrance enveloppante, accord intime entre la femme et son parfum. for her déclenche une étonnante sensation d’harmonie à fleur de peau. Sa simplicité et sa pureté charment, son mystère intrigue, sa sensualité envoûte.  \r\n\r\nLE FLACON\r\nSon flacon est l’expression d’un classicisme dépouillé de tout superflu pour atteindre une modernité intemporelle, une sensualité généreuse et pourtant sobre, discrète et suggérée. \r\n\r\nLE LAYERING\r\nDécouvrez l’art du layering au sein de la collection iconique for her de Narciso Rodriguez.\r\nLa technique du layering nous vient du Moyen-Orient ; elle permet à chacun de créer sa propre signature olfactive. En superposant différents parfums, il est possible de créer une fragrance qui n’appartient qu’à soi. Avec le lancement de for her PURE MUSC, le layering prend une place centrale au sein de la collection for her, offrant la possibilité de personnaliser ses parfums for her préférés en fonction de chaque occasion. \r\nAssocié avec PURE MUSC, for her eau de parfum gagne pour sa part en intensité dans un jeu de pure séduction.",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Shop > Parfums > Parfum Femme > Fragrances > For Her Eau de Parfum"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 84.5,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/8d9636d74c2f4782d3974166130cd08688f65752_2500baf1-72e6-4f7b-b1c7-front.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/8d9636d74c2f4782d3974166130cd08688f65752_2500baf1-72e6-4f7b-b1c7-front.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "84.5",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/8d9636d74c2f4782d3974166130cd08688f65752_2500baf1-72e6-4f7b-b1c7-front.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "for-her-eau-de-parfum-1a7hqk",
+      "sourceId": "narciso-rodriguez-for-her-eau-de-parfum-2021800"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "For Her Eau de Parfum",
+        "slug_en": "for-her-eau-de-parfum-1a7hqk",
+        "description_en": "LE PARFUM\r\nLe parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. \r\nfor her eau de parfum propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. Le cœur de musc demeure l’âme rayonnante de la fragrance et développe toute sa sensualité et sa sophistication sur une trame pastelle rosée. Des touches de rose et une sensation pêche apportent leur velouté, alors qu’un voile d’ambre doux et de bois ajoute mystère et profondeur à la composition.  for her eau de parfum est une fragrance enveloppante, accord intime entre la femme et son parfum. for her déclenche une étonnante sensation d’harmonie à fleur de peau. Sa simplicité et sa pureté charment, son mystère intrigue, sa sensualité envoûte.  \r\n\r\nLE FLACON\r\nSon flacon est l’expression d’un classicisme dépouillé de tout superflu pour atteindre une modernité intemporelle, une sensualité généreuse et pourtant sobre, discrète et suggérée. \r\n\r\nLE LAYERING\r\nDécouvrez l’art du layering au sein de la collection iconique for her de Narciso Rodriguez.\r\nLa technique du layering nous vient du Moyen-Orient ; elle permet à chacun de créer sa propre signature olfactive. En superposant différents parfums, il est possible de créer une fragrance qui n’appartient qu’à soi. Avec le lancement de for her PURE MUSC, le layering prend une place centrale au sein de la collection for her, offrant la possibilité de personnaliser ses parfums for her préférés en fonction de chaque occasion. \r\nAssocié avec PURE MUSC, for her eau de parfum gagne pour sa part en intensité dans un jeu de pure séduction.",
+        "source_url": "https://www.april-beauty.be/fr/narciso-rodriguez-for-her-eau-de-parfum-2021800",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "April",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "For Her Eau de Parfum",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "for-her-eau-de-parfum-1a7hqk",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "LE PARFUM\r\nLe parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. \r\nfor her eau de parfum propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. Le cœur de musc demeure l’âme rayonnante de la fragrance et développe toute sa sensualité et sa sophistication sur une trame pastelle rosée. Des touches de rose et une sensation pêche apportent leur velouté, alors qu’un voile d’ambre doux et de bois ajoute mystère et profondeur à la composition.  for her eau de parfum est une fragrance enveloppante, accord intime entre la femme et son parfum. for her déclenche une étonnante sensation d’harmonie à fleur de peau. Sa simplicité et sa pureté charment, son mystère intrigue, sa sensualité envoûte.  \r\n\r\nLE FLACON\r\nSon flacon est l’expression d’un classicisme dépouillé de tout superflu pour atteindre une modernité intemporelle, une sensualité généreuse et pourtant sobre, discrète et suggérée. \r\n\r\nLE LAYERING\r\nDécouvrez l’art du layering au sein de la collection iconique for her de Narciso Rodriguez.\r\nLa technique du layering nous vient du Moyen-Orient ; elle permet à chacun de créer sa propre signature olfactive. En superposant différents parfums, il est possible de créer une fragrance qui n’appartient qu’à soi. Avec le lancement de for her PURE MUSC, le layering prend une place centrale au sein de la collection for her, offrant la possibilité de personnaliser ses parfums for her préférés en fonction de chaque occasion. \r\nAssocié avec PURE MUSC, for her eau de parfum gagne pour sa part en intensité dans un jeu de pure séduction.",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "For Her Eau de Parfum",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "for-her-eau-de-parfum-1a7hqk",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "for-her-eau-de-parfum-1a7hqk",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "LE PARFUM\r\nLe parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. \r\nfor her eau de parfum propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. L…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "narciso-rodriguez-for-her-eau-de-parfum-2021800",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Shop > Parfums > Parfum Femme > Fragrances > For Her Eau de Parfum",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/8d9636d74c2f4782d3974166130cd08688f65752_2500baf1-72e6-4f7b-b1c7-front.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "daisy-128h8v",
+    "title": "Daisy",
+    "bodyHtml": "Avec son joyeux parfum de fruits, violettes et vanille, elle dégage un charme naturel. Daisy vous emmène dans un monde pur, dynamique et spontané. Le flacon est surmonté de marguerites qui s'épanouissent autour du bouchon doré. Les \"daisy's\" blanches et dorées sont de différentes tailles et possèdent une texture inattendue: les pétales en vinyle rétro cool se plient en effet lorsqu'on les touche.",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Shop > Parfums > Parfum Femme > Fragrances > Daisy"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 98.5,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/87f0704fe266e7bac7dae2d7076be1c38ce925d6_c7b5b582-e3e5-44c0-bc04-front.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/87f0704fe266e7bac7dae2d7076be1c38ce925d6_c7b5b582-e3e5-44c0-bc04-front.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "98.5",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/87f0704fe266e7bac7dae2d7076be1c38ce925d6_c7b5b582-e3e5-44c0-bc04-front.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "daisy-128h8v",
+      "sourceId": "20009802"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "Daisy",
+        "slug_en": "daisy-128h8v",
+        "description_en": "Avec son joyeux parfum de fruits, violettes et vanille, elle dégage un charme naturel. Daisy vous emmène dans un monde pur, dynamique et spontané. Le flacon est surmonté de marguerites qui s'épanouissent autour du bouchon doré. Les \"daisy's\" blanches et dorées sont de différentes tailles et possèdent une texture inattendue: les pétales en vinyle rétro cool se plient en effet lorsqu'on les touche.",
+        "source_url": "https://www.april-beauty.be/fr/marc-jacobs-daisy-2021738",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "April",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "Daisy",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "daisy-128h8v",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "Avec son joyeux parfum de fruits, violettes et vanille, elle dégage un charme naturel. Daisy vous emmène dans un monde pur, dynamique et spontané. Le flacon est surmonté de marguerites qui s'épanouissent autour du bouchon doré. Les \"daisy's\" blanches et dorées sont de différentes tailles et possèdent une texture inattendue: les pétales en vinyle rétro cool se plient en effet lorsqu'on les touche.",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "Daisy",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "daisy-128h8v",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "daisy-128h8v",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "Avec son joyeux parfum de fruits, violettes et vanille, elle dégage un charme naturel. Daisy vous emmène dans un monde pur, dynamique et spontané. Le flacon est surmonté de marguerites qui s'épanouiss…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "20009802",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Shop > Parfums > Parfum Femme > Fragrances > Daisy",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/87f0704fe266e7bac7dae2d7076be1c38ce925d6_c7b5b582-e3e5-44c0-bc04-front.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "for-her-eau-de-parfum-128v4n",
+    "title": "For Her Eau de Parfum",
+    "bodyHtml": "LE PARFUM\r\nLe parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. \r\nfor her eau de parfum propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. Le cœur de musc demeure l’âme rayonnante de la fragrance et développe toute sa sensualité et sa sophistication sur une trame pastelle rosée. Des touches de rose et une sensation pêche apportent leur velouté, alors qu’un voile d’ambre doux et de bois ajoute mystère et profondeur à la composition.  for her eau de parfum est une fragrance enveloppante, accord intime entre la femme et son parfum. for her déclenche une étonnante sensation d’harmonie à fleur de peau. Sa simplicité et sa pureté charment, son mystère intrigue, sa sensualité envoûte.  \r\n\r\nLE FLACON\r\nSon flacon est l’expression d’un classicisme dépouillé de tout superflu pour atteindre une modernité intemporelle, une sensualité généreuse et pourtant sobre, discrète et suggérée. \r\n\r\nLE LAYERING\r\nDécouvrez l’art du layering au sein de la collection iconique for her de Narciso Rodriguez.\r\nLa technique du layering nous vient du Moyen-Orient ; elle permet à chacun de créer sa propre signature olfactive. En superposant différents parfums, il est possible de créer une fragrance qui n’appartient qu’à soi. Avec le lancement de for her PURE MUSC, le layering prend une place centrale au sein de la collection for her, offrant la possibilité de personnaliser ses parfums for her préférés en fonction de chaque occasion. \r\nAssocié avec PURE MUSC, for her eau de parfum gagne pour sa part en intensité dans un jeu de pure séduction.",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Shop > Parfums > Parfum Femme > Fragrances > For Her Eau de Parfum"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 123.9,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/8d9636d74c2f4782d3974166130cd08688f65752_2500baf1-72e6-4f7b-b1c7-front.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/8d9636d74c2f4782d3974166130cd08688f65752_2500baf1-72e6-4f7b-b1c7-front.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "123.9",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/8d9636d74c2f4782d3974166130cd08688f65752_2500baf1-72e6-4f7b-b1c7-front.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "for-her-eau-de-parfum-128v4n",
+      "sourceId": "20010011"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "For Her Eau de Parfum",
+        "slug_en": "for-her-eau-de-parfum-128v4n",
+        "description_en": "LE PARFUM\r\nLe parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. \r\nfor her eau de parfum propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. Le cœur de musc demeure l’âme rayonnante de la fragrance et développe toute sa sensualité et sa sophistication sur une trame pastelle rosée. Des touches de rose et une sensation pêche apportent leur velouté, alors qu’un voile d’ambre doux et de bois ajoute mystère et profondeur à la composition.  for her eau de parfum est une fragrance enveloppante, accord intime entre la femme et son parfum. for her déclenche une étonnante sensation d’harmonie à fleur de peau. Sa simplicité et sa pureté charment, son mystère intrigue, sa sensualité envoûte.  \r\n\r\nLE FLACON\r\nSon flacon est l’expression d’un classicisme dépouillé de tout superflu pour atteindre une modernité intemporelle, une sensualité généreuse et pourtant sobre, discrète et suggérée. \r\n\r\nLE LAYERING\r\nDécouvrez l’art du layering au sein de la collection iconique for her de Narciso Rodriguez.\r\nLa technique du layering nous vient du Moyen-Orient ; elle permet à chacun de créer sa propre signature olfactive. En superposant différents parfums, il est possible de créer une fragrance qui n’appartient qu’à soi. Avec le lancement de for her PURE MUSC, le layering prend une place centrale au sein de la collection for her, offrant la possibilité de personnaliser ses parfums for her préférés en fonction de chaque occasion. \r\nAssocié avec PURE MUSC, for her eau de parfum gagne pour sa part en intensité dans un jeu de pure séduction.",
+        "source_url": "https://www.april-beauty.be/fr/narciso-rodriguez-for-her-eau-de-parfum-2021806",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "April",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "For Her Eau de Parfum",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "for-her-eau-de-parfum-128v4n",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "LE PARFUM\r\nLe parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. \r\nfor her eau de parfum propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. Le cœur de musc demeure l’âme rayonnante de la fragrance et développe toute sa sensualité et sa sophistication sur une trame pastelle rosée. Des touches de rose et une sensation pêche apportent leur velouté, alors qu’un voile d’ambre doux et de bois ajoute mystère et profondeur à la composition.  for her eau de parfum est une fragrance enveloppante, accord intime entre la femme et son parfum. for her déclenche une étonnante sensation d’harmonie à fleur de peau. Sa simplicité et sa pureté charment, son mystère intrigue, sa sensualité envoûte.  \r\n\r\nLE FLACON\r\nSon flacon est l’expression d’un classicisme dépouillé de tout superflu pour atteindre une modernité intemporelle, une sensualité généreuse et pourtant sobre, discrète et suggérée. \r\n\r\nLE LAYERING\r\nDécouvrez l’art du layering au sein de la collection iconique for her de Narciso Rodriguez.\r\nLa technique du layering nous vient du Moyen-Orient ; elle permet à chacun de créer sa propre signature olfactive. En superposant différents parfums, il est possible de créer une fragrance qui n’appartient qu’à soi. Avec le lancement de for her PURE MUSC, le layering prend une place centrale au sein de la collection for her, offrant la possibilité de personnaliser ses parfums for her préférés en fonction de chaque occasion. \r\nAssocié avec PURE MUSC, for her eau de parfum gagne pour sa part en intensité dans un jeu de pure séduction.",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "For Her Eau de Parfum",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "for-her-eau-de-parfum-128v4n",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "for-her-eau-de-parfum-128v4n",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "LE PARFUM\r\nLe parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. \r\nfor her eau de parfum propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. L…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "20010011",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Shop > Parfums > Parfum Femme > Fragrances > For Her Eau de Parfum",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/8d9636d74c2f4782d3974166130cd08688f65752_2500baf1-72e6-4f7b-b1c7-front.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "for-her-eau-de-parfum-129gwm",
+    "title": "For Her Eau de Parfum",
+    "bodyHtml": "LE PARFUM\r\nLe parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. \r\nfor her eau de parfum propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. Le cœur de musc demeure l’âme rayonnante de la fragrance et développe toute sa sensualité et sa sophistication sur une trame pastelle rosée. Des touches de rose et une sensation pêche apportent leur velouté, alors qu’un voile d’ambre doux et de bois ajoute mystère et profondeur à la composition.  for her eau de parfum est une fragrance enveloppante, accord intime entre la femme et son parfum. for her déclenche une étonnante sensation d’harmonie à fleur de peau. Sa simplicité et sa pureté charment, son mystère intrigue, sa sensualité envoûte.  \r\n\r\nLE FLACON\r\nSon flacon est l’expression d’un classicisme dépouillé de tout superflu pour atteindre une modernité intemporelle, une sensualité généreuse et pourtant sobre, discrète et suggérée. \r\n\r\nLE LAYERING\r\nDécouvrez l’art du layering au sein de la collection iconique for her de Narciso Rodriguez.\r\nLa technique du layering nous vient du Moyen-Orient ; elle permet à chacun de créer sa propre signature olfactive. En superposant différents parfums, il est possible de créer une fragrance qui n’appartient qu’à soi. Avec le lancement de for her PURE MUSC, le layering prend une place centrale au sein de la collection for her, offrant la possibilité de personnaliser ses parfums for her préférés en fonction de chaque occasion. \r\nAssocié avec PURE MUSC, for her eau de parfum gagne pour sa part en intensité dans un jeu de pure séduction.",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Shop > Parfums > Parfum Femme > Fragrances > For Her Eau de Parfum"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 84.5,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/9caaa3f9e44453bac7f665270181382b73cc87ce_cbcac458-738b-4c33-82a1-front.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/9caaa3f9e44453bac7f665270181382b73cc87ce_cbcac458-738b-4c33-82a1-front.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "84.5",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/9caaa3f9e44453bac7f665270181382b73cc87ce_cbcac458-738b-4c33-82a1-front.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "for-her-eau-de-parfum-129gwm",
+      "sourceId": "20023393"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "For Her Eau de Parfum",
+        "slug_en": "for-her-eau-de-parfum-129gwm",
+        "description_en": "LE PARFUM\r\nLe parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. \r\nfor her eau de parfum propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. Le cœur de musc demeure l’âme rayonnante de la fragrance et développe toute sa sensualité et sa sophistication sur une trame pastelle rosée. Des touches de rose et une sensation pêche apportent leur velouté, alors qu’un voile d’ambre doux et de bois ajoute mystère et profondeur à la composition.  for her eau de parfum est une fragrance enveloppante, accord intime entre la femme et son parfum. for her déclenche une étonnante sensation d’harmonie à fleur de peau. Sa simplicité et sa pureté charment, son mystère intrigue, sa sensualité envoûte.  \r\n\r\nLE FLACON\r\nSon flacon est l’expression d’un classicisme dépouillé de tout superflu pour atteindre une modernité intemporelle, une sensualité généreuse et pourtant sobre, discrète et suggérée. \r\n\r\nLE LAYERING\r\nDécouvrez l’art du layering au sein de la collection iconique for her de Narciso Rodriguez.\r\nLa technique du layering nous vient du Moyen-Orient ; elle permet à chacun de créer sa propre signature olfactive. En superposant différents parfums, il est possible de créer une fragrance qui n’appartient qu’à soi. Avec le lancement de for her PURE MUSC, le layering prend une place centrale au sein de la collection for her, offrant la possibilité de personnaliser ses parfums for her préférés en fonction de chaque occasion. \r\nAssocié avec PURE MUSC, for her eau de parfum gagne pour sa part en intensité dans un jeu de pure séduction.",
+        "source_url": "https://www.april-beauty.be/fr/narciso-rodriguez-for-her-eau-de-parfum-2021816",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "April",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "For Her Eau de Parfum",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "for-her-eau-de-parfum-129gwm",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "LE PARFUM\r\nLe parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. \r\nfor her eau de parfum propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. Le cœur de musc demeure l’âme rayonnante de la fragrance et développe toute sa sensualité et sa sophistication sur une trame pastelle rosée. Des touches de rose et une sensation pêche apportent leur velouté, alors qu’un voile d’ambre doux et de bois ajoute mystère et profondeur à la composition.  for her eau de parfum est une fragrance enveloppante, accord intime entre la femme et son parfum. for her déclenche une étonnante sensation d’harmonie à fleur de peau. Sa simplicité et sa pureté charment, son mystère intrigue, sa sensualité envoûte.  \r\n\r\nLE FLACON\r\nSon flacon est l’expression d’un classicisme dépouillé de tout superflu pour atteindre une modernité intemporelle, une sensualité généreuse et pourtant sobre, discrète et suggérée. \r\n\r\nLE LAYERING\r\nDécouvrez l’art du layering au sein de la collection iconique for her de Narciso Rodriguez.\r\nLa technique du layering nous vient du Moyen-Orient ; elle permet à chacun de créer sa propre signature olfactive. En superposant différents parfums, il est possible de créer une fragrance qui n’appartient qu’à soi. Avec le lancement de for her PURE MUSC, le layering prend une place centrale au sein de la collection for her, offrant la possibilité de personnaliser ses parfums for her préférés en fonction de chaque occasion. \r\nAssocié avec PURE MUSC, for her eau de parfum gagne pour sa part en intensité dans un jeu de pure séduction.",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "For Her Eau de Parfum",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "for-her-eau-de-parfum-129gwm",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "for-her-eau-de-parfum-129gwm",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "LE PARFUM\r\nLe parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. \r\nfor her eau de parfum propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. L…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "20023393",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Shop > Parfums > Parfum Femme > Fragrances > For Her Eau de Parfum",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/9caaa3f9e44453bac7f665270181382b73cc87ce_cbcac458-738b-4c33-82a1-front.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "for-her-eau-de-toilette-1sfaec",
+    "title": "For Her Eau de Toilette",
+    "bodyHtml": "LE PARFUM\r\nImprégné de simplicité et d’essentiel, guidé par la femme sensuelle et élégante, le parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. for her propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. \r\nfor her eau de toilette s’articule autour de trois pulsations olfactives. La pulsation «  miel de fleurs » révèle un musc solaire aux accents rafraîchis de fleurs d’oranger et d’osmanthus. La pulsation «  lumière d’ambre » entraîne le musc vers un registre plus abstrait, où sa douceur impalpable se fait enveloppante. C’est alors un musc lumineux mais qui conserve une richesse onctueuse en présence de l’amberlyn et de la vanille. Enfin, la pulsation « bois » développe pleinement la dimension sensorielle du musc.  Le vétiver se féminise, la sensualité des notes de bois se magnifie.\r\n\r\nLE FLACON\r\nfor her eau de toilette suscite une émotion olfactive complexe. Son flacon est l’expression d’un classicisme dépouillé de tout superflu pour atteindre une modernité intemporelle, une sensualité généreuse et pourtant sobre, discrète et suggérée. \r\n\r\nLE LAYERING\r\nDécouvrez l’art du layering au sein de la collection iconique for her de Narciso Rodriguez.\r\nLa technique du layering nous vient du Moyen-Orient ; elle permet à chacun de créer sa propre signature olfactive. En superposant différents parfums, il est possible de créer une fragrance qui n’appartient qu’à soi. Avec le lancement de for her PURE MUSC, le layering prend une place centrale au sein de la collection for her, offrant la possibilité de personnaliser ses parfums for her préférés en fonction de chaque occasion. \r\nEn association avec for her, l’eau de toilette originale, PURE MUSC apporte une touche de sophistication d’une sensualité sublime.",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Shop > Parfums > Parfum Femme > Fragrances > For Her Eau de Toilette"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 70.9,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/5bc40f72ff35acb6547fad148723465d7515ffbb_adc63bcd-8ef7-4947-8349-front.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/5bc40f72ff35acb6547fad148723465d7515ffbb_adc63bcd-8ef7-4947-8349-front.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "70.9",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/5bc40f72ff35acb6547fad148723465d7515ffbb_adc63bcd-8ef7-4947-8349-front.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "for-her-eau-de-toilette-1sfaec",
+      "sourceId": "narciso-rodriguez-for-her-eau-de-toilette-2021826"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "For Her Eau de Toilette",
+        "slug_en": "for-her-eau-de-toilette-1sfaec",
+        "description_en": "LE PARFUM\r\nImprégné de simplicité et d’essentiel, guidé par la femme sensuelle et élégante, le parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. for her propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. \r\nfor her eau de toilette s’articule autour de trois pulsations olfactives. La pulsation «  miel de fleurs » révèle un musc solaire aux accents rafraîchis de fleurs d’oranger et d’osmanthus. La pulsation «  lumière d’ambre » entraîne le musc vers un registre plus abstrait, où sa douceur impalpable se fait enveloppante. C’est alors un musc lumineux mais qui conserve une richesse onctueuse en présence de l’amberlyn et de la vanille. Enfin, la pulsation « bois » développe pleinement la dimension sensorielle du musc.  Le vétiver se féminise, la sensualité des notes de bois se magnifie.\r\n\r\nLE FLACON\r\nfor her eau de toilette suscite une émotion olfactive complexe. Son flacon est l’expression d’un classicisme dépouillé de tout superflu pour atteindre une modernité intemporelle, une sensualité généreuse et pourtant sobre, discrète et suggérée. \r\n\r\nLE LAYERING\r\nDécouvrez l’art du layering au sein de la collection iconique for her de Narciso Rodriguez.\r\nLa technique du layering nous vient du Moyen-Orient ; elle permet à chacun de créer sa propre signature olfactive. En superposant différents parfums, il est possible de créer une fragrance qui n’appartient qu’à soi. Avec le lancement de for her PURE MUSC, le layering prend une place centrale au sein de la collection for her, offrant la possibilité de personnaliser ses parfums for her préférés en fonction de chaque occasion. \r\nEn association avec for her, l’eau de toilette originale, PURE MUSC apporte une touche de sophistication d’une sensualité sublime.",
+        "source_url": "https://www.april-beauty.be/fr/narciso-rodriguez-for-her-eau-de-toilette-2021826",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "April",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "For Her Eau de Toilette",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "for-her-eau-de-toilette-1sfaec",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "LE PARFUM\r\nImprégné de simplicité et d’essentiel, guidé par la femme sensuelle et élégante, le parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. for her propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. \r\nfor her eau de toilette s’articule autour de trois pulsations olfactives. La pulsation «  miel de fleurs » révèle un musc solaire aux accents rafraîchis de fleurs d’oranger et d’osmanthus. La pulsation «  lumière d’ambre » entraîne le musc vers un registre plus abstrait, où sa douceur impalpable se fait enveloppante. C’est alors un musc lumineux mais qui conserve une richesse onctueuse en présence de l’amberlyn et de la vanille. Enfin, la pulsation « bois » développe pleinement la dimension sensorielle du musc.  Le vétiver se féminise, la sensualité des notes de bois se magnifie.\r\n\r\nLE FLACON\r\nfor her eau de toilette suscite une émotion olfactive complexe. Son flacon est l’expression d’un classicisme dépouillé de tout superflu pour atteindre une modernité intemporelle, une sensualité généreuse et pourtant sobre, discrète et suggérée. \r\n\r\nLE LAYERING\r\nDécouvrez l’art du layering au sein de la collection iconique for her de Narciso Rodriguez.\r\nLa technique du layering nous vient du Moyen-Orient ; elle permet à chacun de créer sa propre signature olfactive. En superposant différents parfums, il est possible de créer une fragrance qui n’appartient qu’à soi. Avec le lancement de for her PURE MUSC, le layering prend une place centrale au sein de la collection for her, offrant la possibilité de personnaliser ses parfums for her préférés en fonction de chaque occasion. \r\nEn association avec for her, l’eau de toilette originale, PURE MUSC apporte une touche de sophistication d’une sensualité sublime.",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "For Her Eau de Toilette",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "for-her-eau-de-toilette-1sfaec",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "for-her-eau-de-toilette-1sfaec",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "LE PARFUM\r\nImprégné de simplicité et d’essentiel, guidé par la femme sensuelle et élégante, le parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. for her propose un voyage au cœur…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "narciso-rodriguez-for-her-eau-de-toilette-2021826",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Shop > Parfums > Parfum Femme > Fragrances > For Her Eau de Toilette",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/5bc40f72ff35acb6547fad148723465d7515ffbb_adc63bcd-8ef7-4947-8349-front.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  },
+  {
+    "handle": "for-her-eau-de-parfum-128v4o",
+    "title": "For Her Eau de Parfum",
+    "bodyHtml": "LE PARFUM\r\nLe parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. \r\nfor her eau de parfum propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. Le cœur de musc demeure l’âme rayonnante de la fragrance et développe toute sa sensualité et sa sophistication sur une trame pastelle rosée. Des touches de rose et une sensation pêche apportent leur velouté, alors qu’un voile d’ambre doux et de bois ajoute mystère et profondeur à la composition.  for her eau de parfum est une fragrance enveloppante, accord intime entre la femme et son parfum. for her déclenche une étonnante sensation d’harmonie à fleur de peau. Sa simplicité et sa pureté charment, son mystère intrigue, sa sensualité envoûte.  \r\n\r\nLE FLACON\r\nSon flacon est l’expression d’un classicisme dépouillé de tout superflu pour atteindre une modernité intemporelle, une sensualité généreuse et pourtant sobre, discrète et suggérée. \r\n\r\nLE LAYERING\r\nDécouvrez l’art du layering au sein de la collection iconique for her de Narciso Rodriguez.\r\nLa technique du layering nous vient du Moyen-Orient ; elle permet à chacun de créer sa propre signature olfactive. En superposant différents parfums, il est possible de créer une fragrance qui n’appartient qu’à soi. Avec le lancement de for her PURE MUSC, le layering prend une place centrale au sein de la collection for her, offrant la possibilité de personnaliser ses parfums for her préférés en fonction de chaque occasion. \r\nAssocié avec PURE MUSC, for her eau de parfum gagne pour sa part en intensité dans un jeu de pure séduction.",
+    "vendor": "",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Shop > Parfums > Parfum Femme > Fragrances > For Her Eau de Parfum"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "",
+        "price": 169.5,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "",
+        "grams": null,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": null,
+        "imageSrc": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/0f6a9c7c8c1eb47c386a0e77d45e59f778b34d8e_f7fd00b2-999f-48e5-aaa0-front.jpeg",
+        "provenance": {
+          "imageSrc": {
+            "platform": "eloshon",
+            "sourceField": "image_url",
+            "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/0f6a9c7c8c1eb47c386a0e77d45e59f778b34d8e_f7fd00b2-999f-48e5-aaa0-front.jpeg",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "price",
+            "sourceValue": "169.5",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "barcode",
+            "sourceValue": "",
+            "transform": "text",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "weight_kg",
+            "sourceValue": "",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/0f6a9c7c8c1eb47c386a0e77d45e59f778b34d8e_f7fd00b2-999f-48e5-aaa0-front.jpeg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "identity": {
+      "slug": "for-her-eau-de-parfum-128v4o",
+      "sourceId": "20010012"
+    },
+    "sourceExtension": {
+      "eloshon": {
+        "name_en": "For Her Eau de Parfum",
+        "slug_en": "for-her-eau-de-parfum-128v4o",
+        "description_en": "LE PARFUM\r\nLe parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. \r\nfor her eau de parfum propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. Le cœur de musc demeure l’âme rayonnante de la fragrance et développe toute sa sensualité et sa sophistication sur une trame pastelle rosée. Des touches de rose et une sensation pêche apportent leur velouté, alors qu’un voile d’ambre doux et de bois ajoute mystère et profondeur à la composition.  for her eau de parfum est une fragrance enveloppante, accord intime entre la femme et son parfum. for her déclenche une étonnante sensation d’harmonie à fleur de peau. Sa simplicité et sa pureté charment, son mystère intrigue, sa sensualité envoûte.  \r\n\r\nLE FLACON\r\nSon flacon est l’expression d’un classicisme dépouillé de tout superflu pour atteindre une modernité intemporelle, une sensualité généreuse et pourtant sobre, discrète et suggérée. \r\n\r\nLE LAYERING\r\nDécouvrez l’art du layering au sein de la collection iconique for her de Narciso Rodriguez.\r\nLa technique du layering nous vient du Moyen-Orient ; elle permet à chacun de créer sa propre signature olfactive. En superposant différents parfums, il est possible de créer une fragrance qui n’appartient qu’à soi. Avec le lancement de for her PURE MUSC, le layering prend une place centrale au sein de la collection for her, offrant la possibilité de personnaliser ses parfums for her préférés en fonction de chaque occasion. \r\nAssocié avec PURE MUSC, for her eau de parfum gagne pour sa part en intensité dans un jeu de pure séduction.",
+        "source_url": "https://www.april-beauty.be/fr/narciso-rodriguez-for-her-eau-de-parfum-2021811",
+        "category_slug": "",
+        "hs_code": "",
+        "store_slug": "April",
+        "is_alcoholic": null
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "name_en",
+        "sourceValue": "For Her Eau de Parfum",
+        "reason": "no-canon-field",
+        "note": "Only when different from name_fr. Multilingual title: canon-evolution-open."
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "slug_en",
+        "sourceValue": "for-her-eau-de-parfum-128v4o",
+        "reason": "no-canon-field"
+      },
+      {
+        "platform": "eloshon",
+        "sourceField": "description_en",
+        "sourceValue": "LE PARFUM\r\nLe parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. \r\nfor her eau de parfum propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. Le cœur de musc demeure l’âme rayonnante de la fragrance et développe toute sa sensualité et sa sophistication sur une trame pastelle rosée. Des touches de rose et une sensation pêche apportent leur velouté, alors qu’un voile d’ambre doux et de bois ajoute mystère et profondeur à la composition.  for her eau de parfum est une fragrance enveloppante, accord intime entre la femme et son parfum. for her déclenche une étonnante sensation d’harmonie à fleur de peau. Sa simplicité et sa pureté charment, son mystère intrigue, sa sensualité envoûte.  \r\n\r\nLE FLACON\r\nSon flacon est l’expression d’un classicisme dépouillé de tout superflu pour atteindre une modernité intemporelle, une sensualité généreuse et pourtant sobre, discrète et suggérée. \r\n\r\nLE LAYERING\r\nDécouvrez l’art du layering au sein de la collection iconique for her de Narciso Rodriguez.\r\nLa technique du layering nous vient du Moyen-Orient ; elle permet à chacun de créer sa propre signature olfactive. En superposant différents parfums, il est possible de créer une fragrance qui n’appartient qu’à soi. Avec le lancement de for her PURE MUSC, le layering prend une place centrale au sein de la collection for her, offrant la possibilité de personnaliser ses parfums for her préférés en fonction de chaque occasion. \r\nAssocié avec PURE MUSC, for her eau de parfum gagne pour sa part en intensité dans un jeu de pure séduction.",
+        "reason": "no-canon-field"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "name_fr",
+        "sourceValue": "For Her Eau de Parfum",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "for-her-eau-de-parfum-128v4o",
+        "transform": "text",
+        "method": "exact"
+      },
+      "identity.slug": {
+        "platform": "eloshon",
+        "sourceField": "slug_fr",
+        "sourceValue": "for-her-eau-de-parfum-128v4o",
+        "transform": "text",
+        "method": "exact"
+      },
+      "bodyHtml": {
+        "platform": "eloshon",
+        "sourceField": "description_fr",
+        "sourceValue": "LE PARFUM\r\nLe parfum for her, est un parfum hommage, créé comme un cadeau aux femmes. \r\nfor her eau de parfum propose un voyage au cœur du musc à la découverte de ses multiples et subtiles facettes. L…",
+        "transform": "html",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "eloshon",
+        "sourceField": "source_product_id",
+        "sourceValue": "20010012",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "source_category",
+        "sourceValue": "Shop > Parfums > Parfum Femme > Fragrances > For Her Eau de Parfum",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "image_url",
+        "sourceValue": "https://bogart-april-be-storage.omn.proximis.com/Imagestorage/imagesSynchro/0/0/0f6a9c7c8c1eb47c386a0e77d45e59f778b34d8e_f7fd00b2-999f-48e5-aaa0-front.jpeg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "productType": {
+        "platform": "eloshon",
+        "sourceField": "product_type",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      }
+    }
+  }
+]

@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "id": "canon.transform-aliases.v1",
+  "notes": [
+    "Bridge between the mapping-layer transform vocabulary (core/src/mapping.ts TransformId, used by the canon field catalogue) and the generic parser registry (core/knowledge-proposal/transforms.mjs).",
+    "Used by the Learned writer: a column confirmed as canon field X gets the registry transform the catalogue implies. Structural transforms with no single-column equivalent map to null (the column is preserved in sourceExtension instead).",
+    "Phase 6.3: identifiers.* are variant-scoped canon paths (variants[].identifiers.<kind>); `translations` is a structural family (locale-suffixed columns) with no single-column transform — the Learned writer preserves such columns until the 6.7 mapping UI resolves locale + field.",
+    "Scraper CSV work (2026-10): `specifications` appends a titled section to the description (descriptionSections[], merged into bodyHtml by the generic parser); `sourceUrl` is kept under sourceExtension; `identity.sourceId` keeps the source id; `stockStatus` is carried as a metafield (key = the column)."
+  ],
+  "aliases": {
+    "copy": {
+      "transform": "text"
+    },
+    "text": {
+      "transform": "text"
+    },
+    "html": {
+      "transform": "html"
+    },
+    "list": {
+      "transform": "list",
+      "args": {
+        "sep": ","
+      }
+    },
+    "bool": {
+      "transform": "bool"
+    },
+    "enum": {
+      "transform": "text"
+    },
+    "money": {
+      "transform": "money"
+    },
+    "int": {
+      "transform": "int"
+    },
+    "grams_from_kg": {
+      "transform": "weight_to_grams",
+      "args": {
+        "unit": "kg"
+      }
+    },
+    "kg_from_grams": {
+      "transform": "weight_to_grams",
+      "args": {
+        "unit": "g"
+      }
+    },
+    "price_promo": {
+      "transform": "money"
+    },
+    "url": {
+      "transform": "text"
+    },
+    "images": {
+      "transform": "images_from_urls"
+    },
+    "category_path": {
+      "transform": "category_path_split",
+      "args": {
+        "sep": ">",
+        "listSep": ","
+      }
+    },
+    "metafields": {
+      "transform": "metafield_pair"
+    },
+    "options": null,
+    "derived": null,
+    "consent": {
+      "transform": "bool"
+    },
+    "state": {
+      "transform": "text"
+    },
+    "address": null,
+    "lineitems": null,
+    "order_status": {
+      "transform": "text"
+    },
+    "translations": null,
+    "string_id": {
+      "transform": "string_id"
+    },
+    "source_url": {
+      "transform": "text"
+    },
+    "description_section": {
+      "transform": "description_section"
+    },
+    "vat_rate": {
+      "transform": "vat_rate"
+    },
+    "currency": {
+      "transform": "currency"
+    },
+    "unit_price": {
+      "transform": "unit_price"
+    }
+  },
+  "variantScoped": [
+    "sku",
+    "price",
+    "compareAtPrice",
+    "cost",
+    "barcode",
+    "grams",
+    "inventoryQty",
+    "requiresShipping",
+    "taxable",
+    "variantImage",
+    "lengthCm",
+    "widthCm",
+    "heightCm",
+    "parentRef",
+    "identifiers.gtin",
+    "identifiers.ean",
+    "identifiers.upc",
+    "identifiers.isbn",
+    "identifiers.mpn",
+    "identifiers.hsCode",
+    "identifiers.originCountry",
+    "vatRate",
+    "unitPrice"
+  ],
+  "canonPaths": {
+    "variantImage": "variants[].imageSrc",
+    "parentRef": "sourceExtension.{platform}.parent_ref",
+    "sourceUrl": "sourceExtension.{platform}.source_url"
+  },
+  "appendPaths": {
+    "metafields": "metafields[]",
+    "images": "images[]",
+    "tags": "tags[]",
+    "specifications": "descriptionSections[]",
+    "stockStatus": "metafields[]"
+  },
+  "unitHints": {
+    "weight": {
+      "transform": "weight_to_grams",
+      "argName": "unit",
+      "default": "kg",
+      "units": [
+        "kg",
+        "kilo",
+        "kilos",
+        "kilogram",
+        "kilograms",
+        "kilogramme",
+        "kilogrammes",
+        "g",
+        "gr",
+        "gram",
+        "grams",
+        "gramme",
+        "grammes",
+        "mg",
+        "lb",
+        "lbs",
+        "oz"
+      ],
+      "note": "Unit read from the column name wherever it sits (Poids (kg), Weight_g, Masse en grammes); without one, the median of the column decides (>= 20 grams, below kilos), else kg."
+    },
+    "length": {
+      "transform": "length_to_cm",
+      "argName": "unit",
+      "default": "cm",
+      "units": [
+        "cm",
+        "mm",
+        "m",
+        "in"
+      ],
+      "note": "Unit read from the column name; default cm."
+    },
+    "unitPrice": {
+      "transform": "unit_price",
+      "argName": "unit",
+      "default": "kg",
+      "units": [
+        "kg",
+        "kilo",
+        "kilos",
+        "kilogram",
+        "kilograms",
+        "kilogramme",
+        "kilogrammes",
+        "g",
+        "gr",
+        "gram",
+        "grams",
+        "gramme",
+        "grammes",
+        "litre",
+        "litres",
+        "liter",
+        "liters",
+        "l",
+        "ml",
+        "cl",
+        "m2",
+        "m",
+        "piece",
+        "pieces",
+        "unit",
+        "stuk"
+      ],
+      "note": "Unit read from the column name (\"Prix au kilo\", \"Price per litre\"); default kg."
+    }
+  }
+}

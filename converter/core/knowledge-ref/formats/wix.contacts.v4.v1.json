@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 1,
+  "id": "wix.contacts.v4.v1",
+  "displayName": "Wix Contacts (Contacts API v4 + Members)",
+  "provenance": "native-platform",
+  "medium": "json-api",
+  "platformHint": "wix",
+  "entity": "customers",
+  "version": "wix-contacts-v4",
+  "signatures": [
+    {
+      "kind": "json-shape",
+      "requiredPaths": [
+        "id",
+        "revision",
+        "info",
+        "primaryInfo",
+        "primaryEmail"
+      ],
+      "hintPaths": [
+        "memberInfo",
+        "lastActivity",
+        "source"
+      ]
+    }
+  ],
+  "structure": {
+    "unit": "customer"
+  },
+  "invariantsExpected": [
+    "A contact is not necessarily a member: memberInfo.memberId present = site member, absent = guest / lead",
+    "primaryEmail.subscriptionStatus (SUBSCRIBED | UNSUBSCRIBED | PENDING | NOT_SET) is the statement — with NO consent timestamp on the contact (updatedDate is not one) → never opted_in, at best pending",
+    "info.addresses[] is an address book (tag HOME | WORK | BILLING | SHIPPING); info.phones[] likewise"
+  ],
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "live:wix-test:2026-09-21",
+      "origin": "reference",
+      "diff": [
+        "Phase 7.6: full field map from the live site (1 contact / member)"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "path": "primaryInfo.email",
+      "canon": "email",
+      "transform": "text",
+      "confidence": "verified-live",
+      "consumes": [
+        "primaryInfo"
+      ]
+    },
+    {
+      "path": "info.name.first",
+      "canon": "firstName",
+      "transform": "text",
+      "confidence": "verified-live",
+      "consumes": [
+        "info"
+      ]
+    },
+    {
+      "path": "info.name.last",
+      "canon": "lastName",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "info.phones.items",
+      "canon": "phone",
+      "transform": "pick_where",
+      "args": {
+        "where": {
+          "primary": true
+        },
+        "pick": "phone",
+        "fallbackFirst": true
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "info.addresses.items",
+      "canon": "address",
+      "transform": "address_from",
+      "args": {
+        "withName": false,
+        "fields": {
+          "address1": "address.addressLine1",
+          "address2": "address.addressLine2",
+          "city": "address.city",
+          "provinceCode": "address.subdivision",
+          "country": "address.country",
+          "zip": "address.postalCode",
+          "label": "tag",
+          "kind": "tag",
+          "sourceId": "id"
+        },
+        "kindMap": {
+          "BILLING": "billing",
+          "SHIPPING": "shipping"
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "info.addresses.items",
+      "canon": "addresses",
+      "transform": "address_from",
+      "args": {
+        "withName": false,
+        "fields": {
+          "address1": "address.addressLine1",
+          "address2": "address.addressLine2",
+          "city": "address.city",
+          "provinceCode": "address.subdivision",
+          "country": "address.country",
+          "zip": "address.postalCode",
+          "label": "tag",
+          "kind": "tag",
+          "sourceId": "id"
+        },
+        "kindMap": {
+          "BILLING": "billing",
+          "SHIPPING": "shipping"
+        },
+        "each": true
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "primaryEmail.subscriptionStatus",
+      "canon": "marketingConsent.email",
+      "transform": "marketing_consent",
+      "args": {
+        "channel": "email",
+        "optedIn": [
+          "SUBSCRIBED"
+        ],
+        "optedOut": [
+          "UNSUBSCRIBED"
+        ],
+        "pending": [
+          "PENDING",
+          "NOT_SET"
+        ]
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "primaryEmail"
+      ],
+      "notes": "7.3: no consent timestamp on a Wix contact → SUBSCRIBED is pending (evidence only)."
+    },
+    {
+      "path": "primaryEmail.deliverabilityStatus",
+      "canon": "sourceExtension.wix.deliverabilityStatus",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "identity.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "createdDate",
+      "canon": "identity.timestamps",
+      "transform": "timestamps",
+      "confidence": "verified-live",
+      "inputs": [
+        "createdDate",
+        "updatedDate"
+      ]
+    },
+    {
+      "path": "memberInfo.memberId",
+      "canon": "isGuest",
+      "transform": "is_unset",
+      "confidence": "verified-live",
+      "consumes": [
+        "memberInfo"
+      ]
+    },
+    {
+      "path": "memberInfo.status",
+      "canon": "state",
+      "transform": "text_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "memberInfo",
+      "canon": "sourceExtension.wix.member",
+      "transform": "object_map",
+      "args": {
+        "fields": {
+          "memberId": "memberId",
+          "signupDate": "signupDate",
+          "emailVerified": {
+            "path": "emailVerified",
+            "as": "bool"
+          },
+          "status": "status",
+          "lastLoginDate": "lastLoginDate"
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "info.company",
+      "canon": "company.name",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "info.jobTitle",
+      "canon": "sourceExtension.wix.jobTitle",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "info.birthdate",
+      "canon": "birthday",
+      "transform": "text_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "info.locale",
+      "canon": "locale",
+      "transform": "text_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "info.labelKeys.items",
+      "canon": "tags",
+      "transform": "list",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "info.emails",
+      "canon": "sourceExtension.wix.emails",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "info.extendedFields.items",
+      "canon": "sourceExtension.wix.extendedFields",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "revision",
+      "canon": "sourceExtension.wix.revision",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "source",
+      "canon": "sourceExtension.wix.source",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "lastActivity",
+      "canon": "sourceExtension.wix.lastActivity",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "picture",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "avatar link with a signed token"
+    },
+    {
+      "path": "info.picture",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    }
+  ]
+}

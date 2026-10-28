@@ -1,0 +1,682 @@
+{
+  "schemaVersion": 1,
+  "id": "woocommerce.orders.rest.v1",
+  "displayName": "WooCommerce Orders (REST API v3)",
+  "provenance": "native-platform",
+  "medium": "json-api",
+  "platformHint": "woocommerce",
+  "entity": "orders",
+  "version": "wc-9.x",
+  "signatures": [
+    {
+      "kind": "json-shape",
+      "requiredPaths": [
+        "id",
+        "number",
+        "status",
+        "line_items",
+        "billing",
+        "prices_include_tax"
+      ],
+      "hintPaths": [
+        "order_key",
+        "created_via",
+        "date_paid_gmt",
+        "shipping_lines"
+      ]
+    }
+  ],
+  "structure": {
+    "unit": "order",
+    "items": {
+      "inlinePath": "line_items",
+      "keyedBy": "id"
+    }
+  },
+  "invariantsExpected": [
+    "number is the display number (= id unless a sequential-numbers plugin runs); the target never receives it as its own ID",
+    "prices_include_tax is the order-level tax flag; *_gmt dates are UTC, the plain ones are site-local",
+    "customer_id 0 = guest checkout; the billing e-mail is the customer reference",
+    "line_items[].subtotal is before line discounts, total after; taxes[] per line"
+  ],
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "live:woocommerce-test:2026-09-21",
+      "origin": "reference",
+      "diff": [
+        "Phase 7.6: full field map from the live REST payload (WC 11.1); numbering (7.4), payments as aggregates (7.2), statuses typed"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "path": "number",
+      "canon": "numbering.sourceNumber",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "The SOURCE order number — an immutable reference on the target, never its sequence (7.4)."
+    },
+    {
+      "path": "id",
+      "canon": "numbering.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "identity.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "status",
+      "canon": "status.sourceState",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "status",
+      "canon": "status.financial",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "pending": "pending",
+          "on-hold": "pending",
+          "processing": "paid",
+          "completed": "paid",
+          "cancelled": "voided",
+          "refunded": "refunded",
+          "failed": "pending",
+          "checkout-draft": "pending"
+        },
+        "default": "unknown"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "status",
+      "canon": "status.fulfillment",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "completed": "fulfilled",
+          "refunded": "restocked"
+        },
+        "default": "unfulfilled"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "status",
+      "canon": "status.lifecycle",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "completed": "closed",
+          "cancelled": "cancelled",
+          "refunded": "closed",
+          "checkout-draft": "draft"
+        },
+        "default": "open"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "currency",
+      "canon": "currency",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "currency_symbol",
+      "canon": "sourceExtension.woocommerce.currency_symbol",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "prices_include_tax",
+      "canon": "amounts.taxIncluded",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total",
+      "canon": "amounts.total",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_tax",
+      "canon": "amounts.taxes",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shipping_total",
+      "canon": "amounts.shipping",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shipping_tax",
+      "canon": "amounts.shippingTax",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "discount_total",
+      "canon": "amounts.discounts",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "discount_tax",
+      "canon": "sourceExtension.woocommerce.discount_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "cart_tax",
+      "canon": "sourceExtension.woocommerce.cart_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "line_items",
+      "canon": "amounts.subtotal",
+      "transform": "sum_of",
+      "args": {
+        "path": "subtotal"
+      },
+      "confidence": "verified-live",
+      "notes": "WooCommerce has no order subtotal: the sum of line subtotals (before line discounts)."
+    },
+    {
+      "path": "date_created_gmt",
+      "canon": "timestamps.created",
+      "transform": "date_iso",
+      "confidence": "verified-live",
+      "args": {
+        "assumeUtc": true
+      }
+    },
+    {
+      "path": "date_modified_gmt",
+      "canon": "timestamps.updated",
+      "transform": "date_iso",
+      "confidence": "verified-live",
+      "args": {
+        "assumeUtc": true
+      }
+    },
+    {
+      "path": "date_paid_gmt",
+      "canon": "timestamps.paid",
+      "transform": "date_present",
+      "confidence": "verified-live",
+      "args": {
+        "assumeUtc": true
+      }
+    },
+    {
+      "path": "date_completed_gmt",
+      "canon": "timestamps.completed",
+      "transform": "date_present",
+      "confidence": "verified-live",
+      "args": {
+        "assumeUtc": true
+      }
+    },
+    {
+      "path": "date_created",
+      "canon": "sourceExtension.woocommerce.date_created_local",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "date_modified",
+      "canon": "sourceExtension.woocommerce.date_modified_local",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "date_paid",
+      "canon": "sourceExtension.woocommerce.date_paid_local",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "date_completed",
+      "canon": "sourceExtension.woocommerce.date_completed_local",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "customer_id",
+      "canon": "customerRef.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "customer_id",
+      "canon": "customerRef.isGuest",
+      "transform": "equals_map",
+      "args": {
+        "value": 0,
+        "then": true,
+        "else": false
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "billing.email",
+      "canon": "customerRef.email",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "billing",
+      "canon": "billing",
+      "transform": "address_from",
+      "args": {
+        "fields": {
+          "company": "company",
+          "address1": "address_1",
+          "address2": "address_2",
+          "city": "city",
+          "province": "state",
+          "provinceCode": "state",
+          "country": "country",
+          "zip": "postcode",
+          "phone": "phone"
+        },
+        "nameFrom": [
+          "first_name",
+          "last_name"
+        ]
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shipping",
+      "canon": "shipping_",
+      "transform": "address_from",
+      "args": {
+        "fields": {
+          "company": "company",
+          "address1": "address_1",
+          "address2": "address_2",
+          "city": "city",
+          "province": "state",
+          "provinceCode": "state",
+          "country": "country",
+          "zip": "postcode",
+          "phone": "phone"
+        },
+        "nameFrom": [
+          "first_name",
+          "last_name"
+        ]
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "payment_method",
+      "canon": "payments[]",
+      "transform": "object_map",
+      "args": {
+        "fromSource": true,
+        "fields": {
+          "kind": {
+            "value": "sale"
+          },
+          "status": {
+            "path": "date_paid_gmt",
+            "as": "presence",
+            "then": "success",
+            "else": "pending"
+          },
+          "amount": {
+            "path": "total",
+            "as": "number"
+          },
+          "currency": "currency",
+          "method": "payment_method_title",
+          "gateway": "payment_method",
+          "providerRef": "transaction_id",
+          "at": {
+            "path": "date_paid_gmt",
+            "as": "date",
+            "assumeUtc": true
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "payment_method_title",
+        "transaction_id"
+      ],
+      "notes": "One aggregated payment from the order-level facts (the REST order carries no transaction list). transaction_id is a gateway REFERENCE, never a token."
+    },
+    {
+      "path": "customer_note",
+      "canon": "note",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "created_via",
+      "canon": "source",
+      "transform": "text_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "tax_lines",
+      "canon": "taxLines",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "title": "label",
+          "rate": {
+            "path": "rate_percent",
+            "as": "number"
+          },
+          "amount": {
+            "path": "tax_total",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shipping_lines",
+      "canon": "shippingLines",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "method": "method_title",
+          "code": "method_id",
+          "amount": {
+            "path": "total",
+            "as": "number"
+          },
+          "tax": {
+            "path": "total_tax",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "fee_lines",
+      "canon": "fees",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "name": "name",
+          "amount": {
+            "path": "total",
+            "as": "number"
+          },
+          "tax": {
+            "path": "total_tax",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "coupon_lines",
+      "canon": "discounts",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "code": "code",
+          "kind": {
+            "value": "code"
+          },
+          "amount": {
+            "path": "discount",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "refunds",
+      "canon": "refunds",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "sourceId": {
+            "path": "id",
+            "as": "text"
+          },
+          "amount": {
+            "path": "total",
+            "as": "number"
+          },
+          "reason": "reason"
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "meta_data",
+      "canon": "sourceExtension.woocommerce.meta_data",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "parent_id",
+      "canon": "sourceExtension.woocommerce.parent_id",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "version",
+      "canon": "sourceExtension.woocommerce.version",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "is_editable",
+      "canon": "sourceExtension.woocommerce.is_editable",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "needs_payment",
+      "canon": "sourceExtension.woocommerce.needs_payment",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "needs_processing",
+      "canon": "sourceExtension.woocommerce.needs_processing",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "order_key",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "checkout session key — never carried"
+    },
+    {
+      "path": "cart_hash",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "payment_url",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "pay-link with the order key"
+    },
+    {
+      "path": "customer_ip_address",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "personal data, not migrated"
+    },
+    {
+      "path": "customer_user_agent",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "personal data, not migrated"
+    },
+    {
+      "path": "name",
+      "canon": "items[].name",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "sku",
+      "canon": "items[].sku",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "quantity",
+      "canon": "items[].quantity",
+      "transform": "int",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "price",
+      "canon": "items[].unitPrice",
+      "transform": "money",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "total",
+      "canon": "items[].total",
+      "transform": "money",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "total_tax",
+      "canon": "items[].totalTax",
+      "transform": "money",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "subtotal",
+      "canon": "sourceExtension.woocommerce.subtotal",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item",
+      "notes": "line subtotal before line discounts"
+    },
+    {
+      "path": "subtotal_tax",
+      "canon": "sourceExtension.woocommerce.subtotal_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "id",
+      "canon": "items[].kind",
+      "transform": "constant",
+      "args": {
+        "value": "product"
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "id",
+      "canon": "sourceExtension.woocommerce.line_id",
+      "transform": "string_id",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_id",
+      "canon": "items[].productRef",
+      "transform": "string_id",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "variation_id",
+      "canon": "items[].variantRef",
+      "transform": "id_or_none",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "global_unique_id",
+      "canon": "items[].identifiers.gtin",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "image.src",
+      "canon": "items[].imageSrc",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item",
+      "consumes": [
+        "image"
+      ]
+    },
+    {
+      "path": "taxes",
+      "canon": "items[].taxLines",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "amount": {
+            "path": "total",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "meta_data",
+      "canon": "sourceExtension.woocommerce.meta_data",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "tax_class",
+      "canon": "sourceExtension.woocommerce.tax_class",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "parent_name",
+      "canon": "sourceExtension.woocommerce.parent_name",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    }
+  ]
+}

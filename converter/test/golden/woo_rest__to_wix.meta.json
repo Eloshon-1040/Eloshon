@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "sourceFormat": "woocommerce.products.rest.v1",
+  "targetFormat": "wix_products",
+  "counts": {
+    "inputUnits": 2,
+    "outputUnits": 2,
+    "failedUnits": 0,
+    "outputRows": 16
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_wix_option_type"
+    },
+    {
+      "code": "loss_wix_category_hierarchy",
+      "params": {
+        "count": 2
+      }
+    },
+    {
+      "code": "loss_short_description",
+      "params": {
+        "target": "Wix",
+        "count": 2
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false
+}

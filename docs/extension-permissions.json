@@ -1,0 +1,18 @@
+{
+  "_comment": "Permission justification checklist for the store listing + the zip verifier. Keep in sync with extension/manifest.json.",
+  "permissions": {
+    "storage": "Persist job cursor, dedup keys and product chunks so a job resumes after the service worker sleeps or the browser restarts. No secrets stored.",
+    "alarms": "Heartbeat to wake the service worker and resume a running job; reconnect the app link.",
+    "scripting": "Inject the in-page runner into the active tab (per granted domain) to read the DOM/embedded state and drive waits/clicks for extraction.",
+    "nativeMessaging": "Talk to the Eloshon Scraper desktop app's native host (job in, progress/results out). Locked to this extension's ID.",
+    "notifications": "Tell the user when a challenge needs their action in the tab, or when a site is blocked.",
+    "offscreen": "Parse large HTML payloads with a DOMParser off the service worker so parsing never blocks it.",
+    "tabs": "Open/track the working tab, drive navigation for pagination and detail pages, and show the per-tab badge.",
+    "activeTab": "Screenshot the challenge tab (captureVisibleTab) when a run pauses for user action, so the operator can see what the challenge is instead of describing it. No warning permission; capture is best-effort and never prompts.",
+    "sidePanel": "Show the interactive extraction panel (fields, pages, results, settings) beside the page, opened from the toolbar icon. UI only; no extra data access."
+  },
+  "optional_host_permissions": {
+    "*://*/*": "Host access is NOT granted by default. The user grants one domain at a time from the popup (a user gesture) before that domain can be scraped."
+  },
+  "host_permissions": []
+}

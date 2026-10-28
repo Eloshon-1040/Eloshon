@@ -1,0 +1,4 @@
+post_name,post_title,post_content,post_status,sku,regular_price,sale_price,stock,weight,length,width,height,tax:product_cat,tax:product_tag,tax:product_brand,attribute:Taille,attribute:Couleur
+tshirt-bio,T-shirt bio,<p>Coton biologique.</p>,publish,TS-BIO,25.00,19.00,50,0.18,,,,Homme > Hauts,"coton, bio",Marques > ÉcoWear,S | M | L,Blanc | Noir
+mug-email,Mug émaillé,<p>Mug 30cl.</p>,publish,MUG-30,14.50,,200,0.35,,,,Maison > Cuisine,,AtelierCéramique,,
+draft-item,Brouillon,,draft,DRAFT-1,9.99,,0,,,,,Divers,,,,

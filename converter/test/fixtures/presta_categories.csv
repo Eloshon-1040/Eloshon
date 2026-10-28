@@ -1,0 +1,5 @@
+ID;NAME;PARENT_CATEGORY;ROOT_CATEGORY
+1;Accueil;0;1
+200;Maison;Accueil;1
+201;Cuisine;Maison;1
+202;Audio;Maison;1

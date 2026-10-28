@@ -1,0 +1,91 @@
+[
+  {
+    "store_slug": "demo",
+    "source_url": "https://shop.example/p/filtre-315",
+    "source_product_id": "4006381333931",
+    "source_category": "Maison > Ventilation",
+    "product_type": null,
+    "name": "Filtre à particules 315 mm",
+    "description": "Filtre efficace",
+    "storage_info": null,
+    "price": 72.9,
+    "weight_kg": 0.5,
+    "barcode": "4006381333931",
+    "hs_code": null,
+    "images": [
+      "https://shop.example/img/a.jpg",
+      "https://cdn.example/b.jpg",
+      "https://shop.example/p/img/c.png"
+    ],
+    "image_url": "https://shop.example/img/a.jpg",
+    "category_slug": null,
+    "color": "Bleu",
+    "variants": [
+      {
+        "code": "V1",
+        "type": "couleur",
+        "name": "Bleu"
+      }
+    ],
+    "raw": {
+      "brand": "Winflex",
+      "currency": "EUR",
+      "list_price": 99.9,
+      "availability": "InStock",
+      "rating": null,
+      "review_count": null,
+      "weight_text": "500 g",
+      "weight_estimated": false,
+      "volume_l": null,
+      "pack_count": null,
+      "breadcrumb": [
+        "Maison",
+        "Ventilation"
+      ],
+      "sku": "SKU-315",
+      "mpn": "MPN-315",
+      "gtin": "4006381333931",
+      "extractor": "generic-jsonld",
+      "confidence": 0.9
+    }
+  },
+  {
+    "store_slug": "COL",
+    "source_url": "https://www.colruyt.example/nl/producten/19164",
+    "source_product_id": "19164",
+    "source_category": null,
+    "product_type": null,
+    "name": "Pepersalami Halal",
+    "description": "Marhaba Pepersalami Halal",
+    "storage_info": null,
+    "price": 3.49,
+    "weight_kg": null,
+    "barcode": null,
+    "hs_code": null,
+    "images": [
+      "https://static.example/std/salami.jpg"
+    ],
+    "image_url": "https://static.example/std/salami.jpg",
+    "category_slug": null,
+    "color": null,
+    "variants": null,
+    "raw": {
+      "brand": null,
+      "currency": null,
+      "list_price": null,
+      "availability": null,
+      "rating": null,
+      "review_count": null,
+      "weight_text": null,
+      "weight_estimated": false,
+      "volume_l": null,
+      "pack_count": null,
+      "breadcrumb": [],
+      "sku": null,
+      "mpn": null,
+      "gtin": null,
+      "extractor": "internal_api",
+      "confidence": 0.8
+    }
+  }
+]

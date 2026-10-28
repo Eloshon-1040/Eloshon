@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "id": "bigbuy.presta-import.v1",
+  "displayName": "BigBuy catalogue (PrestaShop import format)",
+  "provenance": "supplier",
+  "medium": "csv",
+  "platformHint": "bigbuy",
+  "entity": "products",
+  "signatures": [
+    {
+      "kind": "csv-header-set",
+      "required": [
+        "CATEGORIES",
+        "PRICE_TAX_EXCLUDE",
+        "bb_REFERENCE"
+      ],
+      "hints": [
+        "WHOLESALE_PRICE",
+        "EAN1"
+      ],
+      "separator": ";"
+    }
+  ],
+  "structure": {
+    "rows": {
+      "children": {
+        "self": true
+      }
+    }
+  },
+  "fields": [
+    {
+      "path": "NAME",
+      "canon": "title",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "URL_REWRITTEN",
+      "inputs": [
+        "URL_REWRITTEN",
+        "NAME",
+        "ID"
+      ],
+      "canon": "handle",
+      "transform": "first_non_empty",
+      "confidence": "verified-fixture",
+      "notes": "The rewritten URL, else a slug of the name or id."
+    },
+    {
+      "path": "DESCRIPTION",
+      "canon": "bodyHtml",
+      "transform": "html",
+      "confidence": "verified-fixture",
+      "samplePolicy": "hash-only"
+    },
+    {
+      "path": "SHORT_DESCRIPTION",
+      "canon": "seoDescription",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "META_TITLE",
+      "canon": "seoTitle",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "TAGS",
+      "canon": "tags",
+      "transform": "list",
+      "args": {
+        "sep": ","
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "ACTIVE",
+      "canon": "status+published",
+      "transform": "bool",
+      "args": {
+        "default": true
+      },
+      "confidence": "verified-fixture",
+      "notes": "0 = draft / unpublished."
+    },
+    {
+      "path": "CATEGORIES",
+      "canon": "categories+productType",
+      "transform": "category_paths_from_terms",
+      "confidence": "verified-fixture",
+      "notes": "Comma list of category ids → paths via the categories file, deepest first."
+    },
+    {
+      "path": "IMAGES_URL",
+      "canon": "images",
+      "transform": "images_from_urls",
+      "args": {
+        "sep": ","
+      },
+      "confidence": "verified-fixture",
+      "notes": "The first is also the variant image."
+    },
+    {
+      "path": "bb_REFERENCE",
+      "inputs": [
+        "bb_REFERENCE",
+        "ID"
+      ],
+      "canon": "variants[].sku",
+      "transform": "first_non_empty",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "PRICE_TAX_EXCLUDE",
+      "canon": "variants[].price",
+      "transform": "money",
+      "confidence": "verified-fixture",
+      "notes": "Sale price, tax excluded."
+    },
+    {
+      "path": "WHOLESALE_PRICE",
+      "canon": "variants[].cost",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "EAN13",
+      "inputs": [
+        "EAN13",
+        "UPC"
+      ],
+      "canon": "variants[].barcode",
+      "transform": "first_non_empty",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "WEIGHT",
+      "canon": "variants[].grams",
+      "transform": "weight_to_grams",
+      "args": {
+        "unit": "kg"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "DEPTH",
+      "canon": "variants[].lengthCm",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "WIDTH",
+      "canon": "variants[].widthCm",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "HEIGHT",
+      "canon": "variants[].heightCm",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "TAX_RULE_ID",
+      "canon": "variants[].taxable",
+      "transform": "equals_map",
+      "args": {
+        "value": "0",
+        "then": false,
+        "else": true
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "QUANTITY",
+      "canon": "variants[].inventoryQty",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "MANUFACTER",
+      "canon": "metafields[]",
+      "transform": "metafield_pair",
+      "args": {
+        "key": "bigbuy_brand_id"
+      },
+      "confidence": "verified-fixture",
+      "notes": "Numeric brand id (declared loss loss_bigbuy_brand)."
+    }
+  ],
+  "invariantsExpected": [
+    "BigBuy's rendering of the PrestaShop import CSV (not a PrestaShop store export): one row per product, category ids resolved through the companion categories file"
+  ],
+  "legacy": {
+    "formatId": "bigbuy_presta",
+    "platform": "bigbuy",
+    "entity": "products"
+  },
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "seed:core/src/detect.ts:SIGS",
+      "origin": "reference",
+      "diff": [
+        "signature moved from code to data (Phase 5.3)",
+        "Supplier feed shaped like a PrestaShop product import. NOT a real PrestaShop export - separate family (rule 7)."
+      ]
+    },
+    {
+      "at": "2026-10-04T00:00:00.000Z",
+      "op": "enrich",
+      "from": "core/src/bigbuy.ts parseBigBuyPresta + mapping.ts SOURCE_FIELDS.bigbuy_presta",
+      "origin": "reference",
+      "diff": [
+        "Phase 2 Lot 3: full column map + row structure as data; undeclared columns preserved, declared ones traced"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1173 @@
+{
+  "schemaVersion": 1,
+  "id": "shopware.orders.admin-api.v1",
+  "displayName": "Shopware Orders (Admin API, 6.7)",
+  "provenance": "native-platform",
+  "medium": "json-api",
+  "platformHint": "shopware",
+  "entity": "orders",
+  "version": "sw-6.7.x",
+  "signatures": [
+    {
+      "kind": "json-shape",
+      "requiredPaths": [
+        "id",
+        "orderNumber",
+        "price",
+        "lineItems",
+        "transactions",
+        "stateMachineState"
+      ],
+      "hintPaths": [
+        "deliveries",
+        "orderCustomer",
+        "documents",
+        "taxStatus",
+        "deepLinkCode"
+      ]
+    }
+  ],
+  "structure": {
+    "unit": "order",
+    "items": {
+      "inlinePath": "lineItems",
+      "keyedBy": "id"
+    },
+    "companions": {
+      "documents": {
+        "route": "POST /api/search/document associations documentType (or the documents association on the order)",
+        "keyedByParent": false,
+        "note": "invoice / delivery_note / credit_note; documentNumber comes from the document_* number ranges"
+      },
+      "numberRanges": {
+        "route": "POST /api/search/number-range associations type, state",
+        "keyedByParent": false,
+        "note": "pattern / start per type (order, document_invoice…) — numbering.format for the report, never to generate"
+      }
+    }
+  },
+  "invariantsExpected": [
+    "orderNumber comes from the `order` number range (observed: start 10000 → 10000, 10001) — the target never receives it as its own sequence",
+    "invoice numbers come from the `document_invoice` number range (observed: 1000, 1001), assigned when the document is created, not when the order is placed",
+    "taxStatus gross = prices tax-included; price.calculatedTaxes carries the per-rate breakdown",
+    "transactions[] (payment state machine) and deliveries[] (delivery state machine) carry the typed statuses; the order state machine is the lifecycle",
+    "orderCustomer is a SNAPSHOT of the customer at order time (customerId links the live one)",
+    "lineItems[].payload is the product snapshot (productNumber, options…); type product | promotion | credit | custom",
+    "refunds live under transactions[].captures[].refunds[] (needs a payment handler that supports refunds — none on the local instance)"
+  ],
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "live:shopware-test:2026-09-21",
+      "origin": "reference",
+      "diff": [
+        "Phase 7.6: full field map from two real checkouts on the local instance (SW 6.7.2.2): numbering observed in motion (7.4), invoice documents, transactions → payments (7.2)"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "path": "orderNumber",
+      "canon": "numbering.sourceNumber",
+      "transform": "text",
+      "confidence": "verified-live",
+      "notes": "From the `order` number range. Immutable reference on the target (7.4)."
+    },
+    {
+      "path": "id",
+      "canon": "numbering.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "identity.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "orderNumber",
+      "canon": "numbering.format",
+      "transform": "lookup",
+      "args": {
+        "in": "numberRanges",
+        "key": "type.technicalName",
+        "equals": "order",
+        "fields": {
+          "pattern": "pattern"
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "The order number range pattern ({n}) — for the report only (7.4), never to generate."
+    },
+    {
+      "path": "documents",
+      "canon": "numbering.sourceInvoiceNumber",
+      "transform": "pick_where",
+      "args": {
+        "where": {
+          "documentType.technicalName": "invoice"
+        },
+        "pick": "documentNumber"
+      },
+      "confidence": "verified-live",
+      "notes": "The LEGAL sequence (document_invoice range). Reported, never re-emitted as a target invoice number."
+    },
+    {
+      "path": "documents",
+      "canon": "numbering.sourceInvoiceDate",
+      "transform": "pick_where",
+      "args": {
+        "where": {
+          "documentType.technicalName": "invoice"
+        },
+        "pick": "createdAt"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "documents",
+      "canon": "numbering.sourceDeliveryNumber",
+      "transform": "pick_where",
+      "args": {
+        "where": {
+          "documentType.technicalName": "delivery_note"
+        },
+        "pick": "documentNumber"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "documents",
+      "canon": "sourceExtension.shopware.documents",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "type": "documentType.technicalName",
+          "number": "documentNumber",
+          "createdAt": "createdAt",
+          "sent": {
+            "path": "sent",
+            "as": "bool"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "stateMachineState.technicalName",
+      "canon": "status.sourceState",
+      "transform": "text",
+      "confidence": "verified-live",
+      "consumes": [
+        "stateMachineState"
+      ]
+    },
+    {
+      "path": "stateMachineState.technicalName",
+      "canon": "status.lifecycle",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "open": "open",
+          "in_progress": "open",
+          "completed": "closed",
+          "cancelled": "cancelled"
+        },
+        "default": "unknown"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "transactions.0.stateMachineState.technicalName",
+      "canon": "status.financial",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "paid": "paid",
+          "paid_partially": "partially_paid",
+          "open": "pending",
+          "in_progress": "pending",
+          "authorized": "authorized",
+          "unconfirmed": "pending",
+          "reminded": "pending",
+          "failed": "pending",
+          "cancelled": "voided",
+          "refunded": "refunded",
+          "refunded_partially": "partially_refunded",
+          "chargeback": "refunded"
+        },
+        "default": "unknown"
+      },
+      "confidence": "verified-live",
+      "notes": "First (primary) transaction state."
+    },
+    {
+      "path": "deliveries.0.stateMachineState.technicalName",
+      "canon": "status.fulfillment",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "open": "unfulfilled",
+          "shipped": "fulfilled",
+          "shipped_partially": "partial",
+          "returned": "restocked",
+          "returned_partially": "partial",
+          "cancelled": "unfulfilled"
+        },
+        "default": "unknown"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "currency.isoCode",
+      "canon": "currency",
+      "transform": "text",
+      "confidence": "verified-live",
+      "consumes": [
+        "currency",
+        "currencyId"
+      ]
+    },
+    {
+      "path": "currencyFactor",
+      "canon": "amounts.exchangeRate",
+      "transform": "float",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "taxStatus",
+      "canon": "amounts.taxIncluded",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "gross": true,
+          "net": false,
+          "tax-free": false
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "amountTotal",
+      "canon": "amounts.total",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "positionPrice",
+      "canon": "amounts.subtotal",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shippingTotal",
+      "canon": "amounts.shipping",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "amountNet",
+      "canon": "sourceExtension.shopware.amountNet",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "price.calculatedTaxes",
+      "canon": "amounts.taxes",
+      "transform": "sum_of",
+      "args": {
+        "path": "tax"
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "price"
+      ]
+    },
+    {
+      "path": "price.calculatedTaxes",
+      "canon": "taxLines",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "rate": {
+            "path": "taxRate",
+            "as": "number"
+          },
+          "amount": {
+            "path": "tax",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "price",
+      "canon": "sourceExtension.shopware.price",
+      "transform": "object_map",
+      "args": {
+        "fields": {
+          "rawTotal": {
+            "path": "rawTotal",
+            "as": "number"
+          },
+          "netPrice": {
+            "path": "netPrice",
+            "as": "number"
+          },
+          "taxStatus": "taxStatus"
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shippingCosts",
+      "canon": "sourceExtension.shopware.shippingCosts",
+      "transform": "object_map",
+      "args": {
+        "fields": {
+          "totalPrice": {
+            "path": "totalPrice",
+            "as": "number"
+          },
+          "tax": {
+            "path": "calculatedTaxes.0.tax",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "orderCustomer.email",
+      "canon": "customerRef.email",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "orderCustomer.customerId",
+      "canon": "customerRef.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "orderCustomer",
+      "canon": "sourceExtension.shopware.orderCustomer",
+      "transform": "object_map",
+      "args": {
+        "fields": {
+          "firstName": "firstName",
+          "lastName": "lastName",
+          "company": "company",
+          "customerNumber": "customerNumber",
+          "vatIds": {
+            "path": "vatIds",
+            "as": "texts"
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "The customer SNAPSHOT at order time (remoteAddress dropped: personal data)."
+    },
+    {
+      "path": "addresses",
+      "canon": "billing",
+      "transform": "address_from",
+      "args": {
+        "fields": {
+          "company": "company",
+          "address1": "street",
+          "address2": "additionalAddressLine1",
+          "city": "city",
+          "country": "country.iso",
+          "zip": "zipcode",
+          "phone": "phoneNumber"
+        },
+        "nameFrom": [
+          "firstName",
+          "lastName"
+        ],
+        "select": {
+          "whereFrom": {
+            "id": "billingAddressId"
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "billingAddressId",
+        "billingAddressVersionId"
+      ],
+      "notes": "The address whose id = billingAddressId (country.iso needs the country association)."
+    },
+    {
+      "path": "deliveries.0.shippingOrderAddress",
+      "canon": "shipping_",
+      "transform": "address_from",
+      "args": {
+        "fields": {
+          "company": "company",
+          "address1": "street",
+          "address2": "additionalAddressLine1",
+          "city": "city",
+          "country": "country.iso",
+          "zip": "zipcode",
+          "phone": "phoneNumber"
+        },
+        "nameFrom": [
+          "firstName",
+          "lastName"
+        ]
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "deliveries"
+      ],
+      "notes": "Primary delivery address; country is empty when the country association is not loaded on the delivery."
+    },
+    {
+      "path": "deliveries",
+      "canon": "shippingLines",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "method": "shippingMethod.name",
+          "code": "shippingMethod.technicalName",
+          "amount": {
+            "path": "shippingCosts.totalPrice",
+            "as": "number"
+          },
+          "tax": {
+            "path": "shippingCosts.calculatedTaxes.0.tax",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "deliveries",
+      "canon": "shipments",
+      "transform": "objects_map",
+      "args": {
+        "require": [
+          "trackingNumber"
+        ],
+        "fields": {
+          "carrier": "shippingMethod.name",
+          "trackingNumber": "trackingCodes.0",
+          "status": "stateMachineState.technicalName"
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "Only deliveries that carry a tracking code are shipments."
+    },
+    {
+      "path": "transactions",
+      "canon": "payments",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "kind": {
+            "value": "sale"
+          },
+          "status": {
+            "path": "stateMachineState.technicalName",
+            "as": "map",
+            "map": {
+              "paid": "success",
+              "paid_partially": "success",
+              "refunded": "success",
+              "refunded_partially": "success",
+              "open": "pending",
+              "in_progress": "pending",
+              "authorized": "pending",
+              "unconfirmed": "pending",
+              "reminded": "pending",
+              "failed": "failed",
+              "cancelled": "cancelled",
+              "chargeback": "failed"
+            },
+            "default": "unknown"
+          },
+          "amount": {
+            "path": "amount.totalPrice",
+            "as": "number"
+          },
+          "method": "paymentMethod.name",
+          "gateway": "paymentMethod.technicalName",
+          "at": {
+            "path": "createdAt",
+            "as": "date"
+          },
+          "instrument.type": {
+            "path": "paymentMethod.technicalName",
+            "as": "map",
+            "map": {
+              "payment_cashpayment": "cash",
+              "payment_invoicepayment": "other",
+              "payment_prepayment": "bank_transfer",
+              "payment_debitpayment": "bank_transfer"
+            },
+            "default": "other"
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "Aggregated payment facts only. Shopware core stores no card data on the transaction; a payment app would put it in customFields — scanned (7.7) before this entry runs."
+    },
+    {
+      "path": "transactions",
+      "canon": "refunds",
+      "transform": "objects_map",
+      "args": {
+        "flatMap": "captures.refunds",
+        "fields": {
+          "sourceId": "id",
+          "amount": {
+            "path": "amount.totalPrice",
+            "as": "number"
+          },
+          "reason": "reason",
+          "at": {
+            "path": "createdAt",
+            "as": "date"
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "order_transaction_capture_refund rows (captures association). Declared from the DAL schema: the local instance has no refund (cash on delivery has no refund handler) — unverified on real data."
+    },
+    {
+      "path": "customerComment",
+      "canon": "note",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "internalComment",
+      "canon": "sourceExtension.shopware.internalComment",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "affiliateCode",
+      "canon": "sourceExtension.shopware.affiliateCode",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "campaignCode",
+      "canon": "sourceExtension.shopware.campaignCode",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "tags",
+      "canon": "tags",
+      "transform": "names_of",
+      "args": {
+        "key": "name"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "salesChannel.name",
+      "canon": "channel",
+      "transform": "text_present",
+      "confidence": "verified-live",
+      "consumes": [
+        "salesChannel",
+        "salesChannelId"
+      ]
+    },
+    {
+      "path": "createdAt",
+      "canon": "timestamps.created",
+      "transform": "date_iso",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "updatedAt",
+      "canon": "timestamps.updated",
+      "transform": "date_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "orderDateTime",
+      "canon": "sourceExtension.shopware.orderDateTime",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "orderDate",
+      "canon": "sourceExtension.shopware.orderDate",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "itemRounding",
+      "canon": "sourceExtension.shopware.itemRounding",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "totalRounding",
+      "canon": "sourceExtension.shopware.totalRounding",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "taxCalculationType",
+      "canon": "sourceExtension.shopware.taxCalculationType",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "customFields",
+      "canon": "sourceExtension.shopware.customFields",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "source",
+      "canon": "sourceExtension.shopware.source",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "languageId",
+      "canon": "sourceExtension.shopware.languageId",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "ruleIds",
+      "canon": "sourceExtension.shopware.ruleIds",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "deepLinkCode",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "public order-status link token — never carried"
+    },
+    {
+      "path": "extensions",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "_uniqueIdentifier",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "versionId",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "translated",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "apiAlias",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "autoIncrement",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "stateId",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "language",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "billingAddress",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "null unless loaded; the address list is used instead"
+    },
+    {
+      "path": "primaryOrderDelivery",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "primaryOrderDeliveryId",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "primaryOrderDeliveryVersionId",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "primaryOrderTransaction",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "primaryOrderTransactionId",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "primaryOrderTransactionVersionId",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "createdById",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "createdBy",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "updatedById",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "updatedBy",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "label",
+      "canon": "items[].name",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "payload.productNumber",
+      "canon": "items[].sku",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "quantity",
+      "canon": "items[].quantity",
+      "transform": "int",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "unitPrice",
+      "canon": "items[].unitPrice",
+      "transform": "money",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "totalPrice",
+      "canon": "items[].total",
+      "transform": "money",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "price.calculatedTaxes",
+      "canon": "items[].totalTax",
+      "transform": "sum_of",
+      "args": {
+        "path": "tax"
+      },
+      "confidence": "verified-live",
+      "scope": "item",
+      "consumes": [
+        "price"
+      ]
+    },
+    {
+      "path": "price.calculatedTaxes",
+      "canon": "items[].taxLines",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "rate": {
+            "path": "taxRate",
+            "as": "number"
+          },
+          "amount": {
+            "path": "tax",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "price.listPrice.price",
+      "canon": "items[].unitPriceBeforeDiscount",
+      "transform": "money_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "type",
+      "canon": "items[].kind",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "product": "product",
+          "promotion": "discount",
+          "credit": "discount",
+          "discount": "discount",
+          "custom": "custom",
+          "container": "custom"
+        },
+        "default": "custom"
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "productId",
+      "canon": "items[].productRef",
+      "transform": "string_id",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "referencedId",
+      "canon": "items[].variantRef",
+      "transform": "id_or_none",
+      "confidence": "verified-live",
+      "scope": "item",
+      "notes": "A Shopware variant is a product: referencedId = the variant product id."
+    },
+    {
+      "path": "payload.options",
+      "canon": "items[].options",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "name": "group",
+          "value": "option"
+        }
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "states",
+      "canon": "items[].requiresShipping",
+      "transform": "includes_map",
+      "args": {
+        "includes": "is-physical",
+        "then": true,
+        "else": false
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "payload",
+      "canon": "sourceExtension.shopware.payload",
+      "transform": "object_map",
+      "args": {
+        "fields": {
+          "productNumber": "productNumber",
+          "manufacturerId": "manufacturerId",
+          "isCloseout": {
+            "path": "isCloseout",
+            "as": "bool"
+          },
+          "stock": {
+            "path": "stock",
+            "as": "int"
+          },
+          "categoryIds": {
+            "path": "categoryIds",
+            "as": "texts"
+          },
+          "customFields": {
+            "path": "customFields",
+            "as": "raw"
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "id",
+      "canon": "sourceExtension.shopware.line_id",
+      "transform": "string_id",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "identifier",
+      "canon": "sourceExtension.shopware.identifier",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "description",
+      "canon": "sourceExtension.shopware.description",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "priceDefinition",
+      "canon": "sourceExtension.shopware.priceDefinition",
+      "transform": "object_map",
+      "args": {
+        "fields": {
+          "price": {
+            "path": "price",
+            "as": "number"
+          },
+          "type": "type",
+          "isCalculated": {
+            "path": "isCalculated",
+            "as": "bool"
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "good",
+      "canon": "sourceExtension.shopware.good",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "removable",
+      "canon": "sourceExtension.shopware.removable",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "stackable",
+      "canon": "sourceExtension.shopware.stackable",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "position",
+      "canon": "sourceExtension.shopware.position",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "promotionId",
+      "canon": "sourceExtension.shopware.promotionId",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "customFields",
+      "canon": "sourceExtension.shopware.customFields",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "extensions",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "_uniqueIdentifier",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "versionId",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "translated",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "createdAt",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "updatedAt",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "orderId",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "orderVersionId",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "parentId",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "parentVersionId",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "productVersionId",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "coverId",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "cover",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "children",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "orderDeliveryPositions",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "orderTransactionCaptureRefundPositions",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "downloads",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "order",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "promotion",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "parent",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "apiAlias",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+// Spanish texts of the column editor (edit-catalog.ts), merged by op / arg key / choice value / preset id.
+export const EDIT_CATALOG_ES = {
+  groups: { text: 'Texto', cut: 'Cortar, añadir, insertar', number: 'Números y precios', url: 'URL, slug, HTML', column: 'Columnas' },
+  ops: {
+    // text
+    replace: { label: 'Sustituir un texto', help: 'Sustituye cada aparición de un texto por otro (vacío = eliminarlo).', args: { find: 'Texto que buscar', with: 'Sustituir por', matchCase: 'Distinguir mayúsculas y minúsculas', whole: 'Solo si la celda es exactamente este texto' } },
+    remove: { label: 'Quitar un texto', help: 'Elimina este texto en toda la celda.', args: { text: 'Texto que quitar' } },
+    remove_chars: { label: 'Quitar ciertos caracteres', help: 'Elimina cada uno de los caracteres indicados (p. ej., «,;|»).', args: { chars: 'Caracteres' } },
+    join_segments: { label: 'Cambiar el separador', help: 'Sustituye un separador (p. ej., «|») por otro y quita los espacios de alrededor.', args: { sep: 'Separador actual', with: 'Nuevo separador' } },
+    dedupe_segments: { label: 'Quitar las partes repetidas', help: 'Corta la celda por un separador y conserva cada parte una sola vez.', args: { sep: 'Separador' } },
+    dedupe_words: { label: 'Quitar las palabras repetidas', help: 'Conserva cada palabra una sola vez (sin distinguir mayúsculas y minúsculas).', args: {} },
+    trim: { label: 'Limpiar los espacios', help: 'Quita los espacios del principio y del final y reduce los espacios dobles.', args: {} },
+    upper: { label: 'EN MAYÚSCULAS', help: 'Pone todo el texto en mayúsculas.', args: {} },
+    lower: { label: 'en minúsculas', help: 'Pone todo el texto en minúsculas.', args: {} },
+    proper: { label: 'Mayúscula En Cada Palabra', help: 'Pone la primera letra de cada palabra en mayúscula y el resto en minúsculas.', args: {} },
+    regex_replace: { label: 'Sustituir (patrón avanzado)', help: 'Sustituye lo que coincide con una expresión regular (como REGEXREPLACE). $1 recupera un grupo.', args: { pattern: 'Patrón', with: 'Sustituir por' } },
+    regex_extract: { label: 'Extraer con un patrón', help: 'Conserva solo la parte que coincide con el patrón (vacío si nada coincide).', args: { pattern: 'Patrón', group: 'Grupo (0 = todo)' } },
+    set: { label: 'Rellenar con un valor', help: 'Pone el mismo valor en todas las celdas (o en las que cumplen la condición).', args: { text: 'Valor' } },
+    fill_empty: { label: 'Rellenar las celdas vacías', help: 'Pone un valor solo en las celdas vacías.', args: { text: 'Valor' } },
+    // cut / add / insert
+    prefix_add: { label: 'Añadir al principio', help: 'Añade un texto delante del contenido.', args: { text: 'Texto que añadir' } },
+    suffix_add: { label: 'Añadir al final', help: 'Añade un texto después del contenido.', args: { text: 'Texto que añadir' } },
+    prefix_remove: { label: 'Quitar el principio', help: 'Quita este texto si la celda empieza por él (si no, no cambia nada).', args: { text: 'Principio que quitar' } },
+    suffix_remove: { label: 'Quitar el final', help: 'Quita este texto si la celda termina en él (si no, no cambia nada).', args: { text: 'Final que quitar' } },
+    keep_before: { label: 'Conservar lo que hay antes de un texto', help: 'Corta la celda en la primera (o la última) aparición del texto indicado y conserva lo que hay antes.', args: { text: 'Texto de referencia', last: 'En la última aparición en lugar de la primera' } },
+    keep_after: { label: 'Conservar lo que hay después de un texto', help: 'Corta la celda en la primera (o la última) aparición del texto indicado y conserva lo que hay después.', args: { text: 'Texto de referencia', last: 'En la última aparición en lugar de la primera' } },
+    split_take: { label: 'Conservar la parte N', help: 'Corta por un separador y conserva la parte número N (1 = primera, -1 = última).', args: { sep: 'Separador', index: 'Número de la parte' } },
+    keep_left: { label: 'Conservar los N primeros caracteres', help: 'Corta el texto después de N caracteres.', args: { n: 'Número de caracteres' } },
+    keep_right: { label: 'Conservar los N últimos caracteres', help: 'Conserva solo el final del texto.', args: { n: 'Número de caracteres' } },
+    drop_left: { label: 'Quitar los N primeros caracteres', help: 'Elimina el principio del texto, sea cual sea.', args: { n: 'Número de caracteres' } },
+    drop_right: { label: 'Quitar los N últimos caracteres', help: 'Elimina el final del texto, sea cual sea.', args: { n: 'Número de caracteres' } },
+    insert_at: { label: 'Insertar un carácter en posiciones exactas', help: 'Inserta un texto (una coma, un punto…) en una o varias posiciones, contadas desde el principio o desde el final. P. ej., posiciones «3, 6».', args: { text: 'Texto que insertar', positions: 'Posiciones (1 = al principio)', fromEnd: 'Contar desde el final' } },
+    delete_at: { label: 'Eliminar caracteres en una posición', help: 'Elimina N caracteres a partir de una posición.', args: { position: 'Posición inicial (1 = principio)', count: 'Número de caracteres' } },
+    // numbers
+    number: { label: 'Cálculo con un número', help: 'Divide, multiplica, suma, resta o redondea un precio o una cantidad. P. ej., céntimos → euros: dividir entre 100.', args: { action: 'Operación', value: 'Valor' }, choices: { action: { divide: 'Dividir entre', multiply: 'Multiplicar por', add: 'Sumar', subtract: 'Restar', round: 'Redondear a N decimales' } } },
+    decimal_point: { label: 'Coma → punto decimal', help: 'Reescribe un número como «12,99 €» o «1.234,50» en la forma 12.99 / 1234.5.', args: {} },
+    // url / slug / html
+    slugify: { label: 'Convertir en slug', help: 'Minúsculas, sin acentos, palabras unidas por guiones: «Vodka Blanc 37,5%» → vodka-blanc-37-5.', args: { maxLength: 'Longitud máxima (0 = sin límite)' } },
+    strip_html: { label: 'Quitar el HTML', help: 'Elimina las etiquetas <p>, <br>… y conserva el texto.', args: {} },
+    clean_code: { label: 'Limpiar el código', help: 'Hace legible un texto que contiene código HTML (etiquetas como <p> y <li>, entidades como &amp; y &#8243;), por ejemplo la columna «Body (HTML)». Después, elija el modo.', args: { mode: 'Modo' }, choices: { mode: { text: 'Solo texto', html: 'HTML limpio' } },
+      choiceHelp: { mode: {
+        text: 'Quita todas las etiquetas y convierte las entidades (&#8243;, &#038;, &amp;, &nbsp;…) en caracteres. Cada <li> pasa a ser una línea «• …»; <br> y cada párrafo, título, lista o fila de tabla empiezan una línea nueva. Los scripts, estilos y comentarios se quitan con su contenido, igual que los espacios dobles y las líneas vacías. Una columna HTML (como «Body (HTML)») no muestra los saltos de línea: elija allí «HTML limpio».',
+        html: 'Conserva solo las etiquetas de estructura p, br, ul, ol, li, strong, em, h2 a h4, table, tr, th, td (b pasa a strong, i a em, h1 a h2, h5 y h6 a h4). Quita los atributos (style, class…), los scripts, estilos y comentarios, las demás etiquetas (enlaces, imágenes, div…) conservando su texto y, al final, las etiquetas que han quedado vacías, salvo las celdas de tabla. Convierte las entidades en caracteres, salvo <, > y &, que se quedan escritos &lt;, &gt; y &amp;.' } } },
+    // columns
+    rename_column: { label: 'Cambiar el nombre de la columna', help: 'Cambia el nombre de la columna (sus valores no cambian).', args: { to: 'Nuevo nombre' } },
+    copy_column: { label: 'Duplicar la columna', help: 'Crea una copia de la columna: después se puede transformar sin tocar la original (p. ej., un slug a partir del título).', args: { to: 'Nombre de la copia' } },
+    add_column: { label: 'Añadir una columna', help: 'Añade una columna con un valor fijo.', args: { to: 'Nombre de la columna', text: 'Valor' } },
+    join_columns: { label: 'Unir varias columnas', help: 'Crea una columna uniendo el contenido de varias columnas (p. ej., marca + nombre).', args: { columns: 'Columnas que unir', sep: 'Separador', to: 'Nombre de la nueva columna' } },
+    words_from: { label: 'Copiar las primeras palabras de otra columna', help: 'Rellena esta columna con el principio de otra (p. ej., la marca = primera palabra del título). Para las marcas de varias palabras, indíquelas en la lista (o elija el número de palabras en una fila de ejemplo): después, la lista se aplica a todas las filas.', args: { from: 'Copiar desde la columna', count: 'Número de palabras por defecto', known: 'Nombres de varias palabras (uno por línea)', onlyEmpty: 'Solo si la celda está vacía' } },
+    template: { label: 'Componer con otras columnas', help: 'Escribe un texto en el que usted coloca lo que quiera: {NombreDeColumna} inserta el contenido de una columna y {this}, el contenido actual de la celda. P. ej., «{Vendor} - {this}».', args: { text: 'Texto (con {columna} y {this})' } },
+    delete_column: { label: 'Eliminar la columna', help: 'Quita la columna del archivo antes de la conversión.', args: {} },
+  },
+  presets: {
+    cents_to_euros: { label: 'Precios en céntimos → euros', hint: '1599 pasa a ser 15.99' },
+    pipes_to_spaces: { label: 'Quitar los «|» de un título', hint: 'Eristoff | Vodka | Blanc → Eristoff Vodka Blanc' },
+    dedupe_title: { label: 'Quitar las partes y palabras repetidas', hint: 'Vodka | Blanc | Vodka → Vodka | Blanc' },
+    slug_from_title: { label: 'Crear un slug limpio a partir de esta columna', hint: 'Copia la columna y la convierte en slug (nombre-sin-acentos)' },
+    values_after_colon_joined: { label: 'Valores después de «:» unidos con «-»', hint: 'Color del producto: Aurora Coffee / Magic Mauve / Gum → Aurora Coffee-Magic Mauve-Gum' },
+    trim_all: { label: 'Limpiar los espacios de esta columna', hint: 'Quita los espacios innecesarios' },
+  },
+};

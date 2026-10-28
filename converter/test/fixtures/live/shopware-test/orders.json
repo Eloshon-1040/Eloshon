@@ -1,0 +1,2434 @@
+[
+  {
+    "extensions": {
+      "foreignKeys": {
+        "extensions": [],
+        "apiAlias": "order_foreign_keys_extension"
+      },
+      "search": {
+        "extensions": [],
+        "translated": [],
+        "autoIncrement": 1,
+        "orderNumber": "10000"
+      }
+    },
+    "_uniqueIdentifier": "01a0c576071271d5b12afb1e2d231305",
+    "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+    "translated": [],
+    "createdAt": "2026-09-21T19:34:02.073+00:00",
+    "updatedAt": null,
+    "orderNumber": "10000",
+    "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+    "currencyFactor": 1,
+    "salesChannelId": "01994d25627d7303ba92b97e96becd52",
+    "billingAddressId": "01a0c5760704737781be7a575152a3b3",
+    "billingAddressVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+    "orderDateTime": "2026-09-21T19:34:01.716+00:00",
+    "orderDate": "2026-09-21T00:00:00.000+00:00",
+    "price": {
+      "extensions": [],
+      "rawTotal": 800,
+      "netPrice": 672.27,
+      "totalPrice": 800,
+      "positionPrice": 800,
+      "calculatedTaxes": [
+        {
+          "extensions": [],
+          "tax": 127.73,
+          "taxRate": 19,
+          "price": 800,
+          "label": null,
+          "apiAlias": "cart_tax_calculated"
+        }
+      ],
+      "taxRules": [
+        {
+          "extensions": [],
+          "taxRate": 19,
+          "percentage": 100,
+          "apiAlias": "cart_tax_rule"
+        }
+      ],
+      "taxStatus": "gross",
+      "apiAlias": "cart_price"
+    },
+    "amountTotal": 800,
+    "amountNet": 672.27,
+    "positionPrice": 800,
+    "taxStatus": "gross",
+    "shippingCosts": {
+      "extensions": [],
+      "unitPrice": 0,
+      "totalPrice": 0,
+      "calculatedTaxes": [
+        {
+          "extensions": [],
+          "tax": 0,
+          "taxRate": 19,
+          "price": 0,
+          "label": null,
+          "apiAlias": "cart_tax_calculated"
+        }
+      ],
+      "taxRules": [
+        {
+          "extensions": [],
+          "taxRate": 19,
+          "percentage": 100,
+          "apiAlias": "cart_tax_rule"
+        }
+      ],
+      "quantity": 1,
+      "referencePrice": null,
+      "listPrice": null,
+      "regulationPrice": null,
+      "apiAlias": "calculated_price"
+    },
+    "shippingTotal": 0,
+    "orderCustomer": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "order_customer_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "01a0c57607b173dfbcbafda5f404293c",
+      "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+      "translated": [],
+      "createdAt": "2026-09-21T19:34:02.024+00:00",
+      "updatedAt": null,
+      "email": "customer1@example.test",
+      "orderId": "01a0c576071271d5b12afb1e2d231305",
+      "salutationId": "01994d239a1772158dab7f2ecae86500",
+      "firstName": "Test",
+      "lastName": "Customer 1",
+      "title": null,
+      "vatIds": null,
+      "company": null,
+      "customerNumber": "SWDEMO10000",
+      "customerId": "6c97534c2c0747f39e8751e43cb2b013",
+      "customer": null,
+      "salutation": null,
+      "order": null,
+      "remoteAddress": "172.17.0.0",
+      "orderVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+      "customFields": null,
+      "id": "01a0c57607b173dfbcbafda5f404293c",
+      "apiAlias": "order_customer"
+    },
+    "currency": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "currency_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+      "versionId": null,
+      "translated": {
+        "shortName": "EUR",
+        "name": "Euro",
+        "customFields": []
+      },
+      "createdAt": "2025-09-15T11:30:07.343+00:00",
+      "updatedAt": null,
+      "isoCode": "EUR",
+      "factor": 1,
+      "symbol": "€",
+      "shortName": "EUR",
+      "name": "Euro",
+      "position": 1,
+      "translations": null,
+      "orders": null,
+      "salesChannels": null,
+      "salesChannelDefaultAssignments": null,
+      "salesChannelDomains": null,
+      "promotionDiscountPrices": null,
+      "isSystemDefault": true,
+      "productExports": null,
+      "countryRoundings": null,
+      "itemRounding": {
+        "extensions": [],
+        "decimals": 2,
+        "interval": 0.01,
+        "roundForNet": true,
+        "apiAlias": "shopware_core_framework_data_abstraction_layer_pricing_cash_rounding_config"
+      },
+      "totalRounding": {
+        "extensions": [],
+        "decimals": 2,
+        "interval": 0.01,
+        "roundForNet": true,
+        "apiAlias": "shopware_core_framework_data_abstraction_layer_pricing_cash_rounding_config"
+      },
+      "taxFreeFrom": 0,
+      "customFields": null,
+      "id": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+      "apiAlias": "currency"
+    },
+    "languageId": "2fbb5fe2e29a4d70aa5854ce7ce3e20b",
+    "language": null,
+    "salesChannel": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "sales_channel_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "01994d25627d7303ba92b97e96becd52",
+      "versionId": null,
+      "translated": {
+        "name": "Storefront",
+        "customFields": [],
+        "homeSlotConfig": null,
+        "homeEnabled": true,
+        "homeName": null,
+        "homeMetaTitle": null,
+        "homeMetaDescription": null,
+        "homeKeywords": null
+      },
+      "createdAt": "2025-09-15T11:31:59.783+00:00",
+      "updatedAt": null,
+      "typeId": "8a243080f92e4c719546314b577cf82b",
+      "languageId": "2fbb5fe2e29a4d70aa5854ce7ce3e20b",
+      "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+      "paymentMethodId": "01994d23abf47265bd0870b524d21af7",
+      "shippingMethodId": "01994d23ac6472abbd10d0fe562146f6",
+      "countryId": "01994d239a5271d384aaf1fb9596c42c",
+      "navigationCategoryId": "01994d23acb670fa926de3796d173b74",
+      "navigationCategoryVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+      "navigationCategoryDepth": 3,
+      "homeSlotConfig": null,
+      "homeCmsPageId": null,
+      "homeCmsPageVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+      "homeCmsPage": null,
+      "homeEnabled": true,
+      "homeName": null,
+      "homeMetaTitle": null,
+      "homeMetaDescription": null,
+      "homeKeywords": null,
+      "footerCategoryId": null,
+      "footerCategoryVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+      "serviceCategoryId": null,
+      "serviceCategoryVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+      "name": "Storefront",
+      "shortName": null,
+      "accessKey": "SWSCD0LVRFBJBZYXM0VRTEC3ZW",
+      "currencies": null,
+      "languages": null,
+      "configuration": null,
+      "active": true,
+      "maintenance": false,
+      "maintenanceIpWhitelist": null,
+      "taxCalculationType": "horizontal",
+      "type": null,
+      "currency": null,
+      "language": null,
+      "paymentMethod": null,
+      "shippingMethod": null,
+      "country": null,
+      "orders": null,
+      "customers": null,
+      "countries": null,
+      "paymentMethods": null,
+      "shippingMethods": null,
+      "translations": null,
+      "domains": null,
+      "systemConfigs": null,
+      "navigationCategory": null,
+      "footerCategory": null,
+      "serviceCategory": null,
+      "productVisibilities": null,
+      "mailHeaderFooterId": null,
+      "numberRangeSalesChannels": null,
+      "mailHeaderFooter": null,
+      "customerGroupId": "cfbd5018d38d41d8adca10d94fc8bdd6",
+      "customerGroup": null,
+      "newsletterRecipients": null,
+      "promotionSalesChannels": null,
+      "documentBaseConfigSalesChannels": null,
+      "productReviews": null,
+      "seoUrls": null,
+      "seoUrlTemplates": null,
+      "mainCategories": null,
+      "paymentMethodIds": [
+        "01994d23abca7205bb588089bcb5dbf5",
+        "01994d23abe272a59016df112c638ef6",
+        "01994d23abf47265bd0870b524d21af7",
+        "01994d23ac08703ab5f0151f750acbb2"
+      ],
+      "productExports": null,
+      "hreflangActive": false,
+      "hreflangDefaultDomainId": null,
+      "hreflangDefaultDomain": null,
+      "analyticsId": null,
+      "analytics": null,
+      "customerGroupsRegistrations": null,
+      "boundCustomers": null,
+      "wishlists": null,
+      "landingPages": null,
+      "measurementUnits": {
+        "extensions": [],
+        "system": "metric",
+        "units": {
+          "length": "mm",
+          "weight": "kg"
+        },
+        "apiAlias": "measurement_system_info"
+      },
+      "customFields": null,
+      "id": "01994d25627d7303ba92b97e96becd52",
+      "apiAlias": "sales_channel"
+    },
+    "addresses": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "order_address_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01a0c5760704737781be7a575152a3b3",
+        "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "translated": [],
+        "createdAt": "2026-09-21T19:34:02.049+00:00",
+        "updatedAt": null,
+        "countryId": "01994d239a5271d384aaf1fb9596c42c",
+        "countryStateId": null,
+        "salutationId": "01994d239a1772158dab7f2ecae86500",
+        "firstName": "Test",
+        "lastName": "Customer 1",
+        "street": "1 Test Street",
+        "zipcode": "1000",
+        "city": "Testville",
+        "company": null,
+        "department": null,
+        "title": null,
+        "vatId": null,
+        "phoneNumber": null,
+        "additionalAddressLine1": null,
+        "additionalAddressLine2": null,
+        "country": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "country_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "01994d239a5271d384aaf1fb9596c42c",
+          "versionId": null,
+          "translated": {
+            "name": "Germany",
+            "customFields": [],
+            "addressFormat": [
+              [
+                "address/company",
+                "symbol/dash",
+                "address/department"
+              ],
+              [
+                "address/first_name",
+                "address/last_name"
+              ],
+              [
+                "address/street"
+              ],
+              [
+                "address/zipcode",
+                "address/city"
+              ],
+              [
+                "address/country"
+              ]
+            ]
+          },
+          "createdAt": "2025-09-15T11:30:02.962+00:00",
+          "updatedAt": null,
+          "name": "Germany",
+          "iso": "DE",
+          "position": 1,
+          "active": true,
+          "shippingAvailable": true,
+          "iso3": "DEU",
+          "displayStateInRegistration": false,
+          "forceStateInRegistration": false,
+          "checkVatIdPattern": false,
+          "vatIdPattern": "DE\\d{9}",
+          "vatIdRequired": false,
+          "customerTax": {
+            "extensions": [],
+            "enabled": false,
+            "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+            "amount": 0,
+            "apiAlias": "shopware_core_framework_data_abstraction_layer_tax_free_config"
+          },
+          "companyTax": {
+            "extensions": [],
+            "enabled": false,
+            "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+            "amount": 0,
+            "apiAlias": "shopware_core_framework_data_abstraction_layer_tax_free_config"
+          },
+          "states": null,
+          "translations": null,
+          "orderAddresses": null,
+          "customerAddresses": null,
+          "salesChannelDefaultAssignments": null,
+          "salesChannels": null,
+          "taxRules": null,
+          "currencyCountryRoundings": null,
+          "postalCodeRequired": true,
+          "isEu": true,
+          "checkPostalCodePattern": false,
+          "checkAdvancedPostalCodePattern": false,
+          "advancedPostalCodePattern": null,
+          "defaultPostalCodePattern": "\\d{5}",
+          "addressFormat": [
+            [
+              "address/company",
+              "symbol/dash",
+              "address/department"
+            ],
+            [
+              "address/first_name",
+              "address/last_name"
+            ],
+            [
+              "address/street"
+            ],
+            [
+              "address/zipcode",
+              "address/city"
+            ],
+            [
+              "address/country"
+            ]
+          ],
+          "customFields": null,
+          "id": "01994d239a5271d384aaf1fb9596c42c",
+          "apiAlias": "country"
+        },
+        "countryState": null,
+        "order": null,
+        "salutation": null,
+        "orderDeliveries": null,
+        "orderId": "01a0c576071271d5b12afb1e2d231305",
+        "orderVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "customFields": null,
+        "id": "01a0c5760704737781be7a575152a3b3",
+        "apiAlias": "order_address"
+      }
+    ],
+    "billingAddress": null,
+    "deliveries": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "order_delivery_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01a0c576070f710fade86a2f1df66044",
+        "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "translated": [],
+        "createdAt": "2026-09-21T19:34:02.056+00:00",
+        "updatedAt": null,
+        "orderId": "01a0c576071271d5b12afb1e2d231305",
+        "orderVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "shippingOrderAddressId": "01a0c5760704737781be7a575152a3b3",
+        "shippingOrderAddressVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "shippingMethodId": "01994d23ac6472abbd10d0fe562146f6",
+        "trackingCodes": [],
+        "shippingDateEarliest": "2026-09-22T00:00:00.000+00:00",
+        "shippingDateLatest": "2026-09-24T00:00:00.000+00:00",
+        "shippingCosts": {
+          "extensions": [],
+          "unitPrice": 0,
+          "totalPrice": 0,
+          "calculatedTaxes": [
+            {
+              "extensions": [],
+              "tax": 0,
+              "taxRate": 19,
+              "price": 0,
+              "label": null,
+              "apiAlias": "cart_tax_calculated"
+            }
+          ],
+          "taxRules": [
+            {
+              "extensions": [],
+              "taxRate": 19,
+              "percentage": 100,
+              "apiAlias": "cart_tax_rule"
+            }
+          ],
+          "quantity": 1,
+          "referencePrice": null,
+          "listPrice": null,
+          "regulationPrice": null,
+          "apiAlias": "calculated_price"
+        },
+        "shippingOrderAddress": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "order_address_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01a0c5760704737781be7a575152a3b3",
+          "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+          "translated": [],
+          "createdAt": "2026-09-21T19:34:02.049+00:00",
+          "updatedAt": null,
+          "countryId": "01994d239a5271d384aaf1fb9596c42c",
+          "countryStateId": null,
+          "salutationId": "01994d239a1772158dab7f2ecae86500",
+          "firstName": "Test",
+          "lastName": "Customer 2",
+          "street": "1 Test Street",
+          "zipcode": "1000",
+          "city": "Testville",
+          "company": null,
+          "department": null,
+          "title": null,
+          "vatId": null,
+          "phoneNumber": null,
+          "additionalAddressLine1": null,
+          "additionalAddressLine2": null,
+          "country": {
+            "extensions": {
+              "foreignKeys": {
+                "extensions": [],
+                "apiAlias": "country_foreign_keys_extension"
+              },
+              "internal_mapping_storage": {
+                "extensions": [],
+                "apiAlias": null
+              }
+            },
+            "_uniqueIdentifier": "01994d239a5271d384aaf1fb9596c42c",
+            "versionId": null,
+            "translated": {
+              "name": "Germany",
+              "customFields": [],
+              "addressFormat": [
+                [
+                  "address/company",
+                  "symbol/dash",
+                  "address/department"
+                ],
+                [
+                  "address/first_name",
+                  "address/last_name"
+                ],
+                [
+                  "address/street"
+                ],
+                [
+                  "address/zipcode",
+                  "address/city"
+                ],
+                [
+                  "address/country"
+                ]
+              ]
+            },
+            "createdAt": "2025-09-15T11:30:02.962+00:00",
+            "updatedAt": null,
+            "name": "Germany",
+            "iso": "DE",
+            "position": 1,
+            "active": true,
+            "shippingAvailable": true,
+            "iso3": "DEU",
+            "displayStateInRegistration": false,
+            "forceStateInRegistration": false,
+            "checkVatIdPattern": false,
+            "vatIdPattern": "DE\\d{9}",
+            "vatIdRequired": false,
+            "customerTax": {
+              "extensions": [],
+              "enabled": false,
+              "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+              "amount": 0,
+              "apiAlias": "shopware_core_framework_data_abstraction_layer_tax_free_config"
+            },
+            "companyTax": {
+              "extensions": [],
+              "enabled": false,
+              "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+              "amount": 0,
+              "apiAlias": "shopware_core_framework_data_abstraction_layer_tax_free_config"
+            },
+            "states": null,
+            "translations": null,
+            "orderAddresses": null,
+            "customerAddresses": null,
+            "salesChannelDefaultAssignments": null,
+            "salesChannels": null,
+            "taxRules": null,
+            "currencyCountryRoundings": null,
+            "postalCodeRequired": true,
+            "isEu": true,
+            "checkPostalCodePattern": false,
+            "checkAdvancedPostalCodePattern": false,
+            "advancedPostalCodePattern": null,
+            "defaultPostalCodePattern": "\\d{5}",
+            "addressFormat": [
+              [
+                "address/company",
+                "symbol/dash",
+                "address/department"
+              ],
+              [
+                "address/first_name",
+                "address/last_name"
+              ],
+              [
+                "address/street"
+              ],
+              [
+                "address/zipcode",
+                "address/city"
+              ],
+              [
+                "address/country"
+              ]
+            ],
+            "customFields": null,
+            "id": "01994d239a5271d384aaf1fb9596c42c",
+            "apiAlias": "country"
+          },
+          "countryState": null,
+          "order": null,
+          "salutation": null,
+          "orderDeliveries": null,
+          "orderId": "01a0c576071271d5b12afb1e2d231305",
+          "orderVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+          "customFields": null,
+          "id": "01a0c5760704737781be7a575152a3b3",
+          "apiAlias": "order_address"
+        },
+        "stateId": "01994d23b24e7168934e5353b5535bb0",
+        "stateMachineState": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "state_machine_state_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "01994d23b24e7168934e5353b5535bb0",
+          "versionId": null,
+          "translated": {
+            "name": "Open",
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:30:09.124+00:00",
+          "updatedAt": null,
+          "name": "Open",
+          "technicalName": "open",
+          "stateMachineId": "01994d23b24e7168934e5353b5438461",
+          "stateMachine": null,
+          "fromStateMachineTransitions": null,
+          "toStateMachineTransitions": null,
+          "translations": null,
+          "orders": null,
+          "orderTransactionCaptures": null,
+          "orderTransactionCaptureRefunds": null,
+          "orderTransactions": null,
+          "orderDeliveries": null,
+          "fromStateMachineHistoryEntries": null,
+          "toStateMachineHistoryEntries": null,
+          "customFields": null,
+          "id": "01994d23b24e7168934e5353b5535bb0",
+          "apiAlias": "state_machine_state"
+        },
+        "shippingMethod": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "shipping_method_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "01994d23ac6472abbd10d0fe562146f6",
+          "versionId": null,
+          "translated": {
+            "name": "Standard",
+            "customFields": [],
+            "description": null,
+            "trackingUrl": null
+          },
+          "createdAt": "2025-09-15T11:30:07.602+00:00",
+          "updatedAt": "2025-09-15T11:32:14.439+00:00",
+          "name": "Standard",
+          "active": true,
+          "position": 1,
+          "description": null,
+          "trackingUrl": null,
+          "deliveryTimeId": "01994d23ac1a70419866b3d6050ae91e",
+          "deliveryTime": null,
+          "translations": null,
+          "orderDeliveries": null,
+          "salesChannelDefaultAssignments": null,
+          "salesChannels": null,
+          "availabilityRule": null,
+          "availabilityRuleId": "01994d23abbd70c99eff6cbaa980a803",
+          "prices": [],
+          "mediaId": null,
+          "taxId": null,
+          "media": null,
+          "tags": null,
+          "taxType": "auto",
+          "technicalName": "shipping_standard",
+          "tax": null,
+          "appShippingMethod": null,
+          "customFields": null,
+          "id": "01994d23ac6472abbd10d0fe562146f6",
+          "apiAlias": "shipping_method"
+        },
+        "order": null,
+        "positions": null,
+        "primaryOrder": null,
+        "customFields": null,
+        "id": "01a0c576070f710fade86a2f1df66044",
+        "apiAlias": "order_delivery"
+      }
+    ],
+    "lineItems": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "order_line_item_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01a0c57606ff7368b92a36e77975f152",
+        "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "translated": [],
+        "createdAt": "2026-09-21T19:34:02.062+00:00",
+        "updatedAt": null,
+        "orderId": "01a0c576071271d5b12afb1e2d231305",
+        "identifier": "01a0c575f9a8726eaf0c81c7887fb320",
+        "referencedId": "11dc680240b04f469ccba354cbf0b967",
+        "productId": "11dc680240b04f469ccba354cbf0b967",
+        "promotionId": null,
+        "quantity": 1,
+        "unitPrice": 800,
+        "totalPrice": 800,
+        "label": "Main product with advanced prices",
+        "description": null,
+        "good": true,
+        "removable": true,
+        "coverId": "84356a71233d4b3e9f417dcc8850c82f",
+        "stackable": true,
+        "position": 1,
+        "price": {
+          "extensions": [],
+          "unitPrice": 800,
+          "totalPrice": 800,
+          "calculatedTaxes": [
+            {
+              "extensions": [],
+              "tax": 127.73,
+              "taxRate": 19,
+              "price": 800,
+              "label": null,
+              "apiAlias": "cart_tax_calculated"
+            }
+          ],
+          "taxRules": [
+            {
+              "extensions": [],
+              "taxRate": 19,
+              "percentage": 100,
+              "apiAlias": "cart_tax_rule"
+            }
+          ],
+          "quantity": 1,
+          "referencePrice": null,
+          "listPrice": null,
+          "regulationPrice": null,
+          "apiAlias": "calculated_price"
+        },
+        "priceDefinition": {
+          "extensions": [],
+          "isCalculated": true,
+          "referencePriceDefinition": null,
+          "listPrice": null,
+          "regulationPrice": null,
+          "price": 800,
+          "taxRules": [
+            {
+              "extensions": [],
+              "taxRate": 19,
+              "percentage": 100,
+              "apiAlias": "cart_tax_rule"
+            }
+          ],
+          "quantity": 1,
+          "type": "quantity",
+          "apiAlias": "cart_price_quantity"
+        },
+        "payload": {
+          "isNew": false,
+          "stock": 10,
+          "taxId": "",
+          "tagIds": null,
+          "options": [],
+          "features": [],
+          "parentId": null,
+          "createdAt": "2025-09-15 11:32:13.557",
+          "optionIds": null,
+          "streamIds": null,
+          "isCloseout": false,
+          "categoryIds": [
+            "01994d23acb670fa926de3796d173b74",
+            "251448b91bc742de85643f5fccd89051"
+          ],
+          "propertyIds": null,
+          "releaseDate": "2025-09-15 11:32:13.527",
+          "customFields": [],
+          "productNumber": "SWDEMO10002",
+          "manufacturerId": "cc1c20c365d34cfb88bfab3c3e81d350",
+          "purchasePrices": null,
+          "markAsTopseller": false
+        },
+        "parentId": null,
+        "parent": null,
+        "type": "product",
+        "order": null,
+        "orderDeliveryPositions": null,
+        "cover": null,
+        "children": null,
+        "product": null,
+        "orderTransactionCaptureRefundPositions": null,
+        "states": [
+          "is-physical"
+        ],
+        "downloads": null,
+        "promotion": null,
+        "orderVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "productVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "parentVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "customFields": null,
+        "id": "01a0c57606ff7368b92a36e77975f152",
+        "apiAlias": "order_line_item"
+      }
+    ],
+    "transactions": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "order_transaction_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01a0c576071271d5b12afb1e2ca1af26",
+        "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "translated": [],
+        "createdAt": "2026-09-21T19:34:02.067+00:00",
+        "updatedAt": "2026-09-21T19:34:10.966+00:00",
+        "orderId": "01a0c576071271d5b12afb1e2d231305",
+        "orderVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "paymentMethodId": "01994d23abf47265bd0870b524d21af7",
+        "amount": {
+          "extensions": [],
+          "unitPrice": 800,
+          "totalPrice": 800,
+          "calculatedTaxes": [
+            {
+              "extensions": [],
+              "tax": 127.73,
+              "taxRate": 19,
+              "price": 800,
+              "label": null,
+              "apiAlias": "cart_tax_calculated"
+            }
+          ],
+          "taxRules": [
+            {
+              "extensions": [],
+              "taxRate": 19,
+              "percentage": 100,
+              "apiAlias": "cart_tax_rule"
+            }
+          ],
+          "quantity": 1,
+          "referencePrice": null,
+          "listPrice": null,
+          "regulationPrice": null,
+          "apiAlias": "calculated_price"
+        },
+        "paymentMethod": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "payment_method_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "01994d23abf47265bd0870b524d21af7",
+          "versionId": null,
+          "translated": {
+            "name": "Cash on delivery",
+            "distinguishableName": "Cash on delivery",
+            "description": "Payment upon receipt of goods.",
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:30:07.476+00:00",
+          "updatedAt": null,
+          "pluginId": null,
+          "handlerIdentifier": "Shopware\\Core\\Checkout\\Payment\\Cart\\PaymentHandler\\CashPayment",
+          "name": "Cash on delivery",
+          "distinguishableName": "Cash on delivery",
+          "description": "Payment upon receipt of goods.",
+          "position": 1,
+          "active": true,
+          "afterOrderEnabled": true,
+          "plugin": null,
+          "translations": null,
+          "orderTransactions": null,
+          "customers": null,
+          "salesChannelDefaultAssignments": null,
+          "salesChannels": null,
+          "availabilityRule": null,
+          "availabilityRuleId": null,
+          "mediaId": null,
+          "media": null,
+          "formattedHandlerIdentifier": "handler_shopware_cashpayment",
+          "shortName": "cash_payment",
+          "technicalName": "payment_cashpayment",
+          "appPaymentMethod": null,
+          "customFields": null,
+          "id": "01994d23abf47265bd0870b524d21af7",
+          "apiAlias": "payment_method"
+        },
+        "order": null,
+        "stateMachineState": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "state_machine_state_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "01994d23b338713797634d32d46bfc57",
+          "versionId": null,
+          "translated": {
+            "name": "Paid",
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:30:09.374+00:00",
+          "updatedAt": null,
+          "name": "Paid",
+          "technicalName": "paid",
+          "stateMachineId": "01994d23b338713797634d32d2b16bae",
+          "stateMachine": null,
+          "fromStateMachineTransitions": null,
+          "toStateMachineTransitions": null,
+          "translations": null,
+          "orders": null,
+          "orderTransactionCaptures": null,
+          "orderTransactionCaptureRefunds": null,
+          "orderTransactions": null,
+          "orderDeliveries": null,
+          "fromStateMachineHistoryEntries": null,
+          "toStateMachineHistoryEntries": null,
+          "customFields": null,
+          "id": "01994d23b338713797634d32d46bfc57",
+          "apiAlias": "state_machine_state"
+        },
+        "stateId": "01994d23b338713797634d32d46bfc57",
+        "captures": [],
+        "primaryOrder": null,
+        "validationData": [],
+        "customFields": null,
+        "id": "01a0c576071271d5b12afb1e2ca1af26",
+        "apiAlias": "order_transaction"
+      }
+    ],
+    "deepLinkCode": "ilG__BC2xltqVIANqzbVEVPCVyUr0lUq",
+    "autoIncrement": 1,
+    "stateMachineState": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "state_machine_state_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "01994d23b1c473beb17a565c12d64050",
+      "versionId": null,
+      "translated": {
+        "name": "Open",
+        "customFields": []
+      },
+      "createdAt": "2025-09-15T11:30:08.984+00:00",
+      "updatedAt": null,
+      "name": "Open",
+      "technicalName": "open",
+      "stateMachineId": "01994d23b1c473beb17a565c11e41346",
+      "stateMachine": null,
+      "fromStateMachineTransitions": null,
+      "toStateMachineTransitions": null,
+      "translations": null,
+      "orders": null,
+      "orderTransactionCaptures": null,
+      "orderTransactionCaptureRefunds": null,
+      "orderTransactions": null,
+      "orderDeliveries": null,
+      "fromStateMachineHistoryEntries": null,
+      "toStateMachineHistoryEntries": null,
+      "customFields": null,
+      "id": "01994d23b1c473beb17a565c12d64050",
+      "apiAlias": "state_machine_state"
+    },
+    "stateId": "01994d23b1c473beb17a565c12d64050",
+    "primaryOrderDelivery": null,
+    "primaryOrderDeliveryId": "01a0c576070f710fade86a2f1df66044",
+    "primaryOrderDeliveryVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+    "primaryOrderTransaction": null,
+    "primaryOrderTransactionId": "01a0c576071271d5b12afb1e2ca1af26",
+    "primaryOrderTransactionVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+    "documents": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "document_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01a0c5765a1f7304a694ea005b44c001",
+        "versionId": null,
+        "translated": [],
+        "createdAt": "2026-09-21T19:34:23.767+00:00",
+        "updatedAt": null,
+        "orderId": "01a0c576071271d5b12afb1e2d231305",
+        "orderVersionId": "01a0c57636a073da90b6a2ccfe568286",
+        "documentTypeId": "01994d2399df73be972c5d2e1b3c3d62",
+        "documentMediaFileId": "01a0c5765a3572de9147dbc64aef2a01",
+        "order": null,
+        "config": {
+          "id": "01994d23b00570569c2d71057ece76ee",
+          "logo": null,
+          "name": "invoice",
+          "title": null,
+          "vatId": "",
+          "custom": {
+            "invoiceNumber": "1000"
+          },
+          "global": true,
+          "bankBic": "",
+          "bankIban": "",
+          "bankName": "",
+          "pageSize": "a4",
+          "fileTypes": [
+            "html",
+            "pdf"
+          ],
+          "taxNumber": "",
+          "taxOffice": "",
+          "companyUrl": null,
+          "extensions": {
+            "foreignKeys": {
+              "apiAlias": "document_base_config_foreign_keys_extension",
+              "extensions": []
+            }
+          },
+          "translated": [],
+          "companyCity": "",
+          "companyName": "Test Co",
+          "companyEmail": null,
+          "companyPhone": null,
+          "documentDate": "2026-09-21 19:34:13.908",
+          "itemsPerPage": 10,
+          "companyStreet": "",
+          "displayFooter": true,
+          "displayHeader": true,
+          "displayPrices": true,
+          "salesChannels": [],
+          "companyAddress": "",
+          "companyCountry": null,
+          "companyZipcode": "",
+          "documentNumber": "1000",
+          "documentTypeId": "01994d2399df73be972c5d2e1b3c3d62",
+          "filenamePrefix": "invoice_",
+          "filenameSuffix": "",
+          "paymentDueDate": "",
+          "documentComment": null,
+          "pageOrientation": "portrait",
+          "companyCountryId": "",
+          "displayLineItems": true,
+          "displayPageCount": true,
+          "deliveryCountries": [
+            "01994d239a5271d384aaf1fb9596c42c",
+            "01994d239ba6719e9a86b5612f9f6c1d",
+            "01994d239bb77295b97cb3b42bc2d283",
+            "01994d23a6b270319f49e620b94348df",
+            "01994d23a6f8706fbb0e6f63d7463b19",
+            "01994d23a72d71a1bad63e4a91d9df20",
+            "01994d23a74f7092a6e982795b897e54",
+            "01994d23a775702e8f37536267ab6c5b",
+            "01994d23a786733abfea2e2f20d554dd",
+            "01994d23a79772ceb5b5cccef18b6ffe",
+            "01994d23a7ba7187a821b0894483aeae",
+            "01994d23aa6371b0baf17d97a8065d16",
+            "01994d23aa74703fbd80bac54c124845",
+            "01994d23aa9870ecb0f08d7edbadca38",
+            "01994d23aaba73f28151573887260b30",
+            "01994d23aae072b7926fae4c994aa94d",
+            "01994d23ab2473a88c1f1fc9939b320d",
+            "01994d23ab367021a9834de601a83129",
+            "01994d23ab497350adf90b6bc3a200f7",
+            "01994d23ab5e7122b2f082ad71aa4674",
+            "01994d24081e72abb35fdf6fad301a84",
+            "01994d24083073a191e6e3a19f767ee9",
+            "01994d240842715ebd591e0f0e3fde25",
+            "01994d24085673a88d931e0730e81aae",
+            "01994d24087372b3bd2df50520d32c23",
+            "01994d2408a170e0b216af3f459b6c79",
+            "01994d2408c37170a6f86b69e11ced1c",
+            "01994d2408e472d8a8fddf0622301368"
+          ],
+          "executiveDirector": "",
+          "placeOfFulfillment": "",
+          "placeOfJurisdiction": "",
+          "displayReturnAddress": true,
+          "displayCompanyAddress": true,
+          "diplayLineItemPosition": true,
+          "intraCommunityDelivery": false,
+          "displayLineItemPosition": null
+        },
+        "sent": false,
+        "static": false,
+        "deepLinkCode": "FRSwGX8eMv1fyqGSOVEU6aKPCBWPYbTr",
+        "documentType": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "document_type_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "01994d2399df73be972c5d2e1b3c3d62",
+          "versionId": null,
+          "translated": {
+            "name": "Invoice",
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:30:02.847+00:00",
+          "updatedAt": null,
+          "name": "Invoice",
+          "technicalName": "invoice",
+          "translations": null,
+          "documents": null,
+          "documentBaseConfigs": null,
+          "documentBaseConfigSalesChannels": null,
+          "customFields": null,
+          "id": "01994d2399df73be972c5d2e1b3c3d62",
+          "apiAlias": "document_type"
+        },
+        "referencedDocumentId": null,
+        "referencedDocument": null,
+        "dependentDocuments": null,
+        "documentMediaFile": null,
+        "documentNumber": "1000",
+        "documentA11yMediaFileId": "01a0c5765c517271991a4df03085846b",
+        "documentA11yMediaFile": null,
+        "customFields": null,
+        "id": "01a0c5765a1f7304a694ea005b44c001",
+        "apiAlias": "document"
+      }
+    ],
+    "tags": [],
+    "affiliateCode": null,
+    "campaignCode": null,
+    "customerComment": null,
+    "internalComment": null,
+    "ruleIds": [
+      "01994d23abbd70c99eff6cbaa980a803",
+      "01994d23ac6472abbd10d0fe57b88589",
+      "01994d23f7c4712f9107ff58d56ebea0",
+      "3858957016644de4ae48c0500bf3ccc8",
+      "e1378db7808a478f919e0d740d5d6c1a",
+      "01994d23adc672c5a1cc689c992ff7bb",
+      "28caae75a5624f0d985abd0eb32aa160"
+    ],
+    "createdById": null,
+    "createdBy": null,
+    "updatedById": null,
+    "updatedBy": null,
+    "itemRounding": {
+      "extensions": [],
+      "decimals": 2,
+      "interval": 0.01,
+      "roundForNet": true,
+      "apiAlias": "shopware_core_framework_data_abstraction_layer_pricing_cash_rounding_config"
+    },
+    "totalRounding": {
+      "extensions": [],
+      "decimals": 2,
+      "interval": 0.01,
+      "roundForNet": true,
+      "apiAlias": "shopware_core_framework_data_abstraction_layer_pricing_cash_rounding_config"
+    },
+    "source": null,
+    "taxCalculationType": "horizontal",
+    "customFields": null,
+    "id": "01a0c576071271d5b12afb1e2d231305",
+    "apiAlias": "order"
+  },
+  {
+    "extensions": {
+      "foreignKeys": {
+        "extensions": [],
+        "apiAlias": "order_foreign_keys_extension"
+      },
+      "search": {
+        "extensions": [],
+        "translated": [],
+        "autoIncrement": 3,
+        "orderNumber": "10001"
+      }
+    },
+    "_uniqueIdentifier": "01a0c576664f7129b30ae8059cfbf4e6",
+    "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+    "translated": [],
+    "createdAt": "2026-09-21T19:34:26.183+00:00",
+    "updatedAt": null,
+    "orderNumber": "10001",
+    "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+    "currencyFactor": 1,
+    "salesChannelId": "01994d25627d7303ba92b97e96becd52",
+    "billingAddressId": "01a0c576664f7129b30ae8059bbd6987",
+    "billingAddressVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+    "orderDateTime": "2026-09-21T19:34:26.126+00:00",
+    "orderDate": "2026-09-21T00:00:00.000+00:00",
+    "price": {
+      "extensions": [],
+      "rawTotal": 1600,
+      "netPrice": 1344.54,
+      "totalPrice": 1600,
+      "positionPrice": 1600,
+      "calculatedTaxes": [
+        {
+          "extensions": [],
+          "tax": 255.46,
+          "taxRate": 19,
+          "price": 1600,
+          "label": null,
+          "apiAlias": "cart_tax_calculated"
+        }
+      ],
+      "taxRules": [
+        {
+          "extensions": [],
+          "taxRate": 19,
+          "percentage": 100,
+          "apiAlias": "cart_tax_rule"
+        }
+      ],
+      "taxStatus": "gross",
+      "apiAlias": "cart_price"
+    },
+    "amountTotal": 1600,
+    "amountNet": 1344.54,
+    "positionPrice": 1600,
+    "taxStatus": "gross",
+    "shippingCosts": {
+      "extensions": [],
+      "unitPrice": 0,
+      "totalPrice": 0,
+      "calculatedTaxes": [
+        {
+          "extensions": [],
+          "tax": 0,
+          "taxRate": 19,
+          "price": 0,
+          "label": null,
+          "apiAlias": "cart_tax_calculated"
+        }
+      ],
+      "taxRules": [
+        {
+          "extensions": [],
+          "taxRate": 19,
+          "percentage": 100,
+          "apiAlias": "cart_tax_rule"
+        }
+      ],
+      "quantity": 1,
+      "referencePrice": null,
+      "listPrice": null,
+      "regulationPrice": null,
+      "apiAlias": "calculated_price"
+    },
+    "shippingTotal": 0,
+    "orderCustomer": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "order_customer_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "01a0c5766665716397746f9d561dd6e6",
+      "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+      "translated": [],
+      "createdAt": "2026-09-21T19:34:26.168+00:00",
+      "updatedAt": null,
+      "email": "customer1@example.test",
+      "orderId": "01a0c576664f7129b30ae8059cfbf4e6",
+      "salutationId": "01994d239a1772158dab7f2ecae86500",
+      "firstName": "Test",
+      "lastName": "Customer 1",
+      "title": null,
+      "vatIds": null,
+      "company": null,
+      "customerNumber": "SWDEMO10000",
+      "customerId": "6c97534c2c0747f39e8751e43cb2b013",
+      "customer": null,
+      "salutation": null,
+      "order": null,
+      "remoteAddress": "172.17.0.0",
+      "orderVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+      "customFields": null,
+      "id": "01a0c5766665716397746f9d561dd6e6",
+      "apiAlias": "order_customer"
+    },
+    "currency": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "currency_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+      "versionId": null,
+      "translated": {
+        "shortName": "EUR",
+        "name": "Euro",
+        "customFields": []
+      },
+      "createdAt": "2025-09-15T11:30:07.343+00:00",
+      "updatedAt": null,
+      "isoCode": "EUR",
+      "factor": 1,
+      "symbol": "€",
+      "shortName": "EUR",
+      "name": "Euro",
+      "position": 1,
+      "translations": null,
+      "orders": null,
+      "salesChannels": null,
+      "salesChannelDefaultAssignments": null,
+      "salesChannelDomains": null,
+      "promotionDiscountPrices": null,
+      "isSystemDefault": true,
+      "productExports": null,
+      "countryRoundings": null,
+      "itemRounding": {
+        "extensions": [],
+        "decimals": 2,
+        "interval": 0.01,
+        "roundForNet": true,
+        "apiAlias": "shopware_core_framework_data_abstraction_layer_pricing_cash_rounding_config"
+      },
+      "totalRounding": {
+        "extensions": [],
+        "decimals": 2,
+        "interval": 0.01,
+        "roundForNet": true,
+        "apiAlias": "shopware_core_framework_data_abstraction_layer_pricing_cash_rounding_config"
+      },
+      "taxFreeFrom": 0,
+      "customFields": null,
+      "id": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+      "apiAlias": "currency"
+    },
+    "languageId": "2fbb5fe2e29a4d70aa5854ce7ce3e20b",
+    "language": null,
+    "salesChannel": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "sales_channel_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "01994d25627d7303ba92b97e96becd52",
+      "versionId": null,
+      "translated": {
+        "name": "Storefront",
+        "customFields": [],
+        "homeSlotConfig": null,
+        "homeEnabled": true,
+        "homeName": null,
+        "homeMetaTitle": null,
+        "homeMetaDescription": null,
+        "homeKeywords": null
+      },
+      "createdAt": "2025-09-15T11:31:59.783+00:00",
+      "updatedAt": null,
+      "typeId": "8a243080f92e4c719546314b577cf82b",
+      "languageId": "2fbb5fe2e29a4d70aa5854ce7ce3e20b",
+      "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+      "paymentMethodId": "01994d23abf47265bd0870b524d21af7",
+      "shippingMethodId": "01994d23ac6472abbd10d0fe562146f6",
+      "countryId": "01994d239a5271d384aaf1fb9596c42c",
+      "navigationCategoryId": "01994d23acb670fa926de3796d173b74",
+      "navigationCategoryVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+      "navigationCategoryDepth": 3,
+      "homeSlotConfig": null,
+      "homeCmsPageId": null,
+      "homeCmsPageVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+      "homeCmsPage": null,
+      "homeEnabled": true,
+      "homeName": null,
+      "homeMetaTitle": null,
+      "homeMetaDescription": null,
+      "homeKeywords": null,
+      "footerCategoryId": null,
+      "footerCategoryVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+      "serviceCategoryId": null,
+      "serviceCategoryVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+      "name": "Storefront",
+      "shortName": null,
+      "accessKey": "SWSCD0LVRFBJBZYXM0VRTEC3ZW",
+      "currencies": null,
+      "languages": null,
+      "configuration": null,
+      "active": true,
+      "maintenance": false,
+      "maintenanceIpWhitelist": null,
+      "taxCalculationType": "horizontal",
+      "type": null,
+      "currency": null,
+      "language": null,
+      "paymentMethod": null,
+      "shippingMethod": null,
+      "country": null,
+      "orders": null,
+      "customers": null,
+      "countries": null,
+      "paymentMethods": null,
+      "shippingMethods": null,
+      "translations": null,
+      "domains": null,
+      "systemConfigs": null,
+      "navigationCategory": null,
+      "footerCategory": null,
+      "serviceCategory": null,
+      "productVisibilities": null,
+      "mailHeaderFooterId": null,
+      "numberRangeSalesChannels": null,
+      "mailHeaderFooter": null,
+      "customerGroupId": "cfbd5018d38d41d8adca10d94fc8bdd6",
+      "customerGroup": null,
+      "newsletterRecipients": null,
+      "promotionSalesChannels": null,
+      "documentBaseConfigSalesChannels": null,
+      "productReviews": null,
+      "seoUrls": null,
+      "seoUrlTemplates": null,
+      "mainCategories": null,
+      "paymentMethodIds": [
+        "01994d23abca7205bb588089bcb5dbf5",
+        "01994d23abe272a59016df112c638ef6",
+        "01994d23abf47265bd0870b524d21af7",
+        "01994d23ac08703ab5f0151f750acbb2"
+      ],
+      "productExports": null,
+      "hreflangActive": false,
+      "hreflangDefaultDomainId": null,
+      "hreflangDefaultDomain": null,
+      "analyticsId": null,
+      "analytics": null,
+      "customerGroupsRegistrations": null,
+      "boundCustomers": null,
+      "wishlists": null,
+      "landingPages": null,
+      "measurementUnits": {
+        "extensions": [],
+        "system": "metric",
+        "units": {
+          "length": "mm",
+          "weight": "kg"
+        },
+        "apiAlias": "measurement_system_info"
+      },
+      "customFields": null,
+      "id": "01994d25627d7303ba92b97e96becd52",
+      "apiAlias": "sales_channel"
+    },
+    "addresses": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "order_address_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01a0c576664f7129b30ae8059bbd6987",
+        "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "translated": [],
+        "createdAt": "2026-09-21T19:34:26.175+00:00",
+        "updatedAt": null,
+        "countryId": "01994d239a5271d384aaf1fb9596c42c",
+        "countryStateId": null,
+        "salutationId": "01994d239a1772158dab7f2ecae86500",
+        "firstName": "Test",
+        "lastName": "Customer 3",
+        "street": "1 Test Street",
+        "zipcode": "1000",
+        "city": "Testville",
+        "company": null,
+        "department": null,
+        "title": null,
+        "vatId": null,
+        "phoneNumber": null,
+        "additionalAddressLine1": null,
+        "additionalAddressLine2": null,
+        "country": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "country_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "01994d239a5271d384aaf1fb9596c42c",
+          "versionId": null,
+          "translated": {
+            "name": "Germany",
+            "customFields": [],
+            "addressFormat": [
+              [
+                "address/company",
+                "symbol/dash",
+                "address/department"
+              ],
+              [
+                "address/first_name",
+                "address/last_name"
+              ],
+              [
+                "address/street"
+              ],
+              [
+                "address/zipcode",
+                "address/city"
+              ],
+              [
+                "address/country"
+              ]
+            ]
+          },
+          "createdAt": "2025-09-15T11:30:02.962+00:00",
+          "updatedAt": null,
+          "name": "Germany",
+          "iso": "DE",
+          "position": 1,
+          "active": true,
+          "shippingAvailable": true,
+          "iso3": "DEU",
+          "displayStateInRegistration": false,
+          "forceStateInRegistration": false,
+          "checkVatIdPattern": false,
+          "vatIdPattern": "DE\\d{9}",
+          "vatIdRequired": false,
+          "customerTax": {
+            "extensions": [],
+            "enabled": false,
+            "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+            "amount": 0,
+            "apiAlias": "shopware_core_framework_data_abstraction_layer_tax_free_config"
+          },
+          "companyTax": {
+            "extensions": [],
+            "enabled": false,
+            "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+            "amount": 0,
+            "apiAlias": "shopware_core_framework_data_abstraction_layer_tax_free_config"
+          },
+          "states": null,
+          "translations": null,
+          "orderAddresses": null,
+          "customerAddresses": null,
+          "salesChannelDefaultAssignments": null,
+          "salesChannels": null,
+          "taxRules": null,
+          "currencyCountryRoundings": null,
+          "postalCodeRequired": true,
+          "isEu": true,
+          "checkPostalCodePattern": false,
+          "checkAdvancedPostalCodePattern": false,
+          "advancedPostalCodePattern": null,
+          "defaultPostalCodePattern": "\\d{5}",
+          "addressFormat": [
+            [
+              "address/company",
+              "symbol/dash",
+              "address/department"
+            ],
+            [
+              "address/first_name",
+              "address/last_name"
+            ],
+            [
+              "address/street"
+            ],
+            [
+              "address/zipcode",
+              "address/city"
+            ],
+            [
+              "address/country"
+            ]
+          ],
+          "customFields": null,
+          "id": "01994d239a5271d384aaf1fb9596c42c",
+          "apiAlias": "country"
+        },
+        "countryState": null,
+        "order": null,
+        "salutation": null,
+        "orderDeliveries": null,
+        "orderId": "01a0c576664f7129b30ae8059cfbf4e6",
+        "orderVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "customFields": null,
+        "id": "01a0c576664f7129b30ae8059bbd6987",
+        "apiAlias": "order_address"
+      }
+    ],
+    "billingAddress": null,
+    "deliveries": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "order_delivery_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01a0c576664f7129b30ae8059ca25866",
+        "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "translated": [],
+        "createdAt": "2026-09-21T19:34:26.178+00:00",
+        "updatedAt": null,
+        "orderId": "01a0c576664f7129b30ae8059cfbf4e6",
+        "orderVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "shippingOrderAddressId": "01a0c576664f7129b30ae8059bbd6987",
+        "shippingOrderAddressVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "shippingMethodId": "01994d23ac6472abbd10d0fe562146f6",
+        "trackingCodes": [],
+        "shippingDateEarliest": "2026-09-22T00:00:00.000+00:00",
+        "shippingDateLatest": "2026-09-24T00:00:00.000+00:00",
+        "shippingCosts": {
+          "extensions": [],
+          "unitPrice": 0,
+          "totalPrice": 0,
+          "calculatedTaxes": [
+            {
+              "extensions": [],
+              "tax": 0,
+              "taxRate": 19,
+              "price": 0,
+              "label": null,
+              "apiAlias": "cart_tax_calculated"
+            }
+          ],
+          "taxRules": [
+            {
+              "extensions": [],
+              "taxRate": 19,
+              "percentage": 100,
+              "apiAlias": "cart_tax_rule"
+            }
+          ],
+          "quantity": 1,
+          "referencePrice": null,
+          "listPrice": null,
+          "regulationPrice": null,
+          "apiAlias": "calculated_price"
+        },
+        "shippingOrderAddress": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "order_address_foreign_keys_extension"
+            }
+          },
+          "_uniqueIdentifier": "01a0c576664f7129b30ae8059bbd6987",
+          "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+          "translated": [],
+          "createdAt": "2026-09-21T19:34:26.175+00:00",
+          "updatedAt": null,
+          "countryId": "01994d239a5271d384aaf1fb9596c42c",
+          "countryStateId": null,
+          "salutationId": "01994d239a1772158dab7f2ecae86500",
+          "firstName": "Test",
+          "lastName": "Customer 4",
+          "street": "1 Test Street",
+          "zipcode": "1000",
+          "city": "Testville",
+          "company": null,
+          "department": null,
+          "title": null,
+          "vatId": null,
+          "phoneNumber": null,
+          "additionalAddressLine1": null,
+          "additionalAddressLine2": null,
+          "country": {
+            "extensions": {
+              "foreignKeys": {
+                "extensions": [],
+                "apiAlias": "country_foreign_keys_extension"
+              },
+              "internal_mapping_storage": {
+                "extensions": [],
+                "apiAlias": null
+              }
+            },
+            "_uniqueIdentifier": "01994d239a5271d384aaf1fb9596c42c",
+            "versionId": null,
+            "translated": {
+              "name": "Germany",
+              "customFields": [],
+              "addressFormat": [
+                [
+                  "address/company",
+                  "symbol/dash",
+                  "address/department"
+                ],
+                [
+                  "address/first_name",
+                  "address/last_name"
+                ],
+                [
+                  "address/street"
+                ],
+                [
+                  "address/zipcode",
+                  "address/city"
+                ],
+                [
+                  "address/country"
+                ]
+              ]
+            },
+            "createdAt": "2025-09-15T11:30:02.962+00:00",
+            "updatedAt": null,
+            "name": "Germany",
+            "iso": "DE",
+            "position": 1,
+            "active": true,
+            "shippingAvailable": true,
+            "iso3": "DEU",
+            "displayStateInRegistration": false,
+            "forceStateInRegistration": false,
+            "checkVatIdPattern": false,
+            "vatIdPattern": "DE\\d{9}",
+            "vatIdRequired": false,
+            "customerTax": {
+              "extensions": [],
+              "enabled": false,
+              "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+              "amount": 0,
+              "apiAlias": "shopware_core_framework_data_abstraction_layer_tax_free_config"
+            },
+            "companyTax": {
+              "extensions": [],
+              "enabled": false,
+              "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+              "amount": 0,
+              "apiAlias": "shopware_core_framework_data_abstraction_layer_tax_free_config"
+            },
+            "states": null,
+            "translations": null,
+            "orderAddresses": null,
+            "customerAddresses": null,
+            "salesChannelDefaultAssignments": null,
+            "salesChannels": null,
+            "taxRules": null,
+            "currencyCountryRoundings": null,
+            "postalCodeRequired": true,
+            "isEu": true,
+            "checkPostalCodePattern": false,
+            "checkAdvancedPostalCodePattern": false,
+            "advancedPostalCodePattern": null,
+            "defaultPostalCodePattern": "\\d{5}",
+            "addressFormat": [
+              [
+                "address/company",
+                "symbol/dash",
+                "address/department"
+              ],
+              [
+                "address/first_name",
+                "address/last_name"
+              ],
+              [
+                "address/street"
+              ],
+              [
+                "address/zipcode",
+                "address/city"
+              ],
+              [
+                "address/country"
+              ]
+            ],
+            "customFields": null,
+            "id": "01994d239a5271d384aaf1fb9596c42c",
+            "apiAlias": "country"
+          },
+          "countryState": null,
+          "order": null,
+          "salutation": null,
+          "orderDeliveries": null,
+          "orderId": "01a0c576664f7129b30ae8059cfbf4e6",
+          "orderVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+          "customFields": null,
+          "id": "01a0c576664f7129b30ae8059bbd6987",
+          "apiAlias": "order_address"
+        },
+        "stateId": "01994d23b24e7168934e5353b5535bb0",
+        "stateMachineState": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "state_machine_state_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "01994d23b24e7168934e5353b5535bb0",
+          "versionId": null,
+          "translated": {
+            "name": "Open",
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:30:09.124+00:00",
+          "updatedAt": null,
+          "name": "Open",
+          "technicalName": "open",
+          "stateMachineId": "01994d23b24e7168934e5353b5438461",
+          "stateMachine": null,
+          "fromStateMachineTransitions": null,
+          "toStateMachineTransitions": null,
+          "translations": null,
+          "orders": null,
+          "orderTransactionCaptures": null,
+          "orderTransactionCaptureRefunds": null,
+          "orderTransactions": null,
+          "orderDeliveries": null,
+          "fromStateMachineHistoryEntries": null,
+          "toStateMachineHistoryEntries": null,
+          "customFields": null,
+          "id": "01994d23b24e7168934e5353b5535bb0",
+          "apiAlias": "state_machine_state"
+        },
+        "shippingMethod": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "shipping_method_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "01994d23ac6472abbd10d0fe562146f6",
+          "versionId": null,
+          "translated": {
+            "name": "Standard",
+            "customFields": [],
+            "description": null,
+            "trackingUrl": null
+          },
+          "createdAt": "2025-09-15T11:30:07.602+00:00",
+          "updatedAt": "2025-09-15T11:32:14.439+00:00",
+          "name": "Standard",
+          "active": true,
+          "position": 1,
+          "description": null,
+          "trackingUrl": null,
+          "deliveryTimeId": "01994d23ac1a70419866b3d6050ae91e",
+          "deliveryTime": null,
+          "translations": null,
+          "orderDeliveries": null,
+          "salesChannelDefaultAssignments": null,
+          "salesChannels": null,
+          "availabilityRule": null,
+          "availabilityRuleId": "01994d23abbd70c99eff6cbaa980a803",
+          "prices": [],
+          "mediaId": null,
+          "taxId": null,
+          "media": null,
+          "tags": null,
+          "taxType": "auto",
+          "technicalName": "shipping_standard",
+          "tax": null,
+          "appShippingMethod": null,
+          "customFields": null,
+          "id": "01994d23ac6472abbd10d0fe562146f6",
+          "apiAlias": "shipping_method"
+        },
+        "order": null,
+        "positions": null,
+        "primaryOrder": null,
+        "customFields": null,
+        "id": "01a0c576664f7129b30ae8059ca25866",
+        "apiAlias": "order_delivery"
+      }
+    ],
+    "lineItems": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "order_line_item_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01a0c576664e7279abd4848f05f825b5",
+        "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "translated": [],
+        "createdAt": "2026-09-21T19:34:26.181+00:00",
+        "updatedAt": null,
+        "orderId": "01a0c576664f7129b30ae8059cfbf4e6",
+        "identifier": "01a0c57663cf71c29ae8bc89b2ec4f25",
+        "referencedId": "11dc680240b04f469ccba354cbf0b967",
+        "productId": "11dc680240b04f469ccba354cbf0b967",
+        "promotionId": null,
+        "quantity": 2,
+        "unitPrice": 800,
+        "totalPrice": 1600,
+        "label": "Main product with advanced prices",
+        "description": null,
+        "good": true,
+        "removable": true,
+        "coverId": "84356a71233d4b3e9f417dcc8850c82f",
+        "stackable": true,
+        "position": 1,
+        "price": {
+          "extensions": [],
+          "unitPrice": 800,
+          "totalPrice": 1600,
+          "calculatedTaxes": [
+            {
+              "extensions": [],
+              "tax": 255.46,
+              "taxRate": 19,
+              "price": 1600,
+              "label": null,
+              "apiAlias": "cart_tax_calculated"
+            }
+          ],
+          "taxRules": [
+            {
+              "extensions": [],
+              "taxRate": 19,
+              "percentage": 100,
+              "apiAlias": "cart_tax_rule"
+            }
+          ],
+          "quantity": 2,
+          "referencePrice": null,
+          "listPrice": null,
+          "regulationPrice": null,
+          "apiAlias": "calculated_price"
+        },
+        "priceDefinition": {
+          "extensions": [],
+          "isCalculated": true,
+          "referencePriceDefinition": null,
+          "listPrice": null,
+          "regulationPrice": null,
+          "price": 800,
+          "taxRules": [
+            {
+              "extensions": [],
+              "taxRate": 19,
+              "percentage": 100,
+              "apiAlias": "cart_tax_rule"
+            }
+          ],
+          "quantity": 2,
+          "type": "quantity",
+          "apiAlias": "cart_price_quantity"
+        },
+        "payload": {
+          "isNew": false,
+          "stock": 9,
+          "taxId": "",
+          "tagIds": null,
+          "options": [],
+          "features": [],
+          "parentId": null,
+          "createdAt": "2025-09-15 11:32:13.557",
+          "optionIds": null,
+          "streamIds": null,
+          "isCloseout": false,
+          "categoryIds": [
+            "01994d23acb670fa926de3796d173b74",
+            "251448b91bc742de85643f5fccd89051"
+          ],
+          "propertyIds": null,
+          "releaseDate": "2025-09-15 11:32:13.527",
+          "customFields": [],
+          "productNumber": "SWDEMO10002",
+          "manufacturerId": "cc1c20c365d34cfb88bfab3c3e81d350",
+          "purchasePrices": null,
+          "markAsTopseller": false
+        },
+        "parentId": null,
+        "parent": null,
+        "type": "product",
+        "order": null,
+        "orderDeliveryPositions": null,
+        "cover": null,
+        "children": null,
+        "product": null,
+        "orderTransactionCaptureRefundPositions": null,
+        "states": [
+          "is-physical"
+        ],
+        "downloads": null,
+        "promotion": null,
+        "orderVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "productVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "parentVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "customFields": null,
+        "id": "01a0c576664e7279abd4848f05f825b5",
+        "apiAlias": "order_line_item"
+      }
+    ],
+    "transactions": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "order_transaction_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01a0c576664f7129b30ae8059cb7b96a",
+        "versionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "translated": [],
+        "createdAt": "2026-09-21T19:34:26.183+00:00",
+        "updatedAt": "2026-09-21T19:34:27.949+00:00",
+        "orderId": "01a0c576664f7129b30ae8059cfbf4e6",
+        "orderVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+        "paymentMethodId": "01994d23abf47265bd0870b524d21af7",
+        "amount": {
+          "extensions": [],
+          "unitPrice": 1600,
+          "totalPrice": 1600,
+          "calculatedTaxes": [
+            {
+              "extensions": [],
+              "tax": 255.46,
+              "taxRate": 19,
+              "price": 1600,
+              "label": null,
+              "apiAlias": "cart_tax_calculated"
+            }
+          ],
+          "taxRules": [
+            {
+              "extensions": [],
+              "taxRate": 19,
+              "percentage": 100,
+              "apiAlias": "cart_tax_rule"
+            }
+          ],
+          "quantity": 1,
+          "referencePrice": null,
+          "listPrice": null,
+          "regulationPrice": null,
+          "apiAlias": "calculated_price"
+        },
+        "paymentMethod": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "payment_method_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "01994d23abf47265bd0870b524d21af7",
+          "versionId": null,
+          "translated": {
+            "name": "Cash on delivery",
+            "distinguishableName": "Cash on delivery",
+            "description": "Payment upon receipt of goods.",
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:30:07.476+00:00",
+          "updatedAt": null,
+          "pluginId": null,
+          "handlerIdentifier": "Shopware\\Core\\Checkout\\Payment\\Cart\\PaymentHandler\\CashPayment",
+          "name": "Cash on delivery",
+          "distinguishableName": "Cash on delivery",
+          "description": "Payment upon receipt of goods.",
+          "position": 1,
+          "active": true,
+          "afterOrderEnabled": true,
+          "plugin": null,
+          "translations": null,
+          "orderTransactions": null,
+          "customers": null,
+          "salesChannelDefaultAssignments": null,
+          "salesChannels": null,
+          "availabilityRule": null,
+          "availabilityRuleId": null,
+          "mediaId": null,
+          "media": null,
+          "formattedHandlerIdentifier": "handler_shopware_cashpayment",
+          "shortName": "cash_payment",
+          "technicalName": "payment_cashpayment",
+          "appPaymentMethod": null,
+          "customFields": null,
+          "id": "01994d23abf47265bd0870b524d21af7",
+          "apiAlias": "payment_method"
+        },
+        "order": null,
+        "stateMachineState": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "state_machine_state_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "01994d23b338713797634d32d46bfc57",
+          "versionId": null,
+          "translated": {
+            "name": "Paid",
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:30:09.374+00:00",
+          "updatedAt": null,
+          "name": "Paid",
+          "technicalName": "paid",
+          "stateMachineId": "01994d23b338713797634d32d2b16bae",
+          "stateMachine": null,
+          "fromStateMachineTransitions": null,
+          "toStateMachineTransitions": null,
+          "translations": null,
+          "orders": null,
+          "orderTransactionCaptures": null,
+          "orderTransactionCaptureRefunds": null,
+          "orderTransactions": null,
+          "orderDeliveries": null,
+          "fromStateMachineHistoryEntries": null,
+          "toStateMachineHistoryEntries": null,
+          "customFields": null,
+          "id": "01994d23b338713797634d32d46bfc57",
+          "apiAlias": "state_machine_state"
+        },
+        "stateId": "01994d23b338713797634d32d46bfc57",
+        "captures": [],
+        "primaryOrder": null,
+        "validationData": [],
+        "customFields": null,
+        "id": "01a0c576664f7129b30ae8059cb7b96a",
+        "apiAlias": "order_transaction"
+      }
+    ],
+    "deepLinkCode": "R_xwqw_XRk1whHCGuWxnZQK-Eyu3m8IP",
+    "autoIncrement": 3,
+    "stateMachineState": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "state_machine_state_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "01994d23b1c473beb17a565c12d64050",
+      "versionId": null,
+      "translated": {
+        "name": "Open",
+        "customFields": []
+      },
+      "createdAt": "2025-09-15T11:30:08.984+00:00",
+      "updatedAt": null,
+      "name": "Open",
+      "technicalName": "open",
+      "stateMachineId": "01994d23b1c473beb17a565c11e41346",
+      "stateMachine": null,
+      "fromStateMachineTransitions": null,
+      "toStateMachineTransitions": null,
+      "translations": null,
+      "orders": null,
+      "orderTransactionCaptures": null,
+      "orderTransactionCaptureRefunds": null,
+      "orderTransactions": null,
+      "orderDeliveries": null,
+      "fromStateMachineHistoryEntries": null,
+      "toStateMachineHistoryEntries": null,
+      "customFields": null,
+      "id": "01994d23b1c473beb17a565c12d64050",
+      "apiAlias": "state_machine_state"
+    },
+    "stateId": "01994d23b1c473beb17a565c12d64050",
+    "primaryOrderDelivery": null,
+    "primaryOrderDeliveryId": "01a0c576664f7129b30ae8059ca25866",
+    "primaryOrderDeliveryVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+    "primaryOrderTransaction": null,
+    "primaryOrderTransactionId": "01a0c576664f7129b30ae8059cb7b96a",
+    "primaryOrderTransactionVersionId": "0fa91ce3e96a4bc2be4bd9ce752c3425",
+    "documents": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "document_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "01a0c576759e702fa4a0ada296187302",
+        "versionId": null,
+        "translated": [],
+        "createdAt": "2026-09-21T19:34:30.440+00:00",
+        "updatedAt": null,
+        "orderId": "01a0c576664f7129b30ae8059cfbf4e6",
+        "orderVersionId": "01a0c576725f72ffa99f53a23de7b574",
+        "documentTypeId": "01994d2399df73be972c5d2e1b3c3d62",
+        "documentMediaFileId": "01a0c57675a47252916c0acd9605e6ee",
+        "order": null,
+        "config": {
+          "id": "01994d23b00570569c2d71057ece76ee",
+          "logo": null,
+          "name": "invoice",
+          "title": null,
+          "vatId": "",
+          "custom": {
+            "invoiceNumber": "1001"
+          },
+          "global": true,
+          "bankBic": "",
+          "bankIban": "",
+          "bankName": "",
+          "pageSize": "a4",
+          "fileTypes": [
+            "html",
+            "pdf"
+          ],
+          "taxNumber": "",
+          "taxOffice": "",
+          "companyUrl": null,
+          "extensions": {
+            "foreignKeys": {
+              "apiAlias": "document_base_config_foreign_keys_extension",
+              "extensions": []
+            }
+          },
+          "translated": [],
+          "companyCity": "",
+          "companyName": "Test Co",
+          "companyEmail": null,
+          "companyPhone": null,
+          "documentDate": "2026-09-21 19:34:29.214",
+          "itemsPerPage": 10,
+          "companyStreet": "",
+          "displayFooter": true,
+          "displayHeader": true,
+          "displayPrices": true,
+          "salesChannels": [],
+          "companyAddress": "",
+          "companyCountry": null,
+          "companyZipcode": "",
+          "documentNumber": "1001",
+          "documentTypeId": "01994d2399df73be972c5d2e1b3c3d62",
+          "filenamePrefix": "invoice_",
+          "filenameSuffix": "",
+          "paymentDueDate": "",
+          "documentComment": null,
+          "pageOrientation": "portrait",
+          "companyCountryId": "",
+          "displayLineItems": true,
+          "displayPageCount": true,
+          "deliveryCountries": [
+            "01994d239a5271d384aaf1fb9596c42c",
+            "01994d239ba6719e9a86b5612f9f6c1d",
+            "01994d239bb77295b97cb3b42bc2d283",
+            "01994d23a6b270319f49e620b94348df",
+            "01994d23a6f8706fbb0e6f63d7463b19",
+            "01994d23a72d71a1bad63e4a91d9df20",
+            "01994d23a74f7092a6e982795b897e54",
+            "01994d23a775702e8f37536267ab6c5b",
+            "01994d23a786733abfea2e2f20d554dd",
+            "01994d23a79772ceb5b5cccef18b6ffe",
+            "01994d23a7ba7187a821b0894483aeae",
+            "01994d23aa6371b0baf17d97a8065d16",
+            "01994d23aa74703fbd80bac54c124845",
+            "01994d23aa9870ecb0f08d7edbadca38",
+            "01994d23aaba73f28151573887260b30",
+            "01994d23aae072b7926fae4c994aa94d",
+            "01994d23ab2473a88c1f1fc9939b320d",
+            "01994d23ab367021a9834de601a83129",
+            "01994d23ab497350adf90b6bc3a200f7",
+            "01994d23ab5e7122b2f082ad71aa4674",
+            "01994d24081e72abb35fdf6fad301a84",
+            "01994d24083073a191e6e3a19f767ee9",
+            "01994d240842715ebd591e0f0e3fde25",
+            "01994d24085673a88d931e0730e81aae",
+            "01994d24087372b3bd2df50520d32c23",
+            "01994d2408a170e0b216af3f459b6c79",
+            "01994d2408c37170a6f86b69e11ced1c",
+            "01994d2408e472d8a8fddf0622301368"
+          ],
+          "executiveDirector": "",
+          "placeOfFulfillment": "",
+          "placeOfJurisdiction": "",
+          "displayReturnAddress": true,
+          "displayCompanyAddress": true,
+          "diplayLineItemPosition": true,
+          "intraCommunityDelivery": false,
+          "displayLineItemPosition": null
+        },
+        "sent": false,
+        "static": false,
+        "deepLinkCode": "TqX8ZvVk0NSj1sc4LG8eCTsf2auK2L1L",
+        "documentType": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "document_type_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "01994d2399df73be972c5d2e1b3c3d62",
+          "versionId": null,
+          "translated": {
+            "name": "Invoice",
+            "customFields": []
+          },
+          "createdAt": "2025-09-15T11:30:02.847+00:00",
+          "updatedAt": null,
+          "name": "Invoice",
+          "technicalName": "invoice",
+          "translations": null,
+          "documents": null,
+          "documentBaseConfigs": null,
+          "documentBaseConfigSalesChannels": null,
+          "customFields": null,
+          "id": "01994d2399df73be972c5d2e1b3c3d62",
+          "apiAlias": "document_type"
+        },
+        "referencedDocumentId": null,
+        "referencedDocument": null,
+        "dependentDocuments": null,
+        "documentMediaFile": null,
+        "documentNumber": "1001",
+        "documentA11yMediaFileId": "01a0c576767472efbc8bf600a6ab99c8",
+        "documentA11yMediaFile": null,
+        "customFields": null,
+        "id": "01a0c576759e702fa4a0ada296187302",
+        "apiAlias": "document"
+      }
+    ],
+    "tags": [],
+    "affiliateCode": null,
+    "campaignCode": null,
+    "customerComment": null,
+    "internalComment": null,
+    "ruleIds": [
+      "01994d23abbd70c99eff6cbaa980a803",
+      "01994d23ac6472abbd10d0fe57b88589",
+      "01994d23f7c4712f9107ff58d56ebea0",
+      "3858957016644de4ae48c0500bf3ccc8",
+      "e1378db7808a478f919e0d740d5d6c1a",
+      "01994d23adc672c5a1cc689c992ff7bb",
+      "28caae75a5624f0d985abd0eb32aa160"
+    ],
+    "createdById": null,
+    "createdBy": null,
+    "updatedById": null,
+    "updatedBy": null,
+    "itemRounding": {
+      "extensions": [],
+      "decimals": 2,
+      "interval": 0.01,
+      "roundForNet": true,
+      "apiAlias": "shopware_core_framework_data_abstraction_layer_pricing_cash_rounding_config"
+    },
+    "totalRounding": {
+      "extensions": [],
+      "decimals": 2,
+      "interval": 0.01,
+      "roundForNet": true,
+      "apiAlias": "shopware_core_framework_data_abstraction_layer_pricing_cash_rounding_config"
+    },
+    "source": null,
+    "taxCalculationType": "horizontal",
+    "customFields": null,
+    "id": "01a0c576664f7129b30ae8059cfbf4e6",
+    "apiAlias": "order"
+  }
+]

@@ -1,0 +1,4 @@
+Item,Name,Type,Inventory Tracking,Price,Description,Product URL,UPC/EAN,Global Trade Number,Free Shipping,Weight,Is Visible,Product Condition,Show Product Condition,Image URL (Import),Image is Thumbnail,Image Sort Order
+Product,Pepersalami Halal,physical,none,3.49,Marhaba Pepersalami Halal,/pepersalami-halal-rzczr/,,,FALSE,,TRUE,New,FALSE,,,
+Image,,,,,,,,,,,,,,https://static.example/std/salami.jpg,TRUE,0
+Product,Jonge Gouda 48+,physical,none,5.99,,/jonge-gouda-48-sdhp3/,5400101025773,5400101025773,FALSE,0.5,TRUE,New,FALSE,,,

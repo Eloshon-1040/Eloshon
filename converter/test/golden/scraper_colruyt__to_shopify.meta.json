@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "sourceFormat": "scraper.eloshon-export.v1",
+  "targetFormat": "shopify_products",
+  "counts": {
+    "inputUnits": 5,
+    "outputUnits": 5,
+    "failedUnits": 0,
+    "outputRows": 5
+  },
+  "errors": [],
+  "losses": [],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false
+}

@@ -1,0 +1,908 @@
+[
+  {
+    "id": 1,
+    "id_parent": 0,
+    "level_depth": 0,
+    "nb_products_recursive": 25,
+    "active": "1",
+    "id_shop_default": 1,
+    "is_root_category": "0",
+    "position": 0,
+    "redirect_type": "404",
+    "id_type_redirected": 0,
+    "date_add": "2026-09-21 03:38:50",
+    "date_upd": "2026-09-21 03:38:50",
+    "name": [
+      {
+        "id": 1,
+        "value": "Root"
+      },
+      {
+        "id": 2,
+        "value": "Root"
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "root"
+      },
+      {
+        "id": 2,
+        "value": "root"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "additional_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "id_parent": 1,
+    "level_depth": 1,
+    "nb_products_recursive": 25,
+    "active": "1",
+    "id_shop_default": 1,
+    "is_root_category": "1",
+    "position": 0,
+    "redirect_type": "404",
+    "id_type_redirected": 0,
+    "date_add": "2026-09-21 03:38:50",
+    "date_upd": "2026-09-21 03:38:50",
+    "name": [
+      {
+        "id": 1,
+        "value": "Home"
+      },
+      {
+        "id": 2,
+        "value": "Home"
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "home"
+      },
+      {
+        "id": 2,
+        "value": "home"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "additional_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 3
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 9
+        }
+      ],
+      "products": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        },
+        {
+          "id": 5
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 7
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 9
+        },
+        {
+          "id": 10
+        },
+        {
+          "id": 11
+        },
+        {
+          "id": 12
+        },
+        {
+          "id": 13
+        },
+        {
+          "id": 14
+        },
+        {
+          "id": 15
+        },
+        {
+          "id": 16
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 18
+        },
+        {
+          "id": 19
+        },
+        {
+          "id": 22
+        },
+        {
+          "id": 23
+        },
+        {
+          "id": 24
+        },
+        {
+          "id": 25
+        },
+        {
+          "id": 26
+        },
+        {
+          "id": 27
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "id_parent": 2,
+    "level_depth": 2,
+    "nb_products_recursive": 2,
+    "active": "1",
+    "id_shop_default": 1,
+    "is_root_category": "0",
+    "position": 0,
+    "redirect_type": "301",
+    "id_type_redirected": 0,
+    "date_add": "2026-09-21 03:39:33",
+    "date_upd": "2026-09-21 03:39:33",
+    "name": [
+      {
+        "id": 1,
+        "value": "Clothes"
+      },
+      {
+        "id": 2,
+        "value": "Clothes"
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "clothes"
+      },
+      {
+        "id": 2,
+        "value": "clothes"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>Discover our favorites fashionable discoveries, a selection of cool items to integrate in your wardrobe. Compose a unique style with personality which matches your own.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Discover our favorites fashionable discoveries, a selection of cool items to integrate in your wardrobe. Compose a unique style with personality which matches your own.</p>"
+      }
+    ],
+    "additional_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 4
+        },
+        {
+          "id": 5
+        }
+      ],
+      "products": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "id_parent": 2,
+    "level_depth": 2,
+    "nb_products_recursive": 11,
+    "active": "1",
+    "id_shop_default": 1,
+    "is_root_category": "0",
+    "position": 1,
+    "redirect_type": "301",
+    "id_type_redirected": 0,
+    "date_add": "2026-09-21 03:39:33",
+    "date_upd": "2026-09-21 03:39:33",
+    "name": [
+      {
+        "id": 1,
+        "value": "Accessories"
+      },
+      {
+        "id": 2,
+        "value": "Accessories"
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "accessories"
+      },
+      {
+        "id": 2,
+        "value": "accessories"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>Items and accessories for your desk, kitchen or living room. Make your house a home with our eye-catching designs. </p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Items and accessories for your desk, kitchen or living room. Make your house a home with our eye-catching designs. </p>"
+      }
+    ],
+    "additional_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "categories": [
+        {
+          "id": 7
+        },
+        {
+          "id": 8
+        }
+      ],
+      "products": [
+        {
+          "id": 7
+        },
+        {
+          "id": 6
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 10
+        },
+        {
+          "id": 9
+        },
+        {
+          "id": 11
+        },
+        {
+          "id": 15
+        },
+        {
+          "id": 16
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 18
+        },
+        {
+          "id": 19
+        }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "id_parent": 2,
+    "level_depth": 2,
+    "nb_products_recursive": 7,
+    "active": "1",
+    "id_shop_default": 1,
+    "is_root_category": "0",
+    "position": 2,
+    "redirect_type": "301",
+    "id_type_redirected": 0,
+    "date_add": "2026-09-21 03:39:33",
+    "date_upd": "2026-09-21 03:39:33",
+    "name": [
+      {
+        "id": 1,
+        "value": "Art"
+      },
+      {
+        "id": 2,
+        "value": "Art"
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "art"
+      },
+      {
+        "id": 2,
+        "value": "art"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>Framed poster and vector images, all you need to give personality to your walls or bring your creative projects to life.</p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Framed poster and vector images, all you need to give personality to your walls or bring your creative projects to life.</p>"
+      }
+    ],
+    "additional_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "products": [
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        },
+        {
+          "id": 5
+        },
+        {
+          "id": 12
+        },
+        {
+          "id": 13
+        },
+        {
+          "id": 14
+        },
+        {
+          "id": 15
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "id_parent": 3,
+    "level_depth": 3,
+    "nb_products_recursive": 1,
+    "active": "1",
+    "id_shop_default": 1,
+    "is_root_category": "0",
+    "position": 0,
+    "redirect_type": "301",
+    "id_type_redirected": 0,
+    "date_add": "2026-09-21 03:39:33",
+    "date_upd": "2026-09-21 03:39:33",
+    "name": [
+      {
+        "id": 1,
+        "value": "Men"
+      },
+      {
+        "id": 2,
+        "value": "Men"
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "men"
+      },
+      {
+        "id": 2,
+        "value": "men"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>T-shirts, sweaters, hoodies and men's accessories. From basics to original creations, for every style. </p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>T-shirts, sweaters, hoodies and men's accessories. From basics to original creations, for every style. </p>"
+      }
+    ],
+    "additional_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "products": [
+        {
+          "id": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "id_parent": 3,
+    "level_depth": 3,
+    "nb_products_recursive": 1,
+    "active": "1",
+    "id_shop_default": 1,
+    "is_root_category": "0",
+    "position": 1,
+    "redirect_type": "301",
+    "id_type_redirected": 0,
+    "date_add": "2026-09-21 03:39:33",
+    "date_upd": "2026-09-21 03:39:33",
+    "name": [
+      {
+        "id": 1,
+        "value": "Women"
+      },
+      {
+        "id": 2,
+        "value": "Women"
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "women"
+      },
+      {
+        "id": 2,
+        "value": "women"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>T-shirts, sweaters, hoodies and women's accessories. From basics to original creations, for every style. </p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>T-shirts, sweaters, hoodies and women's accessories. From basics to original creations, for every style. </p>"
+      }
+    ],
+    "additional_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "products": [
+        {
+          "id": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "id_parent": 6,
+    "level_depth": 3,
+    "nb_products_recursive": 3,
+    "active": "1",
+    "id_shop_default": 1,
+    "is_root_category": "0",
+    "position": 0,
+    "redirect_type": "301",
+    "id_type_redirected": 0,
+    "date_add": "2026-09-21 03:39:33",
+    "date_upd": "2026-09-21 03:39:33",
+    "name": [
+      {
+        "id": 1,
+        "value": "Stationery"
+      },
+      {
+        "id": 2,
+        "value": "Stationery"
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "stationery"
+      },
+      {
+        "id": 2,
+        "value": "stationery"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>Notebooks, agendas, office accessories and more. Everything you need to combine the pleasant and the useful, either at work or at home. </p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Notebooks, agendas, office accessories and more. Everything you need to combine the pleasant and the useful, either at work or at home. </p>"
+      }
+    ],
+    "additional_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "products": [
+        {
+          "id": 16
+        },
+        {
+          "id": 17
+        },
+        {
+          "id": 18
+        }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "id_parent": 6,
+    "level_depth": 3,
+    "nb_products_recursive": 8,
+    "active": "1",
+    "id_shop_default": 1,
+    "is_root_category": "0",
+    "position": 1,
+    "redirect_type": "301",
+    "id_type_redirected": 0,
+    "date_add": "2026-09-21 03:39:33",
+    "date_upd": "2026-09-21 03:39:33",
+    "name": [
+      {
+        "id": 1,
+        "value": "Home Accessories"
+      },
+      {
+        "id": 2,
+        "value": "Home Accessories"
+      }
+    ],
+    "link_rewrite": [
+      {
+        "id": 1,
+        "value": "home-accessories"
+      },
+      {
+        "id": 2,
+        "value": "home-accessories"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "value": "<p>Details matter! Liven up your interior with our selection of home accessories. </p>"
+      },
+      {
+        "id": 2,
+        "value": "<p>Details matter! Liven up your interior with our selection of home accessories. </p>"
+      }
+    ],
+    "additional_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_title": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "meta_description": [
+      {
+        "id": 1,
+        "value": ""
+      },
+      {
+        "id": 2,
+        "value": ""
+      }
+    ],
+    "associations": {
+      "products": [
+        {
+          "id": 6
+        },
+        {
+          "id": 7
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 9
+        },
+        {
+          "id": 10
+        },
+        {
+          "id": 11
+        },
+        {
+          "id": 15
+        },
+        {
+          "id": 19
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "method": "sitemap",
+  "count": 6,
+  "paths": [
+    "/product/p1",
+    "/product/p2",
+    "/product/p3",
+    "/product/p4",
+    "/product/p5",
+    "/product/p6"
+  ]
+}

@@ -1,0 +1,558 @@
+[
+  {
+    "extensions": {
+      "foreignKeys": {
+        "extensions": [],
+        "apiAlias": "customer_foreign_keys_extension"
+      },
+      "search": {
+        "extensions": [],
+        "translated": [],
+        "autoIncrement": 1,
+        "customerNumber": "SWDEMO10000"
+      }
+    },
+    "_uniqueIdentifier": "6c97534c2c0747f39e8751e43cb2b013",
+    "versionId": null,
+    "translated": [],
+    "createdAt": "2025-09-15T11:32:13.123+00:00",
+    "updatedAt": "2026-09-21T19:34:26.166+00:00",
+    "groupId": "cfbd5018d38d41d8adca10d94fc8bdd6",
+    "salesChannelId": "01994d25627d7303ba92b97e96becd52",
+    "languageId": "2fbb5fe2e29a4d70aa5854ce7ce3e20b",
+    "lastPaymentMethodId": "01994d23abf47265bd0870b524d21af7",
+    "defaultBillingAddressId": "d8f0dff7ef3947979a83c42f6509f22c",
+    "defaultShippingAddressId": "d8f0dff7ef3947979a83c42f6509f22c",
+    "customerNumber": "SWDEMO10000",
+    "salutationId": "01994d239a1772158dab7f2ecae86500",
+    "firstName": "Test",
+    "lastName": "Customer 1",
+    "company": null,
+    "email": "customer1@example.test",
+    "title": null,
+    "vatIds": null,
+    "affiliateCode": null,
+    "campaignCode": null,
+    "active": true,
+    "doubleOptInRegistration": false,
+    "doubleOptInEmailSentDate": null,
+    "doubleOptInConfirmDate": null,
+    "guest": false,
+    "firstLogin": null,
+    "lastLogin": "2026-09-21T19:34:24.957+00:00",
+    "accountType": "private",
+    "birthday": "1990-01-01",
+    "lastOrderDate": null,
+    "orderCount": 0,
+    "orderTotalAmount": 0,
+    "reviewCount": 0,
+    "group": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "customer_group_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "cfbd5018d38d41d8adca10d94fc8bdd6",
+      "versionId": null,
+      "translated": {
+        "name": "Standard customer group",
+        "customFields": [],
+        "registrationTitle": null,
+        "registrationIntroduction": null,
+        "registrationOnlyCompanyRegistration": null,
+        "registrationSeoMetaDescription": null
+      },
+      "createdAt": "2025-09-15T11:30:07.400+00:00",
+      "updatedAt": null,
+      "name": "Standard customer group",
+      "displayGross": true,
+      "translations": null,
+      "customers": null,
+      "salesChannels": null,
+      "registrationActive": false,
+      "registrationSalesChannels": null,
+      "customFields": null,
+      "id": "cfbd5018d38d41d8adca10d94fc8bdd6",
+      "apiAlias": "customer_group"
+    },
+    "salesChannel": null,
+    "language": null,
+    "lastPaymentMethod": null,
+    "salutation": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "salutation_foreign_keys_extension"
+        },
+        "internal_mapping_storage": {
+          "extensions": [],
+          "apiAlias": null
+        }
+      },
+      "_uniqueIdentifier": "01994d239a1772158dab7f2ecae86500",
+      "versionId": null,
+      "translated": {
+        "displayName": "Test Customer",
+        "letterName": "Dear Mr.",
+        "customFields": []
+      },
+      "createdAt": "2025-09-15T11:30:02.903+00:00",
+      "updatedAt": null,
+      "salutationKey": "mr",
+      "displayName": "Test Customer",
+      "letterName": "Dear Mr.",
+      "translations": null,
+      "customers": null,
+      "customerAddresses": null,
+      "orderCustomers": null,
+      "orderAddresses": null,
+      "newsletterRecipients": null,
+      "customFields": null,
+      "id": "01994d239a1772158dab7f2ecae86500",
+      "apiAlias": "salutation"
+    },
+    "defaultBillingAddress": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "customer_address_foreign_keys_extension"
+        }
+      },
+      "_uniqueIdentifier": "d8f0dff7ef3947979a83c42f6509f22c",
+      "versionId": null,
+      "translated": [],
+      "createdAt": "2025-09-15T11:32:13.122+00:00",
+      "updatedAt": null,
+      "customerId": "6c97534c2c0747f39e8751e43cb2b013",
+      "countryId": "01994d239a5271d384aaf1fb9596c42c",
+      "countryStateId": null,
+      "salutationId": "01994d239a1772158dab7f2ecae86500",
+      "firstName": "Test",
+      "lastName": "Customer 5",
+      "zipcode": "1000",
+      "city": "Testville",
+      "company": null,
+      "department": null,
+      "title": null,
+      "street": "1 Test Street",
+      "phoneNumber": null,
+      "additionalAddressLine1": null,
+      "additionalAddressLine2": null,
+      "country": {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "country_foreign_keys_extension"
+          },
+          "internal_mapping_storage": {
+            "extensions": [],
+            "apiAlias": null
+          }
+        },
+        "_uniqueIdentifier": "01994d239a5271d384aaf1fb9596c42c",
+        "versionId": null,
+        "translated": {
+          "name": "Germany",
+          "customFields": [],
+          "addressFormat": [
+            [
+              "address/company",
+              "symbol/dash",
+              "address/department"
+            ],
+            [
+              "address/first_name",
+              "address/last_name"
+            ],
+            [
+              "address/street"
+            ],
+            [
+              "address/zipcode",
+              "address/city"
+            ],
+            [
+              "address/country"
+            ]
+          ]
+        },
+        "createdAt": "2025-09-15T11:30:02.962+00:00",
+        "updatedAt": null,
+        "name": "Germany",
+        "iso": "DE",
+        "position": 1,
+        "active": true,
+        "shippingAvailable": true,
+        "iso3": "DEU",
+        "displayStateInRegistration": false,
+        "forceStateInRegistration": false,
+        "checkVatIdPattern": false,
+        "vatIdPattern": "DE\\d{9}",
+        "vatIdRequired": false,
+        "customerTax": {
+          "extensions": [],
+          "enabled": false,
+          "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+          "amount": 0,
+          "apiAlias": "shopware_core_framework_data_abstraction_layer_tax_free_config"
+        },
+        "companyTax": {
+          "extensions": [],
+          "enabled": false,
+          "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+          "amount": 0,
+          "apiAlias": "shopware_core_framework_data_abstraction_layer_tax_free_config"
+        },
+        "states": null,
+        "translations": null,
+        "orderAddresses": null,
+        "customerAddresses": null,
+        "salesChannelDefaultAssignments": null,
+        "salesChannels": null,
+        "taxRules": null,
+        "currencyCountryRoundings": null,
+        "postalCodeRequired": true,
+        "isEu": true,
+        "checkPostalCodePattern": false,
+        "checkAdvancedPostalCodePattern": false,
+        "advancedPostalCodePattern": null,
+        "defaultPostalCodePattern": "\\d{5}",
+        "addressFormat": [
+          [
+            "address/company",
+            "symbol/dash",
+            "address/department"
+          ],
+          [
+            "address/first_name",
+            "address/last_name"
+          ],
+          [
+            "address/street"
+          ],
+          [
+            "address/zipcode",
+            "address/city"
+          ],
+          [
+            "address/country"
+          ]
+        ],
+        "customFields": null,
+        "id": "01994d239a5271d384aaf1fb9596c42c",
+        "apiAlias": "country"
+      },
+      "countryState": null,
+      "salutation": null,
+      "customer": null,
+      "customFields": null,
+      "id": "d8f0dff7ef3947979a83c42f6509f22c",
+      "apiAlias": "customer_address"
+    },
+    "defaultShippingAddress": {
+      "extensions": {
+        "foreignKeys": {
+          "extensions": [],
+          "apiAlias": "customer_address_foreign_keys_extension"
+        }
+      },
+      "_uniqueIdentifier": "d8f0dff7ef3947979a83c42f6509f22c",
+      "versionId": null,
+      "translated": [],
+      "createdAt": "2025-09-15T11:32:13.122+00:00",
+      "updatedAt": null,
+      "customerId": "6c97534c2c0747f39e8751e43cb2b013",
+      "countryId": "01994d239a5271d384aaf1fb9596c42c",
+      "countryStateId": null,
+      "salutationId": "01994d239a1772158dab7f2ecae86500",
+      "firstName": "Test",
+      "lastName": "Customer 6",
+      "zipcode": "1000",
+      "city": "Testville",
+      "company": null,
+      "department": null,
+      "title": null,
+      "street": "1 Test Street",
+      "phoneNumber": null,
+      "additionalAddressLine1": null,
+      "additionalAddressLine2": null,
+      "country": {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "country_foreign_keys_extension"
+          },
+          "internal_mapping_storage": {
+            "extensions": [],
+            "apiAlias": null
+          }
+        },
+        "_uniqueIdentifier": "01994d239a5271d384aaf1fb9596c42c",
+        "versionId": null,
+        "translated": {
+          "name": "Germany",
+          "customFields": [],
+          "addressFormat": [
+            [
+              "address/company",
+              "symbol/dash",
+              "address/department"
+            ],
+            [
+              "address/first_name",
+              "address/last_name"
+            ],
+            [
+              "address/street"
+            ],
+            [
+              "address/zipcode",
+              "address/city"
+            ],
+            [
+              "address/country"
+            ]
+          ]
+        },
+        "createdAt": "2025-09-15T11:30:02.962+00:00",
+        "updatedAt": null,
+        "name": "Germany",
+        "iso": "DE",
+        "position": 1,
+        "active": true,
+        "shippingAvailable": true,
+        "iso3": "DEU",
+        "displayStateInRegistration": false,
+        "forceStateInRegistration": false,
+        "checkVatIdPattern": false,
+        "vatIdPattern": "DE\\d{9}",
+        "vatIdRequired": false,
+        "customerTax": {
+          "extensions": [],
+          "enabled": false,
+          "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+          "amount": 0,
+          "apiAlias": "shopware_core_framework_data_abstraction_layer_tax_free_config"
+        },
+        "companyTax": {
+          "extensions": [],
+          "enabled": false,
+          "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+          "amount": 0,
+          "apiAlias": "shopware_core_framework_data_abstraction_layer_tax_free_config"
+        },
+        "states": null,
+        "translations": null,
+        "orderAddresses": null,
+        "customerAddresses": null,
+        "salesChannelDefaultAssignments": null,
+        "salesChannels": null,
+        "taxRules": null,
+        "currencyCountryRoundings": null,
+        "postalCodeRequired": true,
+        "isEu": true,
+        "checkPostalCodePattern": false,
+        "checkAdvancedPostalCodePattern": false,
+        "advancedPostalCodePattern": null,
+        "defaultPostalCodePattern": "\\d{5}",
+        "addressFormat": [
+          [
+            "address/company",
+            "symbol/dash",
+            "address/department"
+          ],
+          [
+            "address/first_name",
+            "address/last_name"
+          ],
+          [
+            "address/street"
+          ],
+          [
+            "address/zipcode",
+            "address/city"
+          ],
+          [
+            "address/country"
+          ]
+        ],
+        "customFields": null,
+        "id": "01994d239a5271d384aaf1fb9596c42c",
+        "apiAlias": "country"
+      },
+      "countryState": null,
+      "salutation": null,
+      "customer": null,
+      "customFields": null,
+      "id": "d8f0dff7ef3947979a83c42f6509f22c",
+      "apiAlias": "customer_address"
+    },
+    "activeBillingAddress": null,
+    "activeShippingAddress": null,
+    "addresses": [
+      {
+        "extensions": {
+          "foreignKeys": {
+            "extensions": [],
+            "apiAlias": "customer_address_foreign_keys_extension"
+          }
+        },
+        "_uniqueIdentifier": "d8f0dff7ef3947979a83c42f6509f22c",
+        "versionId": null,
+        "translated": [],
+        "createdAt": "2025-09-15T11:32:13.122+00:00",
+        "updatedAt": null,
+        "customerId": "6c97534c2c0747f39e8751e43cb2b013",
+        "countryId": "01994d239a5271d384aaf1fb9596c42c",
+        "countryStateId": null,
+        "salutationId": "01994d239a1772158dab7f2ecae86500",
+        "firstName": "Test",
+        "lastName": "Customer 7",
+        "zipcode": "1000",
+        "city": "Testville",
+        "company": null,
+        "department": null,
+        "title": null,
+        "street": "1 Test Street",
+        "phoneNumber": null,
+        "additionalAddressLine1": null,
+        "additionalAddressLine2": null,
+        "country": {
+          "extensions": {
+            "foreignKeys": {
+              "extensions": [],
+              "apiAlias": "country_foreign_keys_extension"
+            },
+            "internal_mapping_storage": {
+              "extensions": [],
+              "apiAlias": null
+            }
+          },
+          "_uniqueIdentifier": "01994d239a5271d384aaf1fb9596c42c",
+          "versionId": null,
+          "translated": {
+            "name": "Germany",
+            "customFields": [],
+            "addressFormat": [
+              [
+                "address/company",
+                "symbol/dash",
+                "address/department"
+              ],
+              [
+                "address/first_name",
+                "address/last_name"
+              ],
+              [
+                "address/street"
+              ],
+              [
+                "address/zipcode",
+                "address/city"
+              ],
+              [
+                "address/country"
+              ]
+            ]
+          },
+          "createdAt": "2025-09-15T11:30:02.962+00:00",
+          "updatedAt": null,
+          "name": "Germany",
+          "iso": "DE",
+          "position": 1,
+          "active": true,
+          "shippingAvailable": true,
+          "iso3": "DEU",
+          "displayStateInRegistration": false,
+          "forceStateInRegistration": false,
+          "checkVatIdPattern": false,
+          "vatIdPattern": "DE\\d{9}",
+          "vatIdRequired": false,
+          "customerTax": {
+            "extensions": [],
+            "enabled": false,
+            "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+            "amount": 0,
+            "apiAlias": "shopware_core_framework_data_abstraction_layer_tax_free_config"
+          },
+          "companyTax": {
+            "extensions": [],
+            "enabled": false,
+            "currencyId": "b7d2554b0ce847cd82f3ac9bd1c0dfca",
+            "amount": 0,
+            "apiAlias": "shopware_core_framework_data_abstraction_layer_tax_free_config"
+          },
+          "states": null,
+          "translations": null,
+          "orderAddresses": null,
+          "customerAddresses": null,
+          "salesChannelDefaultAssignments": null,
+          "salesChannels": null,
+          "taxRules": null,
+          "currencyCountryRoundings": null,
+          "postalCodeRequired": true,
+          "isEu": true,
+          "checkPostalCodePattern": false,
+          "checkAdvancedPostalCodePattern": false,
+          "advancedPostalCodePattern": null,
+          "defaultPostalCodePattern": "\\d{5}",
+          "addressFormat": [
+            [
+              "address/company",
+              "symbol/dash",
+              "address/department"
+            ],
+            [
+              "address/first_name",
+              "address/last_name"
+            ],
+            [
+              "address/street"
+            ],
+            [
+              "address/zipcode",
+              "address/city"
+            ],
+            [
+              "address/country"
+            ]
+          ],
+          "customFields": null,
+          "id": "01994d239a5271d384aaf1fb9596c42c",
+          "apiAlias": "country"
+        },
+        "countryState": null,
+        "salutation": null,
+        "customer": null,
+        "customFields": null,
+        "id": "d8f0dff7ef3947979a83c42f6509f22c",
+        "apiAlias": "customer_address"
+      }
+    ],
+    "orderCustomers": null,
+    "autoIncrement": 1,
+    "tags": [],
+    "tagIds": null,
+    "promotions": null,
+    "recoveryCustomer": null,
+    "productReviews": null,
+    "remoteAddress": "172.17.0.0",
+    "requestedGroupId": null,
+    "requestedGroup": null,
+    "boundSalesChannelId": null,
+    "boundSalesChannel": null,
+    "wishlists": null,
+    "createdById": null,
+    "createdBy": null,
+    "updatedById": null,
+    "updatedBy": null,
+    "customFields": null,
+    "id": "6c97534c2c0747f39e8751e43cb2b013",
+    "apiAlias": "customer"
+  }
+]

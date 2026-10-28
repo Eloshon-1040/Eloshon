@@ -1,0 +1,392 @@
+[
+  {
+    "handle": "f-001",
+    "title": "Table basse chêne",
+    "bodyHtml": "",
+    "vendor": "Eloshon",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Maison > Salon"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "F-001",
+        "price": 129.9,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "3701234567890",
+        "grams": 12500,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 12,
+        "imageSrc": "",
+        "provenance": {
+          "sku": {
+            "platform": "eloshon",
+            "sourceField": "Référence",
+            "sourceValue": "F-001",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "Prix de vente",
+            "sourceValue": "129,90",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "Code EAN",
+            "sourceValue": "3701234567890",
+            "transform": "text",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "eloshon",
+            "sourceField": "Stock disponible",
+            "sourceValue": "12",
+            "transform": "int",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "Poids (kg)",
+            "sourceValue": "12.5",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://cdn.example.test/a.jpg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "sourceExtension": {
+      "eloshon": {
+        "_raw": {
+          "Colonne interne": "zz1"
+        }
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "Colonne interne",
+        "sourceValue": "zz1",
+        "reason": "unknown"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "Désignation",
+        "sourceValue": "Table basse chêne",
+        "transform": "text",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "Visuel",
+        "sourceValue": "https://cdn.example.test/a.jpg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "Rayon",
+        "sourceValue": "Maison > Salon",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "vendor": {
+        "platform": "eloshon",
+        "sourceField": "Marque",
+        "sourceValue": "Eloshon",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "sku",
+        "transform": "slugify",
+        "method": "default"
+      }
+    }
+  },
+  {
+    "handle": "f-002",
+    "title": "Chaise scandinave",
+    "bodyHtml": "",
+    "vendor": "Eloshon",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Maison > Salon"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "F-002",
+        "price": 59,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "3701234567906",
+        "grams": 4200,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 0,
+        "imageSrc": "",
+        "provenance": {
+          "sku": {
+            "platform": "eloshon",
+            "sourceField": "Référence",
+            "sourceValue": "F-002",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "Prix de vente",
+            "sourceValue": "59,00",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "Code EAN",
+            "sourceValue": "3701234567906",
+            "transform": "text",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "eloshon",
+            "sourceField": "Stock disponible",
+            "sourceValue": "0",
+            "transform": "int",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "Poids (kg)",
+            "sourceValue": "4.2",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://cdn.example.test/b.jpg",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "sourceExtension": {
+      "eloshon": {
+        "_raw": {
+          "Colonne interne": "zz2"
+        }
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "Colonne interne",
+        "sourceValue": "zz2",
+        "reason": "unknown"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "Désignation",
+        "sourceValue": "Chaise scandinave",
+        "transform": "text",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "Visuel",
+        "sourceValue": "https://cdn.example.test/b.jpg",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "Rayon",
+        "sourceValue": "Maison > Salon",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "vendor": {
+        "platform": "eloshon",
+        "sourceField": "Marque",
+        "sourceValue": "Eloshon",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "sku",
+        "transform": "slugify",
+        "method": "default"
+      }
+    }
+  },
+  {
+    "handle": "f-003",
+    "title": "Lampe de bureau",
+    "bodyHtml": "",
+    "vendor": "Lumo",
+    "productType": "",
+    "tags": [],
+    "status": "active",
+    "categories": [
+      "Maison > Bureau"
+    ],
+    "published": true,
+    "options": [],
+    "variants": [
+      {
+        "optionValues": [],
+        "sku": "F-003",
+        "price": 39.9,
+        "compareAtPrice": null,
+        "cost": null,
+        "barcode": "3701234567913",
+        "grams": 1100,
+        "lengthCm": null,
+        "widthCm": null,
+        "heightCm": null,
+        "requiresShipping": true,
+        "taxable": true,
+        "inventoryQty": 5,
+        "imageSrc": "",
+        "provenance": {
+          "sku": {
+            "platform": "eloshon",
+            "sourceField": "Référence",
+            "sourceValue": "F-003",
+            "transform": "text",
+            "method": "exact"
+          },
+          "price": {
+            "platform": "eloshon",
+            "sourceField": "Prix de vente",
+            "sourceValue": "39,90",
+            "transform": "money",
+            "method": "exact"
+          },
+          "barcode": {
+            "platform": "eloshon",
+            "sourceField": "Code EAN",
+            "sourceValue": "3701234567913",
+            "transform": "text",
+            "method": "exact"
+          },
+          "inventoryQty": {
+            "platform": "eloshon",
+            "sourceField": "Stock disponible",
+            "sourceValue": "5",
+            "transform": "int",
+            "method": "exact"
+          },
+          "grams": {
+            "platform": "eloshon",
+            "sourceField": "Poids (kg)",
+            "sourceValue": "1.1",
+            "transform": "weight_to_grams",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://cdn.example.test/c.png",
+        "position": 1,
+        "alt": ""
+      }
+    ],
+    "metafields": [],
+    "seoTitle": "",
+    "seoDescription": "",
+    "sourceExtension": {
+      "eloshon": {
+        "_raw": {
+          "Colonne interne": "zz3"
+        }
+      }
+    },
+    "unmapped": [
+      {
+        "platform": "eloshon",
+        "sourceField": "Colonne interne",
+        "sourceValue": "zz3",
+        "reason": "unknown"
+      }
+    ],
+    "provenance": {
+      "title": {
+        "platform": "eloshon",
+        "sourceField": "Désignation",
+        "sourceValue": "Lampe de bureau",
+        "transform": "text",
+        "method": "exact"
+      },
+      "images": {
+        "platform": "eloshon",
+        "sourceField": "Visuel",
+        "sourceValue": "https://cdn.example.test/c.png",
+        "transform": "images_from_urls",
+        "method": "exact"
+      },
+      "categories": {
+        "platform": "eloshon",
+        "sourceField": "Rayon",
+        "sourceValue": "Maison > Bureau",
+        "transform": "category_path_split",
+        "method": "exact"
+      },
+      "vendor": {
+        "platform": "eloshon",
+        "sourceField": "Marque",
+        "sourceValue": "Lumo",
+        "transform": "text",
+        "method": "exact"
+      },
+      "handle": {
+        "platform": "eloshon",
+        "sourceField": "sku",
+        "transform": "slugify",
+        "method": "default"
+      }
+    }
+  }
+]

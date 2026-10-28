@@ -1,0 +1,4 @@
+user_login,user_email,first_name,last_name,roles,billing_first_name,billing_last_name,billing_company,billing_email,billing_phone,billing_address_1,billing_address_2,billing_city,billing_state,billing_postcode,billing_country,shipping_first_name,shipping_last_name,shipping_company,shipping_address_1,shipping_address_2,shipping_city,shipping_state,shipping_postcode,shipping_country
+marie,marie@example.com,Marie,Lefèvre,customer,Marie,Lefèvre,,marie@example.com,0498765432,3 avenue du Parc,,Bruxelles,,1000,BE,Marie,Lefèvre,,3 avenue du Parc,,Bruxelles,,1000,BE
+dave,dave@example.com,Dave,Miller,customer,Dave,Miller,,dave@example.com,,100 Oak Ave,,Sacramento,California,95814,US,,,,200 Pine Rd,,Reno,Nevada,89501,US
+admin,admin@example.com,Site,Admin,administrator,,,,,,,,,,,,,,,,,,,,

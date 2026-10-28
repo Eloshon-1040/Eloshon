@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "id": "woocommerce.customers.rest.v1",
+  "displayName": "WooCommerce Customers (REST API v3)",
+  "provenance": "native-platform",
+  "medium": "json-api",
+  "platformHint": "woocommerce",
+  "entity": "customers",
+  "version": "wc-9.x",
+  "signatures": [
+    {
+      "kind": "json-shape",
+      "requiredPaths": [
+        "id",
+        "email",
+        "username",
+        "billing",
+        "shipping",
+        "role"
+      ],
+      "hintPaths": [
+        "is_paying_customer",
+        "avatar_url",
+        "date_created_gmt"
+      ]
+    }
+  ],
+  "structure": {
+    "unit": "customer"
+  },
+  "invariantsExpected": [
+    "A WordPress user: no marketing consent field at all (nothing is stated → unknown)",
+    "billing and shipping are two address blocks; the customer phone is the billing phone"
+  ],
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "live:woocommerce-test:2026-09-21",
+      "origin": "reference",
+      "diff": [
+        "Phase 7.6: full field map from the live REST payload (WC 11.1)"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "path": "email",
+      "canon": "email",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "first_name",
+      "canon": "firstName",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "last_name",
+      "canon": "lastName",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "billing.phone",
+      "canon": "phone",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "billing",
+      "canon": "address",
+      "transform": "address_from",
+      "args": {
+        "withName": false,
+        "fields": {
+          "company": "company",
+          "address1": "address_1",
+          "address2": "address_2",
+          "city": "city",
+          "province": "state",
+          "provinceCode": "state",
+          "country": "country",
+          "zip": "postcode",
+          "phone": "phone"
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shipping",
+      "canon": "shipping",
+      "transform": "address_from",
+      "args": {
+        "withName": false,
+        "fields": {
+          "company": "company",
+          "address1": "address_1",
+          "address2": "address_2",
+          "city": "city",
+          "province": "state",
+          "provinceCode": "state",
+          "country": "country",
+          "zip": "postcode",
+          "phone": "phone"
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "identity.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "username",
+      "canon": "identity.username",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "date_created_gmt",
+      "canon": "identity.timestamps",
+      "transform": "timestamps",
+      "confidence": "verified-live",
+      "inputs": [
+        "date_created_gmt",
+        "date_modified_gmt"
+      ],
+      "args": {
+        "assumeUtc": true
+      }
+    },
+    {
+      "path": "date_created",
+      "canon": "sourceExtension.woocommerce.date_created_local",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "date_modified",
+      "canon": "sourceExtension.woocommerce.date_modified_local",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "role",
+      "canon": "sourceExtension.woocommerce.role",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "is_paying_customer",
+      "canon": "sourceExtension.woocommerce.is_paying_customer",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "meta_data",
+      "canon": "sourceExtension.woocommerce.meta_data",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "avatar_url",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "gravatar link, personal"
+    }
+  ]
+}

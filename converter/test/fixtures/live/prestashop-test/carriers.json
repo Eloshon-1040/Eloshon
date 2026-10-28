@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "deleted": "0",
+    "is_module": "0",
+    "id_tax_rules_group": 1,
+    "id_reference": 1,
+    "name": "Click and collect",
+    "active": "1",
+    "is_free": "1",
+    "url": "",
+    "shipping_handling": "0",
+    "shipping_external": "0",
+    "range_behavior": "0",
+    "shipping_method": 1,
+    "max_width": 0,
+    "max_height": 0,
+    "max_depth": 0,
+    "max_weight": "0.000000",
+    "grade": 0,
+    "external_module_name": "",
+    "need_range": "0",
+    "position": 0,
+    "delay": [
+      {
+        "id": 1,
+        "value": "Pick up in-store"
+      },
+      {
+        "id": 2,
+        "value": "Pick up in-store"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "deleted": "0",
+    "is_module": "0",
+    "id_tax_rules_group": 1,
+    "id_reference": 2,
+    "name": "My carrier",
+    "active": "1",
+    "is_free": "0",
+    "url": "",
+    "shipping_handling": "1",
+    "shipping_external": "0",
+    "range_behavior": "0",
+    "shipping_method": 1,
+    "max_width": 0,
+    "max_height": 0,
+    "max_depth": 0,
+    "max_weight": "0.000000",
+    "grade": 0,
+    "external_module_name": "",
+    "need_range": "0",
+    "position": 1,
+    "delay": [
+      {
+        "id": 1,
+        "value": "Delivery next day!"
+      },
+      {
+        "id": 2,
+        "value": "Delivery next day!"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "deleted": "0",
+    "is_module": "0",
+    "id_tax_rules_group": 1,
+    "id_reference": 3,
+    "name": "My cheap carrier",
+    "active": "0",
+    "is_free": "0",
+    "url": "",
+    "shipping_handling": "1",
+    "shipping_external": "0",
+    "range_behavior": "0",
+    "shipping_method": 2,
+    "max_width": 0,
+    "max_height": 0,
+    "max_depth": 0,
+    "max_weight": "0.000000",
+    "grade": 0,
+    "external_module_name": "",
+    "need_range": "0",
+    "position": 2,
+    "delay": [
+      {
+        "id": 1,
+        "value": "Buy more to pay less!"
+      },
+      {
+        "id": 2,
+        "value": "Buy more to pay less!"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "deleted": "0",
+    "is_module": "0",
+    "id_tax_rules_group": 1,
+    "id_reference": 4,
+    "name": "My light carrier",
+    "active": "0",
+    "is_free": "0",
+    "url": "",
+    "shipping_handling": "1",
+    "shipping_external": "0",
+    "range_behavior": "0",
+    "shipping_method": 1,
+    "max_width": 0,
+    "max_height": 0,
+    "max_depth": 0,
+    "max_weight": "0.000000",
+    "grade": 0,
+    "external_module_name": "",
+    "need_range": "0",
+    "position": 3,
+    "delay": [
+      {
+        "id": 1,
+        "value": "The lighter the cheaper!"
+      },
+      {
+        "id": 2,
+        "value": "The lighter the cheaper!"
+      }
+    ]
+  }
+]

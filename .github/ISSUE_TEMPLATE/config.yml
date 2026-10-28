@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Faille de sécurité (privé)
+    url: https://github.com/Eloshon-1040/apps/security/advisories/new
+    about: Ne la signalez pas dans une issue publique.
+  - name: Licence commerciale
+    url: https://github.com/Eloshon-1040/apps/blob/main/COMMERCIAL-LICENSE.md
+    about: Tout usage commercial exige une licence écrite.

@@ -1,0 +1,1112 @@
+[
+  {
+    "number": "10000",
+    "email": "customer1@example.test",
+    "createdAt": "2026-09-21T19:34:02.073Z",
+    "financialStatus": "paid",
+    "fulfillmentStatus": "unfulfilled",
+    "currency": "EUR",
+    "subtotal": 800,
+    "shipping": 0,
+    "taxes": 127.73,
+    "total": 800,
+    "discountCode": "",
+    "discountAmount": null,
+    "paymentMethod": "Cash on delivery",
+    "transactionId": "",
+    "note": "",
+    "billing": {
+      "company": "",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "",
+      "provinceCode": "",
+      "country": "DE",
+      "zip": "1000",
+      "phone": "",
+      "name": "Test Customer 1"
+    },
+    "shipping_": {
+      "company": "",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "",
+      "provinceCode": "",
+      "country": "DE",
+      "zip": "1000",
+      "phone": "",
+      "name": "Test Customer 2"
+    },
+    "lineItems": [
+      {
+        "name": "Main product with advanced prices",
+        "sku": "SWDEMO10002",
+        "quantity": 1,
+        "price": 800
+      }
+    ],
+    "numbering": {
+      "sourceNumber": "10000",
+      "sourceId": "01a0c576071271d5b12afb1e2d231305",
+      "format": {
+        "pattern": "{n}"
+      },
+      "sourceInvoiceNumber": "1000",
+      "sourceInvoiceDate": "2026-09-21T19:34:23.767+00:00"
+    },
+    "identity": {
+      "sourceId": "01a0c576071271d5b12afb1e2d231305"
+    },
+    "status": {
+      "sourceState": "open",
+      "lifecycle": "open",
+      "financial": "paid",
+      "fulfillment": "unfulfilled"
+    },
+    "amounts": {
+      "exchangeRate": 1,
+      "taxIncluded": true,
+      "total": 800,
+      "subtotal": 800,
+      "shipping": 0,
+      "taxes": 127.73
+    },
+    "taxLines": [
+      {
+        "rate": 19,
+        "amount": 127.73
+      }
+    ],
+    "customerRef": {
+      "email": "customer1@example.test",
+      "sourceId": "6c97534c2c0747f39e8751e43cb2b013"
+    },
+    "shippingLines": [
+      {
+        "method": "Standard",
+        "code": "shipping_standard",
+        "amount": 0,
+        "tax": 0
+      }
+    ],
+    "payments": [
+      {
+        "kind": "sale",
+        "status": "success",
+        "amount": 800,
+        "method": "Cash on delivery",
+        "gateway": "payment_cashpayment",
+        "at": "2026-09-21T19:34:02.067Z",
+        "instrument": {
+          "type": "cash"
+        }
+      }
+    ],
+    "tags": [],
+    "channel": "Storefront",
+    "timestamps": {
+      "created": "2026-09-21T19:34:02.073Z"
+    },
+    "items": [
+      {
+        "name": "Main product with advanced prices",
+        "sku": "SWDEMO10002",
+        "quantity": 1,
+        "unitPrice": 800,
+        "total": 800,
+        "totalTax": 127.73,
+        "taxLines": [
+          {
+            "rate": 19,
+            "amount": 127.73
+          }
+        ],
+        "kind": "product",
+        "productRef": "11dc680240b04f469ccba354cbf0b967",
+        "variantRef": "11dc680240b04f469ccba354cbf0b967",
+        "requiresShipping": true,
+        "sourceExtension": {
+          "shopware": {
+            "payload": {
+              "productNumber": "SWDEMO10002",
+              "manufacturerId": "cc1c20c365d34cfb88bfab3c3e81d350",
+              "isCloseout": false,
+              "stock": 10,
+              "categoryIds": [
+                "01994d23acb670fa926de3796d173b74",
+                "251448b91bc742de85643f5fccd89051"
+              ]
+            },
+            "line_id": "01a0c57606ff7368b92a36e77975f152",
+            "identifier": "01a0c575f9a8726eaf0c81c7887fb320",
+            "priceDefinition": {
+              "price": 800,
+              "type": "quantity",
+              "isCalculated": true
+            },
+            "good": true,
+            "removable": true,
+            "stackable": true,
+            "position": 1
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "shopware",
+            "sourceField": "label",
+            "sourceValue": "Main product with advanced prices",
+            "transform": "text",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "shopware",
+            "sourceField": "payload.productNumber",
+            "sourceValue": "SWDEMO10002",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "shopware",
+            "sourceField": "quantity",
+            "sourceValue": 1,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "shopware",
+            "sourceField": "unitPrice",
+            "sourceValue": 800,
+            "transform": "money",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "shopware",
+            "sourceField": "totalPrice",
+            "sourceValue": 800,
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "shopware",
+            "sourceField": "price.calculatedTaxes",
+            "transform": "sum_of",
+            "method": "exact"
+          },
+          "taxLines": {
+            "platform": "shopware",
+            "sourceField": "price.calculatedTaxes",
+            "transform": "objects_map",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "shopware",
+            "sourceField": "type",
+            "sourceValue": "product",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "shopware",
+            "sourceField": "productId",
+            "sourceValue": "11dc680240b04f469ccba354cbf0b967",
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "variantRef": {
+            "platform": "shopware",
+            "sourceField": "referencedId",
+            "sourceValue": "11dc680240b04f469ccba354cbf0b967",
+            "transform": "id_or_none",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopware",
+            "sourceField": "states",
+            "transform": "includes_map",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "sourceExtension": {
+      "shopware": {
+        "documents": [
+          {
+            "type": "invoice",
+            "number": "1000",
+            "createdAt": "2026-09-21T19:34:23.767+00:00",
+            "sent": false
+          }
+        ],
+        "amountNet": 672.27,
+        "price": {
+          "rawTotal": 800,
+          "netPrice": 672.27,
+          "taxStatus": "gross"
+        },
+        "shippingCosts": {
+          "totalPrice": 0,
+          "tax": 0
+        },
+        "orderCustomer": {
+          "firstName": "Test",
+          "lastName": "Customer 1",
+          "customerNumber": "SWDEMO10000"
+        },
+        "orderDateTime": "2026-09-21T19:34:01.716+00:00",
+        "orderDate": "2026-09-21T00:00:00.000+00:00",
+        "itemRounding": {
+          "extensions": [],
+          "decimals": 2,
+          "interval": 0.01,
+          "roundForNet": true,
+          "apiAlias": "shopware_core_framework_data_abstraction_layer_pricing_cash_rounding_config"
+        },
+        "totalRounding": {
+          "extensions": [],
+          "decimals": 2,
+          "interval": 0.01,
+          "roundForNet": true,
+          "apiAlias": "shopware_core_framework_data_abstraction_layer_pricing_cash_rounding_config"
+        },
+        "taxCalculationType": "horizontal",
+        "languageId": "2fbb5fe2e29a4d70aa5854ce7ce3e20b",
+        "ruleIds": [
+          "01994d23abbd70c99eff6cbaa980a803",
+          "01994d23ac6472abbd10d0fe57b88589",
+          "01994d23f7c4712f9107ff58d56ebea0",
+          "3858957016644de4ae48c0500bf3ccc8",
+          "e1378db7808a478f919e0d740d5d6c1a",
+          "01994d23adc672c5a1cc689c992ff7bb",
+          "28caae75a5624f0d985abd0eb32aa160"
+        ]
+      }
+    },
+    "provenance": {
+      "numbering.sourceNumber": {
+        "platform": "shopware",
+        "sourceField": "orderNumber",
+        "sourceValue": "10000",
+        "transform": "text",
+        "method": "exact"
+      },
+      "numbering.sourceId": {
+        "platform": "shopware",
+        "sourceField": "id",
+        "sourceValue": "01a0c576071271d5b12afb1e2d231305",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "shopware",
+        "sourceField": "id",
+        "sourceValue": "01a0c576071271d5b12afb1e2d231305",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "numbering.format": {
+        "platform": "shopware",
+        "sourceField": "orderNumber",
+        "sourceValue": "10000",
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "numbering.sourceInvoiceNumber": {
+        "platform": "shopware",
+        "sourceField": "documents",
+        "transform": "pick_where",
+        "method": "exact"
+      },
+      "numbering.sourceInvoiceDate": {
+        "platform": "shopware",
+        "sourceField": "documents",
+        "transform": "pick_where",
+        "method": "exact"
+      },
+      "status.sourceState": {
+        "platform": "shopware",
+        "sourceField": "stateMachineState.technicalName",
+        "sourceValue": "open",
+        "transform": "text",
+        "method": "exact"
+      },
+      "status.lifecycle": {
+        "platform": "shopware",
+        "sourceField": "stateMachineState.technicalName",
+        "sourceValue": "open",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status.financial": {
+        "platform": "shopware",
+        "sourceField": "transactions.0.stateMachineState.technicalName",
+        "sourceValue": "paid",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status.fulfillment": {
+        "platform": "shopware",
+        "sourceField": "deliveries.0.stateMachineState.technicalName",
+        "sourceValue": "open",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "currency": {
+        "platform": "shopware",
+        "sourceField": "currency.isoCode",
+        "sourceValue": "EUR",
+        "transform": "text",
+        "method": "exact"
+      },
+      "amounts.exchangeRate": {
+        "platform": "shopware",
+        "sourceField": "currencyFactor",
+        "sourceValue": 1,
+        "transform": "float",
+        "method": "exact"
+      },
+      "amounts.taxIncluded": {
+        "platform": "shopware",
+        "sourceField": "taxStatus",
+        "sourceValue": "gross",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "amounts.total": {
+        "platform": "shopware",
+        "sourceField": "amountTotal",
+        "sourceValue": 800,
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.subtotal": {
+        "platform": "shopware",
+        "sourceField": "positionPrice",
+        "sourceValue": 800,
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shipping": {
+        "platform": "shopware",
+        "sourceField": "shippingTotal",
+        "sourceValue": 0,
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.taxes": {
+        "platform": "shopware",
+        "sourceField": "price.calculatedTaxes",
+        "transform": "sum_of",
+        "method": "exact"
+      },
+      "taxLines": {
+        "platform": "shopware",
+        "sourceField": "price.calculatedTaxes",
+        "transform": "objects_map",
+        "method": "exact"
+      },
+      "customerRef.email": {
+        "platform": "shopware",
+        "sourceField": "orderCustomer.email",
+        "sourceValue": "customer1@example.test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "customerRef.sourceId": {
+        "platform": "shopware",
+        "sourceField": "orderCustomer.customerId",
+        "sourceValue": "6c97534c2c0747f39e8751e43cb2b013",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "billing": {
+        "platform": "shopware",
+        "sourceField": "addresses",
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shipping_": {
+        "platform": "shopware",
+        "sourceField": "deliveries.0.shippingOrderAddress",
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shippingLines": {
+        "platform": "shopware",
+        "sourceField": "deliveries",
+        "transform": "objects_map",
+        "method": "exact"
+      },
+      "payments": {
+        "platform": "shopware",
+        "sourceField": "transactions",
+        "transform": "objects_map",
+        "method": "exact"
+      },
+      "note": {
+        "platform": "shopware",
+        "sourceField": "customerComment",
+        "sourceValue": null,
+        "transform": "text",
+        "method": "exact"
+      },
+      "tags": {
+        "platform": "shopware",
+        "sourceField": "tags",
+        "transform": "names_of",
+        "method": "exact"
+      },
+      "channel": {
+        "platform": "shopware",
+        "sourceField": "salesChannel.name",
+        "sourceValue": "Storefront",
+        "transform": "text_present",
+        "method": "exact"
+      },
+      "timestamps.created": {
+        "platform": "shopware",
+        "sourceField": "createdAt",
+        "sourceValue": "2026-09-21T19:34:02.073+00:00",
+        "transform": "date_iso",
+        "method": "exact"
+      },
+      "items": {
+        "platform": "shopware",
+        "sourceField": "lineItems",
+        "transform": "items",
+        "method": "structural"
+      },
+      "lineItems": {
+        "platform": "shopware",
+        "sourceField": "items",
+        "transform": "line_items_from_items",
+        "method": "structural"
+      },
+      "number": {
+        "platform": "shopware",
+        "sourceField": "orderNumber",
+        "sourceValue": "10000",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "email": {
+        "platform": "shopware",
+        "sourceField": "orderCustomer.email",
+        "sourceValue": "customer1@example.test",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "createdAt": {
+        "platform": "shopware",
+        "sourceField": "createdAt",
+        "sourceValue": "2026-09-21T19:34:02.073+00:00",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "financialStatus": {
+        "platform": "shopware",
+        "sourceField": "transactions.0.stateMachineState.technicalName",
+        "sourceValue": "paid",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "fulfillmentStatus": {
+        "platform": "shopware",
+        "sourceField": "deliveries.0.stateMachineState.technicalName",
+        "sourceValue": "open",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "subtotal": {
+        "platform": "shopware",
+        "sourceField": "positionPrice",
+        "sourceValue": 800,
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "shipping": {
+        "platform": "shopware",
+        "sourceField": "shippingTotal",
+        "sourceValue": 0,
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "taxes": {
+        "platform": "shopware",
+        "sourceField": "price.calculatedTaxes",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "total": {
+        "platform": "shopware",
+        "sourceField": "amountTotal",
+        "sourceValue": 800,
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "paymentMethod": {
+        "platform": "canon",
+        "sourceField": "payments.0.method",
+        "transform": "first_non_empty",
+        "method": "structural"
+      }
+    }
+  },
+  {
+    "number": "10001",
+    "email": "customer1@example.test",
+    "createdAt": "2026-09-21T19:34:26.183Z",
+    "financialStatus": "paid",
+    "fulfillmentStatus": "unfulfilled",
+    "currency": "EUR",
+    "subtotal": 1600,
+    "shipping": 0,
+    "taxes": 255.46,
+    "total": 1600,
+    "discountCode": "",
+    "discountAmount": null,
+    "paymentMethod": "Cash on delivery",
+    "transactionId": "",
+    "note": "",
+    "billing": {
+      "company": "",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "",
+      "provinceCode": "",
+      "country": "DE",
+      "zip": "1000",
+      "phone": "",
+      "name": "Test Customer 3"
+    },
+    "shipping_": {
+      "company": "",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "",
+      "provinceCode": "",
+      "country": "DE",
+      "zip": "1000",
+      "phone": "",
+      "name": "Test Customer 4"
+    },
+    "lineItems": [
+      {
+        "name": "Main product with advanced prices",
+        "sku": "SWDEMO10002",
+        "quantity": 2,
+        "price": 800
+      }
+    ],
+    "numbering": {
+      "sourceNumber": "10001",
+      "sourceId": "01a0c576664f7129b30ae8059cfbf4e6",
+      "format": {
+        "pattern": "{n}"
+      },
+      "sourceInvoiceNumber": "1001",
+      "sourceInvoiceDate": "2026-09-21T19:34:30.440+00:00"
+    },
+    "identity": {
+      "sourceId": "01a0c576664f7129b30ae8059cfbf4e6"
+    },
+    "status": {
+      "sourceState": "open",
+      "lifecycle": "open",
+      "financial": "paid",
+      "fulfillment": "unfulfilled"
+    },
+    "amounts": {
+      "exchangeRate": 1,
+      "taxIncluded": true,
+      "total": 1600,
+      "subtotal": 1600,
+      "shipping": 0,
+      "taxes": 255.46
+    },
+    "taxLines": [
+      {
+        "rate": 19,
+        "amount": 255.46
+      }
+    ],
+    "customerRef": {
+      "email": "customer1@example.test",
+      "sourceId": "6c97534c2c0747f39e8751e43cb2b013"
+    },
+    "shippingLines": [
+      {
+        "method": "Standard",
+        "code": "shipping_standard",
+        "amount": 0,
+        "tax": 0
+      }
+    ],
+    "payments": [
+      {
+        "kind": "sale",
+        "status": "success",
+        "amount": 1600,
+        "method": "Cash on delivery",
+        "gateway": "payment_cashpayment",
+        "at": "2026-09-21T19:34:26.183Z",
+        "instrument": {
+          "type": "cash"
+        }
+      }
+    ],
+    "tags": [],
+    "channel": "Storefront",
+    "timestamps": {
+      "created": "2026-09-21T19:34:26.183Z"
+    },
+    "items": [
+      {
+        "name": "Main product with advanced prices",
+        "sku": "SWDEMO10002",
+        "quantity": 2,
+        "unitPrice": 800,
+        "total": 1600,
+        "totalTax": 255.46,
+        "taxLines": [
+          {
+            "rate": 19,
+            "amount": 255.46
+          }
+        ],
+        "kind": "product",
+        "productRef": "11dc680240b04f469ccba354cbf0b967",
+        "variantRef": "11dc680240b04f469ccba354cbf0b967",
+        "requiresShipping": true,
+        "sourceExtension": {
+          "shopware": {
+            "payload": {
+              "productNumber": "SWDEMO10002",
+              "manufacturerId": "cc1c20c365d34cfb88bfab3c3e81d350",
+              "isCloseout": false,
+              "stock": 9,
+              "categoryIds": [
+                "01994d23acb670fa926de3796d173b74",
+                "251448b91bc742de85643f5fccd89051"
+              ]
+            },
+            "line_id": "01a0c576664e7279abd4848f05f825b5",
+            "identifier": "01a0c57663cf71c29ae8bc89b2ec4f25",
+            "priceDefinition": {
+              "price": 800,
+              "type": "quantity",
+              "isCalculated": true
+            },
+            "good": true,
+            "removable": true,
+            "stackable": true,
+            "position": 1
+          }
+        },
+        "provenance": {
+          "name": {
+            "platform": "shopware",
+            "sourceField": "label",
+            "sourceValue": "Main product with advanced prices",
+            "transform": "text",
+            "method": "exact"
+          },
+          "sku": {
+            "platform": "shopware",
+            "sourceField": "payload.productNumber",
+            "sourceValue": "SWDEMO10002",
+            "transform": "text",
+            "method": "exact"
+          },
+          "quantity": {
+            "platform": "shopware",
+            "sourceField": "quantity",
+            "sourceValue": 2,
+            "transform": "int",
+            "method": "exact"
+          },
+          "unitPrice": {
+            "platform": "shopware",
+            "sourceField": "unitPrice",
+            "sourceValue": 800,
+            "transform": "money",
+            "method": "exact"
+          },
+          "total": {
+            "platform": "shopware",
+            "sourceField": "totalPrice",
+            "sourceValue": 1600,
+            "transform": "money",
+            "method": "exact"
+          },
+          "totalTax": {
+            "platform": "shopware",
+            "sourceField": "price.calculatedTaxes",
+            "transform": "sum_of",
+            "method": "exact"
+          },
+          "taxLines": {
+            "platform": "shopware",
+            "sourceField": "price.calculatedTaxes",
+            "transform": "objects_map",
+            "method": "exact"
+          },
+          "kind": {
+            "platform": "shopware",
+            "sourceField": "type",
+            "sourceValue": "product",
+            "transform": "enum_map",
+            "method": "exact"
+          },
+          "productRef": {
+            "platform": "shopware",
+            "sourceField": "productId",
+            "sourceValue": "11dc680240b04f469ccba354cbf0b967",
+            "transform": "string_id",
+            "method": "exact"
+          },
+          "variantRef": {
+            "platform": "shopware",
+            "sourceField": "referencedId",
+            "sourceValue": "11dc680240b04f469ccba354cbf0b967",
+            "transform": "id_or_none",
+            "method": "exact"
+          },
+          "requiresShipping": {
+            "platform": "shopware",
+            "sourceField": "states",
+            "transform": "includes_map",
+            "method": "exact"
+          }
+        }
+      }
+    ],
+    "sourceExtension": {
+      "shopware": {
+        "documents": [
+          {
+            "type": "invoice",
+            "number": "1001",
+            "createdAt": "2026-09-21T19:34:30.440+00:00",
+            "sent": false
+          }
+        ],
+        "amountNet": 1344.54,
+        "price": {
+          "rawTotal": 1600,
+          "netPrice": 1344.54,
+          "taxStatus": "gross"
+        },
+        "shippingCosts": {
+          "totalPrice": 0,
+          "tax": 0
+        },
+        "orderCustomer": {
+          "firstName": "Test",
+          "lastName": "Customer 1",
+          "customerNumber": "SWDEMO10000"
+        },
+        "orderDateTime": "2026-09-21T19:34:26.126+00:00",
+        "orderDate": "2026-09-21T00:00:00.000+00:00",
+        "itemRounding": {
+          "extensions": [],
+          "decimals": 2,
+          "interval": 0.01,
+          "roundForNet": true,
+          "apiAlias": "shopware_core_framework_data_abstraction_layer_pricing_cash_rounding_config"
+        },
+        "totalRounding": {
+          "extensions": [],
+          "decimals": 2,
+          "interval": 0.01,
+          "roundForNet": true,
+          "apiAlias": "shopware_core_framework_data_abstraction_layer_pricing_cash_rounding_config"
+        },
+        "taxCalculationType": "horizontal",
+        "languageId": "2fbb5fe2e29a4d70aa5854ce7ce3e20b",
+        "ruleIds": [
+          "01994d23abbd70c99eff6cbaa980a803",
+          "01994d23ac6472abbd10d0fe57b88589",
+          "01994d23f7c4712f9107ff58d56ebea0",
+          "3858957016644de4ae48c0500bf3ccc8",
+          "e1378db7808a478f919e0d740d5d6c1a",
+          "01994d23adc672c5a1cc689c992ff7bb",
+          "28caae75a5624f0d985abd0eb32aa160"
+        ]
+      }
+    },
+    "provenance": {
+      "numbering.sourceNumber": {
+        "platform": "shopware",
+        "sourceField": "orderNumber",
+        "sourceValue": "10001",
+        "transform": "text",
+        "method": "exact"
+      },
+      "numbering.sourceId": {
+        "platform": "shopware",
+        "sourceField": "id",
+        "sourceValue": "01a0c576664f7129b30ae8059cfbf4e6",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "shopware",
+        "sourceField": "id",
+        "sourceValue": "01a0c576664f7129b30ae8059cfbf4e6",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "numbering.format": {
+        "platform": "shopware",
+        "sourceField": "orderNumber",
+        "sourceValue": "10001",
+        "transform": "lookup",
+        "method": "exact"
+      },
+      "numbering.sourceInvoiceNumber": {
+        "platform": "shopware",
+        "sourceField": "documents",
+        "transform": "pick_where",
+        "method": "exact"
+      },
+      "numbering.sourceInvoiceDate": {
+        "platform": "shopware",
+        "sourceField": "documents",
+        "transform": "pick_where",
+        "method": "exact"
+      },
+      "status.sourceState": {
+        "platform": "shopware",
+        "sourceField": "stateMachineState.technicalName",
+        "sourceValue": "open",
+        "transform": "text",
+        "method": "exact"
+      },
+      "status.lifecycle": {
+        "platform": "shopware",
+        "sourceField": "stateMachineState.technicalName",
+        "sourceValue": "open",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status.financial": {
+        "platform": "shopware",
+        "sourceField": "transactions.0.stateMachineState.technicalName",
+        "sourceValue": "paid",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "status.fulfillment": {
+        "platform": "shopware",
+        "sourceField": "deliveries.0.stateMachineState.technicalName",
+        "sourceValue": "open",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "currency": {
+        "platform": "shopware",
+        "sourceField": "currency.isoCode",
+        "sourceValue": "EUR",
+        "transform": "text",
+        "method": "exact"
+      },
+      "amounts.exchangeRate": {
+        "platform": "shopware",
+        "sourceField": "currencyFactor",
+        "sourceValue": 1,
+        "transform": "float",
+        "method": "exact"
+      },
+      "amounts.taxIncluded": {
+        "platform": "shopware",
+        "sourceField": "taxStatus",
+        "sourceValue": "gross",
+        "transform": "enum_map",
+        "method": "exact"
+      },
+      "amounts.total": {
+        "platform": "shopware",
+        "sourceField": "amountTotal",
+        "sourceValue": 1600,
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.subtotal": {
+        "platform": "shopware",
+        "sourceField": "positionPrice",
+        "sourceValue": 1600,
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.shipping": {
+        "platform": "shopware",
+        "sourceField": "shippingTotal",
+        "sourceValue": 0,
+        "transform": "money",
+        "method": "exact"
+      },
+      "amounts.taxes": {
+        "platform": "shopware",
+        "sourceField": "price.calculatedTaxes",
+        "transform": "sum_of",
+        "method": "exact"
+      },
+      "taxLines": {
+        "platform": "shopware",
+        "sourceField": "price.calculatedTaxes",
+        "transform": "objects_map",
+        "method": "exact"
+      },
+      "customerRef.email": {
+        "platform": "shopware",
+        "sourceField": "orderCustomer.email",
+        "sourceValue": "customer1@example.test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "customerRef.sourceId": {
+        "platform": "shopware",
+        "sourceField": "orderCustomer.customerId",
+        "sourceValue": "6c97534c2c0747f39e8751e43cb2b013",
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "billing": {
+        "platform": "shopware",
+        "sourceField": "addresses",
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shipping_": {
+        "platform": "shopware",
+        "sourceField": "deliveries.0.shippingOrderAddress",
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "shippingLines": {
+        "platform": "shopware",
+        "sourceField": "deliveries",
+        "transform": "objects_map",
+        "method": "exact"
+      },
+      "payments": {
+        "platform": "shopware",
+        "sourceField": "transactions",
+        "transform": "objects_map",
+        "method": "exact"
+      },
+      "note": {
+        "platform": "shopware",
+        "sourceField": "customerComment",
+        "sourceValue": null,
+        "transform": "text",
+        "method": "exact"
+      },
+      "tags": {
+        "platform": "shopware",
+        "sourceField": "tags",
+        "transform": "names_of",
+        "method": "exact"
+      },
+      "channel": {
+        "platform": "shopware",
+        "sourceField": "salesChannel.name",
+        "sourceValue": "Storefront",
+        "transform": "text_present",
+        "method": "exact"
+      },
+      "timestamps.created": {
+        "platform": "shopware",
+        "sourceField": "createdAt",
+        "sourceValue": "2026-09-21T19:34:26.183+00:00",
+        "transform": "date_iso",
+        "method": "exact"
+      },
+      "items": {
+        "platform": "shopware",
+        "sourceField": "lineItems",
+        "transform": "items",
+        "method": "structural"
+      },
+      "lineItems": {
+        "platform": "shopware",
+        "sourceField": "items",
+        "transform": "line_items_from_items",
+        "method": "structural"
+      },
+      "number": {
+        "platform": "shopware",
+        "sourceField": "orderNumber",
+        "sourceValue": "10001",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "email": {
+        "platform": "shopware",
+        "sourceField": "orderCustomer.email",
+        "sourceValue": "customer1@example.test",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "createdAt": {
+        "platform": "shopware",
+        "sourceField": "createdAt",
+        "sourceValue": "2026-09-21T19:34:26.183+00:00",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "financialStatus": {
+        "platform": "shopware",
+        "sourceField": "transactions.0.stateMachineState.technicalName",
+        "sourceValue": "paid",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "fulfillmentStatus": {
+        "platform": "shopware",
+        "sourceField": "deliveries.0.stateMachineState.technicalName",
+        "sourceValue": "open",
+        "transform": "first_non_empty",
+        "method": "structural"
+      },
+      "subtotal": {
+        "platform": "shopware",
+        "sourceField": "positionPrice",
+        "sourceValue": 1600,
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "shipping": {
+        "platform": "shopware",
+        "sourceField": "shippingTotal",
+        "sourceValue": 0,
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "taxes": {
+        "platform": "shopware",
+        "sourceField": "price.calculatedTaxes",
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "total": {
+        "platform": "shopware",
+        "sourceField": "amountTotal",
+        "sourceValue": 1600,
+        "transform": "first_number",
+        "method": "structural"
+      },
+      "paymentMethod": {
+        "platform": "canon",
+        "sourceField": "payments.0.method",
+        "transform": "first_non_empty",
+        "method": "structural"
+      }
+    }
+  }
+]

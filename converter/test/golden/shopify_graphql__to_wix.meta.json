@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "sourceFormat": "shopify.products.admin-graphql.v1",
+  "targetFormat": "wix_products",
+  "counts": {
+    "inputUnits": 3,
+    "outputUnits": 3,
+    "failedUnits": 0,
+    "outputRows": 36
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_wix_option_type"
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false
+}

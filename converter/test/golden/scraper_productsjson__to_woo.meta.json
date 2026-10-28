@@ -1,0 +1,45 @@
+{
+  "ok": true,
+  "sourceFormat": "scraper.products-json.v1",
+  "targetFormat": "woo_products_modern",
+  "counts": {
+    "inputUnits": 3,
+    "outputUnits": 3,
+    "failedUnits": 0,
+    "outputRows": 7
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_woo_translations",
+      "params": {
+        "locales": "en"
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "code": "colour_family_grouped",
+      "params": {
+        "count": 1
+      }
+    },
+    {
+      "code": "woo_parent_skus_generated",
+      "params": {
+        "count": 2
+      }
+    },
+    {
+      "code": "stock_untracked",
+      "params": {
+        "count": 2
+      }
+    },
+    {
+      "code": "id_removed_woo"
+    }
+  ],
+  "questions": [],
+  "hasRedirects": false
+}

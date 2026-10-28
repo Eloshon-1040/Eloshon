@@ -1,0 +1,776 @@
+{
+  "$schema": "eloshon-converter/knowledge/concept-map.v0",
+  "producedAt": "2026-09-21",
+  "producer": "Phase 5.1 audit — no code changes, no canon extension decisions",
+  "purpose": "Document facts and gaps. Compare how each concept is represented across formats/platforms. Never propose canon extensions here.",
+
+  "formatIds": {
+    "note": "IDs anticipate the Phase 5 v2 convention `<provenance>.<slug>.<signatureHash?>.<version>`. Slugs used below are placeholders; real hashes are computed at recognizer time.",
+    "referenced": [
+      "shopify.products.csv.v1",
+      "shopify.products.api.gql.2026-01",
+      "woocommerce.products.csv.modern.v1",
+      "woocommerce.products.csv.legacy.v1",
+      "woocommerce.products.rest.v1",
+      "woocommerce.customers.rest.v1",
+      "woocommerce.orders.rest.v1",
+      "wix.products.csv.v1",
+      "wix.products.api.v3",
+      "bigcommerce.products.csv.v1",
+      "bigcommerce.products.api.v3",
+      "prestashop.products.csv.v9",
+      "prestashop.combinations.csv.v9",
+      "prestashop.products.api.v9",
+      "bigbuy.presta-import.v1",
+      "bigbuy.categories.v1"
+    ]
+  },
+
+  "canonSnapshot": {
+    "package": "@eloshon/catalog@current",
+    "confirmedFields": [
+      "CanonProduct.handle/title/bodyHtml/vendor/productType/tags/status/categories/published",
+      "CanonProduct.options[] (axis-of-variation, max 3)",
+      "CanonProduct.variants[] (optionValues[], sku, price, compareAtPrice, cost, barcode, grams, dimensions, requiresShipping, taxable, inventoryQty, imageSrc)",
+      "CanonProduct.images[] (src, position, alt, variantValue, id?, width?, height?)",
+      "CanonProduct.metafields[] (key, value only — no type)",
+      "CanonProduct.seoTitle/seoDescription",
+      "CanonProduct.identity? (slug, sourceId, timestamps)",
+      "CanonProduct.kind? (simple|variable|grouped|external|digital)",
+      "CanonProduct.visibility? (featured, catalogVisibility)",
+      "CanonProduct.merchandising? (upsells, crossSells, related, groupedChildren, menuOrder)",
+      "CanonProduct.notes?.purchase, external?, digital? (downloads, limit, expiry)",
+      "CanonProduct.attributesRich? (name, values, position, visible, forVariation)",
+      "CanonProduct.defaultOptionValues?",
+      "CanonProduct.sourceExtension? (namespace-per-platform, verbatim)",
+      "CanonProduct.unmapped? (typed reason: no-canon-field|platform-specific|unknown|ambiguous)",
+      "CanonProduct.provenance? (per canonical path)",
+      "CanonVariant.stockPolicy? (manageStock, backorders, soldIndividually)",
+      "CanonVariant.salePeriod? (from/to ISO)",
+      "CanonVariant.taxClass?, shippingClass?, images?",
+      "CanonOrder + CanonCustomer + CanonAddress + CanonLineItem (basic)"
+    ],
+    "observedGapsVsRealData": [
+      "CanonProduct.metafields[].type — missing (Shopify metafields lose their type; WC meta_data has no type; BC custom_fields plain).",
+      "CanonProduct.multilingual — no per-language variant of title/bodyHtml/etc.",
+      "CanonProduct.multiShop — no per-shop override structure.",
+      "CanonOrder.taxLines[] — Canon has scalar `taxes`; WC/Shopify/PS expose per-rate breakdown.",
+      "CanonOrder.shippingLines[] — Canon has scalar `shipping`; WC/Shopify expose multi-carrier arrays.",
+      "CanonOrder.refunds[] / fulfillments[] / transactions[] — absent.",
+      "CanonLineItem.gtin/global_unique_id/variantId/productSnapshot — absent (only name/sku/qty/price).",
+      "CanonAddress lacks a first/last-name split at address level (order carries `name` composite).",
+      "CanonProduct.dates (paid/completed/onSaleFrom/onSaleTo/dateCreated/dateModified) — timestamps live on `identity.timestamps` but only created/modified; sale window is on variant.salePeriod (variant-level, not order-level).",
+      "Guest customer (customer_id=0 on order) — no explicit canon marker; the order still carries billing/shipping fine, but `email` may be empty."
+    ],
+    "note": "These gaps are OBSERVATIONS, not proposals. Decisions belong to Phase 5.4."
+  },
+
+  "concepts": [
+    {
+      "id": "product-identity",
+      "label": "Identité produit (handle/slug/id/timestamps)",
+      "canonHome": "CanonProduct.handle + identity.{slug, sourceId, timestamps}",
+      "representations": {
+        "shopify.products.csv.v1":       { "carrier": "Handle",                   "shape": "slug", "extra": "no sourceId, timestamps absent" },
+        "shopify.products.api.gql.2026-01":{ "carrier": "product.handle + id",    "shape": "gid://shopify/Product/<id>", "extra": "createdAt/updatedAt exposed" },
+        "woocommerce.products.rest.v1":  { "carrier": "id + slug",                 "shape": "int + slug string", "extra": "date_created/date_modified present" },
+        "woocommerce.products.csv.modern.v1":{ "carrier": "SKU (parent)",         "shape": "SKU = grouping key", "extra": "no slug column" },
+        "woocommerce.products.csv.legacy.v1":{ "carrier": "post_name + post_title","shape": "slug + title", "extra": "" },
+        "wix.products.csv.v1":            { "carrier": "handleId + fieldType",    "shape": "handleId groups Product+Variant rows", "extra": "" },
+        "wix.products.api.v3":            { "carrier": "product.id + slug",       "shape": "UUID + slug", "extra": "distinct concepts" },
+        "bigcommerce.products.csv.v1":    { "carrier": "Product URL + Item",      "shape": "URL slug + row-type marker", "extra": "" },
+        "bigcommerce.products.api.v3":    { "carrier": "id + custom_url.url",     "shape": "int + object {url,is_customized}", "extra": "" },
+        "prestashop.products.csv.v9":     { "carrier": "ID + Reference + URL rewritten", "shape": "3 keys coexist", "extra": "Reference not unique in real stores" },
+        "prestashop.products.api.v9":     { "carrier": "product.id + reference + link_rewrite (multilang)", "shape": "int + string + [{id_lang, value}]", "extra": "link_rewrite is multi-lang" },
+        "bigbuy.presta-import.v1":        { "carrier": "ID + bb_REFERENCE",       "shape": "internal id + BigBuy ref", "extra": "" }
+      },
+      "gapVsCanon": "Canon carries only handle + optional slug/sourceId. Shopify GID / PS multi-lang link_rewrite / BC custom_url object are not modelled.",
+      "handling": "transform-only for handle. Extra ids can live in identity.sourceId or sourceExtension.<platform>.",
+      "openQuestions": []
+    },
+
+    {
+      "id": "product-kind",
+      "label": "Type de produit (simple / variable / grouped / external / digital / pack / bundle)",
+      "canonHome": "CanonProduct.kind",
+      "representations": {
+        "shopify.products.api.gql.2026-01":{ "carrier": "productType (freeform) + hasOnlyDefaultVariant + isGiftCard", "shape": "no strict enum" },
+        "woocommerce.products.rest.v1":  { "carrier": "type",  "shape": "'simple'|'variable'|'grouped'|'external'|'variation'" },
+        "woocommerce.products.csv.*":    { "carrier": "Type",  "shape": "same enum, sometimes empty" },
+        "wix.products.api.v3":            { "carrier": "productType", "shape": "'PHYSICAL'|'DIGITAL'" },
+        "bigcommerce.products.api.v3":    { "carrier": "type", "shape": "'physical'|'digital'" },
+        "prestashop.products.csv.v9":     { "carrier": "Type + Product type", "shape": "'simple'|'pack'|'virtual'|'combinations' (two overlapping columns)" },
+        "prestashop.products.api.v9":     { "carrier": "type + product_type + cache_is_pack + is_virtual", "shape": "duplicated concept across 4 fields (trap)" }
+      },
+      "gapVsCanon": "Canon has no 'pack' / 'bundle' kind. PS 'combinations' = presence of variants (not a distinct kind).",
+      "handling": "transform-only. Map PS 'combinations' → kind='variable'. Keep raw type in sourceExtension when the target has no equivalent.",
+      "openQuestions": [
+        "Should 'pack'/'bundle' be a canon kind, or a merchandising concept? Cross-platform observation: only PS exposes 'pack' natively; Shopify uses Bundle apps."
+      ]
+    },
+
+    {
+      "id": "options-vs-attributes-vs-features",
+      "label": "Options de variation ↔ attributs descriptifs ↔ specifications",
+      "canonHome": "CanonProduct.options[] (axis-of-variation) + attributesRich[] (with forVariation flag)",
+      "representations": {
+        "shopify.products.csv.v1":       { "carrier": "Option1..3 Name/Value",   "shape": "up to 3 options, no distinction between variation options and specs — specs go into metafields" },
+        "shopify.products.api.gql.2026-01":{ "carrier": "product.options[] + variants[].selectedOptions", "shape": "structured, still capped at 3; specs live in metafields with type" },
+        "woocommerce.products.rest.v1":  { "carrier": "attributes[] {name, options[], variation:bool, visible:bool}", "shape": "SAME structure holds BOTH options and specs, discriminated by `variation:true/false`" },
+        "woocommerce.products.csv.modern.v1":{ "carrier": "Attribute N name / value(s)", "shape": "no explicit variation flag; deduced from every variation row filling it" },
+        "wix.products.csv.v1":            { "carrier": "productOptionName1..N + productOptionType1..N (COLOR|SIZE|DROPDOWN)", "shape": "typed options; specs go in additionalInfo* / customTextField*" },
+        "wix.products.api.v3":            { "carrier": "options[].choices[] + infoSections[]", "shape": "options are variation only; infoSections are specs" },
+        "bigcommerce.products.csv.v1":    { "carrier": "Options column on Item=Variant rows + modifiers (in packed CSV)", "shape": "options drive variants; modifiers affect price/stock but aren't variants" },
+        "bigcommerce.products.api.v3":    { "carrier": "options[] + option_values[] (per variant) + modifiers[] + custom_fields[]", "shape": "3 distinct structures: options / modifiers / custom_fields" },
+        "prestashop.products.csv.v9":     { "carrier": "combinations.csv `Attributes (Group:Value|...)` + products.csv `Features (Name:Value:Position)`", "shape": "TWO separate files: combinations → variation options, features → specs" },
+        "prestashop.products.api.v9":     { "carrier": "product_options + product_option_values + product_features + product_feature_values", "shape": "4 endpoints; features and options are STRUCTURALLY different (traps #14–16)" }
+      },
+      "gapVsCanon": "Canon already has attributesRich[].forVariation — covers Woo's variation flag AND PS features/options split. But NO parser currently populates attributesRich; specs are dropped into metafields.",
+      "handling": "transform-only (populate attributesRich[] with forVariation=false for specs, forVariation=true for options). Legacy metafields carry-through kept for round-trip.",
+      "openQuestions": []
+    },
+
+    {
+      "id": "option-value-typed",
+      "label": "Valeur d'option typée (COLOR hex, SIZE, DROPDOWN, media liée)",
+      "canonHome": "CanonProduct.options[].values[] (plain strings)",
+      "representations": {
+        "wix.products.csv.v1":            { "carrier": "productOptionType1..N + values", "shape": "COLOR carries hex; historical rule: keep label, hex→metafield" },
+        "wix.products.api.v3":            { "carrier": "options[].choices[].linkedMediaItems[]", "shape": "COLOR choice can link to media" },
+        "shopify.products.api.gql.2026-01":{ "carrier": "options[].values (strings)",  "shape": "plain; swatch handled via app or metafield" },
+        "woocommerce.*":                 { "carrier": "attributes[].options[] (strings)", "shape": "no native typing" },
+        "prestashop.products.api.v9":     { "carrier": "product_options.is_color_group=1 + product_option_values.color (hex)", "shape": "explicit color type; hex stored" },
+        "bigcommerce.products.api.v3":    { "carrier": "options[].display_type ('swatch'|'radio_buttons'|'dropdown'|'rectangles')", "shape": "display metadata separate from values" }
+      },
+      "gapVsCanon": "Canon values are strings; no field for color hex or linked media.",
+      "handling": "transform-only for the label. Color hex → sourceExtension.<platform>.optionColors[value]. Media-linked options currently fall to unmapped[] with reason 'no-canon-field'.",
+      "openQuestions": [
+        "Cross-platform: PS + BC + Wix expose typed options natively. Shopify + WC do not. Concept-map recommends keeping raw string in canon; typing stays in sourceExtension until 4-of-6 platforms need it."
+      ]
+    },
+
+    {
+      "id": "pricing",
+      "label": "Prix payé / prix barré / promo / fenêtre promo / prix HT vs TTC",
+      "canonHome": "CanonVariant.price + compareAtPrice + salePeriod",
+      "representations": {
+        "shopify.*":                     { "carrier": "Variant Price + Variant Compare At Price", "shape": "price = paid, compareAt = strikethrough. Currency at store level." },
+        "woocommerce.products.rest.v1":  { "carrier": "price (live paid) + regular_price + sale_price + on_sale + date_on_sale_from/to", "shape": "3 explicit fields; API gives paid directly (opposite of CSV)" },
+        "woocommerce.products.csv.*":    { "carrier": "Regular price + Sale price", "shape": "must compute paid = Sale ?? Regular" },
+        "wix.products.csv.v1":            { "carrier": "price + discountMode + discountValue + surcharge", "shape": "discount as percentage or amount" },
+        "wix.products.api.v3":            { "carrier": "priceData.price + priceData.discountedPrice + priceData.formatted", "shape": "computed by Wix" },
+        "bigcommerce.products.csv.v1":    { "carrier": "Price + Sale Price + Retail Price + Cost Price", "shape": "Retail Price = MSRP (extra)" },
+        "bigcommerce.products.api.v3":    { "carrier": "price + sale_price + retail_price + cost_price + calculated_price", "shape": "calculated_price merges rules" },
+        "prestashop.products.csv.v9":     { "carrier": "Price tax excluded + Wholesale price + Tax rules ID + Ecotax + Unit price ratio + On sale", "shape": "price stored HT (ex-VAT); Tax rules ID joins tax_rule_group" },
+        "prestashop.products.api.v9":     { "carrier": "price + wholesale_price + id_tax_rules_group + ecotax + on_sale + specific_price[] (time-bound promos)", "shape": "promotional prices in separate resource" },
+        "prestashop.combinations.csv.v9": { "carrier": "Price impact + Weight impact", "shape": "DELTA on top of product price/weight (trap #9)" }
+      },
+      "gapVsCanon": [
+        "Canon carries `price` and `compareAtPrice` scalars — enough for paid/strikethrough.",
+        "Canon has salePeriod on variant — covers Shopify date_on_sale_from/to and PS specific_price windows.",
+        "Canon has NO tax-inclusive vs tax-exclusive distinction. PS+BC store HT; Shopify+Wix store customer-facing (varies).",
+        "Canon has NO ecotax / unit-price / MSRP (retail vs list) concepts.",
+        "PS combination price is DELTA — never store as absolute in canon; must be resolved before entering variant.price."
+      ],
+      "handling": "transform-only for paid/strikethrough (`price_promo` and `price_promo_wc_rest`). Tax mode → sourceExtension. Ecotax/MSRP → unmapped[] with reason 'no-canon-field' (cross-platform partial). PS delta must be resolved by a dedicated transform 'presta_combination_delta_price' before canonicalisation.",
+      "openQuestions": [
+        "Should canon carry `taxIncluded:boolean` at product level? Present in PS+BC (HT) and Shopify+WC (setting-dependent). Recommendation: sourceExtension for now."
+      ]
+    },
+
+    {
+      "id": "tax",
+      "label": "Régime de taxe / classe / groupe / TVA par pays",
+      "canonHome": "CanonVariant.taxable + taxClass?",
+      "representations": {
+        "shopify.*":                     { "carrier": "variant.taxable + variant.taxCode (Avalara)", "shape": "boolean + optional code" },
+        "woocommerce.*":                 { "carrier": "tax_status + tax_class", "shape": "'taxable'|'shipping'|'none' + class name" },
+        "wix.products.api.v3":            { "carrier": "taxGroupId + priceData variants", "shape": "" },
+        "bigcommerce.products.api.v3":    { "carrier": "tax_class_id + tax_provider_tax_code", "shape": "" },
+        "prestashop.products.csv.v9":     { "carrier": "Tax rules ID", "shape": "FK to tax_rules_group; group holds N tax rules by country (trap #8)" },
+        "prestashop.products.api.v9":     { "carrier": "id_tax_rules_group + associations", "shape": "" }
+      },
+      "gapVsCanon": "PS tax_rules_group is per-country breakdown — canon has only a class name.",
+      "handling": "transform-only for taxClass. Country-specific PS rates → sourceExtension.presta.taxRules[]. Cross-platform check needed before promoting to canon.",
+      "openQuestions": []
+    },
+
+    {
+      "id": "images-relation",
+      "label": "Images produit / position / alt / variant-image / dimensions",
+      "canonHome": "CanonProduct.images[] + CanonVariant.imageSrc + CanonVariant.images?",
+      "representations": {
+        "shopify.products.csv.v1":       { "carrier": "Image Src + Image Position + Image Alt Text + Variant Image (per row)", "shape": "one image per row, product rows repeat" },
+        "shopify.products.api.gql.2026-01":{ "carrier": "product.media(nodes[].image{url,altText,width,height})", "shape": "structured + width/height + mediaContentType" },
+        "woocommerce.products.rest.v1":  { "carrier": "images[]{id,src,name,alt,position,date_created}", "shape": "position explicit" },
+        "woocommerce.products.csv.modern.v1":{ "carrier": "Images (comma URLs)",   "shape": "no alt, no position (implicit by order)" },
+        "wix.products.csv.v1":            { "carrier": "productImageUrl (`;`-separated URLs)", "shape": "no alt/position" },
+        "wix.products.api.v3":            { "carrier": "media.itemsInfo.items[]{image{url,width,height}, video?}", "shape": "supports video" },
+        "bigcommerce.products.csv.v1":    { "carrier": "Internal Image URL (Export) + Image URL (Import) + Image Description + Image Sort Order + Variant Image URL", "shape": "Item=Image rows; alt via description" },
+        "bigcommerce.products.api.v3":    { "carrier": "images[]{url_thumbnail, url_standard, url_zoom, url_tiny, description, sort_order, is_thumbnail}", "shape": "several rendered sizes" },
+        "prestashop.products.csv.v9":     { "carrier": "Image URLs (x,y,z) + Image alt texts (x,y,z)", "shape": "positional pairing" },
+        "prestashop.products.api.v9":     { "carrier": "associations.images[{id}] + binary via /api/images/products/{pid}/{iid}", "shape": "metadata + separate blob endpoint (trap #7); path derived from id-digit split" }
+      },
+      "gapVsCanon": [
+        "Canon has width/height already (Phase 2 additive). Not populated by parsers today.",
+        "Canon has no video/media typing.",
+        "Canon has no 'rendered variants' (Shopify size-URLs, BC url_zoom etc.) — kept as one primary URL."
+      ],
+      "handling": "transform-only for src/position/alt/dimensions. Video → unmapped[]. Rendered variants → keep highest-res URL as src, others → sourceExtension.",
+      "openQuestions": []
+    },
+
+    {
+      "id": "stock-relation",
+      "label": "Stock produit / stock par variante / backorders / seuils / multi-shop",
+      "canonHome": "CanonVariant.inventoryQty + CanonVariant.stockPolicy",
+      "representations": {
+        "shopify.*":                     { "carrier": "variant.inventoryQuantity + inventoryItem.tracked + inventoryPolicy ('DENY'|'CONTINUE')", "shape": "per variant; policy = backorders semantics" },
+        "woocommerce.products.rest.v1":  { "carrier": "manage_stock (bool|'parent') + stock_quantity (int, -1=infinite) + stock_status + backorders + backordered + low_stock_amount", "shape": "5+ related fields; 'parent' string on variations" },
+        "woocommerce.products.csv.*":    { "carrier": "Stock", "shape": "single number; policies absent" },
+        "wix.products.api.v3":            { "carrier": "stock{trackInventory, quantity, inStock, inventoryStatus}", "shape": "" },
+        "wix.products.csv.v1":            { "carrier": "inventory ('InStock'|'OutOfStock' or number)", "shape": "polymorphic column" },
+        "bigcommerce.products.api.v3":    { "carrier": "inventory_level + inventory_warning_level + inventory_tracking ('none'|'product'|'variant')", "shape": "" },
+        "prestashop.products.api.v9":     { "carrier": "stock_availables[]{id, id_product_attribute, id_shop, quantity, out_of_stock}", "shape": "keyed by (product, variant, shop) — trap #10" },
+        "prestashop.products.csv.v9":     { "carrier": "Quantity + Minimal quantity + Low stock level + Action when out of stock + Advanced stock management", "shape": "product-level only; combinations Quantity in combinations.csv" }
+      },
+      "gapVsCanon": [
+        "Canon stockPolicy already has manageStock/backorders/soldIndividually.",
+        "Canon has NO stock-per-shop dimension (PS-only).",
+        "Canon inventoryQty is `number|null`; WC uses -1 for 'infinite/backorderable' — must be resolved to null or clamped by transform."
+      ],
+      "handling": "transform-only. Populate stockPolicy from WC (manage_stock, backorders, sold_individually). Multi-shop stock → sourceExtension.presta.stockPerShop. WC -1 → inventoryQty=null with stockPolicy.backorders='yes'.",
+      "openQuestions": [
+        "Should CanonVariant.stockPolicy.trackInventory be renamed to match WC/Wix/BC 'tracked' vs 'manageStock' vocabulary? Cross-platform note only, no decision here."
+      ]
+    },
+
+    {
+      "id": "categories-hierarchy",
+      "label": "Catégorie / hiérarchie / arbre",
+      "canonHome": "CanonProduct.categories[] (root→leaf path)",
+      "representations": {
+        "shopify.products.csv.v1":       { "carrier": "Product Category (free string)", "shape": "single leaf, taxonomy id via app" },
+        "shopify.products.api.gql.2026-01":{ "carrier": "product.category {id, fullName}", "shape": "Shopify Taxonomy 2024+, hierarchical string" },
+        "woocommerce.products.rest.v1":  { "carrier": "categories[]{id,name,slug}", "shape": "flat list; parent chain requires GET /categories/{id} recursion" },
+        "woocommerce.products.csv.modern.v1":{ "carrier": "Categories ('A > B > C, D > E')", "shape": "already-flattened paths" },
+        "wix.products.csv.v1":            { "carrier": "collection (`;`-separated names)", "shape": "flat names, order = tag list" },
+        "wix.products.api.v3":            { "carrier": "collectionIds[]", "shape": "IDs only; needs /collections lookup" },
+        "bigcommerce.products.csv.v1":    { "carrier": "Categories (comma names)", "shape": "names, ambiguous on duplicates" },
+        "bigcommerce.products.api.v3":    { "carrier": "categories: [int]", "shape": "IDs only; needs /catalog/categories/{id} for tree" },
+        "prestashop.products.csv.v9":     { "carrier": "'Categories (x,y,z)' + Default category ID", "shape": "names comma; ambiguous on duplicates" },
+        "prestashop.products.api.v9":     { "carrier": "associations.categories[{id}] + id_category_default; /categories nleft/nright", "shape": "nested-set tree (trap #11)" },
+        "bigbuy.presta-import.v1":        { "carrier": "CATEGORIES (numeric IDs) + companion presta_categories.csv", "shape": "IDs resolved via second file (existing Question 'need_file')" }
+      },
+      "gapVsCanon": "Canon holds ONE path per product; several formats support multiple category attachments (Woo/BC/PS). Currently expressed by multiple entries in categories[] joined ' > '; not a true multi-path model.",
+      "handling": "transform-only for the flat path. Multi-category products need a canon decision — for now, first category as canon path, rest into sourceExtension.<platform>.categoryPaths[].",
+      "openQuestions": [
+        "Do we need CanonProduct.categoryPaths: string[][] (multi-attachment)? WC/BC/PS say yes; Shopify says one primary; Wix uses collections (multi). Cross-platform observation flagged for 5.4."
+      ]
+    },
+
+    {
+      "id": "identifiers-relation",
+      "label": "Identifiants produit/variante : SKU ↔ EAN13 ↔ UPC ↔ MPN ↔ ISBN ↔ GTIN",
+      "canonHome": "CanonVariant.sku + CanonVariant.barcode",
+      "representations": {
+        "shopify.*":                     { "carrier": "variant.sku + variant.barcode + inventoryItem.harmonizedSystemCode", "shape": "barcode = free string (EAN/UPC/GTIN)" },
+        "woocommerce.products.rest.v1":  { "carrier": "sku + global_unique_id (on line_item; not on variation in v3) + meta_data _sku etc.", "shape": "GTIN newly on order line_items" },
+        "wix.products.api.v3":            { "carrier": "variant.sku + gtin (choices)", "shape": "" },
+        "bigcommerce.products.api.v3":    { "carrier": "sku + upc + gtin + mpn", "shape": "four distinct fields" },
+        "prestashop.products.csv.v9":     { "carrier": "Reference + EAN13 + UPC + MPN + ISBN (product level) + Reference/EAN13/UPC/MPN on combinations.csv", "shape": "FIVE identifiers, at 2 levels (trap #6)" }
+      },
+      "gapVsCanon": "Canon has ONE `sku` and ONE `barcode` per variant. PS/BC/Wix expose UPC + MPN + ISBN as distinct fields.",
+      "handling": "transform-only. Primary barcode (EAN13 || UPC || ISBN) → canon.barcode. Extras → sourceExtension.<platform>.identifiers.",
+      "openQuestions": [
+        "Cross-platform: PS+BC+Wix carry UPC/MPN/GTIN separately. Shopify+WC collapse into `barcode` + meta. Concept-map notes: canon extension deferred pending user preference."
+      ]
+    },
+
+    {
+      "id": "multilingual",
+      "label": "Multi-langue (title/description/meta/slug per language)",
+      "canonHome": "— NONE. Canon is single-language.",
+      "representations": {
+        "shopify.*":                     { "carrier": "Translations API (separate resource, per language)", "shape": "external to Product record; not in default CSV/GQL response" },
+        "woocommerce.*":                 { "carrier": "WPML/Polylang plugins", "shape": "core has NO multi-lang; each translation is a separate post" },
+        "wix.products.api.v3":            { "carrier": "product.description with language variants when translations configured", "shape": "language switch at API call level" },
+        "bigcommerce.products.api.v3":    { "carrier": "storefronts + channel translations (Multi-Storefront)", "shape": "per-channel overrides" },
+        "prestashop.products.csv.v9":     { "carrier": "collapsed to default language ONLY", "shape": "CSV loses translations" },
+        "prestashop.products.api.v9":     { "carrier": "each translatable field is `[{id_lang, value}, ...]`", "shape": "8+ translatable fields per product (name, description, description_short, link_rewrite, meta_title, meta_description, available_now, available_later)" }
+      },
+      "gapVsCanon": "Canon has no per-language variant. PS is the only platform where multi-lang is native and NON-optional.",
+      "handling": "sourceExtension.presta.translations OR default-language collapse (current behaviour). Cross-platform 4-of-6 test fails for now: only PS exposes it natively.",
+      "openQuestions": [
+        "Deferred: `title: {[lang]: string}` vs `translations[]` sidecar. Requires user decision in 5.4 with concrete UX implication."
+      ]
+    },
+
+    {
+      "id": "multi-shop-channel",
+      "label": "Multi-shop / multi-canal / publication / visibilité",
+      "canonHome": "CanonProduct.published + visibility.catalogVisibility",
+      "representations": {
+        "shopify.*":                     { "carrier": "product.publications (per sales channel) + product.status ('ACTIVE'|'DRAFT'|'ARCHIVED')", "shape": "multi-channel is native" },
+        "woocommerce.*":                 { "carrier": "post_status ('publish'|'draft'|'pending') + catalog_visibility ('visible'|'catalog'|'search'|'hidden')", "shape": "single shop" },
+        "wix.products.api.v3":            { "carrier": "visible + productPageUrl", "shape": "" },
+        "bigcommerce.products.api.v3":    { "carrier": "is_visible + availability + channels via /channels (Multi-Storefront)", "shape": "" },
+        "prestashop.products.csv.v9":     { "carrier": "Active + Available for order + Show price + Available online only + Shop + Visibility", "shape": "6 columns; Shop identifies target boutique (multi-shop)" },
+        "prestashop.products.api.v9":     { "carrier": "active + available_for_order + show_price + online_only + id_shop_default + associations", "shape": "product_shop table for per-shop overrides (trap #1)" }
+      },
+      "gapVsCanon": "Canon has status+published+visibility.catalogVisibility. NO multi-channel/multi-shop dimension.",
+      "handling": "transform-only for base flags. Multi-channel/multi-shop → sourceExtension. Publications per Shopify channel → cross-platform check open.",
+      "openQuestions": []
+    },
+
+    {
+      "id": "metafields-typed",
+      "label": "Metafields / custom fields / typed values",
+      "canonHome": "CanonProduct.metafields[]{key, value} — value is STRING, no type",
+      "representations": {
+        "shopify.products.csv.v1":       { "carrier": "Column '<key> (product.metafields.<namespace>.<key>)'", "shape": "type-less in CSV" },
+        "shopify.products.api.gql.2026-01":{ "carrier": "metafields(first).nodes[]{namespace, key, type, value}", "shape": "TYPED: 'single_line_text_field'|'number_integer'|'json'|'list.product_reference'|'file_reference'…" },
+        "woocommerce.products.rest.v1":  { "carrier": "meta_data[]{id, key, value}", "shape": "no type; internal keys start with `_` (filter rule)" },
+        "wix.products.api.v3":            { "carrier": "customFields[]", "shape": "no formal typing" },
+        "bigcommerce.products.api.v3":    { "carrier": "custom_fields[]{id, name, value}", "shape": "plain string, no type" },
+        "prestashop.*":                  { "carrier": "— (no native custom-fields concept; features are the closest analogue but structurally different)", "shape": "" }
+      },
+      "gapVsCanon": "Canon loses Shopify metafield TYPE. Round-trip Shopify→Shopify would lose typing.",
+      "handling": "transform-only for key/value. Type → sourceExtension.shopify.metafieldTypes[key] OR unmapped[] with reason 'no-canon-field'.",
+      "openQuestions": [
+        "Extend metafields[] to {key, value, type?}? Only Shopify exposes strict typing. Cross-platform observation."
+      ]
+    },
+
+    {
+      "id": "dates-timestamps",
+      "label": "Timestamps (created / modified / paid / completed / on-sale window)",
+      "canonHome": "CanonProduct.identity.timestamps.{created,modified} + CanonVariant.salePeriod",
+      "representations": {
+        "shopify.products.api.gql.2026-01":{ "carrier": "createdAt, updatedAt, publishedAt", "shape": "3 timestamps" },
+        "woocommerce.products.rest.v1":  { "carrier": "date_created, date_modified, date_on_sale_from, date_on_sale_to (+ order-level date_paid, date_completed)", "shape": "" },
+        "wix.products.api.v3":            { "carrier": "createdDate, lastUpdated", "shape": "" },
+        "bigcommerce.products.api.v3":    { "carrier": "date_created, date_modified, preorder_release_date", "shape": "" },
+        "prestashop.products.csv.v9":     { "carrier": "Product creation date + Product availability date", "shape": "" },
+        "prestashop.products.api.v9":     { "carrier": "date_add, date_upd, available_date", "shape": "" }
+      },
+      "gapVsCanon": [
+        "Canon covers created/modified.",
+        "Order-level paid/completed not modelled.",
+        "publishedAt (Shopify) not modelled; can go into identity.timestamps."
+      ],
+      "handling": "transform-only. Order paid/completed → sourceExtension.<platform>.orderTimestamps for now.",
+      "openQuestions": []
+    },
+
+    {
+      "id": "guest-vs-registered-customer",
+      "label": "Client invité vs enregistré",
+      "canonHome": "— No explicit canon marker.",
+      "representations": {
+        "shopify.*":                     { "carrier": "order.customer=null vs customer object", "shape": "" },
+        "woocommerce.products.rest.v1":  { "carrier": "order.customer_id=0 for guest; billing/shipping still on the order", "shape": "confirmed live in this audit (order #32)" },
+        "bigcommerce.products.api.v3":    { "carrier": "order.customer_id=0", "shape": "" },
+        "prestashop.products.api.v9":     { "carrier": "customer.is_guest=1", "shape": "" }
+      },
+      "gapVsCanon": "Canon CanonOrder has no isGuest flag.",
+      "handling": "transform-only. Detect customer_id==0 (or is_guest==1) → sourceExtension.<platform>.isGuest OR canon email left empty.",
+      "openQuestions": []
+    },
+
+    {
+      "id": "order-financial-breakdown",
+      "label": "Décomposition financière commande : tax lines, shipping lines, coupons, refunds, transactions",
+      "canonHome": "CanonOrder.subtotal + shipping + taxes + total + discountCode/Amount + paymentMethod/transactionId (all scalars)",
+      "representations": {
+        "shopify.*":                     { "carrier": "order.taxLines[] + shippingLine + refunds[] + transactions[] + fulfillments[] + discountApplications[]", "shape": "6 arrays" },
+        "woocommerce.orders.rest.v1":    { "carrier": "tax_lines[] + shipping_lines[] + fee_lines[] + coupon_lines[] + refunds[]", "shape": "5 arrays; confirmed live (order #33 has one shipping_line: flat_rate 15.00 €)" },
+        "bigcommerce.products.api.v3":    { "carrier": "tax_total + shipping_cost_ex/inc_tax + coupon_discount + gift_certificate_amount + store_credit_amount + refunded_amount", "shape": "flat scalars" },
+        "prestashop.products.api.v9":     { "carrier": "order_details + order_carriers + order_slip (refunds) + order_payments", "shape": "" }
+      },
+      "gapVsCanon": [
+        "Canon has scalar taxes/shipping; loses per-rate/multi-carrier detail.",
+        "No refunds/transactions/fulfillments modelled.",
+        "Coupon: single code+amount; multi-coupon flattened."
+      ],
+      "handling": "transform-only for scalar totals. Detailed arrays → sourceExtension.<platform>.orderBreakdown{taxLines,shippingLines,refunds,transactions}.",
+      "openQuestions": []
+    }
+  ],
+
+  "relations": [
+    {
+      "id": "product-to-variant",
+      "label": "Produit ↔ Variante / Combinaison",
+      "concernedConcepts": ["product-identity", "options-vs-attributes-vs-features"],
+      "representations": [
+        { "format": "shopify.products.csv.v1",             "direct": true,  "carrier": "Handle",                             "shape": "one-row-per-variant, product columns repeat",              "cardinality": "1..N", "orderPreserved": true,  "loss": "none" },
+        { "format": "shopify.products.api.gql.2026-01",    "direct": true,  "carrier": "product.variants[]",                 "shape": "connection; hasNextPage pagination",                       "cardinality": "1..N", "orderPreserved": true,  "loss": "none" },
+        { "format": "woocommerce.products.rest.v1",        "direct": false, "carrier": "product.variations:[id] + separate GET /variations", "shape": "two API calls",                            "cardinality": "1..N", "orderPreserved": false, "loss": "menu_order carries position; SKU often shared across variants (audit-confirmed)" },
+        { "format": "woocommerce.products.csv.modern.v1",  "direct": false, "carrier": "Parent SKU chain",                   "shape": "parent row + child rows",                                  "cardinality": "1..N", "orderPreserved": true,  "loss": "" },
+        { "format": "wix.products.csv.v1",                  "direct": true,  "carrier": "handleId + fieldType",              "shape": "typed rows Product/Variant",                               "cardinality": "1..N", "orderPreserved": true,  "loss": "" },
+        { "format": "bigcommerce.products.csv.v1",          "direct": true,  "carrier": "Product ID + Item=Variant",         "shape": "typed rows",                                               "cardinality": "1..N", "orderPreserved": true,  "loss": "" },
+        { "format": "prestashop.products.csv.v9 + prestashop.combinations.csv.v9", "direct": false, "carrier": "Product ID join across two files", "shape": "combinations sidecar",              "cardinality": "1..N", "orderPreserved": false, "loss": "price/weight impacts are DELTAS (trap #9)" },
+        { "format": "prestashop.products.api.v9",           "direct": false, "carrier": "associations.combinations[{id}] + /combinations/{id}", "shape": "sub-resource",                        "cardinality": "1..N", "orderPreserved": false, "loss": "" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "yes",
+        "requires": ["transform-only"],
+        "notes": "PS delta prices resolved by transform 'presta_combination_delta_price' before canonicalisation."
+      },
+      "conversionRisks": [
+        "PS→any: forget to absolute-ize delta prices/weights.",
+        "WC→any: assume SKU is unique per variant (audit says it is often shared).",
+        "any→Shopify: option count > 3 must be flagged (Shopify max 3)."
+      ]
+    },
+    {
+      "id": "option-to-value",
+      "label": "Option ↔ Valeur d'option (typée)",
+      "concernedConcepts": ["options-vs-attributes-vs-features", "option-value-typed"],
+      "representations": [
+        { "format": "shopify.products.api.gql.2026-01", "direct": true, "carrier": "options[].values[]",                       "shape": "plain strings",           "loss": "no swatch/media" },
+        { "format": "woocommerce.products.rest.v1",     "direct": true, "carrier": "attributes[].options[]",                   "shape": "plain strings",           "loss": "no typing" },
+        { "format": "wix.products.api.v3",              "direct": true, "carrier": "options[].choices[]{value,linkedMedia}",   "shape": "typed + media links",     "loss": "media links lost in canon" },
+        { "format": "bigcommerce.products.api.v3",      "direct": true, "carrier": "options[].option_values[]",                "shape": "with display_type",        "loss": "display_type lost" },
+        { "format": "prestashop.products.api.v9",       "direct": false,"carrier": "product_options + product_option_values + is_color_group + color hex", "shape": "explicit color type", "loss": "color hex → sourceExtension" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "partial",
+        "requires": ["transform-only", "sourceExtension"],
+        "notes": "Labels fit canon.options[].values[]. Typing (color/media/display) goes to sourceExtension."
+      },
+      "conversionRisks": []
+    },
+    {
+      "id": "attribute-to-value",
+      "label": "Attribut ↔ Valeur (variation vs descriptif)",
+      "concernedConcepts": ["options-vs-attributes-vs-features"],
+      "representations": [
+        { "format": "woocommerce.products.rest.v1",     "direct": true, "carrier": "attributes[]{variation:bool}",             "shape": "SAME structure holds both; discriminated by flag", "loss": "flag ignored by current parser" },
+        { "format": "prestashop.products.api.v9",       "direct": true, "carrier": "product_options ↔ variation ; product_features ↔ specs", "shape": "TWO different resources",  "loss": "" },
+        { "format": "shopify.products.api.gql.2026-01", "direct": false,"carrier": "options[] (variation) + metafields[] (specs)", "shape": "specs live outside options", "loss": "specs boundaries fuzzy" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "yes",
+        "requires": ["transform-only"],
+        "notes": "attributesRich[].forVariation already exists in canon; parsers must populate it."
+      },
+      "conversionRisks": [
+        "any→Shopify: descriptive attributes must NOT enter options[] (would eat one of Shopify's 3 option slots)."
+      ]
+    },
+    {
+      "id": "feature-vs-variation-option",
+      "label": "Feature / Spécification ↔ Option de variation",
+      "concernedConcepts": ["options-vs-attributes-vs-features"],
+      "representations": [
+        { "format": "prestashop.products.csv.v9",  "direct": true,  "carrier": "'Features (Name:Value:Position)' (product) vs combinations.csv (variants)", "shape": "distinct" },
+        { "format": "prestashop.products.api.v9",  "direct": true,  "carrier": "product_features vs product_options",       "shape": "distinct resources" },
+        { "format": "woocommerce.products.rest.v1","direct": false, "carrier": "attributes[]{variation:false} vs {variation:true}", "shape": "same structure" },
+        { "format": "shopify.products.api.gql.2026-01","direct": false,"carrier": "metafields (specs) vs options (variants)", "shape": "separate" },
+        { "format": "wix.products.api.v3",         "direct": true,  "carrier": "infoSections[] (specs) vs options[] (variants)", "shape": "distinct" },
+        { "format": "bigcommerce.products.api.v3", "direct": true,  "carrier": "custom_fields[] (specs) vs options[]/modifiers[] (variants)", "shape": "distinct" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "yes",
+        "requires": ["transform-only"],
+        "notes": "Route specs into attributesRich[forVariation=false] OR metafields; route variation drivers into options[]."
+      },
+      "conversionRisks": []
+    },
+    {
+      "id": "price-promo-window-tax",
+      "label": "Prix ↔ Promo ↔ Fenêtre promo ↔ Taxe (HT/TTC/deltas)",
+      "concernedConcepts": ["pricing", "tax"],
+      "representations": [
+        { "format": "shopify.products.api.gql.2026-01", "direct": true, "carrier": "price + compareAtPrice + variant.taxable", "shape": "customer-facing; store setting decides HT/TTC" },
+        { "format": "woocommerce.products.rest.v1",     "direct": true, "carrier": "price(paid) + regular + sale + date_on_sale_from/to + tax_status + tax_class", "shape": "" },
+        { "format": "wix.products.api.v3",              "direct": true, "carrier": "priceData + taxGroupId", "shape": "" },
+        { "format": "bigcommerce.products.api.v3",      "direct": true, "carrier": "price + sale_price + retail_price + cost_price + tax_class_id", "shape": "MSRP separate" },
+        { "format": "prestashop.products.csv.v9 + prestashop.combinations.csv.v9", "direct": false, "carrier": "Price tax excluded + Tax rules ID + Ecotax + combination Price impact (DELTA)", "shape": "HT + delta model (traps #8, #9)" },
+        { "format": "prestashop.products.api.v9",        "direct": false, "carrier": "price + id_tax_rules_group + ecotax + specific_price[]", "shape": "specific_price is time-bound promo resource" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "partial",
+        "requires": ["transform-only", "sourceExtension"],
+        "notes": "paid+strikethrough+salePeriod fit canon. HT/TTC + ecotax + tax-group-per-country + MSRP → sourceExtension."
+      },
+      "conversionRisks": [
+        "PS→Shopify: must apply tax to compute customer-facing price when Shopify store is TTC.",
+        "PS delta → absolute BEFORE variant price is written."
+      ]
+    },
+    {
+      "id": "product-category-hierarchy",
+      "label": "Produit ↔ Catégorie ↔ Hiérarchie ↔ Multi-rattachement",
+      "concernedConcepts": ["categories-hierarchy"],
+      "representations": [
+        { "format": "shopify.products.api.gql.2026-01", "direct": true, "carrier": "product.category.fullName + collections", "shape": "one taxonomy path + N collections" },
+        { "format": "woocommerce.products.rest.v1",     "direct": false,"carrier": "categories[]{id} + recursive parent walk", "shape": "reconstruction required" },
+        { "format": "wix.products.api.v3",              "direct": false,"carrier": "collectionIds[] + /collections",           "shape": "no hierarchy natively" },
+        { "format": "bigcommerce.products.api.v3",      "direct": false,"carrier": "categories:[int] + /catalog/categories/{id}", "shape": "parent chain via lookup" },
+        { "format": "prestashop.products.api.v9",       "direct": true, "carrier": "associations.categories + /categories.nleft/nright", "shape": "nested-set tree (trap #11)" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "partial",
+        "requires": ["transform-only", "sourceExtension"],
+        "notes": "Canon models ONE path. Multi-attachment → sourceExtension until 5.4 decision."
+      },
+      "conversionRisks": [
+        "PS ambiguous duplicate category names must be resolved via nleft/nright before flattening.",
+        "any→Shopify: taxonomy fullName is a Shopify-specific string; free-form fallback OK."
+      ]
+    },
+    {
+      "id": "product-image-position",
+      "label": "Produit ↔ Image ↔ Position ↔ Alt ↔ Variant-image",
+      "concernedConcepts": ["images-relation"],
+      "representations": [
+        { "format": "shopify.products.csv.v1",       "direct": true,  "carrier": "Image Src + Image Position + Image Alt Text; Variant Image on variant row", "shape": "row-per-image, position explicit" },
+        { "format": "shopify.products.api.gql.2026-01","direct": true, "carrier": "product.media.nodes[].image{url,altText,width,height} + variant.image", "shape": "typed, sized" },
+        { "format": "woocommerce.products.rest.v1",  "direct": true,  "carrier": "images[]{position, alt, src, id}",                                          "shape": "position explicit" },
+        { "format": "wix.products.api.v3",           "direct": true,  "carrier": "media.itemsInfo.items[]",                                                   "shape": "supports video" },
+        { "format": "bigcommerce.products.api.v3",   "direct": true,  "carrier": "images[]{sort_order, is_thumbnail, description}",                            "shape": "several rendered sizes" },
+        { "format": "prestashop.products.api.v9",    "direct": false, "carrier": "associations.images[{id}] + binary endpoint",                                "shape": "metadata + blob split (trap #7)" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "yes",
+        "requires": ["transform-only"],
+        "notes": "Canon already has width/height. Video → unmapped[]."
+      },
+      "conversionRisks": [
+        "PS binary must be fetched or rehosted before writing to another platform (localhost URLs unusable)."
+      ]
+    },
+    {
+      "id": "product-stock-per-variant-shop",
+      "label": "Produit ↔ Stock ↔ Stock par variante ↔ Backorders ↔ Multi-shop",
+      "concernedConcepts": ["stock-relation"],
+      "representations": [
+        { "format": "shopify.products.api.gql.2026-01", "direct": true, "carrier": "variant.inventoryQuantity + inventoryItem.tracked + inventoryPolicy", "shape": "per variant × per location" },
+        { "format": "woocommerce.products.rest.v1",     "direct": true, "carrier": "manage_stock + stock_quantity(-1=∞) + backorders + backordered", "shape": "per variation" },
+        { "format": "wix.products.api.v3",              "direct": true, "carrier": "stock{trackInventory, quantity, inStock}", "shape": "" },
+        { "format": "bigcommerce.products.api.v3",      "direct": true, "carrier": "inventory_level + inventory_tracking (none|product|variant)", "shape": "explicit granularity" },
+        { "format": "prestashop.products.api.v9",       "direct": false,"carrier": "stock_availables[]{id_product, id_product_attribute, id_shop, quantity}", "shape": "keyed by 3D tuple (trap #10)" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "partial",
+        "requires": ["transform-only", "sourceExtension"],
+        "notes": "Canon stockPolicy handles manageStock/backorders. Multi-shop stock → sourceExtension.presta.stockPerShop."
+      },
+      "conversionRisks": [
+        "WC -1 = infinite/backorderable — must map to canon.inventoryQty=null + stockPolicy.backorders='yes', not -1.",
+        "PS stock is per shop AND per combination — collapsing to canon loses granularity."
+      ]
+    },
+    {
+      "id": "order-customer-address",
+      "label": "Commande ↔ Client ↔ Adresse (registered vs guest)",
+      "concernedConcepts": ["guest-vs-registered-customer"],
+      "representations": [
+        { "format": "shopify.*",                    "direct": true, "carrier": "order.customer.default_address vs order.shippingAddress/billingAddress", "shape": "customer null on guest" },
+        { "format": "woocommerce.orders.rest.v1",   "direct": true, "carrier": "order.billing/shipping objects + customer_id (0 = guest)", "shape": "confirmed live: 1 registered (#33), 1 guest (#32)" },
+        { "format": "bigcommerce.products.api.v3",  "direct": true, "carrier": "billing_address + shipping_address (per order)", "shape": "" },
+        { "format": "prestashop.products.api.v9",   "direct": false,"carrier": "order.id_address_delivery + id_address_invoice → /addresses/{id}", "shape": "lookup" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "partial",
+        "requires": ["transform-only"],
+        "notes": "isGuest flag missing at canon.CanonOrder. Address blocks fit CanonAddress."
+      },
+      "conversionRisks": []
+    },
+    {
+      "id": "order-lineitem-product-snapshot",
+      "label": "Commande ↔ Ligne de commande ↔ Produit/Variante (snapshot au moment T)",
+      "concernedConcepts": ["order-financial-breakdown", "identifiers-relation"],
+      "representations": [
+        { "format": "shopify.*",                   "direct": true, "carrier": "line_items[]{title, variant_title, sku, quantity, price, product_id, variant_id, taxLines, discountAllocations}", "shape": "rich snapshot" },
+        { "format": "woocommerce.orders.rest.v1",  "direct": true, "carrier": "line_items[]{name, product_id, variation_id, sku, quantity, price, subtotal, total, meta_data[], global_unique_id, parent_name, image}", "shape": "audit-confirmed live: includes GTIN, parent_name, image object, and meta_data with display_key/display_value" },
+        { "format": "bigcommerce.products.api.v3", "direct": true, "carrier": "products[] on order (name, sku, quantity, base_price, product_options[])", "shape": "" },
+        { "format": "prestashop.products.api.v9",  "direct": true, "carrier": "order_details[]{product_id, product_attribute_id, product_name, product_reference, unit_price_tax_excl, unit_price_tax_incl, product_quantity}", "shape": "HT and TTC both stored" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "partial",
+        "requires": ["transform-only", "sourceExtension"],
+        "notes": "CanonLineItem has {name, sku, quantity, price} only. GTIN, variantId, parent_name, image, per-line taxLines → sourceExtension."
+      },
+      "conversionRisks": [
+        "Product may no longer exist when order is imported later — line item MUST carry snapshot info, not just a productId."
+      ]
+    },
+    {
+      "id": "identifiers-cluster",
+      "label": "Identifiants : SKU ↔ EAN13 ↔ UPC ↔ MPN ↔ ISBN ↔ GTIN (produit ET variante ET ligne de commande)",
+      "concernedConcepts": ["identifiers-relation"],
+      "representations": [
+        { "format": "shopify.*",                   "direct": true, "carrier": "sku + barcode (free) + inventoryItem.harmonizedSystemCode", "shape": "one barcode field" },
+        { "format": "woocommerce.products.rest.v1","direct": false,"carrier": "sku + meta_data + global_unique_id on line_items (WC 9+)", "shape": "GTIN as new line-item field (audit-confirmed)" },
+        { "format": "wix.products.api.v3",          "direct": true, "carrier": "sku + gtin", "shape": "" },
+        { "format": "bigcommerce.products.api.v3", "direct": true, "carrier": "sku + upc + gtin + mpn (all distinct)", "shape": "" },
+        { "format": "prestashop.products.csv.v9 + prestashop.combinations.csv.v9", "direct": true, "carrier": "Reference + EAN13 + UPC + MPN + ISBN at 2 levels (product + combination)", "shape": "5 identifiers × 2 levels" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "partial",
+        "requires": ["transform-only", "sourceExtension"],
+        "notes": "Primary → canon.barcode. Extras → sourceExtension.<platform>.identifiers.{ean13,upc,mpn,isbn,gtin}."
+      },
+      "conversionRisks": []
+    },
+    {
+      "id": "language-to-multilingual-value",
+      "label": "Langue ↔ Valeur multilingue",
+      "concernedConcepts": ["multilingual"],
+      "representations": [
+        { "format": "prestashop.products.api.v9", "direct": true, "carrier": "field is `[{id_lang, value}]` for 8+ translatable fields", "shape": "native" },
+        { "format": "shopify.*",                  "direct": false,"carrier": "Translations API (separate resource)", "shape": "external" },
+        { "format": "woocommerce.*",              "direct": false,"carrier": "WPML/Polylang (separate posts per lang)", "shape": "plugin-driven" },
+        { "format": "wix.products.api.v3",         "direct": false,"carrier": "language-scoped API call", "shape": "no in-record translations" },
+        { "format": "bigcommerce.products.api.v3","direct": false,"carrier": "channel-level overrides", "shape": "" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "no",
+        "requires": ["sourceExtension", "canon-evolution-open"],
+        "notes": "PS is the only format with native per-record multi-lang. Deferred: canon structure decision in 5.4."
+      },
+      "conversionRisks": [
+        "PS→any: default-language collapse loses translations unless preserved in sourceExtension."
+      ]
+    },
+    {
+      "id": "shop-channel-publication",
+      "label": "Shop/Channel ↔ Publication ↔ Visibilité",
+      "concernedConcepts": ["multi-shop-channel"],
+      "representations": [
+        { "format": "shopify.products.api.gql.2026-01", "direct": true, "carrier": "product.publications (per channel) + status", "shape": "native multi-channel" },
+        { "format": "prestashop.products.api.v9",       "direct": true, "carrier": "id_shop_default + product_shop overrides + Active/Available", "shape": "native multi-shop (trap #1)" },
+        { "format": "bigcommerce.products.api.v3",      "direct": true, "carrier": "channels (Multi-Storefront)",                 "shape": "add-on" },
+        { "format": "woocommerce.*",                    "direct": false,"carrier": "single-shop; post_status only",                "shape": "no multi-shop" },
+        { "format": "wix.*",                            "direct": false,"carrier": "single-site",                                  "shape": "no multi-shop" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "partial",
+        "requires": ["transform-only", "sourceExtension"],
+        "notes": "Base flags fit canon. Per-channel/per-shop overrides → sourceExtension."
+      },
+      "conversionRisks": []
+    },
+    {
+      "id": "metafield-type-binding",
+      "label": "Metafield ↔ Type ↔ Namespace",
+      "concernedConcepts": ["metafields-typed"],
+      "representations": [
+        { "format": "shopify.products.api.gql.2026-01", "direct": true, "carrier": "metafield.{namespace,key,type,value}", "shape": "strong typing" },
+        { "format": "woocommerce.products.rest.v1",     "direct": false,"carrier": "meta_data[]{key,value} + `_` prefix for internal", "shape": "type-less" },
+        { "format": "bigcommerce.products.api.v3",      "direct": false,"carrier": "custom_fields[]{name,value}",           "shape": "type-less" },
+        { "format": "wix.products.api.v3",              "direct": false,"carrier": "customFields",                          "shape": "" },
+        { "format": "prestashop.*",                    "direct": false,"carrier": "no native custom fields; features are the closest but structurally different", "shape": "" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "partial",
+        "requires": ["transform-only", "sourceExtension"],
+        "notes": "Value fits canon.metafields[]. Shopify type → sourceExtension.shopify.metafieldTypes[key] (round-trip Shopify→Shopify preserved)."
+      },
+      "conversionRisks": [
+        "Shopify → any → Shopify: type is lost unless kept in sourceExtension."
+      ]
+    },
+    {
+      "id": "order-financial-arrays",
+      "label": "Commande ↔ Shipping-line ↔ Carrier ↔ Fee ↔ Coupon ↔ Refund ↔ Transaction",
+      "concernedConcepts": ["order-financial-breakdown"],
+      "representations": [
+        { "format": "shopify.*",                  "direct": true, "carrier": "shippingLine + refunds + transactions + fulfillments + discountApplications + taxLines", "shape": "6 arrays" },
+        { "format": "woocommerce.orders.rest.v1", "direct": true, "carrier": "shipping_lines[] + fee_lines[] + coupon_lines[] + refunds[] + tax_lines[]", "shape": "5 arrays; audit-confirmed live" },
+        { "format": "bigcommerce.products.api.v3","direct": false,"carrier": "scalar totals + refunded_amount",           "shape": "flat" },
+        { "format": "prestashop.products.api.v9", "direct": true, "carrier": "order_details + order_carriers + order_slip + order_payments", "shape": "4 resources" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "no",
+        "requires": ["sourceExtension", "canon-evolution-open"],
+        "notes": "Only scalar totals fit today. Detailed breakdown → sourceExtension. Deferred."
+      },
+      "conversionRisks": []
+    },
+    {
+      "id": "default-variant-vs-default-image",
+      "label": "Variant par défaut ↔ Image par défaut ↔ Cache (PS trap)",
+      "concernedConcepts": ["product-to-variant", "images-relation"],
+      "representations": [
+        { "format": "prestashop.products.api.v9", "direct": false, "carrier": "cache_default_attribute + id_default_image + id_default_combination", "shape": "cache pointers (trap #13; NOT the 'master' variant)" },
+        { "format": "shopify.products.api.gql.2026-01", "direct": true, "carrier": "product.featuredMedia + variant.selectedOptions defaults", "shape": "" },
+        { "format": "woocommerce.products.rest.v1", "direct": true, "carrier": "default_attributes[] + featured image",     "shape": "explicit" },
+        { "format": "wix.*",                       "direct": true, "carrier": "media.main + choices marked default",         "shape": "" },
+        { "format": "bigcommerce.*",               "direct": true, "carrier": "is_thumbnail + default option combinations",  "shape": "" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "yes",
+        "requires": ["transform-only"],
+        "notes": "CanonProduct.defaultOptionValues + CanonImage.position=0 already model this. PS 'cache_default_attribute' resolved to same via a specific transform."
+      },
+      "conversionRisks": [
+        "Do NOT treat PS cache_default_attribute as 'master variant': it's a display default."
+      ]
+    },
+    {
+      "id": "related-upsell-crosssell-accessories",
+      "label": "Produit ↔ Related/Upsell/Cross-sell/Accessories",
+      "concernedConcepts": [],
+      "representations": [
+        { "format": "shopify.*",                  "direct": false,"carrier": "app-driven (Shopify Related products by Type)", "shape": "no native" },
+        { "format": "woocommerce.products.rest.v1","direct": true, "carrier": "related_ids + upsell_ids + cross_sell_ids",     "shape": "" },
+        { "format": "bigcommerce.products.api.v3","direct": true, "carrier": "related_products[]",                              "shape": "" },
+        { "format": "prestashop.products.csv.v9", "direct": true, "carrier": "Accessories (x,y,z)",                             "shape": "" },
+        { "format": "wix.products.api.v3",         "direct": false,"carrier": "app-driven",                                     "shape": "" }
+      ],
+      "canonImpact": {
+        "expressibleInCurrentCanon": "yes",
+        "requires": ["transform-only"],
+        "notes": "canon.merchandising already carries upsells/crossSells/related/groupedChildren. Parsers must populate it."
+      },
+      "conversionRisks": []
+    }
+  ],
+
+  "sourceExtensionCandidates": [
+    "shopify.metafieldTypes",
+    "shopify.publications",
+    "shopify.taxCode",
+    "woocommerce.orderBreakdown",
+    "woocommerce.attributesVariationFlags",
+    "woocommerce.lineItemGtin",
+    "wix.optionColors",
+    "wix.linkedMediaItems",
+    "wix.infoSections",
+    "bigcommerce.customFields",
+    "bigcommerce.modifiers",
+    "bigcommerce.retailPrice",
+    "bigcommerce.renderedImageSizes",
+    "presta.translations",
+    "presta.stockPerShop",
+    "presta.taxRules",
+    "presta.combinationDeltas",
+    "presta.nestedSet",
+    "presta.identifiers",
+    "presta.categoryPaths",
+    "presta.specificPrice"
+  ],
+
+  "canonEvolutionOpen": [
+    "multilingual (only PS native — score 1/6, insufficient for canon promotion; user decision required)",
+    "orderFinancialBreakdown (only 2/6 fully native — Shopify + WC; deferred)",
+    "categoryPaths (multi-attachment) (4/6 platforms support multi-cat — WC, Wix collections, BC, PS; borderline)",
+    "metafield typing (1/6 native — Shopify only; insufficient)",
+    "identifiers (upc/mpn/isbn as separate fields) (3/6 native — BC, PS, Wix partial; borderline)",
+    "taxIncluded flag (mixed — depends on store setting; likely stays sourceExtension)",
+    "isGuest on CanonOrder (universal concept; simple boolean, low cost)"
+  ],
+
+  "questionsForUser": [
+    "Confirmer que 5.1 documente les faits sans décider — les 7 items 'canonEvolutionOpen' ne sont PAS des propositions.",
+    "Le concept 'kind=pack/bundle' (PS pack) reste-t-il en sourceExtension ou justifie-t-il un canon 'pack' ?",
+    "Cross-platform 'multi-attachment de catégories' est à 4/6 — proche du seuil. À discuter en 5.4.",
+    "Le PS delta prix combination doit être résolu par un transform DÉDIÉ (`presta_combination_delta_price`) — à ajouter au registre transforms en 5.2."
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "id": "shopify.orders.csv.v1",
+  "displayName": "Shopify orders export (CSV)",
+  "provenance": "native-platform",
+  "medium": "csv",
+  "platformHint": "shopify",
+  "entity": "orders",
+  "signatures": [
+    {
+      "kind": "csv-header-set",
+      "required": [
+        "Name",
+        "Lineitem name"
+      ],
+      "hints": [
+        "Financial Status",
+        "Fulfillment Status",
+        "Lineitem quantity"
+      ]
+    }
+  ],
+  "structure": {
+    "rows": {
+      "groupBy": {
+        "column": "Name"
+      },
+      "children": {
+        "where": {
+          "column": "Lineitem name",
+          "nonEmpty": true
+        }
+      }
+    }
+  },
+  "fields": [
+    {
+      "path": "Name",
+      "canon": "number",
+      "transform": "text",
+      "confidence": "verified-fixture",
+      "notes": "Also the grouping key of the order's rows."
+    },
+    {
+      "path": "Email",
+      "canon": "email",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Created at",
+      "canon": "createdAt",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Financial Status",
+      "canon": "financialStatus",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Fulfillment Status",
+      "canon": "fulfillmentStatus",
+      "transform": "text",
+      "confidence": "verified-fixture",
+      "notes": "Empty means unfulfilled."
+    },
+    {
+      "path": "Currency",
+      "canon": "currency",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Subtotal",
+      "canon": "subtotal",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping",
+      "canon": "shipping",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Taxes",
+      "canon": "taxes",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Total",
+      "canon": "total",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Discount Code",
+      "canon": "discountCode",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Discount Amount",
+      "canon": "discountAmount",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Payment Method",
+      "canon": "paymentMethod",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Payment Reference",
+      "canon": "transactionId",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Notes",
+      "canon": "note",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Lineitem name",
+      "canon": "lineItems[].name",
+      "transform": "text",
+      "confidence": "verified-fixture",
+      "notes": "A row with a line-item name is a line item."
+    },
+    {
+      "path": "Lineitem sku",
+      "canon": "lineItems[].sku",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Lineitem quantity",
+      "canon": "lineItems[].quantity",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Lineitem price",
+      "canon": "lineItems[].price",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing Name",
+      "canon": "billing.name",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing Company",
+      "canon": "billing.company",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing Address1",
+      "canon": "billing.address1",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing Address2",
+      "canon": "billing.address2",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing City",
+      "canon": "billing.city",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing Province",
+      "canon": "billing.province+billing.provinceCode",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing Country",
+      "canon": "billing.country",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing Zip",
+      "canon": "billing.zip",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Billing Phone",
+      "canon": "billing.phone",
+      "transform": "text",
+      "confidence": "verified-fixture",
+      "notes": "Excel guard apostrophe stripped."
+    },
+    {
+      "path": "Shipping Name",
+      "canon": "shipping_.name",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping Company",
+      "canon": "shipping_.company",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping Address1",
+      "canon": "shipping_.address1",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping Address2",
+      "canon": "shipping_.address2",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping City",
+      "canon": "shipping_.city",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping Province",
+      "canon": "shipping_.province+shipping_.provinceCode",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping Country",
+      "canon": "shipping_.country",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping Zip",
+      "canon": "shipping_.zip",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Shipping Phone",
+      "canon": "shipping_.phone",
+      "transform": "text",
+      "confidence": "verified-fixture",
+      "notes": "Excel guard apostrophe stripped."
+    }
+  ],
+  "invariantsExpected": [
+    "One row per line item; rows sharing a Name are one order; order-level fields on the first row"
+  ],
+  "legacy": {
+    "formatId": "shopify_orders",
+    "platform": "shopify",
+    "entity": "orders"
+  },
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "seed:core/src/detect.ts:SIGS",
+      "origin": "reference",
+      "diff": [
+        "signature moved from code to data (Phase 5.3)",
+        "One row per line item; order-level Name + Lineitem name."
+      ]
+    },
+    {
+      "at": "2026-10-04T00:00:00.000Z",
+      "op": "enrich",
+      "from": "core/src/orders.ts parseShopifyOrders + mapping.ts SOURCE_FIELDS.shopify_orders",
+      "origin": "reference",
+      "diff": [
+        "Phase 2 Lot 3: full column map + row structure as data; undeclared columns preserved, declared ones traced"
+      ]
+    }
+  ]
+}

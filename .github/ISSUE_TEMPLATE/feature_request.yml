@@ -1,0 +1,22 @@
+name: Idée / Amélioration
+description: Proposer une fonctionnalité ou un nouveau format
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Besoin
+      description: Quel problème voulez-vous résoudre ?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Idée de solution (facultatif)
+  - type: checkboxes
+    id: ok
+    attributes:
+      label: Rappel
+      options:
+        - label: Je n'ai joint aucune clé ni donnée personnelle.
+          required: true

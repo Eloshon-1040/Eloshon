@@ -1,0 +1,188 @@
+[
+  {
+    "firstName": "Test",
+    "lastName": "Customer 1",
+    "email": "customer1@example.test",
+    "phone": "+32 000 00 00 00",
+    "address": {
+      "company": "Test Co",
+      "address1": "1 Test Street",
+      "address2": "",
+      "city": "Testville",
+      "province": "",
+      "provinceCode": "",
+      "country": "BE",
+      "zip": "1000",
+      "phone": "+32 000 00 00 00",
+      "firstName": "Test",
+      "lastName": "Customer 1",
+      "label": "residential",
+      "sourceId": "1"
+    },
+    "shipping": null,
+    "acceptsEmail": null,
+    "acceptsSms": null,
+    "note": "",
+    "tags": [],
+    "taxExempt": false,
+    "addresses": [
+      {
+        "company": "Test Co",
+        "address1": "1 Test Street",
+        "address2": "",
+        "city": "Testville",
+        "province": "",
+        "provinceCode": "",
+        "country": "BE",
+        "zip": "1000",
+        "phone": "+32 000 00 00 00",
+        "firstName": "Test",
+        "lastName": "Customer 1",
+        "label": "residential",
+        "sourceId": "1"
+      },
+      {
+        "company": "Test Co",
+        "address1": "1 Test Street",
+        "address2": "",
+        "city": "Testville",
+        "province": "",
+        "provinceCode": "",
+        "country": "BE",
+        "zip": "1000",
+        "phone": "+32 000 00 00 00",
+        "firstName": "Test",
+        "lastName": "Customer 2",
+        "label": "residential",
+        "sourceId": "2"
+      }
+    ],
+    "identity": {
+      "sourceId": "1",
+      "timestamps": {
+        "created": "2026-09-21T18:52:18.000Z",
+        "modified": "2026-09-21T18:53:45.000Z"
+      }
+    },
+    "company": {
+      "name": "Test Co"
+    },
+    "group": {
+      "ref": "1"
+    },
+    "sourceExtension": {
+      "bigcommerce": {
+        "address_count": 2,
+        "accepts_product_review_abandoned_cart_emails": true,
+        "consent": {
+          "allow": [
+            "analytics",
+            "functional",
+            "targeting"
+          ],
+          "deny": []
+        },
+        "_consent": {
+          "allow": [
+            "analytics",
+            "functional",
+            "targeting"
+          ],
+          "deny": [],
+          "updated_at": "2026-09-21T21:02:34Z"
+        },
+        "tax_exempt_category": "",
+        "store_credit_amounts": [
+          {
+            "amount": 12
+          }
+        ],
+        "origin_channel_id": 1
+      }
+    },
+    "provenance": {
+      "email": {
+        "platform": "bigcommerce",
+        "sourceField": "email",
+        "sourceValue": "customer1@example.test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "firstName": {
+        "platform": "bigcommerce",
+        "sourceField": "first_name",
+        "sourceValue": "Test",
+        "transform": "text",
+        "method": "exact"
+      },
+      "lastName": {
+        "platform": "bigcommerce",
+        "sourceField": "last_name",
+        "sourceValue": "Customer 1",
+        "transform": "text",
+        "method": "exact"
+      },
+      "phone": {
+        "platform": "bigcommerce",
+        "sourceField": "phone",
+        "sourceValue": "+32 000 00 00 00",
+        "transform": "text",
+        "method": "exact"
+      },
+      "address": {
+        "platform": "bigcommerce",
+        "sourceField": "addresses",
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "addresses": {
+        "platform": "bigcommerce",
+        "sourceField": "addresses",
+        "transform": "address_from",
+        "method": "exact"
+      },
+      "identity.sourceId": {
+        "platform": "bigcommerce",
+        "sourceField": "id",
+        "sourceValue": 1,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "identity.timestamps": {
+        "platform": "bigcommerce",
+        "sourceField": "date_created + date_modified",
+        "sourceValue": "2026-09-21T18:52:18Z",
+        "transform": "timestamps",
+        "method": "exact"
+      },
+      "company.name": {
+        "platform": "bigcommerce",
+        "sourceField": "company",
+        "sourceValue": "Test Co",
+        "transform": "text",
+        "method": "exact"
+      },
+      "group.ref": {
+        "platform": "bigcommerce",
+        "sourceField": "customer_group_id",
+        "sourceValue": 1,
+        "transform": "string_id",
+        "method": "exact"
+      },
+      "note": {
+        "platform": "bigcommerce",
+        "sourceField": "notes",
+        "sourceValue": "",
+        "transform": "text",
+        "method": "exact"
+      },
+      "taxExempt": {
+        "platform": "bigcommerce",
+        "sourceField": "tax_exempt_category",
+        "sourceValue": "",
+        "transform": "is_set",
+        "method": "exact"
+      }
+    }
+  }
+]

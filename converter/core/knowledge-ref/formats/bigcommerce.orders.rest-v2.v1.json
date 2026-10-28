@@ -1,0 +1,1295 @@
+{
+  "schemaVersion": 1,
+  "id": "bigcommerce.orders.rest-v2.v1",
+  "displayName": "BigCommerce Orders (REST v2 + sub-resources)",
+  "provenance": "native-platform",
+  "medium": "json-api",
+  "platformHint": "bigcommerce",
+  "entity": "orders",
+  "version": "bc-v2",
+  "signatures": [
+    {
+      "kind": "json-shape",
+      "requiredPaths": [
+        "id",
+        "status_id",
+        "payment_status",
+        "total_inc_tax",
+        "billing_address",
+        "is_tax_inclusive_pricing"
+      ],
+      "hintPaths": [
+        "_products",
+        "_transactions",
+        "_shipping_addresses",
+        "order_source",
+        "staff_notes"
+      ]
+    }
+  ],
+  "structure": {
+    "unit": "order",
+    "items": {
+      "inlinePath": "_products",
+      "keyedBy": "id"
+    },
+    "companions": {
+      "_products": {
+        "route": "GET /v2/orders/{id}/products (inlined as _products at capture)",
+        "keyedByParent": false
+      },
+      "_shipping_addresses": {
+        "route": "GET /v2/orders/{id}/shipping_addresses (inlined)",
+        "keyedByParent": false
+      },
+      "_coupons": {
+        "route": "GET /v2/orders/{id}/coupons (inlined)",
+        "keyedByParent": false
+      },
+      "_transactions": {
+        "route": "GET /v3/orders/{id}/transactions (inlined; credit_card reduced to card_type, cvv_result / payment_instrument_token stripped at capture)",
+        "keyedByParent": false
+      },
+      "_refunds": {
+        "route": "GET /v3/orders/{id}/payment_actions/refunds (inlined as _refunds)",
+        "keyedByParent": false
+      }
+    }
+  },
+  "invariantsExpected": [
+    "id IS the order number (no separate display number); the target never receives it as its own sequence (7.4)",
+    "status_id / status are the merchant-visible state; payment_status the financial one; a transaction with test=true marks a sandbox payment",
+    "every amount exists ex_tax / inc_tax / tax; is_tax_inclusive_pricing is the order-level flag",
+    "products / shipping_addresses / coupons / fees / consignments are URL stubs on the order: captured as _products / _shipping_addresses / _coupons / _transactions",
+    "customer_id 0 = guest; is_email_opt_in is an order-time checkbox WITHOUT timestamp (not a customer consent)",
+    "dates are RFC 2822 with zone"
+  ],
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "live:bigcommerce-test:2026-09-21",
+      "origin": "reference",
+      "diff": [
+        "Phase 7.6: full field map from the live trial store (2 orders, one paid / completed, one incomplete with a test transaction): transactions → payments (7.2), test orders flagged"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "path": "id",
+      "canon": "numbering.sourceNumber",
+      "transform": "string_id",
+      "confidence": "verified-live",
+      "notes": "BigCommerce shows the id as the order number. Immutable reference on the target (7.4)."
+    },
+    {
+      "path": "id",
+      "canon": "numbering.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "id",
+      "canon": "identity.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "external_order_id",
+      "canon": "sourceExtension.bigcommerce.external_order_id",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "external_id",
+      "canon": "sourceExtension.bigcommerce.external_id",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "external_source",
+      "canon": "sourceExtension.bigcommerce.external_source",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "external_merchant_id",
+      "canon": "sourceExtension.bigcommerce.external_merchant_id",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "ebay_order_id",
+      "canon": "sourceExtension.bigcommerce.ebay_order_id",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "status",
+      "canon": "status.sourceState",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "status_id",
+      "canon": "sourceExtension.bigcommerce.status_id",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "custom_status",
+      "canon": "sourceExtension.bigcommerce.custom_status",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "status_id",
+      "canon": "status.lifecycle",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "0": "draft",
+          "1": "open",
+          "2": "closed",
+          "3": "open",
+          "4": "closed",
+          "5": "cancelled",
+          "6": "cancelled",
+          "7": "open",
+          "8": "open",
+          "9": "open",
+          "10": "closed",
+          "11": "open",
+          "12": "open",
+          "13": "open",
+          "14": "closed"
+        },
+        "default": "unknown"
+      },
+      "confidence": "verified-live",
+      "notes": "Default status ids (Incomplete 0 … Partially Refunded 14)."
+    },
+    {
+      "path": "status_id",
+      "canon": "status.fulfillment",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "2": "fulfilled",
+          "3": "partial",
+          "10": "fulfilled"
+        },
+        "default": "unfulfilled"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "payment_status",
+      "canon": "status.financial",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "paid": "paid",
+          "authorized": "authorized",
+          "captured": "paid",
+          "partially_refunded": "partially_refunded",
+          "refunded": "refunded",
+          "void": "voided",
+          "pending": "pending",
+          "declined": "pending",
+          "": "unknown"
+        },
+        "default": "unknown"
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "currency_code",
+      "canon": "currency",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "currency_exchange_rate",
+      "canon": "amounts.exchangeRate",
+      "transform": "float",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "currency_id",
+      "canon": "sourceExtension.bigcommerce.currency_id",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "default_currency_id",
+      "canon": "sourceExtension.bigcommerce.default_currency_id",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "default_currency_code",
+      "canon": "sourceExtension.bigcommerce.default_currency_code",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "store_default_currency_code",
+      "canon": "sourceExtension.bigcommerce.store_default_currency_code",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "store_default_to_transactional_exchange_rate",
+      "canon": "sourceExtension.bigcommerce.store_default_to_transactional_exchange_rate",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "is_tax_inclusive_pricing",
+      "canon": "amounts.taxIncluded",
+      "transform": "bool",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "subtotal_inc_tax",
+      "canon": "amounts.subtotal",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "subtotal_ex_tax",
+      "canon": "sourceExtension.bigcommerce.subtotal_ex_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "subtotal_tax",
+      "canon": "sourceExtension.bigcommerce.subtotal_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shipping_cost_inc_tax",
+      "canon": "amounts.shipping",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shipping_cost_tax",
+      "canon": "amounts.shippingTax",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "base_shipping_cost",
+      "canon": "sourceExtension.bigcommerce.base_shipping_cost",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shipping_cost_ex_tax",
+      "canon": "sourceExtension.bigcommerce.shipping_cost_ex_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shipping_cost_tax_class_id",
+      "canon": "sourceExtension.bigcommerce.shipping_cost_tax_class_id",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_inc_tax",
+      "canon": "amounts.total",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_ex_tax",
+      "canon": "sourceExtension.bigcommerce.total_ex_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "total_tax",
+      "canon": "amounts.taxes",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "discount_amount",
+      "canon": "amounts.discounts",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "coupon_discount",
+      "canon": "sourceExtension.bigcommerce.coupon_discount",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "refunded_amount",
+      "canon": "amounts.refunded",
+      "transform": "money",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "store_credit_amount",
+      "canon": "sourceExtension.bigcommerce.store_credit_amount",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "gift_certificate_amount",
+      "canon": "sourceExtension.bigcommerce.gift_certificate_amount",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "handling_cost_inc_tax",
+      "canon": "fees[]",
+      "transform": "object_map",
+      "args": {
+        "fromSource": true,
+        "require": [
+          "amount"
+        ],
+        "fields": {
+          "name": {
+            "value": "handling"
+          },
+          "amount": {
+            "path": "handling_cost_inc_tax",
+            "as": "number",
+            "skipZero": true
+          },
+          "tax": {
+            "path": "handling_cost_tax",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "handling_cost_tax"
+      ]
+    },
+    {
+      "path": "wrapping_cost_inc_tax",
+      "canon": "fees[]",
+      "transform": "object_map",
+      "args": {
+        "fromSource": true,
+        "require": [
+          "amount"
+        ],
+        "fields": {
+          "name": {
+            "value": "gift wrapping"
+          },
+          "amount": {
+            "path": "wrapping_cost_inc_tax",
+            "as": "number",
+            "skipZero": true
+          },
+          "tax": {
+            "path": "wrapping_cost_tax",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "consumes": [
+        "wrapping_cost_tax"
+      ]
+    },
+    {
+      "path": "base_handling_cost",
+      "canon": "sourceExtension.bigcommerce.base_handling_cost",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "handling_cost_ex_tax",
+      "canon": "sourceExtension.bigcommerce.handling_cost_ex_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "handling_cost_tax_class_id",
+      "canon": "sourceExtension.bigcommerce.handling_cost_tax_class_id",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "base_wrapping_cost",
+      "canon": "sourceExtension.bigcommerce.base_wrapping_cost",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "wrapping_cost_ex_tax",
+      "canon": "sourceExtension.bigcommerce.wrapping_cost_ex_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "wrapping_cost_tax_class_id",
+      "canon": "sourceExtension.bigcommerce.wrapping_cost_tax_class_id",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "_transactions",
+      "canon": "payments",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "kind": {
+            "path": "event",
+            "as": "map",
+            "map": {
+              "purchase": "sale",
+              "authorization": "authorization",
+              "capture": "capture",
+              "refund": "refund",
+              "void": "void",
+              "pending": "pending"
+            },
+            "default": "unknown"
+          },
+          "status": {
+            "path": "status",
+            "as": "map",
+            "map": {
+              "ok": "success",
+              "error": "failed",
+              "pending": "pending",
+              "cancelled": "cancelled"
+            },
+            "default": "unknown"
+          },
+          "amount": {
+            "path": "amount",
+            "as": "number"
+          },
+          "currency": "currency",
+          "method": "method",
+          "gateway": "gateway",
+          "providerRef": "gateway_transaction_id",
+          "at": {
+            "path": "date_created",
+            "as": "date"
+          },
+          "test": {
+            "path": "test",
+            "as": "bool"
+          },
+          "instrument.type": {
+            "path": "method",
+            "as": "map",
+            "map": {
+              "credit_card": "card",
+              "gift_certificate": "gift_card",
+              "store_credit": "store_credit",
+              "offline": "other",
+              "custom": "other",
+              "manual": "other"
+            },
+            "default": "other"
+          },
+          "instrument.brand": "credit_card.card_type"
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "Aggregated facts. credit_card is reduced to card_type at capture (7.7: iin / last4 / expiry stripped); avs/cvv results and the instrument token never reach this entry."
+    },
+    {
+      "path": "_transactions",
+      "canon": "test",
+      "transform": "pick_where",
+      "args": {
+        "where": {
+          "test": true
+        },
+        "pick": "test"
+      },
+      "confidence": "verified-live",
+      "notes": "Any test transaction → a test order (excluded by default, decision 4)."
+    },
+    {
+      "path": "_refunds",
+      "canon": "refunds",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "sourceId": {
+            "path": "id",
+            "as": "text"
+          },
+          "amount": {
+            "path": "total_amount",
+            "as": "number"
+          },
+          "reason": "reason",
+          "at": {
+            "path": "created",
+            "as": "date"
+          }
+        }
+      },
+      "confidence": "verified-live",
+      "notes": "GET /v3/orders/{id}/payment_actions/refunds (inlined as _refunds at capture). Declared from the v3 schema — [] on both live orders, unverified on real data."
+    },
+    {
+      "path": "payment_method",
+      "canon": "paymentMethod",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "payment_provider_id",
+      "canon": "sourceExtension.bigcommerce.payment_provider_id",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "credit_card_type",
+      "canon": "sourceExtension.bigcommerce.credit_card_type",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "billing_address",
+      "canon": "billing",
+      "transform": "address_from",
+      "args": {
+        "fields": {
+          "company": "company",
+          "address1": "street_1",
+          "address2": "street_2",
+          "city": "city",
+          "province": "state",
+          "country": "country_iso2",
+          "zip": "zip",
+          "phone": "phone"
+        },
+        "nameFrom": [
+          "first_name",
+          "last_name"
+        ]
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "billing_address.email",
+      "canon": "customerRef.email",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "_shipping_addresses",
+      "canon": "shipping_",
+      "transform": "address_from",
+      "args": {
+        "fields": {
+          "company": "company",
+          "address1": "street_1",
+          "address2": "street_2",
+          "city": "city",
+          "province": "state",
+          "country": "country_iso2",
+          "zip": "zip",
+          "phone": "phone"
+        },
+        "nameFrom": [
+          "first_name",
+          "last_name"
+        ]
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "_shipping_addresses",
+      "canon": "shippingLines",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "method": "shipping_method",
+          "amount": {
+            "path": "cost_inc_tax",
+            "as": "number"
+          },
+          "tax": {
+            "path": "cost_tax",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "_coupons",
+      "canon": "discounts",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "code": "code",
+          "kind": {
+            "value": "code"
+          },
+          "type": {
+            "path": "type",
+            "as": "map",
+            "map": {
+              "0": "amount",
+              "1": "percentage",
+              "2": "amount",
+              "3": "amount",
+              "4": "amount"
+            }
+          },
+          "amount": {
+            "path": "discount",
+            "as": "number"
+          }
+        }
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "customer_id",
+      "canon": "customerRef.sourceId",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "customer_id",
+      "canon": "customerRef.isGuest",
+      "transform": "equals_map",
+      "args": {
+        "value": 0,
+        "then": true,
+        "else": false
+      },
+      "confidence": "verified-live"
+    },
+    {
+      "path": "customer_locale",
+      "canon": "locale",
+      "transform": "text_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "order_source",
+      "canon": "source",
+      "transform": "text_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "channel_id",
+      "canon": "channel",
+      "transform": "string_id",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "customer_message",
+      "canon": "note",
+      "transform": "text",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "staff_notes",
+      "canon": "sourceExtension.bigcommerce.staff_notes",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "is_email_opt_in",
+      "canon": "sourceExtension.bigcommerce.is_email_opt_in",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "date_created",
+      "canon": "timestamps.created",
+      "transform": "date_iso",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "date_modified",
+      "canon": "timestamps.updated",
+      "transform": "date_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "date_shipped",
+      "canon": "sourceExtension.bigcommerce.date_shipped",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "items_total",
+      "canon": "sourceExtension.bigcommerce.items_total",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "items_shipped",
+      "canon": "sourceExtension.bigcommerce.items_shipped",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "order_is_digital",
+      "canon": "sourceExtension.bigcommerce.order_is_digital",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "tax_provider_id",
+      "canon": "sourceExtension.bigcommerce.tax_provider_id",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "cart_id",
+      "canon": "sourceExtension.bigcommerce.cart_id",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "is_deleted",
+      "canon": "sourceExtension.bigcommerce.is_deleted",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "shipping_address_count",
+      "canon": "sourceExtension.bigcommerce.shipping_address_count",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "backorder_shipping_expectation_message",
+      "canon": "sourceExtension.bigcommerce.backorder_shipping_expectation_message",
+      "transform": "copy_present",
+      "confidence": "verified-live"
+    },
+    {
+      "path": "ip_address",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "personal data"
+    },
+    {
+      "path": "ip_address_v6",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "personal data"
+    },
+    {
+      "path": "geoip_country",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "derived from the IP"
+    },
+    {
+      "path": "geoip_country_iso2",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "derived from the IP"
+    },
+    {
+      "path": "fees",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "URL stub"
+    },
+    {
+      "path": "consignments",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "URL stub"
+    },
+    {
+      "path": "products",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "URL stub (captured as _products)"
+    },
+    {
+      "path": "shipping_addresses",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "URL stub (captured as _shipping_addresses)"
+    },
+    {
+      "path": "coupons",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "notes": "URL stub (captured as _coupons)"
+    },
+    {
+      "path": "name",
+      "canon": "items[].name",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "sku",
+      "canon": "items[].sku",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "quantity",
+      "canon": "items[].quantity",
+      "transform": "int",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "price_inc_tax",
+      "canon": "items[].unitPrice",
+      "transform": "money",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "base_price",
+      "canon": "items[].unitPriceBeforeDiscount",
+      "transform": "money_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "total_inc_tax",
+      "canon": "items[].total",
+      "transform": "money",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "total_tax",
+      "canon": "items[].totalTax",
+      "transform": "money",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "upc",
+      "canon": "items[].identifiers.upc",
+      "transform": "text",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_id",
+      "canon": "items[].productRef",
+      "transform": "string_id",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "variant_id",
+      "canon": "items[].variantRef",
+      "transform": "id_or_none",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "type",
+      "canon": "items[].kind",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "physical": "product",
+          "digital": "product",
+          "giftcertificate": "gift_card"
+        },
+        "default": "product"
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "type",
+      "canon": "items[].requiresShipping",
+      "transform": "equals_map",
+      "args": {
+        "value": "physical",
+        "then": true,
+        "else": false
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "product_options",
+      "canon": "items[].options",
+      "transform": "objects_map",
+      "args": {
+        "fields": {
+          "name": "display_name",
+          "value": "display_value"
+        }
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "quantity_refunded",
+      "canon": "items[].refunded.quantity",
+      "transform": "int_or_null",
+      "args": {
+        "nullWhen": 0
+      },
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "refund_amount",
+      "canon": "items[].refunded.amount",
+      "transform": "money_nonzero",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "id",
+      "canon": "sourceExtension.bigcommerce.line_id",
+      "transform": "string_id",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "name_customer",
+      "canon": "sourceExtension.bigcommerce.name_customer",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "name_merchant",
+      "canon": "sourceExtension.bigcommerce.name_merchant",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "price_ex_tax",
+      "canon": "sourceExtension.bigcommerce.price_ex_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "price_tax",
+      "canon": "sourceExtension.bigcommerce.price_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "base_total",
+      "canon": "sourceExtension.bigcommerce.base_total",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "total_ex_tax",
+      "canon": "sourceExtension.bigcommerce.total_ex_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "weight",
+      "canon": "sourceExtension.bigcommerce.weight",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "width",
+      "canon": "sourceExtension.bigcommerce.width",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "height",
+      "canon": "sourceExtension.bigcommerce.height",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "depth",
+      "canon": "sourceExtension.bigcommerce.depth",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "base_cost_price",
+      "canon": "sourceExtension.bigcommerce.base_cost_price",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "cost_price_inc_tax",
+      "canon": "sourceExtension.bigcommerce.cost_price_inc_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "cost_price_ex_tax",
+      "canon": "sourceExtension.bigcommerce.cost_price_ex_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "cost_price_tax",
+      "canon": "sourceExtension.bigcommerce.cost_price_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "is_refunded",
+      "canon": "sourceExtension.bigcommerce.is_refunded",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "return_id",
+      "canon": "sourceExtension.bigcommerce.return_id",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "wrapping_id",
+      "canon": "sourceExtension.bigcommerce.wrapping_id",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "wrapping_name",
+      "canon": "sourceExtension.bigcommerce.wrapping_name",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "base_wrapping_cost",
+      "canon": "sourceExtension.bigcommerce.base_wrapping_cost",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "wrapping_cost_ex_tax",
+      "canon": "sourceExtension.bigcommerce.wrapping_cost_ex_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "wrapping_cost_inc_tax",
+      "canon": "sourceExtension.bigcommerce.wrapping_cost_inc_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "wrapping_cost_tax",
+      "canon": "sourceExtension.bigcommerce.wrapping_cost_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "wrapping_message",
+      "canon": "sourceExtension.bigcommerce.wrapping_message",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "quantity_shipped",
+      "canon": "sourceExtension.bigcommerce.quantity_shipped",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "quantity_backordered",
+      "canon": "sourceExtension.bigcommerce.quantity_backordered",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "backorder_message",
+      "canon": "sourceExtension.bigcommerce.backorder_message",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "event_name",
+      "canon": "sourceExtension.bigcommerce.event_name",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "event_date",
+      "canon": "sourceExtension.bigcommerce.event_date",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "fixed_shipping_cost",
+      "canon": "sourceExtension.bigcommerce.fixed_shipping_cost",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "option_set_id",
+      "canon": "sourceExtension.bigcommerce.option_set_id",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "parent_order_product_id",
+      "canon": "sourceExtension.bigcommerce.parent_order_product_id",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "is_bundled_product",
+      "canon": "sourceExtension.bigcommerce.is_bundled_product",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "bin_picking_number",
+      "canon": "sourceExtension.bigcommerce.bin_picking_number",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "external_id",
+      "canon": "sourceExtension.bigcommerce.external_id",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "fulfillment_source",
+      "canon": "sourceExtension.bigcommerce.fulfillment_source",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "brand",
+      "canon": "sourceExtension.bigcommerce.brand",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "gift_certificate_id",
+      "canon": "sourceExtension.bigcommerce.gift_certificate_id",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "applied_discounts",
+      "canon": "sourceExtension.bigcommerce.applied_discounts",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "configurable_fields",
+      "canon": "sourceExtension.bigcommerce.configurable_fields",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "discounted_total_inc_tax",
+      "canon": "sourceExtension.bigcommerce.discounted_total_inc_tax",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "order_pickup_method_id",
+      "canon": "sourceExtension.bigcommerce.order_pickup_method_id",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "order_address_id",
+      "canon": "sourceExtension.bigcommerce.order_address_id",
+      "transform": "copy_present",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "order_id",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "ebay_item_id",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    },
+    {
+      "path": "ebay_transaction_id",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-live",
+      "scope": "item"
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "id": "shopify.products.csv.v1",
+  "displayName": "Shopify products export (CSV)",
+  "provenance": "native-platform",
+  "medium": "csv",
+  "platformHint": "shopify",
+  "entity": "products",
+  "signatures": [
+    {
+      "kind": "csv-header-set",
+      "required": [
+        "Handle",
+        "Variant Price"
+      ],
+      "hints": [
+        "Option1 Name",
+        "Variant SKU",
+        "Image Src"
+      ]
+    }
+  ],
+  "structure": {
+    "rows": {
+      "groupBy": {
+        "column": "Handle"
+      },
+      "head": {
+        "firstWhere": {
+          "column": "Title",
+          "nonEmpty": true
+        }
+      },
+      "children": {
+        "where": {
+          "anyOf": [
+            {
+              "column": "Variant Price",
+              "nonEmpty": true
+            },
+            {
+              "allOf": [
+                {
+                  "column": "Option1 Value",
+                  "nonEmpty": true
+                },
+                {
+                  "column": "Option1 Value",
+                  "notEquals": "Default Title"
+                }
+              ]
+            }
+          ]
+        },
+        "selfWhenNone": true
+      }
+    }
+  },
+  "fields": [
+    {
+      "path": "Handle",
+      "canon": "handle",
+      "transform": "text",
+      "confidence": "verified-fixture",
+      "notes": "Also the grouping key of the product's rows; empty → slug of the title."
+    },
+    {
+      "path": "Title",
+      "canon": "title",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Body (HTML)",
+      "canon": "bodyHtml",
+      "transform": "html",
+      "confidence": "verified-fixture",
+      "samplePolicy": "hash-only"
+    },
+    {
+      "path": "Vendor",
+      "canon": "vendor",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Type",
+      "canon": "productType",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Tags",
+      "canon": "tags",
+      "transform": "list",
+      "args": {
+        "sep": ","
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Published",
+      "canon": "published",
+      "transform": "bool",
+      "args": {
+        "default": true
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Status",
+      "canon": "status",
+      "transform": "enum_map",
+      "args": {
+        "map": {
+          "draft": "draft",
+          "archived": "archived"
+        },
+        "default": "active"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Product Category",
+      "canon": "categories",
+      "transform": "list",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "SEO Title",
+      "canon": "seoTitle",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "SEO Description",
+      "canon": "seoDescription",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Option1 Name",
+      "inputs": [
+        "Option1 Name",
+        "Option2 Name",
+        "Option3 Name"
+      ],
+      "canon": "options",
+      "transform": "options_from_attributes",
+      "confidence": "verified-fixture",
+      "notes": "Names from the product row ('Title' is Shopify's no-option sentinel); values collected from the variants."
+    },
+    {
+      "path": "Option1 Value",
+      "inputs": [
+        "Option1 Value",
+        "Option2 Value",
+        "Option3 Value"
+      ],
+      "canon": "variants[].optionValues",
+      "transform": "option_values_from_attributes",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Variant SKU",
+      "canon": "variants[].sku",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Variant Price",
+      "canon": "variants[].price",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Variant Compare At Price",
+      "canon": "variants[].compareAtPrice",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Cost per item",
+      "canon": "variants[].cost",
+      "transform": "money",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Variant Barcode",
+      "canon": "variants[].barcode",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Variant Grams",
+      "canon": "variants[].grams",
+      "transform": "weight_to_grams",
+      "args": {
+        "unit": "g"
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Variant Requires Shipping",
+      "canon": "variants[].requiresShipping",
+      "transform": "bool",
+      "args": {
+        "default": true
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Variant Taxable",
+      "canon": "variants[].taxable",
+      "transform": "bool",
+      "args": {
+        "default": true
+      },
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Variant Inventory Qty",
+      "canon": "variants[].inventoryQty",
+      "transform": "float",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Variant Image",
+      "canon": "variants[].imageSrc",
+      "transform": "text",
+      "confidence": "verified-fixture"
+    },
+    {
+      "path": "Image Src",
+      "inputs": [
+        "Image Src",
+        "Image Position",
+        "Image Alt Text"
+      ],
+      "canon": "images",
+      "transform": "images_from_urls",
+      "confidence": "verified-fixture",
+      "notes": "One image per row of the product, ordered by position."
+    },
+    {
+      "path": "<label> (product.metafields.<namespace>.<key>)",
+      "pathPattern": "[(]product[.]metafields[.][^)]+[)]$",
+      "canon": "metafields",
+      "transform": "metafield_pair",
+      "confidence": "verified-fixture",
+      "notes": "One column per metafield; the namespace is kept (P2)."
+    }
+  ],
+  "invariantsExpected": [
+    "Rows sharing a Handle are one product; product fields on the first titled row; a row with a price or a real option value is a variant; every row may add one image"
+  ],
+  "legacy": {
+    "formatId": "shopify_products",
+    "platform": "shopify",
+    "entity": "products"
+  },
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "seed:core/src/detect.ts:SIGS",
+      "origin": "reference",
+      "diff": [
+        "signature moved from code to data (Phase 5.3)",
+        "Handle + Variant Price = the export spine."
+      ]
+    },
+    {
+      "at": "2026-10-04T00:00:00.000Z",
+      "op": "enrich",
+      "from": "core/src/products.ts parseShopifyProducts + mapping.ts SOURCE_FIELDS.shopify_products",
+      "origin": "reference",
+      "diff": [
+        "Phase 2 Lot 3: full column map + row structure as data; undeclared columns preserved, declared ones traced"
+      ]
+    }
+  ]
+}

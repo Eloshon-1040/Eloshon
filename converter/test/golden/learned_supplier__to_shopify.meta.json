@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "sourceFormat": "supplier.fournisseur-x.v1",
+  "targetFormat": "shopify_products",
+  "counts": {
+    "inputUnits": 3,
+    "outputUnits": 3,
+    "failedUnits": 0,
+    "outputRows": 3
+  },
+  "errors": [],
+  "losses": [
+    {
+      "code": "loss_shopify_category_taxonomy",
+      "params": {
+        "count": 3,
+        "extra": 0
+      }
+    }
+  ],
+  "warnings": [],
+  "questions": [],
+  "hasRedirects": false
+}

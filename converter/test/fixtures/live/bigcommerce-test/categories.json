@@ -1,0 +1,128 @@
+[
+  {
+    "category_id": 18,
+    "parent_id": 0,
+    "tree_id": 1,
+    "name": "Bath",
+    "description": "",
+    "views": 0,
+    "sort_order": 1,
+    "page_title": "",
+    "search_keywords": "",
+    "meta_keywords": [],
+    "meta_description": "",
+    "layout_file": "category_with_facets.html",
+    "is_visible": true,
+    "default_product_sort": "use_store_settings",
+    "url": {
+      "path": "/bath/",
+      "is_customized": false
+    },
+    "image_url": ""
+  },
+  {
+    "category_id": 19,
+    "parent_id": 0,
+    "tree_id": 1,
+    "name": "Garden",
+    "description": "",
+    "views": 0,
+    "sort_order": 2,
+    "page_title": "",
+    "search_keywords": "",
+    "meta_keywords": [],
+    "meta_description": "",
+    "layout_file": "category_with_facets.html",
+    "is_visible": true,
+    "default_product_sort": "use_store_settings",
+    "url": {
+      "path": "/garden/",
+      "is_customized": false
+    },
+    "image_url": ""
+  },
+  {
+    "category_id": 20,
+    "parent_id": 0,
+    "tree_id": 1,
+    "name": "Publications",
+    "description": "",
+    "views": 0,
+    "sort_order": 4,
+    "page_title": "",
+    "search_keywords": "",
+    "meta_keywords": [],
+    "meta_description": "",
+    "layout_file": "category_with_facets.html",
+    "is_visible": true,
+    "default_product_sort": "use_store_settings",
+    "url": {
+      "path": "/publications/",
+      "is_customized": false
+    },
+    "image_url": ""
+  },
+  {
+    "category_id": 21,
+    "parent_id": 0,
+    "tree_id": 1,
+    "name": "Kitchen",
+    "description": "",
+    "views": 0,
+    "sort_order": 3,
+    "page_title": "",
+    "search_keywords": "",
+    "meta_keywords": [],
+    "meta_description": "",
+    "layout_file": "category_with_facets.html",
+    "is_visible": true,
+    "default_product_sort": "use_store_settings",
+    "url": {
+      "path": "/kitchen/",
+      "is_customized": false
+    },
+    "image_url": ""
+  },
+  {
+    "category_id": 22,
+    "parent_id": 0,
+    "tree_id": 1,
+    "name": "Utility",
+    "description": "",
+    "views": 0,
+    "sort_order": 5,
+    "page_title": "",
+    "search_keywords": "",
+    "meta_keywords": [],
+    "meta_description": "",
+    "layout_file": "category_with_facets.html",
+    "is_visible": true,
+    "default_product_sort": "use_store_settings",
+    "url": {
+      "path": "/utility/",
+      "is_customized": false
+    },
+    "image_url": ""
+  },
+  {
+    "category_id": 23,
+    "parent_id": 0,
+    "tree_id": 1,
+    "name": "Shop All",
+    "description": "",
+    "views": 0,
+    "sort_order": 0,
+    "page_title": "",
+    "search_keywords": "",
+    "meta_keywords": [],
+    "meta_description": "",
+    "layout_file": "category_with_facets.html",
+    "is_visible": true,
+    "default_product_sort": "use_store_settings",
+    "url": {
+      "path": "/shop-all/",
+      "is_customized": false
+    },
+    "image_url": ""
+  }
+]

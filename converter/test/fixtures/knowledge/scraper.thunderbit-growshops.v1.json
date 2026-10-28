@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "id": "scraper.thunderbit-growshops.v1",
+  "displayName": "Export de scraping générique (Thunderbit — growshops.fr)",
+  "provenance": "unknown",
+  "medium": "csv",
+  "platformHint": "eloshon",
+  "entity": "products",
+  "signatures": [
+    {
+      "kind": "structural-hash",
+      "hash": "052a96",
+      "columnsPreview": [
+        "Nom du produit",
+        "URL du produit",
+        "Image du produit",
+        "Prix (EUR)",
+        "Marque",
+        "Sous-catégorie",
+        "Débit d'air (m3/h)",
+        "Description du produit",
+        "Longueur (mm)",
+        "Diamètre (mm)",
+        "Poids (kg)",
+        "Durée de vie (mois)",
+        "Accessoires inclus",
+        "Vendeur",
+        "Catégorie",
+        "Slug"
+      ]
+    }
+  ],
+  "structure": {
+    "unit": "product",
+    "variants": {
+      "selfWhenNone": true
+    }
+  },
+  "routing": {
+    "platform": "eloshon",
+    "entity": "products"
+  },
+  "fields": [
+    {
+      "path": "Nom du produit",
+      "canon": "title",
+      "transform": "text",
+      "confidence": "inferred",
+      "source": "semantic:auto(0.815)+user:confirmed"
+    },
+    {
+      "path": "Slug",
+      "canon": "handle",
+      "transform": "text",
+      "confidence": "inferred",
+      "source": "semantic:auto(0.915)+user:confirmed"
+    },
+    {
+      "path": "Description du produit",
+      "canon": "bodyHtml",
+      "transform": "html",
+      "confidence": "inferred",
+      "source": "semantic:suggest(0.604)+user:confirmed"
+    },
+    {
+      "path": "Prix (EUR)",
+      "canon": "variants[].price",
+      "transform": "money",
+      "confidence": "inferred",
+      "source": "semantic:suggest(0.657)+user:confirmed",
+      "when": "self"
+    },
+    {
+      "path": "Marque",
+      "canon": "vendor",
+      "transform": "text",
+      "confidence": "inferred",
+      "source": "semantic:auto(0.865)+user:confirmed",
+      "notes": "`Marque` is the brand (Winflex). The shop that sold it is the separate `Vendeur` column, kept as a metafield — mapping both to vendor would overwrite the brand."
+    },
+    {
+      "path": "Image du produit",
+      "canon": "images",
+      "transform": "images_from_urls",
+      "confidence": "inferred",
+      "source": "semantic:suggest(0.45)+user:confirmed",
+      "args": {
+        "sep": ","
+      },
+      "notes": "Thunderbit packs every rendition of the same photo (miniature_desktop / laptop / tablet / mobile) into one comma-separated cell."
+    },
+    {
+      "path": "Poids (kg)",
+      "canon": "variants[].grams",
+      "transform": "weight_to_grams",
+      "confidence": "inferred",
+      "source": "semantic:auto(0.915)+user:confirmed",
+      "args": {
+        "unit": "kg"
+      },
+      "when": "self"
+    },
+    {
+      "path": "Longueur (mm)",
+      "canon": "variants[].lengthCm",
+      "transform": "length_to_cm",
+      "confidence": "inferred",
+      "source": "user:corrected",
+      "args": {
+        "unit": "mm"
+      },
+      "when": "self",
+      "notes": "The heuristic only offered a weak profile-only suggestion here (a bare integer column). Confirmed by the user AND given the explicit mm→cm conversion: mapping the raw 430 into a centimetre field would have produced a wrong-but-valid 430 cm."
+    },
+    {
+      "path": "Catégorie",
+      "canon": "categories",
+      "transform": "category_path_split",
+      "confidence": "inferred",
+      "source": "semantic:suggest(0.815)+user:confirmed",
+      "args": {
+        "sep": ">",
+        "listSep": ","
+      }
+    },
+    {
+      "path": "Sous-catégorie",
+      "canon": "categories",
+      "transform": "category_path_split",
+      "confidence": "inferred",
+      "source": "semantic:auto(0.815)+user:confirmed",
+      "args": {
+        "sep": ">",
+        "listSep": ","
+      }
+    },
+    {
+      "path": "Débit d'air (m3/h)",
+      "canon": "metafields[]",
+      "transform": "metafield_pair",
+      "confidence": "inferred",
+      "source": "user:corrected",
+      "args": {
+        "key": "debit_air_m3h",
+        "namespace": "scraper"
+      },
+      "notes": "Technical spec with no canon equivalent — preserved, never dropped."
+    },
+    {
+      "path": "Diamètre (mm)",
+      "canon": "metafields[]",
+      "transform": "metafield_pair",
+      "confidence": "inferred",
+      "source": "user:corrected",
+      "args": {
+        "key": "diametre_mm",
+        "namespace": "scraper"
+      },
+      "notes": "A diameter is not one of the canon length/width/height dimensions; kept verbatim with its unit in the key."
+    },
+    {
+      "path": "Durée de vie (mois)",
+      "canon": "metafields[]",
+      "transform": "metafield_pair",
+      "confidence": "inferred",
+      "source": "user:corrected",
+      "args": {
+        "key": "duree_de_vie_mois",
+        "namespace": "scraper"
+      }
+    },
+    {
+      "path": "Accessoires inclus",
+      "canon": "metafields[]",
+      "transform": "metafield_pair",
+      "confidence": "inferred",
+      "source": "user:corrected",
+      "args": {
+        "key": "accessoires_inclus",
+        "namespace": "scraper"
+      }
+    },
+    {
+      "path": "Vendeur",
+      "canon": "metafields[]",
+      "transform": "metafield_pair",
+      "confidence": "inferred",
+      "source": "user:corrected",
+      "args": {
+        "key": "vendeur_source",
+        "namespace": "scraper"
+      },
+      "notes": "The shop the page was scraped from (growshop.fr) — provenance, not the product's brand."
+    },
+    {
+      "path": "URL du produit",
+      "canon": "metafields[]",
+      "transform": "metafield_pair",
+      "confidence": "inferred",
+      "source": "user:corrected",
+      "args": {
+        "key": "url_source",
+        "namespace": "scraper"
+      },
+      "notes": "Scrape provenance: the exact page each row came from."
+    }
+  ],
+  "unknownFields": [],
+  "invariantsExpected": [],
+  "history": [
+    {
+      "at": "2026-09-22T00:00:00.000Z",
+      "op": "seed",
+      "from": "user:fixture",
+      "origin": "learned",
+      "diff": [
+        "learned from a generic scraping export with 16 columns: 10 mapped to canon, 6 preserved as metafields, 0 unknown",
+        "5 columns auto-detected by the semantic recogniser, 4 accepted from a suggestion, 7 corrected by the user"
+      ]
+    }
+  ]
+}

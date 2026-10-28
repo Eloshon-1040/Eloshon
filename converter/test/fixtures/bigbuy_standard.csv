@@ -1,0 +1,4 @@
+ID;NAME;DESCRIPTION;CATEGORY;PVD;PVP_BIGBUY;EAN13;WEIGHT;DEPTH;WIDTH;HEIGHT;STOCK;ATTRIBUTE1;VALUE1;ATTRIBUTE2;VALUE2;BRAND;INTRASTAT;IVA;IMAGE1;IMAGE2;IMAGE3
+S1001;Gourde inox 500ml;<p>Isotherme.</p>;201;4.20;9.90;8412345000019;0.30;7;7;22;340;Couleur;Argent;;;77;96170000;21;https://img.bigbuy.eu/s1001-1.jpg;https://img.bigbuy.eu/s1001-2.jpg;
+S1002;Écouteurs Bluetooth;<p>Sans fil.</p>;202;11.50;24.90;8412345000026;0.08;;;;120;;;;;77;;21;https://img.bigbuy.eu/s1002-1.jpg;;
+S1003;;<p>?</p>;999;1.00;2.00;;;;;;5;;;;;;;;https://img.bigbuy.eu/s1003.jpg;;

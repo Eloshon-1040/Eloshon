@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "id": "bigbuy.presta-categories.v1",
+  "displayName": "BigBuy categories file (companion to the PrestaShop-format catalogue)",
+  "provenance": "supplier",
+  "medium": "csv",
+  "platformHint": "bigbuy",
+  "entity": "categories",
+  "signatures": [
+    {
+      "kind": "csv-header-set",
+      "required": [
+        "ID",
+        "NAME",
+        "PARENT_CATEGORY",
+        "ROOT_CATEGORY"
+      ],
+      "separator": ";"
+    }
+  ],
+  "structure": {
+    "rows": {},
+    "companionOf": [
+      "bigbuy.standard.v1",
+      "bigbuy.presta-import.v1"
+    ]
+  },
+  "fields": [
+    {
+      "path": "ID",
+      "canon": null,
+      "transform": "ignore",
+      "confidence": "verified-fixture",
+      "notes": "Lookup key: the id the product files reference."
+    },
+    {
+      "path": "NAME",
+      "canon": "categories",
+      "transform": "category_paths_from_terms",
+      "confidence": "verified-fixture",
+      "notes": "The category name — a path segment."
+    },
+    {
+      "path": "PARENT_CATEGORY",
+      "canon": "categories",
+      "transform": "category_paths_from_terms",
+      "confidence": "verified-fixture",
+      "notes": "The parent by NAME; walked up to build the full path."
+    }
+  ],
+  "invariantsExpected": [
+    "A COMPANION file, never converted on its own: it resolves the product files' numeric category ids to 'Root > … > Leaf' paths (parents are named, not numbered)"
+  ],
+  "legacy": {
+    "formatId": "presta_categories",
+    "platform": "bigbuy",
+    "entity": "products"
+  },
+  "history": [
+    {
+      "at": "2026-09-21T00:00:00.000Z",
+      "op": "seed",
+      "from": "seed:core/src/detect.ts:SIGS",
+      "origin": "reference",
+      "diff": [
+        "signature moved from code to data (Phase 5.3)",
+        "Helper file, not a product file. Legacy routes it as products so the engine can pair it and refuse it as a main file."
+      ]
+    },
+    {
+      "at": "2026-10-04T00:00:00.000Z",
+      "op": "enrich",
+      "from": "core/src/bigbuy.ts parsePrestaCategories (companion lookup)",
+      "origin": "reference",
+      "diff": [
+        "Phase 2 Lot 3: full column map + row structure as data; undeclared columns preserved, declared ones traced"
+      ]
+    }
+  ]
+}
