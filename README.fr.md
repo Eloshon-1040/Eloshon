@@ -79,7 +79,7 @@ Un scraper qui n'exige pas un script écrit à la main pour chaque site.
 
 ## Démarrage rapide
 
-Prérequis : **Windows 10/11**, **Node.js 20+** (22 LTS recommandé), npm, Git.
+Prérequis : **Windows 10/11**, **Node.js 22+**, npm, Git.
 
 ```bash
 git clone https://github.com/Eloshon-1040/Eloshon.git
