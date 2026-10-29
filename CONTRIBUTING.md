@@ -35,7 +35,7 @@ npm --prefix converter ci          # Converter
 npm ci                             # Scraper
 ```
 
-Requirements: Windows 10/11, Node.js 20+ (22 LTS recommended), npm, Git. See the [README](README.md#quick-start) for how to run each app.
+Requirements: Windows 10/11, Node.js 22+, npm, Git. See the [README](README.md#quick-start) for how to run each app.
 
 ## Workflow
 

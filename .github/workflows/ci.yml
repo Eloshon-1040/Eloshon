@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
       # The Converter engine is built first: the Scraper tests import converter/core/dist.
       - run: npm --prefix converter ci

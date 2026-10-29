@@ -35,7 +35,7 @@ npm --prefix converter ci          # Converter
 npm ci                             # Scraper
 ```
 
-Prérequis : Windows 10/11, Node.js 20+ (22 LTS recommandé), npm, Git. Le [README](README.fr.md#démarrage-rapide) explique comment lancer chaque application.
+Prérequis : Windows 10/11, Node.js 22+, npm, Git. Le [README](README.fr.md#démarrage-rapide) explique comment lancer chaque application.
 
 ## Marche à suivre
 
