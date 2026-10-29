@@ -1,20 +1,24 @@
-# Signaler une faille de sécurité
+# Security policy
 
-**N'ouvrez pas d'issue publique** pour une faille.
+**Do not open a public issue for a vulnerability.**
 
-- Utilisez le signalement privé de GitHub : onglet **Security → Report a vulnerability** du dépôt ;
-- ou écrivez à **team@eloshon.com** avec : composant concerné, étapes pour reproduire, impact estimé.
+Report it privately:
 
-Nous accusons réception sous 7 jours et vous tenons informé de la correction. Merci de laisser un délai raisonnable avant toute divulgation publique.
+- use GitHub's private reporting: **Security → Report a vulnerability** on this repository; or
+- write to **team@eloshon.com** with the affected component, steps to reproduce and the impact you estimate.
 
-## Ce qui nous intéresse
+We acknowledge reports within 7 days and keep you informed until the fix. Please allow a reasonable time before any public disclosure.
 
-Fuite de secrets ou de données, exécution de code, contournement du contrôle d'accès du service hébergé, faille de l'extension ou du pont natif entre l'extension et l'application.
+## In scope
 
-## Hors périmètre
+Leaks of secrets or data, code execution, bypass of access control in the hosted service, flaws in the browser extension or in the native-messaging bridge between the extension and the desktop app.
 
-Tests de charge ou attaques sur les sites tiers, ingénierie sociale, résultats d'analyseurs automatiques sans démonstration d'impact.
+## Out of scope
 
-## Si vous trouvez une clé ou une donnée personnelle dans le dépôt
+Load tests or attacks on third-party websites, social engineering, results of automated scanners without a demonstrated impact.
 
-Signalez-le en privé de la même façon, sans la recopier.
+## Found a key or personal data in the repository?
+
+Report it privately in the same way, without copying it.
+
+*Français : ne signalez pas une faille dans une issue publique ; utilisez « Security → Report a vulnerability » ou écrivez à team@eloshon.com.*

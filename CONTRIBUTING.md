@@ -1,46 +1,78 @@
-# Contribuer
+# Contributing to Eloshon
 
-Merci de vouloir aider. Ce projet est publié sous [PolyForm Noncommercial 1.0.0](LICENSE) : le code est visible et partagé gratuitement, mais **l'usage commercial est réservé à Eloshon** (voir [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md)).
+[Français](CONTRIBUTING.fr.md) · **English**
 
-## Accord de contribution (obligatoire)
+Thank you for wanting to help! This project is released under the [PolyForm Noncommercial License 1.0.0](LICENSE): the code is open to read, run and improve, but **commercial use is reserved to Eloshon** (see [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md)). Contributions are welcome under the agreement below.
 
-En envoyant une contribution (pull request, patch, code dans une issue), vous déclarez que :
+## Contribution agreement (required)
 
-1. vous êtes l'auteur du code, ou vous avez le droit de le soumettre ;
-2. vous le publiez sous la licence du projet (PolyForm Noncommercial 1.0.0) ;
-3. vous accordez en plus à Eloshon une licence mondiale, perpétuelle, gratuite et non exclusive pour utiliser, modifier, sous-licencier et distribuer votre contribution **sous n'importe quelle licence, y compris commerciale** ;
-4. vous gardez la propriété de votre contribution.
+By submitting a contribution (pull request, patch, or code in an issue) you declare that:
 
-Signez chaque commit avec `git commit -s` (ligne `Signed-off-by: Nom <email>`). Une pull request sans cette signature ne sera pas fusionnée.
+1. you wrote it, or you have the right to submit it;
+2. you publish it under the project's licence (PolyForm Noncommercial 1.0.0);
+3. you additionally grant Eloshon a worldwide, perpetual, royalty-free, non-exclusive licence to use, modify, sublicense and distribute your contribution **under any licence, including a commercial one**;
+4. you keep the ownership of your contribution.
 
-## Avant de commencer
+Sign every commit with `git commit -s` (it adds a `Signed-off-by: Name <email>` line). A pull request without it will not be merged.
 
-- Ouvrez d'abord une issue pour une grosse modification : cela évite un travail refusé.
-- Une pull request = un sujet. Petits commits, message clair (`fix(converter): …`, `feat(scraper): …`).
-- Le code existant fait foi pour le style. Pas de nouveau framework ni de changement d'architecture sans discussion.
+## Ways to help
+
+| You are… | Good first contributions |
+|---|---|
+| A **shop / data person** | A platform export that is mis-read, a column that lands in the wrong field — report it with a small *synthetic* sample |
+| A **developer** | Fix a bug with a regression test; add a source or target format; improve an extractor |
+| A **translator** | Fix wording or add a missing UI string (Converter: FR/EN/NL/ES; Scraper: also DE) |
+| A **writer** | Clarify the README and [`docs/`](docs), add examples |
+
+Browse issues labelled **good first issue** and **help wanted**, or see [`docs/ROADMAP.md`](docs/ROADMAP.md) for ideas.
+
+## Set up
+
+```bash
+git clone https://github.com/Eloshon-1040/Eloshon.git
+cd Eloshon
+npm --prefix converter ci          # Converter
+npm ci                             # Scraper
+```
+
+Requirements: Windows 10/11, Node.js 20+ (22 LTS recommended), npm, Git. See the [README](README.md#quick-start) for how to run each app.
+
+## Workflow
+
+1. **Open an issue first** for anything bigger than a small fix: it avoids work that cannot be merged.
+2. Fork the repository and create a branch: `fix/shopify-weight-unit`, `feat/wix-orders`…
+3. Make small, focused commits with clear messages (`fix(converter): …`, `feat(scraper): …`), signed with `-s`.
+4. Run the tests (below). **One bug fixed = one regression test** that fails before your change and passes after.
+5. Open a pull request using the template and describe *what* and *why*.
 
 ## Tests
 
 ```bash
-npm ci && npm test
-npm --prefix converter ci && npm --prefix converter test
+npm --prefix converter test        # builds the engine, runs the Converter suite
+npm test                           # Scraper, extension, native host (build the Converter engine first)
 ```
 
-- Un bug corrigé = un test de non-régression qui échoue avant, passe après.
-- Les fixtures de test sont **synthétiques** : jamais de vraies données client, de vrais e-mails ni de catalogue copié depuis un site tiers.
-- Tout texte visible dans le Converter existe dans toutes les langues de l'interface (fichier `i18n`).
+The Converter keeps **golden files** in `converter/test/golden` (the exact expected output of each source → target pair). If your change alters an output on purpose, regenerate them with `npm --prefix converter run gen:golden` and explain the diff in the pull request. `npm run smoke:live` and the `verify-*` scripts use real networks: do not run them in a pull request.
 
-## Interdit dans une contribution
+## Code conventions
 
-- clés, jetons, mots de passe, fichiers `.env` ;
-- données personnelles ou exports de boutiques réelles ;
-- code copié d'un projet dont la licence interdit cette réutilisation ;
-- contournement de protections visant à nuire à un site ou à un service.
+- Match the surrounding code: naming, comment density and idioms. No new framework or build tool without discussion.
+- The Converter engine is pure TypeScript in `converter/core/src` (no I/O, deterministic). Anything that touches the file system or Electron belongs in `converter/app`.
+- Every visible text exists in **all interface languages** (`converter/app/renderer/i18n*`, `app/renderer/i18n/`); a parity test enforces it. No hard-coded user-facing string.
+- No business values hard-coded (prices, limits): read them from configuration.
+- Test fixtures are **synthetic**: no real customer data, e-mail addresses, store names or catalogs copied from third-party sites.
 
-## Sécurité
+## Not accepted
 
-Une faille se signale en privé : voir [SECURITY.md](SECURITY.md).
+- keys, tokens, passwords, `.env` files;
+- personal data or exports of real shops;
+- code copied from a project whose licence forbids this reuse;
+- work meant to harm a website or a service (attacks, abuse of protections).
 
-## Comportement
+## Security
 
-Respectez le [code de conduite](CODE_OF_CONDUCT.md).
+Report vulnerabilities privately: see [SECURITY.md](SECURITY.md).
+
+## Behaviour
+
+Be kind. See the [code of conduct](CODE_OF_CONDUCT.md).

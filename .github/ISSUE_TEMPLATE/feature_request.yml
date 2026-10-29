@@ -1,22 +1,22 @@
-name: Idée / Amélioration
-description: Proposer une fonctionnalité ou un nouveau format
+name: Idea / improvement
+description: Suggest a feature or a new format
 labels: [enhancement]
 body:
   - type: textarea
     id: need
     attributes:
-      label: Besoin
-      description: Quel problème voulez-vous résoudre ?
+      label: The need
+      description: What problem are you trying to solve? Who has it (shop owner, agency, developer…)?
     validations:
       required: true
   - type: textarea
     id: idea
     attributes:
-      label: Idée de solution (facultatif)
+      label: Idea for a solution (optional)
   - type: checkboxes
     id: ok
     attributes:
-      label: Rappel
+      label: Reminder
       options:
-        - label: Je n'ai joint aucune clé ni donnée personnelle.
+        - label: I did not attach any key or personal data.
           required: true

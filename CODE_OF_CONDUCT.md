@@ -1,9 +1,11 @@
-# Code de conduite
+# Code of conduct
 
-Nous voulons un espace de travail respectueux pour tout le monde.
+We want a respectful place to work, for everyone.
 
-**Attendu :** parler avec courtoisie, critiquer le code et non les personnes, accepter les retours, aider les débutants.
+**Expected:** be courteous, criticise code and not people, accept feedback, help newcomers.
 
-**Inacceptable :** insultes, harcèlement, discrimination, publication d'informations privées d'autrui, spam, propos hors sujet répétés.
+**Not acceptable:** insults, harassment, discrimination, publishing other people's private information, spam, repeated off-topic posts.
 
-Les mainteneurs peuvent modifier ou supprimer tout message, fermer une discussion ou exclure une personne qui ne respecte pas ces règles. Pour signaler un comportement : team@eloshon.com.
+Maintainers may edit or remove any message, close a discussion or exclude a person who does not follow these rules. To report a behaviour problem: team@eloshon.com.
+
+*Français : soyez courtois, critiquez le code et non les personnes ; insultes, harcèlement, discrimination et publication d'informations privées sont interdits. Signalement : team@eloshon.com.*

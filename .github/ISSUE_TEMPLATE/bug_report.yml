@@ -1,43 +1,44 @@
-name: Bug / Erreur
-description: Quelque chose ne marche pas comme prévu
+name: Bug report
+description: Something does not work as expected
 labels: [bug]
 body:
   - type: markdown
     attributes:
       value: |
-        N'ajoutez **aucune clé, aucun mot de passe, aucune donnée personnelle ni catalogue client**. Une faille de sécurité ne se signale pas ici : voir SECURITY.md.
+        Please **do not include keys, passwords, personal data or a real customer catalog**. A few anonymised rows are enough.
+        A security problem must not be reported here: see SECURITY.md.
   - type: dropdown
     id: app
     attributes:
       label: Application
-      options: [Eloshon Scraper, Eloshon Converter, Extension Chrome/Edge]
+      options: [Eloshon Converter, Eloshon Scraper, Browser extension]
     validations:
       required: true
   - type: input
     id: version
     attributes:
-      label: Version (affichée en bas à gauche de l'application)
+      label: Version (shown at the bottom left of the app)
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Étapes pour reproduire
-      description: Format de départ, format cible, étape de l'assistant, boutons cliqués.
+      label: Steps to reproduce
+      description: Source format, target format, the wizard step, what you clicked.
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Résultat attendu et résultat obtenu
+      label: Expected result and actual result
     validations:
       required: true
   - type: textarea
     id: sample
     attributes:
-      label: Exemple minimal (facultatif)
-      description: Quelques lignes **anonymisées** du fichier, ou l'adresse publique de la page concernée.
+      label: Minimal example (optional)
+      description: A few **anonymised** rows of the file, or the public address of the page concerned.
   - type: input
     id: os
     attributes:
-      label: Système (ex. Windows 11)
+      label: System (e.g. Windows 11)

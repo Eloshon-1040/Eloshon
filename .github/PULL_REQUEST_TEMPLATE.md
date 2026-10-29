@@ -1,10 +1,11 @@
-## Ce que change cette PR
+## What this changes
 
-## Pourquoi
+## Why
 
-## Vérifications
+## Checks
 
-- [ ] `npm test` (et `npm --prefix converter test` si le Converter est touché) passe
-- [ ] Un test de non-régression accompagne la correction
-- [ ] Aucune clé, donnée personnelle ou catalogue réel dans le diff
-- [ ] Commits signés (`git commit -s`) et [accord de contribution](../CONTRIBUTING.md) accepté
+- [ ] `npm --prefix converter test` passes (and `npm test` if the Scraper or the extension is touched)
+- [ ] A regression test accompanies the fix
+- [ ] Golden files regenerated on purpose and the diff explained (if an output changed)
+- [ ] No key, personal data or real catalog in the diff; fixtures are synthetic
+- [ ] Commits are signed off (`git commit -s`) and I accept the [contribution agreement](../CONTRIBUTING.md)

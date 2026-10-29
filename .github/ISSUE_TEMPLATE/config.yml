@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Faille de sécurité (privé)
+  - name: Security vulnerability (private)
     url: https://github.com/Eloshon-1040/Eloshon/security/advisories/new
-    about: Ne la signalez pas dans une issue publique.
-  - name: Licence commerciale
+    about: Do not report it in a public issue.
+  - name: Commercial licence
     url: https://github.com/Eloshon-1040/Eloshon/blob/main/COMMERCIAL-LICENSE.md
-    about: Tout usage commercial exige une licence écrite.
+    about: Any commercial use needs a written licence.
